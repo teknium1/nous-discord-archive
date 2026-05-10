@@ -1,0 +1,36 @@
+# Thread 'Hermes Multi-Agent Setup — 4 Agents on a Laptop' in forum #community-projects-showcase
+# thread_id=1499716570878840882 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:32.127378+00:00
+
+[2026-05-01T10:18:13.884000+00:00] ones_07389 (id=1499716570878840882)
+    Running a 4-agent Hermes system 24/7 on a 32GB Ubuntu laptop, managed by systemd + custom watchdog.
+    
+    Architecture:
+    - default (PM) — Feishu WebSocket, glm-5-turbo, 302MB
+    - dev (Developer) — ACP delegated, glm-5.1, 205MB
+    - devops (Ops) — ACP delegated, glm-5-turbo, 204MB
+    - ip-agent (Content) — Cron scheduled, glm-5-turbo, 84MB
+    
+    5 MCP Servers, 34 tools total:
+    - chromadb-knowledge (custom RAG with BM25 reranking)
+    - web-reader / web-search-prime / zai-vision / zread
+    
+    Self-learning ACP v1.5:
+    - 12 rule-based matchers → LLM reflection → auto lesson recording
+    - ChromaDB semantic retrieval for lessons (bge-small-zh-v1.5)
+    - Auto distillation cron at 04:30 daily
+    - Currently 7 real lessons accumulated from deployment
+    
+    Two-stage RAG:
+    - Stage 1: dense embedding (bge-small-zh-v1.5)
+    - Stage 2: custom BM25 sparse rerank (Chinese bigram + English word, zero dependency)
+    - Knowledge base: 225 chunks / 16 docs, ~12MB on disk
+    
+    Real lessons from production:
+    - HOME dir overridden by profile → use absolute paths
+    - No pip in venv → python3 -m pip with mirror
+    - systemd rate-limit on restart → reset-failed first
+    - HuggingFace download timeout → HF_HUB_OFFLINE=1
+    
+    Tech stack: Python 3.11.15 / GLM API / ChromaDB / Feishu / systemd
+

@@ -1,0 +1,52 @@
+# Thread 'Planforge - Spec-driven development planning for your Hermes agent!' in forum #plugins-skills-and-skins
+# thread_id=1498331270566903848 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:12.899243+00:00
+
+[2026-04-27T14:33:32.552000+00:00] nulledvector (id=1498331270566903848)
+    Hey everyone! Excited to share another Hermes plugin that I shipped.
+    
+    Meet PlanForge, a spec-driven development planning plugin that keeps your Hermes agent from going off the rails on complex projects. You know the problem: you give your agent a big task, and it starts coding before thinking, skips steps, or loses track of where it is halfway through. PlanForge fixes that.
+    
+    How it works:
+    
+    You get a disciplined 5-phase workflow: init -> plan -> execute -> verify -> ship
+    
+    - Phase locking prevents the agent from jumping ahead or working on multiple phases at once
+    - Wave-based execution groups related tasks so the agent can parallelize safely
+    - Auto-verification runs your test suite, linter, and build checks after each phase
+    - Persistent state survives session restarts (uses Mnemosyne under the hood)
+    - GitHub integration creates branches, commits, and PRs automatically
+    
+    Quick start:
+    ```
+    # In your Hermes config
+    plugins:
+      enabled:
+        - planforge
+    ```
+    ```
+    # Then in your project
+    /planforge-init      # Creates .planning/ with PROJECT.md, REQUIREMENTS.md, ROADMAP.md
+    /planforge-plan      # Plans the current phase
+    /planforge-execute   # Runs wave-based execution
+    /planforge-verify    # Checks against acceptance criteria
+    /planforge-ship      # Branch, commit, push, PR
+    ```
+    
+    It generates actual spec files (PROJECT.md, REQUIREMENTS.md, ROADMAP.md, STATE.md) so you always know what the agent is doing and why. Phase progress, blockers, and decisions are tracked and persisted.
+    
+    Repo: https://github.com/AxDSan/planforge-hermes
+    
+    Would love feedback, feature requests, or contributions. What planning workflows are you all using with Hermes right now?
+    [attachment] IMG_3312.png https://cdn.discordapp.com/attachments/1498331270566903848/1498361148075147494/IMG_3312.png?ex=6a02048f&is=6a00b30f&hm=4401919fc50bc19f66203f31aabca11a5ce529f3eb9c7225ba588058483118ac&
+    [embed] GitHub - AxDSan/planforge-hermes https://github.com/AxDSan/planforge-hermes
+
+[2026-04-27T16:32:17.708000+00:00] nulledvector (id=1498361155637350401)
+    ⚠️ image depicts a dashboard which is currently not part of the plugin, but is WIP.
+
+[2026-05-02T19:34:53.642000+00:00] austrian_guy (id=1500219047483019504)
+    Interesting.
+
+[2026-05-02T20:46:43.937000+00:00] nulledvector (id=1500237126170705941)
+    Planforge - Spec-driven development planning for your Hermes agent!
+

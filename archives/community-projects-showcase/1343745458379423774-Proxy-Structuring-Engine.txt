@@ -1,0 +1,118 @@
+# Thread 'Proxy Structuring Engine' in forum #community-projects-showcase
+# thread_id=1343745458379423774 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:46.514086+00:00
+
+[2025-02-25T00:44:42.861000+00:00] jckwind (id=1343745458379423774)
+    I built the Proxy Structuring Engine (PSE) because I wanted better structured outputs from my LLMs, and I didn't like the existing libraries.
+    
+    So, I made my own.
+    
+    The PSE guarantees 100% structurally valid outputs (JSON, XML, or any format) during generation, using inference-time steering. It's like guardrails for your model, guiding their output without limiting their creativity.
+    
+    Our benchmarks show the PSE outperforms existing solutions like Outlines and LM-Format-Enforcer, delivering higher quality generations and faster generation times.
+    
+    The PSE is open source (Apache 2.0) and it should be easy plug and plug the PSE with your local models.
+    
+    * Install: `pip install pse`
+    
+    More details: https://proxy.ing/pse
+    
+    
+    GitHub: https://github.com/TheProxyCompany/proxy-structuring-engine
+    
+    Announcement Thread: https://x.com/TheProxyCompany/status/1894123631531135338
+    
+    I'm happy to answer any questions about the implementation, use cases, or how it compares to other approaches. Let me know what you think!
+    
+    The model used for the side by side comparison is **Llama-3.2-1B**
+    [attachment] IMG_6817.jpg https://cdn.discordapp.com/attachments/1343745458379423774/1343745458551656549/IMG_6817.jpg?ex=6a01cf3a&is=6a007dba&hm=68e15ae9ac541a1c53687bc78c311c0ea4493f02bac01e1ca2db2241fd4b7944&
+    [embed] The Proxy Structuring Engine https://proxy.ing/pse
+    [embed] GitHub - TheProxyCompany/proxy-structuring-engine: Stateful control... https://github.com/TheProxyCompany/proxy-structuring-engine
+    [embed] Proxy (@TheProxyCompany) on X https://twitter.com/TheProxyCompany/status/1894123631531135338
+
+[2025-02-25T15:22:56.108000+00:00] cameron_pfiffer (id=1343966469876219934)
+    I work at .txt (Outlines) and I'm curious about what you're doing here other than logit biasing, can you give me an overview?
+
+[2025-02-27T13:11:18.367000+00:00] jckwind (id=1344658120080621660)
+    <@657626741854044220> yeah - it’s not just logit biasing - but I can understand why it may look like that - I keep the c++ core code private so the underlying mechanisms wouldn’t have been immediately apparent looking at the python code
+
+[2025-02-27T13:18:20.511000+00:00] jckwind (id=1344659890681151560)
+    a couple high level points - first the way I’m building the structure. I’m using a custom hierarchical state machine instead of regex or grammars (although those individual features are supported) - so it can handle much more complex schema & structure. The full json specification (I think the PSE like 80% there, implementing keywords like ‘not’ would be more effort than it’d be worth)
+    
+    The PSE also is calculating the logit mask on the fly instead of building a map of all valid tokens for a given schema. This gives us a big boost in speed.
+
+[2025-02-27T13:23:27.098000+00:00] jckwind (id=1344661176600105062)
+    Another thing it does is constrain random sampling - what this means is the PSE wraps any given sampler method (a callable that takes logprobs and returns a token_id) and will validate this token through the HSM. There’s some resample logic, and we are exploring multiple paths through the schema at once. 
+    
+    I won’t go into deep specifics (I’ve spoken about the architecture other places) but it’s not doing backtracking. Main ideology I had while building the PSE was maximizing the influence the underlying probability distribution had while still structuring the output.
+
+[2025-02-27T13:23:39.863000+00:00] jckwind (id=1344661230140522571)
+    cc <@387972437901312000>
+
+[2025-02-28T20:22:53.180000+00:00] cameron_pfiffer (id=1345129118664228994)
+    Okay, so it sounds like you are doing logit biasing by determining valid tokens -- that's mathematically equivalent to logit bias. A few other people do on-the-fly regex evaluation and our experience is that it incurs runtime cost. Outlines opted for up-front compliation, largely because most schema calls we've seen are repeated many times.
+    
+    We also have a private fork that is not a simple FSM, so we agree that there's substantially more flexible approaches to mask determination. 
+    
+    I guess I'm also not clear on what this point means:
+    > Main ideology I had while building the PSE was maximizing the influence the underlying probability distribution had while still structuring the output.
+    Also -- backtracking, not sure what you mean there.
+    
+    > The full json specification (I think the PSE like 80% there, implementing keywords like ‘not’ would be more effort than it’d be worth)
+    Our experience too. We're currently limited in Python by what Pydantic can convert to JSON schema, which means there's no conditionals and a ton of other stuff. You can do this with grammars though
+
+[2025-02-28T21:58:32.996000+00:00] jckwind (id=1345153193197174784)
+    I won’t be providing any more implementations details 👍🏻
+
+[2025-02-28T21:59:02.260000+00:00] jckwind (id=1345153315939418113)
+    “hello i work for a company that does the same thing as you, please explain to me in clear detail how you beat our product”
+
+[2025-02-28T22:03:05.545000+00:00] teknium (id=1345154336350535693)
+    Cc <@212964551421853697>
+    [reply to jckwind msg=1343745458379423774]
+
+[2025-03-05T13:48:44.343000+00:00] sendao (id=1346841867580342363)
+    "sure no problem, just make your product free"
+
+[2025-03-11T01:36:02.631000+00:00] jckwind (id=1348831805989589055)
+    Video demo of the PSE in action
+    [attachment] Untitled.mov https://cdn.discordapp.com/attachments/1343745458379423774/1348831804852801556/Untitled.mov?ex=6a01db42&is=6a0089c2&hm=07d3066d2e5f7e1598dfc932def3289a7fbddbdc74e0ef046c949ee29d3b1d38&
+
+[2025-03-11T03:12:07.109000+00:00] deoxykev (id=1348855983962587146)
+    <@425996390120947723> that’s a really interesting demo
+    
+    Is this essentially encouraging the model using some form of logit biasing through a state machine, where each state has its own logit bias handler (or maybe system prompt to condition inference for that particular state)? And how is it transitioning from state to state? Are you using closing xml tags as delimiters?
+
+[2025-03-11T03:18:40.306000+00:00] deoxykev (id=1348857633150603317)
+    I think what could be extremely powerful is letting a model decide it’s own execution graph (construct it’s own PSE state machine or load a known working pattern from memory) before solving difficult tasks. And let it update its own subroutine on success in the same manner.
+    
+    Basically you’ve built a metacognitive flow and made it as general as possible with your own intuition and priors
+    
+    But I wonder how powerful this could become if we’d let the right metacognitive abstractions emerge from an RL environment
+
+[2025-03-11T15:02:22.375000+00:00] jckwind (id=1349034725343498253)
+    Thanks for the kind words! <@1062441178022289479> - what I basically do is I configure a state machine with predefined states, and the state machine is non-deterministic and will support multiple paths and let the model chose which path to explore.
+
+[2025-03-11T15:02:29.793000+00:00] jckwind (id=1349034756456710146)
+    the repo is public: https://github.com/TheProxyCompany/agent
+    [embed] GitHub - TheProxyCompany/agent: a tool using agent. https://github.com/TheProxyCompany/agent
+
+[2025-03-11T15:04:15.552000+00:00] jckwind (id=1349035200041975928)
+    The structuring engine maintains the state of generation; and the delimiters act like a “steering” vector - the model has the prior that it is “within” the state.
+
+[2025-03-11T15:05:12.401000+00:00] jckwind (id=1349035438484230164)
+    I agree with your point about RL - it’s where I’m pointing my focus next. I was building my own stack - bullet proof structured outputs, a true agent. Since I enabled the agent with MCP, I want to do RL on using different MCP and adding on the fly
+
+[2025-03-11T15:11:22.300000+00:00] deoxykev (id=1349036989952950376)
+    Have you experimented with encapsulating each delimited chunk as context-free “zones”? For example, a prompt that only does MCP calls and handles the details for a particular objective. That chunk would be called from one layer up the stack.
+    
+    The intuition here is to tame cognitive overhead by limiting context window to manageable chunks, and allocate more thinking power to high level tasks
+
+[2025-03-11T15:13:20.783000+00:00] jckwind (id=1349037486906540063)
+    yep! that is exactly how the thinking or inner monologue zones work - it is 100% easy to extend / create a new delimeted state and specialize it. you can even activate different samplers, logit processors, or even Lora's depending on which state it is in!
+
+[2025-03-11T16:31:18.135000+00:00] deoxykev (id=1349057105142878238)
+    a visualization like this would be cool:
+    https://github.com/DAGWorks-Inc/burr
+    [embed] GitHub - DAGWorks-Inc/burr: Build applications that make decisions ... https://github.com/DAGWorks-Inc/burr
+

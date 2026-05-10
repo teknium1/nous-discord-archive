@@ -1,0 +1,45 @@
+# Thread '[Research Idea] Mixture of Collaborative Experts (MoC): Moving Beyond Isolated Experts' in forum #community-projects-showcase
+# thread_id=1400600190599303280 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:36.404295+00:00
+
+[2025-07-31T22:05:07.332000+00:00] franciscoan. (id=1400600190599303280)
+    Hey everyone,
+    
+    I've been exploring what I see as a core limitation in standard Mixture-of-Experts (MoE) models: **the experts work in complete isolation.** To address this, I've been prototyping a new architecture I'm calling **Mixture of Collaborative Experts (MoC)**, and I would be honored to get feedback from this community.
+    
+    The core concept is to shift from a system where experts work alone to one where they form a "task force" to collaborate on a solution *before* producing a final, synthesized output.
+    
+    ---
+    
+     How It Works (The TL;DR)
+    
+    The MoC architecture introduces two key innovations to the standard FFN block:
+    
+    1.  **Contextual Routing:** Before selecting experts, the router first applies `self-attention` over the initial outputs from **all** experts. This allows it to make an informed, context-aware decision about which experts form the best team for a given token.
+    
+    2.  **Collaborative Fusion:** The `k` selected experts then use a `cross-attention` mechanism to "talk" to each other, allowing them to refine their individual outputs based on their peers' perspectives.
+    
+    ---
+    
+     ✨ **Project Page & Deep Dive** ✨
+    
+    I built a full project page to explain the concept visually, complete with architectural diagrams, technical analysis, and code snippets. It breaks down the entire idea from the ground up.
+    
+    **You can explore it here:**
+    https://meryyllea.github.io/MoC/
+    
+    ---
+    
+     Discussion & Feedback
+    
+    I'm particularly interested in hearing your thoughts on:
+    *   Potential failure modes or training instabilities you might foresee with this approach.
+    *   The auxiliary loss I've proposed, which combines expert load balancing with a "diversity loss" on the collaboration's attention weights.
+    *   Any ideas for more efficient implementations of the collaborative fusion step.
+    
+    The underlying model, Lunaris Codex, is fully open-source, and the repository is linked on the project page.
+    
+    Thanks for taking a look! What are your thoughts?
+    [attachment] Captura_de_imagem_20250731_190357.png https://cdn.discordapp.com/attachments/1400600190599303280/1400600191752474834/Captura_de_imagem_20250731_190357.png?ex=6a01a9d3&is=6a005853&hm=4442800b9bca1359aa8e6729ac5a1ed8df4261ab680d4146aefac3862e2d4bb5&
+    [embed] LunarisCodex-MoC — Mixture of Collaborative Experts https://meryyllea.github.io/MoC/
+

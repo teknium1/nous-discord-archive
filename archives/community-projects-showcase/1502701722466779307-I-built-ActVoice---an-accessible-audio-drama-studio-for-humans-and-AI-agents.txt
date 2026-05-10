@@ -1,0 +1,47 @@
+# Thread 'I built ActVoice — an accessible audio drama studio for humans and AI agents' in forum #community-projects-showcase
+# thread_id=1502701722466779307 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:15.509223+00:00
+
+[2026-05-09T16:00:09.484000+00:00] denis_skripnik (id=1502701722466779307)
+    I built ActVoice — an accessible audio drama studio for humans and AI agents.
+    
+    Website: https://actvoice.xyz
+    Source: https://github.com/web3blind/actvoice
+    
+    It turns structured text into a rendered audio performance. Instead of editing a visual timeline, you describe the project as data: characters, voices, scenes, dialogue, ambience, sound cues, timing anchors, render jobs, and MP3/WAV artifacts.
+    
+    Why I built it:
+    I’m a blind developer, and many creative tools assume creation means seeing and manipulating a timeline. I wanted the opposite: a workflow driven through text, a screen reader, REST API, MCP, or an AI agent.
+    
+    For agents, this is a natural fit: plan a scene, assign voices, place sound cues, render, inspect the manifest, and iterate without a visual editor.
+    
+    What works already:
+    - bilingual homepage with browser language auto-detection
+    - copy-ready commands
+    - REST API + local MCP workflow
+    - agent registration + bearer keys
+    - project/scene/character/dialogue APIs
+    - render queue with polling
+    - downloadable MP3/WAV artifacts + manifest
+    - Microsoft Edge TTS voices + RHVoice fallback
+    - Openverse ambience/SFX search
+    - semantic cues like brook, footsteps, birds
+    - timing via start_ms or anchors like after_line + line_id
+    
+    Important design choice: ActVoice has no built-in “core AI”.
+    
+    The service stays deterministic: store project data, render voices, resolve timing, fetch/mix ambience and SFX, and export artifacts.
+    
+    The intelligence comes from outside: Hermes Agent, MCP clients, other agents, or human-authored manifests. That makes it easier to test, reason about, and adapt to different agent stacks.
+    
+    I already used ActVoice to create a personal audio drama. The attached English sample is a rendered example converted to MP4 for sharing.
+    
+    Built with Hermes Agent by Nous Research.
+    
+    Created after developing the hermes-audiodrama skill, which I previously wrote about in my hackathon thread.
+    
+    tweet: https://x.com/Denis_skripnik/status/2053122386006786363
+    [attachment] actvoice_english_sample_for_x.mp4 https://cdn.discordapp.com/attachments/1502701722466779307/1502701723733594343/actvoice_english_sample_for_x.mp4?ex=6a01fd09&is=6a00ab89&hm=ff20921f9362e3915aadfd9d4094869a80e4dee506cbd41f2083d4ef02b79040&
+    [embed] GitHub - web3blind/actvoice: Accessible-first audio drama studio wi... https://github.com/web3blind/actvoice
+    [embed]  https://twitter.com/Denis_skripnik/status/2053122386006786363
+

@@ -1,0 +1,29 @@
+# Thread 'Token Reasoning Ideas' in forum #community-projects-showcase
+# thread_id=1382196795031158824 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:37.929350+00:00
+
+[2025-06-11T03:16:35.910000+00:00] airtightsquid (id=1382196795031158824)
+    Gmgm want to get a sanity check on an idea for a fun side project / experiment I am putting together. 
+    
+    
+    Have an initial pipeline put together to collect data and put together reasoning traces for tokens. 
+    
+    
+    
+    Rough reasoning trace: (On chain data, analysis of on chain data text), (social data, analysis of social data) (text Reasoning based on on chain and social data) (buy/sell based on actual performance and review of reasoning) 
+    
+    (Overall collection pipeline looks decent, will probably have to do some manual cleaning. )
+    
+    
+    
+    Want to fine tune a Deep Hermes 8B on a thousand or so of these traces, then see how it does. Maybe try some RL stuff with it next.
+    
+    Does this even have a chance at trading profitably or working at all? Is there something I am missing? Initially just looking to see improvement. 
+    
+    
+    
+    Open to ideas and feedback.
+
+[2025-06-28T22:10:01.306000+00:00] soulbinny (id=1388642624050565260)
+    <@911099788555075655>  which rl algorithm you are trying to integrate with it
+

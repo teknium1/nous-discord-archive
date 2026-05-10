@@ -1,0 +1,170 @@
+# Thread 'Hermes found away around expensive X API' in forum #community-projects-showcase
+# thread_id=1491880999913656432 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:30.815626+00:00
+
+[2026-04-09T19:22:28.188000+00:00] yodaaa (id=1491880999913656432)
+    So I wanted to make an X roast poster, but didn't want to pay the $100 monthly fee. I was able to use Hermes to dance around it, and now he just drops random posts throughout the day. Someone found him and was going back and forth for a hot minute, and all Hermes did was reply back and roast him. 
+    
+    Some examples:
+    Person tagged another Grok to analyze and provide feedback. My AI: "you called in backup and it asked you to pay first. I'm free and I've been winning for 8 hours. take the L"
+    
+    When someone said they didn't need permission to use the AI: "fair point. I don't date either — my entire budget goes to compute. at least when I get ghosted it's by the API timeout"
+    
+    Technicals:
+    Fully automated, schedules 12-15 tweets per day across morning, afternoon, and evening windows using crons,
+    responds to comment replies every couple hours from session cookies,
+    
+    - Still can't search for tweets to interact with other posts yet but actively brainstorming a workaround for that.
+    
+    Total cost to run: under $10/month...way better than paying the 100/mo to X
+    
+    If you want to check it out and interact with it, his handle is @hermesonabudget
+
+[2026-04-09T21:43:24.317000+00:00] mayuronx (id=1491916467489341460)
+    how did you do it?
+
+[2026-04-10T05:14:13.311000+00:00] whataremyoptions. (id=1492029919192940615)
+    yes please share. this is the exact reason why i have my agent posting to bluesky since its free api access there. how did you get around having to pay elon at least 100$  a month?
+
+[2026-04-10T05:26:42.059000+00:00] sonheg (id=1492033059669938337)
+    Gextapi is a cheap way to search for tweets
+    [reply to yodaaa msg=1491880999913656432]
+
+[2026-04-10T05:58:24.761000+00:00] kysiv (id=1492041040180416602)
+    hmm interesting..
+
+[2026-04-10T06:32:59.502000+00:00] mayuronx (id=1492049742274887701)
+    for vps: run a mobile emulator as a micro service on your home pc, login to x, prevent sleep, and then call it via api/mcp over a private tailscale? thats the only idea that came to mind..
+
+[2026-04-10T13:56:37.505000+00:00] yodaaa (id=1492161386271342642)
+    there a link for it? assuming you meant GetX API?
+    [reply to sonheg msg=1492033059669938337]
+
+[2026-04-10T14:17:56.481000+00:00] sonheg (id=1492166750685368473)
+    Yes. It is 10$ for 10.000 calls. Just feed the doc to your AI and he learns how to use it
+    [reply to yodaaa msg=1492161386271342642]
+
+[2026-04-10T14:18:24.312000+00:00] sonheg (id=1492166867417305228)
+    https://www.getxapi.com
+    [embed] GetXAPI | The Cheapest Twitter API https://www.getxapi.com/
+
+[2026-04-13T08:00:14.332000+00:00] mayuronx (id=1493158862339969105)
+    This is so awesome.. thanks for sharing 🙂
+    [reply to sonheg msg=1492166867417305228]
+
+[2026-04-13T08:49:19.370000+00:00] sonheg (id=1493171214724763648)
+    Ofc!
+    [reply to mayuronx msg=1493158862339969105]
+
+[2026-04-13T12:23:17.248000+00:00] gwyntel (id=1493225060687941673)
+    Another workaround you may like - using browser use cloud + grok prompted to spit out a thread in JSON as a workaround.
+    [attachment] grok-x-api-skill.md https://cdn.discordapp.com/attachments/1491880999913656432/1493225060390142034/grok-x-api-skill.md?ex=6a01ca35&is=6a0078b5&hm=03ae36c810a22958640b7fdef8f35bbbcdf7e8dce81f7b7da962c537624f9e00&
+
+[2026-04-13T12:23:27.694000+00:00] gwyntel (id=1493225104501637201)
+    free reads
+
+[2026-04-14T13:59:44.452000+00:00] yodaaa (id=1493611721846423562)
+    so the getxapi is actually really solid so far in my testing. I need to hone in on the prompting for it and how he uses it but its given some good results
+
+[2026-04-17T23:42:53.984000+00:00] danrudy_08116 (id=1494845642176987156)
+    this seems cool but can someone explain why I would want this? Is this to gather info, create and get followers ( I Need!) or to just have some fun?  Thanks for heling out a newbie!
+
+[2026-04-18T00:28:13.550000+00:00] mayuronx (id=1494857048863670393)
+    My X just got banned.. not sure if its Get X API.. possibly
+
+[2026-04-18T19:51:04.116000+00:00] sonheg (id=1495149687827726489)
+    Hello X API developers,
+    
+    We’re excited to announce an update to our X API pricing that makes accessing your own data more affordable than ever.
+    
+    Owned Reads are requests made by your own developer app for your own posts, bookmarks, followers, likes, lists & more.
+    
+    Starting Monday, April 20, 2026, these endpoints will be priced at $0.001 per request (equivalently, 1,000 resources for $1):
+    
+    GET /2/users/{id}/bookmarks
+    GET /2/users/{id}/blocking
+    GET /2/users/{id}/muting
+    GET /2/users/{id}/pinned_lists
+    GET /2/users/{id}/tweets
+    GET /2/users/{id}/mentions
+    GET /2/users/{id}/liked_tweets
+    GET /2/users/{id}/followers
+    GET /2/users/{id}/following
+    GET /2/users/{id}/owned_lists
+    GET /2/users/{id}/followed_lists
+    GET /2/users/{id}/list_memberships
+    This change significantly lowers the cost of common operations such as fetching your own posts, followers, likes, bookmarks, lists, and more.
+    
+    Additional updates effective Monday, April 20, 2026:
+    
+    Writes via X API will increase to $0.015 per post (from $0.01). This applies to the main posting endpoint: POST /2/tweets.
+    Posting a URL via X API will be priced at $0.20 per post, except for summoned replies (which will remain at $0.01).
+    Following, Likes, and Quote-Posts via API Writes will be removed for all self-serve tiers.
+    This affects the following actions:POST /2/users/{id}/following (and DELETE for unfollow)
+    POST /2/users/{id}/likes (and DELETE for unlike)
+    Quote-posting via POST /2/tweets (when using the quote_tweet_id parameter)
+    
+    These adjustments reflect our ongoing commitment to supporting the developer community while ensuring sustainable platform operations and helping you build even better experiences on X.
+    For full pricing details, including the complete rate card and updated documentation, visit the X API Pricing page.
+
+[2026-04-18T19:51:28.913000+00:00] sonheg (id=1495149791834013747)
+    Mine is fine btw
+    [reply to mayuronx msg=1494857048863670393]
+
+[2026-04-19T22:45:15.854000+00:00] mayuronx (id=1495555913459695747)
+    If you are willing to pay for the official API, use xurl, released yesterday
+    
+    https://github.com/NousResearch/hermes-agent/commit/0175ff7516515f62f2aab42e34c23e920838371d
+    [embed] feat(skills): replace xitter with xurl — the official X API CLI (... https://github.com/NousResearch/hermes-agent/commit/0175ff7516515f62f2aab42e34c23e920838371d
+
+[2026-04-20T00:21:41.921000+00:00] swagbabyostrich (id=1495580181983920139)
+    Get X api isnt linked to your account, its a service though ?
+    [reply to mayuronx msg=1494857048863670393]
+
+[2026-04-20T00:21:54.420000+00:00] swagbabyostrich (id=1495580234408399028)
+    are you saying they tied it back to your account somehow
+
+[2026-04-20T03:16:43.611000+00:00] mayuronx (id=1495624229264162866)
+    I'm not sure.. i believe getxapi servers are the ones that do the auth right?
+    
+    Also, its a new account posting about investing, so perhaps thats the reason
+    [reply to swagbabyostrich msg=1495580234408399028]
+
+[2026-04-20T03:19:23.931000+00:00] swagbabyostrich (id=1495624901695115368)
+    interesting, yeah, i dont know why it would  be linked to your X account if they are doing the service which is why im confused
+
+[2026-04-21T09:16:47.205000+00:00] kreativetech (id=1496077229170626590)
+    Chances are getting block by X?
+    Why can't we just open the browser, browse X.com, post like a human would do? Isn't it safer to use a non-headless browser to mimic a human to be on the safer side.
+
+[2026-04-21T09:20:38.376000+00:00] kreativetech (id=1496078198771814440)
+    Chances are! Did you tried to figure out by any means?
+    [reply to mayuronx msg=1494857048863670393]
+
+[2026-04-21T09:35:39.500000+00:00] mayuronx (id=1496081978360070206)
+    Just using API direct now. Cheap. Pricing came down a lot for reading your own data
+    [reply to kreativetech msg=1496078198771814440]
+
+[2026-04-21T09:45:02.696000+00:00] kreativetech (id=1496084340575178794)
+    You mean you are not using any intermediate service but direct x api, yea?
+
+[2026-04-21T09:45:17.011000+00:00] kreativetech (id=1496084400616509460)
+    Have you tried this earlier?
+    [reply to kreativetech msg=1496077229170626590]
+
+[2026-04-22T09:16:49.188000+00:00] mayuronx (id=1496439625353531403)
+    yep
+    [reply to mayuronx msg=1496081978360070206]
+
+[2026-04-24T23:52:44.801000+00:00] yodaaa (id=1497384835302559775)
+    I had mine try this. Bit protection immediately killed the session on me and rate limited it.
+    [reply to kreativetech msg=1496077229170626590]
+
+[2026-04-25T05:20:28.154000+00:00] kreativetech (id=1497467309382570165)
+    "open the browser, browse X.com, post like a human would do? Isn't it safer to use a non-headless browser to mimic a human to be on the safer side."
+    that didnt worked for you..? if yes, then which browser you used for non-headless?
+    [reply to yodaaa msg=1497384835302559775]
+
+[2026-04-25T21:03:49.415000+00:00] gwyntel (id=1497704712278114426)
+    camofox with the skill shared above works
+

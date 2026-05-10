@@ -1,0 +1,12 @@
+# Thread 'agentbox.id | email for hermes agents' in forum #community-projects-showcase
+# thread_id=1496465635478077561 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:48.988165+00:00
+
+[2026-04-22T11:00:10.485000+00:00] phillipd.eth (id=1496465635478077561)
+    Inspired by Hermes’ email gateway, I built agentbox.id because I couldn't find a mail service that felt light enough for agent workflows. It’s live now, and I’d appreciate any feedback from this community on the approach.
+    [attachment] agentbox-email-explained.png https://cdn.discordapp.com/attachments/1496465635478077561/1496465636803612795/agentbox-email-explained.png?ex=6a01b6ba&is=6a00653a&hm=aa92c54c2faf29ac8c5be7604e69f1c3754f732d0b2fe60b3636e3182024112e&
+
+[2026-04-22T17:16:35.520000+00:00] amazon1148 (id=1496560363980722398)
+    Is this for agentic communciation like: https://github.com/gastownhall/beads ?
+    [embed] GitHub - gastownhall/beads: Beads - A memory upgrade for your codin... https://github.com/gastownhall/beads
+

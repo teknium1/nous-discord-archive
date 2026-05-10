@@ -1,0 +1,8 @@
+# Thread 'Agents tab in hermes- dashboard' in forum #community-projects-showcase
+# thread_id=1499089711501938808 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:35.163837+00:00
+
+[2026-04-29T16:47:18.962000+00:00] polymadd (id=1499089711501938808)
+    i think hermes-dahboard needs a list for all the agent created
+    [attachment] image.png https://cdn.discordapp.com/attachments/1499089711501938808/1499089711870771280/image.png?ex=6a020817&is=6a00b697&hm=2d34d894c8e45d272c54e146ea4bae14371fcb513110d0ebb068ccab2b368db2&
+

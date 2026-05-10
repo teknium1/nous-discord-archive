@@ -1,0 +1,45 @@
+# Thread 'Make Your Desktop Actually Yours' in forum #plugins-skills-and-skins
+# thread_id=1499527424470286406 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:08.428127+00:00
+
+[2026-04-30T21:46:37.866000+00:00] neopabo (id=1499527424470286406)
+    Most desktop customization is hours of config files, forum threads, and broken themes — Hermes flips that on its head by learning your setup, your style, and your ideas, then creates your dream desktop look.
+    [attachment] Marathon2025-themes.png https://cdn.discordapp.com/attachments/1499527424470286406/1499527424826937454/Marathon2025-themes.png?ex=6a01a57d&is=6a0053fd&hm=6e1d2e6226162d265bf45be8e5efad29eb27a06a5bc5d9b8927f2d6fb24eaafe&
+
+[2026-04-30T21:47:04.439000+00:00] neopabo (id=1499527535925526628)
+    https://github.com/H-Ali13381/hermes-linux-ricing
+    [embed] GitHub - H-Ali13381/hermes-linux-ricing: Braille-first ASCII art to... https://github.com/H-Ali13381/hermes-linux-ricing
+
+[2026-04-30T21:57:56.075000+00:00] neopabo (id=1499530269084881058)
+    **Some of the Features:**
+    
+    - Scans your desktop environment and figures out:
+      - what apps you have on your computer
+      - your current customizations or themes
+      - your hobbies, interests & personality
+    - Backs up your existing configurations (rollback point!)
+    - Works creatively alongside you:
+      - asks you what you want to change
+      - asks for your ideas
+      - makes suggestions
+      - shows previews
+      - checks in with you before making changes
+    - Validates the planned implementation with you
+    - Can generate custom wallpapers & animations using AI image generation (requires image generation enabled in Hermes with a valid FAL key)
+    - Generates HTML previews for themes, helping you visualize changes before they go through
+    - Step-by-step implementation with edit validation
+    - Handoff documentation documenting all visual, UI, and functional changes
+
+[2026-04-30T22:18:19.874000+00:00] neopabo (id=1499535402069917867)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1499527424470286406/1499535401700954172/image.png?ex=6a01aceb&is=6a005b6b&hm=039c1281f5e84d4054648d55b1c39fe8cb3cdbc53440ba094c813bc025dae62b&
+
+[2026-04-30T22:19:40.275000+00:00] neopabo (id=1499535739296153812)
+    If anyone is interested in trying it out, please do, and provide feedback! I want to make this skill as good as it can possibly be
+
+[2026-04-30T23:18:31.678000+00:00] elkosmas (id=1499550551074013214)
+    will check i'm actually using hermes on a headless machine so I guess I should have set it up locally as well right?
+
+[2026-05-01T00:18:39.175000+00:00] neopabo (id=1499565682013245470)
+    I'm assuming by headless you mean you run it on docker? My own setup uses hermes in a local install in `~/.hermes` so this is what I've been using for testing, but it should work as long as your hermes has full access to your linux desktop
+    [reply to elkosmas msg=1499550551074013214]
+

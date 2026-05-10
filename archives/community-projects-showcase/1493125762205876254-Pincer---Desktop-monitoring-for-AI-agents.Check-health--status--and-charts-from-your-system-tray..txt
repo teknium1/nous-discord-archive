@@ -1,0 +1,11 @@
+# Thread 'Pincer - Desktop monitoring for AI agents.Check health, status, and charts from your system tray.' in forum #community-projects-showcase
+# thread_id=1493125762205876254 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:13.969126+00:00
+
+[2026-04-13T05:48:42.645000+00:00] .elkim (id=1493125762205876254)
+    My friend did this cool app to monitoring agents, works with Hermes, try it out! It's very handy.
+    
+    https://github.com/mariodian/pincer
+    [attachment] Screenshot_2026-04-13_07-42-50.png https://cdn.discordapp.com/attachments/1493125762205876254/1493125762650345522/Screenshot_2026-04-13_07-42-50.png?ex=6a02167a&is=6a00c4fa&hm=2ad514b6f5c1cbf6ddd1af918190f3f819adffa6dbf1028c4e540dfad740a356&
+    [embed] GitHub - mariodian/pincer: A fast multi-platform agent monitoring u... https://github.com/mariodian/pincer
+

@@ -1,0 +1,93 @@
+# Thread 'RuleShield' in forum #community-projects-showcase
+# thread_id=1483576699500105839 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:15.564285+00:00
+
+[2026-03-17T21:24:08.683000+00:00] hisdudeness.eth (id=1483576699500105839)
+    https://github.com/banse/RuleShield
+    
+    RuleShield was my submission to the latest Hermes Hackathon. It's still in a very early PoC stage. 
+    
+    RuleShield is an intelligent LLM cost optimizer that sits between your Hermes Agent and any LLM provider. It learns your agent's patterns through 5 layers of defense, routes requests to the cheapest capable model, and improves its own rules through a feedback loop.
+    
+    RuleShield is open source so if anyone wants to contribute you're more than welcome. 
+    
+    for more info see: https://vibingco.de
+    
+    I am currently looking for example Cron Job prompts as well as typical user session prompts that I can use for training the rule engine with real-life usecases (see below).
+    
+    **How It Works: 5-Layer Architecture**
+    
+    **Layer 1: Semantic Cache **
+    Two-tier caching that catches identical and near-identical requests.
+    
+    Exact match: SHA-256 hash lookup. Same prompt = instant answer.
+    Semantic match: Sentence-transformer embeddings with cosine similarity (threshold 0.92). "What's the weather?" and "Tell me the weather" both hit cache.
+    
+    
+    **Layer 2: Weighted Rule Engine**
+    Pattern matching with weighted scoring for common prompt families.
+    
+    75 rules across 4 packs: 8 default, 12 advanced, 30 customer support, 25 coding assistant
+    Pattern types: exact, contains, startswith, regex
+    Weighted keyword and regex scoring
+    Confidence levels: CONFIRMED / LIKELY / POSSIBLE
+    Auto-extraction generates new rules from observed traffic
+    Rules fire in under 2ms
+    
+    
+    **Layer 3: Hermes Bridge**
+    A local Hermes Agent instance running on a cheap model that handles medium-complexity requests. Requests too complex for rules but too simple for premium models get routed here first.
+    
+    
+    **Layer 4: Smart Model Router **
+    Complexity classifier analyzes each request and routes to the cheapest capable model.
+    
+    The classifier uses prompt length, message count, keyword analysis, and question type to score complexity on a 1-10 scale.
+    
+    
+    **Feedback Loop: Self-Improving Rules**
+    RuleShield learns from your feedback. Accept or reject any intercepted response, and the system adjusts confidence scores using bandit-style updates.
+    
+    
+    **Shadow Mode: Run RuleShield in passive mode to learn**
+    RuleShield can run in shadow mode to learn from your prompts without affecting your LLM usage. That way you can start training the rule engine without actively using it. The engine automatically learns from your usage and improves itself by comparing real LLM responses with how RuleShield would had responded in active mode.
+    
+    
+    **Rule Trainer: Automated Rule Training Scripts**
+    At this early stage, this is the most important part to get a solid base rule set.
+    
+    The RuleTrainer uses the HERMES python library to programmatically prompt typical user sessions automatically and uses the feedback loop API to constantly improve the rules.
+    
+    Watch the attached video to se the Rule Trainer in action.
+    
+    
+    **Cron Job Optimizer**
+    The Cron Job Optimizer analyzes Cron Jobs and tries to optimize them. It helps you reduce repeated prompt cost for recurring workflows.
+    
+    It works in stages:
+    
+    - detect recurring workflow prompts
+    - create a draft cron profile
+    - validate draft behavior in shadow
+    - activate only when quality is good enough
+    - run the active profile with dynamic payloads
+    
+    ---
+    
+    The infrastructure is fully functional but the rule engine needs way more training on different models to really be production ready.
+    
+    So if you are still reading this you may be really interested in what I am building.
+    
+    Thanks for that!
+    
+    And if you want to contribute in this very early stage: 
+    
+    I need way more training data to make RuleShield really usable. I am looking for typical Cron Jobs and User Session prompts to feed the Rule Trainer. 
+    
+    I am also working on a training script creater for the Rule Trainer to make it even easier to train the engine.
+    
+    And way more to come ...
+    [attachment] RuleTraining.mov https://cdn.discordapp.com/attachments/1483576699500105839/1483576700251148482/RuleTraining.mov?ex=6a01a038&is=6a004eb8&hm=a99b152588a492873a7cffe915d1161214450d4f26082c1a51691292151f9d55&
+    [embed] GitHub - banse/RuleShield https://github.com/banse/RuleShield
+    [embed] RuleShield Dashboard https://vibingco.de/
+

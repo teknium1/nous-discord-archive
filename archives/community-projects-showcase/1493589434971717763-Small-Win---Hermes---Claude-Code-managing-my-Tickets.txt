@@ -1,0 +1,22 @@
+# Thread 'Small Win - Hermes / Claude Code managing my Tickets' in forum #community-projects-showcase
+# thread_id=1493589434971717763 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:08.298341+00:00
+
+[2026-04-14T12:31:10.847000+00:00] dalekc72 (id=1493589434971717763)
+    Super excited that Hermes and Claude Code are now working tickets in my PM software, Plane.so.  Tickets come in and Hermes triages and assigns and starts working the tickets.  Basically Paperclip that gets sh*t done.  They then document in the ticket and if needed create documentation for Obsidian.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493589434971717763/1493589435252605029/image.png?ex=6a01cc0e&is=6a007a8e&hm=fbddb709ce78d74bd9d9b9975546a5367dbca2de4880541229fc18145b5043ae&
+
+[2026-04-14T15:50:58.683000+00:00] codename_11 (id=1493639715600203807)
+    Gonna have to try this out!
+
+[2026-04-14T15:55:07.754000+00:00] dalekc72 (id=1493640760279564348)
+    It is working better than I could have imagined.
+    [reply to codename_11 msg=1493639715600203807]
+
+[2026-04-14T15:56:01.238000+00:00] codename_11 (id=1493640984607588555)
+    I imagine you've got a skill setup for interating with Plane via their api or something? 🙂
+
+[2026-04-14T15:59:43.886000+00:00] dalekc72 (id=1493641918461120734)
+    I think Claude Code created one.  I say I think because Claude Code created several skills for itself and as seed skills for a Hermes and I think that was one.  I would have to check Github.  Hermes is great at figure out what to do.
+    [reply to codename_11 msg=1493640984607588555]
+

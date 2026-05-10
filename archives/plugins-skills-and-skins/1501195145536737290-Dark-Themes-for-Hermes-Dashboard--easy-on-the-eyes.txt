@@ -1,0 +1,17 @@
+# Thread 'Dark Themes for Hermes Dashboard (easy on the eyes)' in forum #plugins-skills-and-skins
+# thread_id=1501195145536737290 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:04.864415+00:00
+
+[2026-05-05T12:13:33.553000+00:00] yakuzadaddy. (id=1501195145536737290)
+    Free to use ( please add stars and share) 
+    
+    https://github.com/yakuzadevopps/Hermes-Dashboard-Themes
+    [attachment] HHjcSNEaMAAp9Ba.png https://cdn.discordapp.com/attachments/1501195145536737290/1501195145763225781/HHjcSNEaMAAp9Ba.png?ex=6a01c7ed&is=6a00766d&hm=4341e4f1176918130b23a0b1903b271996b45ba42eceaf7bc2f26313343fe1d3&
+    [embed] yakuzadevopps/Hermes-Dashboard-Themes https://github.com/yakuzadevopps/Hermes-Dashboard-Themes
+
+[2026-05-07T08:33:13.735000+00:00] yakuzadaddy. (id=1501864473332420719)
+    Updated the repo guys with 4 new themes
+    [attachment] hinokami-night.png https://cdn.discordapp.com/attachments/1501195145536737290/1501864472627777607/hinokami-night.png?ex=6a019449&is=6a0042c9&hm=54a985390ecbb5f7221831e5100d352692dbc967053299a9cff0a7f309b672ae&
+    [attachment] codex-desktop-noir.png https://cdn.discordapp.com/attachments/1501195145536737290/1501864472862789692/codex-desktop-noir.png?ex=6a019449&is=6a0042c9&hm=d2c474200e90082ab886e88d7a07d797ae15ee9577e98627d453182f3343c59b&
+    [attachment] shinigami-ledger.png https://cdn.discordapp.com/attachments/1501195145536737290/1501864473097404537/shinigami-ledger.png?ex=6a019449&is=6a0042c9&hm=afc54df02bf3b4d2679346354b846e91e0ee7cc611e852fe10ca0e07e4820f5a&
+

@@ -1,0 +1,37 @@
+# Thread 'Zada projects' in forum #community-projects-showcase
+# thread_id=1477287936855638200 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:23.533349+00:00
+
+[2026-02-28T12:54:50.829000+00:00] kriptoff (id=1477287936855638200)
+    https://x.com/KorkmazCRR/status/2027728531757687243?s=20
+    
+    Hermes agent: A useful and smart personal note-taking center.
+    
+    Yesterday I used Hermes Agent for a while and developed the comprehensive notebook I need. 
+    @NousResearch
+     
+    
+    Actually, I designed this note-taking app for myself. I created it to record my predictions, important notes I shouldn't forget, money I've earned, and significant moments.
+    
+    I think I like this improvement, I'll always use it, thank you HERMES AGENT
+    [embed]  https://twitter.com/KorkmazCRR/status/2027728531757687243?s=20
+
+[2026-02-28T12:59:14.206000+00:00] ee.dd (id=1477289041538977846)
+    Cool can the agent use the note pad?
+
+[2026-02-28T13:20:03.628000+00:00] kriptoff (id=1477294281994539210)
+    If I give the command, yes, this has really made my life easier; I think I'll stop constantly carrying paper, pen, and files with me. 😂
+    [attachment] agent.mp4 https://cdn.discordapp.com/attachments/1477287936855638200/1477294281155805195/agent.mp4?ex=6a01d783&is=6a008603&hm=9a736b9f306e6acb123b0714d93ab6ca0cbc1fa88b9322d337d0554f1b8c1fec&
+    [reply to ee.dd msg=1477289041538977846]
+
+[2026-02-28T13:20:52.740000+00:00] ee.dd (id=1477294487985197116)
+    Can you show the agent using it
+
+[2026-02-28T13:50:13.805000+00:00] kriptoff (id=1477301874427170968)
+    [attachment] HERMES.mp4 https://cdn.discordapp.com/attachments/1477287936855638200/1477301873714397385/HERMES.mp4?ex=6a01de95&is=6a008d15&hm=8e9f99cbfabb958fefed03c88ea685477c4578534824225c97d7d0a68f10911a&
+    [reply to ee.dd msg=1477294487985197116]
+
+[2026-02-28T13:52:11.214000+00:00] kriptoff (id=1477302366876336309)
+    Yes, he can use it if I guide him; actually, that's how I usually use it.
+    [reply to ee.dd msg=1477294487985197116]
+

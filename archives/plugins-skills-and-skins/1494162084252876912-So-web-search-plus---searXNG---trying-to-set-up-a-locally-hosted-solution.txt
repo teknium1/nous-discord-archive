@@ -1,0 +1,35 @@
+# Thread 'So web-search-plus / searXNG - trying to set up a locally hosted solution' in forum #plugins-skills-and-skins
+# thread_id=1494162084252876912 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:30.326253+00:00
+
+[2026-04-16T02:26:41.075000+00:00] sabatour. (id=1494162084252876912)
+    Ubuntu Server / Ollama / hermes agent / docker / searXNG
+    Has anyone actually gotten the web-search-plus to actually work and specifically with searXNG? I cant for the life of me get it to show up with the /tools command in the hermes cli. I swear to god if it tells me to get a firecrawl api one more time I am going to lose my mind. 
+    I also have hermes dashboard installed and accessable (if logs from there would be helpful), and telegram is working like a champ. Trying to get a locally hosted web access solution to work seem unusually fussy. 
+    Any help or any location I can look that actually has people posting about the web-search-plus plugin or support of it would be super helpful. 
+    This is actually more annoying to set up over what I went through to get my Voron 2.4 running and dialed in, it doesnt seem like this should be this difficult.. 
+    
+    thanks again for any help on this
+
+[2026-04-16T18:12:07.718000+00:00] rabilrbl (id=1494400013038649467)
+    I created brave search plugin, checkout https://github.com/rabilrbl/hermes-brave-search-plugin
+    While it does require API Key, the free tier is very generous as I personally use it and never hit any limits.
+    
+    If you want a self hosted solution, you can follow similar approach and ask your hermes agent to create a similar tool for searXNG
+    [embed] GitHub - rabilrbl/hermes-brave-search-plugin: Enable brave search i... https://github.com/rabilrbl/hermes-brave-search-plugin
+
+[2026-04-30T02:40:20.791000+00:00] wysie_ (id=1499238952509374494)
+    yeah it works i submitted some PRs for it. have it working across all the providers including SearXNG. u're referring to this right? https://github.com/robbyczgw-cla/hermes-web-search-plus
+    [embed] GitHub - robbyczgw-cla/hermes-web-search-plus: Hermes Agent plugin:... https://github.com/robbyczgw-cla/hermes-web-search-plus
+    [reply to sabatour. msg=1494162084252876912]
+
+[2026-05-01T18:05:33.441000+00:00] mazak (id=1499834177305182399)
+    How did you get past this issue on Web Search Plus https://github.com/robbyczgw-cla/hermes-web-search-plus/issues/2
+    [embed] web_search_plus plugin loads successfully but is dropped from final... https://github.com/robbyczgw-cla/hermes-web-search-plus/issues/2
+    [reply to wysie_ msg=1499238952509374494]
+
+[2026-05-02T00:47:33.665000+00:00] wysie_ (id=1499935344857190592)
+    That's already fixed. The issue was web_search_plus was using the web toolset that Hermes was also using for the inbuilt web_search and web_extract. Hermes doesn't append when there's already an inbuilt list (at that time, may be fixed now).
+    
+    One fix (which I did initially) was to patch on the Hermes side, but subsequently I just created a new toolset called web_search_plus for the plugin itself so there's no conflict.
+

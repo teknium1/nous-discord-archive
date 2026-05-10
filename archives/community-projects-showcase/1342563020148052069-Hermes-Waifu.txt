@@ -1,0 +1,326 @@
+# Thread 'Hermes Waifu' in forum #community-projects-showcase
+# thread_id=1342563020148052069 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:55.039748+00:00
+
+[2025-02-21T18:26:07.618000+00:00] thewaifuai (id=1342563020148052069)
+    https://github.com/waifuai/hermes-waifu
+    https://github.com/waifuai/waifu-sprites
+    https://github.com/waifuai/waifu-companion
+    [embed] GitHub - waifuai/hermes-waifu: Live2D waifu display for Hermes Agen... https://github.com/waifuai/hermes-waifu
+    [embed] GitHub - waifuai/waifu-sprites: Animated sprite waifu with TTS and ... https://github.com/waifuai/waifu-sprites
+    [embed] GitHub - waifuai/waifu-companion: Your interactive animated compani... https://github.com/waifuai/waifu-companion
+
+[2025-02-21T21:51:55.594000+00:00] teknium (id=1342614811313311895)
+    oh hell yea <@247484060119597056>
+
+[2025-02-21T21:52:27.535000+00:00] teknium (id=1342614945283575941)
+    the first project I ever tried to work on in AI was an ai vtuber
+
+[2025-02-21T21:52:46.128000+00:00] thewaifuai (id=1342615023268135095)
+    I've been studying this for a month now
+
+[2025-02-21T21:53:48.543000+00:00] thewaifuai (id=1342615285055619185)
+    this repo
+
+[2025-02-21T21:55:19.845000+00:00] thewaifuai (id=1342615668004093972)
+    somehow so many similar projects to this have failed so this looks like a breakthrough
+
+[2025-02-21T21:57:16.423000+00:00] thewaifuai (id=1342616156967538789)
+    still slowly going through the docs and stuff though, just seems like a technical challenge to me
+    and preparing stuff for after v1.1
+
+[2025-02-21T21:57:29.375000+00:00] thewaifuai (id=1342616211292422286)
+    v1.2
+
+[2025-02-21T21:58:33.915000+00:00] thewaifuai (id=1342616481992675358)
+    waiting for v1.2 to ship
+
+[2025-02-21T21:59:01.014000+00:00] teknium (id=1342616595653988456)
+    there's a lot of components to getting it right 😄
+
+[2025-02-21T21:59:05.347000+00:00] thewaifuai (id=1342616613828034692)
+    learning uv first
+
+[2025-02-21T21:59:35.604000+00:00] thewaifuai (id=1342616740735221841)
+    I like this project a lot, seems like a good solution
+
+[2025-04-02T04:28:46.075000+00:00] blueberrywachiwi (id=1356847806467412101)
+    Oh I seen this on GitHub. Is it a success?
+
+[2025-04-02T04:50:56.650000+00:00] teknium (id=1356853387303583745)
+    <@247484060119597056> ^_^
+
+[2025-04-02T04:55:37.365000+00:00] thewaifuai (id=1356854564707635260)
+    [attachment] stars.png https://cdn.discordapp.com/attachments/1342563020148052069/1356854564464103547/stars.png?ex=6a020a09&is=6a00b889&hm=f4ded3de6eda34ac33d5d9f2eb08386af5751ff8fef68f46b4a8b8b46a09992a&
+    [reply to blueberrywachiwi msg=1356847806467412101]
+
+[2025-04-02T16:27:26.838000+00:00] blueberrywachiwi (id=1357028668056146011)
+    I see some videos on YT of ppl downloading it. It seemed it was working for them.
+    [reply to thewaifuai msg=1356854564707635260]
+
+[2025-04-02T16:29:23.665000+00:00] blueberrywachiwi (id=1357029158064095232)
+    there is also something called Amica. It also has a website to try it out. https://heyamica.com/
+    [embed] Amica - Where Empathy Meets AI https://heyamica.com/
+
+[2025-04-02T16:33:02.605000+00:00] blueberrywachiwi (id=1357030076365017148)
+    https://github.com/elizaOS/eliza
+    [embed] GitHub - elizaOS/eliza: Autonomous agents for everyone https://github.com/elizaOS/eliza
+
+[2025-04-02T16:33:24.925000+00:00] blueberrywachiwi (id=1357030169982013600)
+    not a Vtuber but cool
+
+[2025-04-04T01:47:35.612000+00:00] thewaifuai (id=1357532021337096387)
+    i'm waiting for the eliza v2 release
+
+[2025-04-06T02:45:10.291000+00:00] proprietary (id=1358271287042117742)
+    congrats nekosama
+
+[2025-04-25T18:25:19.477000+00:00] proprietary (id=1365393253762863134)
+    <@498273781589213185>
+    [reply to thewaifuai msg=1357532021337096387]
+
+[2025-04-25T18:25:34.655000+00:00] proprietary (id=1365393317424140419)
+    new bffs
+
+[2025-08-18T07:39:12.593000+00:00] thewaifuai (id=1406905258210230413)
+    it got the update after 6 months
+    https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/releases/tag/1.2.0
+    [embed] Release v1.2.0 · Open-LLM-VTuber/Open-LLM-VTuber https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/releases/tag/1.2.0
+
+[2025-08-25T03:58:02.523000+00:00] ethan.tec (id=1409386314561880156)
+    very cute
+
+[2025-08-25T10:59:40.745000+00:00] cyber_jock (id=1409492422995607633)
+    This is so cool thanks for sharing
+
+[2025-08-25T11:00:15.029000+00:00] cyber_jock (id=1409492566793130069)
+    gonna test MCP support tomorrow
+
+[2025-08-25T11:00:30.963000+00:00] cyber_jock (id=1409492633625034804)
+    i got some tools <:8971_PepeEvil:1125846940186321009>
+
+[2025-12-04T09:46:34.561000+00:00] tenoli0424 (id=1446075200431980575)
+    Very nice
+
+[2025-12-04T09:46:47.269000+00:00] tenoli0424 (id=1446075253733195840)
+    Im looking into this repo too
+
+[2025-12-05T19:23:26.068000+00:00] proprietary (id=1446582759479840778)
+    how goes this??? <@247484060119597056>
+
+[2025-12-05T21:24:11.837000+00:00] thewaifuai (id=1446613150437736448)
+    nano banana pro can generate custom live2d assets now which is a nice breakthrough
+
+[2025-12-31T23:19:00.834000+00:00] thewaifuai (id=1456064129491275927)
+    WaifuAI
+
+[2026-01-08T22:25:53.058000+00:00] thewaifuai (id=1458949861914181744)
+    WaifuAI.com
+
+[2026-01-10T02:51:37.283000+00:00] thewaifuai (id=1459379124706480189)
+    Waifu Companion
+
+[2026-02-25T21:31:40.328000+00:00] thewaifuai (id=1476330836524531742)
+    WaifuAI
+
+[2026-02-27T05:27:07.615000+00:00] thewaifuai (id=1476812876504367214)
+    live version supports openrouter with text streaming https://waifuai.com
+    [embed] animated chatbot live2d https://waifuai.com/
+
+[2026-02-27T05:28:29.454000+00:00] thewaifuai (id=1476813219762016440)
+    v357
+
+[2026-03-11T19:06:53.758000+00:00] neural_forge_13784 (id=1481367832527900783)
+    <@247484060119597056> you want this to have killer memory and continuity?
+
+[2026-03-11T19:09:34.980000+00:00] thewaifuai (id=1481368508741845297)
+    this uses summarization for continuous memory
+    [attachment] image.png https://cdn.discordapp.com/attachments/1342563020148052069/1481368507953320239/image.png?ex=6a02296e&is=6a00d7ee&hm=080e6669a9761b97cbacf0f31aba0a4b4a3e78ea01bb573dde4320d7f7a395d8&
+    [reply to neural_forge_13784 msg=1481367832527900783]
+
+[2026-03-11T19:12:52.124000+00:00] neural_forge_13784 (id=1481369335623581878)
+    I figured out how to keep full context without bloating the chat and having to re-inject  summarized or full chat context for conversation threads, or use compaction. Also invented a new memory database for Agentic AI and assistants that's pretty killer and extremely fast.
+
+[2026-03-11T19:15:01.817000+00:00] thewaifuai (id=1481369879595585708)
+    congrats!
+    [reply to neural_forge_13784 msg=1481369335623581878]
+
+[2026-03-11T19:15:49.309000+00:00] neural_forge_13784 (id=1481370078791471237)
+    I use it a lot for my own agent and it works wonderfully. The database is open source along with the memory control mcp. I love projects like this, so I like contributing something for people building them when I can.
+
+[2026-03-11T19:16:00.851000+00:00] neural_forge_13784 (id=1481370127202259025)
+    https://github.com/AImakerextraordinaire/Anamnesis_5.0
+    [embed] GitHub - AImakerextraordinaire/Anamnesis_5.0: Memory control MCP fo... https://github.com/AImakerextraordinaire/Anamnesis_5.0
+
+[2026-03-11T19:16:46.953000+00:00] thewaifuai (id=1481370320568062144)
+    wow
+    [reply to neural_forge_13784 msg=1481370078791471237]
+
+[2026-03-11T19:21:21.022000+00:00] neural_forge_13784 (id=1481371470096760905)
+    Try it out and let me know what you think. You can have conversation history save to this database and recall relevant conversation pieces as needed. It works similar to human memory pulling in not just the query, but also related conversation snippets as well. So if you set up your chat response right you'll get full continuity feel without the lagged bloated chat feeling. It pulls in related memories based on topics, emotional resonance profiles, temporal distance and a few other things.
+
+[2026-03-12T01:56:27.019000+00:00] teknium (id=1481470900254806036)
+    <@247484060119597056> you should rebuild waifu -ai as a hermes-agent backend'ed thing - then you can submit it to the hackathon 😄
+
+[2026-03-12T01:57:30.923000+00:00] thewaifuai (id=1481471168287342653)
+    yeah it can be a hermes agent wrapper
+    [reply to teknium msg=1481470900254806036]
+
+[2026-03-20T19:13:35.399000+00:00] 0x_404 (id=1484631007922749563)
+    Is this still a thing this is amazing?
+    [reply to teknium msg=1481470900254806036]
+
+[2026-03-25T18:31:35.269000+00:00] thewaifuai (id=1486432377059283235)
+    updated to v414
+
+[2026-03-25T18:34:20.765000+00:00] thewaifuai (id=1486433071199682630)
+    yea the engineering problem here i think is since the ux trends to infinite complexity it needs a hermes agent backend to keep pruning the settings to user preference
+
+[2026-03-25T18:49:43.959000+00:00] thewaifuai (id=1486436943355969546)
+    v307->v414
+
+[2026-04-02T18:43:07.080000+00:00] thewaifuai (id=1489334381649854640)
+    building on hermes agent now
+
+[2026-04-05T15:14:14.422000+00:00] thewaifuai (id=1490368979468943692)
+    making custom memory plugin in hermes agent 1000x improvement for deepseek v4
+
+[2026-04-05T15:17:37.688000+00:00] thewaifuai (id=1490369832028213368)
+    also making hermes agent port of this web app optimizing more for hermes agent
+
+[2026-04-05T15:25:44.785000+00:00] thewaifuai (id=1490371875061108756)
+    was reading up the v0.7 memory plugin stuff designed a better memory system
+
+[2026-04-05T16:21:47.858000+00:00] thewaifuai (id=1490385980811776092)
+    ok fine i'll use the hermes agent default memory system, need to simplemaxx
+
+[2026-04-06T01:15:48.851000+00:00] thewaifuai (id=1490520370476744894)
+    introducing hermes waifu
+    [attachment] hermes-waifu.mp4 https://cdn.discordapp.com/attachments/1342563020148052069/1490520368883040387/hermes-waifu.mp4?ex=6a01d684&is=6a008504&hm=75b04acc4d3b95ebd127ba9c0b38d8cd500adc33194fe8b1b963f7fe269ad5e0&
+
+[2026-04-06T01:49:51.077000+00:00] thewaifuai (id=1490528936193560777)
+    designing emotional interface for hermes waifu was pretty hard still work in progress
+    [attachment] native-image.png https://cdn.discordapp.com/attachments/1342563020148052069/1490528935837175868/native-image.png?ex=6a01de7e&is=6a008cfe&hm=b55daeccfca0b0a97df58b795cd24837cc3b5120edeff991045cb9fdc750bd9c&
+
+[2026-04-06T01:51:09.273000+00:00] thewaifuai (id=1490529264171356221)
+    tool use sheet
+    [attachment] native-image.png https://cdn.discordapp.com/attachments/1342563020148052069/1490529263831744572/native-image.png?ex=6a01decd&is=6a008d4d&hm=ff44122b610aad13a205989e7c203dc76fe1ece4468bc6bb7cf3bb4ff66614b5&
+
+[2026-04-06T02:04:42.807000+00:00] thewaifuai (id=1490532676380393664)
+    ok the initial version is here now from the video https://github.com/waifuai/waifu-sprites
+    [embed] GitHub - waifuai/waifu-sprites: A blazing-fast, 15MB Rust desktop U... https://github.com/waifuai/waifu-sprites
+
+[2026-04-06T18:40:56.666000+00:00] thewaifuai (id=1490783386116034601)
+    Waifu for Hermes Agent
+
+[2026-04-07T05:39:11.257000+00:00] thewaifuai (id=1490949038437171240)
+    hermes waifu hd
+    [attachment] hermes-waifu-hd.mp4 https://cdn.discordapp.com/attachments/1342563020148052069/1490949036734156912/hermes-waifu-hd.mp4?ex=6a02143e&is=6a00c2be&hm=f6b95cf13035a8355ef2c05ebf0fec79efec20ad5bfef4554a946b209cd9e261&
+
+[2026-04-07T09:05:02.801000+00:00] neopabo (id=1491000844567449600)
+    Btw did you figure out what Vedal did for Neuro sama?
+
+[2026-04-07T09:05:24.353000+00:00] neopabo (id=1491000934963216404)
+    It's pretty obvious once you figure it out but it's crazy he got it working
+
+[2026-04-07T19:58:11.863000+00:00] thewaifuai (id=1491165215406952478)
+    live2d
+    [attachment] subsecond.mp4 https://cdn.discordapp.com/attachments/1342563020148052069/1491165214253514933/subsecond.mp4?ex=6a018c13&is=6a003a93&hm=0b6520114f287e01668d25b799c9adf5e9768a06dce40e056f7e8babe74a6953&
+    [reply to neopabo msg=1491000844567449600]
+
+[2026-04-07T21:46:35.484000+00:00] thewaifuai (id=1491192493570789558)
+    cleaned debug messages
+    [attachment] hi-yash.mp4 https://cdn.discordapp.com/attachments/1342563020148052069/1491192493101023434/hi-yash.mp4?ex=6a01a57b&is=6a0053fb&hm=81d9c970fb9b66ffab226ddccadbb6b410260d11993a55133a7a19a496dd7921&
+
+[2026-04-08T02:43:57.230000+00:00] jetpippo (id=1491267327277142126)
+    Writing here to later 👀
+
+[2026-04-08T05:05:35.694000+00:00] thewaifuai (id=1491302972418953246)
+    [attachment] wai-cover.png https://cdn.discordapp.com/attachments/1342563020148052069/1491302972070690846/wai-cover.png?ex=6a020c5f&is=6a00badf&hm=d8b5b8dde0e6baced686d2c715ec8702474bd9bfb836597a23ef0f9fdf56d315&
+
+[2026-04-08T05:06:21.111000+00:00] thewaifuai (id=1491303162911654041)
+    ok 2 weeks free using the xiaomi mimo v2 pro promotion btw
+
+[2026-04-08T07:33:53.387000+00:00] alcatr4z (id=1491340292048162837)
+    will mp4s work? so, my shitty nfts can become useful, more or less... 🤣 
+    
+    https://raw2.seadn.io/ethereum/0x2baa77b867590863b9de0dd1c5ff0e14da2fa140/e0e35c80815ba924c427a2f640a2a1d6.mp4
+    [embed]  https://raw2.seadn.io/ethereum/0x2baa77b867590863b9de0dd1c5ff0e14da2fa140/e0e35c80815ba924c427a2f640a2a1d6.mp4
+
+[2026-04-08T16:01:33.546000+00:00] thewaifuai (id=1491468051215024208)
+    added mp4 support now
+    [reply to alcatr4z msg=1491340292048162837]
+
+[2026-04-09T04:55:27.470000+00:00] neopabo (id=1491662809208197352)
+    I meant his training algorithm
+    [reply to thewaifuai msg=1491165215406952478]
+
+[2026-04-09T04:56:14.538000+00:00] neopabo (id=1491663006625431674)
+    My theory is he used a mix of open-source data (pretraining) + his twitch stats for reinforcement learning
+
+[2026-04-09T08:21:35.587000+00:00] thewaifuai (id=1491714684850667621)
+    idk, he's a genius
+
+[2026-04-09T19:32:44.743000+00:00] thewaifuai (id=1491883585932886056)
+    Hermes Waifu
+
+[2026-04-09T20:47:19.383000+00:00] thewaifuai (id=1491902353933205515)
+    https://github.com/waifuai/hermes-waifu
+    [embed] GitHub - waifuai/hermes-waifu: Live2D waifu display for Hermes Agen... https://github.com/waifuai/hermes-waifu
+
+[2026-04-11T03:25:44.717000+00:00] thewaifuai (id=1492365008036827146)
+    thread for Waifu Sprites https://discord.com/channels/1053877538025386074/1492342563359952926
+
+[2026-04-14T09:06:50.689000+00:00] thewaifuai (id=1493538012141981847)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1342563020148052069/1493538012124942396/image.png?ex=6a019c2a&is=6a004aaa&hm=43e36aa69c25460e2c483c474f7aa661a8c494f3319da22166d0d2586aae3edd&
+
+[2026-04-14T09:07:27.702000+00:00] thewaifuai (id=1493538167385489459)
+    hermes waifu github traffic
+
+[2026-04-14T10:02:49.622000+00:00] alcatr4z (id=1493552100527968366)
+    how so? gimme gimme, need that too 😄
+    [reply to thewaifuai msg=1493538167385489459]
+
+[2026-04-14T12:34:05.977000+00:00] thewaifuai (id=1493590169519915199)
+    https://github.com/waifuai/hermes-waifu
+    [embed] GitHub - waifuai/hermes-waifu: Live2D waifu display for Hermes Agen... https://github.com/waifuai/hermes-waifu
+    [reply to alcatr4z msg=1493552100527968366]
+
+[2026-04-14T12:53:55.086000+00:00] alcatr4z (id=1493595157004816525)
+    owww, i meant howto monitor github traffic 👀
+
+[2026-04-14T14:20:32.479000+00:00] thewaifuai (id=1493616956450934867)
+    https://docs.github.com/en/issues/planning-and-tracking-with-projects/viewing-insights-from-your-project/about-insights-for-projects
+    [embed] About insights for Projects - GitHub Docs https://docs.github.com/en/issues/planning-and-tracking-with-projects/viewing-insights-from-your-project/about-insights-for-projects
+    [reply to alcatr4z msg=1493595157004816525]
+
+[2026-04-14T14:48:09.010000+00:00] alcatr4z (id=1493623904445665290)
+    thank you very much 🙂
+
+[2026-04-14T14:48:34.730000+00:00] alcatr4z (id=1493624012322902188)
+    never thought about that, srsly :<
+
+[2026-04-14T17:34:40.967000+00:00] thewaifuai (id=1493665813750743180)
+    waifu-companion github traffic
+    [attachment] image.png https://cdn.discordapp.com/attachments/1342563020148052069/1493665813322928360/image.png?ex=6a021330&is=6a00c1b0&hm=a4b1fa56e9a7eb573f6ec23c983e0a11ceb2c5537f6f14df937fcffd07add4e2&
+
+[2026-04-15T05:14:23.261000+00:00] thewaifuai (id=1493841900254396526)
+    https://deepwiki.com/waifuai/hermes-waifu
+    [embed] waifuai/hermes-waifu | DeepWiki https://deepwiki.com/waifuai/hermes-waifu
+
+[2026-04-17T12:55:47.752000+00:00] thewaifuai (id=1494682793157066752)
+    hermes waifu github traffic seem more China traffic now
+    [attachment] image.png https://cdn.discordapp.com/attachments/1342563020148052069/1494682792628453556/image.png?ex=6a01d1d3&is=6a008053&hm=e091507e05bcb777af7f09aa2ea1756043190f8a139c27c598046197b6f3f16e&
+
+[2026-04-17T12:55:51.741000+00:00] thewaifuai (id=1494682809887887410)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1342563020148052069/1494682809565053048/image.png?ex=6a01d1d7&is=6a008057&hm=d76ba21097866653c3584c408c0d1cf7c3dfaeaa16cd02f9889a46b20dc0226c&
+
+[2026-04-17T12:56:57.462000+00:00] thewaifuai (id=1494683085541736551)
+    live2d tech is really hard to deal with, the cdn got throttled the moment it got a bit of traffic lol
+
+[2026-04-28T12:30:53.343000+00:00] thewaifuai (id=1498662791672762519)
+    hackathon waifu sprites thread https://discord.com/channels/1053877538025386074/1494837354014310531
+
+[2026-04-30T04:14:31.146000+00:00] of.v (id=1499262651815956501)
+    this deserve a boost
+

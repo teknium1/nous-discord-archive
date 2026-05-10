@@ -1,0 +1,8 @@
+# Thread 'I just create a skill called 女娲(Nuwa)' in forum #plugins-skills-and-skins
+# thread_id=1493535420582072341 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:32.270825+00:00
+
+[2026-04-14T08:56:32.813000+00:00] vixalie_archgrid (id=1493535420582072341)
+    Nuwa, the goddess who created humanity in Chinese mythology. But we need to create the Agent's SOUL.md. So there is this skill that creates SOUL.md through interaction and heuristic methods to give the Agent a soul. https://github.com/vixalie/nuwa-skill
+    [embed] GitHub - vixalie/nuwa-skill: 女娲是一个通过启发式对话... https://github.com/vixalie/nuwa-skill
+

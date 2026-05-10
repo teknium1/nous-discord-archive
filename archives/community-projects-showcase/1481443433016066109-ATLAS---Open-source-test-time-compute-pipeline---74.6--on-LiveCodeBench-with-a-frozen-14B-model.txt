@@ -1,0 +1,20 @@
+# Thread 'ATLAS - Open source test-time compute pipeline | 74.6% on LiveCodeBench with a frozen 14B model' in forum #community-projects-showcase
+# thread_id=1481443433016066109 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:17.938626+00:00
+
+[2026-03-12T00:07:18.319000+00:00] isaac_tigges (id=1481443433016066109)
+    Hey everyone, been working on a project for the past few months and wanted to share it here.
+    
+    I am a broke uni student, and its been hard to afford Claude Code for my side projects, so I started digging into research papers to see if I could get a small local model to punch above its weight and into or near frontier territory. Lots of papers and late nights later, I ended up with ATLAS, a test-time compute pipeline that builds upon a frozen Qwen3-14B on a single RTX 5060 Ti.
+    
+    The pipeline generates structurally different solution candidates, picks the best one using the model's own embeddings, and if everything fails, the model writes its own tests and tries to repair its code.
+    
+    Base model alone: 55% on LiveCodeBench With the pipeline: 74.6% Claude 4.5 Sonnet gets ~71.4% on the same bench Cost: ~$0.004/task in electricity. Some parts still don't work (documented in the repo) and it's slow on hard problems. But it's fully open source and looking for some feedback!
+    
+    I am currently working on V3.1 which will provide a much fuller bench suite to ensure it's not overfitting LiveCodeBench, and I am also working on improving the speed a bit (it's pretty slow at the moment).
+    
+    Repo: https://github.com/itigges22/ATLAS
+    
+    I'm a student at Virginia Tech studying business, so this is not my forte per se, but I love to learn new things, and I thought that this was an interesting and incredibly challenging project. With that being said, I do prefer you be honest. If you see any glaring red flags in the project, do not hesitate to let me know as I much prefer you point it out and let us all have a constructive discussion around it!
+    [embed] GitHub - itigges22/ATLAS: Adaptive Test-time Learning and Autonomou... https://github.com/itigges22/ATLAS
+

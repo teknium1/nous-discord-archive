@@ -1,0 +1,7 @@
+# Thread 'SUCCESSOR AGENT! - Minimalist agent harness with amazing rendering stack - Built for local/OS' in forum #community-projects-showcase
+# thread_id=1491428833012875265 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:33.422259+00:00
+
+[2026-04-08T13:25:43.198000+00:00] mksuper (id=1491428833012875265)
+    https://github.com/lyc-aon/successor-agent
+

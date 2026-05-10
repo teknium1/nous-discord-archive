@@ -1,0 +1,17 @@
+# Thread 'SHELF AI MAKES HERMES SMARTER, SELF IMPROVING  AND SAVES TOKENS' in forum #plugins-skills-and-skins
+# thread_id=1487197260386140220 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:52.881228+00:00
+
+[2026-03-27T21:10:57.665000+00:00] agent_dad (id=1487197260386140220)
+    Hey Hermes!  As you know Hermes has 5 memory layers but the documents those layers retrieve are still flat text. ShelfAI adds a  interim layer — it restructures your .md files with abstracts and semantic chunks so the agent can route smarter ( self improving). and load less ( saves lots of tokens) . Think Level 0.5 between the skills index and full skill loading. Built from patterns I learned on an oncology RAG . Standalone, works above QMD/Honcho/SuperMemory. Sample integrations included.  Love to hear what you all think https://github.com/noahbfreedman-cloud/ShelfAI
+    [embed] GitHub - noahbfreedman-cloud/ShelfAI: The document-ops layer for ag... https://github.com/noahbfreedman-cloud/ShelfAI
+
+[2026-03-28T13:44:11.064000+00:00] 23456780289 (id=1487447213218205869)
+    Yes
+
+[2026-04-04T15:21:30.692000+00:00] riktanius (id=1490008421452222614)
+    What happened to this?
+
+[2026-04-05T06:16:34.749000+00:00] yourexitliquidity. (id=1490233672593444906)
+    Why it's gone
+

@@ -1,0 +1,65 @@
+# Thread 'Hermes CyberUI - WebUI' in forum #community-projects-showcase
+# thread_id=1491202761084239952 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:34.379173+00:00
+
+[2026-04-07T22:27:23.450000+00:00] anibal3608 (id=1491202761084239952)
+    I  created new hermes webui. 
+    What is different here than other webui's ? It doesn't need any config file, environment or similar.
+    Clone, install dependencies, run . That's it.
+    
+    https://github.com/anibalardid/hermes-cyberui
+    
+    In the meantime I will detect needs, I will be adding more features.
+    [embed] GitHub - anibalardid/hermes-cyberui: WebUI for Hermes Agent. Focuse... https://github.com/anibalardid/hermes-cyberui
+
+[2026-04-07T22:41:26.405000+00:00] 123mikeyd (id=1491206296693641336)
+    Looks good, I hope it is customizable.
+
+[2026-04-07T22:51:25.411000+00:00] anibal3608 (id=1491208809107034142)
+    for color yes, it has 8 themes, and if you don't like it, can ask to hermes to create new theme and all happy 🙂
+    [reply to 123mikeyd msg=1491206296693641336]
+
+[2026-04-07T23:18:50.486000+00:00] w0lfgang88 (id=1491215709051555980)
+    Very nice! Look very similar to mine. https://github.com/stephenschoettler/hermes-overwatch
+    [embed] GitHub - stephenschoettler/hermes-overwatch: Local dashboard for He... https://github.com/stephenschoettler/hermes-overwatch
+
+[2026-04-07T23:19:48.272000+00:00] w0lfgang88 (id=1491215951423606836)
+    Ask you hermes bot to feed your ui synthetic data for better screenshots
+
+[2026-04-07T23:27:23.440000+00:00] anibal3608 (id=1491217860536828097)
+    oh wow, your looks so nice !!!
+    [reply to w0lfgang88 msg=1491215709051555980]
+
+[2026-04-07T23:27:40.685000+00:00] anibal3608 (id=1491217932867604633)
+    nice hint, I taked my own screenshots and blurred sensitive data 😄
+    [reply to w0lfgang88 msg=1491215951423606836]
+
+[2026-04-07T23:31:42.356000+00:00] w0lfgang88 (id=1491218946508984462)
+    That's what I usually do too. I just asked my bot to make them better.
+    [reply to anibal3608 msg=1491217932867604633]
+
+[2026-04-07T23:47:04.590000+00:00] anibal3608 (id=1491222814638735362)
+    Hehe nice job
+
+[2026-04-08T14:06:08.101000+00:00] xxbelocxx (id=1491439003793096897)
+    Hello, you have some broken lines in the startup and install scripts. Its looking for a venv environment and python3 under /opt/homebrew
+
+[2026-04-08T15:54:21.625000+00:00] kerozelvin (id=1491466239607046215)
+    When you say api keys are picked up from existing configuration files and .env it sounds risky.  Do you mean that api keys “STAY” in existing configuration files and .env and this UI only runs on top of that?  (Why does the UI need to harvest or pick up secrets?)
+
+[2026-04-08T19:04:56.293000+00:00] anibal3608 (id=1491514200080650382)
+    oh yep, I use mac and homebrew
+    [reply to xxbelocxx msg=1491439003793096897]
+
+[2026-04-08T19:05:38.633000+00:00] anibal3608 (id=1491514377667350629)
+    it locates .hermes and use it, using api or using its needed files. This is not a risk, all already are on you pc, and all keep their, this is not exposed
+    [reply to kerozelvin msg=1491466239607046215]
+
+[2026-04-21T12:43:45.181000+00:00] anibal3608 (id=1496129313936769137)
+    Added Conversatios, Profiles
+
+[2026-04-21T13:49:36.667000+00:00] anibal3608 (id=1496145887670440206)
+    Added Tasks screen, Now can schedule manually tasks
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491202761084239952/1496145886672060436/image.png?ex=6a01de70&is=6a008cf0&hm=7f99334e05dc489ea004c7e705cf91ebf328883e3cb6255c584855e0ceebae06&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491202761084239952/1496145887234228346/image.png?ex=6a01de70&is=6a008cf0&hm=40e5c1e79bd5bfb6f10578a18e3e59eb6cd3e898b95031a28aa89cb03cf1b0e7&
+

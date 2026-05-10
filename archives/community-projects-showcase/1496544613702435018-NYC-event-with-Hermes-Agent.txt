@@ -1,0 +1,13 @@
+# Thread 'NYC event with Hermes Agent?' in forum #community-projects-showcase
+# thread_id=1496544613702435018 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:47.823861+00:00
+
+[2026-04-22T16:14:00.361000+00:00] xuelongmu (id=1496544613702435018)
+    I organize a monthly Personal AI event in NYC at a spacious venue in Brooklyn. Last week we hosted an OpenClaw event with 300+ signups and 100+ in-person attendees: https://luma.com/foriorb (livestream at https://www.youtube.com/watch?v=CQfMRhP94Q4)
+    
+    I'm planning a May event with the theme being Personal AI agents in general. I use Hermes Agent myself and love it. It would be great to collaborate with the Nous Research team on the event!
+    [embed] OpenClaw NYC Meetup Livestream | April 15th 2026 https://www.youtube.com/watch?v=CQfMRhP94Q4
+
+[2026-04-24T23:25:33.206000+00:00] edub8828 (id=1497377991897120904)
+    Huzzah!  I live near Red Hook.  A Hermes user but not a Nous Research person.  Woah zerospace looks rad.
+

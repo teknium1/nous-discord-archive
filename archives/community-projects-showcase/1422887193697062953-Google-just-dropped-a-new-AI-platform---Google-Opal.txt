@@ -1,0 +1,32 @@
+# Thread '🚀 Google just dropped a new AI platform — Google Opal' in forum #community-projects-showcase
+# thread_id=1422887193697062953 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:32.490939+00:00
+
+[2025-10-01T10:05:42.943000+00:00] mariia081452 (id=1422887193697062953)
+    Imagine this: you describe what you want in plain English — and the system builds it for you. An app, an automation workflow, even a video. No coding, no setup. Just talk, and Opal creates.
+    
+    I tested Google Opal and compared it with the tools we already know — Zapier, Make (Integromat), Bubble. I also tried some ready-made templates for:
+    
+    video marketing,
+    
+    blogging,
+    
+    YouTube learning apps,
+    
+    social media content.
+    
+    The wild part? Opal runs on Google’s newest AI models: Gemini for text, Imagen for images, and Veo 3 for video — all inside one tool. Basically, an AI ecosystem packed into a single interface.
+    
+    ✅ What impressed me: fast setup, simplicity, and the potential to actually save hours of repetitive work.
+    ⚠️ What’s missing: you can tell it’s still in beta — sometimes it breaks, sometimes the results are too generic.
+    
+    👉 Will Opal become the next big thing in no-code AI… or just another Google experiment that disappears in 6 months?
+    
+    📺 Here’s my full review with step-by-step testing:
+    https://youtu.be/thBwyqveSVU
+    [embed] Can You Build Apps with AI? Google OPAL - The REAL DEAL or Just Ano... https://www.youtube.com/watch?v=thBwyqveSVU
+
+[2025-10-01T12:15:45.284000+00:00] teknium (id=1422919919086866565)
+    Nice you do pretty good thumbnails btw I was always too lazy to do that when I tried youtube
+    [reply to mariia081452 msg=1422887193697062953]
+

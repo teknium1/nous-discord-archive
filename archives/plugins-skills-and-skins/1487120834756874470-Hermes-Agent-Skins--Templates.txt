@@ -1,0 +1,16 @@
+# Thread 'Hermes Agent Skins (Templates)' in forum #plugins-skills-and-skins
+# thread_id=1487120834756874470 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:54.701772+00:00
+
+[2026-03-27T16:07:16.375000+00:00] quark2world (id=1487120834756874470)
+    I made 4 custom skins for Hermes for my HermelinChat GUI. They also work standalone and should be good enough as templates for your own Skins.
+    
+    https://github.com/quarker1337/hermelinChat/tree/main/skins
+    [attachment] image.png https://cdn.discordapp.com/attachments/1487120834756874470/1487120844105842819/image.png?ex=6a01feb6&is=6a00ad36&hm=f386f391fd0adf7ba5a6b7f3304fca67fbb68090086e3f59f3f8f259de82882c&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1487120834756874470/1487120844739051641/image.png?ex=6a01feb6&is=6a00ad36&hm=dc8fb176976293aaa2b3a9c8dbf16dd3010cfb69fecbcad47b19f9d643093d45&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1487120834756874470/1487120845452214312/image.png?ex=6a01feb6&is=6a00ad36&hm=2b4a88667c216f8997df725fb04ddab85053be85aa1657533f1bd7f8652bfe26&
+    [embed] hermelinChat/skins at main · quarker1337/hermelinChat https://github.com/quarker1337/hermelinChat/tree/main/skins
+
+[2026-03-28T13:44:34.845000+00:00] 23456780289 (id=1487447312962949190)
+    Okey
+

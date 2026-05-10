@@ -1,0 +1,34 @@
+# Thread 'Actionbook skill for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1496384506872070267 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:17.803970+00:00
+
+[2026-04-22T05:37:47.918000+00:00] senpeng_59205 (id=1496384506872070267)
+    A browser action engine for AI agents that runs through a Chrome extension, not a headless instance. Your agent drives the browser you're already logged into.
+    Anything you have a session for just works. Pre-built action manuals tell it what to click, so no HTML re-parsing per turn.
+    Demo → https://x.com/ActionbookHQ/status/2045071727110332521
+    PR → https://github.com/NousResearch/hermes-agent/pull/10819
+    [embed]  https://twitter.com/ActionbookHQ/status/2045071727110332521
+    [embed] feat(skills): add actionbook optional skill - stateless browser aut... https://github.com/NousResearch/hermes-agent/pull/10819
+
+[2026-04-22T07:50:46.668000+00:00] rikllo (id=1496417972174983218)
+    Could you explain what the difference is with browser use?
+
+[2026-04-22T08:38:44.189000+00:00] senpeng_59205 (id=1496430041372954724)
+    browser use launches its own browser, so it's always a fresh profile with no login state. Actionbook extension hooks into  running chrome, when you deploy Hermes on  own Win/Mac, you can let Hermes driving the browser you're already signed into, not a fresh instance.
+    [reply to rikllo msg=1496417972174983218]
+
+[2026-04-22T12:06:58.390000+00:00] nathanpowell5093 (id=1496482445850312865)
+    Installed but cannot get the chrome extension to connect.
+    Troubleshooting:    
+        1. Port 19222 is free
+        2. Daemon is running
+        3. Config: "extension" in ~/.actionbook/config.toml
+        4. Extension version — 0.5.0
+        5. Re-installed, reconfigured everything
+
+[2026-04-22T15:37:17.935000+00:00] senpeng_59205 (id=1496535376058253484)
+    https://chromewebstore.google.com/detail/actionbook/bebchpafpemheedhcdabookaifcijmfo
+    sorry about that ,  0.5.0 have some trouble now , so we haven't publish it in chrome web store, you can use 0.4.2 instead <:catastrophe:1151299904346521610>
+    [embed] Actionbook - Chrome Web Store https://chromewebstore.google.com/detail/actionbook/bebchpafpemheedhcdabookaifcijmfo
+    [reply to nathanpowell5093 msg=1496482445850312865]
+

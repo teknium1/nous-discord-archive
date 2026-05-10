@@ -1,0 +1,109 @@
+# Thread 'High-Quality, low memory footprint Wakeword/Keyword detection' in forum #community-projects-showcase
+# thread_id=1493369660668645567 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:10.994747+00:00
+
+[2026-04-13T21:57:52.570000+00:00] neopabo (id=1493369660668645567)
+    Hey everyone,
+    
+    I've been experimenting with wakeword detection models for a while now, and I'm excited to share an open-source, user-friendly version for the community to try out.
+    
+    For context: a wakeword detection model is a small, always-listening AI model that runs locally on your device. Its only job is to detect a specific trigger phrase (like "Hey Hermes") from your microphone stream in real time. When it hears the word, it fires an event -- and nothing else. It's lightweight by design, because it needs to run 24/7 without draining your CPU.
+    
+    This becomes really powerful when paired with a Hermes agent. Instead of manually typing commands or clicking to start a conversation, you can simply speak your trigger word, and Hermes wakes up and starts listening. It turns Hermes from a text-based tool you interact with intentionally into something closer to an always-available voice assistant -- without giving up the privacy, local-first nature, or extensibility that makes Hermes worth using in the first place.
+
+[2026-04-13T21:58:05.352000+00:00] neopabo (id=1493369714280239344)
+    A few questions to help shape the pipeline for everyone:
+    
+    1. What wakeword or phrase do you want to use? (e.g. "Hermes", "Hey Hermes", something custom?) And do you care about having multiple fallback phrases, or is one enough?
+    
+    2. How many voice recordings are you realistically willing to sit down and record? Think in ranges: under 20, 20-100, 100+. No wrong answer -- this just changes which training path fits you best.
+    
+    3. What's your mic situation? Laptop built-in, USB mic, headset, or something else? And roughly how far from the mic would you be when triggering it?
+    
+    4. How noisy is your environment usually? Quiet room, background music, roommates/family around, etc.
+    
+    5. What language do you speak, and would you describe your accent as regional or non-native? (Wakeword models are more accent-sensitive than people expect.)
+    
+    6. What would annoy you more: the model triggering when you didn't mean it (false positives), or having to repeat yourself because it missed you (false negatives)? Most people lean one way strongly.
+    
+    7. Where will this run? Laptop, desktop, or a low-power device like a Raspberry Pi?
+    
+    8. Do you want always-on listening, or would a push-to-activate fallback be useful too?
+    
+    9. On privacy: are you comfortable with audio being processed locally but temporarily buffered on disk, or do you need everything to stay strictly in-memory?
+    
+    10. If you opt into the community dataset, would you want the ability to delete your contributed samples later?
+
+[2026-04-13T21:59:55.245000+00:00] tdamre (id=1493370175205019839)
+    I did make my own memory system
+
+[2026-04-13T22:00:01.315000+00:00] tdamre (id=1493370200664444958)
+    But never stress tested
+
+[2026-04-13T22:00:07.316000+00:00] tdamre (id=1493370225834594384)
+    I'll explain the architecture
+
+[2026-04-13T22:00:25.610000+00:00] tdamre (id=1493370302565187896)
+    Zvec vector graph and graphlite 2D path
+
+[2026-04-13T22:00:37.457000+00:00] tdamre (id=1493370352254849166)
+    Those put together is a custom setup
+
+[2026-04-13T22:00:57.099000+00:00] tdamre (id=1493370434639368362)
+    And then just ask the agent to work out the rest for memory injection etc
+
+[2026-04-13T22:01:07.272000+00:00] tdamre (id=1493370477308150051)
+    It worked really good I remmeber for glm 5
+
+[2026-04-13T22:01:11.234000+00:00] neopabo (id=1493370493925855366)
+    That's not necessary
+    [reply to tdamre msg=1493370434639368362]
+
+[2026-04-13T22:03:34.843000+00:00] neopabo (id=1493371096265658652)
+    The main constraints right now are:
+    - User recorded samples (if someone wants to use their own voice for their own agent, it'll work fine)
+    - Hardware/Time available for generating synthetic data samples (not everyone has high-end hardware to run this pipeline quickly, I may want to pre-generate synthetic data for people to pool from)
+
+[2026-04-13T22:09:03.924000+00:00] 7.48 (id=1493372476531675216)
+    1. yo hermes, hermy, hey hermes, wassup hermes, wake up hermes -- hmm, all include hermes 
+    
+    2. 20-100 is sweet spot i guess for best work, but with current voice models even 10 could work i suppose 
+    3. laptop and phone are usually the common and well integrated in our lives 
+    4. quiet + background noise
+    5. english, spanish, german. english accent is good for me lol.. good starting point in general as well, most voice models are trained on english; other languages i think regional labs take care of that but thats future plans
+    
+    6. obviously false negatives. false positives are a bit annoying but they are natural in a sense that you say someones name and they get active. but if you keep calling thier name and they dont respont - thats disrespectful
+    
+    7. all of them i guess? 
+    
+    8. fallbacks never hurt
+    
+    9. this is convenience tool brother, i am willing to tradd some privacy. as long as its better than "hey google, hey siri"
+    
+    10. no why would i? - a better approach would be to anonymise my samples and its good enough standard to maintain
+    [reply to neopabo msg=1493369714280239344]
+
+[2026-04-13T22:29:07.627000+00:00] neopabo (id=1493377525227983094)
+    Since like you said, most people will want this on mobile or a laptop, I'll look into how I can wire things up to use free GPUs online. I'll also look into pre-generating synthetic samples and putting them on huggingface
+
+[2026-04-14T00:32:57.554000+00:00] 7.48 (id=1493408688600387684)
+    ??, i dont understand.. Why online gpu? U mention its a lighweight wakeup model always active whivh can run on cpu - should be able to run on laptop and mobile fairly easy if its a small model like that. Going online gpu route for a wakeup detection is over-engineering i feel
+    [reply to neopabo msg=1493377525227983094]
+
+[2026-04-14T00:33:35.497000+00:00] neopabo (id=1493408847744733194)
+    The training is a custom loop with synthetic data generation
+
+[2026-04-14T00:34:42.619000+00:00] neopabo (id=1493409129275068446)
+    The training is heavy, but once the tuning is done, the model is distilled and runs very cheaply
+
+[2026-04-14T16:48:20.402000+00:00] lecturesfrom (id=1493654151215714497)
+    picovoice.ai/docs/porcupine/
+    [reply to neopabo msg=1493369660668645567]
+
+[2026-04-15T00:04:45.753000+00:00] neopabo (id=1493763980538155128)
+    That's not open-source
+    [reply to lecturesfrom msg=1493654151215714497]
+
+[2026-04-15T00:10:28.143000+00:00] lecturesfrom (id=1493765416626028684)
+    Fair <@1451389295280525354> lol
+

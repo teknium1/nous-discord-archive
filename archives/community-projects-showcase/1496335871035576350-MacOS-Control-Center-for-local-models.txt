@@ -1,0 +1,17 @@
+# Thread 'MacOS Control Center for local models' in forum #community-projects-showcase
+# thread_id=1496335871035576350 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:50.953094+00:00
+
+[2026-04-22T02:24:32.231000+00:00] franci.penov (id=1496335871035576350)
+    I have bunch of local models I have configured and am running locally on my two machines - Mac Mini and Ubuntu.
+    
+    The whole setup consists of set of generalized scripts that can use llama.cpp or vllm to host a model, model card with context, parallel requests, quant, etc, and launchd / systemd config for each model. I can run a model manually or I can use script to install it as a service.
+    
+    I also have a small sys tray mac OS app (plus a service on each machine) that I can use to control all my models installed as a service.
+    
+    Here are two screenshots - the list of services (both models and others) installable and installed on my Ubuntu, and the control center app showing the installed services and models on the same Ubuntu machine.
+    
+    i think this can be easily cleaned up and open sources, if people are interested in the wholse setup.
+    [attachment] Screenshot_2026-04-21_at_19.19.05.png https://cdn.discordapp.com/attachments/1496335871035576350/1496335871463657532/Screenshot_2026-04-21_at_19.19.05.png?ex=6a01e6a0&is=6a009520&hm=18691b7b7bf431e088a9b51d7667863d0952dfb43b7a47ad5660c4f93f86dd7e&
+    [attachment] Screenshot_2026-04-21_at_19.22.45.png https://cdn.discordapp.com/attachments/1496335871035576350/1496335872247861318/Screenshot_2026-04-21_at_19.22.45.png?ex=6a01e6a0&is=6a009520&hm=ab332095aea16487cdd422de712434208a935e75d3c1475bc93e1f0c99485135&
+

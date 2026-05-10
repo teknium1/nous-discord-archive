@@ -1,0 +1,86 @@
+# Thread 'Hermes HUD — Web UI just dropped' in forum #community-projects-showcase
+# thread_id=1491851569740775495 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:31.273726+00:00
+
+[2026-04-09T17:25:31.488000+00:00] synextco (id=1491851569740775495)
+    The browser version of the TUI consciousness monitor. Same data, same soul, rendered for the web.
+    
+    What it does:
+    Reads from `~/.hermes/` and shows everything your agent knows about itself, memory capacity, skills acquired, session history, tool usage patterns, service health, cron jobs, project activity, agent profiles, and more.
+    
+    What's new vs the TUI:
+    - Dedicated Memory, Skills, Sessions tabs
+    - Per model token cost tracking with daily trend sparklines
+    - Command palette (Ctrl+K) for fuzzy navigation
+    - 4 color themes with live preview and CRT scanlines
+    - Responsive layout (works on phone too)
+    
+    Please let me know what you think about it or any issues you encounter. Feel free to send PRs and issues. Thank you. 
+    
+    PS: more improvements coming around fonts and readability.
+    
+    Repo: https://github.com/joeynyc/hermes-hudui
+    [attachment] Screenshot_2026-04-09_130403.png https://cdn.discordapp.com/attachments/1491851569740775495/1491851570445549610/Screenshot_2026-04-09_130403.png?ex=6a02110b&is=6a00bf8b&hm=78662f1fdee519edb8dca8de8611467ce23d87b24831ce34995d23bfecdafe1f&
+    [attachment] Screenshot_2026-04-09_130355.png https://cdn.discordapp.com/attachments/1491851569740775495/1491851571145871500/Screenshot_2026-04-09_130355.png?ex=6a02110b&is=6a00bf8b&hm=e61eda550eebe733a5818289d0ab07329453a8b56cd480b99194ab2edea4c21f&
+    [embed] GitHub - joeynyc/hermes-hudui: Web UI consciousness monitor for Her... https://github.com/joeynyc/hermes-hudui
+
+[2026-04-09T19:06:25.731000+00:00] .s0uthpaw (id=1491876963076411503)
+    Oh here we go
+
+[2026-04-09T20:03:19.917000+00:00] synextco (id=1491891283210276925)
+    Let me know what you think. Thank you
+    [reply to .s0uthpaw msg=1491876963076411503]
+
+[2026-04-12T14:04:37.239000+00:00] synextco (id=1492888174152777738)
+    v0.2.0 — Chat + New Tabs Update! Please let me know if you have any issues or questions. I'm working on more improvements everyday. Thank you.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491851569740775495/1492888173855117433/image.png?ex=6a01e1f5&is=6a009075&hm=c3cbdd7480f03d986d8141e0233dd47bf506ab8eb00cac49ccea8ccafc2b8b47&
+
+[2026-04-12T17:42:25.468000+00:00] synextco (id=1492942986278076506)
+    More updates!!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491851569740775495/1492942985803862176/image.png?ex=6a021501&is=6a00c381&hm=458bac82c802025cd27754a4863211d13bd4493e65d181a203eb4ce7c873b0bb&
+
+[2026-04-12T21:12:40.642000+00:00] parzival078022 (id=1492995898152587509)
+    amazing stuff! is there a better webUI for you agent rn?
+
+[2026-04-12T22:54:20.287000+00:00] avidfuturist (id=1493021481918267444)
+    Looks cool!
+
+[2026-04-14T11:03:40.527000+00:00] synextco (id=1493567413533278290)
+    thank you!! adding Chinese support now
+    [reply to avidfuturist msg=1493021481918267444]
+
+[2026-04-14T12:33:16.444000+00:00] synextco (id=1493589961763586178)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491851569740775495/1493589961293959209/image.png?ex=6a01cc8c&is=6a007b0c&hm=98a84bf9b3217c7a7d5ebbd0ec191d3725fb5429ef143711d7212524bdc2a8f0&
+
+[2026-04-29T17:36:56.907000+00:00] fhsduifisdfbsdifisdfysdfj (id=1499102201908428930)
+    just installed to check it out. It's really good!!!
+
+[2026-05-03T12:22:41.549000+00:00] synextco (id=1500472668267217009)
+    Thanks so much!
+    [reply to fhsduifisdfbsdifisdfysdfj msg=1499102201908428930]
+
+[2026-05-05T13:19:04.411000+00:00] synextco (id=1501211632750297198)
+    In celebration of Hermes HUD Web UI crossing 1,400+ stars…
+    
+      v0.8.0 is live.
+    
+      This is the biggest quality-of-life release yet:
+    
+      ☤ Executive dashboard summary
+      ☤ Official Hermes Teal theme
+      ☤ Plugin Hub
+      ☤ Model analytics
+      ☤ Gateway managed tools visibility
+      ☤ Safer “Update Hermes” flow
+      ☤ Responsive tabs
+      ☤ Better Health diagnostics
+      ☤ New screenshots + release docs
+    
+      Hermes HUD is becoming the cockpit for running
+      persistent AI agent locally.
+    
+      Same memory.
+      Same soul.
+      Now way more visibility.
+    [attachment] 709cf8c2-73cd-4482-ba12-f01d37bf856a.png https://cdn.discordapp.com/attachments/1491851569740775495/1501211632469282888/709cf8c2-73cd-4482-ba12-f01d37bf856a.png?ex=6a01d748&is=6a0085c8&hm=fae57f892956b2cb262dcb17c3c1d73612dc0f4a63b198c4a98e0662fac3a03e&
+

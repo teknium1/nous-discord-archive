@@ -1,0 +1,8 @@
+# Thread 'Hypercubed/Agent-Knowledge-Starter-Kit' in forum #community-projects-showcase
+# thread_id=1492657008539730010 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:21.420693+00:00
+
+[2026-04-11T22:46:03.062000+00:00] .hypercubed (id=1492657008539730010)
+    Over the past month I've been trying every agent and ai tool I can.  OpenClaw, Hermes Agent, Kilo Code, Codex, Cursor, etc.  Most of these have some sort of memory, but I wanted something persistant.  I ended up building out a tool-agnostic repo knowledge layer.  I pushed up the learning part to github so I can use it across repos.  You can use it too!   https://github.com/Hypercubed/Agent-Knowledge-Starter-Kit .  I have plans for more, including (ironically I guess) planning.  Feedback welcome.
+    [embed] GitHub - Hypercubed/Agent-Knowledge-Starter-Kit: A shareable, tool-... https://github.com/Hypercubed/Agent-Knowledge-Starter-Kit
+

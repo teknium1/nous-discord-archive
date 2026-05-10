@@ -1,0 +1,9 @@
+# Thread 'Blunder-lens.com a tortured repo that helps you find your first blunders in chess' in forum #community-projects-showcase
+# thread_id=1496239289309073539 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:51.358357+00:00
+
+[2026-04-21T20:00:45.353000+00:00] fahdad_ (id=1496239289309073539)
+    getting better at chess is all about overcoming the first common blunder that you make. blunderlens will help you find those and practice so you can hopefully avoid them.
+    but the real purpose of blunder-lens was to see how much i can torture a repo with hermes and figure out what hermes can or can't do... and honestly HERMES CAN DO A LOT! the current implementation is after two unneccesaary (and actually counterproductive) refactors and re-architecting just to see how it gets handled... give it a try
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496239289309073539/1496239290164707418/image.png?ex=6a018cad&is=6a003b2d&hm=0d9d606505a7224460157843a5ea4df55d38b4c31740520584f07c00d11ab8b4&
+

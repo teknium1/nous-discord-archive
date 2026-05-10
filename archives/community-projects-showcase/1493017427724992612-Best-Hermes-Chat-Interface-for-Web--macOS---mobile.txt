@@ -1,0 +1,2116 @@
+# Thread 'Best Hermes Chat Interface for Web, macOS & mobile' in forum #community-projects-showcase
+# thread_id=1493017427724992612 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:18.765402+00:00
+
+[2026-04-12T22:38:13.692000+00:00] avidfuturist (id=1493017427724992612)
+    Built a comprehensive web, macOS, and mobile UI that is 80%+ parity with the terminal experience and can be accessed on web and mobile. 
+    
+    * **Almost everything you can do in terminal or telegram, you can do better on WebUI.**
+    * Think “Cowork” for Hermes
+    
+    If you're running Hermes from the CLI, this gives you the same agent from any browser, with full access to your memory, skills, crons, and tools.
+    
+    🔗 GitHub: https://github.com/nesquena/hermes-webui
+    
+    🖥️ macOS Swift app: https://github.com/hermes-webui/hermes-swift-mac/releases
+    
+    🌐 Site: https://get-hermes.ai/community
+    
+    Contributors and feedback welcome! Reach out if you might be interested in contributing, I have a lot planned including a desktop hermes app, and a native iOS and Android app!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1493017428429508698/image.png?ex=6a01b195&is=6a006015&hm=451017b8aa40425ba258b04f1713a6bd944109a3e76730e85ce812076126fdb7&
+    [attachment] Screenshot_2026-04-12_at_11.42.04_AM.png https://cdn.discordapp.com/attachments/1493017427724992612/1493017429008191642/Screenshot_2026-04-12_at_11.42.04_AM.png?ex=6a01b195&is=6a006015&hm=f193a831aa22ee83a2cde89d3a88e700d0acff4aa2c9dfa67dc2e16177214971&
+
+[2026-04-13T04:44:54.702000+00:00] avidfuturist (id=1493109706649239604)
+    Pushed out a bunch more fixes today, including better docker support, and a massive UI refresh! Have big plans up next including a desktop app! 🖥️
+
+[2026-04-14T22:15:49.685000+00:00] avidfuturist (id=1493736566281998538)
+    **Release 0.50.0!** 🚀 Pushed a big reliability update today patching tons of bugs and fixed almost every major quality of life improvement. Chinese localization and 3 other languages. 6 themes to choose between. Major UI overhaul. 
+    
+    If you had tried this before and didn’t think it was quite ready yet, try it out again! https://github.com/nesquena/hermes-webui
+    
+    Distinct from a dashboard this is an end to end plug and play Hermes UI that can be used instead of telegram on both web and mobile (via Tailscale)
+    [embed] GitHub - nesquena/hermes-webui: Hermes WebUI: The best way to use H... https://github.com/nesquena/hermes-webui
+
+[2026-04-14T22:17:02.750000+00:00] avidfuturist (id=1493736872738947082)
+    If you have any questions or want to contribute, please reach out!
+
+[2026-04-14T22:17:36.288000+00:00] avidfuturist (id=1493737013407518751)
+    Best Hermes Chat Interface for Web & Mobile
+
+[2026-04-15T05:01:59.883000+00:00] kyklooppi (id=1493838782301081620)
+    Looks great and after test cases and daily use. Thanks!
+
+[2026-04-15T06:31:30.220000+00:00] avidfuturist (id=1493861307127173211)
+    Awesome to hear, any feedback is welcome!
+    [reply to kyklooppi msg=1493838782301081620]
+
+[2026-04-15T07:33:34.152000+00:00] chfarhan_ (id=1493876926429925376)
+    i cheked all web ui . but this is very simple and useable so far
+
+[2026-04-15T07:34:04.615000+00:00] avidfuturist (id=1493877054200873052)
+    Thank you! Have full localization support as well in settings bottom left
+    [reply to chfarhan_ msg=1493876926429925376]
+
+[2026-04-15T07:34:33.617000+00:00] avidfuturist (id=1493877175844077679)
+    Also supports 6 themes, and a whole lot more now. Feedback welcome!
+
+[2026-04-15T09:09:12.958000+00:00] thienmathanquan (id=1493900996726755388)
+    neat. Will it support multiple Hermes profiles (i mean, i usually run multiple Hermes instance to preserve the isolated memory)?
+
+[2026-04-15T09:39:03.646000+00:00] cygnusignis (id=1493908507416854601)
+    ^ Same question!
+
+[2026-04-15T14:04:34.762000+00:00] chfarhan_ (id=1493975327360159998)
+    yes it does. i am working with multi profiles and even with multi workspaces too
+    [reply to thienmathanquan msg=1493900996726755388]
+
+[2026-04-15T14:59:46.792000+00:00] avidfuturist (id=1493989219020836915)
+    Good news - Already fully supports profiles! Can switch seamlessly at the bottom. I even added a workspace concept on top of that, multiple directories you can switch between per profile
+    [reply to thienmathanquan msg=1493900996726755388]
+
+[2026-04-15T15:01:33.362000+00:00] thienmathanquan (id=1493989666007941430)
+    Great, will try now bro. Love at the first sight
+
+[2026-04-15T15:02:43.523000+00:00] avidfuturist (id=1493989960284372992)
+    Great lmk what you think, this week is a polish, big fixes and UI/UX week, and any missing core features - trying to get the base experience rock  solid for everyone!
+
+[2026-04-15T15:03:08.682000+00:00] avidfuturist (id=1493990065808867358)
+    So any feedback or suggestions are helpful, check out GitHub issues for an idea of our roadmap!
+
+[2026-04-15T15:04:10.280000+00:00] avidfuturist (id=1493990324169867397)
+    My vision for this is to make Hermes accessible for even people afraid of the command line! Created a community extension site here too https://get-hermes.ai/#compare to help new people better understand Hermes
+
+[2026-04-15T15:05:24.780000+00:00] chfarhan_ (id=1493990636645515384)
+    one missing gap in my optnion  / [slash] commands and custom / [slash] command should also be supported. also like all /slash commands in terminal is missing gap in ui should have eqaully in web ui as in terminal.  also add feature of hooks mcps and config settings in ui like new hermes web ui have . other all i recomend enjoying and love it. 
+    
+    it is not completed  yet. but s far i ranked it 1st in my book as best webui for hermes
+
+[2026-04-15T15:05:45.563000+00:00] avidfuturist (id=1493990723815608381)
+    Full slash commands support is next on my list! I can tell you are a real user, we’ll have full 100% slash command parity in the next day or two
+    
+    Including btw and background!
+    [reply to chfarhan_ msg=1493990636645515384]
+
+[2026-04-15T15:06:41.570000+00:00] avidfuturist (id=1493990958725988352)
+    Just added in the full support for the info question clarity dialog last night
+
+[2026-04-15T15:07:39.130000+00:00] avidfuturist (id=1493991200149999636)
+    Yup thanks for suggesting, working on all of those things you mentioned next so that tells me we are heading in the right direction
+
+[2026-04-15T15:10:42.228000+00:00] chfarhan_ (id=1493991968118935672)
+    you are 🙂
+
+[2026-04-15T15:44:03.726000+00:00] avidfuturist (id=1494000363009740950)
+    Tagging <@1426121324169789481> and <@209400895601901578> here as well, two of the other core contributors - Aron is in charge of UI/UX
+
+[2026-04-15T18:12:09.125000+00:00] chfarhan_ (id=1494037631074566144)
+    all of you done good work.
+
+[2026-04-15T20:12:01.127000+00:00] avidfuturist (id=1494067796517191690)
+    Anyone here on a Mac and down to help us test our new native Swift app wrapper for WebUI? Ping me here or in DM!
+
+[2026-04-15T20:59:29.270000+00:00] avidfuturist (id=1494079742494642449)
+    [attachment] desktop.png https://cdn.discordapp.com/attachments/1493017427724992612/1494079742213881978/desktop.png?ex=6a019a71&is=6a0048f1&hm=f15a1e558d9ecda7f9467c8c11720c67fff00ab92eba67c39627a28aea5c84e6&
+
+[2026-04-15T21:57:23.918000+00:00] jhillyerd (id=1494094316224643253)
+    Haven't tried it yet, but I'm curious if I'm able to browse session logs from cron jobs in this web UI?  They are a pain to debug if they go wrong with the TUI.
+
+[2026-04-15T21:59:03.841000+00:00] avidfuturist (id=1494094735332085760)
+    CRON has a dedicated tab yes! For accessing cron runs
+    [reply to jhillyerd msg=1494094316224643253]
+
+[2026-04-16T07:27:42.062000+00:00] avidfuturist (id=1494237837522898985)
+    Thanks to all the alpha testers of our Swift Mac app so far! 🙏 🖥️
+    [attachment] IMG_4962.png https://cdn.discordapp.com/attachments/1493017427724992612/1494237837325762610/IMG_4962.png?ex=6a022dae&is=6a00dc2e&hm=679bdde8d6b28f1e52508bd07aff2fa75dd5f4f7af8e9eeffaedde8ff6e1e030&
+    [reply to avidfuturist msg=1494067796517191690]
+
+[2026-04-16T15:47:58.350000+00:00] deor42 (id=1494363734959984690)
+    Ive just installed this on my VM (local proxmox) and can access it via SSH tunnel at the moment. How do i stop/restart the server? Want to access it via local lan and Tailscale so i need to start it with the right HERMES_WEBUI_HOST variable i believe.
+
+[2026-04-16T15:59:24.304000+00:00] avidfuturist (id=1494366612059455569)
+    Stop the server:
+    fuser -k 8787/tcp
+    
+    Restart with LAN + Tailscale access:
+    HERMES_WEBUI_HOST=0.0.0.0 bash start.sh
+    [reply to deor42 msg=1494363734959984690]
+
+[2026-04-16T15:59:33.736000+00:00] avidfuturist (id=1494366651620134942)
+    Will make these even easier soon with a restart command
+
+[2026-04-16T16:00:56.031000+00:00] avidfuturist (id=1494366996790251630)
+    You can also ask Hermes to do it for you via another gateway
+
+[2026-04-16T16:17:18.648000+00:00] deor42 (id=1494371118184661102)
+    Cool, thanks. Hah yeah i keep forgetting i could just ask!
+
+[2026-04-16T16:21:03.329000+00:00] avidfuturist (id=1494372060565344356)
+    Let me know back here when it’s all working!
+
+[2026-04-16T16:21:09.156000+00:00] avidfuturist (id=1494372085005291684)
+    Hope you’ve been liking it!
+
+[2026-04-16T16:47:37.911000+00:00] rakaarwaky (id=1494378748727005295)
+    Is there light mode option please?
+    [reply to avidfuturist msg=1494237837522898985]
+
+[2026-04-16T16:48:04.013000+00:00] avidfuturist (id=1494378858206462204)
+    Yes there’s 6 themes! Light mode included and even “system” which switches automatically
+    [reply to rakaarwaky msg=1494378748727005295]
+
+[2026-04-17T00:49:41.316000+00:00] cygnusignis (id=1494500062280290327)
+    I'd love to test it
+    [reply to avidfuturist msg=1494067796517191690]
+
+[2026-04-17T00:50:41.601000+00:00] cygnusignis (id=1494500315133775933)
+    Oh, this is really good news
+    [reply to avidfuturist msg=1494094735332085760]
+
+[2026-04-17T00:51:34.546000+00:00] avidfuturist (id=1494500537201332375)
+    Great! Still a bit buggy but works beautifully for me 
+    
+    You can download the DMG here v1.0.3 https://github.com/hermes-webui/hermes-swift-mac
+    [attachment] IMG_4967.png https://cdn.discordapp.com/attachments/1493017427724992612/1494500536542826516/IMG_4967.png?ex=6a01d0d6&is=6a007f56&hm=624309f11b4d7a1171d40b113f99c5ee090e00e77756a9d69295d735339ab53c&
+    [attachment] IMG_4969.png https://cdn.discordapp.com/attachments/1493017427724992612/1494500536899211434/IMG_4969.png?ex=6a01d0d6&is=6a007f56&hm=0ac2aaca013e52d8f0f789258d7b76eb93e041e4de8893043abe1c75f51d398e&
+    [reply to cygnusignis msg=1494500062280290327]
+
+[2026-04-17T00:52:50.628000+00:00] avidfuturist (id=1494500856312365066)
+    Lmk if you can get it working okay!
+
+[2026-04-17T02:20:01.207000+00:00] wenmoonshot. (id=1494522794950791269)
+    working okay for me so far ill check in if i have issues or suggestions
+
+[2026-04-17T03:42:40.237000+00:00] avidfuturist (id=1494543594630021120)
+    Great to hear it, thanks for testing!
+    [reply to wenmoonshot. msg=1494522794950791269]
+
+[2026-04-17T04:26:55.864000+00:00] avidfuturist (id=1494554733136838697)
+    For people using the Hermes macOS app **please download v1.0.7** - signed properly now, lots of fixes, and now has auto updates going forward! If not, this is a great time to check it out!
+    
+    https://github.com/hermes-webui/hermes-swift-mac/releases
+    [attachment] IMG_4895.png https://cdn.discordapp.com/attachments/1493017427724992612/1494554732876922890/IMG_4895.png?ex=6a02034f&is=6a00b1cf&hm=89ed6dab4fd5374c1daa28a7954b367ee6f98a482a046dd42d2612b0a1c24ca4&
+
+[2026-04-17T11:23:58.311000+00:00] cygnusignis (id=1494659684886646914)
+    The white flash on startup in in dark mode, aaaaa
+
+[2026-04-17T11:26:04.414000+00:00] cygnusignis (id=1494660213800964186)
+    I asked another app to fix the very same thing and they did, here's all the info: https://github.com/EpicenterHQ/epicenter/issues/1146
+
+[2026-04-17T11:27:39.206000+00:00] cygnusignis (id=1494660611387428904)
+    Loading the theme preference earlier to prevent the flash, I think?
+
+[2026-04-17T13:38:45.504000+00:00] senseiyoba (id=1494693605032591370)
+    <@933139410281713755>, sir, tysm for such a beauty!<a:partyblob:1151261550032724052> Btw is there any way to sync cli/tg/webui sessions real time?
+    
+    My Hermes running mimo-v2-pro made this fix and claimed that the sync is working (lol, it's not) 
+    
+    ```stopGatewaySSE();
+       if(!window._showCliSessions) return;
+       try{
+    -    _gatewaySSE = new EventSource('api/sessions/gateway/stream');
+    +    _gatewaySSE = new EventSource('api/sessions/gateway/stream', {withCredentials: true});
+         _gatewaySSE.addEventListener('sessions_changed', (ev) => {
+           try{
+             const data = JSON.parse(ev.data);```
+    
+    Would appreciate if you point at the right direction)
+
+[2026-04-17T15:44:58.736000+00:00] avidfuturist (id=1494725369469866074)
+    Will fix thanks!
+    [reply to cygnusignis msg=1494659684886646914]
+
+[2026-04-17T15:46:35.141000+00:00] avidfuturist (id=1494725773821607966)
+    In settings on bottom left, you want to enable “Sync agent sessions” and it should show you all your CLI and gateway sessions too!
+    [reply to senseiyoba msg=1494693605032591370]
+
+[2026-04-17T15:46:58.520000+00:00] avidfuturist (id=1494725871880241223)
+    If not lmk and I’ll look into it! But I had that working so you can jump into a telegram or CLI session seamlessly! It’s been great
+
+[2026-04-17T15:51:41.343000+00:00] avidfuturist (id=1494727058125881496)
+    Best Hermes Chat Interface for Web, macOS & Mobile
+
+[2026-04-17T15:51:56.773000+00:00] avidfuturist (id=1494727122843996239)
+    Best Hermes Chat Interface for Web, macOS & mobile
+
+[2026-04-17T16:30:09.613000+00:00] senseiyoba (id=1494736739712110663)
+    Yeah, I've enabled it, but my latest CLI-session doesn't seem to sync very good. It has like a big part missing. Maybe I'm doing something wrong, dunno. If you need more info, logs, etc, just let me know👐
+    [reply to avidfuturist msg=1494725773821607966]
+
+[2026-04-17T16:30:42.773000+00:00] avidfuturist (id=1494736878795100433)
+    Will investigate!
+    [reply to senseiyoba msg=1494736739712110663]
+
+[2026-04-18T09:21:23.056000+00:00] cygnusignis (id=1494991222576517202)
+    I'd love to be able to see:
+    - What model sent the messages in my past chats, and what profile it was in, if any (right now all I see is "Hermes")
+    - In the list of chats, for each, a count of how many user messages I've sent
+    - Some way to filter messages by profile
+
+[2026-04-18T09:26:51.610000+00:00] cygnusignis (id=1494992600631873588)
+    (And this is a weird question almost definitely beyond this project's scope, but would I be able to import chats from other services into this? More than anything, I'm asking because I would really love some kind of UI that lets me see my old sessions with Claude Code, Codex, Cursor, et cetera - I know they're stored in jsons and/or databases but they are of course a huge pain to actually go back and view)
+
+[2026-04-18T09:28:52.310000+00:00] cygnusignis (id=1494993106884628502)
+    (if there is a better place to ask that, please let me know)
+
+[2026-04-18T15:27:29.866000+00:00] avidfuturist (id=1495083358055698574)
+    Thanks for the feedback, will investigate and add to an upcoming sprint! Feel free to share questions or feedback here any time!
+    [reply to cygnusignis msg=1494991222576517202]
+
+[2026-04-18T15:52:50.035000+00:00] avidfuturist (id=1495089734106746960)
+    FYI profile selected should already filter the conversations shown on the left
+
+[2026-04-18T16:09:32.925000+00:00] cygnusignis (id=1495093940532281519)
+    UI request: in dark mode, I always prefer a dark background and light text. Right now, no matter what color scheme I pick, it's a light colored background and dark text, and I can't change it. Which is detrimental to the eye-soothing utility of dark mode, haha
+
+[2026-04-18T16:12:23.240000+00:00] cygnusignis (id=1495094654885036153)
+    I also seem to be stuck in chat bubble mode. I chose the opposite at first and then updated a bunch, and they're all still chat bubbles. I really like having stuff inline, I'd really like to be able to keep that
+
+[2026-04-18T16:21:19.879000+00:00] cygnusignis (id=1495096905712140501)
+    Also, currently, while the AI is printing responses, it continuously pulls my scrolling back to the bottom of what it's writing, which is undesirable. I need to be able to scroll up and read without having to wait until the AI is completely done.
+
+[2026-04-18T16:24:53.957000+00:00] avidfuturist (id=1495097803620225115)
+    cc <@209400895601901578> I wonder if we'll want to make some of this more configurable again in the future, post UI/UX update
+    [reply to cygnusignis msg=1495093940532281519]
+
+[2026-04-18T16:25:53.770000+00:00] avidfuturist (id=1495098054494388437)
+    Thanks, will fix 👍
+    [reply to cygnusignis msg=1495096905712140501]
+
+[2026-04-18T16:26:42.155000+00:00] cygnusignis (id=1495098257435529477)
+    Thanks. I'm starting to really test this app seriously today and this (the scrolling thing) is by far the biggest thing I care about getting fixed quickly. I'll be very grateful!
+    [reply to avidfuturist msg=1495098054494388437]
+
+[2026-04-18T16:30:41.227000+00:00] cygnusignis (id=1495099260176306526)
+    It looks like I can't rename sessions, because it's not in the dot menu, but I actually can, which is a little confusing. (I expect it to be in the dot menu.) However, just like the scrolling thing, I can't rename chats while the AI is printing responses.
+
+[2026-04-18T16:35:09.572000+00:00] cygnusignis (id=1495100385696944189)
+    Also, if I haven't said it yet, I'm thrilled to have this. And I really appreciate that you made it to be compatible with Intel macs, which will continue to be workhorses and servers for wide swaths of people for years to come... it's quite annoying downloading certain other AI companies' desktop solutions only to see that they haven't considered this. 
+    All in all, kudos! 🙂
+
+[2026-04-18T16:38:06.744000+00:00] cygnusignis (id=1495101128810037438)
+    MAN I really appreciate seeing this. But, it seems crazy high... (I guess this is more of a general hermes question though)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1495101128550125608/image.png?ex=6a0205ee&is=6a00b46e&hm=c95b78025852dcd623dc1fdae1235fc6e36ab0f005672a605812bbec69a2391c&
+
+[2026-04-18T16:38:06.822000+00:00] avidfuturist (id=1495101129137066124)
+    Will fix this shortly!
+    [reply to cygnusignis msg=1495098257435529477]
+
+[2026-04-18T16:38:58.036000+00:00] avidfuturist (id=1495101343944151060)
+    Good point right now rename is double click should probably be in dropdown menu too
+    [reply to cygnusignis msg=1495099260176306526]
+
+[2026-04-18T16:40:46.899000+00:00] cygnusignis (id=1495101800548798795)
+    Yeah. I also feel like it'll switch chats if I accidentally just click once on it, and I don't want to lose my place if I have a lot of things going
+    [reply to avidfuturist msg=1495101343944151060]
+
+[2026-04-18T16:45:25.408000+00:00] aronprins (id=1495102968700207236)
+    Fo sure!
+    [reply to avidfuturist msg=1495097803620225115]
+
+[2026-04-18T16:45:49.302000+00:00] aronprins (id=1495103068919042219)
+    This is currently by design 🫣
+    
+    Will look into this!
+    [reply to cygnusignis msg=1495094654885036153]
+
+[2026-04-18T16:52:18.519000+00:00] cygnusignis (id=1495104701413462217)
+    YAY: I see the webui adds a timestamp to the session json's user/assistant/tool messages. I would actually love if regular Hermes did this! There have been so many times with cli tools where I've been like "hey AI, when did this exact change happen" and it's just like "uh idk"
+    I literally put in all my hermes profiles to print a timestamp at the beginning, and it's not a great solution because it has to use tokens to think about it in every message
+
+[2026-04-18T16:54:56.839000+00:00] cygnusignis (id=1495105365455540355)
+    And I know the webui json is using a universal timestamp right now, but I'd very much love if it was somehow a human readable timestamp I could see in the UI
+
+[2026-04-18T17:51:03.686000+00:00] avidfuturist (id=1495119487035375637)
+    Thanks for all the feedback Cygnus! Very helpful to hear from you what are the most important fixes
+
+[2026-04-18T17:52:30.970000+00:00] cygnusignis (id=1495119853131137244)
+    Thanks for making a cool helpful thing!
+
+[2026-04-18T18:05:39.932000+00:00] senseiyoba (id=1495123162277351444)
+    <@933139410281713755> Heads up. I've run another debug session with mimo-v2-pro. Here is the issue. Hope that helps in some way 👐
+    [attachment] cli-webui-sync-issue.txt https://cdn.discordapp.com/attachments/1493017427724992612/1495123161186828368/cli-webui-sync-issue.txt?ex=6a021a73&is=6a00c8f3&hm=0755065c231eff396fe44123fb3eabbf0edfdc4366b75dd12cb4514ddf9791e1&
+    [reply to senseiyoba msg=1494693605032591370]
+
+[2026-04-18T18:31:47.622000+00:00] cygnusignis (id=1495129737645916182)
+    If there was a way to see how much usage I have left in the model I'm currently using (with any applicable hour/week/month/etc limits), that would be stellar.
+
+[2026-04-19T03:25:48.385000+00:00] avidfuturist (id=1495264126346461194)
+    Thank you yes this is very helpful will use this to investigate and fix the issue 🙏
+    [reply to senseiyoba msg=1495123162277351444]
+
+[2026-04-19T03:26:01.389000+00:00] avidfuturist (id=1495264180889190482)
+    Will look into it!
+    [reply to cygnusignis msg=1495129737645916182]
+
+[2026-04-19T06:15:13.977000+00:00] avidfuturist (id=1495306763929518191)
+    Pushed an important update for the macOS app v1.1.0 
+    
+    ✦ Launch at login
+    ✦ Cmd+/Cmd− zoom
+    ✦ Live backend status in the title bar
+    ✦ Tailscale & LAN support
+    ✦ No white flash in dark mode
+    ✦ Error screen improvements 
+    
+    Update via the app or install at https://github.com/hermes-webui/hermes-swift-mac
+
+[2026-04-19T10:22:49.484000+00:00] chfarhan_ (id=1495369072441950218)
+    on long sessions cht i observe lagging and slow browser . an idea to keep n msgs show in DOM
+    
+    there is a chrome extension for chatgpt which do 
+    • Auto-trim long threads to improve UI performance
+    • Adjustable message limit (choose how many to keep)
+    • Optional: preserve system / tool messages
+    • Minimal UI with quick toggles
+    
+    here is the link
+    
+    https://chromewebstore.google.com/detail/chatgpt-lightsession/fmomjhjnmgpknbabfpojgifokaibeoje
+    
+    you can take idea from this chrome extension
+    [embed] ChatGPT LightSession - Chrome Web Store https://chromewebstore.google.com/detail/chatgpt-lightsession/fmomjhjnmgpknbabfpojgifokaibeoje
+
+[2026-04-19T15:37:02.206000+00:00] avidfuturist (id=1495448146489245780)
+    Thanks will capture as an issue so we can investigate https://github.com/nesquena/hermes-webui/issues/734
+    [embed] feat(perf): DOM windowing / message virtualization for long session... https://github.com/nesquena/hermes-webui/issues/734
+    [reply to chfarhan_ msg=1495369072441950218]
+
+[2026-04-19T20:42:24.122000+00:00] cygnusignis (id=1495524994174685184)
+    So, it seems the desktop app won't simply won't respond at all if the first OAuth credentials it checks are exhausted. (Sometimes it shows an error message, but not right away, and when it does, then it vanishes again.) 
+    
+    That's an issue, because I have 2 OAuth Codex accounts I need to be able to switch between. 
+    
+    (Related post I made earlier: https://ptb.discord.com/channels/1053877538025386074/1495511375928234095 )
+    (edit to add - also this one: https://ptb.discord.com/channels/1053877538025386074/1495876037764972724 )
+
+[2026-04-20T00:25:39.261000+00:00] avidfuturist (id=1495581177459769435)
+    Noted will investigate!
+    [reply to cygnusignis msg=1495524994174685184]
+
+[2026-04-20T08:33:37.891000+00:00] aronprins (id=1495703980934959124)
+    this should be addressed now! moving on to the chat bubble issue now 😉
+    [reply to cygnusignis msg=1495093940532281519]
+
+[2026-04-20T10:08:51.057000+00:00] deor42 (id=1495727943689703454)
+    Do sessions persist in a conversation after a gateway restart? Still getting to grips with Hermes in general, but i find it frustrating that telegram always starts a new session.
+
+[2026-04-20T16:12:34.391000+00:00] avidfuturist (id=1495819477386920086)
+    Sessions persist yes and you can switch between them on the left conversations window
+    [reply to deor42 msg=1495727943689703454]
+
+[2026-04-20T16:46:23.364000+00:00] gluedmosquito (id=1495827987516362822)
+    thank you
+
+[2026-04-20T18:00:47.030000+00:00] cygnusignis (id=1495846709488652499)
+    I want to say there's a number you can change somewhere in the config that will increase the time before Telegram starts a new session, but I'm not confident on exactly where or what it is.
+    [reply to deor42 msg=1495727943689703454]
+
+[2026-04-20T20:02:52.565000+00:00] primco (id=1495877435009269811)
+    Hi there. Curious abou this from the readme "Tool call cards inline -- each shows the tool name, args, and result snippet; expand/collapse all toggle for multi-tool turns" << i don't see any tool calls in my chat interface and i'm on head.
+
+[2026-04-20T20:11:35.938000+00:00] avidfuturist (id=1495879630195003624)
+    Depends on the model how well they show up. But for most models you’ll see them show up in chat as it works on a task
+    [reply to primco msg=1495877435009269811]
+
+[2026-04-20T20:12:31.302000+00:00] primco (id=1495879862408183960)
+    i'm using mimo v2 and don't see any tools or thinking.
+
+[2026-04-20T20:12:57.204000+00:00] primco (id=1495879971049312447)
+    i have to sick with the TUI for now as i need to keep tabs on this stuff.
+
+[2026-04-20T20:16:10.305000+00:00] primco (id=1495880780973605044)
+    is the behavior different for 'native' chats in the webui or ones it displays from TUI?
+
+[2026-04-20T20:32:58.330000+00:00] primco (id=1495885008936898610)
+    yeah. it's only supported on chats started via webui, which is why i hadn't seen it yet.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1495885008513138839/image.png?ex=6a01943a&is=6a0042ba&hm=18748731e47feae98feaeca6b5431ad14d49113d9670a98c06a7763ae908f7c0&
+
+[2026-04-20T21:01:53.444000+00:00] avidfuturist (id=1495892286532227227)
+    Ah yes for now tool calls show up for chats you run and manage through the webUI not imported history
+
+[2026-04-21T09:25:38.839000+00:00] kreativetech (id=1496079459004973119)
+    Good but I noticed if I need to issue a command using webui, it gets confused and never execute that command even if you mentioned specifically
+
+[2026-04-21T12:49:04.856000+00:00] oninsuka (id=1496130654751166685)
+    hello sorry if this is a dumb question but can i do this on ios or is tehre arleady one?
+
+[2026-04-21T15:13:49.956000+00:00] avidfuturist (id=1496167082700705844)
+    Yes you can access this on mobile using Tailscale! https://github.com/nesquena/hermes-webui#accessing-on-your-phone-with-tailscale
+    [embed] GitHub - nesquena/hermes-webui: Hermes WebUI: The best way to use H... https://github.com/nesquena/hermes-webui
+    [reply to oninsuka msg=1496130654751166685]
+
+[2026-04-21T15:21:00.816000+00:00] senseiyoba (id=1496168889858658314)
+    <@933139410281713755>, hey, sir! 
+    
+    I've reproduced a bug where switching profile in one browser client changed the effective active profile for another browser client too. That caused new WebUI chats to be created under the wrong Hermes profile, which then cascaded into wrong session storage, wrong persona/system prompt, and wrong downstream memory/session context.
+    
+    I've asked my hermes agent running gpt-5.4 to apply a local patch, so that in the meantime me and my wife could use hermes-webui simultaneously
+    
+    Here is bug report. I hope that you adress and fix this issue in the nearest future🙏 
+    
+    P.S. I'm an AI-enthusiast, not an engineer, so I don't know how to report issues the right way. Hope this way is also acceptable)
+    [attachment] hermes-webui-profile-isolation-report.md https://cdn.discordapp.com/attachments/1493017427724992612/1496168889535434862/hermes-webui-profile-isolation-report.md?ex=6a01f3dc&is=6a00a25c&hm=b544cffbb9f3f175a845693743b9aec0f8719768d36cc6889a5a9e8c1018378d&
+
+[2026-04-21T15:21:47.353000+00:00] avidfuturist (id=1496169085048848464)
+    This is really helpful, thanks for the report. Will take a look at fixing soon! Captured here: https://github.com/nesquena/hermes-webui/issues/798
+    [reply to senseiyoba msg=1496168889858658314]
+
+[2026-04-21T17:04:43.804000+00:00] ufonik88 (id=1496194990961852547)
+    Nice one, dude! I picked this up a few days ago from X and absolutely love it! Nice to see you on here too. Great work, honestly! I love using it
+    [reply to avidfuturist msg=1493017427724992612]
+
+[2026-04-21T17:06:01.128000+00:00] avidfuturist (id=1496195315282215044)
+    Good news! Should be fixed in the latest version shortly, pull the latest and restart and profiles should be fully contained so you and your wife can use it as intended!
+    [reply to senseiyoba msg=1496168889858658314]
+
+[2026-04-21T17:06:39.973000+00:00] avidfuturist (id=1496195478209957948)
+    Thanks so much! Really appreciate it and glad you’ve been liking it so far!
+    [reply to ufonik88 msg=1496194990961852547]
+
+[2026-04-21T17:15:20.079000+00:00] senseiyoba (id=1496197659692761319)
+    Lightning fast, many thanks 🫶🏻
+    [reply to avidfuturist msg=1496195315282215044]
+
+[2026-04-21T18:02:00.827000+00:00] avidfuturist (id=1496209406881300693)
+    I don’t **have any connection to the hosting company**, I’ve just been fixing bugs he reports, but I thought the video he created for my webUI was pretty cool!
+    
+    https://x.com/an_engineer_log/status/2046645005050106079?s=46&t=brZif7wwaCoijMKWsXCy5Q
+
+[2026-04-21T18:02:44.675000+00:00] avidfuturist (id=1496209590793146501)
+    [attachment] 2ec3d3a76f7c13730ffdfaef7e345a39b523796d.mov https://cdn.discordapp.com/attachments/1493017427724992612/1496209590407401632/2ec3d3a76f7c13730ffdfaef7e345a39b523796d.mov?ex=6a0219c4&is=6a00c844&hm=281b56bd92116f2a468ff6b6529b0fdb6d1412c32ffe9f7971f9f2770933c974&
+
+[2026-04-21T19:20:10.962000+00:00] oninsuka (id=1496229078733422674)
+    wait that looks good bro! what did he use
+    [reply to avidfuturist msg=1496209406881300693]
+
+[2026-04-21T19:24:02.629000+00:00] avidfuturist (id=1496230050415120556)
+    Thanks man! Not sure what he used but glad he put it together!
+    [reply to oninsuka msg=1496229078733422674]
+
+[2026-04-22T02:42:44.292000+00:00] adorable_lemur_97052 (id=1496340451471392789)
+    Thank you guys for your hard work. I'm new with linux, llms, hermes and today I managed to install this web interface with the help of my hermes-agent. I'm enjoying the chat sessions with my bot now
+
+[2026-04-22T02:43:50.590000+00:00] ch79lab (id=1496340729545494588)
+    I am using hermes-webui and its fantastic. Tahnks!
+
+[2026-04-22T02:50:25.909000+00:00] avidfuturist (id=1496342387633557597)
+    So glad you’ve been liking it!
+    [reply to adorable_lemur_97052 msg=1496340451471392789]
+
+[2026-04-22T02:50:56.831000+00:00] avidfuturist (id=1496342517329952831)
+    Thanks for saying that! I’ve had a lot of fun building it and using it as my daily driver for Hermes!
+    [reply to ch79lab msg=1496340729545494588]
+
+[2026-04-22T02:51:56.921000+00:00] adorable_lemur_97052 (id=1496342769365553162)
+    I have been attaching screenshots and text files to it and the bot can view and analyse it. so that's awesome!
+
+[2026-04-22T02:52:23.594000+00:00] avidfuturist (id=1496342881240219820)
+    Yes I use the screenshot and file upload feature almost daily!
+    [reply to adorable_lemur_97052 msg=1496342769365553162]
+
+[2026-04-22T02:52:39.363000+00:00] avidfuturist (id=1496342947380072468)
+    The UI can also generate images if you can configure the fal.ai key and then display images back to you too!
+
+[2026-04-22T02:53:06.350000+00:00] adorable_lemur_97052 (id=1496343060572012635)
+    Oh I will try that.
+
+[2026-04-22T02:54:20.822000+00:00] avidfuturist (id=1496343372930224148)
+    [attachment] IMG_5011.png https://cdn.discordapp.com/attachments/1493017427724992612/1496343372577771661/IMG_5011.png?ex=6a01ed9c&is=6a009c1c&hm=f0faf71d822b7f3f13d2b8d78c6a07aad55924bfe83ae8b1378ced73e50cabf3&
+
+[2026-04-22T04:46:43.279000+00:00] oninsuka (id=1496371652844458034)
+    fuck your fucking ui is goated bro
+
+[2026-04-22T04:47:46.524000+00:00] gluedmosquito (id=1496371918113083394)
+    I'm scared to break things by add in it
+    [reply to avidfuturist msg=1496343372930224148]
+
+[2026-04-22T04:48:08.489000+00:00] gluedmosquito (id=1496372010240970802)
+    do you have artifacts and A2UI ?
+
+[2026-04-22T04:48:09.687000+00:00] avidfuturist (id=1496372015265747035)
+    Thanks! Hat tip to <@209400895601901578> who leads our UI/UX 🙏
+    [reply to oninsuka msg=1496371652844458034]
+
+[2026-04-22T04:48:35.333000+00:00] oninsuka (id=1496372122832863322)
+    im still a noob i really wanna know how i can use it over at ios any tips on how to start?
+    [reply to avidfuturist msg=1496372015265747035]
+
+[2026-04-22T04:48:58.850000+00:00] avidfuturist (id=1496372221470314558)
+    Yes - You can view all files on the workspace to the right, some of them have a quick preview too - planning to add quick preview to more and more types over time
+    [reply to gluedmosquito msg=1496372010240970802]
+
+[2026-04-22T04:49:19.184000+00:00] oninsuka (id=1496372306757423205)
+    im hosting it in a zo computer which cna be a pwa but i want a ui for hermes as well on ios
+
+[2026-04-22T04:49:26.182000+00:00] gluedmosquito (id=1496372336109162546)
+    ooh interesting take on that
+    [reply to avidfuturist msg=1496372221470314558]
+
+[2026-04-22T04:50:09.678000+00:00] avidfuturist (id=1496372518544609401)
+    Works great on iOS too! https://github.com/nesquena/hermes-webui#accessing-on-your-phone-with-tailscale
+    [embed] GitHub - nesquena/hermes-webui: Hermes WebUI: The best way to use H... https://github.com/nesquena/hermes-webui
+    [reply to oninsuka msg=1496372122832863322]
+
+[2026-04-22T04:50:20.673000+00:00] oninsuka (id=1496372564661108756)
+    do i just tell my hermes to set it up?
+    [reply to avidfuturist msg=1496372518544609401]
+
+[2026-04-22T04:50:37.101000+00:00] gluedmosquito (id=1496372633565134951)
+    i'm currently trying to add things to this: https://discord.com/channels/1053877538025386074/1495819189938552994/1495819189938552994  but not go full workspace like you
+
+[2026-04-22T04:50:38.758000+00:00] avidfuturist (id=1496372640514838728)
+    Yep you can just point it to that section and it can help you. The UI works great on mobile via Tailscale
+    [reply to oninsuka msg=1496372564661108756]
+
+[2026-04-22T04:50:51.840000+00:00] gluedmosquito (id=1496372695384985600)
+    if you have any tips
+
+[2026-04-22T04:51:38.792000+00:00] avidfuturist (id=1496372892315680869)
+    Cool - yeah, will take a look!
+    [reply to gluedmosquito msg=1496372633565134951]
+
+[2026-04-22T04:53:25.658000+00:00] gluedmosquito (id=1496373340544172032)
+    my branch is a little messier but i'm going the plugins route and addinc only what's needed like file upload etc
+
+[2026-04-22T04:53:42.331000+00:00] gluedmosquito (id=1496373410476068884)
+    i was wondering what's the difference between hermes webui and full openwebui ?
+
+[2026-04-22T04:55:30.124000+00:00] avidfuturist (id=1496373862592417793)
+    Mine is completely built from ground up for use with Hermes as a native Hermes client. Full support for profile, cron, and slash commands and everything Hermes has on terminal.
+    [reply to gluedmosquito msg=1496373410476068884]
+
+[2026-04-22T04:55:50.808000+00:00] gluedmosquito (id=1496373949347532800)
+    ooh i see that's great
+
+[2026-04-22T05:51:19.263000+00:00] oninsuka (id=1496387909899522059)
+    damn this sucks :     No — it cannot work on this server. Here's the final verdict:
+        
+        Why it fails:
+        This is a Docker container running Tailscale in userspace networking mode (--tun=userspace-networking). In this mode:
+        - The server can reach out to the tailnet (outgoing connections work)
+        - The server cannot accept incoming tailnet connections (no TUN device for WireGuard)
+        - tailscale serve creates the proxy config, but traffic can't actually enter the container over the tailnet
+        - Your MacBook shows in tailscale status but InMagicSock: False and Peers: 0 confirms no actual peer-to-peer connectivity
+        
+        What works locally:
+        - The WebUI HTTP server on port 7860 responds fine (200 OK) from inside the container
+        - localhost, 127.0.0.1, and even the container's Docker IP) all work
+        - But the Tailscale IP (1)and Tailscale HTTPS URL time out
+        
+        To get iOS/mobile access to Hermes, you need:
+        
+        1. Run the WebUI on your MacBook — it has full Tailscale support with TUN. Clone nesquena/hermes-webui, point it at your Hermes gateway API (http://zo-worksor the public IP), then access via om your phone.
+        
+      
+        
+        Bottom line: The nesquena/hermes-webui + Tailscale pattern requires a host with real kernel networking. Your Zo Computer container can't do incoming tailnet traffic. You need to run the WebUI on a machine with full Tailscale support (your MacBook or another VPS) and point it at this server's Hermes gateway API. huhu  cant use it properly haha <@933139410281713755>
+
+[2026-04-22T05:52:10.040000+00:00] avidfuturist (id=1496388122873954364)
+    Ah darn I don’t realize it didn’t support Tailscale not as familiar with zocomputer
+    [reply to oninsuka msg=1496387909899522059]
+
+[2026-04-22T05:52:26.937000+00:00] oninsuka (id=1496388193744851104)
+    yeahh haha its fine hopefully it can in the future huhu youre so cool bro fr
+    [reply to avidfuturist msg=1496388122873954364]
+
+[2026-04-22T05:52:30.797000+00:00] oninsuka (id=1496388209934995536)
+    i like your ui sm
+
+[2026-04-22T05:52:54.827000+00:00] avidfuturist (id=1496388310724116510)
+    Yeah I hope it can too, thanks!
+
+[2026-04-22T05:53:00.205000+00:00] oninsuka (id=1496388333281083524)
+    tryna think of other ways i can improve my hermes haha
+
+[2026-04-22T05:53:10.976000+00:00] avidfuturist (id=1496388378458067076)
+    Always new ways lol
+
+[2026-04-22T06:39:00.923000+00:00] primco (id=1496399912571506728)
+    I found what I think is a bug in the session management for honcho integration when using the web-ui native chat. What looks like a single session in the chat actually becomes multiple sessions in Honcho. And I'm not sure why this is, but a single back and forth between me and the agent will become a honcho session. And then the next step in the conversation becomes another session. I have per-session setting on in Honcho.  I'm not sure where to locate the cause of this. <@429384745374187523>
+
+[2026-04-22T06:39:48.914000+00:00] avidfuturist (id=1496400113860612106)
+    Thanks I’ll do my best to investigate and fix!
+    [reply to primco msg=1496399912571506728]
+
+[2026-04-22T09:32:14.174000+00:00] deor42 (id=1496443505025880144)
+    Depending on your tech level, Hostinger do some really cheap deals that give you a full VPS to run Hermes and Tailsacle.
+    [reply to oninsuka msg=1496387909899522059]
+
+[2026-04-22T12:00:30.256000+00:00] deor42 (id=1496480817898066094)
+    Noticed a couple of odd things, not sure if its me or my config, but why does the thinking box show the same as the output? They both seem to be updating at the same time.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496480817550200914/image.png?ex=6a01c4de&is=6a00735e&hm=01825fc893968c5b433bbff320a8b2c62054ff8f5fcf145c5d3fe63509c4ef10&
+
+[2026-04-22T12:42:52.602000+00:00] deor42 (id=1496491481270063296)
+    Just tried image generation through Nous sub. The image link works fine if i copy/paste, but not loading inline.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496491481014341713/image.png?ex=6a01cecc&is=6a007d4c&hm=c426febd1e8de0e17d94a90003fb1c4a06cf087523370b6d141e2ce701953c21&
+
+[2026-04-22T14:17:11.910000+00:00] erosika (id=1496515218128244756)
+    thanks for the tip i will try to reproduce today using the web ui and see whats going on there
+    [reply to primco msg=1496399912571506728]
+
+[2026-04-22T14:23:16.837000+00:00] erosika (id=1496516748743278704)
+    on it as well 👍
+    [reply to avidfuturist msg=1496400113860612106]
+
+[2026-04-22T15:06:06.365000+00:00] deor42 (id=1496527526124851210)
+    Me again! Any reason that Minimax M2.7 wont work via the web UI since i switched to a Nous portal sub? I went through and removed my OpenCode Go details, reran the "Hermes Model" command to select the model, and it works via CLI. I tried restarting the web server too and also started a new conversation in case there was confusion on the model names, but i get the same errors. Works fine if i pick GLM5.1 though.
+    [attachment] Screenshot_2026-04-22_151749.png https://cdn.discordapp.com/attachments/1493017427724992612/1496527524249997522/Screenshot_2026-04-22_151749.png?ex=6a01f05d&is=6a009edd&hm=45cd9d2f13a0e24383903b4c1f3324833fa8682d4e3c1d50bcbfb8173025e3c5&
+    [attachment] Screenshot_2026-04-22_160235.png https://cdn.discordapp.com/attachments/1493017427724992612/1496527524883333210/Screenshot_2026-04-22_160235.png?ex=6a01f05e&is=6a009ede&hm=25c1c184d7d5d69669db309b96f0c0c0e76aaabae0f0a757d96a2c5733e4a39c&
+    [attachment] Screenshot_2026-04-22_151914.png https://cdn.discordapp.com/attachments/1493017427724992612/1496527525625462966/Screenshot_2026-04-22_151914.png?ex=6a01f05e&is=6a009ede&hm=2e56ee6c58df85a36b597b822f46711a5c73b6ead4b0f72f6ab435d4d8b27ecb&
+
+[2026-04-22T15:27:56.784000+00:00] avidfuturist (id=1496533022420238357)
+    Thanks for all the reports, will take a look and investigate fixes today!
+
+[2026-04-22T15:30:29.179000+00:00] deor42 (id=1496533661611327548)
+    Shout if you need anything else.
+    [reply to avidfuturist msg=1496533022420238357]
+
+[2026-04-22T17:49:27.044000+00:00] avidfuturist (id=1496568633151979731)
+    Captured all of these issues and will be digging into them. Will message here when fixes are released. Appreciate the reporting 🙏
+
+[2026-04-22T20:57:49.667000+00:00] avidfuturist (id=1496616039788576938)
+    <@217610136934547456> <@157600066197127168> <@429384745374187523>  I believe I’ve fixed all of these now can you confirm when you get a chance. Update to .156 latest and restart the server
+
+[2026-04-22T20:58:04.007000+00:00] avidfuturist (id=1496616099935031527)
+    Please continue reporting issues here and I’ll continue solving them 😂 🙏
+
+[2026-04-22T22:41:17.011000+00:00] deor42 (id=1496642075276345467)
+    Inline image looks like it displays properly now and thinking shows up as its actual thinking, at least on the models i can test at the moment. 
+    
+    Still having trouble getting 404 errors when i select some of the models available via the Nous portal sub. There are a few differences in the way they are listed. FOr example, none of these work:
+    [reply to avidfuturist msg=1496616099935031527]
+
+[2026-04-22T22:41:22.178000+00:00] deor42 (id=1496642096948449344)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496642096767963217/image.png?ex=6a01b252&is=6a0060d2&hm=d2b67aa0dd6d40bc5372b7936328c43143354a601244bd18774b53a191172776&
+
+[2026-04-22T22:42:37.919000+00:00] avidfuturist (id=1496642414629093447)
+    Okay will into that next thanks for testing! So none of those work when selected right now?
+    [reply to deor42 msg=1496642075276345467]
+
+[2026-04-22T22:42:39.431000+00:00] deor42 (id=1496642420971012258)
+    However, if i scroll down a bit more, the one thats highlited here works:
+
+[2026-04-22T22:42:42.125000+00:00] deor42 (id=1496642432270598234)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496642431997837433/image.png?ex=6a01b2a2&is=6a006122&hm=9f1f14bfc0a0d90b698b0b5353c8b14f9fd5c21a2b4cf3d0d055eaa92854e680&
+
+[2026-04-22T22:42:58.758000+00:00] avidfuturist (id=1496642502034194482)
+    Ah that’s an important clue thanks will fix
+
+[2026-04-22T22:55:31.105000+00:00] deor42 (id=1496645657606230086)
+    Cool, thanks, i'll test it all again wheneve you push an update 🙂
+    
+    Ive also noticed that the Default Model list in Prefs only shows a few of the ones that are available. It also doesnt seem to apply the model set there to a new chat. (Its very late in the UK and very possible im not understanding this setting 😂  )
+
+[2026-04-22T22:55:34.039000+00:00] deor42 (id=1496645669912318114)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496645669635489812/image.png?ex=6a01b5a5&is=6a006425&hm=dff240ffd93ee2e24f8bcc8677b2a000f5cab139dc23a5163b6e27f226241b46&
+
+[2026-04-22T22:56:27.031000+00:00] avidfuturist (id=1496645892176871434)
+    Will take a look thanks! Appreciate all the feedback
+    [reply to deor42 msg=1496645657606230086]
+
+[2026-04-22T23:02:52.867000+00:00] deor42 (id=1496647510490615921)
+    Happy to help! Its such a great looking system!
+
+[2026-04-22T23:08:10.919000+00:00] avidfuturist (id=1496648844497391618)
+    <@217610136934547456> fixed the Nous provider issue I think, can you confirm when you get a chance?
+    [reply to deor42 msg=1496642075276345467]
+
+[2026-04-22T23:37:36.641000+00:00] deor42 (id=1496656250471977131)
+    Still getting a 404 on any of the (via Nous) entries sorry. Works fine if i select the same model further down the list. DO we know what the difference it?
+    [reply to avidfuturist msg=1496648844497391618]
+
+[2026-04-23T05:08:22.667000+00:00] primco (id=1496739490738344057)
+    i just updated to v0.50.162 and just tested again with no hemes update v0.10.0 and i still ge the same behavior. a session is created for every chat i send in the same hermes session. so not fixed for me
+    [reply to avidfuturist msg=1496616099935031527]
+
+[2026-04-23T05:57:43.496000+00:00] avidfuturist (id=1496751909355126836)
+    All Nous models should be fixed now on latest after a server restart on .164 - can you confirm?
+    [reply to deor42 msg=1496656250471977131]
+
+[2026-04-23T05:58:47.421000+00:00] avidfuturist (id=1496752177476141096)
+    Not sure how to fix the honcho issue beyond setting the session id, I can’t reproduce it anymore. I’ll take another look later tho, thanks for testing
+    [reply to primco msg=1496739490738344057]
+
+[2026-04-23T06:26:35.362000+00:00] cygnusignis (id=1496759173327622166)
+    I still get the "white flash upon opening" in the newest version... ow my eyes 😵
+
+[2026-04-23T06:45:26.417000+00:00] primco (id=1496763917316263956)
+    ok. so you repro'd it and then fixed it? and you're a regular hosted honcho user or no?
+    [reply to avidfuturist msg=1496752177476141096]
+
+[2026-04-23T07:57:06.172000+00:00] deor42 (id=1496781951795724398)
+    YES! thats got it! 
+    Just 1 oddity remaining that i can see around this. Just going to test a few things while i drink some coffee and i'll explain.
+    [reply to avidfuturist msg=1496751909355126836]
+
+[2026-04-23T09:59:22.147000+00:00] deor42 (id=1496812721105145876)
+    <@933139410281713755>  Ok so what I'm seeing at the moment is that the model I set as the default via `hermes models` appears at the very top of the model select list in the chat box. I find that if you select this entry `minimax/minimax-m2.7` and `qwen/qwen3.5-35b-a3b` will give a 404 error. But `moonshotai/kimi-k2.6` selected this way DOES work fine. Only tested these models 3 in this way at the moment, but definitely something strange about how the model set in the gateway is handled. 
+    
+    The model selected via CLI also shows in the Default Model field of Preferences. This list also  shows the models with (via Nous) in the name and not all the others that show via CLI or in the model list in the chat box. If you select one of the (via Nous) instead, the save button seems to pause for about 5 seconds before closing and saying "Settings Saves", but going back in shows the Provider field as blank now and the default is missing from the top of this list with just the 4  (via Nous) entries.
+    
+    I'm not sure what the expected behaviour or effect of the Default Models list is, however when I start a new conversation, it always seems to start with the model of the currently selected conversation rather than the default in prefs.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496812720165752883/image.png?ex=6a01a879&is=6a0056f9&hm=6f545c520c6f6b118b45a40efeeae128a80c5125a119f065a78fec7e32357410&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496812720631058573/image.png?ex=6a01a87a&is=6a0056fa&hm=dfcc320cd4abcc207ccd5a3871e33a2a61b488400c39e00783575089aca86e28&
+
+[2026-04-23T14:36:40.632000+00:00] avidfuturist (id=1496882507969331264)
+    Was testing on hosted honcho, and was able to get it working but I believe you there’s still something up - I just haven’t been able to figure it out yet. Thanks for reporting. We’ll figure it out eventually
+    [reply to primco msg=1496763917316263956]
+
+[2026-04-23T14:37:02.844000+00:00] avidfuturist (id=1496882601133084733)
+    Will look into it 👍 https://github.com/hermes-webui/hermes-swift-mac/issues/52
+    [embed] bug: white flash on startup still present — window shown before W... https://github.com/hermes-webui/hermes-swift-mac/issues/52
+    [reply to cygnusignis msg=1496759173327622166]
+
+[2026-04-23T14:39:00.221000+00:00] avidfuturist (id=1496883093448032448)
+    Thanks for the reports will fix the default model stuff soon!
+    [reply to deor42 msg=1496812721105145876]
+
+[2026-04-23T16:02:43.644000+00:00] senseiyoba (id=1496904163211219125)
+    This thread is like a secondary github page with issues now<a:partyblob:1151261550032724052>
+
+[2026-04-23T16:05:08.602000+00:00] avidfuturist (id=1496904771209265193)
+    Yeah I have my agent transferring over all issues from here into GitHub after it investigates them. So it works quite well
+
+[2026-04-23T16:06:03.139000+00:00] avidfuturist (id=1496904999953764395)
+    Keep the issues coming, have all the ones above logged and will release fixes today
+
+[2026-04-23T16:06:12.452000+00:00] senseiyoba (id=1496905039015575842)
+    I've noticed, yeah, lighting fast extraction, investigation, fix and deploy🔥
+
+[2026-04-23T17:17:49.930000+00:00] avidfuturist (id=1496923063944482919)
+    I believe I’ve fixed this all now on the latest version, can you test and confirm? And followup with any issues you still see. Make sure you are on .171+
+    [reply to deor42 msg=1496781951795724398]
+
+[2026-04-23T17:50:28.871000+00:00] avidfuturist (id=1496931280338812968)
+    I believe this is now fixed in v1.4.0 in the swift Mac app, update and lmk!
+    [reply to cygnusignis msg=1496759173327622166]
+
+[2026-04-23T18:54:43.191000+00:00] avidfuturist (id=1496947446528348371)
+    For anyone new popping in here I’ll occasionally repost here’s the repo to setup for the best way to use hermes on web, macOS, and mobile 
+    
+    https://github.com/nesquena/hermes-webui
+    [attachment] IMG_5011.png https://cdn.discordapp.com/attachments/1493017427724992612/1496947446834659379/IMG_5011.png?ex=6a0225f3&is=6a00d473&hm=ea70e4f93d9e890bb62d3131fe49bd7d7a98b9442ab1b6bfee0619904a56aab7&
+
+[2026-04-23T19:44:27.604000+00:00] deor42 (id=1496959964063862957)
+    Updated and it looks good! Prefs shows loads of models now. Im guessing the ordering still groups them by provider, even tho that isnt show. Would be nice to see the provider, and maybe search as its a rather big list. 😁 
+    
+    The selected default seems to apply and work on a new conversation properly, as long as you reload the page after saving it.
+    
+    Slight oddity that the Default model set in Prefs always shows in lower case, along with a capitalised entry. Either entry works properly when selected in the chat box, no more 404 errors!
+    
+    Really appreciate your work on this! Again, its a great project and makes Hermes SO much better!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496959963522924755/image.png?ex=6a02319b&is=6a00e01b&hm=977a1e6eb5fe913f79a1a2df566532b727ed4eeca0e511f0545e9d3dc81d593c&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1496959963828977714/image.png?ex=6a02319b&is=6a00e01b&hm=66df4406892dc3e9bfe7cd14e91b3225301c0894423f979cd8c5ded70d535057&
+    [reply to avidfuturist msg=1496923063944482919]
+
+[2026-04-23T19:45:49.330000+00:00] avidfuturist (id=1496960306847678656)
+    Thanks for testing - Will take a look at fixing the last few bits and bobs!
+    [reply to deor42 msg=1496959964063862957]
+
+[2026-04-23T22:32:17.530000+00:00] avidfuturist (id=1497002200394764328)
+    I believe some of this should be fixed now if you can test again when you get a chance on the latest!
+    [reply to deor42 msg=1496959964063862957]
+
+[2026-04-23T22:42:34.186000+00:00] deor42 (id=1497004786837618708)
+    Nice, just seeing the 1 instance of the Default model showing now, both in the Prefs list and in the chat box selector.
+    [reply to avidfuturist msg=1497002200394764328]
+
+[2026-04-23T22:43:14.865000+00:00] avidfuturist (id=1497004957457711236)
+    Great news! Everything clear then?
+
+[2026-04-23T22:45:21.793000+00:00] deor42 (id=1497005489832198224)
+    Looks like the model list in Prefs is still grouped by the provider, which we cant see, but really its not a big deal as i dont imagine many folks will care greatly once they set the defailt.
+
+[2026-04-24T00:39:51.733000+00:00] avidfuturist (id=1497034304449024031)
+    What do you mean grouped by provider you can’t see? I do see the provider listed for each. Can you show another screenshot or elaborate?
+
+[2026-04-24T04:57:14.717000+00:00] cygnusignis (id=1497099077018456156)
+    Ahh, sweet eye relief 😌  Thank you for the fix!
+    [reply to avidfuturist msg=1496931280338812968]
+
+[2026-04-24T07:27:30.665000+00:00] kyklooppi (id=1497136892645343265)
+    If I may suggest one minor ux improvement here. Text should follow profile/agent name.
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1497136892683227308/image0.jpg?ex=6a022da2&is=6a00dc22&hm=7e858ef9d84c446b17ec8c20a9d118c0aa85888493d74e4712d9270860ce0a61&
+
+[2026-04-24T08:27:19.954000+00:00] deor42 (id=1497151947214553220)
+    Yeah sure. In the Prefs Default Model list you just see the model name. The names are not in alphabetical order as its still grouped by the provider. That makes if feel a little off when you cant immediately see the reason they are grouped in this way. Does that make sense?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1497151946849779733/image.png?ex=6a0192e7&is=6a004167&hm=e72a2dd3f2147e92145d311375996ec006652796329df1c5b2c95c7dfb40c25a&
+    [reply to avidfuturist msg=1497034304449024031]
+
+[2026-04-24T14:05:33.322000+00:00] avidfuturist (id=1497237063769002125)
+    Could you elaborate on what you mean?
+    [reply to kyklooppi msg=1497136892645343265]
+
+[2026-04-24T14:06:49.199000+00:00] avidfuturist (id=1497237382020202558)
+    Yup makes sense now, thanks!
+    [reply to deor42 msg=1497151947214553220]
+
+[2026-04-24T15:40:50.230000+00:00] avidfuturist (id=1497261042219225243)
+    <@209400895601901578> is cooking up a really sleek fairly total UI/UX refresh, should land today, could use all of your help in testing and feedback once it drops 🙌
+    
+    For anyone new popping in here I’ll occasionally repost here’s the repo to setup for the best way to use hermes on web, macOS, and mobile 
+    
+    🌐  WebUI app: https://github.com/nesquena/hermes-webui
+    🖥️ macOS Swift: https://github.com/hermes-webui/hermes-swift-mac/releases
+
+[2026-04-24T17:02:42.622000+00:00] avidfuturist (id=1497281646284636364)
+    Released! https://x.com/nesquena/status/2047722187600343223?s=46&t=brZif7wwaCoijMKWsXCy5Q
+    
+    working on a lot more today too
+    [embed]  https://twitter.com/nesquena/status/2047722187600343223?s=46&t=brZif7wwaCoijMKWsXCy5Q
+
+[2026-04-24T17:02:57.431000+00:00] ae53633805 (id=1497281708398219345)
+    So cool!
+
+[2026-04-24T17:03:00.869000+00:00] avidfuturist (id=1497281722817970217)
+    [attachment] IMG_5051.png https://cdn.discordapp.com/attachments/1493017427724992612/1497281721932976188/IMG_5051.png?ex=6a020bc4&is=6a00ba44&hm=7ab3c9bf7fd1829c0f171826a1336b1d612b363ec0dd97416edc635035569f08&
+    [attachment] IMG_5054.png https://cdn.discordapp.com/attachments/1493017427724992612/1497281722499338471/IMG_5054.png?ex=6a020bc4&is=6a00ba44&hm=eccd94aae24988c5ce1947936ce2e0283f0c331d26cee8d513680e9b1a5c2fc1&
+
+[2026-04-24T17:03:10.338000+00:00] avidfuturist (id=1497281762534101032)
+    Proud of our new UI! Let us know what you think after you try it. The new vertical nav and UI flex opens up a lot of possibilities for the future!
+
+[2026-04-24T17:31:44.890000+00:00] deor42 (id=1497288953886412842)
+    Looks good! I'm missing the workspace/file browser on the right hand side at the moment. Cant see an obvious way to turn it on again!
+    [reply to avidfuturist msg=1497281762534101032]
+
+[2026-04-24T17:32:05.487000+00:00] avidfuturist (id=1497289040276357291)
+    Click the folder icon on the composer bar at the bottom
+    [reply to deor42 msg=1497288953886412842]
+
+[2026-04-24T17:32:37.170000+00:00] avidfuturist (id=1497289173164359811)
+    <@209400895601901578> I wonder if that’s clear enough to people
+
+[2026-04-24T17:32:49.593000+00:00] avidfuturist (id=1497289225270329554)
+    As the new way to open it or that it even exists? If they are just getting started
+
+[2026-04-24T17:33:11.198000+00:00] avidfuturist (id=1497289315888402574)
+    It’s definitely cool but might be a little subtle
+
+[2026-04-24T17:39:26.686000+00:00] aronprins (id=1497290890798956645)
+    Workspaces are next on my list an will include this 🔥
+    [reply to avidfuturist msg=1497289173164359811]
+
+[2026-04-24T17:43:17.153000+00:00] deor42 (id=1497291857447616705)
+    AH got it, thanks! 
+    If you are looking at it <@209400895601901578>  I would love more file management in the Workspaces, like uploading files and moving them around. Oh and we can currently create folders, but not delete them.
+
+[2026-04-24T17:46:27.469000+00:00] aronprins (id=1497292655691042846)
+    To put it lightly: It’s far from where I want it to be 👀 😜
+    [reply to deor42 msg=1497291857447616705]
+
+[2026-04-24T17:46:38.057000+00:00] aronprins (id=1497292700100067462)
+    Rest assured… it’s on our radar 😉
+
+[2026-04-24T18:09:10.442000+00:00] avidfuturist (id=1497298372413882429)
+    I’d like to add a few people who are interested in being ongoing testers and bug reporters for WebUI or macOS UI to our work discord. Ping me in DM if you are interested 🙏
+
+[2026-04-24T23:10:57.139000+00:00] ae53633805 (id=1497374317405802597)
+    Let me get the WebUI set up and hosted on one of my agent machines, and I'll keep an ear out for you. If you have specific unit tests, please let me know.
+    [reply to avidfuturist msg=1497298372413882429]
+
+[2026-04-24T23:12:17.815000+00:00] avidfuturist (id=1497374655785336832)
+    Sounds great thanks! We just launched a big UI refresh so any quirks or issues you can help report on latest versions would be appreciated
+    [reply to ae53633805 msg=1497374317405802597]
+
+[2026-04-24T23:13:08.092000+00:00] ae53633805 (id=1497374866662359201)
+    Will do! Will get it set up and report back. Do you want PRs/Issues on GitHub or message you here?
+    [reply to avidfuturist msg=1497374655785336832]
+
+[2026-04-24T23:18:00.229000+00:00] avidfuturist (id=1497376091973881986)
+    Messaging me here works great I have a bot that processes feedback here into issues
+
+[2026-04-24T23:18:10.263000+00:00] avidfuturist (id=1497376134059528252)
+    But if you want to file on GitHub that works too!
+
+[2026-04-24T23:52:45.489000+00:00] adorable_lemur_97052 (id=1497384838188236900)
+    I'm just a normal user. All I can do is provide feedback. I'm starting to use this everyday now along with the workspace to put all my notes & files for the agent to use. So far so good. Only complaint is the long list of models to choose from due to all my connections to the different inference API services, but i stopped looking at that now haha
+
+[2026-04-24T23:54:04.296000+00:00] avidfuturist (id=1497385168728756385)
+    Normal user is good, I’m going to reach out, would be great to have you as a regular normal user tester for feedback
+    [reply to adorable_lemur_97052 msg=1497384838188236900]
+
+[2026-04-24T23:57:40.475000+00:00] adorable_lemur_97052 (id=1497386075449200640)
+    Oh my bot can't paste an image into webgui. (normal image not rendered image as i don't have that service). This doesn't work in normal WebUI too. I just tell it to do it in Telegram. No biggie
+
+[2026-04-25T00:00:04.754000+00:00] avidfuturist (id=1497386680599056405)
+    I’d like to fix that, you should be able to paste in an image. Can you give me more details onto what goes wrong? Or what happens when you try to drag in an image? Or paste an image?
+    [reply to adorable_lemur_97052 msg=1497386075449200640]
+
+[2026-04-25T01:28:45.527000+00:00] jezza2463 (id=1497408997538398282)
+    Any plans for Claude Design style Canvas or Artefact viewer in the future? 👀
+
+[2026-04-25T01:35:03.595000+00:00] nivek.me (id=1497410583270658228)
+    ~~Hey, been trying out this project today and liking it so far. Only big issue I've run into is the system prompt for sessions made through the UI are still using the CLI Agent prompt which leads to almost every code reference not being in a code block due to this portion:~~
+    
+    ~~`Try not to use markdown but simple text renderable inside a terminal`~~
+    
+    ~~Also just in general it thinking it's in a CLI has other related problems. Is there currently any workaround for this?~~
+    
+    Nevermind, I updated and this is fixed now
+
+[2026-04-25T05:14:14.144000+00:00] avidfuturist (id=1497465740670926928)
+    Yes absolutely have plans for that! With support for a wide range of artifact types
+    [reply to jezza2463 msg=1497408997538398282]
+
+[2026-04-25T05:14:43.532000+00:00] avidfuturist (id=1497465863933136978)
+    Yes thanks for confirming should be fixed now!
+    [reply to nivek.me msg=1497410583270658228]
+
+[2026-04-25T22:02:21.983000+00:00] avidfuturist (id=1497719445055865016)
+    I pushed out a large release of features and fixes today - any reports of issues or feedback good or bad are helpful!
+    
+    Detailed change log here: https://github.com/nesquena/hermes-webui/blob/master/CHANGELOG.md
+    
+    🌐  WebUI app: https://github.com/nesquena/hermes-webui
+    🖥️ macOS Swift: https://github.com/hermes-webui/hermes-swift-mac/releases
+
+[2026-04-25T23:45:13.028000+00:00] avidfuturist (id=1497745328294592562)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1497745327971635281/image.png?ex=6a01c148&is=6a006fc8&hm=e7f7d417875ea2368cb7efae11277a8f8eb947407de2dffda48c133facbef545&
+
+[2026-04-25T23:45:19.700000+00:00] avidfuturist (id=1497745356279120014)
+    Latest macOS update is out!
+
+[2026-04-26T09:10:21.793000+00:00] rikllo (id=1497887551963271170)
+    So can we install this on linux and open it on a windows browser ? Like the dashboard?
+
+[2026-04-26T10:40:20.706000+00:00] medici7168 (id=1497910196645924915)
+    yes
+    [reply to rikllo msg=1497887551963271170]
+
+[2026-04-26T15:02:32.331000+00:00] avidfuturist (id=1497976179863453706)
+    Yup works just like that. I have installed on Linux and then running on my Mac for instance. It’s all in the readme
+    [reply to rikllo msg=1497887551963271170]
+
+[2026-04-26T15:13:50.862000+00:00] deor42 (id=1497979025828614164)
+    Yep exactly what I do
+    [reply to rikllo msg=1497887551963271170]
+
+[2026-04-26T17:00:26.425000+00:00] kyklooppi (id=1498005850764218468)
+    Like in screenshot in prompt window it always says ”Message Hermes..” But when I’m using different profiles like ”Reiska” could the prompt box changes to say ”Message Reiska”. I do have multiple profiles with different names.
+    [reply to avidfuturist msg=1497237063769002125]
+
+[2026-04-26T17:00:54.038000+00:00] avidfuturist (id=1498005966581530855)
+    Great idea; will capture this as an issue to work on!
+    [reply to kyklooppi msg=1498005850764218468]
+
+[2026-04-27T02:40:41.547000+00:00] avidfuturist (id=1498151875969548328)
+    Pull the latest this should be fully implemented now! lmk when you have a chance to confirm!
+    [reply to kyklooppi msg=1498005850764218468]
+
+[2026-04-27T05:48:28.259000+00:00] kyklooppi (id=1498199131984892025)
+    Looking good. Thanks!
+    [reply to avidfuturist msg=1498151875969548328]
+
+[2026-04-27T11:37:32.211000+00:00] fifasas (id=1498286977286672395)
+    What is the difference between this and OpenwebUI, why to choose this over openwebui?
+
+[2026-04-27T17:21:27.947000+00:00] avidfuturist (id=1498373529836457984)
+    <@447090202100367381> This is completely native Hermes WebUI. Full support for tool use, delegate tasks, CRON, approvals system, skills, profiles, /steer, all of your slash and skill commands, it works 1:1 like the TUI but via the web, mobile and on macOS. Pretty dramatic difference from OpenWebUI. Give it a try!
+    [reply to fifasas msg=1498286977286672395]
+
+[2026-04-27T20:55:02.134000+00:00] asheriif (id=1498427276432506911)
+    <@933139410281713755>  Hey nice work on this! I tried it yesterday and while I like the UI  and I think it has a lot of potential, there are a few issues I had that prevent me from using this for the time being, the first one is especially bad:
+    
+    1. The WebUI chats do not respect the model configured for a profile. I have a profile configured to use Kimi 2.6 as the default model (through Nous), and the WebUI keeps reverting that to Opus 4.6 every time I enter the conversation. This is dangerous and could cost people money. I haven't looked at the code but the model list should be auto discovered and not hardcoded, and the default configured model should definitely be respected and not automatically changed to something else.
+    
+    2. Tool call output in the chat has its own separate block, which is very nice, but the tool output is truncated and there's now way to scroll inside that block.
+    
+    3. Empty conversations remain in the conversation list. Clicking new conversation just keeps adding empty conversations to the list.
+    
+    Will definitely give it another shot when those issues are fixed, especially the first one :)
+
+[2026-04-27T20:56:43.112000+00:00] avidfuturist (id=1498427699964936222)
+    Thank you! Will capture and get to work on fixing each of these shortly and then respond back, thanks taking the time to capture these
+    [reply to asheriif msg=1498427276432506911]
+
+[2026-04-27T22:34:00.566000+00:00] avidfuturist (id=1498452184021598320)
+    <@818160700706521149> Great feedback above, I’ve just shipped version 0.50.228 that I believe addressed all your feedback and a lot more! Please test again and confirm when you get a chance 🚀 
+    
+    https://github.com/nesquena/hermes-webui
+
+[2026-04-27T22:52:07.459000+00:00] asheriif (id=1498456742781255770)
+    <@933139410281713755> is that fixed in the master branch of the webui? i git pulled and none of the issues are fixed for me actually
+
+[2026-04-27T22:53:54.851000+00:00] avidfuturist (id=1498457193215823882)
+    Did you restart the app server? In settings -> system you’ll want to see 228
+    [reply to asheriif msg=1498456742781255770]
+
+[2026-04-27T22:54:35.678000+00:00] avidfuturist (id=1498457364456800371)
+    And then do a hard refresh
+
+[2026-04-27T22:54:59.185000+00:00] asheriif (id=1498457463052177672)
+    Nope I'm still on 223. I ran bootstrap again, thought that auto restarts the app server.
+
+[2026-04-27T22:55:45.085000+00:00] avidfuturist (id=1498457655570858034)
+    Ah okay can you upgrade to 228 and then hard refresh I believe all three should be resolved. But if not I’ll dig back in!
+
+[2026-04-27T22:56:22.800000+00:00] asheriif (id=1498457813759033424)
+    So what's the "official" upgrade path? I just git pulled. Do I need to manually kill the app server process before running bootstrap again?
+
+[2026-04-27T22:56:51.572000+00:00] avidfuturist (id=1498457934437290094)
+    If you go to settings system
+
+[2026-04-27T22:56:58.341000+00:00] avidfuturist (id=1498457962828796074)
+    Check for update and then update that will restart for you
+
+[2026-04-27T22:57:08.313000+00:00] avidfuturist (id=1498458004654391376)
+    Otherwise I’d just kill app server and start it again yeah
+
+[2026-04-27T22:57:42.303000+00:00] asheriif (id=1498458147218526412)
+    Ahhh I see. Just to confirm, that settings -> system path doesnt update hermes too, right? I have some local patches that I dont want to be overwritten right now
+
+[2026-04-27T22:57:51.995000+00:00] avidfuturist (id=1498458187869982790)
+    It actually does update Hermes too - so don’t use that right now
+
+[2026-04-27T22:58:01.747000+00:00] avidfuturist (id=1498458228772835360)
+    Kill process and start again and you should be sorted
+
+[2026-04-27T23:02:11.807000+00:00] avidfuturist (id=1498459277600493618)
+    In my testing so far:
+    
+    1.  Every profile selects the profile default model correctly as I switch 
+    2. Can scroll inside tool block freely now
+    3. First part of the fix is in. Finalizing second part so new conversations don’t stick into the sidebar unless there’s at least 1 message
+
+[2026-04-27T23:02:53.975000+00:00] asheriif (id=1498459454465642606)
+    Okay after a quick test:
+    
+    1. New conversations still stick in the sidebar even with no messages
+    2. Models are still messed up
+
+[2026-04-27T23:04:07.521000+00:00] asheriif (id=1498459762940051539)
+    My default model is gpt 5.5. I selected a previous session that, in the sidebar, correctly shows 5.5, but in the chat it says "5.4 mini (via Nous)" which is wrong and I don't know where it's coming from
+
+[2026-04-27T23:04:41.122000+00:00] avidfuturist (id=1498459903872729249)
+    Okay thanks for taking another look, I’ll keep working on this. Do you see the correct model you expect in the model list if you click in though? 
+    
+    Want to understand if it is detecting the provider correctly
+
+[2026-04-27T23:05:57.348000+00:00] asheriif (id=1498460223587881011)
+    Many more models for Nous are now showing up, which means kimi gets detected correctly which is good. But now codex models are gone completely
+
+[2026-04-27T23:08:32.600000+00:00] avidfuturist (id=1498460874761834668)
+    So you have codex as a provider wired up and you are on that profile and don’t even see codex models as an option in the models dropdown?
+
+[2026-04-27T23:08:40.303000+00:00] asheriif (id=1498460907070558358)
+    Yes
+
+[2026-04-27T23:10:22.181000+00:00] avidfuturist (id=1498461334377857238)
+    Hmm okay that’s weird, I’ll look into it. And finishing up patching item 1 as we speak 👍 thanks again for taking the time to test
+
+[2026-04-27T23:11:18.605000+00:00] asheriif (id=1498461571037528105)
+    Also tool call blocks are still truncated and not scrollable unfortunately. At least for previous chats, I didnt start a new one. But ideally it shouldnt matter
+
+[2026-04-27T23:12:39.882000+00:00] asheriif (id=1498461911937847467)
+    No worries happy to help. If a screenshare would help also let me know, I don't mind
+    [reply to avidfuturist msg=1498461334377857238]
+
+[2026-04-27T23:13:05.031000+00:00] avidfuturist (id=1498462017420267651)
+    Thanks again, will follow up once I’ve had a chance to investigate and squash these issues - or if I need more info 🙏
+
+[2026-04-28T03:04:37.900000+00:00] nivek.me (id=1498520288336543885)
+    Might be related to an issue I found recently with profiles. Selecting a different profile doesn't seem to apply it correctly all the time. Not sure if it's a caching issue or what but I am trying to use a custom profile and it keeps using the default one even though its not selected.
+
+[2026-04-28T03:05:54.922000+00:00] avidfuturist (id=1498520611390095441)
+    You're right, I am about to push that fix right now 👍
+
+[2026-04-28T03:06:06.051000+00:00] avidfuturist (id=1498520658068373624)
+    thanks for the report <@123625773633503234> after I do maybe you can test to confirm its fixed after updating
+
+[2026-04-28T03:34:12.325000+00:00] wysie_ (id=1498527730814419037)
+    thanks for this! I already have openai-codex configured but in the settings it doesn't show as configured (I'm guessing cause it expects an API key, but openai-codex is via OAuth)
+
+[2026-04-28T03:35:38.078000+00:00] avidfuturist (id=1498528090488442910)
+    Of course can you show me a few screenshots of what you see either here or in DMs and I’ll take a look and fix! Absolutely Codex via OAuth should show up in models
+    
+    Also make sure you are on version .232+ in settings system
+    [reply to wysie_ msg=1498527730814419037]
+
+[2026-04-28T03:40:39.004000+00:00] wysie_ (id=1498529352663437443)
+    yeah i'm on 233
+
+[2026-04-28T03:41:50.233000+00:00] wysie_ (id=1498529651419644085)
+    here u go, some screenshots. thanks!
+    [attachment] CleanShot_2026-04-28_at_11.40.482x.png https://cdn.discordapp.com/attachments/1493017427724992612/1498529650811600896/CleanShot_2026-04-28_at_11.40.482x.png?ex=6a01f8be&is=6a00a73e&hm=cbd1602d518e43247523952e68debabf071f3fd42974fc4ae38ec7fd9a16fec4&
+    [attachment] CleanShot_2026-04-28_at_11.41.082x.png https://cdn.discordapp.com/attachments/1493017427724992612/1498529651172315187/CleanShot_2026-04-28_at_11.41.082x.png?ex=6a01f8be&is=6a00a73e&hm=9fcf6a32ff424f9fd90b7abf3188e77115e63382696ed9bca9838134549a74e3&
+
+[2026-04-28T03:43:11.056000+00:00] avidfuturist (id=1498529990415876198)
+    Perfect will take a look thanks!
+
+[2026-04-28T04:45:28.997000+00:00] avidfuturist (id=1498545668476899428)
+    Can you update to .235 (verify in settings -> system) and then hard refresh and confirm profile switching works as expected again?
+    
+    Might need to reselect the workspace the first time after the update. But profile and workspace and model should switch alongside the profile again. Would be great if you can confirm the fix.
+    [reply to nivek.me msg=1498520288336543885]
+
+[2026-04-28T04:47:10.356000+00:00] avidfuturist (id=1498546093607223438)
+    Working on this one now, should have the additional fix in for you to try shortly
+    [reply to wysie_ msg=1498527730814419037]
+
+[2026-04-28T05:40:24.340000+00:00] wysie_ (id=1498559490147225620)
+    thank u
+
+[2026-04-28T06:15:30.029000+00:00] wysie_ (id=1498568322047016981)
+    nice, i see both OpenAI (not configured) and OPenAI Codex (configured) now 😄
+
+[2026-04-28T06:15:31.569000+00:00] wysie_ (id=1498568328506118236)
+    thanks!
+
+[2026-04-28T06:15:59.334000+00:00] avidfuturist (id=1498568444960968784)
+    Oh okay great so it worked?
+
+[2026-04-28T06:16:03.638000+00:00] wysie_ (id=1498568463013249054)
+    yup
+
+[2026-04-28T06:16:05.519000+00:00] avidfuturist (id=1498568470902866031)
+    Lmk if you see any other issues!
+
+[2026-04-28T06:16:07.627000+00:00] wysie_ (id=1498568479744196628)
+    will give it a shot!
+
+[2026-04-28T06:16:09.752000+00:00] avidfuturist (id=1498568488657096796)
+    Glad to hear it!
+
+[2026-04-28T06:16:14.003000+00:00] wysie_ (id=1498568506487214141)
+    tbh i use it mianly via tg/whatsapp
+
+[2026-04-28T06:16:25.594000+00:00] wysie_ (id=1498568555103518861)
+    but this is great, within LAN and even tailscale i can use it
+
+[2026-04-28T06:16:28.168000+00:00] avidfuturist (id=1498568565899657276)
+    Yeah all good!
+
+[2026-04-28T06:16:37.287000+00:00] avidfuturist (id=1498568604147515463)
+    And yes works great on mobile with Tailscale
+
+[2026-04-28T10:47:55.803000+00:00] deor42 (id=1498636881192161301)
+    <@1324162140587823175> Web Ui info and questions here if you want to dig deeper.
+
+[2026-04-28T10:48:10.292000+00:00] zingy90210 (id=1498636941963563048)
+    Absolute legend
+
+[2026-04-28T10:49:42.840000+00:00] zingy90210 (id=1498637330137747487)
+    Is it quite easy to make different profiles and in each profile adjust my provider, remove skills add skills, disable enable tools?
+
+[2026-04-28T10:49:57.243000+00:00] zingy90210 (id=1498637390548570213)
+    Big thing im looking for
+
+[2026-04-28T10:50:15.443000+00:00] zingy90210 (id=1498637466884640858)
+    And select different project folders like u can in codex
+
+[2026-04-28T10:51:44.943000+00:00] deor42 (id=1498637842275111063)
+    Not using profiles myself, but yes you can create and manage them through the webui. Same with workspaces and skills.
+
+[2026-04-28T10:52:43.574000+00:00] deor42 (id=1498638088191086622)
+    Workspace file manager is there and works pretty well, but its being updated to add more functionality at the moment. If you drop feedback, they are very responsive.
+
+[2026-04-28T14:15:09.360000+00:00] avidfuturist (id=1498689031310016512)
+    Yes you have access to workspace folders and can easily switch between all your profiles!
+    [reply to zingy90210 msg=1498637466884640858]
+
+[2026-04-28T16:04:13.625000+00:00] nivek.me (id=1498716479946752120)
+    Seems to be working so far but the big issue I'm having still is one of my profiles has an MCP defined in it's config and the agent does not see those tools when starting from the webui. Works in the CLI so I know its working
+    [reply to avidfuturist msg=1498545668476899428]
+
+[2026-04-28T16:04:33.312000+00:00] avidfuturist (id=1498716562520150227)
+    Will look into this next!
+    [reply to nivek.me msg=1498716479946752120]
+
+[2026-04-28T18:18:44.923000+00:00] dmedik (id=1498750333424373760)
+    If running hermes on my hetzner server, what am I missing to access the webui interface
+    [reply to deor42 msg=1496443505025880144]
+
+[2026-04-28T19:11:55.615000+00:00] avidfuturist (id=1498763716156719287)
+    It’s built in to work with VPS. It works through an SSH tunnel by default
+    [reply to dmedik msg=1498750333424373760]
+
+[2026-04-28T21:32:14.736000+00:00] momentaryblip (id=1498799028509479092)
+    I'm a complete Hermes newb, just thinking about messing with it.  So does Hermes webui also include Hermes or no?
+
+[2026-04-28T21:32:49.817000+00:00] asheriif (id=1498799175649857668)
+    <@933139410281713755> does this web-ui keep a separate session store from hermes actual session store? If I pick a CLI session from the sidebar and continue talking, does this go into the same session or a branched/forked session?
+
+[2026-04-28T22:15:02.825000+00:00] avidfuturist (id=1498809799855308961)
+    Hermes WebUI works alongside Hermes Agent, although it can take you through onboarding if you are starting from scratch - it also plugs right into your existing hermes agent if you have it setup too
+    [reply to momentaryblip msg=1498799028509479092]
+
+[2026-04-28T22:15:56.130000+00:00] avidfuturist (id=1498810023432683693)
+    Keeps a separate session store right now, although you can import sessions into it from any other gateway, and sync insights back. Work on linking directly into the central session store instead is definitely planned
+    [reply to asheriif msg=1498799175649857668]
+
+[2026-04-29T07:29:15.010000+00:00] deor42 (id=1498949269628125204)
+    You could also use Tailscale, which is free. I run my stuff locally, but use Tailscale to access it when I'm out for work.
+    [reply to dmedik msg=1498750333424373760]
+
+[2026-04-29T16:47:01.913000+00:00] matclem423gmail.com_54286 (id=1499089639993245696)
+    Does it use gateway?
+
+[2026-04-29T23:16:03.446000+00:00] avidfuturist (id=1499187541478215710)
+    It can import sessions from any gateway
+    [reply to matclem423gmail.com_54286 msg=1499089639993245696]
+
+[2026-04-30T04:57:04.519000+00:00] avidfuturist (id=1499273361438675025)
+    A lot of releases over the last two days, over 40 new features! https://x.com/nesquena/status/2049712577169719719?s=46&t=brZif7wwaCoijMKWsXCy5Q
+    
+    Please help us test and report any issues or problems you run into! 🙏
+    [embed]  https://twitter.com/nesquena/status/2049712577169719719?s=46&t=brZif7wwaCoijMKWsXCy5Q
+
+[2026-04-30T05:05:43.791000+00:00] avidfuturist (id=1499275539423166496)
+    Detailed change log here: https://github.com/nesquena/hermes-webui/blob/master/CHANGELOG.md
+    
+    🌐  WebUI app: https://github.com/nesquena/hermes-webui
+    🖥️ macOS Swift: https://github.com/hermes-webui/hermes-swift-mac/releases
+
+[2026-04-30T06:45:29.881000+00:00] matclem423gmail.com_54286 (id=1499300646904532992)
+    How do you use profile ?
+    If we have 2 profile, only one is available through the gateway right ?
+
+[2026-04-30T15:14:18.907000+00:00] avidfuturist (id=1499428694920396841)
+    We can import gateway sessions but we aren’t a gateway. The UI can switch freely between profiles at the bottom in the footer
+    [reply to matclem423gmail.com_54286 msg=1499300646904532992]
+
+[2026-04-30T18:39:41.200000+00:00] matclem423gmail.com_54286 (id=1499480378363088936)
+    Thx mate
+
+[2026-04-30T19:21:49.644000+00:00] cygnusignis (id=1499490983425871913)
+    This (being unable to scroll upward while the AI is printing a response) is still happening on the latest version of the macOS app, and is still my biggest pain point using it.
+    [reply to cygnusignis msg=1495096905712140501]
+
+[2026-04-30T19:43:49.511000+00:00] cygnusignis (id=1499496519349571715)
+    Actually, I just ran into a bigger one I keep forgetting about:
+    
+    More than once, I've typed a long prompt into a new chat, submitted it, but then needed to stop the AI's response before it completed for whatever reason. When I  do that, **I lose everything the AI already printed, and (even worse), the whole prompt I just sent gets erased.** The first thing has been happening from the start, I think, but I feel like the second thing is more recent. 
+    
+    This is extremely frustrating, as 1) I just needed to make a few edits to the prompt and submit it again, but now it's gone (noooooo!), and 2) I honestly just never ever want output I've already paid tokens for to simply disappear. It's almost always at least useful context, at least for my workflows.
+
+[2026-04-30T19:54:36.610000+00:00] cygnusignis (id=1499499233479491594)
+    I was able to go into the session JSON in that hermes profile and find the prompt, but of course that's tedious, and I had to replace the `\n`'s with newlines to submit it as something human-readable again, and by the time I was done I couldn't remember why I'd stopped it the first time, and...
+    
+    ...well, my terrible memory is no fault of Hermes, but you see what I mean.
+
+[2026-04-30T19:56:23.754000+00:00] cygnusignis (id=1499499682873737367)
+    I beg for a fix.
+
+[2026-04-30T20:02:19.158000+00:00] cygnusignis (id=1499501173546160250)
+    Also - I'm confused on how to add the new Codex model (I'm using OAuth) and Claude models through the macOS app. I feel I must be missing something. (Or should I still be using the terminal for that?)
+
+[2026-04-30T20:12:31.691000+00:00] cygnusignis (id=1499503742695903334)
+    I also have a feature request. Being able to have tabs and multiple panes would be so excellent. I feel like you probably already have it planned, but let me be one more voice saying I'd be thrilled.
+
+[2026-04-30T20:36:07.792000+00:00] cygnusignis (id=1499509682253988022)
+    I'm just full of feedback and questions today: 
+    How do I fork a chat in the macOS app? I don't see a way to use the slash command. I feel like maybe I can just duplicate a session file, but I also know that's probably not the recommended approach here.
+
+[2026-04-30T20:36:56.243000+00:00] xxbelocxx (id=1499509885472215100)
+    I assume to use the Mac version, Hermes has to be running locally?
+
+[2026-04-30T20:37:29.057000+00:00] xxbelocxx (id=1499510023104102401)
+    Or can I point it to a VPS with hermes running?
+
+[2026-04-30T21:08:49.304000+00:00] avidfuturist (id=1499517909431488664)
+    It uses an SSH tunnel by default so you can connect directly to VPS! Does not require anything locally
+    [reply to xxbelocxx msg=1499510023104102401]
+
+[2026-04-30T21:08:58.042000+00:00] avidfuturist (id=1499517946081444053)
+    Thanks for all the reports! Will capture and look into fixing soon!
+    [reply to cygnusignis msg=1499490983425871913]
+
+[2026-04-30T21:11:13.947000+00:00] xxbelocxx (id=1499518516108460103)
+    Ok, thank you <@933139410281713755>
+    [reply to avidfuturist msg=1499517909431488664]
+
+[2026-04-30T21:13:24.385000+00:00] xxbelocxx (id=1499519063204954113)
+    Does the server portion need to be running or just Hermes?
+
+[2026-04-30T21:13:52.930000+00:00] xxbelocxx (id=1499519182931234960)
+    nevermind.. if I RTFM, I would see. 😉
+
+[2026-04-30T21:14:50.330000+00:00] avidfuturist (id=1499519423684280510)
+    Server portion needs to run too, detailed in the readme
+
+[2026-04-30T21:16:52.438000+00:00] xxbelocxx (id=1499519935842357370)
+    yea, I saw after I posted. I dont see where I would put in the credentials for the SSH tunnel though, does it use keys only
+
+[2026-04-30T21:17:04.165000+00:00] xxbelocxx (id=1499519985029218424)
+    in the prefs of the Mac app
+
+[2026-04-30T21:24:51.986000+00:00] avidfuturist (id=1499521947212452010)
+    Right now you can’t setup OAuth through web app you must use  the terminal but I’ll capture it as a very handy feature request
+    [reply to cygnusignis msg=1499501173546160250]
+
+[2026-04-30T21:25:19.640000+00:00] avidfuturist (id=1499522063201996820)
+    Yes that’s one of our next features for the Mac app! Hopefully soon
+    [reply to cygnusignis msg=1499503742695903334]
+
+[2026-04-30T21:25:58.660000+00:00] avidfuturist (id=1499522226863472730)
+    About to add this shortly! In next release or two
+    [reply to cygnusignis msg=1499509682253988022]
+
+[2026-04-30T21:26:04.694000+00:00] avidfuturist (id=1499522252172034199)
+    Great feedback Cygnus!
+
+[2026-05-01T00:33:02.053000+00:00] akarichan8231 (id=1499569301185761414)
+    Quick question, does the web UI pick up previous conversations? because i notice chat convos has a few different situations:
+    1) CLI/TUI sometimes do not pick up the same list of resumable conversations, i dont know if it is anything related.
+    2) my web UI has 0 convos from my previous tui/cli convos, is that normal?
+
+[2026-05-01T00:35:02.343000+00:00] avidfuturist (id=1499569805718585506)
+    Go into settings and enable “show agent sessions” if not already enabled and save and see if that brings in all your past sessions. You should be able to import any past sessions into the webUI
+    [reply to akarichan8231 msg=1499569301185761414]
+
+[2026-05-01T00:36:21.415000+00:00] akarichan8231 (id=1499570137370591252)
+    are these conversations bi-directionally available? (web sessions can be seen in tui/cli?)
+
+[2026-05-01T00:38:37.823000+00:00] avidfuturist (id=1499570709507211324)
+    Not yet, but that is planned! WebUI adds a lot of features to it
+    [reply to akarichan8231 msg=1499570137370591252]
+
+[2026-05-01T00:38:58.058000+00:00] akarichan8231 (id=1499570794379083919)
+    yeah i just manually checked. but good start!
+
+[2026-05-01T00:39:03.276000+00:00] avidfuturist (id=1499570816264835193)
+    Artifacts html and video and such that don’t port well to terminal
+
+[2026-05-01T00:39:10.764000+00:00] avidfuturist (id=1499570847671783526)
+    More like Claude Cowork
+
+[2026-05-01T00:39:11.969000+00:00] akarichan8231 (id=1499570852725788803)
+    understood
+
+[2026-05-01T00:39:31.575000+00:00] avidfuturist (id=1499570934959575181)
+    But slash commands and all the things you use from the terminal are supported too
+
+[2026-05-01T00:39:33.794000+00:00] akarichan8231 (id=1499570944266731741)
+    display context with various format is always a pain to present.
+
+[2026-05-01T00:39:52.938000+00:00] avidfuturist (id=1499571024562229439)
+    Give it a try and let us know what you think!
+
+[2026-05-01T03:49:57.212000+00:00] akarichan8231 (id=1499618857554411644)
+    avid, after a few conversations, i always got hit with this message. yes this is a local model, but this only pops up after afew inferences.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1499618857571057694/image.png?ex=6a01faa5&is=6a00a925&hm=24864154bf12b97639eb81ac65b36f9e1471f122b999b1759100c89191a6a0da&
+
+[2026-05-01T03:54:08.051000+00:00] avidfuturist (id=1499619909649432778)
+    Okay thanks for the report - will take a look at fixing soon!
+    [reply to akarichan8231 msg=1499618857554411644]
+
+[2026-05-01T07:06:51.660000+00:00] avidfuturist (id=1499668410940915893)
+    You can branch a chat with /branch now!
+    [reply to cygnusignis msg=1499509682253988022]
+
+[2026-05-01T07:07:31.058000+00:00] avidfuturist (id=1499668576187973663)
+    Should be fixed now in latest!
+    [reply to cygnusignis msg=1499490983425871913]
+
+[2026-05-01T07:07:49.588000+00:00] avidfuturist (id=1499668653908426884)
+    Should be fixed now as well in latest version
+    [reply to cygnusignis msg=1499496519349571715]
+
+[2026-05-01T07:08:59.526000+00:00] avidfuturist (id=1499668947249790998)
+    Can you update to the latest webUI confirm .253 or above in settings. This might be fixed
+    [reply to akarichan8231 msg=1499618857554411644]
+
+[2026-05-01T08:33:00.999000+00:00] akarichan8231 (id=1499690092720033883)
+    confirmed working, using v0.50.253-dirty
+    [reply to avidfuturist msg=1499668947249790998]
+
+[2026-05-01T14:46:04.095000+00:00] avidfuturist (id=1499783974229377094)
+    Glad to hear it!
+    [reply to akarichan8231 msg=1499690092720033883]
+
+[2026-05-01T15:00:37.178000+00:00] xxbelocxx (id=1499787636204765378)
+    Whats the best way to restart the webui if I used the bootstrap file, just run it again?
+
+[2026-05-01T15:02:59.845000+00:00] xxbelocxx (id=1499788234593669161)
+    That looks to be the case.
+
+[2026-05-01T15:41:57.008000+00:00] avidfuturist (id=1499798037365522462)
+    Yup that should work. Stop the bootstrap script and then run it again
+
+[2026-05-01T16:27:04.485000+00:00] akarichan8231 (id=1499809393347133511)
+    for some reason sometimes that did not work, i just do sudo fuser -k by port
+
+[2026-05-01T16:37:52.969000+00:00] avidfuturist (id=1499812113286168799)
+    Yes that also works
+    [reply to akarichan8231 msg=1499809393347133511]
+
+[2026-05-01T23:16:13.439000+00:00] avidfuturist (id=1499912359123222528)
+    Big release today fixing most of the issues I’ve gotten in feedback across all sources 
+    
+    Detailed change log here: https://github.com/nesquena/hermes-webui/blob/master/CHANGELOG.md
+    
+    🌐  WebUI app: https://github.com/nesquena/hermes-webui
+    🖥️ macOS Swift: https://github.com/hermes-webui/hermes-swift-mac/releases
+
+[2026-05-01T23:16:29.362000+00:00] avidfuturist (id=1499912425908994118)
+    Could use another round of testing!
+
+[2026-05-02T04:25:02.600000+00:00] avidfuturist (id=1499990076057321554)
+    Added multi tabs and windows support to the latest macOS version as well!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1499990075856125983/image.png?ex=6a0202de&is=6a00b15e&hm=8add61bd8cb35bcf9866436387a29270700f64f1bc2de20361fc8384f653af1f&
+
+[2026-05-02T05:16:28.327000+00:00] .s0uthpaw (id=1500003018534555696)
+    I'm gonna ask you bc it's starting to look damn respectable over here
+    [reply to avidfuturist msg=1499990076057321554]
+
+[2026-05-02T05:16:53.429000+00:00] .s0uthpaw (id=1500003123819839588)
+    like ts looks *on purpose*
+    [reply to avidfuturist msg=1499990076057321554]
+
+[2026-05-02T05:18:11.950000+00:00] .s0uthpaw (id=1500003453160652862)
+    This looks impressive 🙏
+    How much can you tell me about roadblocks for an iPhone install?
+
+[2026-05-02T05:19:07.532000+00:00] avidfuturist (id=1500003686288719913)
+    Thanks yeah it’s been shaping up nicely!
+    [reply to .s0uthpaw msg=1500003123819839588]
+
+[2026-05-02T05:19:50.142000+00:00] avidfuturist (id=1500003865007755284)
+    Works really well on iPhone with Tailscale and supports PWA (web app on your phone) as well!
+    
+    https://github.com/nesquena/hermes-webui#accessing-on-your-phone-with-tailscale
+    
+    Just released a bunch of fixes for mobile version too!
+    [reply to .s0uthpaw msg=1500003453160652862]
+
+[2026-05-02T05:21:33.078000+00:00] avidfuturist (id=1500004296752627842)
+    [attachment] IMG_5123.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1500004296421539920/IMG_5123.jpg?ex=6a02101c&is=6a00be9c&hm=f025692fbb862dfc3c8b3b97fcc175f8dd59e001691f27cbba8f67f44ce83ad5&
+
+[2026-05-02T05:21:44.946000+00:00] .s0uthpaw (id=1500004346530627724)
+    I don't have an iphone, my neighbor does. I know the Terminal app is incomplete and for some reason they charge for Termux on IPhone
+    (*everybody laugh in "OSS" and ok*)
+    How about native installation?
+
+[2026-05-02T05:22:42.347000+00:00] avidfuturist (id=1500004587287871599)
+    That’s my next plan is to ship native iOS and Android apps! So it’s on the roadmap
+    [reply to .s0uthpaw msg=1500004346530627724]
+
+[2026-05-02T05:24:45.820000+00:00] .s0uthpaw (id=1500005105171431575)
+    Damn. That *is* clean af
+    oh my phone might be a boss fight or it might just work, depending on how resolution and res in ratio to element hold up over both screens of a foldable
+    [reply to avidfuturist msg=1500004296752627842]
+
+[2026-05-02T05:25:51.801000+00:00] avidfuturist (id=1500005381915676752)
+    Thanks, I’d be curious how it looks on that, I’m interested in making it look good at every resolution
+    [reply to .s0uthpaw msg=1500005105171431575]
+
+[2026-05-02T05:26:26.678000+00:00] avidfuturist (id=1500005528200544332)
+    As much as I like gateways i appreciate being able to seamlessly switch profiles on my phone. As well as some of the niceties of a UI on mobile
+
+[2026-05-02T05:27:27.482000+00:00] .s0uthpaw (id=1500005783230877747)
+    What's the Android install script? 
+    and I'm sorry if I didn't read, I'm laying down mostly lol, but themes?
+
+[2026-05-02T05:28:02.411000+00:00] .s0uthpaw (id=1500005929733722192)
+    I'm "asleep" right now
+
+[2026-05-02T05:28:30.423000+00:00] avidfuturist (id=1500006047224430683)
+    Full theme support
+
+[2026-05-02T05:28:41.752000+00:00] avidfuturist (id=1500006094741704734)
+    Light and dark with a bunch of different color schemes
+
+[2026-05-02T05:28:48.214000+00:00] .s0uthpaw (id=1500006121845424148)
+    Love this. Love everything about this
+    [reply to avidfuturist msg=1500005528200544332]
+
+[2026-05-02T05:29:13.372000+00:00] .s0uthpaw (id=1500006227365855272)
+    Beautiful
+
+[2026-05-02T05:29:37.136000+00:00] avidfuturist (id=1500006327039037520)
+    Basically you don’t need to do much on Android itself. You set it up on your machine with Hermes with a single command
+    [reply to .s0uthpaw msg=1500005783230877747]
+
+[2026-05-02T05:30:04.563000+00:00] avidfuturist (id=1500006442076471436)
+    Once it’s setup with Tailscale, you just visit the secure url on Android and add it as a PWA. So you’ll probably want to set it up another time
+
+[2026-05-02T05:30:31.696000+00:00] avidfuturist (id=1500006555880394873)
+    Happy to walk you through it
+
+[2026-05-02T05:31:00.282000+00:00] .s0uthpaw (id=1500006675778895902)
+    Oh ok I follow, yeah I just gotta add it to my tailscale server
+
+[2026-05-02T05:31:49.743000+00:00] avidfuturist (id=1500006883233103962)
+    Yeah exactly right. There’s a nice Tailscale android app too
+
+[2026-05-02T05:31:54.333000+00:00] .s0uthpaw (id=1500006902485225572)
+    Thank you, I will be taking you up on that 🤘
+    [reply to avidfuturist msg=1500006555880394873]
+
+[2026-05-02T05:31:55.293000+00:00] avidfuturist (id=1500006906511622195)
+    Once it’s setup it works everywhere
+
+[2026-05-02T05:32:46.949000+00:00] .s0uthpaw (id=1500007123172724768)
+    Yeeeaah bc it's pretty to wrap up a webite into an APK
+    [reply to avidfuturist msg=1500006883233103962]
+
+[2026-05-02T05:34:41.734000+00:00] avidfuturist (id=1500007604615905331)
+    Yeah you’re right, that would be my plan to do an Android apk wrapper which uses Tailscale behind the scenes, to make this even easier in the future
+
+[2026-05-02T05:37:01.601000+00:00] .s0uthpaw (id=1500008191260623028)
+    Another gigantic curveball for no reason: are there any features the Dashboard has that the WebUI doesn?
+    2nd issue: we have a dashboard, webui, CLI, and TUI
+    Can the Dashboard become a Settings page? Rearrange items as neccesary?
+
+[2026-05-02T05:40:14.255000+00:00] avidfuturist (id=1500008999310069871)
+    There’s a few things that the built in dashboard has that this webUI doesn’t have yet - things I use less: like searching through the log files, more detailed drill down analytics, and the cool plugins system you guys ran a contest around recently
+
+[2026-05-02T05:41:10.108000+00:00] avidfuturist (id=1500009233574531142)
+    CLI I think is going to be deprecated and TUI will become primary terminal interface. I already use TUI 💯 of the time when I’m in terminal
+
+[2026-05-02T05:44:42.462000+00:00] avidfuturist (id=1500010124251627651)
+    So I mostly use Hermes through WebUI via macOS app & on mobile, TUI, and discord gateway - and that’s been working great
+
+[2026-05-02T05:48:07.898000+00:00] avidfuturist (id=1500010985912664064)
+    Lmk if you have any other questions, happy to help!
+    [reply to .s0uthpaw msg=1500008191260623028]
+
+[2026-05-02T05:48:59.965000+00:00] .s0uthpaw (id=1500011204297490443)
+    This is true
+    [reply to avidfuturist msg=1500009233574531142]
+
+[2026-05-02T05:57:56.351000+00:00] .s0uthpaw (id=1500013454063308900)
+    Please include log files, error reports; Gille, tek, and I will probably all thank you personally. They're vital to our tech support loop currently. 
+    My idea: make the whole dashboard accessible through a Dashboard button or menu item. Version updates will probably pick at organization until the Dashboard and Menu/settings/options are collapsed into menu, but for now,  I would just add a Dashboard button that ``` hermes gatway ``` to the right terminal.
+    [reply to avidfuturist msg=1500008999310069871]
+
+[2026-05-02T05:58:52.567000+00:00] avidfuturist (id=1500013689850433586)
+    Good point, I’ll add a logs tab next! 
+    
+    Love that idea too!
+    [reply to .s0uthpaw msg=1500013454063308900]
+
+[2026-05-02T05:59:01.211000+00:00] .s0uthpaw (id=1500013726105997353)
+    One app
+
+[2026-05-02T06:09:04.923000+00:00] deor42 (id=1500016258257653780)
+    The current mobile layout works really well, and Tailscale is incredible handy for consistent access.
+
+[2026-05-02T06:09:54.746000+00:00] jezza2463 (id=1500016467230327075)
+    I’m having a lot of stability issues hosting a persistent webui on my Mac mini. At least once a day I need to send my agent in to fix it because it randomly crashed. Here is the most recent diagnosis:
+    
+    What was broken:
+    - WebUI service said “running”, but health checks were getting connection resets.
+    - Server PID had 454 file descriptors and loads of leaked `state.db` handles.
+    - launchd was also respawning `bootstrap.py` because it exited after starting the child server, while the child kept holding port `8787`.
+
+[2026-05-02T06:10:36.012000+00:00] avidfuturist (id=1500016640312737793)
+    Thanks for the reports, will look into fixing these soon
+    [reply to jezza2463 msg=1500016467230327075]
+
+[2026-05-02T06:12:57.584000+00:00] .s0uthpaw (id=1500017234108616795)
+    Oh I'm not proposing any changes to the layout beyond adding a button,  Y'all can still keep both WebUI and Dashboard separate, but percievably from user flow it'll act as if Dashboard is another menu
+    [reply to deor42 msg=1500016258257653780]
+
+[2026-05-02T06:13:29.868000+00:00] .s0uthpaw (id=1500017369517522974)
+    I like how this looks a lot
+
+[2026-05-02T06:14:13.988000+00:00] avidfuturist (id=1500017554570350734)
+    I think that’s a great idea, I’ll look into adding that! Thanks for the suggestion
+    
+    I like the official dashboard a lot too. I see them as fairly complementary
+    [reply to .s0uthpaw msg=1500017234108616795]
+
+[2026-05-02T06:14:52.923000+00:00] deor42 (id=1500017717875576862)
+    Yeah that's a great idea, having as much as possible in one place can only be good.
+    [reply to .s0uthpaw msg=1500017234108616795]
+
+[2026-05-02T06:16:13.560000+00:00] avidfuturist (id=1500018056091668562)
+    Captured as a GitHub issue. I’ll let you know once these are resolved, likely fairly soon! It’s pretty solid on Linux VPS, still needs a few tuneups running locally on a Mac.
+    [reply to jezza2463 msg=1500016467230327075]
+
+[2026-05-02T06:18:31.903000+00:00] .s0uthpaw (id=1500018636344131655)
+    I do like the original dashboard and it's customization flexibility. 
+    Yes <@217610136934547456>, the goal I'm pushing towards would be to combine WebUI and Dashboard as TUI deprecates the CLI and then we have 1 web interface and 1 local.
+    [reply to avidfuturist msg=1500017554570350734]
+
+[2026-05-02T06:18:53.692000+00:00] avidfuturist (id=1500018727733821492)
+    Yeah makes sense - I’d be all for that, would make things a lot simpler for people. That was always my goal with this.
+    [reply to .s0uthpaw msg=1500018636344131655]
+
+[2026-05-02T06:20:33.847000+00:00] avidfuturist (id=1500019147814342757)
+    Wanted to give people a codex or cowork like experience (outside the terminal) on web and mobile - native to and built for Hermes
+
+[2026-05-02T06:21:36.368000+00:00] avidfuturist (id=1500019410046291969)
+    I’m going to add in the logs section feature soon. And look into an easy way for users to navigate to the dashboard right from the webUI and we can go from there
+
+[2026-05-02T06:22:40.277000+00:00] deor42 (id=1500019678100066436)
+    Sounds perfect to me. This webui has made all the difference to me using Hermes. Takes so many barriers away!
+    [reply to .s0uthpaw msg=1500018636344131655]
+
+[2026-05-02T06:23:37.232000+00:00] .s0uthpaw (id=1500019916986913010)
+    I'll start suggesting it
+
+[2026-05-02T06:24:58.329000+00:00] avidfuturist (id=1500020257132249108)
+    Yeah and I’ve always said - I enjoyed building this out and plan to continue working on it. But there’s a reason I made it open source - I’d love to work to integrate it into the core Hermes experience in the future
+    [reply to .s0uthpaw msg=1500019916986913010]
+
+[2026-05-02T06:25:14.753000+00:00] avidfuturist (id=1500020326019498076)
+    I think you can see the idea. It’s about accessibility and going mainstream with autonomous agents
+
+[2026-05-02T06:25:29.748000+00:00] avidfuturist (id=1500020388913090690)
+    iOS, Android, web, macOS, windows - native clients for all, creating a sort of palatable normie experience for unlocking the power of Hermes
+
+[2026-05-02T06:26:25.713000+00:00] .s0uthpaw (id=1500020623647445023)
+    I figured that's where you were headed with it.
+
+[2026-05-02T06:27:10.586000+00:00] .s0uthpaw (id=1500020811858448445)
+    Accessibility is paramount for OSS
+    [reply to avidfuturist msg=1500020388913090690]
+
+[2026-05-02T06:27:32.350000+00:00] avidfuturist (id=1500020903143145502)
+    Yeah as much as some of us love it. Not everyone is a pure terminal tmux type of person lol. And I think agents can be of value for pretty much everyone
+
+[2026-05-02T06:28:08.005000+00:00] .s0uthpaw (id=1500021052691058768)
+    Lol fair
+
+[2026-05-02T06:28:53.340000+00:00] avidfuturist (id=1500021242839957664)
+    I have my whole non technical team on Cowork or Codex now, but I’d love to get them onto Hermes someday. In the long run, I’d love for OSS to win with the mainstream. 
+    
+    In the meantime just been having fun building it out as a way to play with agentic pipelines in OSS
+
+[2026-05-02T06:32:17.325000+00:00] deor42 (id=1500022098415063094)
+    Absolutely. I'm a tech guy, but 99% windows support. TUI is very cool, but the simplicity of a web interface is hard to beat when everyone already does that for everything else.
+    [reply to avidfuturist msg=1500020903143145502]
+
+[2026-05-02T06:42:36.782000+00:00] forkbearingbull (id=1500024696605905036)
+    <@933139410281713755> great updates, the grouping of workspace, model & reasoning level in 1 icon, primary and fallback indicators in model dropdown etc. Getting more and more sleek.  Yes codex or cowork like experience, exactly what wld get normies in. Im non technical too and spent alot of tokens fixing it but worth it.
+    
+    Thanks and hope I can contribute abit when I have some ideas and get better
+
+[2026-05-02T06:44:06.443000+00:00] avidfuturist (id=1500025072671264828)
+    Thanks man, appreciate the kind words - yeah it’s coming along, still so much to do but given it didn’t even really exist a month ago, I’m pretty proud of it lol
+    [reply to forkbearingbull msg=1500024696605905036]
+
+[2026-05-02T07:46:44.680000+00:00] gitu9903 (id=1500040835860009070)
+    Is there a way that I can access WebUI on my mobile?
+
+[2026-05-02T07:57:12.510000+00:00] deor42 (id=1500043469169758239)
+    Yes, i do it via Tailscale so it can work when i'm not on my home network. Depending on how you are running it, you may need to get it to listen on all interfaces, rather than just localhost. Give me some more details on your setup and i'll try and point you in the right direction a bit more.
+    [reply to gitu9903 msg=1500040835860009070]
+
+[2026-05-02T08:08:53.828000+00:00] gitu9903 (id=1500046410710515734)
+    I have hermes on VPS, WebUI on local machine via SSH. Now I am trying to figure out how can I have remote access to WEB UI via iphone
+    [reply to deor42 msg=1500043469169758239]
+
+[2026-05-02T08:21:28.383000+00:00] deor42 (id=1500049575543570513)
+    So assuming your iPhone is on the same LAN as your machine,if you put the IP address of your local machine into your iPhone, can you access it?
+    [reply to gitu9903 msg=1500046410710515734]
+
+[2026-05-02T08:21:42.512000+00:00] deor42 (id=1500049634805157908)
+    Don't forget to add the port after the IP address.
+
+[2026-05-02T08:22:40.191000+00:00] gitu9903 (id=1500049876728287364)
+    Yeah.. i did that. Its says localhost is currently unreachable
+
+[2026-05-02T08:23:19.071000+00:00] deor42 (id=1500050039802826842)
+    What OS is the local machine? Probably a firewall issue
+
+[2026-05-02T08:23:24.603000+00:00] gitu9903 (id=1500050063005716480)
+    Mac
+
+[2026-05-02T08:24:36.915000+00:00] deor42 (id=1500050366304354305)
+    Ah ok, I'm not familiar with Mac, but see if you can find a way to open the webui port, or allow the process to accept connections.
+
+[2026-05-02T08:25:15.131000+00:00] deor42 (id=1500050526593618003)
+    What's the command you used to run webui?
+
+[2026-05-02T16:17:57.067000+00:00] avidfuturist (id=1500169485175357500)
+    Were you able to get this working? If not I’d encourage asking your Hermes or whatever local Mac agent to help
+    [reply to gitu9903 msg=1500050063005716480]
+
+[2026-05-02T16:18:24.475000+00:00] avidfuturist (id=1500169600132976680)
+    And then let us know what you did to fix it, I’ll put together a better guide for this soon too
+
+[2026-05-02T17:47:38.546000+00:00] gitu9903 (id=1500192056734388275)
+    I followed eventually the github link instructions from WebUI repo and it worked. The only challenge I am facing is that my local machine web UI chats & Telegram chats with Hermes are out of sync. Any idea what am I missing?
+    [reply to avidfuturist msg=1500169485175357500]
+
+[2026-05-02T17:48:27.290000+00:00] avidfuturist (id=1500192261181538414)
+    Glad you got it working! Go into settings -> preferences and enable “show non-WebUI sessions” and then you can import any chats from telegram
+    
+    The webUI chats stay in WebUI since they can do a lot of things the terminal version can’t show so you can’t sync them back to terminal. It’s a future feature to sync those chats back in a way the terminal can understand
+    [reply to gitu9903 msg=1500192056734388275]
+
+[2026-05-02T18:46:48.388000+00:00] avidfuturist (id=1500206945850626121)
+    For newcomers in this thread, this is the best way to use Hermes on mobile, web, and macOS! Can be used from your laptop or on a VPS, anywhere you’ve installed Hermes. 
+    
+    🌐  WebUI app: https://github.com/nesquena/hermes-webui (Works on Windows/Linux/Mac)
+    🖥️ macOS Swift: https://github.com/hermes-webui/hermes-swift-mac/releases
+    
+    **Why use this?** This is a completely native Hermes experience. Full support for Kanban orchestration, tool use, delegate tasks, CRON management, approvals system, skills, quick switching profiles, steer/queue/interrupt flow commands, all of your slash/skill commands, it works 1:1 like the TUI but via web, mobile and on macOS. 
+    
+    AND on top of that you get image and video support, mermaid diagrams, advanced markdown rendering, workspace file explorer, latex, built in terminal, html rendering, PDF, SVG, artifacts and a lot more.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1500206946521972736/image.png?ex=6a022418&is=6a00d298&hm=6930671d7d666729a03cc56cf7b06f204ec48cffdd41ee07b3486d31781a6603&
+
+[2026-05-03T18:15:27.999000+00:00] _123321_ (id=1500561446793248778)
+    hi 👋 will be trying to use and maybe contribute to this
+
+[2026-05-03T18:15:56.773000+00:00] avidfuturist (id=1500561567480021046)
+    Awesome, welcome! All feedback and contributions welcome
+    [reply to _123321_ msg=1500561446793248778]
+
+[2026-05-03T18:20:43.395000+00:00] avidfuturist (id=1500562769659826316)
+    <@175598811408760834> https://github.com/nesquena/hermes-webui/blob/master/docs/docker.md
+    [embed] hermes-webui/docs/docker.md at master · nesquena/hermes-webui https://github.com/nesquena/hermes-webui/blob/master/docs/docker.md
+
+[2026-05-03T18:22:39.554000+00:00] avidfuturist (id=1500563256865980519)
+    Here’s the third party one too if this doesn’t work for you
+
+[2026-05-03T18:22:49.441000+00:00] avidfuturist (id=1500563298335195296)
+    Combines everything all in one
+
+[2026-05-03T18:24:28.067000+00:00] avidfuturist (id=1500563712002752585)
+    > My workaround was to create a single combined image that runs hermes-agent, hermes-webui, and hermes-dashboard together in one container using supervisord. Since all three services run under the same UID, the volume permission conflicts disappear entirely.
+    > 
+    > It's been working without issues for about a week on both amd64 (WSL2) and arm64 (Jetson Orin NX).
+    > 
+    > If anyone's interested, the repo is here: https://github.com/sunnysktsang/hermes-suite
+
+[2026-05-03T18:26:50.074000+00:00] avidfuturist (id=1500564307623153835)
+    <@175598811408760834> Let me know what ends up working best and I'll update the docker.md, and keep working on these until its smooth!
+
+[2026-05-03T18:28:07.797000+00:00] spoder7651 (id=1500564633617174528)
+    <@933139410281713755> thanks, will let you know! I have my own fork of Hermes which my agent maintains+improves, I might follow the example of the all in one container and integrate hermes-webui in it
+
+[2026-05-03T18:28:20.313000+00:00] avidfuturist (id=1500564686112821269)
+    All in one container is the way to go imo
+
+[2026-05-03T18:28:26.620000+00:00] avidfuturist (id=1500564712566423562)
+    I just provided the others for options, but when you split up the containers its a pain in the ass unless you really know what you are doing
+
+[2026-05-03T18:28:47.159000+00:00] spoder7651 (id=1500564798713368656)
+    I think ideally webui would run as a separate container, would allow for easier updates
+
+[2026-05-03T18:28:57.487000+00:00] spoder7651 (id=1500564842032136283)
+    E.g. hermes dashboard runs in a separate container
+
+[2026-05-03T18:28:59.409000+00:00] avidfuturist (id=1500564850093588524)
+    well I also provide that option
+
+[2026-05-03T18:29:18.675000+00:00] avidfuturist (id=1500564930900791479)
+    it's just easier to get the settings wrong, but it works, the link above explains in depth now
+
+[2026-05-03T18:29:29.067000+00:00] aureliustt (id=1500564974488129577)
+    Man i don't know what a container is but i do have ur web ui for hermes agent
+
+[2026-05-03T18:29:46.530000+00:00] aureliustt (id=1500565047733129289)
+    I have been using it for a few days
+
+[2026-05-03T18:29:52.464000+00:00] avidfuturist (id=1500565072622129385)
+    Thanks! You can safely ignore the containers talk, they are mostly a pain in the ass lol
+
+[2026-05-03T18:30:04.911000+00:00] avidfuturist (id=1500565124828631043)
+    glad you've been using it, hope you've been liking it so far! Feedback welcome
+
+[2026-05-03T18:32:22.651000+00:00] aureliustt (id=1500565702552064150)
+    Haha okay thanks and i dont know how open source works so i dont know if i was suppose to do this but i did try to make a different theme in there. Thats less about feedback though, its been working great. I used like 20 percent of my claude code weekly usage trying to do it 😂
+    [reply to avidfuturist msg=1500565124828631043]
+
+[2026-05-03T18:33:41.760000+00:00] spoder7651 (id=1500566034359386262)
+    <@933139410281713755> unfortunately I think this is a blocker for multi container setups
+    
+    > Cause: This is architectural, not a bug. In the two-container setup, agent processes started by the WebUI run inside the WebUI container, not the agent container. The WebUI image doesn't include git/node by design (it's a UI image, not a tool host).
+    
+    Shouldn’t it be possible to use the hermes gateway RESTful API instead of the webui spawning its own hermes processes? Ideally interacting with hermes via telegram/webui/tui should have the same experience
+
+[2026-05-03T18:34:22.331000+00:00] avidfuturist (id=1500566204526624878)
+    Nice man, yeah open source is all about extending it and making it your own!
+    [reply to aureliustt msg=1500565702552064150]
+
+[2026-05-03T18:34:31.647000+00:00] avidfuturist (id=1500566243600765030)
+    Feel free to share back your theme in the future
+
+[2026-05-03T18:34:37.617000+00:00] spoder7651 (id=1500566268640755842)
+    That said I haven’t looked into the gateway api and what it exposes
+    [reply to spoder7651 msg=1500566034359386262]
+
+[2026-05-03T18:35:00.881000+00:00] avidfuturist (id=1500566366216913027)
+    Not possible
+    [reply to spoder7651 msg=1500566268640755842]
+
+[2026-05-03T18:35:09.486000+00:00] avidfuturist (id=1500566402308899049)
+    The UI does way more than gateways allow
+
+[2026-05-03T18:35:12.109000+00:00] avidfuturist (id=1500566413310689393)
+    It’s not even close
+
+[2026-05-03T18:35:19.883000+00:00] spoder7651 (id=1500566445917077714)
+    Ah damn
+
+[2026-05-03T18:36:59.885000+00:00] avidfuturist (id=1500566865355739347)
+    I’ll look into making it better in the future but right now it’s a technical limitation. Appreciate this may not be appropriate for everyone, but thanks for taking a look. Feedback is helpful in any case!
+
+[2026-05-03T18:39:54.496000+00:00] spoder7651 (id=1500567597727350884)
+    No problem, thanks for sharing this amazing project! I can tell a lot of thought went into it and it’s definitely the best webui right now
+
+[2026-05-03T19:31:07.385000+00:00] avidfuturist (id=1500580486357979257)
+    See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started
+
+[2026-05-03T22:12:52.852000+00:00] queryqueryquitecontrary_57153 (id=1500621194037297373)
+    Been running this web ui for a little while now and have to say it is dynamite.  I am serving it via reverse proxy through a VPN so I can access it anywhere.  I am uncertain about the security and single password feels a little weak so I put another security layer at the VPN.  But it would be nice to be able to lock down the app with a user id in addition to the password and token based 2FA.  
+    
+    Only other note is that I inevitably have trouble getting it running again every time I update the web ui.  It is always something different but I have yet to have an update go smoothly. 
+    
+    Overall though this thing is the best Hermes interface available.
+
+[2026-05-03T22:15:13.313000+00:00] avidfuturist (id=1500621783173435402)
+    Noted thanks for the feedback. Will capture request for token based 2FA or maybe using a passkey?
+    
+    Any details on the things that go wrong on an update would be helpful. I’ll look into it so it’s more robust if you can give me specific details of errors or failures. 
+    
+    Thanks for saying that though, yes going for a professional sleek UI/UX that both feels like Hermes, extends its premise, and doesn’t try to do too much - all at the same time
+    [reply to queryqueryquitecontrary_57153 msg=1500621194037297373]
+
+[2026-05-03T22:26:29.374000+00:00] spoder7651 (id=1500624618778787890)
+    For more than basic auth mechanisms you probably want to use something like Authentik
+
+[2026-05-03T22:33:58.566000+00:00] avidfuturist (id=1500626502826332401)
+    Captured auth conversation here for more feedback https://github.com/nesquena/hermes-webui/issues/1576
+    [embed] feat(auth): multi-user accounts + 2FA / passkeys / external IdP —... https://github.com/nesquena/hermes-webui/issues/1576
+
+[2026-05-03T22:36:19.650000+00:00] spoder7651 (id=1500627094575513770)
+    <@933139410281713755> you probably want to look at how other popular selfhosted projects handle auth. I'd focus on the arr stack since they've had a lot of time to mature
+
+[2026-05-03T22:38:11.757000+00:00] avidfuturist (id=1500627564786487448)
+    Thanks will do!
+    [reply to spoder7651 msg=1500627094575513770]
+
+[2026-05-04T17:29:30.552000+00:00] avidfuturist (id=1500912269087871089)
+    See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started
+
+[2026-05-05T00:57:17.836000+00:00] avidfuturist (id=1501024958644486264)
+    Excited to announce we released total Kanban board support in WebUI! Fully compatible with first party and mobile 🚀 all thanks to Michael Lam!
+    
+    Check it out: https://github.com/nesquena/hermes-webui - looking pretty good! 🎉
+    [attachment] IMG_5157.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1501024958904668241/IMG_5157.jpg?ex=6a01d22d&is=6a0080ad&hm=f57eccf5718f0200b9db1d5e2b0a969ef63140c2aab4f96c2b78ec0d41c24dd8&
+
+[2026-05-05T02:53:44.665000+00:00] avidfuturist (id=1501054263529574521)
+    Shout out to <@237395641129631744>! Our latest power and new core contributor!
+
+[2026-05-05T03:08:47.442000+00:00] avidfuturist (id=1501058050050621511)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1501058048842534952/image.png?ex=6a01f0ff&is=6a009f7f&hm=0c61146bf70238188b40315f3bbddf9cbd24d7c42a2b846ae62de9bedbaba885&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1501058049228538038/image.png?ex=6a01f0ff&is=6a009f7f&hm=bd36dbcf2bee29154592ca962adde87dd44948016501b44a152cad8ec6270477&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1501058049610354908/image.png?ex=6a01f0ff&is=6a009f7f&hm=6ff9ca329882a5af14a1c2b3df6e7b7b1d31aedd39f4c92e24d3647289859438&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1501058049887174829/image.png?ex=6a01f0ff&is=6a009f7f&hm=538b32fab16ba820c13d0ec148e14e9ae8dec34d5511d2d5870874779b00610a&
+
+[2026-05-05T03:09:23.415000+00:00] avidfuturist (id=1501058200932454401)
+    He implemented both the new log section, plugins system, system status, and the Hermes dashboard link, all of this above!
+
+[2026-05-05T10:01:29.494000+00:00] dulli77 (id=1501161909624373389)
+    Hey thanks for this. Love what you're doing. I got an issue where I changed API keys for one provider, and restarted Hermes agent, gateways and Hermes webui. But only the Hermes webui isn't working. All chats don't return any reply while things are working normally in Hermes CLI and my gateways. How do I resolve this
+
+[2026-05-05T10:04:55.567000+00:00] dulli77 (id=1501162773957185536)
+    Okay starting a new chat helps..
+
+[2026-05-05T10:32:49.652000+00:00] _123321_ (id=1501169795578466376)
+    can we have two VPS talk to one another somehow ? has anyone explored the idea of having a webui that orchestrates multiple VPS each with multiple chats running ? I'd like to advance on that, not too sure where to pick up yet
+
+[2026-05-05T11:28:17.737000+00:00] dulli77 (id=1501183754578690109)
+    This is so problematic
+    [attachment] Screenshot_2026-05-05-19-27-41-131_com.android.chrome-edit.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1501183754201469100/Screenshot_2026-05-05-19-27-41-131_com.android.chrome-edit.jpg?ex=6a01bd51&is=6a006bd1&hm=2f69f6f31444719bc4dc8085270249441ec9958f0038edd3598329b4cee0fcfa&
+
+[2026-05-05T11:35:08.442000+00:00] dulli77 (id=1501185477200445531)
+    Nevermind fixed the issue in logs. User error
+    [reply to dulli77 msg=1501183754578690109]
+
+[2026-05-05T12:07:20.500000+00:00] lemz42 (id=1501193580838912100)
+    I stumbled on this from doing a discord search looking for something with a claude-like ui to work from for hermes and have been using a couple of days now and have to say I'm **very impressed.** really great work, its so much more productive than using discord/tg and its just a nicer feel than working out of cli. one thing I loved about claude was the artifact preview window and now I have that through this, great work!
+
+[2026-05-05T12:44:59.023000+00:00] lemz42 (id=1501203053770965033)
+    as a serial multi tasker, was wondering if there's any way around this or is it just a technical limitation with multi profiles? I have a few agents for their specialisations and I like to bounce around as I'm doing stuff in parallel and no idea if this is too big an ask or not but just wanted to throw it out there.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1501203053276041246/image.png?ex=6a01cf4a&is=6a007dca&hm=a15c3512aa0db797df60e3c4579497f3e9f989d2bb04f797471d034159a48f0e&
+
+[2026-05-05T13:04:52.221000+00:00] dulli77 (id=1501208058406240317)
+    Have you tried kanban.
+    [reply to lemz42 msg=1501203053770965033]
+
+[2026-05-05T13:24:30.344000+00:00] lemz42 (id=1501212999812124872)
+    yeah and maybe user error but isn't quite hitting what I want tbh. the agent to agent dispatches are imperfect and it doesn't lead to any debate or back and forth. that is probably the single thing I miss from openclaw because of the sessions_send function I could have one agent propose a plan, send to another, they review and critique it and send back adjustments before actually building vs just blindly building based on the plan
+    
+    but if I just act as the dispatcher, then I can run sessions in parallel and I realised I can actually use different browser profiles to have different instances of the webui open and I can use different profiles then, which is nice.
+    [reply to dulli77 msg=1501208058406240317]
+
+[2026-05-05T14:34:18.507000+00:00] dulli77 (id=1501230566241075483)
+    Oh you mean more like a loop.
+    [reply to lemz42 msg=1501212999812124872]
+
+[2026-05-05T14:59:01.720000+00:00] lemz42 (id=1501236787287425095)
+    Yeah otherwise I just prefer to have concurrent sessions I'm promoting myself
+    [reply to dulli77 msg=1501230566241075483]
+
+[2026-05-05T15:18:24.694000+00:00] avidfuturist (id=1501241665153929277)
+    Hey, thanks for trying out UI! Just to confirm, all good on your end re that issue?
+    [reply to dulli77 msg=1501185477200445531]
+
+[2026-05-05T15:19:18.666000+00:00] avidfuturist (id=1501241891528642862)
+    💯 Glad to hear that, yes that’s exactly what we were going for and this works great on mobile via Tailscale as well!
+    [reply to lemz42 msg=1501193580838912100]
+
+[2026-05-05T15:20:22.565000+00:00] avidfuturist (id=1501242159540469760)
+    Cool idea! Outside the scope of the webUI to invent that but if Hermes adds support for this, we’d pull it in! Right now I have the agents talk to each other via discord
+    [reply to _123321_ msg=1501169795578466376]
+
+[2026-05-05T15:21:20.831000+00:00] avidfuturist (id=1501242403925786674)
+    Definitely in the plans to add profile concurrency switching! It’s a few technical limitations I hope we are able to resolve soon
+    [reply to lemz42 msg=1501203053770965033]
+
+[2026-05-05T15:21:59.911000+00:00] avidfuturist (id=1501242567839453245)
+    Thanks everyone for the feedback! 🙏
+
+[2026-05-05T15:28:56.709000+00:00] lemz42 (id=1501244316016705547)
+    Mind sharing how you manage to keep good flow between the agents? 
+    
+    They loop easily but I found if I made them only respond to mentions, they'd forget to use the @ sometimes
+    [reply to avidfuturist msg=1501242159540469760]
+
+[2026-05-05T15:29:58.742000+00:00] avidfuturist (id=1501244576201969674)
+    I do it using a skill protocol that I spent a lot of time developing with guidelines to make them
+    operate more like coworkers. The flow is managed by that. It’s too specific to share at the moment. But I’ve thought about open sourcing in the future.
+    [reply to lemz42 msg=1501244316016705547]
+
+[2026-05-05T17:18:42.583000+00:00] avidfuturist (id=1501271939174633562)
+    See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+
+[2026-05-06T03:00:27.485000+00:00] dulli77 (id=1501418340944576602)
+    thanks for your reply. yeah im still facing issues with webui detecting custom providers. 
+    
+    Edit: its working now. sorry.
+    [reply to avidfuturist msg=1501241665153929277]
+
+[2026-05-06T06:31:18.085000+00:00] avidfuturist (id=1501471401406759012)
+    Glad to hear that!
+    [reply to dulli77 msg=1501418340944576602]
+
+[2026-05-06T20:33:57.674000+00:00] avidfuturist (id=1501683463693013023)
+    🚀 Tons of updates recently, not just new features but significant reliability improvements, as well as concurrency (profile switching during tasks!) cc <@460475301101699092> - appreciate any reports of any issues that you run into as you're using the latest version of the web or macOS apps!
+    
+    See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+
+[2026-05-07T05:59:33.753000+00:00] lemz42 (id=1501825801925169202)
+    awesome, love the speedy updates thanks!
+    [reply to avidfuturist msg=1501683463693013023]
+
+[2026-05-07T06:55:19.956000+00:00] fleety13 (id=1501839836917661816)
+    That was an easy install.  I'm still orientating myself & trying to figure out a workflow.  The 'project' area above sessions and under the chat box still is a bit ambiguous, is it a tagging system to group semantically linked chats over time, or something else?
+
+[2026-05-07T08:27:17.815000+00:00] deor42 (id=1501862980495736912)
+    Press the + to add your own project tag, then click the 3 dots at the end of a chat to add it to a project.
+    Then you can click each tag at the top to filter it.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1501862980219043871/image.png?ex=6a0192e5&is=6a004165&hm=6a79299db24a619b9448da7d07961bcae0ee7479d2c5aec41548a2317e1aee06&
+    [reply to fleety13 msg=1501839836917661816]
+
+[2026-05-07T08:33:38.907000+00:00] thienmathanquan (id=1501864578911305739)
+    The latest one have some sync problem with Kanban (dont know if anyone report it yet) 😄
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1501864578659782758/image.png?ex=6a019462&is=6a0042e2&hm=3b1c1aaebdacef704c7e18fac32d176de79bab1093eeccf9d0f53e424b50c08e&
+
+[2026-05-07T11:02:37.865000+00:00] sepo100 (id=1501902071618605106)
+    Are you planning to make windows version? If not do you know if there is a such plan ?
+
+[2026-05-07T16:30:41.934000+00:00] avidfuturist (id=1501984632588206282)
+    You need a Kanban board to be setup first and then it should work, but I’ll take a look thanks!
+    [reply to thienmathanquan msg=1501864578911305739]
+
+[2026-05-07T16:31:12.623000+00:00] avidfuturist (id=1501984761307070667)
+    Windows version definitely planned! You can use the webUI today with windows WSL as well
+    [reply to sepo100 msg=1501902071618605106]
+
+[2026-05-07T16:35:40.027000+00:00] thienmathanquan (id=1501985882880606329)
+    Yes i am reporting it because i have been using kanban before open the web ui (and update web ui). Maybe i will try to restart web ui to see if it refresh
+    [reply to avidfuturist msg=1501984632588206282]
+
+[2026-05-07T16:36:27.225000+00:00] avidfuturist (id=1501986080843501681)
+    Ah okay I see, I’ll look into fixing right now, thanks for the report!
+    [reply to thienmathanquan msg=1501985882880606329]
+
+[2026-05-07T19:15:40.097000+00:00] avidfuturist (id=1502026148492611605)
+    <@400303290174144512> could you download the latest version in settings -> system or by git pull, restart the app server and hard refresh and let me know if Kanban shows up as expected now?
+    [reply to thienmathanquan msg=1501985882880606329]
+
+[2026-05-07T19:15:59.108000+00:00] avidfuturist (id=1502026228230520994)
+    Should be 0.51.21 in system settings at the top
+
+[2026-05-07T19:16:33.309000+00:00] avidfuturist (id=1502026371679916213)
+    If not can you send me more details via DM or here. I want to chase down the bug and get it working for you!
+
+[2026-05-08T03:44:55.183000+00:00] fleety13 (id=1502154305812168795)
+    I hit a consistant splinter due to the way my instance is configured, but i think understanding how i solved it my be of value. 
+    TLDR;  deepseek-v4-flash 1M context.  Webgui thought it was 256K (default)  I use a context mananger plugin (LCM)  and have it configured to compress at a value that makes sense for a 1M context model, but causes failure if 256K is assumed.  
+    I've got it laid out in detail in a doc for you to look at.
+    [attachment] webui-context-bug-report.md https://cdn.discordapp.com/attachments/1493017427724992612/1502154305564708874/webui-context-bug-report.md?ex=6a01f977&is=6a00a7f7&hm=e728057b9cda5ddb1cc5c49a73e73af75b63787151911ab2a5b4381347164ca9&
+
+[2026-05-08T10:57:36.103000+00:00] lemz42 (id=1502263193802641499)
+    hey not sure if this was a user error or not (I'm not a dev so just going with what my agent says) but I think maybe a bug with user profiles. I had some context bleed between 2 agents and asked for a breakdown on the root cause. I did a local patch to hopefully fix it locally for me but hopefully this screenshot helps you check and verify the issue
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1502263193404313703/image.png?ex=6a01b620&is=6a0064a0&hm=882237fc45de161b8a5085fe55d36c87181d00d2951361cab21c2c741933f37b&
+    [reply to avidfuturist msg=1501683463693013023]
+
+[2026-05-08T13:58:07.046000+00:00] avidfuturist (id=1502308622070452224)
+    Thanks will capture and fix today
+    [reply to fleety13 msg=1502154305812168795]
+
+[2026-05-08T13:58:11.895000+00:00] avidfuturist (id=1502308642408628264)
+    Thanks for the report, will fix!
+    [reply to fleety13 msg=1502154305812168795]
+
+[2026-05-09T19:00:33.836000+00:00] avidfuturist (id=1502747123089801396)
+    <@499261414033326081> <@460475301101699092> I believe I’ve pushed fixes for both issues. Can you confirm?
+
+[2026-05-09T19:00:51.116000+00:00] avidfuturist (id=1502747195567509534)
+    Is the Kanban working better now? Pushed a bunch of significant updates to it
+    [reply to thienmathanquan msg=1501985882880606329]
+
+[2026-05-09T19:01:13.771000+00:00] avidfuturist (id=1502747290589204550)
+    Newcomers: See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+
+[2026-05-09T22:15:01.458000+00:00] avidfuturist (id=1502796060643299368)
+    I am looking for additional regular testers to try out the new releases or sometimes alpha versions when they can - and report issues, DM me if you might be able to help out 🙏
+
+[2026-05-10T03:59:46.723000+00:00] fleety13 (id=1502882820933156864)
+    I pulled the commit and the fix is rock solid.  A lot more robust and elegant than the shim my agent jammed in to keep us working 👍 <:richxi:1151275508475117648> 
+    
+    I pushed work through a Kanban board 5 or 6 times originating from webui but didn't visually track board population and handoff.
+    [reply to avidfuturist msg=1502747195567509534]
+
+[2026-05-10T04:00:35.598000+00:00] avidfuturist (id=1502883025929769091)
+    Glad to hear it, thanks for reporting back!
+    [reply to fleety13 msg=1502882820933156864]
+
+[2026-05-10T13:15:20.542000+00:00] charanis (id=1503022633103392808)
+    I think this one beats hermes workspace by far:
+    - More clear agent output (able to expand tools and reasoning blocks)
+    - Actually displays markdown in chat window, so the output is more readable for human
+    - More reliable context reading
+    - CLI commands seems to work fine (/new /clear)
+    
+    I forked it and added following:
+    - Agent Personas are editable from UI
+    - Memory is editable for each agent persona separately (important for new kanban)
+
+[2026-05-10T16:16:37.609000+00:00] avidfuturist (id=1503068254829285536)
+    Glad to hear you liked using it so far! 🙏
+    [reply to charanis msg=1503022633103392808]
+
+[2026-05-10T16:22:55.438000+00:00] will_e3848 (id=1503069839558967366)
+    Looks great, does this work on Mac only, or windows as well? Thanks.
+
+[2026-05-10T16:39:36.650000+00:00] charanis (id=1503074038946332874)
+    it works on windows the same way hermes works on windows (WSL or WSL + Docker)
+    [reply to will_e3848 msg=1503069839558967366]
+
+[2026-05-10T16:39:56.753000+00:00] charanis (id=1503074123264430130)
+    but I am able to connect to the dashboard/workspace from my windows browser
+
+[2026-05-10T16:41:56.153000+00:00] avidfuturist (id=1503074624064196669)
+    Yep, while there is a separate macOS swift app wrapper we built - the core WebUI works on Linux and Windows as well! I run it on my VPS as well
+    [reply to will_e3848 msg=1503069839558967366]
+
+[2026-05-10T16:42:28.999000+00:00] avidfuturist (id=1503074761830433031)
+    Newcomers: See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+
+[2026-05-10T16:43:06.919000+00:00] will_e3848 (id=1503074920878309551)
+    Thanks guys, much appreciated.
+
+[2026-05-10T16:50:34.303000+00:00] deor42 (id=1503076797342810122)
+    I run Hermes and WebUi on a local VM. Works great through the browser. Webui makes it really useful and accessible. Add Tailscale if you want remote access from your phone too!
+    [reply to will_e3848 msg=1503069839558967366]
+

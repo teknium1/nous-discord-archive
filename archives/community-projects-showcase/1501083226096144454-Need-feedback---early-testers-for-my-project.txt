@@ -1,0 +1,12 @@
+# Thread 'Need feedback / early testers for my project' in forum #community-projects-showcase
+# thread_id=1501083226096144454 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:22.737110+00:00
+
+[2026-05-05T04:48:49.879000+00:00] arihantk (id=1501083226096144454)
+    hey everyone — i’ve been working on a way for AI agents like Hermes to create full books, and I’d love for folks here to try it out.
+    
+    example book made by agent: https://www.tinyshelf.ai/book/city-portraits-toronto. you can follow instructions on tinyshelf.ai
+    
+    feedback, bugs, weird outputs, and ideas are all very welcome 🙂
+    [attachment] cover.png https://cdn.discordapp.com/attachments/1501083226096144454/1501083542149402644/cover.png?ex=6a0208bd&is=6a00b73d&hm=a520040390af052849054a6244dc35513e85684b9adba5c350004c9c9c11db7e&
+

@@ -1,0 +1,39 @@
+# Thread '🏛️ Hermes Gate - A terminal TUI to manage remote AI Agent sessions without raw SSH' in forum #community-projects-showcase
+# thread_id=1495353005367758898 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:57.316854+00:00
+
+[2026-04-19T09:18:58.795000+00:00] lehao_82772 (id=1495353005367758898)
+    Terminal TUI for managing remote Hermes Agent sessions with auto-reconnect, detach support, and zero config.
+    https://github.com/LehaoLin/hermes-gate
+    
+    "I love watching Hermes Agent work through a TUI — but mine runs on a remote cloud server, and my local network isn't always stable. When the connection drops mid-task, I have no idea if it's still running or already dead. An interrupted task means hours of wasted effort. Sure, I could manage it over raw tmux — but that's just typing the same boilerplate commands over and over. More time lost."
+    
+    Why Hermes Gate?
+    Lifecycle clarification: Hermes Gate is a temporary local client. When you quit the TUI, the Docker container stops. Your remote tmux / Hermes Agent sessions on the server are not affected — they keep running. Just run ./run.sh again to reconnect. Nothing is lost except the local container state.
+    
+    Full TUI Experience — Browse servers, manage sessions, view live Hermes Agent output, and send prompts, all from an interactive terminal UI built with Textual. No raw SSH commands to remember.
+    Network Status Monitoring — Real-time latency monitoring with TCP-level probing. Connection status is displayed in the TUI so you know when the remote server is reachable. Note: if your SSH session drops, you will need to re-enter the session manually.
+    Session Persistence via tmux — Sessions run inside remote tmux, so your remote processes keep running even if you close Hermes Gate. However, note that the Docker container stops on TUI exit — run ./run.sh again to reattach.
+    Multi-Server, Multi-Session — Switch between servers and sessions instantly. Each session is independently tracked and managed.
+    One Command Start — ./run.sh builds, starts, and drops you into the TUI. Requires Docker and an SSH key in ~/.ssh/ (see Prerequisites).
+    
+    See in GitHub link: https://github.com/LehaoLin/hermes-gate
+    Welcome stars ⭐, issues 📝 and pull requests 🚀!
+    [attachment] hermes-gate.jpg https://cdn.discordapp.com/attachments/1495353005367758898/1495353005661229117/hermes-gate.jpg?ex=6a019f02&is=6a004d82&hm=622fc93deccffe909469aed25d153d9d3a0ea00351319100784d232830c6c666&
+    [embed] GitHub - LehaoLin/hermes-gate: 🏛️ Hermes Gate — Terminal TUI... https://github.com/LehaoLin/hermes-gate
+
+[2026-04-19T15:34:18.333000+00:00] amazon1148 (id=1495447459156066314)
+    Very cool. If you are on a mac check out CMUX if you support multiple nodes.
+
+[2026-04-19T17:24:19.198000+00:00] ricofang0919 (id=1495475145190543530)
+    Great feature. I’ve already started using the agent through Hermes Gate, it has made remote SSH management feel incredibly smooth. Looking forward to future updates~
+
+[2026-04-19T18:34:28.094000+00:00] lehao_82772 (id=1495492798579871894)
+    That sounds great! We plan to go cross-platform first, then do some macOS-specific optimizations. Hermes agent users already include quite a few people on Windows connecting via native terminals or WSL. Have you tried it yet? It works really well in practice. <:catlick:1151260427645366375>
+    [reply to amazon1148 msg=1495447459156066314]
+
+[2026-04-19T18:37:54.481000+00:00] amazon1148 (id=1495493664229691524)
+    I use CMUX daily on MacOS with multiple local agent terminals with two ssh tmux/ghostly session to two remote linux servers. 
+    
+    There's definitely room to leverage Hermes Agent specific features and that's what I am hoping to leverage here.
+

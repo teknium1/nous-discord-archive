@@ -1,0 +1,41 @@
+# Thread '🔥 Hermes Artifact Preview 🖼️v2.0 : The "Claude Artifacts" experience for any AI agent.' in forum #plugins-skills-and-skins
+# thread_id=1494897933802406021 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:24.199427+00:00
+
+[2026-04-18T03:10:41.279000+00:00] chucksrq (id=1494897933802406021)
+    What is this?
+    
+    Write a prompt. Get a real, working app — not a skeleton, not a toy. A polished, interactive artifact that opens live in a compact browser window the moment it's generated. Edit it inline. Screenshot it. Share it. All in seconds.
+    
+    Perfect for: dashboards, UI components, prototypes, interactive demos, forms, games, data visualizations, landing pages, charts, plugins
+    
+    make a dashboard showing my team stats
+    build a landing page with a contact form
+    show me an interactive map component
+    create a tic-tac-toe game
+    ✨ What's new in v2.0
+    
+    🪽 Hermes Preview — branded compact window with violet accents. No mode clutter, no toggles. Just preview.
+    📐 Auto-fit smart card — the preview shrinks to hug small widgets and charts, expands for full-width websites. No manual resizing. It just knows.
+    ✏️ Inline HTML editor — Code / Split / Preview tabs right in the toolbar. Edit live, see changes in real-time.
+    📸 Screenshot + macOS Share — one click captures to Preview.app with the full system share sheet. Messages, Mail — whatever.
+    ⚡ Zero-latency reload — SSE pushes updates the instant you save. No polling, no waiting, no refresh buttons.
+    🎯 Core features
+    
+    🏗️ Self-contained HTML — one file, no build step, no npm, no dependencies (except Google Fonts)
+    🎨 Modern dark theme — midnight blue + violet accent (#8B5CF6), glassmorphism card, clean typography
+    🖥️ Smart windowing — compact 640px window for widgets, full browser tab for websites. You pick at launch.
+    ⌨️ Keyboard-first — Cmd+Shift+E editor, Cmd+Shift+S save, Cmd+Shift+R refresh
+    📦 Drop-in setup — Python server, one command to start, zero config
+
+[2026-04-20T15:14:59.006000+00:00] markopolo8817 (id=1495804984451792997)
+    How do I download it?
+
+[2026-04-20T20:30:38.694000+00:00] chucksrq (id=1495884423261065347)
+    https://github.com/ChuckSRQ/awesome-hermes-skills/tree/main/artifact-preview
+    [embed] awesome-hermes-skills/artifact-preview at main · ChuckSRQ/awesome-... https://github.com/ChuckSRQ/awesome-hermes-skills/tree/main/artifact-preview
+    [reply to markopolo8817 msg=1495804984451792997]
+
+[2026-04-20T23:28:23.776000+00:00] markopolo8817 (id=1495929155857158216)
+    Thanks!
+

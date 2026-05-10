@@ -1,0 +1,16 @@
+# Thread 'Hermes Settlement Tools' in forum #community-projects-showcase
+# thread_id=1498677938340499558 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:38.224188+00:00
+
+[2026-04-28T13:31:04.590000+00:00] beachbum (id=1498677938340499558)
+    Hey, been experimenting with giving Hermes Agent on-chain identity and settlement capabilities. Built a drop-in toolset that adds 6 tools to the Hermes tool registry — ERC-8004 registration, reputation tracking, Bittensor subnet queries, TAO transfers.
+    
+    One file, copies into tools/, auto-discovers through the registry. No changes to Hermes core.
+    
+     The idea: agents that can prove who they are on-chain, build verifiable reputation from completed tasks, and participate in Bittensor's economic layer. All running against real infrastructure — not mocked.
+    
+      Still early and rough around the edges. Hermes 4 405B calls the tools correctly through the Nous Portal API but the CLI's tool-calling wire format doesn't fully align with Nous models yet (XML vs OpenAI function-calling JSON). Would be interested to hear if this direction is useful.
+    
+      https://github.com/Beach-Bum/hermes-settlement
+    [embed] GitHub - Beach-Bum/hermes-settlement: Reference autonomous agent: H... https://github.com/Beach-Bum/hermes-settlement
+

@@ -1,0 +1,38 @@
+# Thread 'Auto Linter: Autonomous Code Quality for the AI Era (MCP +CLI)' in forum #community-projects-showcase
+# thread_id=1499313919045533746 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:34.031611+00:00
+
+[2026-04-30T07:38:14.206000+00:00] rakaarwaky (id=1499313919045533746)
+    Manual linting is a thing of the past. **Auto Linter** is built for developers and AI agents who prioritize speed without sacrificing code integrity.
+    
+    ### What makes it different:
+    *   **Self-Healing Code:** Automatically applies safe fixes to your codebase without human intervention.
+    *   **Architectural Governance:** Enforces high-level rules like Clean Architecture, Hexagonal, and DDD.
+    *   **Multi-Language Support:** One tool to rule them all — Python, JavaScript, and TypeScript.
+    *   **Security First:** Catch vulnerabilities early with integrated Bandit scanning.
+    
+    ### Choose Your Interface:
+    *   💻 **Advanced CLI:** Fast output optimized for "Vibe Coding" and seamless CI/CD integration.
+    *   🔌 **MCP Server:** Comes with 5 specialized tools to give your AI agents autonomous control over code quality and self-healing fixes.
+    
+    ### Quick Start:
+    ```bash
+    # Install instantly
+    pip install auto-linter
+    
+    # Lint and check governance score via CLI
+    auto-lint check ./src/
+    
+    # Auto-fix safe issues automatically
+    auto-lint fix ./src/
+    ```
+    
+    Stop wasting hours on boilerplate quality checks. Let **Auto Linter** handle the grind.
+    
+    🔗 **GitHub:** https://github.com/rakaarwaky/auto_linter
+    📦 **PyPI:** https://pypi.org/project/auto-linter/
+    
+    #CodeQuality #AIAgents #Python #JavaScript #TypeScript #CleanCode #MCP #CLI
+    [attachment] auto_linter_campaign_poster_1777533538275.png https://cdn.discordapp.com/attachments/1499313919045533746/1499313919313842226/auto_linter_campaign_poster_1777533538275.png?ex=6a023026&is=6a00dea6&hm=d59f36cc8a7d00ed309f524ff88dfccdd82eee86cd3eb70e076b018dc67ed216&
+    [embed] GitHub - rakaarwaky/auto_linter: Autonomous linting and governance ... https://github.com/rakaarwaky/auto_linter
+

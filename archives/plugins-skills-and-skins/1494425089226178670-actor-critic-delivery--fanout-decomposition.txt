@@ -1,0 +1,12 @@
+# Thread 'actor-critic delivery, fanout decomposition' in forum #plugins-skills-and-skins
+# thread_id=1494425089226178670 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:26.981965+00:00
+
+[2026-04-16T19:51:46.347000+00:00] jimn235 (id=1494425089226178670)
+    /deliver - specify release criterion, then check coder's work.
+    
+    /fanout - decompose a larger problem into sequence of /deliver calls 
+    
+    https://github.com/jnorthrup/hermes-deliver-plugin/
+    [embed] GitHub - jnorthrup/hermes-deliver-plugin: Hermes Agent plugin — /... https://github.com/jnorthrup/hermes-deliver-plugin/
+

@@ -1,0 +1,33 @@
+# Thread 'Recursive Memory Harness - RLM for Agentic Memory, give your Hermes agent superpowers.' in forum #community-projects-showcase
+# thread_id=1485070010505367573 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:11.028633+00:00
+
+[2026-03-22T00:18:01.771000+00:00] starro_82978 (id=1485070010505367573)
+    An agentic harness that constrains models in three main ways:
+    
+    Retrieval must follow a knowledge graph
+    
+    Unresolved queries must recurse (Use recurision to create sub queires when intial results are not sufficient)
+    
+    Each retrieval journey reshapes the graph (it learns from what is used and what isnt)
+    
+    Smashes Mem0 on multi-hop retrieval with 0 infrastrature. Decentealsied and local for sovereignty
+    
+    
+    Now Hermes Agent Compatible: https://github.com/aayoawoyemi/Ori-Mnemos
+    
+    been building an open source decentralized alternative to a lot of the memory systems that try to monetize your built memory. Something that is going to be exponentially more valuable. As agentic procedures continue to improve, we already have platforms where agents are able to trade knowledge between each other.
+    [embed] GitHub - aayoawoyemi/Ori-Mnemos: Local-first persistent agentic mem... https://github.com/aayoawoyemi/Ori-Mnemos
+
+[2026-03-22T00:18:45.041000+00:00] starro_82978 (id=1485070191992766505)
+    link to RLM paper: https://arxiv.org/abs/2512.24601
+    Link to Paper Introducing RMH: https://orimnemos.com/rmh/
+    [embed] Recursive Language Models https://arxiv.org/abs/2512.24601
+    [embed] Recursive Memory Harness — Ori Mnemos https://orimnemos.com/rmh/
+
+[2026-03-25T12:58:22.793000+00:00] rick_90120 (id=1486348522537353308)
+    I am very interested in this work @starro -  I would love to discuss it with you.
+
+[2026-03-25T13:09:32.483000+00:00] rick_90120 (id=1486351331420668014)
+    I am unclear whether I have the hermes integration properly working, and  I would like for ori to actually take over where hermes tries to use its more-limited memory support.
+

@@ -1,0 +1,46 @@
+# Thread 'skinwalker -- rich TUI-based skin creator for Hermes, with robust ASCII features' in forum #plugins-skills-and-skins
+# thread_id=1494183970156445767 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:29.901040+00:00
+
+[2026-04-16T03:53:39.081000+00:00] modest.maoist (id=1494183970156445767)
+    # skinwalker — Hermes skin editor, now with working spinner faces
+    
+      Built a full TUI skin editor for Hermes. Covers the entire skin surface: identity, palette, spinner, logo/hero art, AI-assisted generation. Ships today.
+    
+      **what it does**
+      - browse, edit, and activate built-in and custom skins
+      - live terminal-native preview + YAML preview side by side
+      - palette presets, direct color editing, import/export
+      - logo generation via pyfiglet with categorized font browser
+      - image-to-ASCII hero generation via Pillow
+      - spinner preset shelf + wing pair editor
+      - emoji/symbol picker for any text field
+      - AI-assisted branding, spinner, and art generation (via Hermes or any API backend)
+      - undo/redo across the whole session
+    
+      **the bug it also fixes**
+      Hermes has a bug where `waiting_faces`, `thinking_faces`, and `thinking_verbs` in your skin YAML are loaded but never applied — every session uses hardcoded kawaii faces regardless of your skin config. The repo includes a patch script
+       that fixes it locally while the upstream PR is under review.
+    
+      ```zsh
+      zsh patch-hermes.zsh
+    
+      patches display.py, run_agent.py, and cli.py. idempotent, backs up originals.
+    
+      install
+      git clone https://github.com/nosleepcassette/skinwalker
+      cd skinwalker
+      zsh install.zsh --patch-hermes
+    
+      requires uv. drops skinwalker onto your PATH as a standalone command.
+    
+      upstream fix tracked at NousResearch/hermes-agent#10668
+    [attachment] maximize.png https://cdn.discordapp.com/attachments/1494183970156445767/1494183970504577125/maximize.png?ex=6a01fb83&is=6a00aa03&hm=7c60b68e318eb414fd0a85c3888cd0031c30d8e867364a20962abceeb859f1c0&
+    [attachment] skinwalker.png https://cdn.discordapp.com/attachments/1494183970156445767/1494183970823475370/skinwalker.png?ex=6a01fb83&is=6a00aa03&hm=70971cf23a86195d85cae1fa22dbdce7ff5dbf500b0be9e4e3b401720f128dde&
+    [attachment] spinner.png https://cdn.discordapp.com/attachments/1494183970156445767/1494183971125329920/spinner.png?ex=6a01fb83&is=6a00aa03&hm=1d8eca76ee21626ed2da4abe4886a75253100e9ad50428d77d6371dc2e0322aa&
+    [attachment] wizard.png https://cdn.discordapp.com/attachments/1494183970156445767/1494183971443970098/wizard.png?ex=6a01fb83&is=6a00aa03&hm=60c49e9d3fd4330629c271e8d54bbb318920eb01725b19c02e10f69c52d2e846&
+    [embed] GitHub - nosleepcassette/skinwalker: Robust TUI-based Hermes Agent ... https://github.com/nosleepcassette/skinwalker
+
+[2026-04-22T22:09:25.734000+00:00] eggressive (id=1496634058799710378)
+    This looks good. But I am seeing to much dependence on hermes_constants.get_hermes_home and hermes_cli.skin_engine imports. Isn't the risk to break high if there is a refactor of those internal modules?
+

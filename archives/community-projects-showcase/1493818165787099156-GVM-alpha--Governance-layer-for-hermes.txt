@@ -1,0 +1,20 @@
+# Thread 'GVM alpha: Governance layer for hermes' in forum #community-projects-showcase
+# thread_id=1493818165787099156 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:05.999563+00:00
+
+[2026-04-15T03:40:04.523000+00:00] gimgyubin0855 (id=1493818165787099156)
+    Hello everyone, I'm really glad to show GVM: a runtime governance layer for Hermes Agent — E2E test pass, 0 false blocks
+    I've been running Hermes in ec2 and it works great. But there's always same anxiety, what if it does it shouldn't? 
+    
+    So I built a governance runtime that restricts what the agent can actually do. You define a policy (allowed endpoints, methods, payload patterns), and the agent cannot reach anything outside that policy. It's not a suggestion to the LLM — it's kernel-level enforcement that the agent can't override or bypass.
+    
+    Ran the same E2E test pipeline I used for Hermes passed cleanly.(on EC2)
+    
+    The agent runs inside a Linux sandbox (namespace + seccomp isolation), so it can't circumvent the governance layer even by spawning subprocesses or making raw HTTP calls. Single Rust binary, nothing to configure besides a TOML policy file.
+    GitHub: https://github.com/skwuwu/Analemma-GVM
+    Curious how others running Hermes long-term handle this — are you relying on tool allowlists alone, or do you have network-level enforcement? Welcome for feedbacks!
+    [embed] GitHub - skwuwu/Analemma-GVM: A governance runtime for AI agents, b... https://github.com/skwuwu/Analemma-GVM
+
+[2026-04-15T04:12:46.897000+00:00] gwyntel (id=1493826396580216872)
+    Wow, I really like this model of giving it the least permission to move forward with a task. Very smart
+

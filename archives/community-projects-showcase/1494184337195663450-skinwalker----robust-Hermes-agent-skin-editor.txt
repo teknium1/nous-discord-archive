@@ -1,0 +1,137 @@
+# Thread 'skinwalker -- robust Hermes agent skin editor' in forum #community-projects-showcase
+# thread_id=1494184337195663450 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:04.686275+00:00
+
+[2026-04-16T03:55:06.590000+00:00] modest.maoist (id=1494184337195663450)
+    # skinwalker — Hermes skin editor, now with working spinner faces
+    
+      Built a full TUI skin editor for Hermes. Covers the entire skin surface: identity, palette, spinner, logo/hero art, AI-assisted generation. Ships today.
+    
+      **what it does**
+      - browse, edit, and activate built-in and custom skins
+      - live terminal-native preview + YAML preview side by side
+      - palette presets, direct color editing, import/export
+      - logo generation via pyfiglet with categorized font browser
+      - image-to-ASCII hero generation via Pillow
+      - spinner preset shelf + wing pair editor
+      - emoji/symbol picker for any text field
+      - AI-assisted branding, spinner, and art generation (via Hermes or any API backend)
+      - undo/redo across the whole session
+    
+      **the bug it also fixes**
+      Hermes has a bug where `waiting_faces`, `thinking_faces`, and `thinking_verbs` in your skin YAML are loaded but never applied — every session uses hardcoded kawaii faces regardless of your skin config. The repo includes a patch script
+       that fixes it locally while the upstream PR is under review.
+    
+      ```zsh
+      zsh patch-hermes.zsh
+    
+      patches display.py, run_agent.py, and cli.py. idempotent, backs up originals.
+    
+      install
+      git clone https://github.com/nosleepcassette/skinwalker
+      cd skinwalker
+      zsh install.zsh --patch-hermes
+    
+      requires uv. drops skinwalker onto your PATH as a standalone command.
+    
+      upstream fix tracked at NousResearch/hermes-agent#10668
+    [attachment] maximize.png https://cdn.discordapp.com/attachments/1494184337195663450/1494184338743492749/maximize.png?ex=6a01fbda&is=6a00aa5a&hm=4a663b1e56123294a858ef05fd5e16b8cde98d36f93c29e16d4f28f71e8dbded&
+    [attachment] skinwalker.png https://cdn.discordapp.com/attachments/1494184337195663450/1494184339968102541/skinwalker.png?ex=6a01fbdb&is=6a00aa5b&hm=9cd204a62a3e1fe90074df2c200c6b24a0bc802fa135a80cdca2340f046aefdb&
+    [attachment] spinner.png https://cdn.discordapp.com/attachments/1494184337195663450/1494184340933050538/spinner.png?ex=6a01fbdb&is=6a00aa5b&hm=789c4af947480a18a3d448e4986e65a971397e58dc16d39e34217c8932cc099e&
+    [attachment] wizard.png https://cdn.discordapp.com/attachments/1494184337195663450/1494184341637566586/wizard.png?ex=6a01fbdb&is=6a00aa5b&hm=dc765c1fcea99a281a4986815692669c3ac02b0301eb1ef6a2ebc04934b58f4d&
+    [embed] GitHub - nosleepcassette/skinwalker: Robust TUI-based Hermes Agent ... https://github.com/nosleepcassette/skinwalker
+
+[2026-04-16T05:52:02.320000+00:00] pseudoku4 (id=1494213763300065301)
+    is it possible to change the theme so i can see how the text is rendered?
+    
+    for example: I use nord as my theme across the system. And customising without seeing how it looks is kinda a pain 😓
+
+[2026-04-16T06:52:52.569000+00:00] modest.maoist (id=1494229073554051164)
+    not sure i understand, it does render how the UI changes look in real time -- but i do understand that with, ie, the hero image rendered it does cut off the full UI preview so lemme do a quick update to make the preview options a little more robust
+
+[2026-04-16T06:58:26.734000+00:00] gwyntel (id=1494230475143909427)
+    woah a quality of life improvement awn top of cool customizations! i'll play w it!
+
+[2026-04-16T07:09:49.800000+00:00] modest.maoist (id=1494233340130230384)
+    🙂 working on the update now, so maybe hold off about 10 minutes. also for full transparency i didn't use the AI generator to make those hero logos,  i genereated images elsewhere and ran them through an image-to-ascii generator then imported the ascii manually. going to try to build in that image to ascii generator in the next sizable upgrade. make sure to give the thread a react & star the repo for visibility :3
+
+[2026-04-16T07:14:37.469000+00:00] modest.maoist (id=1494234546701467648)
+    <@758219258185908245> fix is live, with nord as a built in colorscheme. logo and hero color aren't changing at the moment so fixing that and it'll be fixed in the next push. also spec'd out the image importer, gonna build that overnight
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494184337195663450/1494234546491887646/image.png?ex=6a022a9d&is=6a00d91d&hm=5bda1b6ae229e9003a1a2be81a1646a50132bef1ab4489478056a730854cc380&
+
+[2026-04-16T07:17:38.442000+00:00] modest.maoist (id=1494235305757114368)
+    logo & hero color changing patch'd and pushed. image-to-ascii lab generator being built now 🙂
+
+[2026-04-16T12:07:00.132000+00:00] pseudoku4 (id=1494308125963194418)
+    Holy shit that was fast, will play with it and report back if I find bugs!
+    [reply to modest.maoist msg=1494234546701467648]
+
+[2026-04-16T13:05:01.384000+00:00] pseudoku4 (id=1494322727392116912)
+    quick question: wanted to setup a batman ascii art  in there but it almost always breaks.
+    
+    I don't think this is a skinwalker issue, more like me issue because i had loaded another similar skin changer and it failed here.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494184337195663450/1494322727061032970/image.png?ex=6a01d3fd&is=6a00827d&hm=428f71be97394de4a53000964e32dcde0720ba31d48c49c59f26e5005036abd1&
+
+[2026-04-16T13:07:15.772000+00:00] pseudoku4 (id=1494323291056509153)
+    also your PR was merged today into hermes, really cool
+
+[2026-04-16T13:09:12.297000+00:00] pseudoku4 (id=1494323779797520485)
+    also HermesBridge doesn't have a property called self.bridge.available (what my hermes says) I'm not too technical
+    
+    but it added a fix 'available' to `HermesBridge` in the hermes.py file and thigs worked
+
+[2026-04-16T13:09:49.760000+00:00] pseudoku4 (id=1494323936928858242)
+    great work, mx cassette. love it!
+
+[2026-04-16T16:43:58.406000+00:00] modest.maoist (id=1494377828056305864)
+    interesting! if you send me the ascii or an image file of the logo I’ll see what I can do. I also built the image to ascii loader last night, gonna test it out now and see how it works before pushing it
+
+[2026-04-16T16:48:47.081000+00:00] modest.maoist (id=1494379038847008789)
+    <@758219258185908245> using the old version of skinwalker & just the ascii import tool from file on stock settings, i got this: from this image. give it a shot and see if it works for you
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494184337195663450/1494379038687494218/image.png?ex=6a02086f&is=6a00b6ef&hm=b36bc3795a7b455e322b515535287afd726de9dec0ea13f0451b0ab7411d44d5&
+    [attachment] batman.png https://cdn.discordapp.com/attachments/1494184337195663450/1494379038913859736/batman.png?ex=6a02086f&is=6a00b6ef&hm=3dfa96a3e58492fea0eb4957199a811ed523e370ee6539a0bb437a0def217cf0&
+
+[2026-04-16T16:51:27.120000+00:00] modest.maoist (id=1494379710099230782)
+    i see where you may have had the issue btw: the alignment part doesn't quite work as intended, ie, rendering it in the center of the field. i'll try to figure that out later but for now if you left justify it it'll render perfect
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494184337195663450/1494379709914550483/image.png?ex=6a02090f&is=6a00b78f&hm=aae7448ed82fb1322cd3183e6177ef22fe90fe1aa967e8f7eb674d7fcae44008&
+
+[2026-04-16T17:17:41.687000+00:00] modest.maoist (id=1494386314311630959)
+    • Release update: imagewalker + Skinwalker art upgrades
+    
+      Shipped a pretty large art/workflow pass today:
+    
+      - Added imagewalker, a standalone local image-to-ASCII app
+      - Put it on-path locally as imagewalker
+      - Added Image Lab integration inside Skinwalker’s Art tab
+      - Added Open Imagewalker from Skinwalker for direct handoff into the standalone tool
+      - Expanded hero/image controls with:
+          - dithering
+          - saturation / hue / grayscale / sepia
+          - space density
+          - better export flow
+      - Added TXT export for generated logos and heroes
+      - Added PNG export for generated logos and heroes
+      - Fixed logo preview workflow so previews render live in the main Preview pane instead of getting mangled inside the narrow input/editor area
+      - Improved logo font browsing with more explicit, human-readable categories
+      - Fixed preview-time left / center / right alignment so logos/heroes line up against the actual UI borders instead of just baking weird whitespace into the art
+    
+      Standalone imagewalker currently supports:
+    
+      - Textual TUI
+      - CLI print mode
+      - 20-400 character widths
+      - multiple gradients
+      - dithering modes
+      - TXT / PNG export
+      - clipboard copy
+    
+      Known limitation
+    
+      - Truly responsive heroes for different tmux pane widths are not solved yet at the Hermes runtime level.
+      - Skinwalker can generate better static art now, but real per-pane reflow likely needs a Hermes-side runtime change.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494184337195663450/1494386313930211458/image.png?ex=6a020f35&is=6a00bdb5&hm=f00b48405ae631219c25866a8708b3aaa5407a721061a614aeb72d440c9d7913&
+
+[2026-04-16T18:39:20.486000+00:00] pseudoku4 (id=1494406861364137994)
+    i'll check it out! thanks a lot for the update. Appreciate the effort <@672785275524612097> !
+    [reply to modest.maoist msg=1494379038847008789]
+

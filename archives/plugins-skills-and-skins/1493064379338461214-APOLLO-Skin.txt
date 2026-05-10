@@ -1,0 +1,31 @@
+# Thread 'APOLLO Skin' in forum #plugins-skills-and-skins
+# thread_id=1493064379338461214 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:33.619655+00:00
+
+[2026-04-13T01:44:47.829000+00:00] avattava (id=1493064379338461214)
+    # Apollo — a Hermes skin
+    
+    Built on two constants: **A4 = 440 Hz** and **φ ≈ 1.618**.
+    
+    The color architecture starts at hue 78.3° (golden, derived from Clay Taylor's 547.533nm central wavelength theory) and rotates through phi:
+    
+    - **78.3°** — primary gold
+    - **φ × 78.3° = 126.6°** — sage green, used for labels
+    - **φ² × 78.3° = 204.9°** — blue-cyan, which Apollo never uses — the god of the sun doesn't touch the sea
+    - **78.3° + 180° = 258.3°** — only appears in errors
+    
+    Every color has a computed contrast ratio against the dark terminal background, derived from an oklch design system.
+    
+    The harmonic theme carries through the spinner — thinking verbs like *"tuning the tetrachord,"* *"listening for the fifth,"* *"plucking A4."* The banner hero is a seven-string lyre (Dorian mode, E4 to E5) with sun rays radiating above it.
+    
+    The Delphic maxims sit underneath: **γνῶθι σαυτόν · μηδὲν ἄγαν** — know thyself, nothing in excess.
+    [attachment] 2026-04-12_18-38-52_Tabby.png https://cdn.discordapp.com/attachments/1493064379338461214/1493064379967733800/2026-04-12_18-38-52_Tabby.png?ex=6a01dd4f&is=6a008bcf&hm=117f71ecd5b187000c1411c36410678649970a9ed1c64a92b72efa0203683221&
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1493064379338461214/1493064380626108476/message.txt?ex=6a01dd50&is=6a008bd0&hm=246aeb35880961382e2853e8fa653df6bb4c6c1600d7eadf7ebab8f41cf57023&
+
+[2026-05-07T12:21:47.138000+00:00] samuel.gudi (id=1501921991513346149)
+    ù
+
+[2026-05-07T12:21:53.047000+00:00] Translator Bot#1043 (id=1501922016297484299)
+    u
+    [reply to samuel.gudi msg=1501921991513346149]
+

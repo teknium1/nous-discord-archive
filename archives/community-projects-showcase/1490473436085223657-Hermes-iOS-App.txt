@@ -1,0 +1,104 @@
+# Thread 'Hermes iOS App' in forum #community-projects-showcase
+# thread_id=1490473436085223657 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:41.689561+00:00
+
+[2026-04-05T22:09:18.820000+00:00] djbuck (id=1490473436085223657)
+    Building a Hermes iOS app + desktop companion to give my agent some extra iOS tools
+    
+    Some features I’ve built already: 
+    
+     -Basic chat interface
+    
+    - Integrated OpenAI’s Realtime STS Voice Model for Voice Mode (live camera, Hermes tool calling, maybe CarPlay or widget next?)
+    
+    - Sensor pipeline for health, location services. Can now ask agent health or location specific questions. “How many steps did I walk yesterday? “What’s a good coffee shop nearby?”
+    
+    - Relay for APN background push notifications
+    
+    Still very much a WIP, but I’ll make the repo public soon when it’s in a state for sharing. Plan to have a little fun with polishing the UI and fixing a few bugs first.
+    
+    Let me know if you any ideas or suggestions 🙂
+    [attachment] IMG_5464.png https://cdn.discordapp.com/attachments/1490473436085223657/1490473436345008341/IMG_5464.png?ex=6a01aace&is=6a00594e&hm=743d3c76c3c40cc1a4454f19268df28715ddd27bcb99fc46d99c572e00058a0a&
+    [attachment] IMG_5463.png https://cdn.discordapp.com/attachments/1490473436085223657/1490473436932214979/IMG_5463.png?ex=6a01aacf&is=6a00594f&hm=e055cb559c340d465a272416c6252a989782c55ca019bb909eb16e5e1cb30bb6&
+
+[2026-04-08T07:23:27.760000+00:00] djbuck (id=1491337667978330213)
+    Hermes iOS App
+
+[2026-04-08T23:33:00.692000+00:00] djbuck (id=1491581662939713727)
+    App is still very much a work in progress, but repo is now public. 
+    
+    Next phase will be polishing the UI and working on a few bugs/performance things.
+    
+    Check it out!
+    
+    https://github.com/dylan-buck/Hermes-iOS
+    [embed] GitHub - dylan-buck/Hermes-iOS: Hermes agents don't have iPhones. N... https://github.com/dylan-buck/Hermes-iOS
+
+[2026-04-09T00:13:31.867000+00:00] oogway8030 (id=1491591860026740829)
+    Is there a testflight app <@1409776012392140831>
+
+[2026-04-09T00:15:44.971000+00:00] djbuck (id=1491592418305376329)
+    no you need to build it with xcode yourself. 
+    
+    because it uses a self-hosted relay, this isn't really an option. 
+    
+    it could be built and distributed with a centrally hosted relay but that would defeat it's purpose.
+    [reply to oogway8030 msg=1491591860026740829]
+
+[2026-04-10T14:01:34.805000+00:00] megabyte0x (id=1492162633237926020)
+    I started building one for myself too today. 
+    
+    guess I would just contribute to yours.
+
+[2026-04-10T14:27:30.113000+00:00] megabyte0x (id=1492169156672487485)
+    I am running my hermes agent on pi how can I connect with it ? I can't build iOS app on pi
+
+[2026-04-10T14:39:07.009000+00:00] djbuck (id=1492172079666041054)
+    you will need to build the ios app with xcode to get it on your phone (mac)
+    
+    i havent tested running the connector cli on windows but should work through wsl2
+    [reply to megabyte0x msg=1492169156672487485]
+
+[2026-04-10T14:52:37.257000+00:00] jodfie (id=1492175478092730459)
+    <@809546003815727117> this looks like more what you want
+
+[2026-04-10T15:29:59.217000+00:00] megabyte0x (id=1492184881554395298)
+    its linux so should work
+    [reply to djbuck msg=1492172079666041054]
+
+[2026-04-10T15:45:32.654000+00:00] djbuck (id=1492188796672938014)
+    ill work on a testflight build so the ios app is easy to run after this next wave of UI improvements
+
+[2026-04-10T16:57:40.292000+00:00] megabyte0x (id=1492206948102307933)
+    awesome!
+    [reply to djbuck msg=1492188796672938014]
+
+[2026-04-11T03:31:52.504000+00:00] freshprince3900 (id=1492366550647177366)
+    Sneak peak of the UI changes you’re thinking of? I’m looking to do build on top of yours but looking to see if I should wait now
+    [reply to djbuck msg=1492188796672938014]
+
+[2026-04-11T03:58:42.777000+00:00] djbuck (id=1492373304621797437)
+    Feel free to fork it and do your own thing but just trying to tidy it up and make it less bland and fix bugs. Then do a TestFlight build.
+    [reply to freshprince3900 msg=1492366550647177366]
+
+[2026-04-11T19:55:41.136000+00:00] amazon1148 (id=1492614134674624694)
+    it would be great for privacy and cost use cases to be able to do inference integration with Google Edge gallery's Gemma 4 models. 
+    
+    Thanks for working on iOS. 
+    
+    Happy to be an early tester.
+
+[2026-04-11T20:42:24.279000+00:00] djbuck (id=1492625891908391054)
+    Looks interesting. I’ll check it out. Looks like another application idea not sure how it fits here
+    [reply to amazon1148 msg=1492614134674624694]
+
+[2026-04-11T20:52:24.216000+00:00] amazon1148 (id=1492628408226807870)
+    Hermes agent is the agent, and can use a remote LLM like the recently announced free LLM endpoints with 0.8.0. But if someone wanted privacy or guaranteed local free on device inference then Gemma 4 could provide it.  Does that make sense or maybe I don't understand correctly?
+
+[2026-04-14T06:01:41.711000+00:00] amazon1148 (id=1493491417711120474)
+    Apparently Google's AIStudio offers free Gemma model usage via a token. That means that the iOS app could talk to a Gemma model via API token. If that works, then a parallel Google Edge Gallery instance of Gemma 4 should be able to talk to Hermes Agent very easily.
+    [reply to amazon1148 msg=1492628408226807870]
+
+[2026-04-14T11:04:53.747000+00:00] kitsunedezuki (id=1493567720640479452)
+    great work !
+

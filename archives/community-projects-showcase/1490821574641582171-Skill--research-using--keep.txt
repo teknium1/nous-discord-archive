@@ -1,0 +1,27 @@
+# Thread 'Skill: research using `keep`' in forum #community-projects-showcase
+# thread_id=1490821574641582171 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:38.025655+00:00
+
+[2026-04-06T21:12:41.520000+00:00] hugh1979 (id=1490821574641582171)
+    Here's an example of how to use `keep` memory to support a research-type workflow.
+    
+    https://github.com/keepnotes-ai/hermes-skills/blob/main/skills/note-taking/keep-research-workflow/SKILL.md
+    
+    This depends on the `keep` memory plugin, which isn't in core, but you can cherry-pick from this PR: https://github.com/NousResearch/hermes-agent/pull/5172 - so assuming you have this running:
+    
+    ```
+    hermes skills tap add keepnotes-ai/hermes-skills
+    
+    hermes skills install keepnotes-ai/hermes-skills/skills/note-taking/keep-research-workflow
+    ```
+    
+    Would love to hear feedback.
+    [embed] hermes-skills/skills/note-taking/keep-research-workflow/SKILL.md at... https://github.com/keepnotes-ai/hermes-skills/blob/main/skills/note-taking/keep-research-workflow/SKILL.md
+    [embed] feat: memory plugin for `keep` by hughpyle · Pull Request #5172 ·... https://github.com/NousResearch/hermes-agent/pull/5172
+
+[2026-04-06T21:13:39.451000+00:00] hugh1979 (id=1490821817622073344)
+    oh - describe the thing, duh.  It's all about capturing/indexing PDFs and other references as part of a research task, and linking them into a not-out-of-control knowledge graph.
+
+[2026-04-07T02:26:03.147000+00:00] hugh1979 (id=1490900434380914790)
+    Is this what Karpathy was posting about earlier?  Hermes with a “graph knowledge index” is a wildly powerful thing.
+

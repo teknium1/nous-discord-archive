@@ -1,0 +1,16 @@
+# Thread 'ClawMem - Advanced memory and context engine ported to Hermes plugin' in forum #plugins-skills-and-skins
+# thread_id=1490072532857127175 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:52.232081+00:00
+
+[2026-04-04T19:36:16.042000+00:00] dre108 (id=1490072532857127175)
+    Originally developed for Claude Code and OpenClaw, now updated for Hermes memory plugin integration. 
+    
+    https://github.com/yoloshii/ClawMem
+    [embed] GitHub - yoloshii/ClawMem: On-device context engine and memory for ... https://github.com/yoloshii/ClawMem
+
+[2026-04-04T19:37:20.214000+00:00] dre108 (id=1490072802013741137)
+    ClawMem - Advanced memory and context engine ported to Hermes plugin
+
+[2026-04-04T19:41:23.812000+00:00] dre108 (id=1490073823737806960)
+    If you have any issues with the complexity, just give your LLM the whole repo context for deep analysis. In practice most of the retrieval (~90%) is fully automated through hooks.
+

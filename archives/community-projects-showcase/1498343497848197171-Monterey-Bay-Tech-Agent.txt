@@ -1,0 +1,10 @@
+# Thread 'Monterey Bay Tech Agent' in forum #community-projects-showcase
+# thread_id=1498343497848197171 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:39.631601+00:00
+
+[2026-04-27T15:22:07.763000+00:00] mattbcool (id=1498343497848197171)
+    https://mattcool.tech/posts/monterey-bay-tech-otterbot-local-ai-agent-for-the-community
+    
+    Here is my Hermes Agent use case running on 16GB mac mini. Appreciate anyone checking it out and offering any feedback. Thank you!
+    [embed] Monterey Bay Tech OtterBot: Local AI Agent for the Community https://mattcool.tech/posts/monterey-bay-tech-otterbot-local-ai-agent-for-the-community
+

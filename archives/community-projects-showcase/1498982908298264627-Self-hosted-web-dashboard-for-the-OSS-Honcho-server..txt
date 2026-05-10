@@ -1,0 +1,10 @@
+# Thread 'Self-hosted web dashboard for the OSS Honcho server.' in forum #community-projects-showcase
+# thread_id=1498982908298264627 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:36.099330+00:00
+
+[2026-04-29T09:42:55.094000+00:00] anubis3207 (id=1498982908298264627)
+    Honcho ships an API-only OSS server. The first-party dashboard ("Honcho Chat") is closed-source and cloud-only. This repo provides a self-hostable inspector for operators running their own Honcho deployment.
+    
+    https://github.com/iuliandita/honcho-dashboard
+    [embed] GitHub - iuliandita/honcho-dashboard https://github.com/iuliandita/honcho-dashboard
+

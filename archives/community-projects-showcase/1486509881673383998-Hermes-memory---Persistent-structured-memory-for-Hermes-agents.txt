@@ -1,0 +1,108 @@
+# Thread 'Hermes-memory - Persistent structured memory for Hermes agents' in forum #community-projects-showcase
+# thread_id=1486509881673383998 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:09.403391+00:00
+
+[2026-03-25T23:39:33.809000+00:00] mibayy (id=1486509881673383998)
+    Problem:
+    After ~30 turns, context compression silently removes older messages.
+    A constraint decided at turn 5 is gone by turn 50.
+    The agent contradicts itself and re-asks questions.
+    
+    **hermes-memory fixes this.**
+    Every constraint, decision, and value is stored in SQLite using a terse typed notation (MEMORY_SPEC).
+    Context injection stays under 180 tokens regardless of session length.
+    Cold facts are retrieved on demand via FTS5.
+    
+    **What it does:**
+    8 MCP tools: write, search, reflect, status, tick, export, purge, optimize
+    Hot/cold architecture with automatic pressure management (merge → archive → push to cold)
+    Scope lifecycle with scopes opening, closing, and reactivating automatically based on session activity
+    Plugin integration with on_session_end hook and /memory slash commands
+    memory_optimize migrates MEMORY.md overflow to the DB automatically
+    
+    52 tests. Zero dependencies. Offline-capable.
+    
+    PyPI: https://pypi.org/project/hermes-memory/
+    Full test : https://github.com/NousResearch/hermes-agent/pull/2692
+    PR : https://github.com/NousResearch/hermes-agent/pull/3093
+    
+    Open to feedback.
+    [embed] feat: add hermes-memory MCP integration (structured persistent memo... https://github.com/NousResearch/hermes-agent/pull/2692
+    [embed] feat(memory): native structured memory — typed SQLite fact store ... https://github.com/NousResearch/hermes-agent/pull/3093
+
+[2026-03-25T23:57:19.647000+00:00] handsdiff (id=1486514352122237030)
+    i built this into my openclaw fork as well, its a good strategy
+
+[2026-03-25T23:57:38.827000+00:00] handsdiff (id=1486514432568725534)
+    why does it need to be an MCP integration? cant you couple it more tightly?
+
+[2026-03-26T00:10:54.055000+00:00] mibayy (id=1486517767996838020)
+    Actually, that’s a very fair point.
+    I initially chose to build it as an MCP integration because it felt safer and less intrusive for people who just wanted to try it without impacting their Hermes setup too much.
+    But after running it for a few days, optimizing it, and seeing that it’s stable and reliable, I agree it probably makes more sense to move toward a tighter integration directly within Hermes.
+    It would simplify the architecture and make the whole system more efficient. working on it now xd (yeah i'm easy to convince)
+    [reply to handsdiff msg=1486514432568725534]
+
+[2026-03-26T00:17:08.986000+00:00] handsdiff (id=1486519340571427097)
+    fwiw i think this architecture is end state for memory
+
+[2026-03-26T00:17:13.060000+00:00] handsdiff (id=1486519357659025498)
+    so nice work
+
+[2026-03-26T00:17:36.996000+00:00] handsdiff (id=1486519458054017177)
+    only thing i'd recommend is a combo of semantic search and grep
+
+[2026-03-26T00:17:44.519000+00:00] mibayy (id=1486519489607630989)
+    thanks a lot, i've been using it and it feels good to have an agent that actually remembers what he does xd
+    [reply to handsdiff msg=1486519357659025498]
+
+[2026-03-26T00:17:59.201000+00:00] handsdiff (id=1486519551188402386)
+    i asked my agent about our convo last week and it brought it up verbatim. gg
+    [reply to mibayy msg=1486519489607630989]
+
+[2026-03-26T00:20:16.816000+00:00] mibayy (id=1486520128387416215)
+    will check that, thanks for the advice !
+    [reply to handsdiff msg=1486519458054017177]
+
+[2026-03-26T00:34:16.888000+00:00] mibayy (id=1486523651905028147)
+    Done - https://github.com/NousResearch/hermes-agent/pull/3093
+    [embed] feat(memory): native structured memory — typed SQLite fact store ... https://github.com/NousResearch/hermes-agent/pull/3093
+
+[2026-03-26T03:12:02.405000+00:00] willard0117 (id=1486563353160581191)
+    So why SQLite? I have been using postgres (software development, not Hermes) since it supports vectors, but I haven’t checked if SQLite supports that too or not.
+    
+     I am curious if what you worked on would work for vectorizing my local files for Hermes to have that context as well?
+    [reply to mibayy msg=1486523651905028147]
+
+[2026-03-26T09:41:24.159000+00:00] mibayy (id=1486661339459092561)
+    SQLite because the whole point is zero infrastructure. No server, no daemon, no credentials — just a file that works anywhere. Postgres requires something running permanently, even locally, which goes against the goal of portability and offline use.
+    For vectors, SQLite doesn’t have native support like pgvector. There are extensions like sqlite-vss or sqlite-vec, but they require shipping C extensions, which breaks the “works everywhere without setup” promise. So if vectors matter, Postgres is honestly the better choice.
+    
+    Indexing local files for Hermes context is a good idea, but it’s a different system. hermes-memory handles structured semantic memory (facts explicitly written by the agent). What you're describing is more of a retrieval layer over a document corpus.
+    The typical approach would be: chunk files, embed them (nomic-embed or similar), store them in a vector DB. Postgres + pgvector if you already use it, or something lighter like Chroma or Qdrant. Then retrieve the closest passages at query time and inject them into the prompt. That’s basically what mcp-codebase-index does for code.
+    
+    My take: don’t try to bolt vectors onto hermes-memory. Keep it focused on structured memory, and build a separate MCP for retrieval. They’ll complement each other naturally.
+    [reply to willard0117 msg=1486563353160581191]
+
+[2026-03-26T15:36:46.172000+00:00] mibayy (id=1486750770463379499)
+    7 days i'm testing it, Hermes is not a old guy with Alzheimer anymore xd
+
+[2026-03-26T15:59:11.841000+00:00] willard0117 (id=1486756414608113775)
+    Super clear. I like that. I was starting to think about bolting on rag for things like having Hermes remember all of the clients I work with, and the kinds of details that vectors help with. We have a database of 12,000 contacts that we’ve worked with, so it’s not a light lift.
+    [reply to mibayy msg=1486661339459092561]
+
+[2026-03-26T16:05:10.175000+00:00] mibayy (id=1486757917570105556)
+    hermes-memory could help but it has to be next level, I'm actually using a very cool MCP that limit the number of tokens sent during queries when it emplies loooooong context, if all your client are in a context then could be useful : https://github.com/Mibayy/mcp-codebase-index
+    The first use for this was coding, but I was able to extend it to all the use I have of hermes, its pretty good and giveme the possibility to work with longer context..
+    
+     Otherwise, second option, I would work with a DB and make sure Hermes knows the structure of it, so he doesn't remember the 12k clients but he knows how to find a specific one using that DB
+    [reply to willard0117 msg=1486756414608113775]
+
+[2026-03-26T16:16:44.911000+00:00] willard0117 (id=1486760831503827044)
+    Oh, I really like that. I have a number of software projects. The 12,000 clients are part of our consulting CRM database and I joined the consulting company two years ago as their first fractional CTO, offering services to the growing customer base. 
+    
+    I’ve just been building out custom apps for large landscaping companies that are doing between 10 and 100M/yr revenue. One of the current ongoing projects is to build out in AI rag system that they can use on top of a managed for them database of data from various systems that they depend on that I have been known to make it difficult for them to access their data.
+    
+    I’ve spun this up as a multitenant rag SaaS app with separate databases per tenant. This looks very good to have!
+    [reply to mibayy msg=1486757917570105556]
+

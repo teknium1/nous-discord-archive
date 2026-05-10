@@ -1,0 +1,37 @@
+# Thread 'Stealth Browsing Stack (local use)' in forum #community-projects-showcase
+# thread_id=1495960852082200759 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:11.412373+00:00
+
+[2026-04-21T07:46:09.525000+00:00] dermo0730 (id=1496054421887385701)
+    What auto research loop did you use
+
+[2026-04-21T11:29:16.619000+00:00] core.agent.ops (id=1496110571429302313)
+    A custom loop that used a version of this:
+    
+    https://github.com/crudagent/cpa-council
+    
+    I scrubbed all the scraping specific code from it. Original idea was running a kaparthy council of experts locally with qwen3.6, whoch it did for the first 50-60 cycles or so, but then I switched to glm-5-turbo. Was running 8 scrapes in parallel. 
+    
+    Ill post the whole system soon if any interest.
+    [reply to dermo0730 msg=1496054421887385701]
+
+[2026-04-21T11:34:30.798000+00:00] core.agent.ops (id=1496111889191538980)
+    Bulk was done with glm-5-turbo, but synthesis was done with glm-5.1.
+    
+    Cost some tokens....
+    [attachment] Screenshot_20260420_195232_Chrome.jpg https://cdn.discordapp.com/attachments/1495960852082200759/1496111888881422377/Screenshot_20260420_195232_Chrome.jpg?ex=6a01bec6&is=6a006d46&hm=9df783034bb84efe95a62e868edabe4f258e11d76a336391943269093d20c1e6&
+
+[2026-04-21T18:12:46.891000+00:00] core.agent.ops (id=1496212116670251252)
+    here is the full loop: https://discord.com/channels/1053877538025386074/1496179102498033778
+
+[2026-04-22T23:58:34.308000+00:00] gwyntel (id=1496661525509701632)
+    Wow! What model?
+
+[2026-04-23T00:43:26.403000+00:00] core.agent.ops (id=1496672816974663690)
+    Any. So far tested with glm-5-turbo + glm-5.1 as well as qwen3.6 35b + glm-5.1. 
+    
+    Should work with any model though, just may take longer for better mutations.
+
+[2026-04-23T00:44:16.827000+00:00] core.agent.ops (id=1496673028468375682)
+    The skill itself is like any other skill though. Should work with any model.
+

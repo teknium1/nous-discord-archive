@@ -1,0 +1,28 @@
+# Thread 'gateway plugin for BoltAI (and other OpenAI API clients) — full markdown + slash commands' in forum #plugins-skills-and-skins
+# thread_id=1502296506735268102 forum_id=1485392832154832906
+# Started 2026-05-10T19:51:59.356322+00:00
+
+[2026-05-08T13:09:58.525000+00:00] dworfd (id=1502296506735268102)
+    I've been using BoltAI v2 with Hermes Agent and hit two annoyances with the official OpenAI-compatible gateway:
+    
+    - Markdown gets flattened — headers, tables, code blocks all come through as plain text
+    - Hermes slash commands (/help, /status, /new, /model, etc.) aren't intercepted, so they get sent to the LLM instead of running locally
+    
+    So I built a small drop-in plugin that fixes both. It's a separate gateway adapter (subclasses the official one, doesn't fork it), runs on its own port, and lives here:
+    
+     https://github.com/Dworf/boltai-hermes-gateway
+    
+    **Install:**
+    
+    `hermes plugins install Dworf/boltai-hermes-gateway --enable`
+    
+    Then in BoltAI just follow the official Hermes setup guide (https://help.boltai.com/en/help/articles/9536908-how-to-use-hermes-agent-in-boltai) but point it at port 8643 instead of 8642. Full markdown renders correctly, slash commands work as expected, streaming is preserved.
+    
+    Should also work with any other OpenAI-compatible client that supports markdown + streaming (TypingMind, OpenWebUI, LibreChat, etc.) — untested though, would love reports.
+    
+    
+    Thanks
+    [attachment] hermes_gateway_boltai_image.png https://cdn.discordapp.com/attachments/1502296506735268102/1502296507041316954/hermes_gateway_boltai_image.png?ex=6a01d526&is=6a0083a6&hm=40bd62924d02da21b7f22a0e41b8f3f0f2b8eef83789836b9b85478cf82fe7a4&
+    [embed] GitHub - Dworf/boltai-hermes-gateway: Hermes Agent gateway plugin f... https://github.com/Dworf/boltai-hermes-gateway
+    [embed] How to use Hermes Agent in BoltAI - BoltAI https://help.boltai.com/en/help/articles/9536908-how-to-use-hermes-agent-in-boltai
+

@@ -1,0 +1,14 @@
+# Thread 'Hermes Web UI' in forum #community-projects-showcase
+# thread_id=1496516421293834321 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:48.213573+00:00
+
+[2026-04-22T14:21:58.767000+00:00] xxxeer (id=1496516421293834321)
+    A full-featured web dashboard for Hermes Agent.
+    Manage AI chat sessions, monitor usage & costs, configure platform channels,
+    schedule cron jobs, browse skills — all from a clean, responsive web interface.
+    
+    https://github.com/EKKOLearnAI/hermes-web-ui
+    [attachment] 1570.PNG https://cdn.discordapp.com/attachments/1496516421293834321/1496516421927043263/1570.PNG?ex=6a01e606&is=6a009486&hm=dc3ee768325c43176d897b19a1f07bbc7170f9b0d1d766014e406ef74118c374&
+    [attachment] 16495.MP4 https://cdn.discordapp.com/attachments/1496516421293834321/1496516422505861220/16495.MP4?ex=6a01e607&is=6a009487&hm=61e0100e25b7c9b931f285712fffdbc9ccfc81cd958a5f75ca5820268a79cf8e&
+    [embed] GitHub - EKKOLearnAI/hermes-web-ui: Web dashboard for Hermes Agent ... https://github.com/EKKOLearnAI/hermes-web-ui
+

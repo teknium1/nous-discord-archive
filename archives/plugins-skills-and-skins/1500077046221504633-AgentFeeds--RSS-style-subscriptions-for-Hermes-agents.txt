@@ -1,0 +1,39 @@
+# Thread 'AgentFeeds: RSS-style subscriptions for Hermes agents' in forum #plugins-skills-and-skins
+# thread_id=1500077046221504633 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:06.517400+00:00
+
+[2026-05-02T10:10:37.903000+00:00] verky5025 (id=1500077046221504633)
+    The idea is simple: agents should not have to re-search, re-fetch, and re-parse the same sources every session. AgentFeeds gives Hermes a lightweight subscription layer for data streams, kind of like RSS but shaped for agents.
+    
+    It can track things like:
+    
+    - RSS/news feeds
+    - GitHub releases
+    - Hacker News
+    - weather
+    - exchange rates
+    - local ops/status checks
+    - private/local providers later, like dashboard or finance state
+    
+    The fetcher writes normalized JSON state under `~/.agentfeeds/state/`, and Hermes can read that state when answering questions instead of doing fresh web/API calls every time.
+    
+    I’m currently dogfooding it with my Hermes dashboard and planning to migrate old dashboard fetch pipelines into AgentFeeds, so dashboard becomes mostly presentation and AgentFeeds owns polling/freshness/state.
+    
+    Repo: `https://github.com/verkyyi/agentfeeds`
+    
+    Would love feedback from anyone building Hermes plugins, MCP-ish data connectors, personal dashboards, or agent memory/context systems. Especially curious what provider types people would actually want.
+
+[2026-05-04T01:04:22.825000+00:00] steezkelly (id=1500664353312080123)
+    this sounds pretty nifty, any updates?
+
+[2026-05-04T10:24:07.787000+00:00] verky5025 (id=1500805218852409459)
+    haha been busy doing final polishing. using it myself rn — honestly built it because i hate waiting on agents to fetch stuff that should've been fetched before i even asked. trying to get more feedback before adding more features or templates. if you give it a try, would love to hear your thoughts
+    [reply to steezkelly msg=1500664353312080123]
+
+[2026-05-04T19:48:43.693000+00:00] steezkelly (id=1500947304700711043)
+    gotcha i'll pass it along to the system, could be nifty to incorporate this into the kanban system somehow
+
+[2026-05-04T20:34:14.793000+00:00] verky5025 (id=1500958759764099113)
+    I haven’t tried the Kanban system yet, but I’ll definitely give it a try.
+    [reply to steezkelly msg=1500947304700711043]
+

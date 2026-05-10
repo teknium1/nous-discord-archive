@@ -1,0 +1,8 @@
+# Thread 'Hermes memory with nexusmemory' in forum #community-projects-showcase
+# thread_id=1493111074189213696 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:14.474570+00:00
+
+[2026-04-13T04:50:20.749000+00:00] .uhren (id=1493111074189213696)
+    https://github.com/Uhrenn/nexus-memory
+    [embed] GitHub - Uhrenn/nexus-memory: Hybrid BM25 + semantic memory for AI ... https://github.com/Uhrenn/nexus-memory
+

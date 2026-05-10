@@ -1,0 +1,10 @@
+# Thread 'My Hermes Skills for PMXT (CCXT for prediction markets)' in forum #plugins-skills-and-skins
+# thread_id=1491860676438921337 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:40.175959+00:00
+
+[2026-04-09T18:01:42.694000+00:00] harrynguyen2107 (id=1491860676438921337)
+    This is my implementation skills for Hermes Agents to allow integrating pmxt. 
+    https://github.com/0xharryriddle/hermes-pmxt
+    [attachment] 255156165.png https://cdn.discordapp.com/attachments/1491860676438921337/1491860679928578268/255156165.png?ex=6a021987&is=6a00c807&hm=4291277b955fa091529381ae288add542cf83dc5e96793d3579ae705ca3e1867&
+    [embed] GitHub - 0xharryriddle/hermes-pmxt: Prediction market integration f... https://github.com/0xharryriddle/hermes-pmxt
+

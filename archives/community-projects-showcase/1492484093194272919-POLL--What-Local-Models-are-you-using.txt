@@ -1,0 +1,368 @@
+# Thread 'POLL: What Local Models are you using?' in forum #community-projects-showcase
+# thread_id=1492484093194272919 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:23.567889+00:00
+
+[2026-04-11T11:18:56.831000+00:00] theogre (id=1492484093194272919)
+    If you are running a local model, what are you running Hermes on?
+
+[2026-04-11T11:19:51.302000+00:00] theogre (id=1492484321661948047)
+    Gemma4-26b  on an M5 Max
+
+[2026-04-11T12:05:14.659000+00:00] doppler2u (id=1492495744249102498)
+    Gemma 4 latest but it can't use any tools
+
+[2026-04-11T12:15:25.401000+00:00] rakaarwaky (id=1492498305886847028)
+    Qwen 9b
+
+[2026-04-11T12:32:42.258000+00:00] gwyntel (id=1492502654780313702)
+    CARNICE GANG
+
+[2026-04-11T12:32:48.684000+00:00] Translator Bot#1043 (id=1492502681732776048)
+    MEAT GANG
+    [reply to gwyntel msg=1492502654780313702]
+
+[2026-04-11T12:39:10.025000+00:00] theogre (id=1492504281193123991)
+    I have been having a ton of tool issues with Gemma4
+    [reply to doppler2u msg=1492495744249102498]
+
+[2026-04-11T18:31:41.975000+00:00] doppler2u (id=1492592998901612644)
+    Any solutions u got
+    [reply to theogre msg=1492504281193123991]
+
+[2026-04-11T19:05:59.697000+00:00] wintermutewintermute (id=1492601629612965969)
+    Nemotron 3 Super on DGX Spark
+
+[2026-04-11T19:39:59.528000+00:00] aezaror (id=1492610185284419844)
+    Qwen 9b or 35b A3B
+
+[2026-04-11T19:53:20.895000+00:00] _fail.safe (id=1492613546461364264)
+    Qwen3.5-35B-A3B-Q6_K_L and MiniMax-M2.5-UD-Q8_K_XL
+
+[2026-04-11T19:56:28.225000+00:00] undifined. (id=1492614332180336730)
+    https://fastflowlm.com/docs/models/qwen/
+    [embed] Qwen · FastFlowLM https://fastflowlm.com/docs/models/qwen/
+
+[2026-04-11T20:12:05.290000+00:00] nucleosynth (id=1492618262515814492)
+    https://huggingface.co/samuelcardillo/Qwen3-Coder-Next-Opus-4.6-Reasoning-Distilled-GGUF
+    [embed] samuelcardillo/Qwen3-Coder-Next-Opus-4.6-Reasoning-Distilled-GGUF ... https://huggingface.co/samuelcardillo/Qwen3-Coder-Next-Opus-4.6-Reasoning-Distilled-GGUF
+
+[2026-04-11T20:37:12.674000+00:00] aezaror (id=1492624584942555199)
+    i tested it and same btw
+    [reply to doppler2u msg=1492495744249102498]
+
+[2026-04-11T20:41:36.839000+00:00] runxc1 (id=1492625692930740446)
+    This seems interesting
+    [reply to nucleosynth msg=1492618262515814492]
+
+[2026-04-11T20:43:03.401000+00:00] nucleosynth (id=1492626055997947944)
+    it’s been good to me so far
+
+[2026-04-11T20:43:07.309000+00:00] runxc1 (id=1492626072389419150)
+    I'm using Qwen 122b and its kind of working but also not ever finishing the task which is semi complicated but something I could build out in a couple days not using an agent.  Just seems to fail
+
+[2026-04-11T20:43:39.894000+00:00] nucleosynth (id=1492626209060688074)
+    This is 2x as fast as 122b
+
+[2026-04-11T20:43:42.099000+00:00] runxc1 (id=1492626218309259405)
+    Whats an example task that it made it through
+    [reply to nucleosynth msg=1492626055997947944]
+
+[2026-04-11T20:44:33.565000+00:00] nucleosynth (id=1492626434173305043)
+    Small evaluation framework for how different models do parsing structured calendar invites from a bunch of different social/work event invites
+
+[2026-04-11T20:46:01.520000+00:00] nucleosynth (id=1492626803083182285)
+    It’s writing a golang reverse proxy right now and I think it made very good progress, can’t really look until later though
+
+[2026-04-11T23:41:34.181000+00:00] theogre (id=1492670980265349312)
+    Looking into changing models. Seems to be pretty common with Gemma4 right now.
+    [reply to doppler2u msg=1492592998901612644]
+
+[2026-04-12T00:27:38.663000+00:00] neopabo (id=1492682575343255655)
+    Currently using Gemma4 when I want something on-device, but mainly use Claude Sonnet
+
+[2026-04-12T00:47:35.005000+00:00] n1ghtfr0st (id=1492687593165291520)
+    gemma4 and nemo3super120b.  I switch back and forth, I don't have a favorite, gemma4 is more rounded but I like how nemo thinks
+
+[2026-04-12T03:21:10.250000+00:00] brutus_prime (id=1492726244704260208)
+    Nemotron 3 Super + Gemma 4 e4b on Spark
+
+[2026-04-12T03:30:20.196000+00:00] jaja0594 (id=1492728551345098812)
+    carnice-moe-35b-a3b  on  rtx 5090
+    
+    `total duration: 19.286549662s
+    load duration: 2.83671177s
+    prompt eval count: 37 token(s)
+    prompt eval duration: 56.456506ms
+    prompt eval rate: 655.37 tokens/s
+    eval count: 2493 token(s)
+    eval duration: 15.72694825s
+    eval rate: 158.52 tokens/s`
+    
+    qwen3.5 31b  on rtx 5090
+    
+    `total duration: 49.533417288s
+    load duration: 6.768326346s
+    prompt eval count: 32 token(s)
+    prompt eval duration: 49.38254ms
+    prompt eval rate: 648.00 tokens/s
+    eval count: 2533 token(s)
+    eval duration: 42.114748225s
+    eval rate: 60.15 tokens/s`
+
+[2026-04-12T03:49:13.887000+00:00] gwyntel (id=1492733306389790740)
+    Carnice series was specifically tuned for Hermes so if you have any issues with Qwen3.5 or it completes something 60% of the time I promise Carnice will do it
+
+[2026-04-12T11:39:01.286000+00:00] wxrrior_v (id=1492851532910301308)
+    Same here, any idea what's the issue? And the responses are noticeably slower (using ollama local api) compared to Nous Portal
+    [reply to doppler2u msg=1492495744249102498]
+
+[2026-04-12T12:10:46.832000+00:00] chfarhan_ (id=1492859525349245150)
+    Using qwen 3.6plus free
+
+[2026-04-13T12:20:35.240000+00:00] theogre (id=1493224381176872992)
+    Now running GLM 4.7 Flash. Marked improvement in tool calling. Gemm4 just isnt built for it. Its meant to run on phones for quick answers for SIRI
+
+[2026-04-13T16:14:16.984000+00:00] .droyster (id=1493283192633954326)
+    gemma 26b unsloth i3 xxs quant on 4060ti. surprisingly fast
+
+[2026-04-13T16:14:52.504000+00:00] .droyster (id=1493283341615501464)
+    I want this exact quant abliterated and fine tuned for hermes
+
+[2026-04-13T17:06:46.810000+00:00] leonis237 (id=1493296403961876522)
+    People can use the DeepSeek API through OpenRouter.
+
+[2026-04-13T17:06:57.027000+00:00] leonis237 (id=1493296446814945480)
+    The cost is also very cheap.
+
+[2026-04-13T17:42:32.703000+00:00] nucleosynth (id=1493305404489465936)
+    what kinda tasks you usually doing?
+    [reply to runxc1 msg=1492626218309259405]
+
+[2026-04-13T17:46:56.110000+00:00] runxc1 (id=1493306509298499804)
+    <@71989443740827648> I'm a track coach and so as an example there is a website with all of the State rankings of individual athletes but you have to pick the division and then the event.  Wanted it to automate that and tell me what all of my kids were ranked.  It took hours, only gave the boys results, left off events.  It'd also get 3-4 events and then ask if it should keep going. Definitely not a time saver.  Takes longer to baby bird it on how to do each little piece
+
+[2026-04-13T19:08:53.956000+00:00] hugo2377 (id=1493327136239648988)
+    free where?
+    [reply to chfarhan_ msg=1492859525349245150]
+
+[2026-04-15T06:56:10.557000+00:00] texbluboy (id=1493867516110438401)
+    Carnice-MoE-35B-A3B-Q5_K_M
+
+[2026-04-15T07:39:36.396000+00:00] chfarhan_ (id=1493878445791510609)
+    qwen ai chat offer you 1 mllion token par day free
+    [reply to hugo2377 msg=1493327136239648988]
+
+[2026-04-15T08:28:58.561000+00:00] _bashell (id=1493890870012018789)
+    With apikey? Can you share de link please
+    [reply to chfarhan_ msg=1493878445791510609]
+
+[2026-04-15T12:33:10.251000+00:00] sliph (id=1493952323653996765)
+    For those using Qwen3.5 models locally, do you disable reasoning?
+
+[2026-04-15T12:50:09.915000+00:00] swagbabyostrich (id=1493956600434786314)
+    im using 27b Q6 and i did not disable reasoning for regular hermes use
+    [reply to sliph msg=1493952323653996765]
+
+[2026-04-15T12:51:12.886000+00:00] swagbabyostrich (id=1493956864554176512)
+    though qwen did kinda screw up and i had to run a dataset through it 4 different times when i was trying to make an wiki with it via hermes generated python script and had its reasoning disabled for that part
+
+[2026-04-15T12:51:54.505000+00:00] swagbabyostrich (id=1493957039116910713)
+    i have never used it without reasoning though so idk what the difference would be
+
+[2026-04-15T13:19:31.656000+00:00] xxbelocxx (id=1493963989711851692)
+    Gemma4-26b locally, ChatGPT-5.4, Claude-Code for frontier model needs.
+
+[2026-04-15T14:45:22.982000+00:00] remi456 (id=1493985595939229808)
+    Gemma4:e4b.  i needed to put the ollama context window to 32k otherwise it get stuck. it can use tool. Still testing hermes as a whole
+
+[2026-04-15T19:45:39.553000+00:00] jeepsnducksnc (id=1494061162914910278)
+    Curious about your ollama settings with gemma.  I'm struggling with getting it to use tools if I dont poke it. Its like a GPT.  Says "I'll do something" and then just doesnt do it.  Does lowering the context window in the Ollama app help-?
+    [reply to remi456 msg=1493985595939229808]
+
+[2026-04-15T19:49:45.226000+00:00] .s0uthpaw (id=1494062193342415038)
+    gang gang
+    [reply to gwyntel msg=1492502654780313702]
+
+[2026-04-15T19:49:50.279000+00:00] Translator Bot#1043 (id=1494062214535970896)
+    once again
+    [reply to .s0uthpaw msg=1494062193342415038]
+
+[2026-04-19T01:50:47.422000+00:00] thadreber (id=1495240214774415403)
+    luffydenolan/Qwen3.6-35B-A3B-APEX-IQuality
+    Quantized with an APEX matrix built from Hermes agent sessions. 
+    Runs Hermes really well
+
+[2026-04-19T19:18:15.690000+00:00] earthcry (id=1495503819516284968)
+    Same here but it eventually gets the job done.
+    [reply to jeepsnducksnc msg=1494061162914910278]
+
+[2026-04-19T19:19:11.081000+00:00] earthcry (id=1495504051842973846)
+    I’m using an m1 Mac studio with 64gb ram with Gemma4 26b running out of ollama. So far so good.
+
+[2026-04-19T19:20:16.819000+00:00] earthcry (id=1495504327567999027)
+    I used a default (detected) context window
+
+[2026-04-20T03:43:14.300000+00:00] soyhenry (id=1495630901097529354)
+    This is interesting! I've been having a decent experience with default qwen 36b
+    
+    To bad there's no carnice q4 mlx version yet
+    [reply to texbluboy msg=1493867516110438401]
+
+[2026-04-20T13:55:53.266000+00:00] nucleosynth (id=1495785079375528127)
+    Qwen3.6 has been quite good to me so far
+
+[2026-04-20T13:58:30.246000+00:00] remi456 (id=1495785737797505159)
+    i find that qwen3.6 just run in circle before finally doing what i asked him to do. I got confused on some simple task but it is quite good at investigating. I always run with /verbose all to see if im losing time.
+
+[2026-04-20T16:56:56.298000+00:00] nucleosynth (id=1495830642233966632)
+    Yeah this is the only issue. It has had much more success actually doing good work on tasks for me than qwen3.5-122b, I think also because the agentic loop is faster
+    [reply to remi456 msg=1495785737797505159]
+
+[2026-04-20T16:57:25.312000+00:00] nucleosynth (id=1495830763927502850)
+    I’ve set presence-penalty and it still loops on tool calls sometimes, especially things like read_file telling it nothing has changed since it last asked lol
+
+[2026-04-20T16:57:55.329000+00:00] nucleosynth (id=1495830889827926206)
+    Might try to patch Hermes so that if a model makes the same tool call five times in a row, and it’s clearly a noop, it prompts the model that it seems stuck
+
+[2026-04-20T16:58:05.765000+00:00] nucleosynth (id=1495830933599682730)
+    Because manually doing that and redirecting usually fixes it
+
+[2026-04-20T17:09:03.944000+00:00] absolutegamer2337 (id=1495833694202761327)
+    qwen3.5:9b I would like to run a larger/better model but I'm limited by VRAM and even this is described as slow at best on my pc
+
+[2026-04-20T17:14:50.448000+00:00] nucleosynth (id=1495835147545612439)
+    are you using the unsloth quants?
+    [reply to absolutegamer2337 msg=1495833694202761327]
+
+[2026-04-20T17:16:30.435000+00:00] absolutegamer2337 (id=1495835566921748521)
+    Couldn't tell you, I don't know much about llms etc, I just pulled it from Ollama and have been using it as is
+    [reply to nucleosynth msg=1495835147545612439]
+
+[2026-04-20T17:16:45.819000+00:00] nucleosynth (id=1495835631446655097)
+    ah ok
+
+[2026-04-20T17:20:58.839000+00:00] ljupco12 (id=1495836692689715371)
+    Qwen3.6-35B-A3B by llama-server on 7900xtx 24gb amd gpu (about to switch from Nemotron-Cascade-2-30B-A3B; both Unsloth 4bit quants)
+
+[2026-04-20T17:23:35.642000+00:00] remi456 (id=1495837350369034260)
+    any setup required for llama.cpp other than following the wiki? and what is so special about unsloth variant?
+
+[2026-04-20T17:24:21.635000+00:00] absolutegamer2337 (id=1495837543277789184)
+    I just googled what unloth variants were and they're smaller, faster versions, someone can correct me if I'm wrong
+    [reply to remi456 msg=1495837350369034260]
+
+[2026-04-20T17:25:16.182000+00:00] nucleosynth (id=1495837772064358531)
+    and more accurate than most other quantizations
+
+[2026-04-20T17:25:31.712000+00:00] nucleosynth (id=1495837837202034779)
+    3-4bit is a really good speed/quality tradeoff
+
+[2026-04-20T18:11:11.229000+00:00] absolutegamer2337 (id=1495849327569015077)
+    I just switched to unsloth:9b Q4 and now I'm getting a context error, able to help?
+    Model qwen-unsloth:9b has a context window of 32,768 tokens, which is below the minimum 64,000 required by Hermes Agent.  Choose a model with at least 64K context, or set model.context_length in config.yaml to override.
+    
+    But I don't see model.context_length anywhere in the config.yaml, where would I add it?
+    [reply to nucleosynth msg=1495837837202034779]
+
+[2026-04-20T18:13:25.238000+00:00] nucleosynth (id=1495849889643364414)
+    how did you start up llama.cpp ?
+
+[2026-04-20T18:20:05.113000+00:00] absolutegamer2337 (id=1495851566840942805)
+    I'm still using Ollama but it's fine now, sorted it
+    [reply to nucleosynth msg=1495849889643364414]
+
+[2026-04-20T18:20:09.398000+00:00] nucleosynth (id=1495851584813400084)
+    ahh kk
+
+[2026-04-20T18:20:14.944000+00:00] Translator Bot#1043 (id=1495851608075141201)
+    Ahh bro
+    [reply to nucleosynth msg=1495851584813400084]
+
+[2026-04-20T19:06:54.291000+00:00] neopabo (id=1495863349387464864)
+    Did you run into issues with context and compaction?
+    [reply to soyhenry msg=1495630901097529354]
+
+[2026-04-20T19:14:54.508000+00:00] soyhenry (id=1495865363563544777)
+    na havent ran into issue
+    i just tried the carnice verison but it doesnt support vision in lmstudio so i dropped it for now
+    [reply to neopabo msg=1495863349387464864]
+
+[2026-04-20T19:48:03.952000+00:00] remi456 (id=1495873707896344786)
+    seems like hermes has problem with llama.cpp.  a few issues on the github
+
+[2026-04-20T19:48:34.300000+00:00] remi456 (id=1495873835185082533)
+    might explain why i get nothing from llama.cpp when set as a provider for hermes
+
+[2026-04-20T20:10:55.401000+00:00] aegisofpaean (id=1495879460170240110)
+    gemma-4-26b-a4b-it, w/ semi-tuned rocm 2xr9700 vllm serving: ```gemma-4-26b-a4b-it: Throughput: 2.95 requests/s, 3394.65 total tokens/s, 377.18 output tokens/s
+    Total num prompt tokens: 1024000
+    Total num output tokens: 128000```
+
+[2026-04-20T23:03:01.008000+00:00] .droyster (id=1495922768905244713)
+    anyone else using the 21b gemma reap? by 0xsero? been workign decent for me
+
+[2026-04-20T23:27:57.309000+00:00] neopabo (id=1495929044846247946)
+    I've been trying out Kimi K 2.6 and I think that's my new candidate for local deployment
+
+[2026-04-20T23:28:08.550000+00:00] neopabo (id=1495929091994423386)
+    Works extremely well
+
+[2026-04-21T10:56:54.543000+00:00] ljupco12 (id=1496102425772167349)
+    What local h/w are you running local K2.6 on? What token/sec do you get for non-trivial context size?
+    [reply to neopabo msg=1495929044846247946]
+
+[2026-04-21T12:35:48.661000+00:00] neopabo (id=1496127315267031091)
+    I was using it on the api, but it's genuinely good enough to replace claude in some cases
+    [reply to ljupco12 msg=1496102425772167349]
+
+[2026-04-21T12:36:57.716000+00:00] neopabo (id=1496127604904693800)
+    Unfortunately I underestimated the model's size, it's going to be really rough trying to run it locally
+
+[2026-04-21T17:08:13.394000+00:00] ufonik88 (id=1496195870046031943)
+    I’m embarrassed to ask, but is it possible to run a local model with 64k context on an i5 10th gen with 8Gb ram? Hermes requires atleast 64k context and I’ve tried modding the files (unsuccessfully). This would be an absolute last resort model for the agent, but I’d like to have a local Ollama model loaded if possible. Doesn’t have to be anything amazing. Just slightly capable for small tasks
+
+[2026-04-21T20:09:39.377000+00:00] neopabo (id=1496241529168199832)
+    nopers
+    [reply to ufonik88 msg=1496195870046031943]
+
+[2026-04-21T20:09:42.244000+00:00] Translator Bot#1043 (id=1496241541193138297)
+    neighbors
+    [reply to neopabo msg=1496241529168199832]
+
+[2026-04-21T20:44:19.632000+00:00] ufonik88 (id=1496250254390202501)
+    Oh well…
+    Thanks for the response
+    [reply to neopabo msg=1496241529168199832]
+
+[2026-04-21T20:47:46.238000+00:00] jleuey (id=1496251120958570527)
+    If you guys didn't know, there is a local models and hardware sub chat under hermes-agent https://discord.com/channels/1053877538025386074/1492640305881809068
+
+[2026-04-21T20:56:22.215000+00:00] neopabo (id=1496253285122707669)
+    Actually I just remembered there's some tiny ass gemma4 models
+    [reply to ufonik88 msg=1496250254390202501]
+
+[2026-04-21T20:56:41.123000+00:00] neopabo (id=1496253364428607670)
+    But they'll do a terrible job at anything
+
+[2026-04-22T05:17:42.017000+00:00] ufonik88 (id=1496379448956551218)
+    Ah well, thanks for the input, friend. Appreciate it
+    [reply to neopabo msg=1496253285122707669]
+
+[2026-04-22T05:19:13.253000+00:00] franci.penov (id=1496379831628333056)
+    gemma4 31B and E2B (as cheap/small model)
+
+[2026-04-22T15:35:30.597000+00:00] .droyster (id=1496534925850185768)
+    anyone try the qwen 3.6 quants yet
+
+[2026-04-22T15:42:14.350000+00:00] saxyjon (id=1496536619313008751)
+    Benchmarking now
+    [reply to .droyster msg=1496534925850185768]
+
+[2026-04-22T15:56:56.910000+00:00] sch0bert (id=1496540321037684786)
+    Has anyone tried MiMo with these token plans? https://platform.xiaomimimo.com/token-plan
+    [embed] Xiaomi MiMo Api Open Platform - Token Plan Global Launch https://platform.xiaomimimo.com/token-plan
+
+[2026-04-22T21:26:15.711000+00:00] nucleosynth (id=1496623195455881266)
+    yes! https://discord.com/channels/1053877538025386074/1492640305881809068/1496268999715983462
+    [reply to .droyster msg=1496534925850185768]
+

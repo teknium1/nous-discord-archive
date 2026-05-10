@@ -1,0 +1,179 @@
+# Thread 'Hermes Control Interface Web-UI' in forum #community-projects-showcase
+# thread_id=1492427034541162517 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:24.682346+00:00
+
+[2026-04-11T07:32:12.988000+00:00] kysiv (id=1492427034541162517)
+    I built a dashboard that makes Hermes config and management much easier.
+    
+    Features:
+    • Browser-based terminal with real PTY
+    • File explorer + inline editor
+    • Agent management: switch profile, start/stop gateway in one click
+    • Realtime log streaming
+    • Token usage analytics with filters
+    • Rate-limited auth + CSRF + CSP
+    • WebSocket real-time updates — no polling, no refresh
+    
+    Designed for single-user local networks or reverse-proxied VPS deployments.
+    
+    https://github.com/xaspx/hermes-control-interface
+    [attachment] Screen_Recording_2026-04-11_021140.mp4 https://cdn.discordapp.com/attachments/1492427034541162517/1492427035237158922/Screen_Recording_2026-04-11_021140.mp4?ex=6a022ebd&is=6a00dd3d&hm=022d0cc1c3964adf2c6602062d162ffcb1d7183c4c77893e07ec9dc1f622a235&
+    [embed] GitHub - xaspx/hermes-control-interface: A self-hosted web dashboar... https://github.com/xaspx/hermes-control-interface
+
+[2026-04-11T23:05:13.573000+00:00] mayuronx (id=1492661834132488354)
+    gave it a go.. works. I would prefer to see some improvements to ux.. namely top nav to access each panel full screen.. want some contribs?
+
+[2026-04-11T23:11:03.586000+00:00] mayuronx (id=1492663302193414304)
+    Sent you a DM with some small bug/ploit
+
+[2026-04-12T06:45:10.239000+00:00] kysiv (id=1492777582939209901)
+    Thank you bro! i just update with you info. really appreciate it. btw im on working on bigger update for it
+
+[2026-04-12T10:48:57.613000+00:00] rakaarwaky (id=1492838934592622612)
+    this is cool 👍  im waiting for  stable release
+
+[2026-04-12T13:10:15.863000+00:00] kysiv (id=1492874494950379600)
+    Thank you! ill release a big updates soon..
+    [reply to rakaarwaky msg=1492838934592622612]
+
+[2026-04-12T21:14:03.187000+00:00] parzival078022 (id=1492996244371411104)
+    kool shite bro!
+
+[2026-04-12T22:54:08.611000+00:00] avidfuturist (id=1493021432945316010)
+    Looks cool!
+
+[2026-04-13T04:39:27.505000+00:00] kysiv (id=1493108334285291552)
+    BIG UPDATE GUYS!
+    
+    i rebuilt the Hermes Control Interface on v3.
+    
+    V3 makes agent config and management actually usable.
+    
+    - Browser terminal with real PTY
+    - File system + inline editing
+    - Agent management: create, delete, switch profile, start/stop gateway in one click
+    - Sessions management: rename, resume, delete sessions interface
+    - Cron scheduler interface
+    - Token usage analytics
+    - Real-time via WebSockets
+    - Rate-limited auth + CSRF + CSP
+    
+    and dark + light mode with theme inspired from hermes agent website.
+    
+    https://github.com/xaspx/hermes-control-interface
+    [attachment] 01-home.png https://cdn.discordapp.com/attachments/1492427034541162517/1493108334579159080/01-home.png?ex=6a02063f&is=6a00b4bf&hm=dcdfe1f8421cb93224d6d5b967a394a4d8e82cc8bca54b3bff914cb4ea4fffa9&
+    [attachment] 02-agents.png https://cdn.discordapp.com/attachments/1492427034541162517/1493108335233208402/02-agents.png?ex=6a02063f&is=6a00b4bf&hm=92a312da058b540ba070c79bd366ed8471970b3a102bce21076c3f411151dda5&
+    [attachment] 03-usage.png https://cdn.discordapp.com/attachments/1492427034541162517/1493108335740977172/03-usage.png?ex=6a02063f&is=6a00b4bf&hm=9d40d717fb5920a926f414550b208ddcd0250be09f69d21997c1b7b46da5b1cf&
+    [attachment] 04-skills.png https://cdn.discordapp.com/attachments/1492427034541162517/1493108336084914228/04-skills.png?ex=6a02063f&is=6a00b4bf&hm=cf6f978a343416d21fc500ecea8f6e9a445bea46fbe24f39af015d5255da16f9&
+    [attachment] 05-maintenance.png https://cdn.discordapp.com/attachments/1492427034541162517/1493108336441426002/05-maintenance.png?ex=6a020640&is=6a00b4c0&hm=90124745000b9e7ff0f568de4d0d81535ce5dc2d3019d4f13c99d87a080b3e37&
+    [attachment] 06-files.png https://cdn.discordapp.com/attachments/1492427034541162517/1493108336982364290/06-files.png?ex=6a020640&is=6a00b4c0&hm=a59b9fc570d064cbf6e60b417a2eea342cdb4edd3612c5eb5d149a1097b999df&
+    [attachment] 07-agent-detail.png https://cdn.discordapp.com/attachments/1492427034541162517/1493108337602986164/07-agent-detail.png?ex=6a020640&is=6a00b4c0&hm=51f8d843fd8fa79ec4a07cbe5840779ff3247abc0e63da173d3df4c3a45f6780&
+    [attachment] 08-cron-tab.png https://cdn.discordapp.com/attachments/1492427034541162517/1493108338421141505/08-cron-tab.png?ex=6a020640&is=6a00b4c0&hm=93123de9cc21577f491c14a98fbdb4e888a884ba2d2a6beb3131d0eec013f49d&
+    [embed] GitHub - xaspx/hermes-control-interface: A self-hosted web dashboar... https://github.com/xaspx/hermes-control-interface
+
+[2026-04-13T04:47:18.575000+00:00] rakaarwaky (id=1493110310096076800)
+    <@625065491714670592> 
+    Well, in the end, everyone has different tastes. The reason I was impressed with the previous UI is because it looks compact and solid. You made it look good with just one page. Without having to switch tabs. This latest version is almost the same as most UI made by other people, only different in style.
+
+[2026-04-13T04:50:54.392000+00:00] kysiv (id=1493111215298183250)
+    Its okay bro, i made this for my needs and now my needs is to have more capabilites on the dashboard. maybe just tried it, u will love it. Anw the v2 is still working and usable. Thanks for the feedback!
+    [reply to rakaarwaky msg=1493110310096076800]
+
+[2026-04-13T04:53:19.346000+00:00] kysiv (id=1493111823279460412)
+    the main reason is i lazy to typing the cli only for resume/rename sessions, create/delete agent, stop/start the gateway, create/run cronjob, so i made the dashboard for myself
+
+[2026-04-13T05:32:59.420000+00:00] stefan171 (id=1493121806033358928)
+    really cool! this totally has the vibe of tui
+
+[2026-04-13T08:03:13.226000+00:00] mayuronx (id=1493159612676050975)
+    I take some credit (blame) for this. I asked about tabs.. I'm a tab guy.. didn't like it all in one.. ADHD triggering lol
+    [reply to rakaarwaky msg=1493110310096076800]
+
+[2026-04-13T08:10:02.103000+00:00] wxrrior_v (id=1493161327630221375)
+    Would this interface be designed to work with OpenClaw as well? I imagine some of us might have both types of agents running and might be nice to have a consolidated view of them
+
+[2026-04-13T10:15:42.402000+00:00] kysiv (id=1493192953936478218)
+    let me know if there is anything to be improve
+    [reply to mayuronx msg=1493159612676050975]
+
+[2026-04-13T10:16:45.615000+00:00] kysiv (id=1493193219071152289)
+    It can, it is opensource so u can modify for your usecase, but for me im stick to the hermes agent, already leave behind the openclaw
+    [reply to wxrrior_v msg=1493161327630221375]
+
+[2026-04-13T10:51:22.760000+00:00] rakaarwaky (id=1493201931248861254)
+    <@625065491714670592>   After really trying it, I think it's pretty good.it works well
+
+[2026-04-13T11:01:14.986000+00:00] kysiv (id=1493204415224610917)
+    Yessir! its just a needed update. Moved from a single page to multiple pages to support the core use case. Im glad u like it.
+    [reply to rakaarwaky msg=1493201931248861254]
+
+[2026-04-13T11:02:13.521000+00:00] rakaarwaky (id=1493204660738199593)
+    makes sense
+
+[2026-04-13T17:41:34.515000+00:00] mayuronx (id=1493305160431304754)
+    ya, sure.. will try it later today
+    [reply to kysiv msg=1493192953936478218]
+
+[2026-04-13T17:57:28.002000+00:00] mayuronx (id=1493309159645642802)
+    Some findings from Hermes.. have a look:
+    
+    | 2 | LOW | install.sh line 55 — unclosed single quote in grep pattern (bash syntax error) | Doesn't affect running server; install script only |
+    | 3 | LOW | verifyPassword() at L1124 is dead code (old env-var auth, never called) | Harmless, can clean up later |
+
+[2026-04-13T19:38:51.908000+00:00] mayuronx (id=1493334677396914306)
+    Love the new look.. great work! Some issues I found.. not sure if its just my machine or an inherent issue
+    
+    If you want.. we can do a remote screen and u can walk me around
+    
+    Quite a few screens have missing data in various tables/columns
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492427034541162517/1493334676780220486/image.png?ex=6a02304b&is=6a00decb&hm=6566b0aef054df910c5bbb1bf41143a6cfbb094c961c66649cd30fd225050237&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492427034541162517/1493334677103054989/image.png?ex=6a02304b&is=6a00decb&hm=e126427ee67509d86e55ce360c5cb7f0a5b8cbdfcba9c78244d91313a2869839&
+
+[2026-04-13T20:59:01.714000+00:00] kysiv (id=1493354851185332306)
+    Thanks for the info, its been updated now and those panels now shows the real data
+    
+    https://github.com/xaspx/hermes-control-interface/releases/tag/v3.1.0
+    [embed] Release v3.1.0 — Skills Hub + Honcho Panel + Gateway Connections ... https://github.com/xaspx/hermes-control-interface/releases/tag/v3.1.0
+    [reply to mayuronx msg=1493334677396914306]
+
+[2026-04-14T08:34:55.203000+00:00] wxrrior_v (id=1493529978011127898)
+    How do you compare this interface with the hermes dashboard in the latest 0.9.0 release? (I have yet to try either)
+
+[2026-04-14T09:33:02.194000+00:00] kysiv (id=1493544603511685241)
+    I think u should try both and find out by yourself., i dont wanna be biased. But my goals is to make the core use case is can be manage on the dashboard, i dont wanna make it bloat too.
+    [reply to wxrrior_v msg=1493529978011127898]
+
+[2026-04-14T14:54:18.722000+00:00] kysiv (id=1493625455129923615)
+    Hermes Control Interface v3.2.0 is here 🚀
+    
+    Added maintenance upgrades:
+    Backup, Import Backup, and HCI Restart buttons from newest Hermes Agent updates, security hardening, a massive Insights speedup (60s+ → 0.65s), non-root user support, log tabs for Agent / Error / Gateway, and terminal flow fixes.
+    
+    https://github.com/xaspx/hermes-control-interface/releases/tag/v3.2.0
+    [attachment] IMG_8176.jpg https://cdn.discordapp.com/attachments/1492427034541162517/1493625455662858260/IMG_8176.jpg?ex=6a01ed9a&is=6a009c1a&hm=6515f0a1853ec540a40e963da3beb457a9ccd5c258c66ae251551b78d3e4b87d&
+    [attachment] IMG_8175.jpg https://cdn.discordapp.com/attachments/1492427034541162517/1493625456002601091/IMG_8175.jpg?ex=6a01ed9a&is=6a009c1a&hm=9fa907c1290cc6f622c6c4662dc0e5b606376f82bb2a78a5dfdb3d4eeb0aebaa&
+    [embed] Release v3.2.0: Security Hardening + Insights Speed Fix · xaspx/he... https://github.com/xaspx/hermes-control-interface/releases/tag/v3.2.0
+
+[2026-04-20T01:00:38.679000+00:00] kysiv (id=1495589983057084457)
+    **Hermes Control Interface** v3.4.0 is here 🔥
+    
+    Chat got a full revamp now powered by Gateway API with real-time SSE streaming, tool call cards, session resume, stop button, and multi-agent support.
+    
+    Security was a big focus too, command injection fixes, CSRF on 21 endpoints, dynamic CORS origins, and a full audit report included.
+    
+    https://github.com/xaspx/hermes-control-interface/releases/tag/v3.4.0
+    [attachment] Screen_Shot_2026-04-19_at_14.36.22.png https://cdn.discordapp.com/attachments/1492427034541162517/1495589983795417260/Screen_Shot_2026-04-19_at_14.36.22.png?ex=6a01d2f6&is=6a008176&hm=6c3fd7b1539892e0cc9de893b8462a0d6316c0d8da7f6f3e4979af694b4080af&
+    [attachment] Screen_Shot_2026-04-19_at_14.36.43.png https://cdn.discordapp.com/attachments/1492427034541162517/1495589984583815230/Screen_Shot_2026-04-19_at_14.36.43.png?ex=6a01d2f7&is=6a008177&hm=a09e1421c53ea9d4f00ac026a52d54f9c9bb244404fa6d030cd83c11eecbc2d8&
+    [embed] Release v3.4.0 — Chat Revamp (CLI → Gateway API) + Security Har... https://github.com/xaspx/hermes-control-interface/releases/tag/v3.4.0
+
+[2026-04-20T03:08:03.554000+00:00] rakaarwaky (id=1495622047986876537)
+    don't you want to add file explorer in the chat tab on the right.
+    [attachment] Screenshot_2026-04-20-10-06-44-616_com.android.chrome.jpg https://cdn.discordapp.com/attachments/1492427034541162517/1495622047517249596/Screenshot_2026-04-20-10-06-44-616_com.android.chrome.jpg?ex=6a01f0d3&is=6a009f53&hm=a1e2a5482548d051f6d6a0af4a3800e9b79ebab79c40219758ed6f8845cf2c25&
+
+[2026-04-20T03:08:45.901000+00:00] rakaarwaky (id=1495622225603330079)
+    so people can navigate files while chatting with Hermes
+
+[2026-04-20T12:28:49.699000+00:00] kysiv (id=1495763170147700836)
+    Well i need to assest it, ill let u know if its on plan or not
+    [reply to rakaarwaky msg=1495622225603330079]
+

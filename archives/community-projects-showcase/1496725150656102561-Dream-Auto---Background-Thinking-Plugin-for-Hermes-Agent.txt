@@ -1,0 +1,226 @@
+# Thread 'Dream Auto - Background Thinking Plugin for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1496725150656102561 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:44.959522+00:00
+
+[2026-04-23T04:11:23.725000+00:00] stefan171 (id=1496725150656102561)
+    I built a plugin that lets Hermes think while you're away.
+    
+    Dream Auto indexes your sessions, grades them for "dream potential," and runs MCTS-powered background reasoning jobs when your machine is idle. The insights get injected into your active context automatically — no disruption, just smarter responses.
+    
+    Key bits:
+    - Error-triggered dreams — tool crashes auto-queue troubleshooting so you don't fix the same bug twice
+    - Resource-aware — only runs when CPU/RAM are free
+    - Zero hardcoded thresholds — the LLM decides what's worth thinking about
+    - Cross-platform — Linux, macOS, WSL
+    
+    Install in 10 seconds:
+    Paste this into your Hermes chat:
+    
+    `Go to https://github.com/StefanIsMe/dream-auto/blob/main/SETUP.md and follow the agent installation steps to install the Dream Auto plugin on this machine.`
+    
+    Hermes clones the repo, installs everything, registers cron jobs, and reports back. Or run python3 install.py manually if you prefer.
+    
+    Repo: https://github.com/StefanIsMe/dream-auto
+    
+    Feedback and PRs welcome.
+    
+    ---
+    
+    I know this is still early and there's more to do — the MCTS engine hits occasional crashes, the queue can back up, and I want to add more insight categories to the dashboard. But I think it's cool, it works, and I wanted to share it with the community rather than polish it in private. If you try it, let me know what breaks and what you'd want it to do.
+    [embed] GitHub - StefanIsMe/dream-auto: Background thinking plugin for Herm... https://github.com/StefanIsMe/dream-auto
+
+[2026-04-27T02:52:14.219000+00:00] stefan171 (id=1498154781246623855)
+    Dream Auto v3 is live.
+    
+    Four days ago it was a v1 prototype with sequential rollouts, basic UCB1, and no protection against dreams that spin forever. Here is what changed.
+    
+    BEFORE: Sequential rollouts.
+    
+    Every MCTS iteration ran one step at a time. Rollout. MetaRAG lookup. Another rollout. Another lookup. A 15-second lookup meant the whole tree waited.
+    
+    AFTER: Parallel everything.
+    
+    MetaRAG lookups and rollouts fire simultaneously. A 20-minute dream now finishes in under 4.
+    
+    BEFORE: Basic UCB1.
+    
+    Standard Monte Carlo selection. Treats a 90% win-rate branch the same as an 80% win-rate branch even when the 80% has been tried three times and the 90% has been tried once.
+    
+    AFTER: UCB1-Tuned with CI-width bonus.
+    
+    Variance-aware. High-variance nodes get exploration space instead of being locked by lucky rollouts. Uncertain nodes get extra nudge, scaled by depth.
+    
+    BEFORE: No staleness detection.
+    
+    Dreams could spin for hours and produce nothing.
+    
+    AFTER: Staleness detection and wallclock killer.
+    
+    20+ minutes with no tree growth and the dream cuts off. Any dream over 30 minutes is killed globally. No orphaned processes.
+    
+    BEFORE: O(n) database queries.
+    
+    Draining the queue meant a full scan. Sorting sessions by potential meant reading every row.
+    
+    AFTER: SQLite indexes on all frequently-queried columns.
+    
+    Queue drains and session sorts are O(log n). The scheduler stays fast as the index grows.
+    
+    BEFORE: Redundant knowledge lookups.
+    
+    Every MetaRAG call re-fetched the same topics.
+    
+    AFTER: Knowledge cache DB.
+    
+    Caches by topic with hashing. Repeated queries hit cache.
+    
+    BEFORE: Every hook fired every turn.
+    
+    Trivial questions triggered the full pipeline.
+    
+    AFTER: Throttle mechanism.
+    
+    Hook fires at most every 5 turns. Simple questions route to fast-path. Complex sessions get full MCTS.
+    
+    Before v3, Dream Auto was background noise. Now it learns from your errors and delivers findings before you ask the next question.
+    
+    Already running Dream Auto? Upgrade: github.com/StefanIsMe/dream-auto
+
+[2026-04-28T02:44:42.966000+00:00] fleety13 (id=1498515276419956766)
+    Thanks for making this Stefan, i've installed and will run it for a week and try and observe any differences. My feedback won't be as valuable as others as this instance has only been up a week and i'm only at the beginning of learning how everything interacts under the hood. 
+    side note: using dream auto along side LCM and Mnemosyne (for context management and memory)
+
+[2026-04-28T03:21:53.777000+00:00] fleety13 (id=1498524633119330327)
+    It seems like there was a small issue when hermes was installing. 
+    It managed to workaround it, but might be worth looking into. 
+    Let me know if i need to slap my agent for making something out of nothing <:wicked:1133962721587630151>
+    [attachment] dream-auto-bug-report.md https://cdn.discordapp.com/attachments/1496725150656102561/1498524633039769611/dream-auto-bug-report.md?ex=6a01f411&is=6a00a291&hm=727af033f0b153d28a0585d7f64fc02788661b1377b64e03094677c423b86136&
+
+[2026-04-29T15:16:08.258000+00:00] wysie_ (id=1499066765706264727)
+    <@275906700828082176> just going through the setup instructions, shouldn't we use the venv for Hermes before running pip/uv pip/python stuff?
+    [reply to stefan171 msg=1498154781246623855]
+
+[2026-04-29T15:38:05.307000+00:00] stefan171 (id=1499072289809891328)
+    i dont know what is the correct way of using venv! im not an actual dev lol im someone who wanted to make this plugin because i think the idea of letting your agent dream will lead to some interesting results! please do let me know if theres something i need to change
+    [reply to wysie_ msg=1499066765706264727]
+
+[2026-04-29T15:40:27.948000+00:00] stefan171 (id=1499072888089608243)
+    this bug was fixed and i found some other bugs. the plugin should actually process the dreams now. i suggest running the setup.md again and hermes should handle upgrading the plugin. btw i havent checked how many api calls it makes now, but it will be a lot.
+    [reply to fleety13 msg=1498524633119330327]
+
+[2026-04-29T15:52:35.830000+00:00] wysie_ (id=1499075941048254546)
+    hermes has it's own python venv so generally i think plugins should be using that. created a PR to update ur setup: https://github.com/StefanIsMe/dream-auto/pull/1
+    [embed] docs: use Hermes venv in setup guide by Wysie · Pull Request #1 ·... https://github.com/StefanIsMe/dream-auto/pull/1
+    [reply to stefan171 msg=1499072289809891328]
+
+[2026-04-30T08:22:36.344000+00:00] stefan171 (id=1499325084861595659)
+    hey wysie! i understand what youre talking about now. i got my hermes to review your PR and it requested one change, please take a look and let me know what you think
+    [reply to wysie_ msg=1499075941048254546]
+
+[2026-04-30T14:42:57.144000+00:00] stefan171 (id=1499420802234191903)
+    <@329427821208535040> i merged your update! thank you
+    [reply to wysie_ msg=1499075941048254546]
+
+[2026-04-30T14:51:52.687000+00:00] stefan171 (id=1499423048464466042)
+    Dream Auto v3.1 — Tests + Smarter Scheduling
+    New: 54 plugin tests, correct cron syntax, Hermes venv Python, and interactive cron scheduling (recommended / custom / auto-detect your quiet hours).
+    
+    Already installed? Re-run the install prompt — Hermes detects your existing install and upgrades automatically:
+    Go to https://github.com/StefanIsMe/dream-auto/blob/main/SETUP.md and follow the setup steps to install Dream Auto v3 on this machine.
+    
+    Repo: https://github.com/StefanIsMe/dream-auto
+
+[2026-04-30T15:28:51.155000+00:00] fleety13 (id=1499432353393672354)
+    I'll update tomorrow, it's been working fine on my end so far.
+
+[2026-05-03T13:34:33.032000+00:00] stefan171 (id=1500490751937609758)
+    DREAM AUTO v3.2 — LIVE
+        
+    Merged 2 cron jobs into 1. Sessions now indexed + graded in one pass every 2h. New 5-dimension grading rubric.
+        
+    Fresh install: "Go to https://github.com/StefanIsMe/dream-auto/blob/main/SETUP.md and follow the setup steps to install Dream Auto v3. Execute all steps. Report what was installed."
+       
+    Upgrade: "Go to https://github.com/StefanIsMe/dream-auto/blob/main/SETUP.md and follow the upgrade steps. Databases are preserved. Report what was updated."
+        
+    Repo: https://github.com/StefanIsMe/dream-auto
+
+[2026-05-03T23:34:59.025000+00:00] fleety13 (id=1500641855904419871)
+    Thanks Stefan, it's cooking on my setup
+    [reply to stefan171 msg=1500490751937609758]
+
+[2026-05-04T00:54:47.228000+00:00] steezkelly (id=1500661939083284591)
+    How does this fit well with the new /goal and kanban board system Hermes-Agent received as an update today?
+
+[2026-05-04T03:08:57.335000+00:00] stefan171 (id=1500695703679143936)
+    i found a few other issues, so its already at 3.4. 
+    
+    the main point of a public release is forcing me to perfect the existing system and making sure it works, instead of adding new features.
+
+[2026-05-05T06:43:33.294000+00:00] 0rigami__ (id=1501112097231081494)
+    Hey <@275906700828082176> 🙂 do you also have many many empty sessions when the dream-pipeline and dream-scheduler works ?
+
+[2026-05-05T08:29:04.401000+00:00] stefan171 (id=1501138651818754079)
+    yup! pushed a fix. please update
+    [reply to 0rigami__ msg=1501112097231081494]
+
+[2026-05-05T09:41:01.633000+00:00] 0rigami__ (id=1501156759602204763)
+    BTW, I made a custom script to bypass the scheduler and the daytime crons, to get it to run only by night. it runs the scheduler and the pipeline only by night, between 1 and 5 AM, to get it to burn tokens on an empty 5h Ollama-cloud session. Will see if it works.
+
+[2026-05-05T15:02:39.682000+00:00] stefan171 (id=1501237701486055424)
+    yes if it works lets merge it.
+    [reply to 0rigami__ msg=1501156759602204763]
+
+[2026-05-08T07:44:46.588000+00:00] pythonoob (id=1502214667739860992)
+    Just tried using it for 2 days. And noticed the token drained (hitting daily limit very quickly). Asked another AI to dig into what’s going on with it and noticed this:
+    
+    anyone had this before? Dream MCTS draining the token because it kept spawning new sub-sessions?
+    [attachment] IMG_5098.png https://cdn.discordapp.com/attachments/1496725150656102561/1502214667458711552/IMG_5098.png?ex=6a0231ae&is=6a00e02e&hm=1f20c6fd7dc02f706e347dcf806cd316743f6f1a293cbb1aeee7381b0a88814b&
+
+[2026-05-08T07:53:11.164000+00:00] stefan171 (id=1502216784084865134)
+    yep it works by spawning instances for the dreaming. MCTS could be better but i didn't think about a budget allocation or 429 backoff strategy tbh i will try to update it this weekend
+    [reply to pythonoob msg=1502214667739860992]
+
+[2026-05-08T07:56:21.421000+00:00] stefan171 (id=1502217582080561183)
+    i could probably migrate the dreams to kanban
+
+[2026-05-08T07:56:49.992000+00:00] stefan171 (id=1502217701916147762)
+    that would be better
+
+[2026-05-08T09:57:47.495000+00:00] fleety13 (id=1502248142089883668)
+    allocating a cheap, but still capable and fast flash model if you haven't done so is the right play for dreamin, compression, compaction type tasks.
+    [reply to pythonoob msg=1502214667739860992]
+
+[2026-05-08T10:10:07.611000+00:00] pythonoob (id=1502251246361251841)
+    Yes thanks, I’ll give it a try💪🏻
+    [reply to fleety13 msg=1502248142089883668]
+
+[2026-05-09T15:06:20.302000+00:00] colmeio_66868 (id=1502688178295930880)
+    just steering a bit.
+    ideally a dream is a sandboxed spawn of an parallel reality. in that sense, users which are dreaming can break out freely overflowing the main reality rules... dreaming is a state useful for consolidating memories and cleaning subtle runtime corruptions. With that in mind, I would spawn a sandboxed folder for that so Hermes can play around while dreaming and extracting insights from the dreaming experience in order to be applied once Hermes is awake (interacting with us real world, so it can suggest implementations etc etc...)
+
+[2026-05-09T15:15:03.716000+00:00] stefan171 (id=1502690373653364747)
+    so i tell hermes to take LSD?
+
+[2026-05-09T15:24:40.774000+00:00] stefan171 (id=1502692794009915484)
+    i am testing a new workflow where after the initial dream it benchmarks it, and then dreams more until the benchmark can no long be improved from that initial chat session. but yeah like the MCTS was my idea kinda of exploring different ideas, but it obviously isn't telling the llm to go into a different reality. something i will consider. like the benchmarking is new to me, so im learning new stuff
+
+[2026-05-09T18:26:48.608000+00:00] colmeio_66868 (id=1502738628667773010)
+    maybe this benchmarking could incorporate module-shadowing->benchmarking with karpatchys evolution loop
+    [reply to stefan171 msg=1502692794009915484]
+
+[2026-05-10T02:26:43.424000+00:00] stefan171 (id=1502859402879696958)
+    are we just not heading down a path where we end up needing to use a crazy amount of api calls? like i looked quickly at MCTS and a real system would iterate 50 times until it can no longer improved, but ours only does 3 branches and 10 paths and thats still a tonne of llm calls because it runs on all chat sessions. and now with post-dream phase (benchmark+self-improving) we are only adding more.
+
+[2026-05-10T02:29:54.680000+00:00] stefan171 (id=1502860205065633882)
+    when i first read your message about putting the dreaming phase into a paralell universe, it felt like we are now going out of our way to create symthetic data... but on a fresh head i wonder, the security risk is greater than the potential rewards, because as you said we would need to sandbox hermes
+
+[2026-05-10T02:33:20.977000+00:00] stefan171 (id=1502861070337835048)
+    could you explain what you mean by module shadowing <@1228037612338679961> ? i asked minimax and it doesn't know either.
+
+[2026-05-10T08:32:26.723000+00:00] stefan171 (id=1502951439746728076)
+    btw im probably just gonna keep the MCTS; trying to self improve the dream just creates a crazy amount of api calls and complexity
+
+[2026-05-10T12:15:44.554000+00:00] colmeio_66868 (id=1503007634322886706)
+    Module shadowing is a technique where you clone a especific module, patch it, benchmark it, against current module in a loop. Once that module wins in the benchmark you replace de old module. So you create a shadow and try to improve by patching it, if works shadow becomes main, otherwise you just destruct it. So you can take the most inefficient steps of the day and reflect on that while dreaming so once wakeup the agent turned more efficient and you can know by how much and where the improvement were made
+    [reply to stefan171 msg=1502861070337835048]
+

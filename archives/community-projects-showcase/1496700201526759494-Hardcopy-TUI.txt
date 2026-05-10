@@ -1,0 +1,29 @@
+# Thread 'Hardcopy TUI' in forum #community-projects-showcase
+# thread_id=1496700201526759494 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:46.483669+00:00
+
+[2026-04-23T02:32:15.389000+00:00] hugh1979 (id=1496700201526759494)
+    I made a minimal login shell that talks to Hermes Agent via the gateway web service, or by running `hermes chat`.  Hooked the shell up to an autologin getty on a serial port.  Connected the serial port via 20mA current loop at 110 baud, to a 1969 Teletype Model 33.  Chatting away!
+    [attachment] tty.jpg https://cdn.discordapp.com/attachments/1496700201526759494/1496700202059563008/tty.jpg?ex=6a01e86f&is=6a0096ef&hm=101c3c5a39637fa285dad333ef89fd6bb030eba4707e8c6f6987490176a1cc81&
+
+[2026-04-23T02:34:45.637000+00:00] hugh1979 (id=1496700831712411878)
+    I'm planning to drag the machinery out to an event this weekend - stop by if you're in the area!  https://events.clarkart.edu/detail/5223
+
+[2026-04-25T01:37:34.104000+00:00] hugh1979 (id=1497411214551285782)
+    [attachment] IMG_4260.mov https://cdn.discordapp.com/attachments/1496700201526759494/1497411214236450826/IMG_4260.mov?ex=6a01db9e&is=6a008a1e&hm=f1cdc463ad68848aa2642dd6092def2820bb281ee44adfda7968771283d0c7b2&
+
+[2026-04-26T20:35:09.952000+00:00] hugh1979 (id=1498059888193179881)
+    Teletype in action, people talking to Hermes at the museum
+    
+    Skills: https://github.com/hughpyle/hermes-skills/tree/main/skills/tty
+    [attachment] tty_vid1.MOV https://cdn.discordapp.com/attachments/1496700201526759494/1498059889573105714/tty_vid1.MOV?ex=6a0194be&is=6a00433e&hm=0c0aacf95e023d969f5b1a0fb03d71bb8d2a7d83619cd2edf7ac63a9511fb7bd&
+    [embed] hermes-skills/skills/tty at main · hughpyle/hermes-skills https://github.com/hughpyle/hermes-skills/tree/main/skills/tty
+
+[2026-04-26T20:38:17.839000+00:00] hugh1979 (id=1498060676248244488)
+    shell: https://github.com/hughpyle/hermes-shell
+    [attachment] tty.jpg https://cdn.discordapp.com/attachments/1496700201526759494/1498060677217255504/tty.jpg?ex=6a01957a&is=6a0043fa&hm=fa9c1e6ab1c26a7b3ada7d730ece9f107e903cfd0facb91924364927df80098e&
+    [embed] GitHub - hughpyle/hermes-shell: An interactive shell https://github.com/hughpyle/hermes-shell
+
+[2026-04-27T02:36:45.331000+00:00] codename_11 (id=1498150885208100904)
+    Love it!
+

@@ -1,0 +1,54 @@
+# Thread 'hermelinChat a GUI for using Hermes in CLI/(TUI) Mode' in forum #community-projects-showcase
+# thread_id=1499834136578232320 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:31.684886+00:00
+
+[2026-05-01T18:05:23.731000+00:00] quark2world (id=1499834136578232320)
+    **hermelinChat** - a browser UI for Hermes Agent that doesn't sacrifice the terminal
+    
+    Started this for the first Nous Research Hermes Agent Hackathon a while back, but it's grown quite a bit since then.
+    
+    **What it does:**
+    • Real PTY-backed terminal via xterm.js - every keystroke goes to the actual `hermes` process. Tab completion, Ctrl-C, scrollback - all of it
+    • Session sidebar that reads directly from `~/.hermes/state.db` - browse, search, and resume past sessions
+    • Artifact panel - Hermes can create and manage HTML/iframe/code artifacts, with sandboxed runner proxying so complex artifacts work remotely too
+    • Built-in Strudel editor (opt-in) with agent toolset controls
+    • Single-port deployment - FastAPI serves the React SPA, WebSocket PTY proxy, and API all in one
+    
+    **Stack:** Python (FastAPI) + React + xterm.js + SQLite
+    
+    🔗 https://github.com/quarker1337/hermelinChat
+    🔗 https://www.youtube.com/watch?v=wnbQeIG-AUo
+    
+    Happy to answer questions - and yes, large parts of this were built *with* Hermes-Agent itself. (And Hermes-Agent is still updating it.)
+    [attachment] Early_Artifacts_Example.png https://cdn.discordapp.com/attachments/1499834136578232320/1499834136880349315/Early_Artifacts_Example.png?ex=6a021a63&is=6a00c8e3&hm=12e11f0095cfe7b390ca85552e23fc1081c6d295dbb907019a77231d2100109b&
+    [attachment] Example_Screenshots_Matrix_Skin_Clean.png https://cdn.discordapp.com/attachments/1499834136578232320/1499834137417089055/Example_Screenshots_Matrix_Skin_Clean.png?ex=6a021a63&is=6a00c8e3&hm=c09162246ae510af73cd0efe9bfd83bbc1fe3d731d9a206c78c007e6f57af2cf&
+    [attachment] Example_Screenshots_Strudeel.png https://cdn.discordapp.com/attachments/1499834136578232320/1499834137807163492/Example_Screenshots_Strudeel.png?ex=6a021a64&is=6a00c8e4&hm=7833a18b7cda906be12d74a8f78e17e2f7f923796d5e2c68f883d76352142410&
+
+[2026-05-06T16:40:56.336000+00:00] quark2world (id=1501624821711114400)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1499834136578232320/1501624821438746664/image.png?ex=6a020698&is=6a00b518&hm=9d4a3465d01dfffac7582e796461c5e066348baeab122c04611d9c43a81db9e0&
+
+[2026-05-06T16:41:12.675000+00:00] quark2world (id=1501624890241978558)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1499834136578232320/1501624889864622150/image.png?ex=6a0206a8&is=6a00b528&hm=1352d757e18373431a09acfb01deab729eec2c15168b9f12fd6f2feacdf41931&
+
+[2026-05-06T21:18:32.015000+00:00] quark2world (id=1501694680692162661)
+    ## hermelinChat 0.15
+    
+    This release adds Hermes TUI support, native Hermes Dashboard integration, safer artifact handling, improved terminal performance, and cleaner settings.
+    
+    ### Changes
+    
+    - Added Hermes TUI launch mode.
+    - Added native Hermes Dashboard controls in settings.
+    - Added secure same-origin dashboard proxying for routes, assets, fonts, and plugin APIs.
+    - Added dashboard theme sync with hermelinChat-style monospace skins.
+    - Improved TUI terminal scrolling, copy, selection, and font behavior.
+    - Improved artifact iframe bridge safety and reduced terminal contention.
+    - Added artifact rename/delete/clear actions.
+    - Preserved transient artifacts across reconnects.
+    - Protected built-in artifacts from transient cleanup.
+    - Fixed Strudel recorder downloads in Firefox.
+    - Simplified Hermes settings copy and removed stale model/API key editors.
+    - Improved dashboard error sanitization and proxy hardening.
+    - Improved update/install performance.
+    - Bumped app version to 0.15.
+

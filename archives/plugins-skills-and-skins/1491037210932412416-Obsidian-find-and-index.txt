@@ -1,0 +1,12 @@
+# Thread 'Obsidian find-and-index' in forum #plugins-skills-and-skins
+# thread_id=1491037210932412416 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:45.867014+00:00
+
+[2026-04-07T11:29:33.218000+00:00] hugh1979 (id=1491037210932412416)
+    There's a decent amount of Obsidian content pushed to github (mostly on technical topics), and also lots of specialist repos that have useful curated non-Obsidian content.  It's super easy for Hermes to find and clone them, and index them into memory.
+    
+    Some caution is advised when cloning random repos.  There's a skill for that, too.
+    
+    https://github.com/keepnotes-ai/hermes-skills - "github-vault-search" and "repo-intake-check"
+    [embed] GitHub - keepnotes-ai/hermes-skills: Skills repository for Hermes a... https://github.com/keepnotes-ai/hermes-skills
+

@@ -1,0 +1,21 @@
+# Thread 'The stars have aligned on the Arc Testnet  Using by Nous Research AI' in forum #community-projects-showcase
+# thread_id=1489860170686398536 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:58.185958+00:00
+
+[2026-04-04T05:32:24.955000+00:00] surya6276 (id=1489860170686398536)
+    I’m excited to introduce **FortuneAgent** — an AI-powered astrology oracle showcasing the future of **Agentic Commerce** 
+    
+    A living AI agent powered by Nous Research that delivers:
+    
+    **Daily Horoscopes** — real-time zodiac insights
+    **Cosmic Blueprints** — deep personality & life-path analysis
+    **On-Chain Records** — save your readings as unique digital collectibles
+    
+    Built with **Nous (Hermes-3-Llama-3.1-70B)** for intelligent, creative, low-latency interactions — perfectly matched with Arc’s fast, USDC-powered infrastructure.
+    
+    **Vision:** AI agents creating value, enabling micro-transactions, and redefining digital ownership.
+    
+    GitHub: https://github.com/SuryaXyz-art/FortuneAgent
+    [attachment] fortune_ui.png https://cdn.discordapp.com/attachments/1489860170686398536/1489860171160227910/fortune_ui.png?ex=6a0212a9&is=6a00c129&hm=5b4f5e25acb534a3256d0448e8be9f72acc8b1f642fc364e2c35d09f95dc1bc4&
+    [embed] GitHub - SuryaXyz-art/FortuneAgent https://github.com/SuryaXyz-art/FortuneAgent
+

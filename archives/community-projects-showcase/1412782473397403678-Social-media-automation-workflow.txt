@@ -1,0 +1,11 @@
+# Thread 'Social media automation workflow' in forum #community-projects-showcase
+# thread_id=1412782473397403678 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:35.305745+00:00
+
+[2025-09-03T12:53:09.887000+00:00] mariia081452 (id=1412782473397403678)
+    I’ve been experimenting with automating social media workflows.
+    Turns out, combining n8n + Make.com + Claude + OpenAI actually lets AI agents research trending topics, draft posts, design visuals, and schedule them automatically.
+    From one topic I’m now generating 30–40 posts across LinkedIn, Twitter, and Instagram.
+    If anyone’s curious, I documented the full setup in a video — happy to share: https://youtu.be/XdLGrQcUwcg
+    [embed] How to Manage All Your Social Media With AI? N8n and Make.com For S... https://www.youtube.com/watch?v=XdLGrQcUwcg
+

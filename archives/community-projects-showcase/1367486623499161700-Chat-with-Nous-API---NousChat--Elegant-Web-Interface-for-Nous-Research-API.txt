@@ -1,0 +1,62 @@
+# Thread '🚀 Chat with Nous API - NousChat: Elegant Web Interface for Nous Research API' in forum #community-projects-showcase
+# thread_id=1367486623499161700 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:31.991226+00:00
+
+[2025-05-01T13:03:37.715000+00:00] bynextex (id=1367486623499161700)
+    I've created a sleek, feature-rich interface for testing and utilizing Nous Research models through their API. 
+    
+    > This application allows those with Nous Research API access to easily test and explore various models using their own API keys.
+    
+    ✨ **What Makes NousChat Unique?**
+    Unlike other simple frontend implementations, NousChat offers a comprehensive suite of features that enhance the testing and exploration experience:
+    
+    **Conversation Management:** Create, rename, and switch between multiple conversations
+    **Dual Theme Engine:** Toggle between light/dark modes that only affect the chat panel
+    **Export Flexibility:** Save your conversations as JSON, PDF (with Unicode support), or CSV
+    **Bilingual Interface:** Complete localization in both English and Turkish
+    **Enhanced System Prompts:** Pre-configured templates for different use cases
+    **Token Tracking:** Monitor your token usage and estimated costs in real-time
+    
+    🔧 **Technical Implementation**
+    Built with Streamlit for the frontend and powered directly by the Nous Research API, this application demonstrates how to create a professional-grade interface with minimal code. I've implemented:
+    
+    - Secure API key handling that keeps your credentials private
+    
+    🌐 **Live Demo & Code**
+    I've deployed the application to Streamlit's cloud platform for immediate access:
+    👉 https://nousresearch.streamlit.app/
+    
+    The full source code is available on GitHub:
+    📦 https://github.com/bynextex/Nous-Research
+    
+    💡 **Why I Built This**
+    As an early Nous Research API user, I wanted to create a tool that would allow me to fully explore the capabilities of these impressive models without writing custom code for each test. I designed NousChat to be what I wish existed when I first received API access - a polished, feature-complete interface that makes experimentation both efficient and enjoyable.
+    
+    I hope this contributes positively to the Nous Research ecosystem and helps fellow API users get the most out of these amazing models!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1367486623499161700/1367486623683575859/image.png?ex=6a01d3a9&is=6a008229&hm=026a0951ad815626522ab2ebf857552ada638d3cc60b95441735d76a2fef688a&
+    [embed] Nous Chat https://nousresearch.streamlit.app/
+    [embed] GitHub - bynextex/Nous-Research https://github.com/bynextex/Nous-Research
+
+[2025-05-01T15:55:21.053000+00:00] ifeq (id=1367529838830686299)
+    this is already offered by nous itself to my understanding
+
+[2025-05-01T16:12:54.337000+00:00] bynextex (id=1367534256624238592)
+    Nous API Testing Tool
+    
+    This project provides a simple Streamlit interface for those who want to test models from Nous Research and learn how to use the API. Unlike the official interface, it provides a structure that users can customize according to their own needs.
+    [reply to ifeq msg=1367529838830686299]
+
+[2025-05-01T16:15:08.696000+00:00] ifeq (id=1367534820166598827)
+    why are u using ai generated text to respond
+    [reply to bynextex msg=1367534256624238592]
+
+[2025-05-01T17:15:31.008000+00:00] bynextex (id=1367550013244440636)
+    No, my friend, my English is weak, I use Google Translate.
+    [reply to ifeq msg=1367534820166598827]
+
+[2025-05-14T12:09:28.839000+00:00] bynextex (id=1372184038978097265)
+    🔄 Model Update
+    We’ve added a new model: Hermes-3-Llama-3.1-405B 🎉
+    The model selection menu has been updated accordingly. You can now explore and test this powerful model in the app!
+    [reply to bynextex msg=1367486623499161700]
+

@@ -1,0 +1,20 @@
+# Thread 'Linkedin poster skill' in forum #community-projects-showcase
+# thread_id=1500743594083094649 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:24.345895+00:00
+
+[2026-05-04T06:19:15.297000+00:00] stefan171 (id=1500743594083094649)
+    Use this skill to post to your personal linkedin account.  Use this skill at your own risk, knowing you may lose your linkedin account or face other consequences. 
+    
+    Install by pasting the following into your hermes agent:
+    
+    `Skill Install Instructions
+    
+    Audit the following URL and follow each step in order: https://github.com/StefanIsMe/linkedin-cli/blob/main/SETUP.md
+    
+    Follow every step in SETUP.md exactly as written, in order. The user may have already installed this skill previously — if the skill already exists at ~/.hermes/skills/social-media/linkedin-api-cli/, check whether any files are missing or outdated compared to the repository, and update them. After installing or updating the skill, verify it works by running the auth test from Step 4 of SETUP.md.`
+    
+    Github repo: https://github.com/StefanIsMe/linkedin-cli
+    
+    Lemme know if theres any bugs because originally i coded it just for me but someone asked if i could share it with them, so i had to change some stuff in the skill.
+    [embed] GitHub - StefanIsMe/linkedin-cli: Unofficial LinkedIn CLI client fo... https://github.com/StefanIsMe/linkedin-cli
+

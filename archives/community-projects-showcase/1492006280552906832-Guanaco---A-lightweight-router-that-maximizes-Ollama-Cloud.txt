@@ -1,0 +1,26 @@
+# Thread 'Guanaco - A lightweight router that maximizes Ollama Cloud' in forum #community-projects-showcase
+# thread_id=1492006280552906832 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:29.258348+00:00
+
+[2026-04-10T03:40:17.420000+00:00] rsks (id=1492006280552906832)
+    Guanaco - An OpenAI-compatible LLM proxy that maximizes your Ollama Cloud subscription.
+    
+    Recently Ollama Cloud has had shaky api uptime, especially with newer models, this solves that with good fallback support.
+    
+    Features:
+    - Drop-in LLM router (OpenAI + Anthropic compatible)
+    - Search & scrape API endpoint emulation (Tavily, Exa, Firecrawl, Jina, Serper, Brave, SearXNG, Cohere)
+    - Rerank support (Jina + Cohere compatible)
+    - Automatic fallback to secondary coding plan provider
+    - Real-time usage & quota tracking
+    - API key management
+    - Web dashboard
+    - One-command install
+    
+    
+    Works great with hermes and other harnesses.
+    
+    https://github.com/evangit2/guanaco
+    [attachment] logo.png https://cdn.discordapp.com/attachments/1492006280552906832/1492006280838250656/logo.png?ex=6a01f861&is=6a00a6e1&hm=4b30b5ba3f2e9000741c2429f59f90faa9bb4cd3b29c4b699debdcf3bf48dfc8&
+    [embed] GitHub - evangit2/guanaco: 🦙 OpenAI-compatible LLM proxy that ma... https://github.com/evangit2/guanaco
+

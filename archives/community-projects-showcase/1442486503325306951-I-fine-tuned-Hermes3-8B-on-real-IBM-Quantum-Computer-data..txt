@@ -1,0 +1,18 @@
+# Thread 'I fine-tuned Hermes3-8B on real IBM Quantum Computer data.' in forum #community-projects-showcase
+# thread_id=1442486503325306951 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:28.559163+00:00
+
+[2025-11-24T12:06:22.496000+00:00] squeezy2757 (id=1442486503325306951)
+    https://huggingface.co/squ11z1/Hypnos-i1-8B
+    Its my first release, check this if you interested!<:catlick:1151260427645366375>
+    [embed] squ11z1/Hypnos-i1-8B · Hugging Face https://huggingface.co/squ11z1/Hypnos-i1-8B
+
+[2025-11-24T15:41:51.038000+00:00] teknium (id=1442540729560731701)
+    😮 what is IBM Quantum Computer data?
+    [reply to squeezy2757 msg=1442486503325306951]
+
+[2025-11-24T16:22:19.923000+00:00] squeezy2757 (id=1442550917042933930)
+    This is raw data from measurements I took on IBM's newest quantum computers (Heron r1 and r2, with 156&133 qubits). I specifically ran experiments creating a 100-qubit GHZ state (a type of quantum entanglement). The output bitstrings include real quantum randomness plus noise from the hardware (like decoherence and gate errors).
+    My idea: Adding this "true randomness" during the model's fine-tuning stage works like a data-based way to add helpful noise. It appears to stop the model from getting stuck (mode collapse). Hermes 3 was the ideal starting model for this test because it's reliable and strong!
+    [reply to teknium msg=1442540729560731701]
+

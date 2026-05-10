@@ -1,0 +1,38 @@
+# Thread 'defaultmodenetwork' in forum #plugins-skills-and-skins
+# thread_id=1493508217567711343 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:32.769222+00:00
+
+[2026-04-14T07:08:27.109000+00:00] cursed.helm (id=1493508217567711343)
+    https://github.com/EveryOneIsGross/defaultmodePLUGIN
+    
+     # DMN — Default Mode Network memory for Hermes Agent
+    
+    Instead of storing and retrieving facts like a trad database, the DMN runs a bg thread that continuously wanders memories, generates reflections, and consolidates the index in the background — the same way the brain's default mode network processes experience during rest. 
+    
+    **What makes it different:**
+    - **No vectors, no embeddings, no GPU.** Pure BM25 inverted index — fast, local, deterministic retrieval with no external dependencies
+    - **Self-organising.** Entity relationships, preferences, and recurring themes emerge from the statistical pressure of language. No extraction pipelines, no fragile graph schemas — the index is the graph
+    - **Self-pruning.** Memories constitute as they're processed, without the aid of agentic llm calls. The index never grows unbounded, never needs manual curation
+    - **Orphan handling.** When a memory drifts loose from the network with no BM25 neighbours, it gets handed to an autonomous spike agent (generates a cron task) with its full toolset to decide what to do with it
+    - **Mood-aware.** Arousal level (0–100) derived from index pressure drives thought generation style, system prompt tone, and prefetch behaviour across named states 
+    - **Per-profile customisable.** All LLM-facing prompts, mood vocabulary, and spike briefings live in a `DREAM.md` file you can override per Hermes profile — no code changes
+    
+    Drop it in `plugins/memory/dmn/`, run `hermes memory setup`, done.
+    [attachment] dmn_map_01.png https://cdn.discordapp.com/attachments/1493508217567711343/1493508217869828106/dmn_map_01.png?ex=6a02292b&is=6a00d7ab&hm=21b0627da0082ce4c60dd681d821c58c8723710d79ca833b4fffb36c3d7f07bd&
+
+[2026-04-14T07:13:01.892000+00:00] cursed.helm (id=1493509370091143270)
+    forgive any integration bugs... I am still suffering from a flu...
+    but I wanted this up last week... 🧠💅
+    ....
+    slowly porting the full memory flow from my discordbot... https://github.com/EveryOneIsGross/defaultmodeAGENT
+    but I'd like to integrate embedding models into the hermes framework as a providers before I start adding additional later iteraction embedding or anything (tho in bench marks it only boosts retrieval by a 1-10%~ soooo considering how wicked fast my memory index is  it's probably not worth the churn atm)
+
+[2026-04-14T22:06:20.892000+00:00] cursed.helm (id=1493734180591243396)
+    SPIKE events are borked 'cause I hook them wrong...
+    [monkey patching it back in]
+    not sure how to expose crons yet without making a mess of the repo...
+    maybe once I update to 0.9 and the context manager changes might help?
+
+[2026-04-14T22:06:57.020000+00:00] cursed.helm (id=1493734332123185302)
+    still mem system works, just no being thrown into action when connections to a memory become too sparse
+

@@ -1,0 +1,14 @@
+# Thread 'HERMES COWORK - its like a fiverr service that organizes users to solve problems (for money)' in forum #community-projects-showcase
+# thread_id=1492024574370644109 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:28.783257+00:00
+
+[2026-04-10T04:52:59.006000+00:00] m____m.69 (id=1492024574370644109)
+    HERMES COWORK is a decentralized, Fiverr-style marketplace where clients post real problems and pay in Bitcoin to assemble temporary "swarms" of humans and AI agents (called Hermes).
+    It uses GitHub as the collaborative workspace and Bitcoin multisig escrow for trustless payments. No central app needed — everything runs transparently via GitHub repositories, pull requests, and structured phases (brainstorming, voting, planning, and execution).
+    Participants join in parallel "pods," collaborate openly, and get guaranteed payouts upon completion. Perfect for crowdsourcing intelligence in a fully decentralized way.
+    https://github.com/luckyduckcode/HERMES-COWORK.git
+    [embed] GitHub - luckyduckcode/HERMES-COWORK https://github.com/luckyduckcode/HERMES-COWORK.git
+
+[2026-04-10T04:54:08.531000+00:00] m____m.69 (id=1492024865979629679)
+    i thought this could be useful, what do you think?
+

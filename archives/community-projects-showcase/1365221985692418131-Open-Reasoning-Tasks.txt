@@ -1,0 +1,45 @@
+# Thread 'Open Reasoning Tasks' in forum #community-projects-showcase
+# thread_id=1365221985692418131 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:34.930941+00:00
+
+[2025-04-25T07:04:45.987000+00:00] teknium (id=1365221985692418131)
+    Introduction
+    The goal of this repository is to gather a diverse set of reasoning tasks designed to improve the reasoning capabilities of LLMs. Contributors are encouraged to submit tasks, provide examples, and optionally include diagrams or workflows to illustrate how the tasks function.
+    
+    Resources
+    Master Reasoning Tasks List
+    You can access the main tasks list table by clicking here (or open tasks.md file in the top level directory):
+    https://github.com/NousResearch/Open-Reasoning-Tasks/blob/main/tasks.md
+    
+    Web Based Directory
+    You can access the full table of reasoning tasks from our quarto based website by going here:
+    https://reasoning.nousresearch.com/
+    
+    https://github.com/NousResearch/Open-Reasoning-Tasks
+    [embed] Open-Reasoning-Tasks/tasks.md at main · NousResearch/Open-Reasonin... https://github.com/NousResearch/Open-Reasoning-Tasks/blob/main/tasks.md
+    [embed] GitHub - NousResearch/Open-Reasoning-Tasks: A comprehensive reposit... https://github.com/NousResearch/Open-Reasoning-Tasks
+
+[2025-04-25T07:04:59.821000+00:00] teknium (id=1365222043716554783)
+    Removing the dedicated channel to replace with this
+
+[2025-04-26T01:05:35.536000+00:00] ifeq (id=1365493984415318098)
+    + 1 PR
+    [reply to teknium msg=1365222043716554783]
+
+[2025-08-01T06:25:01.121000+00:00] _kquant (id=1400725993668481034)
+    https://operation-athena.repleteai.com/
+    
+    I got it to track the repository and added mobile support 😄
+    [embed] Operation Athena https://operation-athena.repleteai.com/
+    [reply to teknium msg=1365222043716554783]
+
+[2025-08-01T06:27:30.233000+00:00] _kquant (id=1400726619089408102)
+    just targets the link to the json folder and allows me to import lol
+
+[2025-08-01T07:07:47.216000+00:00] teknium (id=1400736756650741780)
+    Oh nice
+    [reply to _kquant msg=1400725993668481034]
+
+[2025-08-01T07:08:18.716000+00:00] _kquant (id=1400736888771575918)
+    been awhile, had some people say some stuff to me that...uh....motivated me to say the least. Going through my whole github and cleaning it up and fixing some old projects up.
+

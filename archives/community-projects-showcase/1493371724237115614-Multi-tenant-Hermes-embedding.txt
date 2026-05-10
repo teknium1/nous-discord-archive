@@ -1,0 +1,27 @@
+# Thread 'Multi-tenant Hermes embedding' in forum #community-projects-showcase
+# thread_id=1493371724237115614 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:10.441589+00:00
+
+[2026-04-13T22:06:04.563000+00:00] aj0000jp (id=1493371724237115614)
+    I’m evaluating Hermes as the orchestration layer inside a multi-tenant B2B workflow product.
+    
+    The fit I see is:
+    - planning / next-step selection
+    - tool calling
+    - drafting communications over channels like email / WhatsApp
+    - handling messy workflow intake
+    
+    But I don’t want the agent to be the system of record or the place where durable tenant memory lives. I want strict isolation across customers, with workflow state, artifacts, approvals, and credentials owned by our backend.
+    
+    So the packaging question is:
+    
+    What’s the cleanest way to use Hermes as a scoped orchestration runtime per tenant / per workflow-run, without creating cross-tenant memory bleed or unsafe long-lived agent state?
+    
+    Concretely:
+    1. Do you treat Hermes instances as disposable per workflow/session, or persistent per tenant?
+    2. Do you keep all durable memory outside Hermes and inject only scoped context?
+    3. How do you handle tool access and credential scoping safely in multi-tenant deployments?
+    4. Has anyone used Hermes this way in production for operational workflows rather than just chat?
+    
+    Would love any thoughts, examples, or strong opinions on the right packaging pattern.
+

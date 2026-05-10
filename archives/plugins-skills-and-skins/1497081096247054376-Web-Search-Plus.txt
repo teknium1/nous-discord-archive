@@ -1,0 +1,39 @@
+# Thread 'Web Search Plus' in forum #plugins-skills-and-skins
+# thread_id=1497081096247054376 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:15.728433+00:00
+
+[2026-04-24T03:45:47.767000+00:00] wysie_ (id=1497081096247054376)
+    Not by me but I contributed some patches and also added Brave API to it, found it very useful! https://github.com/robbyczgw-cla/hermes-web-search-plus
+    [embed] GitHub - robbyczgw-cla/hermes-web-search-plus: Hermes Agent plugin:... https://github.com/robbyczgw-cla/hermes-web-search-plus
+
+[2026-04-24T09:26:32.095000+00:00] fleety13 (id=1497166845973893211)
+    i used some ideas from this, it's really good
+
+[2026-04-24T12:29:38.704000+00:00] wysie_ (id=1497212927151837215)
+    Added web extract function and a few more providers. Waiting for it to be merged
+
+[2026-04-25T06:13:33.251000+00:00] .ankdev (id=1497480668647522314)
+    So it’s like a scraper? Or browser harness ?
+
+[2026-04-25T10:53:51.207000+00:00] skylinx79 (id=1497551208267649148)
+    What is the advantage of using this over just Tavily for example?
+
+[2026-04-25T15:11:12.142000+00:00] wysie_ (id=1497615972243341322)
+    web extract merged into main
+
+[2026-04-25T15:11:52.978000+00:00] wysie_ (id=1497616143521681448)
+    it rotates across a few providers so if u've a bunch of free subs u probably can last longer till the next month (resets)
+    [reply to skylinx79 msg=1497551208267649148]
+
+[2026-04-25T16:26:38.330000+00:00] skylinx79 (id=1497634956451643613)
+    I have simply created 10 Tavily free accounts and rotate them with a simple proxy I created, so I can make up to 10000 queries a month :p
+
+[2026-04-25T16:27:03.632000+00:00] skylinx79 (id=1497635062575927497)
+    This is so easy now because we can customise the hostname for Tavily so I can use the one for my proxy
+
+[2026-04-26T06:20:59.626000+00:00] wysie_ (id=1497844928745570385)
+    Yeah that's doable too but technically multiple tavily is against tos :P. Plus the plugin tries to autoroute based on requests and now it has web extract built in for different providers
+
+[2026-04-27T22:04:47.821000+00:00] definitelynotguru (id=1498444832475971765)
+    Gotta set this up.
+

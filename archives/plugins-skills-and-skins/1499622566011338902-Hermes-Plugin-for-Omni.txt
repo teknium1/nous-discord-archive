@@ -1,0 +1,66 @@
+# Thread 'Hermes Plugin for Omni' in forum #plugins-skills-and-skins
+# thread_id=1499622566011338902 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:08.051393+00:00
+
+[2026-05-01T04:04:41.377000+00:00] wysie_ (id=1499622566011338902)
+    Wrote an Hermes plugin for Omni: https://github.com/Wysie/hermes-omni-plugin
+    
+    Hermes Agent plugin for the OMNI Semantic Signal Engine: local-first terminal output distillation, rewind retrieval, stats, and diagnostics.
+    
+    OMNI reduces noisy development output before it reaches an AI agent. This plugin bridges OMNI into Hermes without patching Hermes core.
+    
+    From OMNI's GitHub:
+    
+    ```
+    I built Omni because I wanted to run AI agents efficiently and cheaply every single day in my own workflow.
+    
+    Omni acts as the perfect filter between your terminal and your AI.
+    
+    The result? You can run your AI agent on a super-advanced framework and feed it zero noise. Because the AI is only fed highly focused, straight-to-the-point context, even affordable or ordinary models will perform on-par with expensive flagship models, since they are never distracted by junk data.
+    
+    My ultimate passion isn't to monetize this—it's to build the ultimate open-source toolbelt for the Agentic AI era. By aggressively saving token costs, I can develop software robustly and cost-effectively today, and you can too.
+    ```
+    [embed] GitHub - Wysie/hermes-omni-plugin: Hermes Agent plugin for local OM... https://github.com/Wysie/hermes-omni-plugin
+
+[2026-05-02T07:43:33.504000+00:00] austrian_guy (id=1500040034009747616)
+    <@329427821208535040> thanks so much for posting here
+
+[2026-05-03T06:57:50.237000+00:00] wysie_ (id=1500390915779461252)
+    Updated to 0.2.0 following some suggestions from fajarhide (OMNI creator).
+    
+    https://github.com/wysie/hermes-omni-plugin
+    
+    What changed:
+    
+    • Improved stats parsing
+      - omni_stats now calls omni stats --json and uses JSON as the source of truth.
+      - The older human-readable regex parser is still kept as a fallback for older OMNI versions.
+    
+    • Added safer rewind handling
+      - omni_rewind now validates hashes before invoking OMNI.
+      - Accepted hashes must be hex-only and 8–128 characters long.
+    
+    • Fixed binary unit conversion
+      - _parse_kb now uses 1024-based binary units instead of 1000-based decimal units.
+      - Fallback token estimates were updated accordingly.
+    
+    • Added config backup support
+      - /omni reset-config now creates a timestamped backup before overwriting config.
+      - Backup format: config.json.<UTC timestamp>.bak
+    
+    • Documentation updates
+      - README now documents JSON stats support, rewind validation, and config backups.
+    
+    • Added regression tests
+      - Coverage added for JSON stats behavior, rewind hash validation, binary unit parsing, and config backup/reset behavior.
+    
+    Verification:
+    
+    • Local tests: 20 passed
+    • Build: passed
+    • Fresh GitHub install into a clean venv: passed
+    • GitHub Actions CI: passed
+    
+    Thanks again to fajarhide for the review and suggestions.
+    [embed] GitHub - wysie/hermes-omni-plugin: Hermes Agent plugin for local OM... https://github.com/wysie/hermes-omni-plugin
+

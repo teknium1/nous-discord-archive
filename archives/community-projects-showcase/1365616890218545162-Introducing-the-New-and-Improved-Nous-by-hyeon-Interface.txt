@@ -1,0 +1,20 @@
+# Thread 'Introducing the New and Improved Nous by hyeon Interface' in forum #community-projects-showcase
+# thread_id=1365616890218545162 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:45.981943+00:00
+
+[2025-04-26T09:13:58.563000+00:00] jonghyeon0624 (id=1365616890218545162)
+    With our previous update, the intuitive UI we developed was even adopted by the main Nous site. Still, many users continue to use our version, so we've pushed forward with further enhancements tailored for the evolving Nous ecosystem.
+    
+    first update ariticle:
+    https://x.com/hyeon__dev/status/1906239764157915626
+    
+    
+    second update article:
+    https://x.com/hyeon__dev/status/1916055761333194926
+    [attachment] 2025-04-26_6.09.56.mov https://cdn.discordapp.com/attachments/1365616890218545162/1365616892441657465/2025-04-26_6.09.56.mov?ex=6a019dd7&is=6a004c57&hm=358bed7147bd7cabd43b191b03c5b0c5da799afbf45623ba4715bb6eac5d820a&
+    [embed] X https://twitter.com/hyeon__dev/status/1906239764157915626
+    [embed] X https://twitter.com/hyeon__dev/status/1916055761333194926
+
+[2025-04-26T10:07:33.295000+00:00] ee.dd (id=1365630373781831761)
+    Was this adopted by the main site ?
+

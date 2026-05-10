@@ -1,0 +1,125 @@
+# Thread 'Jammit - TUI infinite radio' in forum #community-projects-showcase
+# thread_id=1491489761821589615 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:33.053532+00:00
+
+[2026-04-08T17:29:10.760000+00:00] petersteele111 (id=1491490101568475346)
+    Thanks, ill try it out 🙂
+
+[2026-04-08T17:33:35.242000+00:00] .s0uthpaw (id=1491491210886381648)
+    Oohhh I'm deleting this room, we have two of these
+
+[2026-04-08T17:33:37.526000+00:00] .s0uthpaw (id=1491491220466303157)
+    My b
+
+[2026-04-08T17:33:55.621000+00:00] .s0uthpaw (id=1491491296362365091)
+    I'll tag you in the correct one <@648742401703149612>
+
+[2026-04-08T18:03:25.573000+00:00] petersteele111 (id=1491498720078856294)
+    kk
+
+[2026-04-09T04:34:01.596000+00:00] .s0uthpaw (id=1491657415861731390)
+    Welp this the main one now
+
+[2026-04-09T04:34:15.289000+00:00] .s0uthpaw (id=1491657473294204959)
+    Bc I closed the wrong one 😁
+
+[2026-04-09T04:34:29.026000+00:00] .s0uthpaw (id=1491657530911494207)
+    Sov
+
+[2026-04-09T04:34:48.032000+00:00] .s0uthpaw (id=1491657610628173844)
+    https://github.com/SouthpawIN/jammit
+    [embed] GitHub - SouthpawIN/jammit: infinite ai generated radio in your ter... https://github.com/SouthpawIN/jammit
+
+[2026-04-09T07:27:32.849000+00:00] nasumone (id=1491701083821838387)
+    working on a comfy reader that reads books to the user, gonna try to see if it can make comfy background music
+
+[2026-04-09T07:28:30.355000+00:00] nasumone (id=1491701325019480105)
+    can soundclips be made tiling so that their end matches up with the start of the next piece?
+
+[2026-04-09T19:07:41.694000+00:00] .s0uthpaw (id=1491877281688457377)
+    Yes!
+    [reply to nasumone msg=1491701325019480105]
+
+[2026-04-11T02:22:04.435000+00:00] janessignal (id=1492348984612753408)
+    w00t
+
+[2026-04-11T02:22:16.725000+00:00] airstrikeivanov (id=1492349036160876694)
+    interesting, is the music stream-friendly? i assume so but figured i'd ask
+
+[2026-04-11T02:22:26.902000+00:00] airstrikeivanov (id=1492349078846177290)
+    might be useful for a twitch project i was working on with the ol' agent 🤣 (it's gonna play a game *poorly*)
+
+[2026-04-11T02:23:50.488000+00:00] janessignal (id=1492349429431271494)
+    cuz I'm a ForeverDM(willingly), I want to see if I can run a lil web based thing off my laptop when I run games
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491489761821589615/1492349429095858348/image.png?ex=6a01e676&is=6a0094f6&hm=24b973b248c99f0857cb82ba22f31a47a9367a3aeab5cd7a080403f488c68e39&
+
+[2026-04-11T02:26:17.305000+00:00] janessignal (id=1492350045226401895)
+    My other dream is a system that perfectly interacts with movement or visuals and creates music as interpretation of that... until then, setting the mood for a little TTRPG works 🙂
+
+[2026-04-11T02:34:09.334000+00:00] .s0uthpaw (id=1492352025059659816)
+    Ok! Yes! That actually works with the next step of this: adding an omnimodal modal to hear its own music, and to make musical compositions from even images and videos as well.
+    
+    Synched to movement? Haven't thought of that one!
+
+[2026-04-11T02:34:36.459000+00:00] .s0uthpaw (id=1492352138830020789)
+    And yeah TTRPGs for SURE
+
+[2026-04-11T02:35:00.934000+00:00] .s0uthpaw (id=1492352241485742191)
+    I main a BardLocke in D&D haha
+
+[2026-04-11T02:35:28.101000+00:00] .s0uthpaw (id=1492352355432398889)
+    CHA caster, buffs and debuffs
+
+[2026-04-11T03:46:44.405000+00:00] .s0uthpaw (id=1492370291551113428)
+    Mimo v2 Omni
+    Free on Nous
+
+[2026-04-13T21:38:59.518000+00:00] .s0uthpaw (id=1493364908304236574)
+    I'm training a model on my riffs as well. This track is me (poorly mixed, sorry), all the sound effects and stuff is just my guitar, recorded on my phone.
+    [attachment] sovthpaw_-_117.mp3 https://cdn.discordapp.com/attachments/1491489761821589615/1493364907729489941/sovthpaw_-_117.mp3?ex=6a01a3b3&is=6a005233&hm=a9a7d09bb36d832a185d57ef96e68d83943360de63f9f31d3450647b10fbbac4&
+
+[2026-04-13T21:39:29.219000+00:00] .s0uthpaw (id=1493365032879132742)
+    Best output from the model so far
+    [attachment] 20260405_033038.mp3 https://cdn.discordapp.com/attachments/1491489761821589615/1493365032615018496/20260405_033038.mp3?ex=6a01a3d1&is=6a005251&hm=b2d3892213c2e46da41a5edda771266372fc8d1e05abb325f3ee0b843b9266c7&
+
+[2026-04-13T21:43:51.247000+00:00] sprmn24 (id=1493366131904221254)
+    this is nice. 😀
+    [reply to .s0uthpaw msg=1493365032879132742]
+
+[2026-04-13T21:49:24.955000+00:00] .s0uthpaw (id=1493367531577282640)
+    Thank you!
+
+[2026-04-16T02:03:49.849000+00:00] slimk4 (id=1494156332914446397)
+    🫡
+
+[2026-04-16T06:36:42.685000+00:00] quark2world (id=1494225005565706391)
+    Hmm these models look even more interesting, maybe worth to send a second hermes with a finetune run for this with my ... ermm youtube library 🤣
+
+[2026-04-26T12:28:21.545000+00:00] .s0uthpaw (id=1497937379254603907)
+    [attachment] vibe9.mp3 https://cdn.discordapp.com/attachments/1491489761821589615/1497937378940162058/vibe9.mp3?ex=6a01cb65&is=6a0079e5&hm=6e78911901337e4ac0b9a1fbac997c4f8afd57de771aae9bae78054f693d13e6&
+
+[2026-04-26T12:31:32.499000+00:00] .s0uthpaw (id=1497938180173992070)
+    Needs chopped up in FL Studio, this is just the generation.
+    but this thread is about the model/generative radio. I'm gonna take my time finalizing the tracks.
+
+[2026-04-27T09:17:54.241000+00:00] quark2world (id=1498251837533589555)
+    Its one of the things i didnt really like about ACE-Step. The postprocessings steps needed are to much. Its good for 30secs snippets, but consistency over 2-3mins is atrocious. 
+    
+    Did a finetune of it with something like 1k songs, it did get abit better, but still not where i wanna start.
+    [reply to .s0uthpaw msg=1497938180173992070]
+
+[2026-04-27T14:15:36.441000+00:00] .s0uthpaw (id=1498326757030236231)
+    You're not wrong in the slightest
+
+[2026-04-28T05:57:10.223000+00:00] _0xvox (id=1498563709126312016)
+    <@575461682151686145>
+    [attachment] Dynox_x_Vox_Texture_2ho_133_Am.mp3 https://cdn.discordapp.com/attachments/1491489761821589615/1498563708622864567/Dynox_x_Vox_Texture_2ho_133_Am.mp3?ex=6a021876&is=6a00c6f6&hm=354dba926db609039fbc32bc5ae8f1c82177cdc96bee22364c2a1c18e7aa95ef&
+
+[2026-05-01T06:00:21.559000+00:00] .s0uthpaw (id=1499651675244335225)
+
+[2026-05-01T06:04:12.910000+00:00] .s0uthpaw (id=1499652645600628786)
+
+[2026-05-01T06:16:34.971000+00:00] .s0uthpaw (id=1499655758030045345)
+
+[2026-05-01T06:16:54.346000+00:00] .s0uthpaw (id=1499655839294951576)
+

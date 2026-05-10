@@ -1,0 +1,49 @@
+# Thread 'Cartographer: Fully Configurable Semantic Knowledge & Memory Substrate' in forum #community-projects-showcase
+# thread_id=1495354913205780661 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:56.960710+00:00
+
+[2026-04-19T09:26:33.659000+00:00] modest.maoist (id=1495354913205780661)
+    **Cartographer: your agents should remember what they learn.**
+    
+    There are a hundred agent memory layers. Vector DBs, hosted APIs, context stuffing. They solve *getting context into a prompt*. Mostly invisible, mostly opaque, mostly locked to whoever built them.
+    Cartographer will beat 'em all. But that's just the start.
+    **Cartographer isn't a memory layer. It's a knowledge substrate.**
+    
+    - **Point it at your existing setup** — Obsidian, vimwiki, Hermes sessions — and you've already built a semantic topology over your knowledgebase
+    - **Pair it with mapsOS** — braindump to your agent, it parses into a qualitative map of your entire life. 
+    - **Semantic knowledge graph** — wires between nodes with typed predicates: `supports`, `depends_on`, `contradicts`, `relates_to_person`
+    - **Emotional topology layer** — relationships carry valence, energy impact, avoidance risk, growth edges
+    - **Deeply configurable** — backend drives graph themes, privacy modes, state vocabulary, arc definitions. I made it & mapsOS for my brain. You can make them for yours.
+    - **Built for a robust plugin & dotfile economy** — stdin/stdout JSON contract, drop anything in `.cartographer/plugins/`
+    
+    **And if Cartographer disappears? Nothing happens to your data.**
+    
+    Plain Markdown with YAML frontmatter. Git is the database. SQLite is an index you can rebuild from scratch. No vendor lock. No hosted dependency. No parallel universe of embeddings divorced from your actual documents.
+    
+    Agents and humans write to the same substrate. Context windows close; the graph stays. Your knowledge is always your own. with mapsOS underneath, you can extend that knowledge base into a rich qualitative life tracker & task manager simply from braindumping to your hermes agent.
+    
+    This changed my life. Hope it changes yours. 
+    
+    Repo: https://github.com/nosleepcassette/cartographer
+    Standalone & useful no matter your setup, pairs best with mapsOS underneath: https://discord.com/channels/1053877538025386074/1492209844185338077
+    [attachment] cartographer-github-1.25x.webm https://cdn.discordapp.com/attachments/1495354913205780661/1495354913868218439/cartographer-github-1.25x.webm?ex=6a01a0c9&is=6a004f49&hm=d8d8e12a2c57a7c008fbd143b2e554585713ebdbce2e7ee55b19034b1e0c216b&
+    [attachment] cart.png https://cdn.discordapp.com/attachments/1495354913205780661/1495354914199699527/cart.png?ex=6a01a0c9&is=6a004f49&hm=2912ea31c7765ed2e38bc5f611fff416f15043d9d9e44f39cc561b6439f03318&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1495354913205780661/1495354914539569153/image.png?ex=6a01a0c9&is=6a004f49&hm=3f0fe3cfae4345d165fe51c99622ae4e65b28b8dcae78e81618eab03dff95012&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1495354913205780661/1495354914979709029/image.png?ex=6a01a0ca&is=6a004f4a&hm=649eec908410aa16c4a034953b5243f53ffc838e9c7456686ce5ac9521ca1e4c&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1495354913205780661/1495354915361394748/image.png?ex=6a01a0ca&is=6a004f4a&hm=b974b6113ce4ff0cb8398a9261b9290e491eefdbe2221f6a9704ca4ae7d4a1aa&
+    [embed] GitHub - nosleepcassette/cartographer https://github.com/nosleepcassette/cartographer
+
+[2026-04-21T21:48:10.234000+00:00] modest.maoist (id=1496266321099493476)
+    Bumping this:
+    Who this is for
+    
+        Neurodivergent people managing ADHD, autism, RSD, emotional flashbacks, and capacity shifts — systems that adapt to how your brain actually works rather than demanding your brain adapt to them
+        Therapists and counselors accumulating session notes into entity profiles, surfacing patterns across clients, tracking what interventions actually work over time — all local, no vendor, no cloud
+        Teachers and educators keeping intervention histories, learning-difference profiles, and cross-year patterns per student — the kind of institutional memory that normally evaporates when you change grade levels
+        Researchers where every paper becomes a note, every quote is a block reference, agent session logs link to the papers that informed them, and the query layer answers "what do we know about X"
+        Operations and engineering teams where incident reports, runbooks, post-mortems, and architectural decisions all live in the same graph — backlinks show you which runbook section was consulted during which incident, and agents write session logs to the same atlas engineers read
+        Developers building with LLMs who are tired of their agents starting every session from zero
+    
+    Semantic wires, not just links. A standard [[link]] says "these things are related." A wire says how: supports, depends_on, part_of, intensifies_with, contradicts. You can query "what does this project depend on?" or "what contradicts this belief?" and get structured answers. Teachers tracking what approaches worked for a student. Researchers mapping where their sources agree and disagree. Ops teams modeling which runbook sections relate to which incident types. The typed relationship layer is what transforms a note collection into a knowledge graph.
+    [attachment] demo.mov https://cdn.discordapp.com/attachments/1495354913205780661/1496266320247783575/demo.mov?ex=6a01a5da&is=6a00545a&hm=9b2c5bf07d4fdba0d8d88a1a3751226c43edbf4bebd39715dd76e69cba677f56&
+

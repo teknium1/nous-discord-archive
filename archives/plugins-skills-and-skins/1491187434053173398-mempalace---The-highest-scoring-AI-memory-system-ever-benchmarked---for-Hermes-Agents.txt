@@ -1,0 +1,66 @@
+# Thread 'mempalace - The highest-scoring AI memory system ever benchmarked - for Hermes-Agents' in forum #plugins-skills-and-skins
+# thread_id=1491187434053173398 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:43.976459+00:00
+
+[2026-04-07T21:26:29.201000+00:00] alcatr4z (id=1491187434053173398)
+    Here is an complete repo now to let the agents do the rest of it.
+    
+    https://github.com/itsXactlY/mempalace-hermes-bridge
+    [embed] GitHub - itsXactlY/mempalace-hermes-bridge https://github.com/itsXactlY/mempalace-hermes-bridge
+
+[2026-04-07T21:31:05.494000+00:00] alcatr4z (id=1491188592910008421)
+    Working on Honcho -> Mempalace migration now.
+
+[2026-04-07T21:47:31.939000+00:00] erosika (id=1491192730360086710)
+    fwiw: https://x.com/AdvicebyAimar/status/2041559354034344438
+    [embed]  https://twitter.com/AdvicebyAimar/status/2041559354034344438
+    [reply to alcatr4z msg=1491188592910008421]
+
+[2026-04-07T21:48:44.943000+00:00] erosika (id=1491193036561191143)
+    please report back how you find it vs honcho 🫡
+
+[2026-04-07T21:48:46.690000+00:00] dreamymaerd (id=1491193043888378117)
+    Also, I implemented a version of it as a plugin as well
+
+[2026-04-07T21:56:20.337000+00:00] alcatr4z (id=1491194946621800620)
+    well, honcho "was" great, when it works - sadly, for me, it was more broken than working ever. still >1k que to process in the psql... 😄
+    
+    but now, not sure, might be still smarter to build a own system, where i can trust the numbers. mempalace did look fishy obviously, but, we never know if we aint test it.
+    
+    migration task still running...
+
+[2026-04-07T22:14:47.826000+00:00] erosika (id=1491199591767605329)
+    understood. if you are local hosting, we are about to release some better docs w thorough troubleshooting tba tomorrow. valid point re: mempalace
+    [reply to alcatr4z msg=1491194946621800620]
+
+[2026-04-07T22:32:17.593000+00:00] alcatr4z (id=1491203994809536712)
+    so,.. its you behind honcho? 🙂
+
+[2026-04-07T23:52:18.984000+00:00] lgwacker (id=1491224133302751353)
+    There are lots of issues and prs open regarding honcho integration with hermes agent... but none of them are being tackled for now.
+
+[2026-04-08T02:48:21.450000+00:00] alcatr4z (id=1491268435496276131)
+    PR for hermes directly to control MCP, etc. follows.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491187434053173398/1491268435252871288/image.png?ex=6a01ec35&is=6a009ab5&hm=cd492f71dbcbab3be549a0f1cbdc47f6c821c4378cb7ea52544e59743d338652&
+
+[2026-04-08T02:51:58.196000+00:00] alcatr4z (id=1491269344595021928)
+    but in the end, should be overkill. straight forward integration already for even stupid models.
+
+[2026-04-08T09:44:27.466000+00:00] niz3841 (id=1491373150557044838)
+    Don’t bother with MemPalace.
+    
+    Fake evals, fake everything 
+    
+    https://x.com/advicebyaimar/status/2041559354034344438?s=46
+    [embed]  https://twitter.com/advicebyaimar/status/2041559354034344438?s=46
+
+[2026-04-08T10:05:17.655000+00:00] alcatr4z (id=1491378394229641247)
+    me personally gives a huge F about statistics i didnt fake myself. i like to test always things to get a own opinion - and here we are... 🙂 didnt fully tested this system yet to its bare bone, but, its imho. already much better than honcho in getting context, while not break every two minutes apart.
+
+[2026-04-09T06:30:00.310000+00:00] alcatr4z (id=1491686602823434341)
+    Aaaaand... its archived. Even for that halfway broken prototype, the pure bare testing results were just...
+    
+    building something from scratch now. first results are: much wow 🙂
+
+[2026-04-09T06:59:05.539000+00:00] alcatr4z (id=1491693922844545044)
+

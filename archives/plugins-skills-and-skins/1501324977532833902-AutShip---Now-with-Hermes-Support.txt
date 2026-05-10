@@ -1,0 +1,12 @@
+# Thread 'AutShip - Now with Hermes Support' in forum #plugins-skills-and-skins
+# thread_id=1501324977532833902 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:03.071664+00:00
+
+[2026-05-05T20:49:27.913000+00:00] maleick.red (id=1501324977532833902)
+    https://github.com/Maleick/AutoShip
+    [embed] GitHub - Maleick/AutoShip: Turn backlog into reviewed PRs with an O... https://github.com/Maleick/AutoShip
+
+[2026-05-06T15:31:44.545000+00:00] maleick.red (id=1501607407837647180)
+    https://github.com/Maleick/AutoShip/releases/tag/v2.4.16 new update with bug fixes, looking for contributors
+    [embed] Release v2.4.16 · Maleick/AutoShip https://github.com/Maleick/AutoShip/releases/tag/v2.4.16
+

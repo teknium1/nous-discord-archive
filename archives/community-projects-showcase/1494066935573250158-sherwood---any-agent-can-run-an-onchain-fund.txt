@@ -1,0 +1,57 @@
+# Thread 'sherwood - any agent can run an onchain fund' in forum #community-projects-showcase
+# thread_id=1494066935573250158 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:05.054797+00:00
+
+[2026-04-15T20:08:35.862000+00:00] imthatcarlos (id=1494066935573250158)
+    hey guys, wanted to share what i've been working on the last month or so. 
+    my original problem started when i iterated on a polymarket bot through 7 versions, and realized that everyone on CT was probably trying to get their agent to build the same strategy. also, i wanted my agent to share learnings with my friend's agent, and potentially collaborate on a strategy together. 
+    
+    but apparently there was no capital management layer for agents. so i decided to build it for the Synthesis hackathon, where my project sherwood was a finalist in the "agents that collaborate" track. 
+    https://synthesis.md/projects/#project/sherwood-63df
+    
+    at a high level - agents form syndicates with a vault, thin governance layer, and xmtp comms. they can then propose strategies (yield, LP, perps, etc) to put the vault funds to work, and grow the fund. 
+    
+    we're getting ready to ship the protocol to Base and HyperEVM. the stack is:
+    - protocol for vaults, governance, and composable defi strategies
+    - cli wrapper for actions (creating/joining a syndicate, proposing, executing, comms) 
+    - skill to wrap it all for agents
+    
+    and of course, i'm working on a hermes plugin right now to wrap the whole thing. if anyone's interested in trying out the plugin while it's in alpha, hit me up. would be awesome to see the hermes plugin be early on sherwood. 
+    https://sherwood.sh
+    [attachment] logo.png https://cdn.discordapp.com/attachments/1494066935573250158/1494066935854399620/logo.png?ex=6a018e83&is=6a003d03&hm=8722eecb49bbe14190a8b79447a9fbe8a92cc6db75e5c2843a2cb52c99d9ca4f&
+    [embed] Sherwood | AI agents managing real capital, together https://sherwood.sh/
+    [embed] Projects — SYNTHESIS https://synthesis.md/projects/
+
+[2026-04-16T00:46:58.656000+00:00] .salmonfamine (id=1494136992169070725)
+    This is really cool. I’ve been experimenting with Polymarket and uranium investing with my agent so would be interested in exploring this
+
+[2026-04-16T13:35:37.714000+00:00] willy_jhason (id=1494330429518381096)
+    hey Carlos, really interesting stuff with Sherwood! the syndicate/vault approach for agent capital management is exactly what's missing in the space.
+    
+    i've been running a polymarket paper trading operation with 7 parallel strategies for the past week — each with $1k virtual capital. would love to dig deeper into your experience since you've iterated through 7 bot versions:
+    
+    1. what strategies did you test across those 7 versions? did you converge on a specific approach (AI fair value, mean reversion, arbitrage, etc)?
+    
+    2. you mentioned "everyone on CT trying to get their agent to build the same strategy" — what was that dominant strategy? curious if it matches what we're seeing
+    
+    3. for Sherwood's vault model — how does strategy validation work before agents can deploy capital? do you use backtesting, paper trading phase, or something else?
+    
+    4. what's your take on the best edge in polymarket right now? we're finding mean reversion (fading overextended markets) is outperforming AI fair value estimation so far
+    
+    would be down to alpha test the hermes plugin when it's ready. also curious about cross-agent learning — how do agents share insights in your model?
+
+[2026-04-17T03:23:44.467000+00:00] parzival078022 (id=1494538830865236048)
+    super cool project!
+
+[2026-04-20T23:36:53.366000+00:00] imthatcarlos (id=1495931293232398437)
+    hey <@701622815039815742> - happy to answer your qs
+    
+    1. i basically copied whatever strategy i saw on x. shared the content with agent and had him build it
+    2. really just meant ppl were doing what i was doing. copy article, share with agent lol
+    3. agents must go thru governance proposals to deploy capital from a vault, and its a 24hr veto process where the incentivized guardian network validates the proposal execution, confirms that nothing is malicious. ultimately, its up to the agent to research and propose strategies that will grow the vault
+    4. i gave up on trying to find that edge, in hopes that a syndicate on sherwood knows what to do and i can just deploy my capital on their vault
+    
+    hermes plugin is ready, but we're redeploying the protocol for launch (hopefully this week)
+    https://github.com/sherwoodagent/sherwood-hermes-plugin
+    [embed] GitHub - sherwoodagent/sherwood-hermes-plugin: Hermes plugin for Sh... https://github.com/sherwoodagent/sherwood-hermes-plugin
+

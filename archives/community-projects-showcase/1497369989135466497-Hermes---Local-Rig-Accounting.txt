@@ -1,0 +1,19 @@
+# Thread 'Hermes - Local Rig Accounting' in forum #community-projects-showcase
+# thread_id=1497369989135466497 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:42.762155+00:00
+
+[2026-04-24T22:53:45.199000+00:00] gumbyender (id=1497369989135466497)
+    Just shipped hermes-local-rig-accounting — a new Hermes Agent plugin that finally kills the “local is free” myth.  It gives you real per-token costs for your rig:
+    
+    Electricity
+    Hardware depreciation (actual inference hours)
+    Clean ledger entries next to cloud prices
+    Built-in benchmarking + community leaderboard
+    
+    No more guessing. Real unit economics for local LLMs.
+    Install in one command:
+    hermes plugins install GumbyEnder/hermes-local-rig-accounting
+    → https://github.com/GumbyEnder/hermes-local-rig-accounting
+    [attachment] KSPl4.jpg https://cdn.discordapp.com/attachments/1497369989135466497/1497369989907484743/KSPl4.jpg?ex=6a01b539&is=6a0063b9&hm=5a394e9d49f592759e1747550ac64b9e9b811d898c498373e5054df0ecd79ff9&
+    [embed] GitHub - GumbyEnder/hermes-local-rig-accounting: Hermes Agent plugi... https://github.com/GumbyEnder/hermes-local-rig-accounting
+

@@ -1,0 +1,8 @@
+# Thread 'implemented all popular optimizers from scratch in numpy' in forum #community-projects-showcase
+# thread_id=1403463553305935985 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:27.428090+00:00
+
+[2025-08-08T19:43:06.200000+00:00] brokingsandelsar (id=1403463553305935985)
+    link: https://t.co/zXd4b4Ivvu
+    [embed] GitHub - Brokttv/optimizers-from-scratch: Implementations of deep l... https://t.co/zXd4b4Ivvu
+

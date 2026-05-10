@@ -1,0 +1,145 @@
+# Thread 'Hermes-Neurovision' in forum #community-projects-showcase
+# thread_id=1484567560178499905 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:13.808768+00:00
+
+[2026-03-20T15:01:28.278000+00:00] tranquilflow (id=1484567560178499905)
+    A real-time ASCII terminal visualizer that connects directly to a running Hermes agent and turns everything it does into animated visuals. Run it while you are working with Hermes to see it react in response to your prompts and its processes. Or set it up so that whenever a cronjob fires up your agent, so too will the visualizer. Built in skill system that makes it easy to create your screen, as well as export/import it to others.
+    
+    Built for the NousResearch hackathon 🙂
+    
+    https://github.com/Tranquil-Flow/hermes-neurovision
+    https://x.com/FlowTranquil/status/2033274233032523891
+    
+    **Modes**
+    - **Live** (default) — connects all sources, reacts to real agent events, ambient background animation at rest
+    - **Quiet** — live mode with no ambient animation, only real events drive the visuals
+    - **Gallery** — browse all 92 themes with keyboard navigation, real-time tuner overlay. Adds simulated activity so you can see all the visuals on disaply.
+    - **Daemon** — gallery screensaver when idle, automatically switches to live when agent activity detected
+    - **Overlay** (`--overlay`, `--cli`) — renders the animation behind your active terminal session using a PTY compositor. `--cli` launches Hermes chat automatically. The visualizer runs while you type.
+    - **Background** (`--bg`) — dedicated silent mode for running behind a transparent terminal window
+    
+    **Theme count and variety**
+    92 non-legacy themes in the current gallery, spread across:
+    
+    Originals (7) · Nature (5) · Cosmic (4) · Industrial (4) · Whimsical (5) · Hostile (2) · Exotic (5) · Mechanical/Retro (5) · Cosmic New (5) · ASCII Fields (10) · Extreme Fields (3) · Experimental (3) · Emergent Showcase (5) · Hybrid (2) · Emergent V2 (5) · Advanced Screens (5) · Strange Attractors (5) · Spectacular (5) · Quantum (1) · New Originals (5) · plus a handful of recent post-v0.2.1 additions including neuromorphic networks, quantum-inspired fields, hyperdrive tunnel, and cosmic mandala suite.
+    
+    Legacy node-based implementations of redesigned themes are preserved as `legacy-NAME` and available via `--include-legacy`.
+    
+    **Roadmap**
+    - v0.2.1 (current) — stabilising overlay/CLI mode: PTY compositor fixes, input passthrough, color handling. Also resolve 'visual bleed' error that shows in gallery mode when moving between screens.
+    
+    - v0.2.2 — Honcho memory integration (Honcho memory events visible as a new data source), continued conversion of legacy node-based themes to full-screen field engine
+    
+    **Install**
+    ```
+    git clone https://github.com/Tranquil-Flow/hermes-neurovision.git
+    cd hermes-neurovision
+    pip install -e .
+    python3 install_helper.py
+    hermes-neurovision
+    ```
+    
+    Python 3.10+. Zero external dependencies.
+    [attachment] neurovision-logo-square.png https://cdn.discordapp.com/attachments/1484567560178499905/1484567561096925274/neurovision-logo-square.png?ex=6a01ef48&is=6a009dc8&hm=2488d001801b3662fb6f3098a16f13f49cd75d12002e73824c1a8b4da9bed088&
+    [embed] GitHub - Tranquil-Flow/hermes-neurovision: Terminal neurovisualizer... https://github.com/Tranquil-Flow/hermes-neurovision
+    [embed]  https://twitter.com/FlowTranquil/status/2033274233032523891
+
+[2026-03-20T15:03:27.251000+00:00] tranquilflow (id=1484568059187433573)
+    **What it taps into**
+    Rather than just reading one event stream, it polls 11 independent data sources simultaneously and merges them into a unified event picture:
+    
+    - **Agent hook** — a gateway hook writes structured events to a JSONL file in real time. This covers the fine-grained lifecycle: `agent_start`, `agent_step`, `agent_end`, `session_start`, `session_reset`, tool call start/end/error, context compression start/end, checkpoint creation/rollback, MCP server connect/disconnect, MCP tool calls, provider fallback/error, and subagent spawn/completion.
+    - **Session DB** (SQLite) — polls the live session database directly. Detects the active session (most recently active, not just most recently started), tracks model switches mid-session, fires on each new message added, emits token usage updates, tracks session duration, detects tool chains (same tool called repeatedly) and tool bursts (5+ tool calls within 10 seconds).
+    - **Memory filesystem** — watches `~/.hermes/memories/` for file creation and modification. Each new memory written fires a `memory_created` event. Each time an existing memory file is touched (read/updated) it fires `memory_accessed`. Tracks total memory count and fires when it changes.
+    - **Skills filesystem** — watches `~/.hermes/skills/` recursively. Detects when a new SKILL.md is written (skill created) or an existing one is modified (skill activated/updated).
+    - **Cron** — monitors `~/.hermes/cron/` for scheduled job execution. Fires `cron_executing` when a lock file appears (job running) and `cron_completed` when it releases. Also picks up new output files as jobs finish.
+    - **Checkpoints** — watches `~/.hermes/checkpoints/` for new checkpoint directories being created. If a checkpoint disappears (rollback detected) it fires a warning-severity event.
+    - **Trajectories** — tails two JSONL logs: successful trajectories (`trajectory_logged`) and failed ones (`trajectory_failed`). Each entry includes trajectory ID, session ID, tool call sequence, and outcome.
+    - **Docker tasks** — polls `docker ps` for containers matching the delegate_task naming convention (`minisweagent-*`, `hermes-task-*`). Fires `delegate_task_started` when new containers appear and `delegate_task_ended` when they disappear.
+    - **MCP state** — checks Hermes config for MCP server state, detects connections and disconnections independently of the hook-level events.
+    - **vt_source** — terminal activity source for overlay-mode-specific reactivity.
+    
+    Also integrated with my other proejct, <#1483367766848176219>:
+    - **Aegis security layer** — tails the hermes-aegis audit trail at `~/.hermes-aegis/audit.jsonl`. Maps security decisions to events: `threat_blocked` (dangerous command caught or hard-blocked), `secret_redacted` (outbound secret scrubbed), `secret_detected`, `rate_anomaly`. These show up visually distinct — a shatter effect in red — so you can see security interventions as they happen.
+    
+    Every source is optional and fails gracefully — if aegis isn't running, if docker isn't installed, if the cron directory doesn't exist, it just skips that source silently.
+    
+    
+    
+    .
+
+[2026-03-20T15:03:53.793000+00:00] tranquilflow (id=1484568170512650330)
+    **What those events drive**
+    Each event is mapped through a bridge layer to one or more `VisualTrigger`s, which drive the animation. But the interesting part is what theme authors can build on top of that.
+    
+    The plugin API gives theme authors 12 distinct reactive element types, each with its own motion physics:
+    
+    - `PULSE` — radial burst from center, dramatic, one-shot. Used for: session start/end, agent wake.
+    - `RIPPLE` — concentric rings expanding from a point. Used for: tool calls, MCP calls.
+    - `STREAM` — sustained particle flow in a direction. Used for: LLM token generation, continuous output.
+    - `BLOOM` — organic growth that expands, holds, then fades. Used for: memory writes, skill creation.
+    - `SHATTER` — explosion of fragments scattering outward. Used for: errors, crashes, threat_blocked.
+    - `ORBIT` — persistent rotating elements that stay alive for the event duration. Used for: cron ticks, background subagents.
+    - `GAUGE` — fills or drains a bar or arc, color-coded at thresholds. Used for: token usage, context pressure, cost updates.
+    - `SPARK` — bright flash with lingering afterglow. Used for: dangerous commands, approval requests.
+    - `WAVE` — horizontal sweep across the full screen. Used for: context compression, checkpoint rollback.
+    - `GLYPH` — a symbol/sigil that appears and slowly morphs. Used for: personality changes, reasoning mode changes.
+    - `TRAIL` — a path or line tracing movement. Used for: browser navigation, file edits, git commits.
+    - `CONSTELLATION` — dots that connect and disconnect with lines. Used for: MCP server connections, provider health changes.
+    
+    Themes can also override `react()` directly with event_kind strings to return any Reaction with any intensity, origin point, color, duration, and optional sound cue.
+
+[2026-03-20T15:04:03.259000+00:00] tranquilflow (id=1484568210215932096)
+    **Visual design systems available to theme authors**
+    The engine supports three main archetypes for how a screen generates its visuals, and authors can combine them freely:
+    
+    **Full-field math** — every cell computed per-frame from a formula. Plasma fields, wave interference, vortex tunnels, Lissajous curves, SDF shapes, polar spirals, aurora curtains. The entire screen is a living equation.
+    
+    **Density accumulator** — a float grid that accumulates hits and decays each frame. Used for strange attractors (Lorenz, Rössler, Halvorsen, Aizawa, Thomas), IFS fractals (Barnsley fern, chaos games), orbital traces. Glowing trails emerge from the mathematics.
+    
+    **Simulation grid** — a state grid stepped forward each frame: Conway's Life variants, Brian's Brain, Gray-Scott reaction-diffusion (multiple parameter sets for coral/spots/spirals/labyrinths), wave equation, Langton's ant, DLA crystal growth.
+    
+    On top of any of these, the post-processing pipeline composes additional effects per-frame:
+    
+    - `warp_field` — per-pixel coordinate distortion, sinusoidal or rotation-based
+    - `symmetry` — mirror_x, mirror_y, mirror_xy (mandala), rotate_4 (kaleidoscope)
+    - `glow_radius` — bloom halo around bright cells, makes everything feel luminous
+    - `echo_decay` — N-frame afterimage ring buffer, trails and ghost smears
+    - `decay_sequence` — cells age through a character sequence (e.g. `█▓▒░·. `) producing dissolution and erosion
+    - `void_points` — dynamic hole-punching and negative space carving
+    - `force_field` — vector force applied to cell positions (radial push/pull or vortex spin)
+    - `render_mask` — a boolean stencil for iris reveals, shape cutouts, animated wipes
+    
+    Six autonomous emergent systems can run alongside the main render and be composited in the background, midground, or foreground:
+    
+    - **Physarum** — slime mould network formation, beautiful organic tubes
+    - **Reaction-diffusion** (Gray-Scott) — self-organising patterns, spots/spirals/labyrinths
+    - **Cellular automaton** — Brian's Brain, custom rule sets
+    - **Neural field** — excitatory/inhibitory wave propagation across a grid
+    - **Wave field** — 2D wave equation with damping
+    - **Boids** — N-body flocking with separation/alignment/cohesion, rendered as directional glyphs
+    
+    The reactive element system (BLOOM, SHATTER, etc.) overlays on top of all of this and responds to your specific agent events — so an error doesn't just log to a panel, it visually shatters across whatever scene is currently running.
+    
+    **Sound System**
+    Sound is optional: `bell` (terminal bell, universal), `flash` (screen flash), `say` (macOS TTS via afplay with Whisper voice), or `file` (custom WAV/MP3). Each sound cue has a 0.5s cooldown per name to prevent fatigue. Themes can attach sound to any Reaction.
+    
+    
+    
+    .
+
+[2026-03-20T15:07:52.483000+00:00] tranquilflow (id=1484569171650937022)
+    Demo of gallery mode.
+    [attachment] neurovision-1.mov https://cdn.discordapp.com/attachments/1484567560178499905/1484569165657542696/neurovision-1.mov?ex=6a01f0c7&is=6a009f47&hm=929188351eea3a6f143f818374479af7bda10cb5ff965d13eea8b23fe76cac90&
+
+[2026-03-20T15:08:28.023000+00:00] tranquilflow (id=1484569320716632225)
+    Demo of legacy screens. These utilize the 'node based' engine from v0.1. Ultimately I shifted to the ASCII engine, but still have the option to create screens using the node style, or even have a hybrid.
+    [attachment] neurovision-classic-demo.mov https://cdn.discordapp.com/attachments/1484567560178499905/1484569309807382538/neurovision-classic-demo.mov?ex=6a01f0e9&is=6a009f69&hm=f60856a85c61c90e42b7bdb7f415f0e75ada70b5942d02f26d6a2918a5f08988&
+
+[2026-03-20T15:08:55.294000+00:00] tranquilflow (id=1484569435099369684)
+    CLI demo (WIP)
+    [attachment] neurovision-dFINAL.mov https://cdn.discordapp.com/attachments/1484567560178499905/1484569432398364814/neurovision-dFINAL.mov?ex=6a01f106&is=6a009f86&hm=46bbfd8daf60fa72370da0bb3e2ceac19ddd82088d93dd27873bbde832965f30&
+
+[2026-03-20T15:09:04.934000+00:00] tranquilflow (id=1484569475532587142)
+    [attachment] Screenshot_2026-03-16_at_5.11.28_AM.png https://cdn.discordapp.com/attachments/1484567560178499905/1484569475280932904/Screenshot_2026-03-16_at_5.11.28_AM.png?ex=6a01f110&is=6a009f90&hm=343f7b8e941b8001b90646a67c7ea747a9481175daf932516b44af9ef0443b89&
+

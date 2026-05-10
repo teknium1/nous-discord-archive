@@ -1,0 +1,60 @@
+# Thread 'Memori-City : Local Memory City for Hermes + Collab option' in forum #community-projects-showcase
+# thread_id=1488272382887198925 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:00.030538+00:00
+
+[2026-03-30T20:23:06.844000+00:00] 0x_404 (id=1488272382887198925)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272384510132264/image.png?ex=6a0191eb&is=6a00406b&hm=1873993fabff2f0c1a9d495af73c0d59024e8bfb28bc81252287031483042415&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272385235750912/image.png?ex=6a0191eb&is=6a00406b&hm=782f70ebd1d7f293f91ae5491eb0e2539a83bd085aab36b4d4435dba85e78b29&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272386330595348/image.png?ex=6a0191eb&is=6a00406b&hm=ef28ebc198e4af35da428ee7c6385a9961b3e5eb426c2e261549413957acd99f&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272387165388800/image.png?ex=6a0191eb&is=6a00406b&hm=d67d454813b5fb0e6378482d6fe874fc903d1be49832cbeccbb29bea433b65e6&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272387987476560/image.png?ex=6a0191ec&is=6a00406c&hm=ec42f41ffacf7b7061333ea82690542d4362b8e422545f1ab4a78342d3007be7&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272390575226983/image.png?ex=6a0191ec&is=6a00406c&hm=850500980d0367f014d62b162987c3201fe476f0c736aa2abf4ab168c54ee3eb&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272391674265690/image.png?ex=6a0191ec&is=6a00406c&hm=73e12649955dc0b8f866bdb5cee3d3471b4bc4e377fe85f100cc3df0029c7121&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272392345227386/image.png?ex=6a0191ed&is=6a00406d&hm=13b597e96f3c4340b28c51b7872e1ac16c65ff47a9d7f6860924f04b280de3c0&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272393251061770/image.png?ex=6a0191ed&is=6a00406d&hm=a4170342856d4161f4ee0ea1f0cf4841c18fceb281f2a6601a731048907804b8&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488272393838268427/image.png?ex=6a0191ed&is=6a00406d&hm=6c321f1f796fc6035b0ad7068fd6deecc2eaecede125d6db11b8e7b308b09c34&
+
+[2026-03-30T20:23:18.090000+00:00] 0x_404 (id=1488272430056083547)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1488272382887198925/1488272429716340756/message.txt?ex=6a0191f6&is=6a004076&hm=582b9e2cc5e3baee5945472ce90f16a70f0a38111a887f25a8d96a22090c813e&
+
+[2026-03-30T20:24:39.307000+00:00] 0x_404 (id=1488272770704867419)
+    Just one of my many projects I have been working  on sitting on , I enjoy the Hermes community so I made this natvely work with Hermes because I got sick of every app natively only working with Openclaw. 
+    
+    Its going to be MIT Open-sourced . Just get distracted with other projects and tweaking my Hermes stack
+
+[2026-03-30T20:39:42.992000+00:00] eliottcesi (id=1488276561034743919)
+    Wow it will be nice
+
+[2026-03-30T20:40:10.269000+00:00] 0x_404 (id=1488276675442642944)
+    its already live-ish im just lazy guna drop a link in a few or a video demo
+
+[2026-03-30T20:41:38.024000+00:00] eliottcesi (id=1488277043513921638)
+    I understand, I'll turn on the notification just in case. I'm curious.
+
+[2026-04-01T01:14:18.627000+00:00] 0x_404 (id=1488708052721996041)
+    https://github.com/0x404ethsol/Memori-City Repo . Will Demo vids, still in progress
+    [embed] GitHub - 0x404ethsol/Memori-City: Memori-City is a free open-source... https://github.com/0x404ethsol/Memori-City
+
+[2026-04-01T15:19:50.711000+00:00] 0x_404 (id=1488920838504845312)
+    https://github.com/outsourc-e/hermes-workspace implemented <@1470639051819319367> 's hermes workspace natively into Memori-City still WIP
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488920838924406936/image.png?ex=6a01f396&is=6a00a216&hm=baee367fac6f0e7371ad1049ae349b9b9263653ceac24f7d93a391768368c19a&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488920839884640427/image.png?ex=6a01f397&is=6a00a217&hm=89a7a2c8bffbdf960999673ab9bbf805d13974a6d1d5be3ef6c4e58ff1ede156&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488920840824291600/image.png?ex=6a01f397&is=6a00a217&hm=ca609c9a8e35f475c652045adce95555fc37ab178be135937b766ba4ee211941&
+    [embed] GitHub - outsourc-e/hermes-workspace: Native web workspace for Herm... https://github.com/outsourc-e/hermes-workspace
+
+[2026-04-01T16:57:35.819000+00:00] outsourc_e (id=1488945438550659334)
+    Nicee
+
+[2026-04-01T18:55:39.695000+00:00] 0x_404 (id=1488975150480228409)
+    mobile ui/ux
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488975148701843626/image.png?ex=6a02262b&is=6a00d4ab&hm=f0b956c705537bf0cd8b824367d8a0ea9890aa07e2c66c34d518a52954b3a823&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488975149058228234/image.png?ex=6a02262b&is=6a00d4ab&hm=98b345a2ec78c2d2e1bc5c4f3db7f3406b859bd254e6554b60eb3309c9f18233&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488975149494698244/image.png?ex=6a02262b&is=6a00d4ab&hm=68c62191696e1c84a0f2c2a374d017205a2ca8c80bf2f1c107b8d44e4da8a3ab&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488975149834305711/image.png?ex=6a02262b&is=6a00d4ab&hm=1e9af2279cdcdc590b0c62cd3131d7ae5ed686772ce717e671548c2dab058240&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488272382887198925/1488975150195146812/image.png?ex=6a02262b&is=6a00d4ab&hm=3c2a7446a286eed76ac4915112f85da54222594719c2abb4145b19a1ed8eaf82&
+    [reply to outsourc_e msg=1488945438550659334]
+
+[2026-04-02T15:50:23.531000+00:00] 0x_404 (id=1489290913774829698)
+    Video Preview
+    [attachment] MemoriGlory.mp4 https://cdn.discordapp.com/attachments/1488272382887198925/1489290890685055157/MemoriGlory.mp4?ex=6a01faba&is=6a00a93a&hm=12d5efda94859c3b603eb921b6e9c1910d93ba3fcd0242ba46129ad7e2511f0a&
+

@@ -1,0 +1,8 @@
+# Thread 'Hermes: icarus plugin' in forum #plugins-skills-and-skins
+# thread_id=1488306382133526630 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:51.376560+00:00
+
+[2026-03-30T22:38:12.896000+00:00] safaisdeving (id=1488306382133526630)
+    Self-memory and replacement models for Hermes agents. Remember your work. Train your replacement.  🙂 https://github.com/esaradev/icarus-plugin
+    [embed] GitHub - esaradev/icarus-plugin: Self-memory and replacement models... https://github.com/esaradev/icarus-plugin
+

@@ -1,0 +1,33 @@
+# Thread 'Friday Agents: multi agent library' in forum #community-projects-showcase
+# thread_id=1317882043874676747 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:42.663694+00:00
+
+[2024-12-15T15:52:44.324000+00:00] amir_s365 (id=1317882043874676747)
+    Friday Agents. It’s a JavaScript library designed to simplify complex tasks by intelligently picking the right tools based on your prompt. Whether it’s generating code, visualizing data, searching... etc.
+    it can use multiple tools for complex tasks.
+    Check here:
+    https://github.com/amirrezasalimi/friday-agents
+    [attachment] Gc9brMoWsAAUQD3.png https://cdn.discordapp.com/attachments/1317882043874676747/1317882044210085918/Gc9brMoWsAAUQD3.png?ex=6a01fb4c&is=6a00a9cc&hm=2d385cff55474b515edd2948b2fec35cb85d1eec39dbbb97c21b1ef47c64756f&
+
+[2024-12-15T16:07:47.185000+00:00] amir_s365 (id=1317885830748049470)
+    Search & visualization demo
+    [attachment] image.png https://cdn.discordapp.com/attachments/1317882043874676747/1317885830878203974/image.png?ex=6a01fed3&is=6a00ad53&hm=ffe3bfcfa390a92b2709eae1fb311a31eb9ca7615fe5cc309b7377a7241e8c67&
+
+[2024-12-15T16:08:40.295000+00:00] amir_s365 (id=1317886053507399692)
+    the good thing is, behind is a **llama 8b** model and it's not fine-tuned for function-calling, it's just works with json.
+
+[2024-12-15T16:36:35.480000+00:00] amir_s365 (id=1317893079742681210)
+    Current Ui & Agents it's easily extensible
+    [attachment] image.png https://cdn.discordapp.com/attachments/1317882043874676747/1317893079444754544/image.png?ex=6a020593&is=6a00b413&hm=a4c6a10e9a404ce4b241d8ab90f0752edb55213aa815450b741f18eebb1a84d5&
+
+[2024-12-15T23:19:41.899000+00:00] amir_s365 (id=1317994524936765510)
+    can be the next version 👀
+    [attachment] image.png https://cdn.discordapp.com/attachments/1317882043874676747/1317994524449964122/image.png?ex=6a01bb4d&is=6a0069cd&hm=815cc0d27ed6ae11cacdbca160829bf14d6a583618b39dcd4dbe8d9efdb46524&
+
+[2024-12-16T18:51:38.141000+00:00] amir_s365 (id=1318289452631851029)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1317882043874676747/1318289452392648794/image.png?ex=6a02253a&is=6a00d3ba&hm=246a4b2d5c490053fcd0c8184181278ba2eaf73c0b5fa35c60edd82253a012ee&
+
+[2024-12-16T18:52:07.725000+00:00] amir_s365 (id=1318289576715878440)
+    my local Qwen 3B works well on multi tasks!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1317882043874676747/1318289576451903619/image.png?ex=6a022557&is=6a00d3d7&hm=ba89ecedc05146d0b30d35b982b51dd94b8a5b7b4023f8842127daea5d6f2fda&
+

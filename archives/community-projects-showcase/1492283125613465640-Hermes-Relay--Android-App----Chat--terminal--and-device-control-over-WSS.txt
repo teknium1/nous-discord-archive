@@ -1,0 +1,141 @@
+# Thread 'Hermes-Relay (Android App) - Chat, terminal, and device control over WSS' in forum #community-projects-showcase
+# thread_id=1492283125613465640 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:25.546346+00:00
+
+[2026-04-10T22:00:22.426000+00:00] codename_11 (id=1492283125613465640)
+    Hermes-Relay v0.1.0 is live on Github 🚀
+    
+    Native Android app for Hermes — built because I wanted a direct, no-middleman experience with the Hermes system and interface.
+    
+    Streaming chat, session management, slash commands, tool visualization, file attachments, message queuing. More to come soon!
+    
+    GitHub: https://github.com/Codename-11/hermes-relay
+    Docs: https://codename-11.github.io/hermes-relay/
+    
+    If you want to kick the tires before production — reply here or ping me and I'll send the closed testing invite. Would love the feedback, especially on chat streaming and how it holds up with different server configs, etc :). 
+    
+    Loving Hermes and very appreciative of all the hard work! Hopefully I can help contribute ❤️
+    
+    ---
+    
+    Hermes-Relay v0.4.0 is live on Github — Google Play in review! 🚀
+    
+    Native Android app for Hermes — built because I wanted a direct, no-middleman experience with the Hermes system and interface.
+    
+    Chat — streaming, session management, slash commands, tool visualization, file attachments, message queuing.
+    Voice — real-time voice conversation with TTS/STT, morphing sphere visualizer, and voice-to-bridge intent routing.
+    Bridge — the agent can read your screen, tap, type, swipe, long-press, drag, control media, access clipboard, send texts, make calls, and more — behind a five-stage safety gate system.
+    
+    Two build tracks: Google Play (conservative — chat, voice, notifications) and Sideload (full agent device control). Both available on the releases page.
+    [attachment] play-store-feature-1024x500.png https://cdn.discordapp.com/attachments/1492283125613465640/1492283125974302822/play-store-feature-1024x500.png?ex=6a01a8b6&is=6a005736&hm=251b260d44bd54b1d8754e73668bdfb8e4c6dee0f45fae46c476082b86ad0042&
+    [attachment] chat_demo.mp4 https://cdn.discordapp.com/attachments/1492283125613465640/1492283126490333264/chat_demo.mp4?ex=6a01a8b6&is=6a005736&hm=17cfb48dcd672e7c6be07e1aac9909d26f1b0ecae22b12b23367f623185eeea0&
+    [embed] GitHub - Codename-11/hermes-relay: Hermes Companion — Android app... https://github.com/Codename-11/hermes-relay
+    [embed] Hermes-Relay — Android App for Hermes Agent https://codename-11.github.io/hermes-relay/
+
+[2026-04-12T02:36:13.184000+00:00] codename_11 (id=1492714932389675192)
+    Working on voice mode 👀. Terminal features added too! 🙂
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492283125613465640/1492714932112982056/image.png?ex=6a01e95d&is=6a0097dd&hm=1925afc1c788ef85f1838b5fc505622d291c030940bd02cb921a417836b3d355&
+
+[2026-04-13T23:24:04.522000+00:00] codename_11 (id=1493391353407602832)
+    **__v0.3.0 Released:__**🚀
+    
+    Bridge feature added as preview - still testing full functionality.
+    
+    The agent can now read your screen, tap, type, swipe, and take screenshots on your phone.
+    
+    https://github.com/Codename-11/hermes-relay/releases/tag/v0.3.0
+    [embed] Release v0.3.0 · Codename-11/hermes-relay https://github.com/Codename-11/hermes-relay/releases/tag/v0.3.0
+
+[2026-04-14T00:01:23.665000+00:00] oabdulnaby (id=1493400745054044261)
+    I'm very interested in testing this out, but google protect stops me from installing apks
+
+[2026-04-14T15:53:32.446000+00:00] codename_11 (id=1493640360528973824)
+    I actually just was approved today for Google-Play global rollout! 🥳 (I had to create a developer account with my LLC and provide a DUNS# and all that jazz). At work but once I get home I'll work on getting it published 🚀.
+    
+    Are you not able to allow 'install from unknown sources' via developer options? Or is it warning you even still theirin?
+    [reply to oabdulnaby msg=1493400745054044261]
+
+[2026-04-15T10:17:31.966000+00:00] oabdulnaby (id=1493918189212668005)
+    Let us know once it's finally live on play store
+
+[2026-04-15T10:39:33.355000+00:00] rakaarwaky (id=1493923731519569980)
+    This is what iam loking for so long
+    [reply to codename_11 msg=1492283125613465640]
+
+[2026-04-15T10:39:59.003000+00:00] rakaarwaky (id=1493923839095078952)
+    Finally😭
+
+[2026-04-15T14:33:17.349000+00:00] oabdulnaby (id=1493982552413831239)
+    It looks really good, and I'm looking forward to using an apk version
+
+[2026-04-16T01:09:09.558000+00:00] codename_11 (id=1494142574376648905)
+    Working on releasing now! 🙂 Going to do an open-test so anyone that want's to try the Google Play version can via the provided link here shortly. Otherwise APK will always be available and currently is the 'full' version in regards to 'Bridge' functionality - agent command/control on your phone - due to Google Play restrictions of course. I'll sqeeze through as much as they'll let me 😉
+
+[2026-04-16T01:15:18.303000+00:00] codename_11 (id=1494144121005277378)
+    Hermes-Relay (Android App) - Chat, terminal, and device control over WSS
+
+[2026-04-16T03:20:56.857000+00:00] codename_11 (id=1494175739992346644)
+    v0.4.0 Released — Bridge Feature Expansion + Google Play! 🚀
+    
+    Big one. v0.4 roughly triples the bridge surface from v0.3. The agent can now long-press, drag, read/write clipboard, control media playback, fire raw Android Intents, search the accessibility tree with filters, detect screen changes without re-downloading the whole tree, run batched macro workflows, and more — all still behind the same five-stage safety gate system.
+    
+    Sideload-only goodies:
+    - Direct SMS, one-tap calling, contact lookup, and GPS location — so voice commands like "text Mom saying on my way" or "call Hannah" just work
+    - Voice → bridge intent routing with destructive-verb confirmation (the agent asks before it sends)
+    - Vision-driven android_navigate for close-the-loop UI automation
+    
+    Google Play version is in review! 🥳 I'll drop the open testing link here as soon as it's live. The Play build is a conservative feature set (chat, voice, notifications — no agent device control) to stay within Play's Accessibility policy. Sideload remains the full-capability build for those who want the agent to actually do things on your phone.
+    
+    Other highlights:
+    - Per-app skill playbooks so the agent knows common flows without fumbling
+    - Wake-lock-guarded gesture dispatch — commands land even on dim/idle screens
+    - Accessibility event stream — agent can wait for UI events instead of polling
+    - Multi-window screen reads (notification shade, popups, system UI)
+    - Tons of bug fixes from on-device testing
+    
+    GitHub: https://github.com/Codename-11/hermes-relay/releases/tag/v0.4.0
+    Docs: https://codename-11.github.io/hermes-relay/
+    
+    APK sideload is available now on the release page. Would love feedback — especially on voice-to-bridge intents and the new phone control tools if anyone's brave enough to let their agent send texts for them 😎
+    
+    Please don't hesitate to give feedback, thoughts, ideas, itssues, etc! ❤️
+    [embed] Release v0.4.0 · Codename-11/hermes-relay https://github.com/Codename-11/hermes-relay/releases/tag/v0.4.0
+    [embed] Hermes-Relay — Android App for Hermes Agent https://codename-11.github.io/hermes-relay/
+
+[2026-04-18T01:19:59.170000+00:00] codename_11 (id=1494870074778062919)
+    Still waiting for Google-Play to approve the listing but APK is available of course! Working on quite a few enhancements to the Bridge feature. Major enhancements to 'Unattended Access' - Better permission control - easier access to system settings via bridge page. Bug fixes and enhancements of course 🙂 
+    
+    Considering posting of F-Droid as well. Not sure how many are on that as well.
+
+[2026-04-18T14:45:37.998000+00:00] codename_11 (id=1495072822517567580)
+    Working on a plugin for the Dashboard web-ui to allow managing the Relay service (for Terminal/Bridge features) - pairing, session management, activity log, etc. Will push to main shortly! Excited to use the new plugin support for the built-in web dashboard 😁
+
+[2026-04-18T14:52:29.570000+00:00] codename_11 (id=1495074548775653518)
+    Had my hermes agent order my starbucks this morning using the Bridge feature (device control) - that was fun 😯
+
+[2026-04-18T15:37:18.597000+00:00] rakaarwaky (id=1495085827372482560)
+    I cant wait
+    [reply to codename_11 msg=1494870074778062919]
+
+[2026-04-18T15:38:12.845000+00:00] codename_11 (id=1495086054904959058)
+    Have you been able to try it out via APK install at all?
+    [reply to rakaarwaky msg=1495085827372482560]
+
+[2026-04-18T15:40:00.650000+00:00] rakaarwaky (id=1495086507071901756)
+    Whic one?
+    [attachment] Screenshot_2026-04-18-22-39-36-443_com.android.chrome.jpg https://cdn.discordapp.com/attachments/1492283125613465640/1495086506786947202/Screenshot_2026-04-18-22-39-36-443_com.android.chrome.jpg?ex=6a01f850&is=6a00a6d0&hm=f26613e3072c3c39ce8e500bd83e6d730a1a475f1eb106c35fc9d538b73ac0fc&
+
+[2026-04-18T15:41:08.365000+00:00] codename_11 (id=1495086791089328220)
+    Sideload release - v0.5.0 is the latest version currently 🙂 Working on 0.5.1
+    
+    https://github.com/Codename-11/hermes-relay/releases/download/v0.5.0/hermes-relay-0.5.0-sideload-release.apk
+
+[2026-04-19T18:40:15.997000+00:00] codename_11 (id=1495494257790947338)
+    Release 0.6.0 out - now with profiles support! 🙂 Along with bug-fixes/improvements of course.
+    
+    https://x.com/axiom_labs_dev/status/2045934047939924161
+    [embed]  https://twitter.com/axiom_labs_dev/status/2045934047939924161
+
+[2026-04-30T12:53:51.460000+00:00] oabdulnaby (id=1499393347645603900)
+    Finally Installed it on my mobile, Play protect was stopping the install, had to disable it first
+

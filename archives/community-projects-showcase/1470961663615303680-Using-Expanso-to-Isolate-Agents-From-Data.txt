@@ -1,0 +1,32 @@
+# Thread 'Using Expanso to Isolate Agents From Data' in forum #community-projects-showcase
+# thread_id=1470961663615303680 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:25.506540+00:00
+
+[2026-02-11T01:56:29.752000+00:00] aronchick (id=1470961663615303680)
+    What We Launched
+    
+    A zero-trust data access layer for AI agents. Expanso pipelines sit between an agent and sensitive data, enforcing principle of least privilege at the infrastructure level. The agent calls an HTTP endpoint, the pipeline filters and transforms the data, and returns only what’s needed. No raw credentials, no unfiltered access.
+    
+    We demonstrated this integration with OpenClaw, but show support for anything, to demonstrate and distribute this. The launch includes:
+    
+    Blog post: “Your AI Agents Are Running Naked” — https://expanso.io/blog/2026-002-your-ai-agents-are-running-naked/
+    
+    Landing page: https://expanso.io/expanso-hearts-openclaw
+    
+    3 demo videos showing real-world use cases:
+    - Classified data extraction (PII filtering): https://youtu.be/-oXUU52CI48
+    - Log intelligence (99.9% data reduction): https://youtu.be/G03jG2ta8hU
+    - Multi-source MultiAPI secure aggregation: https://youtu.be/vcS4QNDXA5A1 
+    
+    “Your AI agents have raw DB credentials, API keys, and full file access. That’s not a feature — it’s a liability.”
+    [embed] Your AI Agents Are Running Naked https://expanso.io/blog/2026-002-your-ai-agents-are-running-naked/
+    [embed] Expanso ❤️ OpenClaw - Connect 200+ Data Sources in Minutes | Ex... https://expanso.io/expanso-hearts-openclaw
+    [embed] Stop Giving Agents Raw Access: The Local Files Solution https://www.youtube.com/watch?v=-oXUU52CI48
+    [embed] Stop Giving Agents Raw Access: The Database Solution https://www.youtube.com/watch?v=G03jG2ta8hU
+
+[2026-02-11T03:29:33.382000+00:00] teknium (id=1470985083056816209)
+    This sounds pretty useful to hide secrets from the model
+
+[2026-02-15T21:58:27.268000+00:00] aronchick (id=1472713697863532608)
+    That’s the idea! I would love your feedback if there’s anything we can do
+

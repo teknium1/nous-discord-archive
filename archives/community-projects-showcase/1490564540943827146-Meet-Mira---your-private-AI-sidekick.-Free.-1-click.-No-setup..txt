@@ -1,0 +1,21 @@
+# Thread 'Meet Mira - your private AI sidekick. Free. 1-click. No setup.' in forum #community-projects-showcase
+# thread_id=1490564540943827146 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:41.282100+00:00
+
+[2026-04-06T04:11:19.911000+00:00] miriel8403 (id=1490564540943827146)
+    I'm a physicist. Zero Python experience 6 months ago. Built her because I was tired of renting intelligence from companies that profit from my data.
+    
+    She runs 100% offline on a 5-year-old laptop with a 6GB GPU. 131k context window. 8B model. No cloud, no API keys, no Ollama tuneup, no Docker, no config. One click and she works. Everything AES-256 encrypted. Take her anywhere via Telegram.
+    
+    Not a sandbox you assemble - a finished sidekick. Not a plugin for someone else's platform. Standalone, opinionated, optimized out of the box. She searches the web when she decides she needs to. She reads your documents. She is brutally honest and she will not coddle you. I have the argument losses to prove it.
+    
+    NyxVox is a platform for personal AI sidekicks. Mira is the first.
+    Ghost in the Wire is free. Because everyone deserves their own.
+    
+    If you try her - tell me honestly. Does she work? Does she feel right? Does she crash? I need real feedback from people who get it before I decide whether to keep building or shelve her.
+    
+    📥 Download: https://huggingface.co/datasets/Mirielz/NyxVox
+    🐛 Bug reports & feedback: https://github.com/Mirielz/NyxVox
+    [embed] Mirielz/NyxVox · Datasets at Hugging Face https://huggingface.co/datasets/Mirielz/NyxVox
+    [embed] GitHub - Mirielz/NyxVox: Fully local AI sidekick. Brutally honest. ... https://github.com/Mirielz/NyxVox
+

@@ -1,0 +1,402 @@
+# Thread 'Hermes-Symbiosis — Progressive Operating System' in forum #community-projects-showcase
+# thread_id=1500281078806479029 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:28.851733+00:00
+
+[2026-05-02T23:41:23.062000+00:00] colmeio_66868 (id=1500281078806479029)
+    ▶ Demo: https://youtu.be/C1qffO8BVSQ
+    ✦ Repo: https://github.com/Magaav/hackathon-hermes-symbiosis
+    ✦ Thread: https://x.com/VictorDeGenaro/status/2050717028479058213
+    [attachment] hermes-space-ui-agent-nous.png https://cdn.discordapp.com/attachments/1500281078806479029/1500281079112798259/hermes-space-ui-agent-nous.png?ex=6a01c063&is=6a006ee3&hm=f63d6a9248b5ba56cf61daf7072b37a55a4593b42937ee29827de2f2591df591&
+    [embed] Hermes-Symbiosis — Progressive Operating System https://www.youtube.com/watch?v=C1qffO8BVSQ
+    [embed] GitHub - Magaav/hackathon-hermes-symbiosis https://github.com/Magaav/hackathon-hermes-symbiosis
+    [embed]  https://twitter.com/VictorDeGenaro/status/2050717028479058213
+
+[2026-05-03T00:34:54.502000+00:00] colmeio_66868 (id=1500294548562120785)
+    [attachment] mario-game.jpeg https://cdn.discordapp.com/attachments/1500281078806479029/1500294548017119322/mario-game.jpeg?ex=6a01ccee&is=6a007b6e&hm=935ea29708938593d0cda0836620ace059612903be9e086a64ab75c3046a6ef2&
+    [attachment] mind-map.jpeg https://cdn.discordapp.com/attachments/1500281078806479029/1500294548298010644/mind-map.jpeg?ex=6a01ccee&is=6a007b6e&hm=b6459926b17e989ce5083609372734619474913d60e2fbe9e6d5ba4806d56156&
+
+[2026-05-03T00:36:26.521000+00:00] colmeio_66868 (id=1500294934517907507)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500294934488678420/image.png?ex=6a01cd4a&is=6a007bca&hm=a308493c7025dd53af8fc87ed81d89d1a25df2a23be4a6027d9079e87bd8d3d7&
+
+[2026-05-03T00:37:41.394000+00:00] colmeio_66868 (id=1500295248558166177)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500295248285270156/image.png?ex=6a01cd95&is=6a007c15&hm=3dc001ba8fbeb916689e6f1ae506b0d3e5a4dff08cee6d722b56a2ee1ca6aa9e&
+
+[2026-05-03T00:38:26.782000+00:00] colmeio_66868 (id=1500295438929100845)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500295438757269524/image.png?ex=6a01cdc2&is=6a007c42&hm=c29898c32a74b93b6a2164362f01859015fb90910216c66ffff1462353a6f71e&
+
+[2026-05-03T00:39:07.628000+00:00] colmeio_66868 (id=1500295610249773187)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500295610140594176/image.png?ex=6a01cdeb&is=6a007c6b&hm=2c9bdc60eff4f36e60a3717904021902fdb65d66fb4e8d6e4bf25929eb2601ca&
+
+[2026-05-03T00:39:34.540000+00:00] colmeio_66868 (id=1500295723126620160)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500295722459988068/image.png?ex=6a01ce06&is=6a007c86&hm=8aa8124c2adef04b3da46f5eded0e41ab8ebe3ff4cece8e1e2535295c80ccf3b&
+
+[2026-05-03T02:01:29.257000+00:00] hiptodude (id=1500316336943796324)
+    What is this about?
+
+[2026-05-03T16:21:52.554000+00:00] colmeio_66868 (id=1500532860745158807)
+    one app for all apps, unified system, there are many ways to describe it... have you checked the demo out?
+    [reply to hiptodude msg=1500316336943796324]
+
+[2026-05-03T16:24:47.125000+00:00] colmeio_66868 (id=1500533592948998276)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500533592453939422/image.png?ex=6a0202cf&is=6a00b14f&hm=a49d2ac4db90ddcd28744a43f862e15dab6846bc9443205ef9c251886ec320b2&
+
+[2026-05-03T16:29:18.723000+00:00] hiptodude (id=1500534732113576006)
+    Wouldn't this be overcomplication?
+    [reply to colmeio_66868 msg=1500533592948998276]
+
+[2026-05-03T16:42:41.003000+00:00] colmeio_66868 (id=1500538097119662152)
+    well, by doing this the agent has native access to the browser. But what I am showing is a new paradigm with silly possibilities. in fact, its the opposite of overcomplicating, its having just one entry point for everything you need and you can organize it freely. With this single end point we can control all our life, in the exactly way we want... this is so disruptive that I cannot imagine what this will do in the future
+    [reply to hiptodude msg=1500534732113576006]
+
+[2026-05-03T16:43:31.982000+00:00] colmeio_66868 (id=1500538310940954717)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500538310995607642/image.png?ex=6a020733&is=6a00b5b3&hm=c3f591ae5330eb35a9bf8a2c46b9c215de49d7505c435d67fa595a84b502c24e&
+
+[2026-05-03T16:44:24.816000+00:00] hiptodude (id=1500538532543074506)
+    Doesn't it already have access to the browser through hermes? I get what you mean, but, wasn't this already a thing though? Like, giving it a feed of data from multiple devices, apps and so on.
+    [reply to colmeio_66868 msg=1500538097119662152]
+
+[2026-05-03T16:46:28.210000+00:00] colmeio_66868 (id=1500539050094760128)
+    Yes, but each task has its specialized needs... exemple, when I use `hermes-agent` in `oracle-cloud` I get ultra rate limits for everything I do in the web because they block cloud IPs...
+
+[2026-05-03T16:47:45.207000+00:00] colmeio_66868 (id=1500539373043580988)
+    I did not explain much but this space-agent has its own dialect. Yeah, mind boggling... It speaks JS only, the token usage is unmatched... So it uses much better the browser than any MCP/plugin/skill/harness I have ever tested
+
+[2026-05-03T16:48:51.343000+00:00] colmeio_66868 (id=1500539650438074448)
+    once we go WASM, I am not sure what we cannot do with it...
+
+[2026-05-04T00:56:28.690000+00:00] ricardokraft. (id=1500662364645621791)
+    https://www.google.com/search?q=codex
+    [embed] 🔎 codex - Google Search https://www.google.com/search?q=codex
+
+[2026-05-04T15:43:28.543000+00:00] colmeio_66868 (id=1500885584888205556)
+    I’ve been experimenting with making Hermes-Orchestrator itself part of the runtime.
+    
+    Instead of just running agents, the repo now guides how agents evolve it —
+    but with strict constraints:
+    
+    - prompt-level guardrails to prevent unsafe mutations
+    - extension-first policy (plugins > core edits)
+    - doc-sync enforced so reality stays consistent
+    - resumable roadmap so changes happen in controlled steps
+    
+    The key problem I’m trying to solve:
+    
+    If agents can extend the system, how do you prevent them from corrupting it?
+    
+    Right now the approach is:
+    constrain evolution through policy, structure, and small verified steps —
+    not unrestricted autonomy.
+    
+    Still early, but it’s starting to feel like a system where agents can safely
+    *participate in its evolution* without breaking it.
+    
+    Curious how others are thinking about safe long-horizon system evolution.
+
+[2026-05-04T19:59:15.050000+00:00] colmeio_66868 (id=1500949952803770433)
+    completely new paradigm...
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500949952631799838/image.png?ex=6a018c53&is=6a003ad3&hm=d6087546ecde3e7c18b85340b614e4f0dbfb742097389f9b33d37ce57f0816ab&
+
+[2026-05-04T19:59:58.832000+00:00] colmeio_66868 (id=1500950136438657024)
+    just a sketch but it feels native... and its OS agnostic as its an PWA capable of browser access sandboxed in the wasm sandboxed in the PWA
+
+[2026-05-04T20:00:05.884000+00:00] colmeio_66868 (id=1500950166016888863)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1500950165547389080/image.png?ex=6a018c85&is=6a003b05&hm=c3e7dfdb092e83fca06b2dc281bb7c001b8416e7a51e704daf170fd883d7b2bc&
+
+[2026-05-04T20:01:00.238000+00:00] colmeio_66868 (id=1500950393994084514)
+    another level of smothlessness. just setted up a roadmap for the inner WASM-Agent frontier to have a complete access to every click, move, action user takes so they can build together!
+
+[2026-05-04T20:07:37.227000+00:00] colmeio_66868 (id=1500952059086770358)
+    WASM-Agent can connect seamlessly with hermes-agent... lets work in its logo
+
+[2026-05-04T20:10:13.575000+00:00] colmeio_66868 (id=1500952714857676911)
+    WASM-Agent → portable sandboxed app/runtime surface
+
+[2026-05-05T18:34:53.085000+00:00] colmeio_66868 (id=1501291109249188142)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501291108968300684/image.png?ex=6a02214d&is=6a00cfcd&hm=5924a097127460e9109a9588795d212432e405ad35d6a559f6b5f4cdce6f1cbd&
+
+[2026-05-05T18:35:11.014000+00:00] colmeio_66868 (id=1501291184448864356)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501291184134426735/image.png?ex=6a02215e&is=6a00cfde&hm=e6dfadddd62eaf681f7322468858d86295e0e267161bd46bceb8fdf10788bbd2&
+
+[2026-05-05T18:36:07.266000+00:00] colmeio_66868 (id=1501291420386988153)
+    moving it into Stabilizing version
+
+[2026-05-05T19:08:41.721000+00:00] colmeio_66868 (id=1501299617965408257)
+    sorry guys you do not realize but i just got the new gem: WASM... you should all go WASM.... you are wasting your time....
+
+[2026-05-05T19:36:43.628000+00:00] colmeio_66868 (id=1501306672394666034)
+    you can just stream your screen to it and hermes will control your device sandboxed
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501306672126103642/image.png?ex=6a022fcb&is=6a00de4b&hm=82ec526f64d6f1c8ccb67b235b9f042ecd3dfa9ec374f28c5b2af6dd4e20d8d4&
+
+[2026-05-05T19:37:17.125000+00:00] colmeio_66868 (id=1501306812891402362)
+    🧙‍♂️
+
+[2026-05-05T19:38:48.212000+00:00] colmeio_66868 (id=1501307194937708615)
+    chromium is the ultimate harness ready to scape...  apple will try to block it 100% but the needy is for now...
+
+[2026-05-05T19:40:43.865000+00:00] colmeio_66868 (id=1501307680021811230)
+    https://tenor.com/view/shanks-haki-gif-22175957
+    [embed]  https://tenor.com/view/shanks-haki-gif-22175957
+
+[2026-05-05T20:04:02.876000+00:00] colmeio_66868 (id=1501313547899113602)
+    just spawning some client-sided engines to digest images = less tokens + simplicity + velocity + efficiency + davincii (0 latency). Browsers are already rendering engines capable of digesting the basic without overflowing LLMs...
+
+[2026-05-05T20:06:16.314000+00:00] kondrtrades (id=1501314107578646860)
+    Are you still working within the Space Agent environment, or have you gone around that fully at this point?  
+    
+    Just curious as to how you're thinking/building... because you are on another level sir.  🫡
+
+[2026-05-05T20:24:20.071000+00:00] colmeio_66868 (id=1501318653184835635)
+    let me try to cook you something
+
+[2026-05-05T20:26:45.432000+00:00] colmeio_66868 (id=1501319262873063504)
+    the problem with space-agent is that `react` as js framework is not the right tool for managing widgets...
+
+[2026-05-05T20:28:39.794000+00:00] colmeio_66868 (id=1501319742542319678)
+    ```
+    C / C++ / Rust / Go / Zig / etc
+            ↓
+         WebAssembly
+            ↓
+    WASM runtime / browser engine
+            ↓
+    Native CPU instructions
+    ```
+    Whereas JS is more like:
+    ```
+    JavaScript source
+            ↓
+    JS engine parsing + optimizing + JIT
+            ↓
+    Native CPU instructions
+    ```
+
+[2026-05-05T20:32:59.978000+00:00] colmeio_66868 (id=1501320833833111633)
+    Before:
+    client = interface
+    server = engine
+    
+    With WASM:
+    client = interface + local engine
+    server = sync / auth / heavy backend
+
+[2026-05-05T20:33:20.182000+00:00] colmeio_66868 (id=1501320918574829599)
+    ```
+    SQLite in the browser
+    local search engines
+    PDF parsers/renderers
+    image/video/audio processors
+    syntax analyzers
+    game/physics engines
+    CAD/geometry kernels
+    compression/decompression
+    crypto/signature verification
+    OCR/preprocessing
+    LLM tokenizers
+    small AI inference modules
+    emulators
+    plugin sandboxes
+    rule engines
+    data validation engines
+    workflow runtimes
+    ```
+
+[2026-05-05T20:34:40.315000+00:00] colmeio_66868 (id=1501321254676729956)
+    Embed the engine.
+    Keep the UI light.
+    Let the client do real work.
+    
+    The client is no longer a thin shell.
+    
+    It can carry embedded engines:
+    search, memory, parsing, rendering, validation,
+    simulation, automation, and agent tools.
+    
+    Each one sandboxed.
+    Each one portable.
+    Each one spawnable.
+    
+    React / Space UI
+      - layout
+      - controls
+      - user interaction
+      - visualization
+    
+    WASM modules
+      - compute
+      - parsing
+      - simulation
+      - validation
+      - local storage/search
+      - deterministic tools
+    
+    Agent layer
+      - decides what to load
+      - wires modules together
+      - explains capabilities
+      - orchestrates workflows
+
+[2026-05-05T20:34:51.329000+00:00] colmeio_66868 (id=1501321300872794393)
+    cost, speed, privacy, offline capability, and portability.
+
+[2026-05-05T20:35:06.361000+00:00] colmeio_66868 (id=1501321363921834057)
+    I am on a real gem right here...
+
+[2026-05-05T20:39:30.561000+00:00] kondrtrades (id=1501322472056688660)
+    I can tell.   Like I said - you are on another level.  I'm just trying to get workflows down.. but you're building something big.  My hat is off to you.
+
+[2026-05-05T20:45:36.560000+00:00] kondrtrades (id=1501324007167758358)
+    I'll definitely be keeping an eye on this thread you've got going.
+
+[2026-05-05T20:48:52.589000+00:00] colmeio_66868 (id=1501324829373108264)
+    I think WASM has potencial for the LLMs to visualize better... I have made a HMR(hot module reloader) within the frontier model so it just know exactly everything I am doing and basically gave memory to codex with wasm. built some sort of self-evolving repository resumable, it evolves fast. I can just check my .md branches I am working on...
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501324828706344991/image.png?ex=6a0197f4&is=6a004674&hm=b0d58972657ffe681f111fa7cfbb9da0bc891c9c5d745a6cc888f5d3603f6b99&
+
+[2026-05-05T20:50:42.777000+00:00] colmeio_66868 (id=1501325291535077512)
+    very nice to receive next-steps as well...
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501325291102933012/image.png?ex=6a019862&is=6a0046e2&hm=42409ebb15f6db1c6c0983f00b92f9d6ffd6d128ab4327e98883fb73c0370bab&
+
+[2026-05-05T20:51:15.534000+00:00] colmeio_66868 (id=1501325428927893544)
+    models are mint to be like that... they should automate... one less step so I just stay on focus
+
+[2026-05-05T21:01:36.579000+00:00] colmeio_66868 (id=1501328033779552356)
+    WOW LOOK AT THIS MIND BOGLING...
+    just turned a simple call from hermes-agent default routing system which took 
+    100x performance on WASM compared with herme-agent by itself... ofcourse WASM is hermes-agent backbased...
+    [attachment] demo-wa-1.mp4 https://cdn.discordapp.com/attachments/1500281078806479029/1501328032063946963/demo-wa-1.mp4?ex=6a019af0&is=6a004970&hm=d34d842977ca7036191e2e53e58d34bb53db8453f4ad94f76440906653efd09c&
+
+[2026-05-05T21:09:14.625000+00:00] kondrtrades (id=1501329954963587163)
+    Oh wow.  The speed difference is 🤯
+
+[2026-05-05T21:13:22.298000+00:00] colmeio_66868 (id=1501330993779441824)
+    19k tokens... LOL
+
+[2026-05-05T21:14:52.739000+00:00] colmeio_66868 (id=1501331373116620801)
+    hermes harness is awsome but this is the missing layer...
+
+[2026-05-05T21:20:49.022000+00:00] colmeio_66868 (id=1501332867475570789)
+    we can easily build surveillance watchers upon cameras client-sided...
+
+[2026-05-05T21:35:49.032000+00:00] colmeio_66868 (id=1501336642391249097)
+    that killer question ☠️
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501336641871024239/image.png?ex=6a01a2f4&is=6a005174&hm=dbc24f621795b363143dafd2b9e84f4a3b643f914e39e276d2f25008c2a82a05&
+
+[2026-05-05T21:36:22.547000+00:00] colmeio_66868 (id=1501336782963478571)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501336782913011774/image.png?ex=6a01a316&is=6a005196&hm=4657c3943308a86dd8a2a2596ecefe4e8f4b41fb01a73d371a7c86d8d9a05de1&
+
+[2026-05-05T21:36:27.354000+00:00] kondrtrades (id=1501336803125235883)
+    So, just trying to wrap my head around what you've got here.  Did you just basically prove that the bottleneck in AI agents isn't the model... it's the pipeline?
+
+[2026-05-05T21:37:49.252000+00:00] colmeio_66868 (id=1501337146630344776)
+    I am not sure about this new layer I just step on. Will keep my mind opened from now on until I figure it out...
+
+[2026-05-05T21:38:40.250000+00:00] colmeio_66868 (id=1501337360531718155)
+    as we understand the core concepts, things appears to sync in
+
+[2026-05-05T21:40:44.857000+00:00] colmeio_66868 (id=1501337883171098836)
+    I have a strong background using tesseract
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501337882894270475/image.png?ex=6a01a41c&is=6a00529c&hm=9b7c9ee9adae727dc29f662ac28e6648ce1424ff03c5772e95f8bc0f391dc4e5&
+
+[2026-05-05T21:42:52.425000+00:00] colmeio_66868 (id=1501338418230071386)
+    hermes just got updated 100000+ plugins and modules directly from the bakery 🍞🥖
+
+[2026-05-05T21:43:25.402000+00:00] colmeio_66868 (id=1501338556545765497)
+    openCV is within my personal preagentic times skills
+
+[2026-05-05T21:57:52.050000+00:00] colmeio_66868 (id=1501342191531069650)
+    almost finish scanning this path... its deep but I need to move to the real world value... trying to automate my laptop sandboxed things like that...
+    but vision is very important for hermes to scan my laptop...
+    seems I am being guided
+    [reply to colmeio_66868 msg=1501337883171098836]
+
+[2026-05-05T21:58:37.679000+00:00] colmeio_66868 (id=1501342382912831558)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1501342382640337016/image.png?ex=6a01a84d&is=6a0056cd&hm=45f15a29ef7e2bc470802c6df3dd50a4dc58b2ada3103d160f4c53f5c4a53a89&
+
+[2026-05-05T23:32:30.254000+00:00] colmeio_66868 (id=1501366007644819547)
+    now it just turned from 100x more performatic to 100x more performatic 100x quality output...<:tekcheer:1453863338537779242>
+    [attachment] demo-wa-2.mp4 https://cdn.discordapp.com/attachments/1500281078806479029/1501366006608560290/demo-wa-2.mp4?ex=6a01be4e&is=6a006cce&hm=6688c1736f3afa9b13a56d96b84b2d03e6dafcc3c6e6dfc8d09faf898c27390e&
+
+[2026-05-05T23:33:24.778000+00:00] colmeio_66868 (id=1501366236334784625)
+    [see benchmark against`raw-hermes-agent` here]
+    [reply to colmeio_66868 msg=1501328033779552356]
+
+[2026-05-05T23:34:40.733000+00:00] colmeio_66868 (id=1501366554913411192)
+    OCR layer took raised only 3 seconds to get text from my coffee mug. totally worthy...
+
+[2026-05-06T00:47:25.876000+00:00] kondrtrades (id=1501384863650021509)
+    It's crazy impressive.
+
+[2026-05-06T02:27:26.137000+00:00] yatesalex (id=1501410030568865957)
+    Thanks for sharing. Is there audio on this video? I’m not hearing anything
+    [reply to colmeio_66868 msg=1501328033779552356]
+
+[2026-05-06T09:13:47.299000+00:00] colmeio_66868 (id=1501512292574040154)
+    Just dumping quick demos, not focusing in presentations yet
+    [reply to yatesalex msg=1501410030568865957]
+
+[2026-05-07T18:30:46.757000+00:00] colmeio_66868 (id=1502014851806003522)
+    soon I will need to focus again in a final presentation before launching the new solution... project is going somewhere very interesting
+
+[2026-05-08T15:03:13.252000+00:00] ehvi8r (id=1502325005885898793)
+    Very interesting project, I have tried Space Agent, very basic haven't done a deep dive in, pair this with Hermes and curious to see where this goes!
+
+[2026-05-08T18:53:21.528000+00:00] colmeio_66868 (id=1502382921993158877)
+    ```
+    /goal
+    
+    while hermes is working, we cannot see its tokens growing, it kepts at 0, the token usage per node must be real and must be from the point that we last restarted that widget, so the countings resets (also we would like to visualize every nodes hermes version in the topology) 
+    also in the agent-message-assistant
+    Recieve chat turn, Apply mutation policy, inspect current UI, Read latest observation if i am not mistaking, should be all one topic run-wasm than run-hermes should be the actions from hermes
+    also the output of the final-response should be drawn considering it is an .md file like visually like github does
+    ```
+
+[2026-05-08T19:17:00.921000+00:00] colmeio_66868 (id=1502388875358769303)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1502388875039997972/image.png?ex=6a022b2c&is=6a00d9ac&hm=6998e009753855187ee385f996f78355123e7a06a4effae0a379354b9b67c6c6&
+
+[2026-05-08T20:56:31.825000+00:00] colmeio_66868 (id=1502413919145427067)
+    WIS is the first vertical slice of wasm-agent as an agent-native browser substrate.
+    
+    Instead of embedding apps through iframes or relying on a backend, WIS creates a local, sandboxed interaction surface where UI, state, events, permissions, and automation hooks live together inside the artifact.
+    
+    That means an agent does not need to “look at the screen” like a human.
+    It can inspect the surface as structured state, act on it through defined events, and carry the whole environment across spaces.
+    
+    This turns wasm-agent from a UI shell into a portable execution surface:
+    share a space,
+    fork an app,
+    automate the interface,
+    and let the agent operate inside it.
+    
+    The first goal is not to build a full browser.
+    The goal is to prove the primitive:
+    a backendless, non-iframe, browser-like surface that can render, react, expose state, and travel as a shareable agentic artifact.
+    
+    
+    ## WIS: Web/WASM Interaction Surface
+    
+    WIS is the first browser-like substrate inside wasm-agent.
+    It is not an iframe and not a backend-rendered app.
+    It is a portable, inspectable, automatable surface for agentic spaces.
+
+[2026-05-09T12:06:51.683000+00:00] colmeio_66868 (id=1502643011434184845)
+    basically WIS will be like the rings in OS, it will enable user-land to patch interface in such a way that won't break other user-land components (not only that, it is the foundation for sharable-artifacts across users)
+    while admin access (root) can talk to hermes-orchestrator which is non sandboxed and can operate real core mutations on wasm-agent firmware
+
+[2026-05-09T12:14:47.822000+00:00] colmeio_66868 (id=1502645008505901076)
+    It will take time and tokens but we are on the way
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500281078806479029/1502645008107438152/image.png?ex=6a01c837&is=6a0076b7&hm=3010cd7f85a6dda1a3dde93820c1230c51ba32fd1a83b81c03b64311606558af&
+
+[2026-05-09T16:11:05.326000+00:00] colmeio_66868 (id=1502704473267765360)
+    1 week guys... will try to release the full demo in one week it will disrupt industry... latter stages will hit harder... this gem is revolutionary... comming soon!!!
+
+[2026-05-09T21:46:46.063000+00:00] colmeio_66868 (id=1502788949641269328)
+    [attachment] demo-wa-4.mp4 https://cdn.discordapp.com/attachments/1500281078806479029/1502788948479574187/demo-wa-4.mp4?ex=6a01a585&is=6a005405&hm=1f287577bddced35cd2410a54e6e266531543f628b81c5ec7fd7ea41ac297cad&
+
+[2026-05-09T21:48:36.499000+00:00] colmeio_66868 (id=1502789412843556957)
+    kimi k2.6 is great for wasm-agent, I should put it in my video but I missed they required for their pool u.u such a dumb
+
+[2026-05-09T21:53:36.007000+00:00] colmeio_66868 (id=1502790669071159366)
+    soon wasm and hermes will coworking
+
+[2026-05-09T23:03:27.570000+00:00] w.s94 (id=1502808249760612532)
+    Top
+

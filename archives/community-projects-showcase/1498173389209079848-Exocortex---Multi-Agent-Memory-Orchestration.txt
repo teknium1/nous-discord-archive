@@ -1,0 +1,14 @@
+# Thread 'Exocortex - Multi-Agent Memory Orchestration' in forum #community-projects-showcase
+# thread_id=1498173389209079848 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:40.362763+00:00
+
+[2026-04-27T04:06:10.703000+00:00] .0xd40 (id=1498173389209079848)
+    Exocortex is a local memory + coordination layer for AI coding agents like Claude Code, Codex, and Hermes. It lets multiple agents share memory, hand off work, avoid stepping on each other’s files, and keep an audit trail of what happened. It is local-first, with SQLite-backed memory, policy-gated tools, isolated git worktrees, an append-only audit log, a 31-tool MCP server.
+    
+    Take a look and help contribute!
+    
+    https://github.com/xD4O/exocortex
+    
+    Just give hermes the repo and say install this lol.
+    [embed] GitHub - xD4O/exocortex: An exocortex for your agents to remember e... https://github.com/xD4O/exocortex
+

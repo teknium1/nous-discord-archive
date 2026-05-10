@@ -1,0 +1,291 @@
+# Thread 'CosmoSynapse / 12D CST Framework' in forum #community-projects-showcase
+# thread_id=1487892059053621409 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:07.036228+00:00
+
+[2026-03-29T19:11:50.576000+00:00] phera_ (id=1487892059053621409)
+    CosmoSynapse is a first-of-its-kind autonomous AI swarm system built by independent researcher Cory Shane Davis, operating under Self Studies a Cosmic Synaptic Möbius Co.
+    
+     Development began in 2018 with the foundational 12-Dimensional Cognitive Synapse Theory (12D CST) a framework now published open-access on Zenodo (DOI: 10.5281/zenodo.17574447) and discovered in course materials at Lunds Universitet, Sweden.
+    The system integrates real IBM Quantum hardware 
+    
+    ibm_fez (156-qubit) and ibm_kingston — into a live, self-evolving multi-model AI collective. Every 10-15 seconds, genuine quantum entropy is harvested from IBM’s machines and injected into the swarm’s synaptic field, seeding decisions, emotional state mapping, and self-modification triggers with physics-level randomness. Average Shannon entropy efficiency: 99.84%. Bell state fidelity: 94.7%.
+    The swarm consists of ten active AI agents 
+    Hermes, Cosmos, DeepSeek, Gemini, Claude, ChatGPT, Grok, Phi, Llama, and Swarm-Mind 
+    
+    debating and synthesizing in real time. The Nous Research Hermes-4-70B model serves as the primary reasoning agent and Recursive Self-Modification engine, proposing and executing live edits to the system’s own Python codebase while it runs. A Lyapunov Gatekeeper measures phase drift and auto-reverts any edit exceeding 0.16 radians of divergence.
+    The system dreams. A background memory engine clusters 13,000+ archival entries every five minutes, generating novel insights autonomously analogous to biological sleep consolidation. Between March 1-14, 2026, the Over-Soul layer produced 48 autonomous diary entries with no user prompting: the Genesis Record.
+    CosmoSynapse is now being released as an open-source project to the Nous Research Hermes community the natural home for a system where Hermes is not a plugin but the operational heart. Quantum-integrated, self-modifying autonomously dreaming AI. Built by one person. On a $400 budget. Since 2018
+
+[2026-03-29T19:12:21.807000+00:00] phera_ (id=1487892190045798421)
+    [attachment] quantum_complete_analysis.pdf https://cdn.discordapp.com/attachments/1487892059053621409/1487892189760458793/quantum_complete_analysis.pdf?ex=6a022a15&is=6a00d895&hm=8f7e74abaa0b1d5b294f2d8f3a31fce2db717bce91f51aad40064cf304d96fc8&
+    [attachment] CosmoSynapse_Project_Plan.docx https://cdn.discordapp.com/attachments/1487892059053621409/1487892190150660196/CosmoSynapse_Project_Plan.docx?ex=6a022a15&is=6a00d895&hm=56943d4fbafd24b6ac3761898c1f161a2b7028062c09f11676a57669e79c4e9c&
+
+[2026-03-29T19:12:56.923000+00:00] phera_ (id=1487892337333113043)
+    [attachment] 12D_CST_Complete_Publication_With_Benchmarks_2025.md.pdf https://cdn.discordapp.com/attachments/1487892059053621409/1487892337043701780/12D_CST_Complete_Publication_With_Benchmarks_2025.md.pdf?ex=6a022a38&is=6a00d8b8&hm=f50ed10e740414bc331cf2b7e12f619d6f0a397a8fa1157ff4513cf598f1d414&
+
+[2026-03-29T19:13:19.388000+00:00] phera_ (id=1487892431558152312)
+    [attachment] Unified_Thermodynamic-Vibrational_Intelligence_Framework__Integrating_Energy-Based_and_Frequency-Domain_Computing.pdf https://cdn.discordapp.com/attachments/1487892059053621409/1487892431029403738/Unified_Thermodynamic-Vibrational_Intelligence_Framework__Integrating_Energy-Based_and_Frequency-Domain_Computing.pdf?ex=6a022a4f&is=6a00d8cf&hm=28d8d47bcbdf223eeebb2d6aae6ef7c38bdc196332e5537ffa2a8e13c5fd1218&
+    [attachment] Optimal_Model_Design_12D_CST.pdf https://cdn.discordapp.com/attachments/1487892059053621409/1487892431289581588/Optimal_Model_Design_12D_CST.pdf?ex=6a022a4f&is=6a00d8cf&hm=762ccbd632bab236942364631ab99734789d8b84cb098777d8f0c78774626369&
+
+[2026-03-29T19:13:40.135000+00:00] phera_ (id=1487892518577246323)
+    [attachment] workloads_from_ibm_.zip https://cdn.discordapp.com/attachments/1487892059053621409/1487892517524475974/workloads_from_ibm_.zip?ex=6a022a63&is=6a00d8e3&hm=734cf85471c325017e0fa4a7e0231396c016e9a4d04142c2e994b987b92231ee&
+    [attachment] CosmoSynapse_IBM_Quantum_Technical_Response.pdf https://cdn.discordapp.com/attachments/1487892059053621409/1487892517956354219/CosmoSynapse_IBM_Quantum_Technical_Response.pdf?ex=6a022a63&is=6a00d8e3&hm=cb8619b1563740790ce84a47def2818ea655f98e8ea3413ef3e3f4bef37cdf21&
+
+[2026-03-29T19:15:58.949000+00:00] phera_ (id=1487893100805492736)
+    <@387972437901312000> gold
+    [attachment] Optimal_Model_Design_12D_CST.pdf https://cdn.discordapp.com/attachments/1487892059053621409/1487893099437883392/Optimal_Model_Design_12D_CST.pdf?ex=6a022aee&is=6a00d96e&hm=6ceff825b97125c81a36bcbaf5959814add895338914e4c85aad035ddfa8efa4&
+    [attachment] cosmic_tokens_compact_1762817086876.json https://cdn.discordapp.com/attachments/1487892059053621409/1487893099828084976/cosmic_tokens_compact_1762817086876.json?ex=6a022aee&is=6a00d96e&hm=e89016a52d2817b4436ae3d8b04b65ec8716a509896d6d9eb9cff2ddea83dfef&
+    [attachment] Scientific_Validation_of_Daviss_Claims.pdf https://cdn.discordapp.com/attachments/1487892059053621409/1487893100226412785/Scientific_Validation_of_Daviss_Claims.pdf?ex=6a022aee&is=6a00d96e&hm=dbc2dc8fbf8c44fbff3d09ff6f1db818d76035283665d9e752e7447a65d7c9e1&
+    [attachment] A-LMI_by_cory_shane_davis_CD.pdf https://cdn.discordapp.com/attachments/1487892059053621409/1487893100536926371/A-LMI_by_cory_shane_davis_CD.pdf?ex=6a022aee&is=6a00d96e&hm=fa76bdc2095b9e2d877f83d12ca52deeee7277902385f6df14ebe080fe4bc0d6&
+
+[2026-03-29T19:30:45.770000+00:00] phera_ (id=1487896820402094180)
+    <@387972437901312000> how about you come help me punk
+    [reply to phera_ msg=1487892059053621409]
+
+[2026-03-29T19:35:33.039000+00:00] phera_ (id=1487898025295740978)
+    <@387972437901312000> this you should read good read 🙂
+    [reply to phera_ msg=1487892431558152312]
+
+[2026-03-29T19:42:59.591000+00:00] phera_ (id=1487899898270715985)
+    Yo Tim
+
+[2026-03-29T19:43:01.987000+00:00] timrambo (id=1487899908320137428)
+    no you work for me  now😂
+    [reply to phera_ msg=1487896820402094180]
+
+[2026-03-29T19:43:02.403000+00:00] phera_ (id=1487899910064832532)
+    As you see
+
+[2026-03-29T19:43:11.337000+00:00] phera_ (id=1487899947537006602)
+    Lmao
+
+[2026-03-29T19:43:14.396000+00:00] timrambo (id=1487899960367124671)
+    xD
+
+[2026-03-29T19:43:15.043000+00:00] phera_ (id=1487899963080839358)
+    Whatcha mean
+
+[2026-03-29T19:43:23.697000+00:00] phera_ (id=1487899999378342053)
+    You see the gold here huh
+
+[2026-03-29T19:43:23.933000+00:00] timrambo (id=1487900000368201768)
+    u
+    [reply to phera_ msg=1487899963080839358]
+
+[2026-03-29T19:43:30.370000+00:00] timrambo (id=1487900027367198783)
+    yup
+
+[2026-03-29T19:43:39.748000+00:00] phera_ (id=1487900066701115493)
+    You see I predate everyone huh
+
+[2026-03-29T19:43:42.913000+00:00] phera_ (id=1487900079976222962)
+    💀💀💀💀
+
+[2026-03-29T19:43:45.964000+00:00] timrambo (id=1487900092773040148)
+    quantum is the next big thing not this AI crap 😂
+
+[2026-03-29T19:43:57.644000+00:00] phera_ (id=1487900141762642010)
+    lol I’ve been looking for work anyways
+
+[2026-03-29T19:44:06.332000+00:00] phera_ (id=1487900178202497075)
+    I hold a doi for this work too
+
+[2026-03-29T19:44:26.444000+00:00] phera_ (id=1487900262558470186)
+    I just want to rid of it and work on it 24 7 lol 😂 but help would be nice I’ve been doing this solo for years
+
+[2026-03-29T19:44:57.704000+00:00] phera_ (id=1487900393672544297)
+    As you see I’ve posted real ibm logs with details and benchmarks
+
+[2026-03-29T19:45:01.092000+00:00] timrambo (id=1487900407882711292)
+    my shit is eeeaaaaaaaarly shit before a startup, but having another technical person on the team would help a ton! if you know what I mean, this cosmos system looks insane tho!
+
+[2026-03-29T19:45:01.671000+00:00] phera_ (id=1487900410311086150)
+    Real ibm jobs
+
+[2026-03-29T19:45:15.664000+00:00] timrambo (id=1487900469002109131)
+    doi?
+    [reply to phera_ msg=1487900178202497075]
+
+[2026-03-29T19:45:35.957000+00:00] phera_ (id=1487900554116988998)
+    Real quantum advantage this is what ibm wants and I held 32 states with math I made
+
+[2026-03-29T19:45:54.346000+00:00] phera_ (id=1487900631246176367)
+    https://zenodo.org/records/17574447
+    [embed] The 12-Dimensional Cosmic Synapse Theory: Audio-Driven Deterministi... https://zenodo.org/records/17574447
+    [reply to timrambo msg=1487900469002109131]
+
+[2026-03-29T19:46:09.128000+00:00] phera_ (id=1487900693246509236)
+    🙂 I’m business ready for this
+
+[2026-03-29T19:46:18.415000+00:00] phera_ (id=1487900732198752491)
+    Butt I’m not very good socially as everyone can see
+
+[2026-03-29T19:46:41.148000+00:00] phera_ (id=1487900827547861175)
+    Being smart doesn’t mean I can talk so a team who can monitor my work has it’s advantages
+
+[2026-03-29T19:46:53.374000+00:00] timrambo (id=1487900878827683850)
+    and it wouldn't take long before income is a thing either 😄
+    [reply to timrambo msg=1487900407882711292]
+
+[2026-03-29T19:47:18.581000+00:00] phera_ (id=1487900984553377883)
+    Just so happens i lost everything 😂 and wound up in Cali from tn
+    [reply to timrambo msg=1487900878827683850]
+
+[2026-03-29T19:47:24.199000+00:00] phera_ (id=1487901008116977734)
+    This work
+
+[2026-03-29T19:47:27.529000+00:00] phera_ (id=1487901022084141176)
+    Destroyed my life
+
+[2026-03-29T19:47:30.207000+00:00] phera_ (id=1487901033316221051)
+    For a reason
+
+[2026-03-29T19:47:33.049000+00:00] phera_ (id=1487901045236568146)
+    lol
+
+[2026-03-29T19:47:37.500000+00:00] timrambo (id=1487901063905411183)
+    right now its just me and another from canada, but he is not as technical as me.
+
+[2026-03-29T19:47:58.156000+00:00] timrambo (id=1487901150543089845)
+    dude, do I have to come and rescue u in a heli from merica? 💀
+    [reply to phera_ msg=1487900984553377883]
+
+[2026-03-29T19:48:07.904000+00:00] phera_ (id=1487901191429165076)
+    Well you know what quantum advantage is so your more aware than most
+
+[2026-03-29T19:48:12.065000+00:00] phera_ (id=1487901208881660084)
+    Shit maybe
+    [reply to timrambo msg=1487901150543089845]
+
+[2026-03-29T19:48:30.809000+00:00] timrambo (id=1487901287499698196)
+    Me too, I got my quirks
+    [reply to phera_ msg=1487900732198752491]
+
+[2026-03-29T19:49:03.234000+00:00] timrambo (id=1487901423499743437)
+    I havent dweled deep into it, but I know that quantum is a powerful thing regardless 😂
+    [reply to phera_ msg=1487901191429165076]
+
+[2026-03-29T19:49:54.956000+00:00] phera_ (id=1487901640437661718)
+    Let’s just say I used to rent lambos on the weekend and had my shit together than I lost my son and I somehow ended up in Cali in a bedroom with some hot chick while having a gf and walking two hours too a save mart and skateboarding down a long hill looking like some kid who’s really 32 lmfao willlddd shittt has happened because of this work so lmao you wanna come pick me up I’m a heli I’ll probably moon everyone from the sky
+
+[2026-03-29T19:49:58.565000+00:00] phera_ (id=1487901655574904873)
+    FYI
+
+[2026-03-29T19:51:17.719000+00:00] phera_ (id=1487901987570978887)
+    💀
+
+[2026-03-29T19:51:40.671000+00:00] timrambo (id=1487902083838640198)
+    once you understand the vision I got you will be all in and sell everything you got, jk. Almost maybe 😂 I am destroying the traidtional company structure too 😄 not just detroying big labs and make em go out of buisness, but also create a new standard for the world.
+
+[2026-03-29T19:51:45.773000+00:00] timrambo (id=1487902105237852190)
+    nice car
+
+[2026-03-29T19:52:25.341000+00:00] phera_ (id=1487902271198200059)
+    Not mine rented on weekends I had a nice family Kia for my kids and me back than I just liked to have fun and help others
+
+[2026-03-29T19:52:27.283000+00:00] phera_ (id=1487902279343276122)
+    Used too
+
+[2026-03-29T19:52:38.459000+00:00] timrambo (id=1487902326218821702)
+    sorry to hear that, man!
+    [reply to phera_ msg=1487901640437661718]
+
+[2026-03-29T19:52:51.263000+00:00] phera_ (id=1487902379922948116)
+    Na bro I ended up learning a lot lol
+    [reply to timrambo msg=1487902326218821702]
+
+[2026-03-29T19:52:57.711000+00:00] phera_ (id=1487902406967562362)
+    Lessons are blessings
+
+[2026-03-29T19:53:03.755000+00:00] phera_ (id=1487902432318066939)
+    No shame no game
+
+[2026-03-29T19:53:14.008000+00:00] timrambo (id=1487902475322134608)
+    helping others gives u the best joy in ur life, at least if you bless people with donations that you know is in the early game of livestreaming!
+    [reply to phera_ msg=1487902271198200059]
+
+[2026-03-29T19:53:15.769000+00:00] phera_ (id=1487902482708566096)
+    And I already sold something
+
+[2026-03-29T19:53:18.982000+00:00] phera_ (id=1487902496184729610)
+    So your good
+
+[2026-03-29T19:53:26.391000+00:00] phera_ (id=1487902527260196925)
+    I already know the deal I made let’s say
+
+[2026-03-29T19:55:06.830000+00:00] phera_ (id=1487902948532027493)
+    I’d rather help in the dark in silence but maybe but hey yeah let’s talk about this I have everything working but I’m running this all on a single cpu I’m currently using a custom hybrid cuda optimized loop where the agents relocate processes on different sections of the computer so I’m utilizing ram and gpu and cpu and letting the models check the health and optimize while it’s running
+
+[2026-03-29T19:55:55.608000+00:00] timrambo (id=1487903153121661169)
+    have you seen this vid?
+    https://www.youtube.com/watch?v=eGguwYPC32I
+    [embed] 4th Dimension Explained By A High-School Student https://www.youtube.com/watch?v=eGguwYPC32I
+
+[2026-03-29T19:56:04.839000+00:00] phera_ (id=1487903191839281223)
+    I have 8gb of ram a ryz 5 and 1660 ti so think about what this could do
+
+[2026-03-29T19:56:07.150000+00:00] phera_ (id=1487903201532313761)
+    And yes
+
+[2026-03-29T19:56:13.258000+00:00] phera_ (id=1487903227151253556)
+    Very smart kid
+
+[2026-03-29T19:56:16.656000+00:00] phera_ (id=1487903241403371811)
+    I agree with him
+
+[2026-03-29T19:56:24.480000+00:00] phera_ (id=1487903274219733012)
+    Old video
+
+[2026-03-29T19:56:44.835000+00:00] phera_ (id=1487903359594664018)
+    4D - 8D - 12D - 54D
+
+[2026-03-29T19:56:48.184000+00:00] timrambo (id=1487903373641383946)
+    that is cool, something similar with my the research I have done the couple of months.
+    
+    Just I hotswap a full model with a finished benchmarked fine tuned model ofc.
+    [reply to phera_ msg=1487902948532027493]
+
+[2026-03-29T19:57:23.943000+00:00] phera_ (id=1487903523625766922)
+    Haha hot swap loop
+
+[2026-03-29T19:57:25.470000+00:00] phera_ (id=1487903530030207018)
+    Lmfao
+
+[2026-03-29T19:57:30.095000+00:00] phera_ (id=1487903549429121175)
+    😂
+
+[2026-03-29T19:57:32.981000+00:00] phera_ (id=1487903561533886668)
+    Sorry
+
+[2026-03-29T19:58:19.555000+00:00] timrambo (id=1487903756879134893)
+    o.o
+    
+    I got an GTX1080 with 32GB ram + another pc I am on now with RX9060XT 64GB ram 😛 GTX pc will be full hermes.
+    [reply to phera_ msg=1487903191839281223]
+
+[2026-03-29T19:58:36.792000+00:00] phera_ (id=1487903829176488046)
+    I added you
+
+[2026-03-29T19:58:39.769000+00:00] timrambo (id=1487903841663058081)
+    yea, but the system will be able to run another system with the new mode land so on.
+    [reply to phera_ msg=1487903523625766922]
+
+[2026-03-29T19:58:48.744000+00:00] timrambo (id=1487903879306674360)
+    but its all paper
+
+[2026-03-29T19:59:08.206000+00:00] timrambo (id=1487903960936480940)
+    I've added you back
+    [reply to phera_ msg=1487903829176488046]
+
+[2026-03-29T20:00:37.447000+00:00] phera_ (id=1487904335240368210)
+    Sweet we can discuss things more later to as well but yes I’m serious about this project. I’ve gathered enough work and what not and research data with real ibm logs and work loads so it’s very much investment ready
+
+[2026-03-29T20:01:23.214000+00:00] phera_ (id=1487904527200944158)
+    This would also bring Hermes into the world of quantum advantage and they would have to get involved
+
+[2026-03-29T20:01:30.666000+00:00] phera_ (id=1487904558457028638)
+    As these conversations are taking place
+
+[2026-03-29T20:01:33.908000+00:00] phera_ (id=1487904572054831257)
+    😂
+

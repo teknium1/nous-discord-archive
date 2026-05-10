@@ -1,0 +1,7 @@
+# Thread 'I built my own IDE that runs using Hermes Agent and Ollama/Ollama Cloud natively!' in forum #community-projects-showcase
+# thread_id=1500421862403080282 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:05.311176+00:00
+
+[2026-05-03T09:02:46.679000+00:00] ragetherican (id=1500422358136000624)
+    [attachment] Screenshot_2026-05-03_033253.png https://cdn.discordapp.com/attachments/1500421862403080282/1500422357813035068/Screenshot_2026-05-03_033253.png?ex=6a019b36&is=6a0049b6&hm=66d76731902c075e08e8ede517c9a464de73b61037e5ae4e8f89f8d4ed33356b&
+

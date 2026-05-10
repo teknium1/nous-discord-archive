@@ -1,0 +1,36 @@
+# Thread 'Reqflux  — Claude API with simple request-based pricing' in forum #community-projects-showcase
+# thread_id=1492046445975441468 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:28.409227+00:00
+
+[2026-04-10T06:19:53.603000+00:00] .thefluffyrabbit (id=1492046445975441468)
+    Built a lightweight API proxy that gives you access to all Claude models (Opus 4.6, Sonnet 4.6, Haiku 4.5) with flat per-request billing instead of token-based pricing.
+    
+    Why I built it:
+    
+    • Token billing is unpredictable, especially with large context windows
+    • Wanted a simpler way to use Claude in my projects
+    
+    What you get:
+    
+    • OpenAI-compatible endpoint (drop-in replacement)
+    • Native Anthropic /v1/messages endpoint
+    • Works with Claude Code out of the box
+    • Streaming, 200K+ context, all models
+    • 20 free requests to try it
+    
+    🚧 Currently in early access, actively building and improving. Feedback, feature requests, and bug reports are all super welcome! DM me or drop a comment.
+    
+    🔗 https://reqflux.com (https://reqflux.com/)
+    📖 Docs: https://reqflux.com/docs
+
+[2026-04-10T06:26:39.464000+00:00] kuka_cooker (id=1492048148279857292)
+    Very nice! Will test it out tomorrow
+
+[2026-04-10T06:27:46.363000+00:00] .thefluffyrabbit (id=1492048428874858516)
+    Thanks!
+    [reply to kuka_cooker msg=1492048148279857292]
+
+[2026-04-13T04:35:27.383000+00:00] .thefluffyrabbit (id=1493107327140892673)
+    Hi <@203663993741639680> sorry to tag you, couldnt dm you either, wondering is this you? If yes I've activated for you. you can use 20 free request.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492046445975441468/1493107327048351854/image.png?ex=6a02054f&is=6a00b3cf&hm=8061e5595fa910a4dce2f2bd6c27ddc8d7aa21e4632807f79ccc04a1fb3248f0&
+

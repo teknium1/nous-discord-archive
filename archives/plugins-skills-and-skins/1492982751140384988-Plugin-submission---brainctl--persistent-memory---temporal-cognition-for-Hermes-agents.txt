@@ -1,0 +1,110 @@
+# Thread 'Plugin submission — brainctl: persistent memory + temporal cognition for Hermes agents' in forum #plugins-skills-and-skins
+# thread_id=1492982751140384988 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:34.096063+00:00
+
+[2026-04-12T20:20:26.150000+00:00] deceptivegod (id=1492982751140384988)
+    brainctl is a local-first agent memory layer. One SQLite file, FTS5 search, optional vector embeddings, knowledge graph, and a full temporal cognition stack (epochs, temporal classes, recency-weighted recall, causal threading, session-start orientation). No API keys, no server, no LLM calls. Pip-installable, v1.1.2 on PyPI.
+    
+    Why brainctl: the failure mode we kept hitting was agents waking up with recall but no sense of time — a three-month-old decision felt as urgent as a three-hour-old one. brainctl fixes that: every memory has a temporal class (permanent → ephemeral), recall is recency-weighted per scope, events are causally linked, and agents get a compact "where am I in the story" block at session start. It stops agents from re-litigating settled decisions or acting on stale context.
+    
+    Two clean integration paths:
+    • Python API — from agentmemory import Brain; brain = Brain(agent_id="hermes"). ~10 lines to wire up.
+    • MCP server — brainctl-mcp exposes ~192 tools over stdio. If Hermes speaks MCP, it's a config entry.
+    
+    Onboarding is accounted for: 5-min quickstart in docs/AGENT_ONBOARDING.md, brain.doctor() health check, brain.handoff() / brain.resume() for session continuity, W(m) write gate against memory bloat, append-only migrations. Plugin extras already exist for LangChain and CrewAI — a brainctl[hermes] is a one-liner.
+    
+    What I'd want back: guidance on which integration path fits the plugin model better, how Hermes expects plugins to declare agent identity, and any session-boundary conventions.
+    
+    Happy to open a PR, write the Hermes extra, or pair with whoever owns memory architecture. MIT, single-file DB, trivial to audit.
+    
+    https://github.com/TSchonleber/brainctl
+    [embed] GitHub - TSchonleber/brainctl: A cognitive memory system for AI age... https://github.com/TSchonleber/brainctl
+
+[2026-04-12T21:59:39.521000+00:00] rakaarwaky (id=1493007721388048575)
+    Hi <@385330998507995136> 
+    Could you compare your memory vs
+    https://github.com/AxDSan/mnemosyne
+    
+    By <@151598363131904000> 
+    Sorry but I'm really curios?
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+
+[2026-04-12T22:36:58.665000+00:00] hugh1979 (id=1493017113038684231)
+    You'll need to implement the MemoryProvider plugin interface (https://hermes-agent.nousresearch.com/docs/developer-guide/memory-provider-plugin).
+
+[2026-04-13T01:10:13.170000+00:00] oscar4_40084 (id=1493055677588050110)
+    This is almost perfect for my requirements - I want to use it as the memory foundation for a continuity governor layer I want to add on top which ensures there is a controlled handoff between coding sessions covering:
+    - unresolved items
+    - uncertainties
+    - blocked state
+    - next step
+    - controlled transitions
+    
+    So a coding session knows the current state, unresolved issue & next steps to take. It's the way to control that coding stays on track with the intent of the project
+    [reply to deceptivegod msg=1492982751140384988]
+
+[2026-04-13T01:11:04.267000+00:00] oscar4_40084 (id=1493055891904139365)
+    Too many memory offerings try to be a swiss army knife solution
+
+[2026-04-13T01:19:57.585000+00:00] deceptivegod (id=1493058128802091279)
+    I will do this when I’m not driving from nj to sc and ping you when I’ve made the change
+    [reply to hugh1979 msg=1493017113038684231]
+
+[2026-04-13T01:20:36.754000+00:00] deceptivegod (id=1493058293088784475)
+    Will soon am on road but I like the approach
+    [reply to rakaarwaky msg=1493007721388048575]
+
+[2026-04-13T01:21:29.241000+00:00] deceptivegod (id=1493058513235083304)
+    It’s open source so I want people to use it and use it to build if it’s valuable! MIT license brotha!
+    [reply to oscar4_40084 msg=1493055677588050110]
+
+[2026-04-13T01:24:21.514000+00:00] nulledvector (id=1493059235800551514)
+    Hey there thanks for the ping.... brainctl is more like a swiss army knife. It has a web UI, MCP server, connects to LangChain and CrewAI, and uses around 12 tables. Its meant to be a universal memory system for pretty much any agent out there.
+    
+    Mnemosyne is way lighter. Its just 3 SQLite tables, runs on anything including old hardware, and its built specifically for the Hermes ecosystem. No extra installs, no GPU needed.
+    
+    So yeah, same general idea but totally different approaches. brainctl goes big, Mnemosyne keeps it small footprint. Both work fine, just depends what you need. Hope I helped in something! ✨
+    [reply to rakaarwaky msg=1493007721388048575]
+
+[2026-04-13T01:30:43.280000+00:00] rakaarwaky (id=1493060837043212431)
+    Thank you. That's very clear.
+
+[2026-04-13T01:54:51.774000+00:00] deceptivegod (id=1493066912467521627)
+    PR is staged, I am reviewing before committing to main and tagging a new release
+    [reply to hugh1979 msg=1493017113038684231]
+
+[2026-04-13T01:56:30.319000+00:00] deceptivegod (id=1493067325795205141)
+    Almost correct but I scrapped the web ui in favor of obsidian being the front layer. I may still have some stale references
+    [reply to nulledvector msg=1493059235800551514]
+
+[2026-04-13T07:37:37.750000+00:00] deceptivegod (id=1493153172422918175)
+    The integration is done on my end for a clean install into Hermes for anyone interested
+
+[2026-04-13T14:56:49.051000+00:00] oscar4_40084 (id=1493263697789980773)
+    I finally succeeded in installing brainctl into Hermes but there are some issues in achieving this - both Hermes issues & brainctl issues:
+    Third-party memory providers should install to ~/.hermes/plugins/<name>. Current Hermes releases have a discovery bug where hermes memory setup/status scan only the bundled plugins/memory/ tree, so affected versions require a temporary symlink from ~/.hermes/hermes-agent/plugins/memory/<name> to ~/.hermes/plugins/<name>. Plugin Python dependencies must be installed into the Hermes virtual environment because Hermes imports them with its own interpreter.
+    
+    I'll try to create two Github issues for these problems - one on Hermes github & one on brainctl github
+    [reply to deceptivegod msg=1493153172422918175]
+
+[2026-04-14T01:14:31.873000+00:00] deceptivegod (id=1493419150532546680)
+    Yeah I addressed the ones on my side 2 hours after you pushed and then I just went ahead and started cleaning it up for people upgrading the software and using it through Claude code, codex, Hermes, Eliza etc.
+    Going through a lot of integrations all at once hold please for takeoff.
+    [reply to oscar4_40084 msg=1493263697789980773]
+
+[2026-04-14T01:45:21.947000+00:00] oscar4_40084 (id=1493426910305456149)
+    No sweat - I have it installed in Hermes - I just wanted to let you know the issues in the Hermes documentation so others could install cleanly
+
+[2026-04-14T02:19:48.841000+00:00] deceptivegod (id=1493435579486965790)
+    Thanks man I do appreciate it a lot i saw it through GitHub before I saw your message in discord 🥴🥴🥴
+    [reply to oscar4_40084 msg=1493426910305456149]
+
+[2026-04-18T08:24:07.550000+00:00] deceptivegod (id=1494976813019959336)
+    Just benchmaxxed mempalace.
+    
+    https://x.com/scobleizer/status/2045410539162255850?s=46
+    [embed]  https://twitter.com/scobleizer/status/2045410539162255850?s=46
+
+[2026-04-18T12:21:16.858000+00:00] rakaarwaky (id=1495036495063417073)
+    hindsight vs brainctl  which one better?
+

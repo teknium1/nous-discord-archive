@@ -1,0 +1,12 @@
+# Thread 'Adds skills/feeds/rss-reader/ — the first skill in the feeds/ category.' in forum #plugins-skills-and-skins
+# thread_id=1494527631515713596 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:26.525250+00:00
+
+[2026-04-17T02:39:14.334000+00:00] sssarah_b (id=1494527631515713596)
+    The feeds/ directory has been empty since it was created. This fills it with a zero-install option that complements the existing blogwatcher skill (which requires a Go binary).
+    
+    Anyone looking for a way to monitor RSS/Atom feeds in Hermes without installing extra tools — I put together a skill for this. Uses only curl + Python stdlib, works with hermes cron for daily digests. PR is open here: #10893 — in the meantime you can grab it from my fork if you want to try it.
+    
+    https://github.com/NousResearch/hermes-agent/pull/10893
+    [embed] feat(skills): add rss-reader to feeds category by ssarahb · Pull R... https://github.com/NousResearch/hermes-agent/pull/10893
+

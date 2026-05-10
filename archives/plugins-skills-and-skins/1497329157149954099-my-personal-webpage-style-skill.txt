@@ -1,0 +1,12 @@
+# Thread 'my personal webpage style skill' in forum #plugins-skills-and-skins
+# thread_id=1497329157149954099 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:15.166117+00:00
+
+[2026-04-24T20:11:30.095000+00:00] arm64be (id=1497329157149954099)
+    i've had some people asking about the webdev results i get, so i had minimax (my usual webdev model) turn it all into a skill
+    this is the same style as my personal site (https://x86.company), i have made some other styles and i'll publish some other skills and put them into a proper collection sometime soon
+    [attachment] SKILL.md https://cdn.discordapp.com/attachments/1497329157149954099/1497329157296750602/SKILL.md?ex=6a018f32&is=6a003db2&hm=44a2983daf4ef1b7e60e179d0835f20ac598fd880a90941435dec39667e653f3&
+
+[2026-04-25T10:56:25.261000+00:00] asheriif (id=1497551854417219795)
+    this is cool thanks for sharing!
+

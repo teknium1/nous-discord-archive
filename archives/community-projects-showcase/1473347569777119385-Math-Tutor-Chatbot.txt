@@ -1,0 +1,16 @@
+# Thread 'Math Tutor Chatbot' in forum #community-projects-showcase
+# thread_id=1473347569777119385 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:24.752673+00:00
+
+[2026-02-17T15:57:14.109000+00:00] cryptoshark2222 (id=1473347569777119385)
+    Test it fridens, used Hermes-4.3-36B via Nous API key
+    
+    Share your feedback, thanks
+    
+    Link: https://nous-agent.vercel.app/
+    
+    Link to my post on X: https://x.com/ccshark64/status/2023788027353387048?s=20
+    [attachment] Screenshot_2026-02-17_at_19.51.15.png https://cdn.discordapp.com/attachments/1473347569777119385/1473347570418978826/Screenshot_2026-02-17_at_19.51.15.png?ex=6a01fc5a&is=6a00aada&hm=dc5596dc22271559f27661736f57269e5cf33507670c9ce2fec63836c54e70ff&
+    [embed] Nous Math Tutor https://nous-agent.vercel.app/
+    [embed]  https://twitter.com/ccshark64/status/2023788027353387048?s=20
+

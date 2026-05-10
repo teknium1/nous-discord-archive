@@ -1,0 +1,34 @@
+# Thread 'Delx Wellness for Hermes - local-first wearable + nutrition agent profile' in forum #community-projects-showcase
+# thread_id=1501635892563935232 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:18.906850+00:00
+
+[2026-05-06T17:24:55.833000+00:00] davidmosiah (id=1501635892563935232)
+    [attachment] delx-wellness-hermes-infographic.png https://cdn.discordapp.com/attachments/1501635892563935232/1501635893126238300/delx-wellness-hermes-infographic.png?ex=6a0210e7&is=6a00bf67&hm=ae682c5c00d1e4cda984cc5647e5f908ec9e067d02e78e370b2e370bc34168f2&
+
+[2026-05-06T17:25:42.669000+00:00] davidmosiah (id=1501636089008488580)
+    I’ve been dogfooding Hermes as my daily personal agent and built an open-source profile pack for a real workflow: recovery, training, sleep, nutrition and wearable data.
+    
+    Delx Wellness for Hermes does not fork Hermes. It installs a `delx-wellness` profile, SOUL.md, AGENTS.md, wellness skills, MCP connector presets and setup checks so Hermes can become a wellness-focused personal agent without manual wiring from scratch.
+    
+    What it adds:
+    - Guided onboarding for goals, devices, training style, nutrition preferences and safety context
+    - Skills for daily brief, training decisions, sleep analysis, nutrition and diagnostics
+    - MCP presets for WHOOP, Garmin, Oura, Strava, Fitbit, Withings, Apple Health, Polar and Nourish
+    - Local-first credential handling: no hosted Delx token vault
+    
+    Install:
+    `npx -y delx-wellness-hermes setup`
+    
+    Run:
+    `hermes -p delx-wellness`
+    
+    Docs: https://wellness.delx.ai/hermes
+    GitHub: https://github.com/davidmosiah/delx-wellness-hermes
+    npm: https://www.npmjs.com/package/delx-wellness-hermes
+    
+    I’d love feedback from Hermes users on the profile design, skill structure, setup flow and what would make this easier for non-technical users.
+    
+    Unofficial, open source, not medical advice. It helps Hermes reason over user-approved wellness context; it does not diagnose or prescribe.
+    [embed] Delx Wellness for Hermes | Delx Wellness https://wellness.delx.ai/hermes
+    [embed] GitHub - davidmosiah/delx-wellness-hermes: Turn Hermes into a local... https://github.com/davidmosiah/delx-wellness-hermes
+

@@ -1,0 +1,34 @@
+# Thread 'Lunaris / MoC — Open-source expert collaboration architecture' in forum #community-projects-showcase
+# thread_id=1481041136733786295 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:17.087234+00:00
+
+[2026-03-10T21:28:43.411000+00:00] franciscoan. (id=1481041136733786295)
+    I’m an independent researcher from Brazil working on **Lunaris**, an open-source sparse architecture called **MoC (Mixture-of-Collaboration)**.
+    
+    The core idea is simple: instead of experts operating purely in isolation, MoC allows them to exchange information through a mediator mechanism.
+    
+    Recent progress:
+    
+    validated at small scale against dense and MoE baselines
+    refreshed implementation with training and stability fixes
+    initial scaling run at **~197M parameters**
+    **45.7 validation perplexity**
+    **0 dead experts**
+    **near-zero routing drop**
+    
+    Everything is public:
+    
+    * GitHub: https://github.com/Auren-Research/lunaris
+    * Paper: https://github.com/Auren-Research/lunaris/blob/main/paper/lunaris-moc.pdf
+    * W&B: https://wandb.ai/smeryylle-moon-cloud-services-/lunaris-moc-validation
+    
+    I’d love feedback from people interested in sparse models, MoE variants, routing, or open-source AI research.
+    [attachment] Captura_de_tela_20260310_182750.png https://cdn.discordapp.com/attachments/1481041136733786295/1481041136989503559/Captura_de_tela_20260310_182750.png?ex=6a01a14b&is=6a004fcb&hm=a701b0489e8b69f3121c960d756454d879724bf1738f1659282efc29a2ba02d8&
+    [attachment] Captura_de_tela_20260310_182809.png https://cdn.discordapp.com/attachments/1481041136733786295/1481041137362927678/Captura_de_tela_20260310_182809.png?ex=6a01a14b&is=6a004fcb&hm=f88149a6643075d2d06bffba64e282971ddd5e4a46a13c0ddb0aa8e4f2eaf617&
+    [embed] GitHub - Auren-Research/lunaris: Open-source LLM architecture: Mixt... https://github.com/Auren-Research/lunaris
+    [embed] lunaris/paper/lunaris-moc.pdf at main · Auren-Research/lunaris https://github.com/Auren-Research/lunaris/blob/main/paper/lunaris-moc.pdf
+    [embed] smeryylle-moon-cloud-services- https://wandb.ai/smeryylle-moon-cloud-services-/lunaris-moc-validation
+
+[2026-03-10T22:32:22.366000+00:00] franciscoan. (id=1481057154592018594)
+    <@387972437901312000> sorry for tagging you like this for no reason, but could you take a look at my project? I would really appreciate receiving your feedback!
+

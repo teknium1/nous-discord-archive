@@ -1,0 +1,10 @@
+# Thread 'patch/hack - Hermes Curator mutation write lock' in forum #plugins-skills-and-skins
+# thread_id=1502857409226608670 forum_id=1485392832154832906
+# Started 2026-05-10T19:51:58.021546+00:00
+
+[2026-05-10T02:55:45.880000+00:00] parallelcontinuities (id=1502866711270133790)
+    https://github.com/gh0stprince/hermes-agent-lock-patch/
+    
+    created as a more locked-down version of pinning - now merges won't affect your skills either. fixed it from hard-locking all edits to just softly blocking curator.
+    [embed] GitHub - gh0stprince/hermes-agent-lock-patch: Lock: soften curator-... https://github.com/gh0stprince/hermes-agent-lock-patch/
+

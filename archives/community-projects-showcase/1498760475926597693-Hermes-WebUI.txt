@@ -1,0 +1,11 @@
+# Thread 'Hermes-WebUI' in forum #community-projects-showcase
+# thread_id=1498760475926597693 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:37.788790+00:00
+
+[2026-04-28T18:59:03.084000+00:00] kayp5780 (id=1498760475926597693)
+    I have created a report in the hub for a complete Hermes-WebUI that can be run from anywhere. I configured it to work from telegram as well. Now I’m able to use the link which it generates as an app. I have my own Hermes agent running from my home server. I can access it from anywhere.
+    Please try it and let me know if it’s working fine for you guys or not. Any suggestions? Improvements are welcome.
+    
+    https://github.com/praveenkay/Hermes-webui
+    [embed] GitHub - praveenkay/Hermes-webui: Hermes Agent Web UI -- cross-plat... https://github.com/praveenkay/Hermes-webui
+

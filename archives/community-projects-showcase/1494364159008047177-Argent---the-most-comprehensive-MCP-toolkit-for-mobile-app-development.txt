@@ -1,0 +1,36 @@
+# Thread 'Argent - the most comprehensive MCP toolkit for mobile app development' in forum #community-projects-showcase
+# thread_id=1494364159008047177 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:03.404932+00:00
+
+[2026-04-16T15:49:39.451000+00:00] armado (id=1494364159008047177)
+    Hiii,
+    
+    We just released Argent, a fully open source MCP toolkit for everything from controlling to profiling and debugging your iOS apps. We've got 60 tools and 9 skills, so lots of things to test out. 
+    
+    React Native works out of the box. Native iOS too.
+    
+    We're really looking towards getting feedback, let us know if anything needs improving :))
+    
+    You can try it with: `npx @swmansion/argent init`
+    
+    Website: https://argent.swmansion.com/
+    GitHub: https://github.com/software-mansion/argent
+    [embed] Agentic AI Toolkit for React Native & Swift | Argent https://argent.swmansion.com/
+    [embed] GitHub - software-mansion/argent: An agentic toolkit to control, de... https://github.com/software-mansion/argent
+
+[2026-04-16T15:57:41.802000+00:00] armado (id=1494366182134779945)
+    Hermes support is on the way, the PR is open, just was help up by the release a bit :P
+    But now we have the time to push it, so expect it within a week :)))
+
+[2026-04-17T01:03:44.285000+00:00] armado (id=1494503597948272731)
+    Argent - the most comprehensive MCP toolkit for mobile app development
+
+[2026-04-17T16:15:08.479000+00:00] armado (id=1494732960081903767)
+    Hermes PR is ready for review, will probably ship with the next minor/patch :)
+    Of course, I'm very much open to community reviews
+    https://github.com/software-mansion/argent/pull/106
+    [embed] feat: add MCP config adapter for Hermes Agent by latekvo · Pull Re... https://github.com/software-mansion/argent/pull/106
+
+[2026-04-24T12:13:14.016000+00:00] armado (id=1497208797070889110)
+    ^^^ Merged and released in version `0.5.3`
+

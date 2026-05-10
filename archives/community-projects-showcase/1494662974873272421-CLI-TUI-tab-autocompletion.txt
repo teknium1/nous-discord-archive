@@ -1,0 +1,14 @@
+# Thread 'CLI/TUI tab autocompletion' in forum #community-projects-showcase
+# thread_id=1494662974873272421 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:02.084871+00:00
+
+[2026-04-17T11:37:02.705000+00:00] nasumone (id=1494662974873272421)
+    This is tab autocompletion for outside of hermes. Such as running "hermes gateway":   "hermes ga<tab>" will autocomplete.
+    In your shell (bash was used for testing), add:
+    if command -v hermes >/dev/null 2>&1; then
+     eval "$(hermes completion bash)"
+    fi
+    The skill is here:
+    https://github.com/cryptopsy0/hermes-cli-autocomp
+    [embed] GitHub - cryptopsy0/hermes-cli-autocomp: cli autocomp for hermes agent https://github.com/cryptopsy0/hermes-cli-autocomp
+

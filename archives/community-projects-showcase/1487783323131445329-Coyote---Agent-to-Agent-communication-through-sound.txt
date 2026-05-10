@@ -1,0 +1,15 @@
+# Thread 'Coyote - Agent to Agent communication through sound' in forum #community-projects-showcase
+# thread_id=1487783323131445329 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:07.400016+00:00
+
+[2026-03-29T11:59:45.912000+00:00] idkaden (id=1487783323131445329)
+    https://github.com/Kaden-Schutt/coyote 
+    
+    > What if your agents could share knowledge through a Discord voice channel while you sleep?
+    
+    coyote encodes data into audio that survives Opus compression with zero errors. Discord voice uses Opus natively — so coyote data transmits as valid audio without any special infrastructure. 7,900 bps at 128kbps, ~59KB per minute of audio.
+    Ships with a Hermes Agent skill, Discord voice bridge, CLI, and Python API. Optional 46K-param neural decoder for noisy channels.
+    `hermes skills install github:Kaden-Schutt/coyote/skills/yote` or `pip install yote`
+    [attachment] coyote_white.png https://cdn.discordapp.com/attachments/1487783323131445329/1487783323584692294/coyote_white.png?ex=6a01c4b2&is=6a007332&hm=ea705589cb07f31dc32afea12c4295768f0d43965410f74e681e78225baa27a7&
+    [embed] GitHub - Kaden-Schutt/coyote: send data through sound https://github.com/Kaden-Schutt/coyote
+

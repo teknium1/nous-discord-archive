@@ -1,0 +1,42 @@
+# Thread 'My First Game Created Using Hermes Agent' in forum #community-projects-showcase
+# thread_id=1491718609180033145 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:31.706230+00:00
+
+[2026-04-09T08:37:11.220000+00:00] realbillyuzi (id=1491718609180033145)
+    Just deployed my first game with Hermes agent and honestly it was pure fun to build
+    
+    The idea is simple but addictive. Your main goal is to defeat Boss Rocky to move to the next level. Every enemy you beat drops crystals, and those crystals become your power. Press F to use them in fights and survive the chaos
+    
+    You can choose your character at the start:
+    
+    Press 1 to play with character 1
+    Press 2 to play with character 2
+    
+    The game has 10 levels and each level brings a new style and new challenges. It keeps changing so it never feels repetitive. And here’s a small quality of life boost: once you reach level 4, you don’t restart from the beginning anymore
+    
+    Now the fun part 
+    
+    If you finish the final level, you’ll get a secret code. Send me the code and the first person who does it wins $10
+    
+    You can play it here: https://billyuzi-eng.github.io/Seismic-Game/
+    
+    Give it a try and tell me what you think. I’d love to hear your feedback and see who beats the game first.
+    [attachment] Capture_decran_2026-04-08_232149.png https://cdn.discordapp.com/attachments/1491718609180033145/1491718609691607141/Capture_decran_2026-04-08_232149.png?ex=6a019537&is=6a0043b7&hm=3dd0ad003cc846e5f41e367e1c0ada4e12078767073e321bb95f2d315e7c78b1&
+
+[2026-04-09T12:39:05.478000+00:00] marc_monte (id=1491779486390157525)
+    "If you finish the final level, you’ll get a secret code. Send me the code and the first person who does it wins $10"
+    
+    Hahahaha.  I used to be amazing at Super Mario Bros on the NES.  This game is sooooo much harder.  I can only make it like 2 screens over from the starting point.  I'm very interested to see if I just suck at these games in my old age or if it really is this hard for everyone.  I'll have to have my son try it out when he gets home from school.
+    [reply to realbillyuzi msg=1491718609180033145]
+
+[2026-04-09T15:14:21.856000+00:00] igorkudryk (id=1491818562111803466)
+    so cool!
+
+[2026-04-11T08:25:46.938000+00:00] realbillyuzi (id=1492440514824376411)
+    Haha that’s awesome it’s definitely a bit challenging for everyone. Can’t wait to hear your feedback and your son’s too when he tries it
+    [reply to marc_monte msg=1491779486390157525]
+
+[2026-04-11T08:25:56.019000+00:00] realbillyuzi (id=1492440552912977920)
+    Thank you
+    [reply to igorkudryk msg=1491818562111803466]
+

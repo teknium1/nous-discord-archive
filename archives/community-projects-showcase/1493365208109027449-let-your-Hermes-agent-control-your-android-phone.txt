@@ -1,0 +1,9 @@
+# Thread 'let your Hermes agent control your android phone' in forum #community-projects-showcase
+# thread_id=1493365208109027449 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:11.356966+00:00
+
+[2026-04-13T21:40:10.997000+00:00] raulvidis (id=1493365208109027449)
+    feel free to try this project: https://github.com/raulvidis/hermes-android
+    hook it up to your hermes agent and give its own phone
+    [embed] GitHub - raulvidis/hermes-android: Android device control for herme... https://github.com/raulvidis/hermes-android
+

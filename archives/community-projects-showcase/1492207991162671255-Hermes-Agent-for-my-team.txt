@@ -1,0 +1,14 @@
+# Thread 'Hermes Agent for my team' in forum #community-projects-showcase
+# thread_id=1492207991162671255 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:27.206548+00:00
+
+[2026-04-10T17:01:48.977000+00:00] megabyte0x (id=1492207991162671255)
+    Its right now integrated with
+    
+    SourceDev: to index repos (self hosted)
+    Tenderly MCP: to debug onchain transactions
+    LLM-Wiki ingest of Litepaper of our protocol and other docs
+    
+    Hopefully team will find it useful and will integrate more infra tools overtime to help the team.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492207991162671255/1492207992001794353/image.png?ex=6a020b7d&is=6a00b9fd&hm=fa99a45291677b0b80c2a8b63e24aeeb7bd1ca65a578775ef435068a35d9ea83&
+

@@ -1,0 +1,21 @@
+# Thread 'claude-code-sdk skill, a Python-SDK complement to the existing claude-code skill' in forum #community-projects-showcase
+# thread_id=1498387867301314660 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:39.213726+00:00
+
+[2026-04-27T18:18:26.265000+00:00] heyyanvi (id=1498387867301314660)
+    PR up in NousResearch/hermes-agent: claude-code-sdk skill, a Python-SDK complement to the existing claude-code (CLI + tmux) skill.
+    
+    Both coexist, different orchestration shapes:
+    
+    • claude-code: shell + tmux, great for one-shot tasks and interactive PTY sessions
+    • claude-code-sdk: ClaudeSDKClient + native session resume, parallel sessions across projects, per-query cost tracking
+    
+    Adapted from a smaller MCP project I built earlier (perplexity-claude-agent), network layer stripped — Hermes terminal tool is the transport.
+    
+    Seven end-to-end scenarios in the PR body including cross-process resume, parallel-handle concurrency with file lock, and the Hermes agent recovering from missing-sdk by reading the dispatcher's stderr and running pip install. Cross-platform lock fallback added (POSIX fcntl, Windows msvcrt, no-op + warning otherwise).
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/16665
+    
+    Open to feedback on naming, depth of SKILL.md, default TTL, or scope of ClaudeAgentOptions surfaced via CLI flags.
+    [embed] feat(skills): add claude-code-sdk, a Python-SDK complement to claud... https://github.com/NousResearch/hermes-agent/pull/16665
+

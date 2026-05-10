@@ -1,0 +1,24 @@
+# Thread 'AutoArticle pipelined article builder that is built upon nous work on autonovel.' in forum #community-projects-showcase
+# thread_id=1488681202511511694 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:01.627887+00:00
+
+[2026-03-31T23:27:37.038000+00:00] valhalladestined (id=1488681202511511694)
+    I’ve been experimenting with different approaches to AI-assisted writing and built a small project called AutoArticle which built on the approach taken by autonovel. 
+    
+    Instead of the usual “one prompt → full article” approach, it treats writing as a pipeline with layered stages: Foundation → Draft → Revision → Polish. Each stage focuses on a specific task so the output stays structured and avoids the typical AI-generated “slop” that seems to be especially common lately. 
+    
+    A few things it tries to solve:
+    • The cold start problem when turning an idea into a structured draft 
+    • Assist with turning notes, concepts and ideas into fully formed articles. For someone like me who can end up with writers block staring at a blank page or struggles with structuring my thoughts into quality write ups. 
+    • I have AuDHD. It makes it easy to have ideas and see patterns but terrible at articulation and pulling them into something others follow. This provide structure. 
+    • Reducing AI-isms using a regex “anti-slop” filter  
+    • Quality scoring via an LLM judge across clarity, coherence, structure, engagement, accuracy, and style  
+    • Running locally on a a Raspberry Pi that is running Hermes-agent. It uses that in combination with a low cost cloud model for very low cost per article
+    
+    The goal isn’t one-click content, but a framework that helps produce more human-like drafts from the start based on seeded thoughts. 
+    
+    Repo: https://github.com/MRKMKR/AutoArticle
+    
+    Would really appreciate feedback, ideas, or criticism from anyone interested in agent pipelines, structured prompting, or AI writing workflows.
+    [embed] GitHub - MRKMKR/AutoArticle: An autonomous Article writing pipeline... https://github.com/MRKMKR/AutoArticle
+

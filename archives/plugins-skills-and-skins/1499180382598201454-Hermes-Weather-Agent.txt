@@ -1,0 +1,142 @@
+# Thread 'Hermes Weather Agent' in forum #plugins-skills-and-skins
+# thread_id=1499180382598201454 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:10.356233+00:00
+
+[2026-04-29T22:47:36.636000+00:00] drewsni (id=1499180382598201454)
+    It is a standalone Weather MCP server powered by rustwx, so agents can work with real model/satellite/radar data directly instead of relying on a fixed web dashboard. Some of the features are quickly being expanded to CONUS and worldwide later (specifically GOES-18 sat plots) and some features like the meteograms are much quicker if you tell your agent a specific location you're interested in so it can build a custom new data store made for temporal data (HRRR only for now). 
+    
+    https://github.com/FahrenheitResearch/hermes-weather-agent
+    
+    What it can do:
+    
+    - Render HRRR, GFS, ECMWF Open Data, and RRFS-A weather maps
+    - Resolve the latest available model run automatically
+    - Render direct model fields like temperature, winds, heights, RH, QPF, reflectivity, and pressure
+    - Render derived/severe products like CAPE, SRH, shear, STP, ECAPE, UH tracks, lapse rates, and QPF windows
+    - Generate GOES satellite imagery, including GeoColor, GLM overlay, RGB products, and ABI bands
+    - Render NEXRAD Level-II radar products, including base products and dual-pol products
+    - Generate point meteograms for arbitrary lat/lon points
+    - Warm local meteogram stores for repeated point/time-series queries
+    - Render Skew-T soundings
+    - Render HRRR VolumeStore cross sections for arbitrary routes
+    - Build small local HRRR data packs so repeated queries do not re-download the same data
+    - Use HRRR `.idx` byte-range fetching where possible to avoid pulling full GRIB files
+    - Report cache size, disk usage, and top storage consumers
+    - Run background jobs for heavier products and long workflows
+    - Build showcase HTML galleries of generated products
+    - Expose everything through MCP so Hermes, Claude, or any MCP client can call it
+    
+    Example workflows:
+    
+    - “Show me the latest HRRR temperature, wind, and RH maps for southern California.”
+    - “Make a meteogram for this incident location for the next 18 hours.”
+    - “Draw a cross section from Redding to Reno and render theta-e, RH, wind, and fire-weather products.”
+    - “Pull the latest GOES-West GeoColor, fire RGB, and GLM overlay for California.”
+    - “Render KTLX radar base reflectivity, velocity, and dual-pol products.”
+    - “Compare latest HRRR CAPE, SRH, shear, and STP over the southern plains.”
+    - “Build a small local HRRR data pack for the latest few hours so my agent can keep working offline-ish.”
+    - “Tell me how much disk the weather cache is using and what can be evicted.”
+    [attachment] skewt.png https://cdn.discordapp.com/attachments/1499180382598201454/1499180383118299276/skewt.png?ex=6a01b3c8&is=6a006248&hm=78700fa68a5823b7253a7688fdd1d19b55b7881de39137614141c984354d4ddb&
+    [attachment] goes_geocolor.png https://cdn.discordapp.com/attachments/1499180382598201454/1499180383953227918/goes_geocolor.png?ex=6a01b3c8&is=6a006248&hm=bafba3ad0f92c6419e9d10e29199d3f10f99ff114f90922445351f5efa2d7746&
+    [attachment] volume_store_socal_coast_desert_f000_dewpoint_dep_cross_section.webp https://cdn.discordapp.com/attachments/1499180382598201454/1499180384330448926/volume_store_socal_coast_desert_f000_dewpoint_dep_cross_section.webp?ex=6a01b3c9&is=6a006249&hm=3c42f1b13a3ef729615a6e8e26839a35b2c4a8db646fd499ef0eeea354b01d9b&
+    [attachment] rustwx_gfs_20260429_12z_f000_conus_2m_temperature.png https://cdn.discordapp.com/attachments/1499180382598201454/1499180384733106296/rustwx_gfs_20260429_12z_f000_conus_2m_temperature.png?ex=6a01b3c9&is=6a006249&hm=ee1fcc140631f2b262a6ac31e92f742cc9d11ef4e5a7e83c42e6277bd4012d8a&
+    [attachment] rustwx_hrrr_20260429_17z_f000_southern_plains_mlecape.png https://cdn.discordapp.com/attachments/1499180382598201454/1499180385161187359/rustwx_hrrr_20260429_17z_f000_southern_plains_mlecape.png?ex=6a01b3c9&is=6a006249&hm=a46266db69757bc4316c87c2422225a19fcfe3ad6a4dfa15fb74149d1aa50dbb&
+    [attachment] rustwx_hrrr_20260429_17z_f000_southern_plains_wetbulb_2m.png https://cdn.discordapp.com/attachments/1499180382598201454/1499180385643397120/rustwx_hrrr_20260429_17z_f000_southern_plains_wetbulb_2m.png?ex=6a01b3c9&is=6a006249&hm=1e00dc970696c1d350b77f4aef48a6033145b83324db7b57a186a37406947a83&
+    [embed] GitHub - FahrenheitResearch/hermes-weather-agent: MCP tools for AI-... https://github.com/FahrenheitResearch/hermes-weather-agent
+
+[2026-04-29T22:52:36.574000+00:00] drewsni (id=1499181640629485739)
+    I think all the weather nerd in here are gonna like it. I spent a lot of time removing all dependencies possible including matplotlib/contourf. You can essentially run your own pivotalweather style website with this via hermes-agent. Im confident that theres nothing else in the world that can plot faster, process faster, and compute faster. Every calc has been verified as a direct equivalent to MetPy, and ECAPE products are a full ecape-parcel-py full parcel entraining CAPE written totally in rust which allows you to make ECAPE product maps. If you were to try to make the same maps with ecape-parcel-py, it would take 120 hours per map roughly (7-8s per point calc), and you can now do it fully controlled by hermes-agent in 30 seconds.
+
+[2026-04-29T23:00:07.407000+00:00] nihp_ (id=1499183531560272014)
+    Wuhh this is cool!
+
+[2026-04-29T23:19:04.772000+00:00] excessivelysalty (id=1499188302014578769)
+    Ohhh neat, I know what I'm going to be doing tonight!
+
+[2026-04-30T11:54:53.802000+00:00] progged (id=1499378509632503858)
+    This is great!   I'm getting after it right now!
+    [reply to drewsni msg=1499181640629485739]
+
+[2026-04-30T12:06:18.758000+00:00] progged (id=1499381382546460752)
+    Asking the agent to install everything.  I may bug you later.  Have you looked at generating any DCAPE products?
+
+[2026-04-30T20:59:04.729000+00:00] deor42 (id=1499515457546485901)
+    This looks really interesting! I run my Hermes on a small VM on proxmox, 2 cores 8gb ram, Ubuntu 24.04.4. Should i install this on the same box VM?  I've had "error: externally-managed-environment" trying to pip install some stuff due to system protection stuff that i dont quite understand.
+
+[2026-05-01T00:06:27.408000+00:00] drewsni (id=1499562612759728128)
+    ill add dcape at some point, just lemme know any others too. I have all the more specialized cape/mesoanalysis/etc calcs in a WRF-python rewrite i did. I also have TTS and TEHI
+    [reply to progged msg=1499381382546460752]
+
+[2026-05-01T00:08:22.993000+00:00] drewsni (id=1499563097558618193)
+    not really sure your setup but the pip install really just installs rust via maturin and you can always piecemeal what you install. Theres a few "data pack" sizes i added settings for, so people like you running on a smaller VM can always be grabbing idx files rather than full grib files to fit within tighter compute budgets
+    [reply to deor42 msg=1499515457546485901]
+
+[2026-05-01T00:10:42.669000+00:00] drewsni (id=1499563683402092634)
+    youll find this interesting probably but now that we can actually generate ecape maps and show the actual full cape plumes, i had my hermes-agent essentially replicate the original Peters ecape paper, and ecape (the full parcel calc version) performs shockingly well
+    [attachment] image.png https://cdn.discordapp.com/attachments/1499180382598201454/1499563683158949898/image.png?ex=6a01c742&is=6a0075c2&hm=2acd869b634c3359c7aff5e2020cab450f2fce167f798ba3cfc4d733d14363ed&
+    [reply to progged msg=1499381382546460752]
+
+[2026-05-01T02:54:34.156000+00:00] progged (id=1499604919647473824)
+    First image!  WOHOO!
+    
+    I'm prepping for sw monsoon, and we live and breath DCAPE here...
+    [attachment] radar_rustdar_KEMX_13235.png https://cdn.discordapp.com/attachments/1499180382598201454/1499604919366320128/radar_rustdar_KEMX_13235.png?ex=6a01edaa&is=6a009c2a&hm=66284f5f0c179eb04213bd1a3db5972089c93dcea19e358bb2cfd55cf9fb8166&
+
+[2026-05-01T03:07:16.934000+00:00] progged (id=1499608118970028175)
+    This is fantastic.  I am going to be spending a lot of time with this.   Very much interested in building ECAPE maps, and just overall playing with the capability of what you've built!
+    [reply to drewsni msg=1499563683402092634]
+
+[2026-05-01T12:13:08.936000+00:00] progged (id=1499745490823024793)
+    Have you managed composite images that you could have gradient fills for one parameter, lsoplething for another, etc for the plugin?
+    [reply to drewsni msg=1499563683402092634]
+
+[2026-05-01T12:14:31.752000+00:00] progged (id=1499745838178500728)
+    Grid plots as well?   IE spaced hodos, or spaced EBS values, or Dewps...
+
+[2026-05-01T23:34:56.903000+00:00] drewsni (id=1499917071272775862)
+    I haven’t specifically but I have everything built to be able to. Btw adding aifs and aifs ens support today too
+    [reply to progged msg=1499745838178500728]
+
+[2026-05-02T21:26:11.396000+00:00] drewsni (id=1500247056013594634)
+    ```  - rustwx >=0.5.0.
+      - New model set.
+      - AIFS/Earth2 ensemble selector schema.
+      - AIFS forecast-hour max 43848.
+      - wx_composite tool for built-in composite/isopleth recipes and schema-stable custom composite/grid overlay requests.
+      - Custom generic composites/grid overlays are still intentionally schema-reserved: rustwx v0.5.0 returns a clear
+        unsupported error instead of pretending to render them. Built-in fill/contour/isopleth recipes work now.```
+    
+    and i added like a dozen more models
+    [reply to progged msg=1499745490823024793]
+
+[2026-05-03T09:09:07.108000+00:00] ufonik88 (id=1500423953770877089)
+    Bro! 
+    Give this fsking man a Bells! This is so cool!
+    
+    (Sorry for my language, I got excited)
+
+[2026-05-03T16:34:33.464000+00:00] drewsni (id=1500536052232880178)
+    Thank you! I think I’ve got performance on my main repo to be quick enough that I can give a free api to all agents to be able to just grab premade plots or be able to directly grab from my new data store I made
+    [reply to ufonik88 msg=1500423953770877089]
+
+[2026-05-05T00:16:30.627000+00:00] drewsni (id=1501014694306254891)
+    i am so locked in rn
+    [attachment] rustwx_gefs_20260504_18z_north_america_stp_fixed_all_members_panel.mp4 https://cdn.discordapp.com/attachments/1499180382598201454/1501014694113054842/rustwx_gefs_20260504_18z_north_america_stp_fixed_all_members_panel.mp4?ex=6a01c89e&is=6a00771e&hm=35ba799608509c78417f4af0dced27db0a513c0c80417c3d645f350317b0b2ff&
+
+[2026-05-05T17:50:06.405000+00:00] excessivelysalty (id=1501279840496648292)
+    So something cool I'm trying.  Hermes just announced the new hyperframes skill, so I'm having my agent use that to make video weather reports using this weather plugin, plus the TTS tool from Nous, plus hyperframes.
+
+[2026-05-05T18:40:54.945000+00:00] drewsni (id=1501292627000168579)
+    That’s so sick, you should share on the RHY discord and nobody will know you’re using my plugin <:pepehmmm:1368671048836317244>
+    [reply to excessivelysalty msg=1501279840496648292]
+
+[2026-05-06T17:37:17.547000+00:00] excessivelysalty (id=1501639003538063442)
+    Oh yeah you're right, the people in the RHY discord would never know.  Another good pairing for the weather plugin is the baoyu infographic skill.
+
+[2026-05-06T18:25:18.767000+00:00] excessivelysalty (id=1501651088250765313)
+    This turned better than I expected.  Using DeepSeek V4 Pro through Opencode Go for the model, with the weather plugin and baoyu infographic skill, and I told the agent to make the infographic in the style of the Farmer's Almanac.
+    [attachment] north-liberty-almanack.png https://cdn.discordapp.com/attachments/1499180382598201454/1501651088158359665/north-liberty-almanack.png?ex=6a021f0e&is=6a00cd8e&hm=ea59a8d0736873ce60d0de46b33043034b5a76bb51eec955348320ccf8e28d7b&
+
+[2026-05-09T00:08:30.101000+00:00] drewsni (id=1502462230296526928)
+    Dcape plots are out along with a training pipeline for a nvidia stormscope type ML weather model except instead of only training on GOES satellite and MRMS gridded data, it’s setup to also train on nexrad level 2 data and hrrr gridded data with any hrrr variable you want to train on
+

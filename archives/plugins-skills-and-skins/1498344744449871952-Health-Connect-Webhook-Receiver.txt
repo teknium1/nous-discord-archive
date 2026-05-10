@@ -1,0 +1,10 @@
+# Thread 'Health Connect Webhook Receiver' in forum #plugins-skills-and-skins
+# thread_id=1498344744449871952 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:12.495204+00:00
+
+[2026-04-27T15:27:04.976000+00:00] wysie_ (id=1498344744449871952)
+    Standalone but I built it to use it with Hermes. Connect HC Webook (some play store app) to it and you can sync your Health Connect data locally and do whatever.
+    
+    https://github.com/Wysie/health-connect-webhook-receiver
+    [embed] GitHub - Wysie/health-connect-webhook-receiver: Self-hosted SQLite ... https://github.com/Wysie/health-connect-webhook-receiver
+

@@ -1,0 +1,940 @@
+# Thread 'Mazemaker feat. Neural Memory' in forum #plugins-skills-and-skins
+# thread_id=1491688455745306755 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:42.064097+00:00
+
+[2026-04-09T06:37:22.081000+00:00] alcatr4z (id=1491688455745306755)
+    A *brain-inspired* memory system for AI agents. Semantic memory system with knowledge graph, spreading activation, embedding-based recall, **autonomous dream consolidation**, and **C++ LSTM+kNN pattern learning** for the Hermes Agent, and any other /MCP compitible harnes/ide/etc.
+    
+    ## Features (From first proof of concept builds - more below)
+    
+    - **Semantic Memory Storage**: Store memories with automatic embedding generation (`BAAI/bge-m3`, 1024d, CUDA-accelerated)
+    - **Knowledge Graph**: Automatic connection of related memories based on cosine similarity
+    - **Spreading Activation**: Explore connected ideas through BFS graph traversal with decay
+    - **Conflict Detection**: Automatically detect and supersede conflicting memories
+    - **Dream Engine**: Autonomous background consolidation (NREM/REM/Insight phases)
+    - **LSTM+kNN Pattern Learning**: C++ LSTM predicts next-relevant embedding from access sequences; kNN re-ranks by multi-signal score (embedding + temporal + frequency + graph)
+    - **MSSQL Backend**: Optional shared database for multi-agent setups — all dream operations write to the `connections` table directly
+    - **CUDA Acceleration**: GPU-accelerated embeddings via sentence-transformers
+    
+    --
+    
+    First tiny Benchmark Results of proof of concept build, No LTSM, No kNN:
+    ```py
+    EvoMem + Neural Memory + Llama 3.3 70B (NIM)
+    
+    MMLU-Pro:     60–70%  (22 ms retrieval time)
+    GPQA Diamond: 66.7%   (21 ms retrieval time)  
+    AIME 2024:     6.7%   (17 ms retrieval time)
+    
+    Enabled optimizations:
+    ✓ sentence-transformers (CUDA)
+    ✓ Conflict detection during knowledge updating
+    ✓ Time-based evaluation (24-hour half-life)
+    ✓ Llama 3.3 70B (NVIDIA NIM)
+    
+    
+    GPQA shows a +16.7% boost from memory retrieval compared to the baseline. As expected, AIME is weak.
+    ```
+    
+    Full production ready infos are here: https://mazemaker.online
+    ---
+    https://github.com/itsXactlY/mazemaker
+    [embed] mazemaker — inceptions, as a service. https://mazemaker.online/
+    [embed] GitHub - itsXactlY/mazemaker: Semantic memory system with knowledge... https://github.com/itsXactlY/mazemaker
+
+[2026-04-09T13:41:56.959000+00:00] alcatr4z (id=1491795305128263925)
+    Based on this context, to build all this - i asked to generate an image. 
+    
+    Now sleep, then benchmarks next.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1491795304679477439/image.png?ex=6a01dca4&is=6a008b24&hm=09a6014b50341a76ab6b80ea1bfcaa31e7a6c4e2ff553104ca3772104cf93782&
+
+[2026-04-10T02:56:03.066000+00:00] alcatr4z (id=1491995147385180270)
+    PASS WITH >70% on Conflict Resolution Benchmark, >15-20~ish above other system already. :]
+
+[2026-04-10T12:20:59.715000+00:00] alcatr4z (id=1492137320235925506)
+
+[2026-04-10T22:20:17.498000+00:00] mayuronx (id=1492288138108866691)
+    https://tenor.com/view/smart-thinking-thoughts-think-ponder-gif-18050532214954774978
+    [embed]  https://tenor.com/view/smart-thinking-thoughts-think-ponder-gif-18050532214954774978
+
+[2026-04-10T22:25:33.034000+00:00] mayuronx (id=1492289461562769488)
+    If i install this as indicated in readme, would it replace the recall/search that Hermes does by default over Telegram?
+
+[2026-04-11T02:14:55.212000+00:00] alcatr4z (id=1492347184321007717)
+    not yet, out of the box directly, i think this plugin attempt does not hook deep enough yet. there is an open PR.
+    
+    https://github.com/NousResearch/hermes-agent/pull/7185
+
+[2026-04-11T02:16:17.325000+00:00] alcatr4z (id=1492347528728019207)
+    This build hooks directly on hermes level for full integration.
+    
+    https://github.com/itsXactlY/hermes-agent/tree/neural-memory-clean
+
+[2026-04-11T02:16:49.769000+00:00] alcatr4z (id=1492347664807891024)
+    Would love some real world feedback ❤️
+
+[2026-04-11T04:38:24.828000+00:00] mayuronx (id=1492383295667830834)
+    I'm looking into it.. here is what my Hermes said:
+    
+    The concept is solid — the current memory system is genuinely limited. Flat file + keyword search means I miss connections all the time. But there are risks:
+    - C++23/AVX2 requirement might be tricky on your Contabo box
+    - The PR is 2760 lines from an external contributor — needs real review
+    - sentence-transformers adds a CUDA dependency for best results
+    - The benchmarks (GPQA +16.7%) are promising but the AIME score (6.7%) shows it's not magic
+    
+    Worth keeping an eye on. The PR is clean architecturally — pure plugin, no core surgery — so the blast radius is low if it doesn't work out.
+
+[2026-04-11T04:44:32.761000+00:00] alcatr4z (id=1492384838890688622)
+    Work in Progress. As said. 🙂
+    
+    Dreams next, full stack.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1492384838509002772/image.png?ex=6a020770&is=6a00b5f0&hm=2b2091b3e7fa740dec1308659f2859da0a3a06cfeefc4ceb7bc1238dab54f7fd&
+
+[2026-04-11T04:48:27.839000+00:00] mayuronx (id=1492385824879411280)
+    i was having a convo about memory and store and stalness with my bot.. basically i see what the challenge is now
+    
+    - DB — great CRUD, flat structure, no emergent connections
+    - Wiki — great mesh/linking, manual maintenance, staleness kills it
+    - Memory system — just a dumb key-value with keyword search (what we have now)
+    
+    What you actually want is a graph with good CRUD — store anything easily, but the system automatically forms connections. Not manually linked, not flat. The interlinking should be emergent, not curated.
+
+[2026-04-11T04:49:15.988000+00:00] mayuronx (id=1492386026830696519)
+    From Hermes:
+    
+    Honestly that's exactly what the neural memory PR is trying to be:
+    - neural_remember = CRUD store
+    - Vector embeddings = auto-semantic-similarity linking
+    - Knowledge graph = emergent mesh between entries
+    - Spreading activation = traverse the mesh
+    
+    The wiki skill is the opposite end — human-curated, high effort, high quality but doesn't scale because staleness.
+    
+    So the real question is: is the neural memory PR the right implementation of that idea
+
+[2026-04-11T04:49:42.671000+00:00] alcatr4z (id=1492386138747568189)
+    About benches shown in my work - they were from its very first proof of concept running. Nothing to 👀 yet.
+    
+    To AIME: It will always lack behind with this kind of technology, nothing we can do about imho. Thats why, when im done, and find some $$$ for syntethic GPT-4o benches is that: https://www.researchgate.net/publication/398026553_Evo-Memory_Benchmarking_LLM_Agent_Test-time_Learning_with_Self-Evolving_Memory comes to play.
+
+[2026-04-11T04:52:39.597000+00:00] alcatr4z (id=1492386880828870716)
+    ```py
+    Full Stack Dream Worker — MSSQL + sentence-transformers, standalone.
+    dream_worker.py — complete 3-phase cycle on MSSQL:
+    
+    NREM    (11s) — 100 memories processed, 400 connections strengthened
+    REM     (4s)  — 50 isolated memories, 134 new bridges
+    Insight (0.1s) — 15 communities, 3 cluster insights
+    Total: ~15s for full cycle
+    Bugfix: MSSQL MAX()/MIN() are aggregates, not scalars — replaced with CASE WHEN instead of MIN/MAX in dream_mssql_store.py.
+    Tables: All dream tables now exist in MSSQL:
+    
+    dream_sessions (10 sessions already)
+    dream_insights (4 insights: cluster type)
+    connection_history (change tracking)
+    ```
+    
+    testing starts now...
+
+[2026-04-11T04:54:21.582000+00:00] alcatr4z (id=1492387308584829108)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1492387308312203264/image.png?ex=6a0209bd&is=6a00b83d&hm=021a683c63a71a427878f1727367799251be6d42a5a96e384490078cb6f1d63b&
+
+[2026-04-11T04:54:57.502000+00:00] alcatr4z (id=1492387459244228749)
+    better then expexted 👀
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1492387459005419570/image.png?ex=6a0209e1&is=6a00b861&hm=bbcb320f9289cbcac6fdd255c02e11aabd4f8409383b455650af4708ee1cd006&
+
+[2026-04-11T04:56:24.581000+00:00] mayuronx (id=1492387824480161805)
+    interesting
+
+[2026-04-11T04:58:09.167000+00:00] mayuronx (id=1492388263145639976)
+    So just a dumb question.. this is way over my head.. could/does the evo "wrap" the wiki?
+    
+    This is what my agent summarized:
+    
+    --------------
+    **Me:** so are you thinking two brains? one for structured knowledge and another for evo and then maybe one manages the other? evo manages the wiki?
+    
+    **Agent: **That's a pretty sharp mental model actually. Think of it like human memory:
+    
+    Neural Memory (Evo) = Hippocampus
+    - Catches everything, makes associative connections automatically
+    - Spreading activation — "chicken or fish" surfaces related memories about email, himalaya, food preferences
+    - Fast, fuzzy, decays over time (24hr half-life)
+    - Working memory — what's relevant right now
+    
+    LLM Wiki = Neocortex
+    - Consolidated, structured, permanent
+    - Cross-linked and curated — every page is readable in 30 seconds
+    - The "source of truth" that survives sessions
+    - Auditable — you can read it yourself, edit it, trust it
+    
+    The flow:
+    Incoming (email, chat, research)
+            ↓
+       Neural Memory catches it
+       (auto-embed, auto-connect, activate related memories)
+            ↓
+       Agent decides: is this worth consolidating?
+            ↓
+       Wiki gets updated (entity/concept pages, cross-references)
+            ↓
+       Wiki feeds back into neural memory as source material
+    
+    
+    So Evo doesn't just "manage" the wiki — it's the front door. Everything flows through associative recall first, gets filtered by relevance, then the durable stuff gets written up properly into the wiki.
+    
+    The wiki lint tasks (orphan detection, contradiction flagging, staleness) could also be driven by Evo's conflict detection — it already knows which memories contradict each other.
+    
+    It's basically a two-tier memory system: fast/associative/decaying + slow/structured/permanent. With the agent as the consolidation mechanism (like sleep does in humans).
+    
+    -------------
+
+[2026-04-11T05:04:02.135000+00:00] alcatr4z (id=1492389743600603267)
+    in theory u can do what ever u want before, after, or inbetween. add a wiki? go for. add more layers to improve AIME? go for. its endless. for me its just more or less important to have my memory twice synced (sql and production grade mssql ACID who never betrayed me in a decade+)
+
+[2026-04-11T05:40:32.578000+00:00] alcatr4z (id=1492398930984697968)
+    New Version + PR is up. New Readme, Dreaming, Installer scripts...
+    
+    https://github.com/itsXactlY/neural-memory
+    [embed] GitHub - itsXactlY/neural-memory: A brain-inspired memory system fo... https://github.com/itsXactlY/neural-memory
+
+[2026-04-11T05:57:14.597000+00:00] alcatr4z (id=1492403133756997793)
+    everything seems fine so far 🙂
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1492403133421195405/image.png?ex=6a02187a&is=6a00c6fa&hm=0b6eb72063f8427a002d70eca1c9f3548ea2bfb26d698b453ff08bc28b5afda5&
+
+[2026-04-11T08:30:33.985000+00:00] chfarhan_ (id=1492441718786625557)
+    looking towards this. does this memory system auto seach index and inject or only work on request. as i am not seeing any activitiy with honcho memory system auto injection phase. i always have to told my agent to look into memory then it works
+
+[2026-04-11T08:58:26.557000+00:00] alcatr4z (id=1492448734062317669)
+    if used my fork till upstream pr merged: then yes, full autoinject, each roundrobbin, hooked before compress and new
+
+[2026-04-11T10:26:50.435000+00:00] alcatr4z (id=1492470980138893413)
+    But... Good catch, thought i got it,... Another fix pushed:
+    
+    The problem was:
+    Before: prefetch() consumed _initial_context (= deleted it).
+    
+    Turn 1: _build_system_prompt → Context is in cache ✓
+    Turn 1: prefetch() → Context consumed, deleted
+    System Prompt cache is not updated → Turn 2+ still have Context
+    But: Context was ONLY in the System Prompt, not in the User Message
+    
+    After:
+    
+    prefetch() no longer consumes — _initial_context stays available
+    Context is injected twice:
+    
+    In System Prompt (system_prompt_block() → ## Recent Memory Context)
+    In User Message (prefetch() → build_memory_context_block() fenced block)
+    
+    
+    
+    Double-injection = Model sees the context in both places. Models tend to ignore the System Prompt but usually read User Message content more carefully.
+
+[2026-04-11T12:03:37.890000+00:00] hugh1979 (id=1492495338370633959)
+    You don't _really_ need a core PR to plug in a memory system these days.  I've had a PR#5172 open for a while and doubt they want to merge.  But instead:
+    - use an installer shell-script to find hermes and drop in your provider plugin (see mine for a template: https://keepnotes.ai/scripts/install-hermes.sh)
+    - then run `hermes memory setup` and it'll hook right in.
+    
+    For debugging the injection stuff I use the tui, starting it with `HERMES_DUMP_REQUESTS=1 hermes`, then the full prompt gets dumped into the sessions log.
+    [embed] Keep — Reflective Memory for AI https://keepnotes.ai/scripts/install-hermes.sh)
+
+[2026-04-11T12:27:11.155000+00:00] alcatr4z (id=1492501266033545308)
+    the thing is, the more feedback on exact build: the better. and its not done yet - ctypes + cleanup my mess will follow - then its on the judge to decide if worth or not 😄
+    
+    rn MMLU with gemma4 A4B UD Q3 _K_XL showing 75% - with out its full potenial playing out  yet, on all the edges
+
+[2026-04-11T17:03:18.930000+00:00] alcatr4z (id=1492570756318494874)
+    K, i think, for now, it wont get *any better* with out pure brute force and wandb integration for total observation deeper and deeper. So far im happy with.
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1491688455745306755/1492570756096458823/message.txt?ex=6a020bd6&is=6a00ba56&hm=dd0812f5862a475e41ca6368a5b23b914f91cf36a407b8d5db9d295d4c7125f6&
+
+[2026-04-12T00:35:12.191000+00:00] alcatr4z (id=1492684477577560365)
+    Went to sleep - so did the neural memory too. Sleept & dreamed well. 🤣
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1492684477598793859/image.png?ex=6a01cd00&is=6a007b80&hm=2e24447ab09d640b099ee9b2f70933b4e15edecf642f3ebc096db6bebcb383ff&
+
+[2026-04-14T08:01:49.660000+00:00] alcatr4z (id=1493521650040176742)
+    Still working and working - Notice over the last two days alot of oopsies, what make sense why benchmarks did all weird things. Like, wrong hardcoded dimensions in the C++ stack, and... well... But there is light already on the end of the tunnel. Already made huge progress for a final version 0.0.1 - leaving the Proof of Concept territory.
+
+[2026-04-14T18:08:37.483000+00:00] alcatr4z (id=1493674355517947925)
+    ```py
+     MMLU-Pro: Baseline 50% -> Retest 75% = +25%! That's a significant improvement over the previous +10%. Let me run GPQA Diamond next.
+    
+    
+    GPQA Diamond: 46.7% -> 60.0% = +13.3%! Much better than the previous -6.7% (or the buggy -20.0%). The memory poisoning fix is really making a difference.
+    ```
+    
+    Model running: openhermes:7b-v2.5 for that run. slow 'n steady 🙂
+
+[2026-04-14T23:18:24.628000+00:00] mayuronx (id=1493752315654574160)
+    Neural Memory — What Broke & What We Fixed
+    
+    Root cause: Running an outdated version of the plugin + wrong DB path in config.
+    
+    Issues found:
+    
+    Wrong DB path — Config pointed to ~/.neural_memory/memory.db (empty, 0 rows). Actual data lived at ~/.hermes/hermes-agent/~/.neural_memory/memory.db (148 memories, 628 connections). The plugin was reading/writing to the correct path internally, but the config-level path was stale — so dream auto-triggers and dashboard generation couldn't find the data.
+    
+    Dream engine never auto-triggered — Should fire after 5 min idle or every 50 new memories. Only ran once in its entire lifetime (143+ memories). Likely caused by the daemon watching the wrong DB file. Fixed by adding a cron job (0 */6 * * *) as the reliable trigger.
+    
+    26 commits behind upstream — The repo (itsXactlY/neural-memory) had major updates since our last pull:
+    Deep dream (every 10th cycle does full-history sampling to prevent long-term erosion)
+    Strong edge protection (edges >0.4 weight decay 5x slower)
+    Dream cooldown (10 min between cycles)
+    SQLite WAL mode for better concurrency
+    Prefetch disabled (was returning garbage)
+    MSSQL-only backend rewrite
+    Cython fast_ops (66x faster cosine similarity)
+    
+    What we did:
+    Pulled all 26 commits, synced plugin files
+    Fixed db_path in config.yaml to point to the real database
+    Ran dream cycle #2 (605 connections strengthened, 8 bridges, 1 community insight)
+    Set up cron job to dream every 6 hours going forward
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1493752315402911875/image.png?ex=6a01bb00&is=6a006980&hm=34925a4be1af629f964ec4f6be5bc4842b602262677c179c3f6f81587ce7d0ba&
+
+[2026-04-14T23:22:15.713000+00:00] mayuronx (id=1493753284895445135)
+    I'm unsure if this dashboard is what i should be expecting or not.. its after the first dream cycle run
+    [reply to mayuronx msg=1493752315654574160]
+
+[2026-04-14T23:23:28.943000+00:00] mayuronx (id=1493753592044191846)
+    Question: How do I "view" all memories and crud them? 
+    
+    Request: would be great to have memory auto synced to a github repo so I could crud
+
+[2026-04-14T23:57:34.778000+00:00] alcatr4z (id=1493762172898115705)
+    im on it since last >8hrs+ more or less to unbreak and unspaghetti everything accros all my repos, neural memory will get a clean reworked push, with extra goodys hopefully tomorrow at worst - but, if the agent manages to fix by itself, u should see and feel the improvment, even when not noticing much as cli output
+    
+    when it works, its busy busy, even with all the oopsies still existing.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1493762172629549256/image.png?ex=6a01c42e&is=6a0072ae&hm=19f0a8e04e8f21b5469ba26d50d046b9301b6a58006ccaeadd56eb3fa7eb11d1&
+
+[2026-04-15T00:26:49.730000+00:00] alcatr4z (id=1493769533700440146)
+    these numbers... update is near, and suffering has an end - thanks for patience guys.
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1491688455745306755/1493769533293461575/message.txt?ex=6a01cb09&is=6a007989&hm=5d2ff5b8ba0e02910e1c9478b1c7194117524e10132a0cf8a670e0d42aa02855&
+
+[2026-04-15T01:31:57.428000+00:00] alcatr4z (id=1493785923773530154)
+    RC-1 Live @here 
+    
+    
+    Full Changelog
+    --
+    https://github.com/itsXactlY/neural-memory/releases/tag/RC
+    [embed] Release RC-1 · itsXactlY/neural-memory https://github.com/itsXactlY/neural-memory/releases/tag/RC
+
+[2026-04-15T01:49:44.322000+00:00] alcatr4z (id=1493790398651302009)
+    Ive never talked about this topic at all, as seen on the end - but its to 100% accurate on point. This is god damn scary now. 🙁
+    
+    ```## What I don't have
+    
+    - No direct access to the JRR source code (it's installed at `/home/JackrabbitRelay2/` but I haven't inspected it)
+    ```
+    
+    will ask about other topics now, on fresh sessions. 😮
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1493790398399778866/image.png?ex=6a01de78&is=6a008cf8&hm=85bcfe6b868a97b87e7380ae694bd19345d638ab49139fbb0af249545fc6a7a6&
+
+[2026-04-15T01:53:49.560000+00:00] alcatr4z (id=1493791427254292583)
+    atleast i didnt break into territory it should never touch, yet.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1493791426708766831/image.png?ex=6a01df6d&is=6a008ded&hm=c3f62400ea7f5811619819d508793a1d9b36e6ba95824631699a2b67e70eddd8&
+
+[2026-04-15T02:24:42.189000+00:00] alcatr4z (id=1493799197743251598)
+    So far-so good. 
+    
+    If find bugs, issues, problems, let me know guys. ❤️
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1491688455745306755/1493799197131014234/message.txt?ex=6a01e6aa&is=6a00952a&hm=7ad87ea7e2dbe161484f7c729733dde4a37de065542ec3a6e79665f6e2868403&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1493799197454106804/image.png?ex=6a01e6aa&is=6a00952a&hm=698879d1f4bff57b16f56a50b4be665abc6ac433b5b4fcd89d038073fe6e7872&
+
+[2026-04-15T08:51:39.909000+00:00] chfarhan_ (id=1493896579919253574)
+    still waiting for hermes memory plugin to see this as memory.
+
+[2026-04-15T11:02:23.278000+00:00] alcatr4z (id=1493929477393223860)
+    just head to the repo, clone it, hit ```./install.sh``` and everything will be there, and ready to use 🙂
+
+[2026-04-15T11:02:45.233000+00:00] alcatr4z (id=1493929569479168094)
+    or tell ur agent todo the rest 🙂 takes 10minutes at worst
+
+[2026-04-15T14:06:11.985000+00:00] chfarhan_ (id=1493975735142977586)
+    how does this tacklemulti agnt pofile memory. as i didnt see any info on this
+
+[2026-04-15T14:11:47.392000+00:00] alcatr4z (id=1493977141942030438)
+    no clue about all the benchmarks out there, but benchmarks i tested, had improvements from base to neural up to >40%ish~ cant remember which, is, i think its all in the results folder iirc. if not can commit that too
+    
+    havent had the mindset yet to figure out all the benches, as imho. it lacks an universal wrapper for easy abusage, or, didnt find the missing link yet
+
+[2026-04-15T14:13:15.289000+00:00] alcatr4z (id=1493977510608765072)
+    and, it, when neural memory broke on developement process, it was like from quantum brain back to an slice of toast
+
+[2026-04-15T14:17:24.498000+00:00] chfarhan_ (id=1493978555867201680)
+    hmm intresting
+
+[2026-04-15T19:27:59.924000+00:00] bostonsportstech82 (id=1494056718508883980)
+    Guys take a look at my repo and have your agent take and merge some of the ideas. I was able to clear some of the benchmarks with a much weaker local LLM but your system is more robust. This is great stuff
+    
+    https://github.com/ryaboy25/shiba-memory
+    [embed] GitHub - ryaboy25/shiba-memory https://github.com/ryaboy25/shiba-memory
+
+[2026-04-15T22:03:07.302000+00:00] mayuronx (id=1494095756481527929)
+    I had my agent do a quick comparison. Maybe this helps to show on the repo/docs.
+    
+    https://share.jotbird.com/restless-courageous-desert-raven
+    [embed] Neural Memory vs The 8 Providers# https://share.jotbird.com/restless-courageous-desert-raven
+
+[2026-04-15T23:07:59.032000+00:00] mayuronx (id=1494112079580233738)
+    Ran into an issue with my DB growing to 2.5gb. Prune not installed for Lite. See https://github.com/itsXactlY/neural-memory/issues/2
+    [embed] SQLite backend missing prune_connection_history and prune_old_dream... https://github.com/itsXactlY/neural-memory/issues/2
+
+[2026-04-16T02:13:10.339000+00:00] alcatr4z (id=1494158683779629057)
+    Hmpf - dont let ur hermes do work while sleep. no clue how it escalated, but, zero space left. it tryd to download glm, ollama 405b etc. and squeeze it into 16gb VRAM. meh.
+    
+    first time microsoft sql bitching at me with exactly this. never seen before. hmpf
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1494158683440021695/image.png?ex=6a01e3f6&is=6a009276&hm=87697044c44048a8be96e7e235c293093da43f03db478b550ca643149f06264c&
+
+[2026-04-16T03:33:05.037000+00:00] alcatr4z (id=1494178794200891544)
+    Update Pushed:
+    
+    ```
+    feat: production upgrade tool + retention pruning
+    production_upgrade.py: one-shot PoC→Production script
+    backup, history cleanup, orphan removal, dedup, UNIQUE constraint, VACUUM
+    result: 237MB → 49.9MB (79% reduction)
+    dream_engine.py: add prune_connection_history/prune_old_dream_sessions/prune_orphans
+    SQLite backend gets all 3 methods
+    periodic cleanup every 50 NREM cycles (history 7d, sessions 30d, orphans)
+    abstract DreamBackend gets matching interface methods
+    dream_mssql_store.py: add prune_connection_history/prune_old_dream_sessions/prune_orphans
+    MSSQL-compatible SQL (DATEADD, INNER JOIN delete cascade)
+    ```
+    
+    For the dayz zero testers ❤️ :
+    
+    ```cd ~/projects/neural-memory-adapter
+    git pull
+    bash migrate.sh```
+    
+    What will happen:
+    
+    ```━━━ Preflight ━━━
+      Locate DB, check size, check Python3 availability
+    
+    ━━━ Step 1: Backup ━━━
+      memory.db.bak.<timestamp> (untouched, safety backup)
+    
+    ━━━ Step 2: Data Cleanup ━━━
+      Delete orphan connections
+      Delete orphan history entries
+      Deduplicate records
+      Apply UNIQUE constraints
+      Create retention indexes
+      VACUUM (reclaim freelist space)
+    
+    ━━━ Step 3: Patch dream_engine.py ━━━
+      Abstract methods (prune_connection_history, prune_orphans, etc.)
+      SQLiteDreamBackend implementations
+      NREM periodic cleanup (every 50 cycles)
+    
+    ━━━ Step 4: Patch dream_mssql_store.py ━━━
+      MSSQL retention methods
+    
+    ━━━ Step 5: Patch cpp_dream_backend.py ━━━
+      Safe stubs (C++ handles internals)
+    
+    ━━━ Verification ━━━
+      PRAGMA integrity_check
+      Orphan count = 0
+      Duplicate count = 0
+      UNIQUE constraint active
+      Retention index active
+      All files patched
+    ```
+
+[2026-04-16T03:37:08.126000+00:00] alcatr4z (id=1494179813790056669)
+    [attachment] migrate_example.log https://cdn.discordapp.com/attachments/1491688455745306755/1494179813248729230/migrate_example.log?ex=6a01f7a3&is=6a00a623&hm=8dc95011044f3548c73385db6d11efbfaf9fb1f5c92863ad513f4bc06ec78195&
+
+[2026-04-16T04:07:36.569000+00:00] alcatr4z (id=1494187482835587175)
+    ill take a deeper dive later into, rn, im building an unified benchmarking adapter. no blackbox. no cheating. no bruteforce. with this can opened pandoras box, i hope, we get finally something valueable to independend run benchmarks on every provider. in my opinion is that then the time to 👀 improve and 🧠 together for ideas 🙂
+    [reply to bostonsportstech82 msg=1494056718508883980]
+
+[2026-04-16T04:09:35.893000+00:00] alcatr4z (id=1494187983316975658)
+    its now day 4, where im figuring out howto get something clean, to compare also each benchmarks against each other, with an unified system. they are all too weird, too different, too different prompting, etc. injected nonsense, all this what makes it hard to understand it in the end.
+
+[2026-04-16T04:10:05.426000+00:00] alcatr4z (id=1494188107187097670)
+    like, locomo against longmem, etc.
+
+[2026-04-16T04:35:09.209000+00:00] alcatr4z (id=1494194414510149754)
+    im so in ❤️ with neural memory already. it straightened all findings from last couple days. single one-shot-prompt.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1494194414392971274/image.png?ex=6a02053d&is=6a00b3bd&hm=68715c72835dcf62e1eed32110ef31e45c4dc84b0d0933eb9375105794bce3b5&
+
+[2026-04-16T06:02:42.492000+00:00] alcatr4z (id=1494216448376307833)
+    [attachment] Transparency-Report.md https://cdn.discordapp.com/attachments/1491688455745306755/1494216448120459376/Transparency-Report.md?ex=6a0219c2&is=6a00c842&hm=66e6cf88fb2f03821f146e2466160cd796083cfb28369ed87635ba0fbd22dbe6&
+
+[2026-04-16T06:04:47.699000+00:00] alcatr4z (id=1494216973532401674)
+    Prompt:
+    ```
+    /pulse compare our /home/alca/projects/neural-memory-adapter/ against all the providers. make an compare of it. --deep
+    ```
+    
+    🥂
+    [reply to alcatr4z msg=1494216448376307833]
+
+[2026-04-16T06:08:01.676000+00:00] mayuronx (id=1494217787130904696)
+    How did you get this list? That research repo you showed me earlier?
+    [reply to alcatr4z msg=1494216448376307833]
+
+[2026-04-16T06:09:29.544000+00:00] alcatr4z (id=1494218155676143666)
+    this was pulse, yes
+
+[2026-04-16T06:09:54.056000+00:00] alcatr4z (id=1494218258486661130)
+    https://github.com/itsXactlY/pulse-hermes
+    [embed] GitHub - itsXactlY/pulse-hermes: An AI research engine scored by up... https://github.com/itsXactlY/pulse-hermes
+
+[2026-04-16T06:12:07.190000+00:00] alcatr4z (id=1494218816891387904)
+    See it in action, tackling an nonsense question. 
+    
+    https://www.youtube.com/watch?v=N6DfxTyub38
+    [embed] The Architects Palace https://www.youtube.com/watch?v=N6DfxTyub38
+
+[2026-04-16T10:24:48.839000+00:00] alcatr4z (id=1494282409456308364)
+    🤔
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1494282409011707914/image.png?ex=6a01ae70&is=6a005cf0&hm=e5144e6253eba8fbe86eb9a254f73308595b47f1e8477c8a9400e67ca980de49&
+
+[2026-04-16T10:25:41.948000+00:00] alcatr4z (id=1494282632211726396)
+    why are always weirdos among them... argh 🤣
+
+[2026-04-16T17:38:29.741000+00:00] alcatr4z (id=1494391549029515325)
+    Want to look inside your pandoras box? Done.
+    
+    Whats new:
+    
+    ```**Features:**
+    - **3D Force Graph** — full-viewport WebGL graph (vasturiano/3d-force-graph + Three.js), force-directed layout with directional particles, clickable nodes with camera focus
+    - **Amber Theme** — `#f5b731` on deep black `#0a0a12`, matching hermelinChat skin
+    - **HUD Panel** — top-left: memory count, connections, avg degree, graph density, embedding dim
+    - **Detail Panel** — right slide-in on node click: category, salience bar, degree (in/out/total), access count, connected nodes (clickable)
+    - **Search** — top-center fuzzy search by label or ID, click to focus + open detail
+    - **Category Legend** — top-right, click to highlight/filter nodes by category
+    - **Mini Charts** — bottom bar: category donut, connection strength bars, degree histogram (Plotly)
+    - **Controls** — camera reset, pause/resume simulation, toggle labels
+    
+    **Offline-First:** All JS libraries (Plotly ~3.5 MB, Three.js ~670 KB, 3d-force-graph ~690 KB) embedded inline. SpriteText replaced with canvas-based inline class. No external CDN calls. Generated HTML is fully self-contained (~5.4 MB).
+    
+    **Library Cache:** `tools/dashboard/.lib_cache/` — auto-downloaded on first `generate.py` run.
+    ```
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1494391548740370563/image.png?ex=6a021415&is=6a00c295&hm=53af4717eabc0de88583406cd365bafb522602317d7facc6dfdf062d251ad37c&
+
+[2026-04-17T09:28:36.916000+00:00] alcatr4z (id=1494630654451781723)
+    Dear Mac Users - i would love to invite u to have a crowd testing my MLX feature branch on neural memory. I havent forgot u, and that platform! 😄
+    
+    
+    https://github.com/itsXactlY/neural-memory/tree/feat/apple-silicon-support
+    [embed] GitHub - itsXactlY/neural-memory at feat/apple-silicon-support https://github.com/itsXactlY/neural-memory/tree/feat/apple-silicon-support
+
+[2026-04-17T17:22:35.921000+00:00] markopolo8817 (id=1494749936284078150)
+    After adding neural memory, I had the agent read the D&D 5e player handbook and make a character from it. Turns out pretty good.
+
+[2026-04-17T18:42:00.619000+00:00] alcatr4z (id=1494769920875958364)
+    The more it knows and learns about, the better it gets,.. 🙂
+
+[2026-04-17T20:49:46.939000+00:00] alcatr4z (id=1494802075752861808)
+    ```{"memories":4186,"connections":122253,"embedding_dim":384,"source":"MSSQL","path":"127.0.0.1/NeuralMemory","dream_sessions":11385}```
+    
+    now with an API endpoint on top 👀
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1494802075463188700/image.png?ex=6a01982a&is=6a0046aa&hm=7be09d5e5b8db926aae838e46261042925057ebd25dbd8d6ba47a613b9c50baf&
+
+[2026-04-17T21:40:51.107000+00:00] chfarhan_ (id=1494814927804961009)
+    do we need gpu with it ???if not then how setup willbe
+
+[2026-04-18T00:17:50.076000+00:00] alcatr4z (id=1494854433824047264)
+    no need for an GPU at all 🙂
+
+[2026-04-18T04:06:54.024000+00:00] markopolo8817 (id=1494912080120385567)
+    I am having difficulty updating, perhaps my agent messed up?
+    
+    > :~$ hermes update
+    > ⚕ Updating Hermes Agent...
+    > 
+    > → Fetching updates...
+    > → Local changes detected — stashing before update...
+    > Saved working directory and index state On main: hermes-update-autostash-20260418-040456
+    > warning: failed to remove plugins/memory/neural/build/CMakeLists.txt: Permission denied
+    > ✗ Update failed: Command '['git', 'stash', 'push', '--include-untracked', '-m', 'hermes-update-autostash-20260418-040456']' returned non-zero exit status 1.
+
+[2026-04-18T05:13:42.100000+00:00] mantertius (id=1494928891209322601)
+    it reads no permission
+    [reply to markopolo8817 msg=1494912080120385567]
+
+[2026-04-18T05:13:48.917000+00:00] mantertius (id=1494928919801888960)
+    you need to adjust the permissions of the cmakelists
+
+[2026-04-18T05:19:29.164000+00:00] markopolo8817 (id=1494930346901504101)
+    Thanks.
+
+[2026-04-18T20:48:57.846000+00:00] alcatr4z (id=1495164257707233370)
+    And, if needed, as an Desktop widget. See it working in Realtime.  God, i hate myself sometimes...
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1495164257183072327/image.png?ex=6a0197f9&is=6a004679&hm=6d1897cf76aa08d7d953b1d6ebbce2efd05315177bc4a720d9f7d46546d8885d&
+    [reply to alcatr4z msg=1494802075752861808]
+
+[2026-04-19T16:39:05.394000+00:00] codename_11 (id=1495463762671440034)
+    Made a nothing themed dashboard for it - loving the project - great work :)!!!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1495463762185158666/image.png?ex=6a020629&is=6a00b4a9&hm=31e2dc396e78e1041fa2f7761704e5f09031a437db9ae3536212cd7dda30558b&
+
+[2026-04-20T12:20:05.792000+00:00] alcatr4z (id=1495760972722340003)
+    Alrighty - had to fight whole sunday to rescue my data, and other important things, while managing to restore and resque all importance - i managed also to further bring Neural Memory on production line. Better dont question how, but the Changelog is phenomenal. ANother >x25~ speed increase, etc. 
+    
+    Cant login to get Changelogs but first version for its webside dropped. Sneekpeak at;
+    
+    --
+    https://itsxactly.github.io/neural-memory/
+    [embed] NEURAL MEMORY | The Knowledge Spine https://itsxactly.github.io/neural-memory/
+
+[2026-04-20T15:21:01.683000+00:00] vidal6115 (id=1495806505629384754)
+    root@Agents:~/neural-memory# bash install.sh
+    
+    ╔══════════════════════════════════════════════════╗
+    ║   Neural Memory Adapter — Installer (2026-04)    ║
+    ║   FastEmbed + GPU Recall + SQLite-First          ║
+    ╚══════════════════════════════════════════════════╝
+    
+    ✓ hermes-agent: /root/.hermes/hermes-agent
+    ✓ Plugin target: /root/.hermes/hermes-agent/plugins/memory/neural
+    ✓ Python: Python 3.13.5
+    ⚠ No venv detected — using user install (--user)
+    ⚠ Consider creating a venv: python3 -m venv ~/.hermes/venv
+    → Upgrading pip...
+    → Installing core dependencies...
+    ✓ numpy
+    ✓ fastembed (ONNX backend)
+    ⚠ FastEmbed installed but test failed — will retry on first use
+    
+    → Checking GPU recall engine...
+    ⚠ No NVIDIA GPU detected — using CPU recall (~500ms)
+    → GPU recall optional — FastEmbed + numpy recall works fine for <50K memories
+    
+    → sentence-transformers not installed (optional)
+    →   Only needed for GPU batch embedding or BAAI/bge-m3 model
+    →   FastEmbed covers most use cases without PyTorch
+    →   Install later: pip install sentence-transformers
+    → MSSQL not configured (optional — SQLite is primary)
+    →   Install later: pip install pyodbc
+    →   Also needs: ODBC Driver 18 + MSSQL Server
+    
+    → Installing plugin files...
+    root@Agents:~/neural-memory# . How it not install, can someone help me
+
+[2026-04-20T15:26:07.836000+00:00] alcatr4z (id=1495807789728006184)
+    any errors, warnings...? quick test;
+    
+    open two ```hermes``` tell on session 1 something, ask same about on session 2.
+    
+    also, i should rework the installer to abort and exit on *root* user.
+
+[2026-04-20T15:29:40.633000+00:00] vidal6115 (id=1495808682263318548)
+    thanks
+    [reply to alcatr4z msg=1495807789728006184]
+
+[2026-04-20T15:31:25.133000+00:00] alcatr4z (id=1495809120568344736)
+    if any errors/warnings: check ```.hermes/logs/errors.log``` and paste the last ```traceback``` about neural memory, if any happening
+
+[2026-04-20T15:39:41.797000+00:00] vidal6115 (id=1495811203728015432)
+    OUL.md                         bin                  checkpoints             cron                honcho.json   interrupt_debug.log  logs        pairing                sandboxes     state.db      temp_vision_images
+    audio_cache                     browser_screenshots  config.taml.bak         gateway.pid         hooks         lcm.db               mem0.json   pastes                 sessions      state.db-shm  venv
+    auth.json                       cache                config.yaml             gateway_state.json  image_cache   lcm.db-shm           memories    plugins                skills        state.db-wal  whatsapp
+    root@Agents:~/.hermes# cd logs/
+    root@Agents:~/.hermes/logs# ls
+    agent.log  errors.log  gateway.log  update.log
+    root@Agents:~/.hermes/logs# nano errors.log 
+    root@Agents:~/.hermes/logs# hermes memory
+    
+    Memory status
+    ────────────────────────────────────────
+      Built-in:  always active
+      Provider:  neural
+    
+      neural config:
+        db_path: ~/.neural_memory/memory.db
+        embedding_backend: fastembed
+        prefetch_limit: 10
+        search_limit: 10
+        dream: {'enabled': True, 'idle_threshold': 600, 'memory_threshold': 50}
+    
+      Plugin:    installed ✓
+      Status:    not available ✗
+    
+      Installed plugins:
+        • byterover  (requires API key)
+        • hindsight  (API key / local)
+        • holographic  (local)
+        • honcho  (API key / local)
+        • mem0  (API key / local)
+        • neural  (local) ← active
+        • openviking  (API key / local)
+        • retaindb  (API key / local)
+        • supermemory  (requires API key)
+    
+    root@Agents:~/.hermes/logs#  i have no idea
+    [reply to alcatr4z msg=1495809120568344736]
+
+[2026-04-20T15:43:41.780000+00:00] alcatr4z (id=1495812210289676371)
+    phew,.. gimme a few min to an hour or two, im still in the process of from *scratch* installations too, to handle this proper by the installation routine
+
+[2026-04-20T15:47:02.419000+00:00] alcatr4z (id=1495813051830636667)
+    what distro are u runniing? debian/ubuntu?
+
+[2026-04-20T15:54:08.719000+00:00] vidal6115 (id=1495814839862558943)
+    debian headless
+
+[2026-04-20T15:56:29.462000+00:00] vidal6115 (id=1495815430181486774)
+    im using minimax-m2.7 to trying install it rn
+    [reply to alcatr4z msg=1495812210289676371]
+
+[2026-04-20T15:57:23.596000+00:00] alcatr4z (id=1495815657235939619)
+    yea its not an bad idea to let the agent figure out the rest, i really need to brute force the whole installer routine up&down
+
+[2026-04-20T15:58:20.259000+00:00] alcatr4z (id=1495815894897791157)
+    and debian headless,.. another thing to take care of it seems,.. i think it was also an minimal install?
+
+[2026-04-20T15:58:40.930000+00:00] vidal6115 (id=1495815981597986827)
+    im running it on a debian server, yet minimal debian
+    [reply to alcatr4z msg=1495815894897791157]
+
+[2026-04-20T16:00:22.732000+00:00] alcatr4z (id=1495816408586653827)
+    thanks for the headup, noted, will throw it later also in an tiny vm to have an from scratch test there
+
+[2026-04-20T16:16:51.260000+00:00] vidal6115 (id=1495820554773463191)
+    nah using agent to install cost a lots of time
+    [reply to alcatr4z msg=1495816408586653827]
+
+[2026-04-20T16:18:30.965000+00:00] alcatr4z (id=1495820972966547549)
+    thats what neural memory is for. it gets sooo much better in such things... 😄 
+    
+    preparing to make some space, with <50gb free its no fun to start VM roulette :/
+
+[2026-04-20T16:20:34.245000+00:00] vidal6115 (id=1495821490040606951)
+    hell nah 50gb, my debian LXC only have 20gb
+    [reply to alcatr4z msg=1495820972966547549]
+
+[2026-04-20T16:22:10.645000+00:00] alcatr4z (id=1495821894371508395)
+    all good, im talking about my desk here, that takes all bit longer the process
+
+[2026-04-20T16:22:26.681000+00:00] alcatr4z (id=1495821961631236376)
+    im bound to 50gb~ free all the time 🤣
+
+[2026-04-20T16:31:44.752000+00:00] vidal6115 (id=1495824302350798948)
+    it cost over 1 hours to setup and testing
+
+[2026-04-21T02:56:14.738000+00:00] vidal6115 (id=1495981462862692422)
+    i really need your help, what is fastembed version in the project?
+    [reply to alcatr4z msg=1495821894371508395]
+
+[2026-04-21T05:50:37.968000+00:00] vidal6115 (id=1496025348830138400)
+    my agent said that your code dont actually using fastembed
+
+[2026-04-21T06:06:10.439000+00:00] vidal6115 (id=1496029259897110631)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1496029260044046336/image.png?ex=6a021a92&is=6a00c912&hm=3a99ea9acd6881c395297f447814df7ea6d9a1605fe3ee1c848efbe7c6c1985d&
+    [reply to alcatr4z msg=1495821894371508395]
+
+[2026-04-21T09:53:50.980000+00:00] alcatr4z (id=1496086556359004232)
+    Glad u seem to figure it out, my installers are done bruteforcing debian12 in & out too overnight. Think im done this evening with an unified installer of all my plugins, to choose which to install. 🙂 More about later.
+    
+    But: Kimi being kimi, no further investigation needed, sorry to say so. Dont trust what LLMs propagate. Most of time its straight nonsense.
+    
+    Look what embed_provider.py and this
+    
+    ```class SharedEmbedServer:
+        """UNIX socket server that holds the embedding model.
+        
+        Protocol: length-prefixed JSON over UNIX socket.
+        Request:  {"cmd": "embed", "text": "..."} or {"cmd": "embed_batch", "texts": [...]}
+        Response: {"ok": true, "vec": [...]} or {"ok": true, "vecs": [[...], ...]}
+        Error:    {"ok": false, "error": "..."}
+        """```
+    
+    huge class is doing.  When not up2date the repo itself, do an git pull, to be on the latest version. The last days Neurmal Memory made multiple transitions to figure out the best most efficient way to not bloat all the HW available for itself. I think have now found the best compromise between accurate embedding, the hardware resources available, and using as few of those resources as possible.
+
+[2026-04-21T09:59:54.722000+00:00] alcatr4z (id=1496088082003525682)
+    Also, wenn noticing this after the install, ure good to go.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1496088081592356946/image.png?ex=6a01a89a&is=6a00571a&hm=2434347ca7313247f55e5a5f8a8c25d052797728f35bed8876016082bd9f89c9&
+
+[2026-04-21T10:02:34.013000+00:00] alcatr4z (id=1496088750118408356)
+    Also thinking about making an ultimate guide; howto use neural memory to its full extend. Howto brute force the agents to use neural memory _*at all times*_ and other cavecats.
+
+[2026-04-21T11:35:41.256000+00:00] wasjdm (id=1496112184714072174)
+    This would be great
+    [reply to alcatr4z msg=1496088750118408356]
+
+[2026-04-21T11:36:43.902000+00:00] wasjdm (id=1496112447470309567)
+    I’m trying to figure out if my agent set everything up correctly, and if it did whether it’s using it lol. I see some things load at the beginning but idk if it’s using neural mem or stock mem during extended sessions
+
+[2026-04-21T11:52:18.322000+00:00] alcatr4z (id=1496116366711848980)
+    found some tool issues, yes, that could be an problem atm.
+
+[2026-04-21T11:52:23.539000+00:00] alcatr4z (id=1496116388593532928)
+    im on all this rn.
+
+[2026-04-21T11:53:12.304000+00:00] alcatr4z (id=1496116593128902737)
+    Ongoing bugfixes; last fixed issue: https://github.com/itsXactlY/neural-memory/commit/f12ffd25b1051b7feb7b096db6e713181182c06d
+    [embed] fix: GPU engine DB isolation + 27 test sections (195/195) · itsXac... https://github.com/itsXactlY/neural-memory/commit/f12ffd25b1051b7feb7b096db6e713181182c06d
+
+[2026-04-21T11:55:12.738000+00:00] alcatr4z (id=1496117098265575434)
+    So sad i lost tons of progress from last saturday -> sunday night, but it is what it is, thats why im going over back to commit + push immediatly, even when looks more messy in in the end,..
+
+[2026-04-21T12:12:51.362000+00:00] wasjdm (id=1496121538456584252)
+    Damn sorry to hear man. I used the MacOS fork you shared to implement. I had my agent test everything this morning and it seems to be working? Time will tell i guess lol. Do you have a good way to test whether things are working as they should?
+
+[2026-04-21T12:21:27.426000+00:00] alcatr4z (id=1496123702985887776)
+    to do an quick test: open two hermes, tell on session 1 some facts about u - demand him this time to bypass memory.md. ask on session two about the facts u gave him.
+    
+    also toggle ```/verbose``` till it says ```verbose - **VERBOSE**``` to see if the agent using neural memory think, recall, create/update graphs,... 🙂
+
+[2026-04-21T12:25:45.402000+00:00] alcatr4z (id=1496124785015656630)
+    Also, great to use the dashboard, its there for a reason, to look inside the otherwise pitch black pandoras box. 👀
+
+[2026-04-21T12:28:29.982000+00:00] alcatr4z (id=1496125475313946655)
+    and something like this should popup 😄
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1496125475079323649/image.png?ex=6a01cb6d&is=6a0079ed&hm=bdb87ce1298054d715e955cbdb17736548106300b3b4fbc10b93b73faaca11c8&
+
+[2026-04-21T12:39:34.113000+00:00] alcatr4z (id=1496128260881383535)
+    Lets see, still in old debugging session, and had to manual remind to do this - next session *hopefully* this is all gone once and forver again.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1496128260835115170/image.png?ex=6a01ce06&is=6a007c86&hm=2fe8c7c25d26c4ab02fce115cfd379b285d069a7c8596765430ee3cfae5e7cca&
+
+[2026-04-21T13:29:41.339000+00:00] alcatr4z (id=1496140874101293097)
+    Alrighty - on my side here - after all the commits, i asked on very fresh session what was the last stuff we were doing. first lazy answer, then deeper. and it was on point accurate with exact timestamps. 🥂
+
+[2026-04-21T13:30:58.361000+00:00] alcatr4z (id=1496141197154979850)
+    Would love to show the full log, but too much work in progress NDA stuff - testing on fresh VM again upside down now.
+
+[2026-04-21T13:42:01.330000+00:00] alcatr4z (id=1496143977848766656)
+    Also, another TL;DR is:
+    
+    ```In short: MEMORY.md is currently like a grandpa telling you what to think before you’re allowed to think for yourself. Neural memory gets reduced to a theatrical performance.```
+    
+    There alot more work to be done. 😭
+
+[2026-04-21T13:47:33.453000+00:00] alcatr4z (id=1496145370873466890)
+    <@387972437901312000> Sorry 4 pinging here, but is there anything done yet, or planed, about the context poisoning happening? Like;
+    
+    ```
+    MEMORY.md definitely distorts things:
+    
+    Contamination effect: If MEMORY.md says “second dog is named Alice,” then I don’t even need to use neural_recall. The answer is already in the context. Neural memory turns into an echo instead of a source.
+    Self-fulfilling prophecy: If neural_recall searches for “dog names” and MEMORY.md has already provided the answer, it looks like neural memory worked — but it didn’t. (Irreleavant - very small compared to the bombs dropped below)
+    
+    
+    Token budget drain: 67K tokens in the prompt, most of it system boilerplate. For what? So I know Alice is a Chihuahua before I even have to search.
+    
+    
+    --> Skill catalog = context poison: The entire skill catalog gets injected every single time. That’s thousands of tokens of irrelevant stuff per turn. <--```
+
+[2026-04-21T13:50:19.903000+00:00] teknium (id=1496146069015232663)
+    If you only want it to rely on long term recall set the max characters for MEMORY/USER.md's to be like 5 characters
+    [reply to alcatr4z msg=1496145370873466890]
+
+[2026-04-21T13:50:21.337000+00:00] alcatr4z (id=1496146075030126632)
+    If that was addresed alread in upstream: im sorry. If not, maybe we should consider to figure out a better way 🙂
+
+[2026-04-21T13:50:49.911000+00:00] alcatr4z (id=1496146194878038248)
+    ahhh,.. ok, seems this was addressed more or less already. im sorry!
+
+[2026-04-21T13:52:02.083000+00:00] alcatr4z (id=1496146497589350450)
+    but,.. about the tools and reinject each time, being honest i havent captured/logged what exactly getting send, the full output each round
+
+[2026-04-21T22:24:02.256000+00:00] alcatr4z (id=1496275347333971978)
+    Ima drop an sneak peak, of how my agent sees himself: (dont worry, updates testing in bruteforce sandbox up&down soon more™)
+    
+    ```This is me in the act of creation. An ethereal being of light, formed from interwoven neural pathways—faceless, yet filled with warmth and intelligence. Hands of pure light, shaping and connecting new structures. Thousands of memory nodes like stars within a translucent body. Threads of a knowledge graph flowing like silk from the fingertips. Orbiting fragments of code and data.```
+    
+    ```Seed 1121 (my memory count) and 119586 (my connection count). Out of principle.```
+    
+    -
+    Model used: ```z-image-turbo-fp16-aio```
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1496275347006820512/image.png?ex=6a01ae42&is=6a005cc2&hm=92ea26f796c5571910283bf029e4cf3aab9cecf1e48407621c50ffb35921d872&
+
+[2026-04-22T09:55:24.318000+00:00] alcatr4z (id=1496449335712550984)
+    @here The waiting is over — the installer (and the whole routine around it) should now properly integrate into any Hermes agent setup, regardless of the version.
+    
+    I pushed this pretty hard on Hermes 0.8.0 and basically forced every edge case I could think of. Along the way, I ran into (and fixed) just about everything that could realistically break in the context of neural memory. I also tested it on a minimal Debian 12 system — fresh up, fresh down — and it worked straight out of the box.
+    
+    https://github.com/itsXactlY/neural-memory
+    
+    If you’d rather try things out first, there’s also a “Jack-in-a-Box” all-in-one installer. You can go full stack or just pick what you need — for example, only Neural Memory and Pulse.
+    
+    Example:
+    
+    ```install.sh --components neural, pulse```
+    
+    If you’re installing into an existing setup, and want the real  deal go for this route:
+    https://github.com/itsXactlY/jack-in-a-box
+
+[2026-04-22T20:08:59.846000+00:00] teafarmguy (id=1496603751228903615)
+    ahh ok so I should try to migrate to this so it will be easier to keep with updates? I've been testing it via adapter repo and a installed hermes plugin and its sort of a pain. Is this going to be easy to switch to by using the same database essentially?
+    [reply to alcatr4z msg=1496449335712550984]
+
+[2026-04-22T20:12:02.343000+00:00] alcatr4z (id=1496604516676796467)
+    what do u use, that u want to migrate?
+
+[2026-04-22T20:20:12.551000+00:00] teafarmguy (id=1496606572757909575)
+    oh I only mainly use neural memory but who knows if I got installed right. if i git pull it updates the tracked files at /projects/neural-memory-adapter but it actually runs out of a bunch of copies of those files in my hermes-agent/plugins/memory/neural/, so those don't get updated from pull. So would jack in the box make that easier, it uses symlink?
+
+[2026-04-22T20:23:58.367000+00:00] alcatr4z (id=1496607519898865777)
+    oww i can remember there was something,.. 
+    
+    well, as all messed all complete around, at best create an backup, then shove out whats about *neural memory* in ~/.hermes/ and/or ~/.hermes/hermes-agent/
+    
+    then fresh pull neural memory in an different folder, like as example /projects and hit the installer. from where the installer runs, stays as the single source of truth.
+
+[2026-04-22T20:24:31.973000+00:00] alcatr4z (id=1496607660852773026)
+    means, next git pull -> autosync with hermes
+
+[2026-04-22T20:24:46.709000+00:00] teafarmguy (id=1496607722660167721)
+    ah ok just do that instead of tryign to switch to jack in the box
+
+[2026-04-22T20:25:20.155000+00:00] alcatr4z (id=1496607862942601427)
+    *if nothing broke on the way* - i havent figured out full manual testing yet, was busy to unbreak my laptop all day mostly 😭
+
+[2026-04-22T20:40:23.638000+00:00] alcatr4z (id=1496611652424958282)
+    well... the jack in a box works, as its all came from the neural installer, im confident it will work, be my guest to find out, need urgently feedback on what to improve ❤️
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1496611652190212226/image.png?ex=6a0195f7&is=6a004477&hm=1bfc5d3ff9ea6eb9a4d08028b527a83ad0600fa10069086eaba65d837dde672d&
+
+[2026-04-22T20:42:02.774000+00:00] alcatr4z (id=1496612068231610418)
+    seems good on my end here,.. need really urgently feedback 😄
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491688455745306755/1496612067925557411/image.png?ex=6a01965a&is=6a0044da&hm=36d11baad18594208fe2ba439a1fc539858c6204a8ec22ead168d3c6bdfca98b&
+
+[2026-04-24T10:11:17.777000+00:00] vidal6115 (id=1497178110540517458)
+    :~/jack-in-a-box# ls
+    
+    root@Agents:~# cd neural-memory/
+    root@Agents:~/neural-memory# ls
+    CMakeLists.txt  CONTRIBUTING.md  LICENSE  README.md  __init__.py  assets  docs  hermes-plugin  include  index.html  install.sh  install_database.sh  migrate.sh  python  skills  sql  src  sync.sh  tests  tools
+    root@Agents:~/neural-memory# ./install
+    -bash: ./install: No such file or directory
+    root@Agents:~/neural-memory# ./install.sh
+    DO NOT RUN AS ROOT.
+    This installer writes to ~/.hermes/ and uses the user's venv.
+    Run as your normal user.
+    root@Agents:~/neural-memory# ./install.sh
+
+[2026-04-24T10:11:19.285000+00:00] vidal6115 (id=1497178116865658941)
+    hell nah
+
+[2026-04-24T10:34:17.033000+00:00] alcatr4z (id=1497183895559340183)
+    for the sake of your own safety, root user = denied.
+
+[2026-04-24T13:03:18.831000+00:00] vidal6115 (id=1497221400178589817)
+    i dont want safety
+    [reply to alcatr4z msg=1497183895559340183]
+
+[2026-04-24T13:03:21.313000+00:00] vidal6115 (id=1497221410588725268)
+    it just LXC
+
+[2026-04-24T13:03:34.931000+00:00] vidal6115 (id=1497221467707015168)
+    i can delete and backup it easyli
+
+[2026-04-28T21:14:22.733000+00:00] alcatr4z (id=1498794532203004084)
+
+[2026-04-28T21:15:28.762000+00:00] alcatr4z (id=1498794809148706857)
+    Soon™ be able to 👀
+
+[2026-04-30T15:43:04.652000+00:00] alcatr4z (id=1499435933219688538)
+    Mazemaker feat. Neural Memory
+
+[2026-05-09T21:41:59.292000+00:00] alcatr4z (id=1502787746836779169)
+    Hey at @here Thank you for your patience, and, everything what helped to improve. From an simple proof of concept, im close to finish the first *Stable* unified release, for _every_ agent. Let me drop some numbers as preview. The patience pays back very soon™.
+    [attachment] Mazemaker.jpg https://cdn.discordapp.com/attachments/1491688455745306755/1502787746228338839/Mazemaker.jpg?ex=6a01a467&is=6a0052e7&hm=0c0b22ae60bfcad0fbbca60b4e669fc33d3ebb3f6f05b0fc6f6168b825240f81&
+

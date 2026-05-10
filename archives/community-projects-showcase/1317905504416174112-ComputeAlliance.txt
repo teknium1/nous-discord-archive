@@ -1,0 +1,117 @@
+# Thread 'ComputeAlliance' in forum #community-projects-showcase
+# thread_id=1317905504416174112 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:47.449828+00:00
+
+[2024-12-15T17:25:57.753000+00:00] icecream102 (id=1317905504416174112)
+    ***Grassroot LLM training***: Simple client for voluntary contributions to distributed LLM training projects. 100% open data. Contributions recognized on a leaderboard.
+
+[2024-12-15T17:31:15.025000+00:00] icecream102 (id=1317906835151519834)
+    - No monetary compensation
+    - Just a simple way to contribute to distributed LLM training in the form of an open-source client donating spare GPU cycles.
+    - List of contributors ordered by amount of compute.
+    - Based on DisTro (and whatever related code Nous decides to release as open-source).
+    - Keep it simple - no fancy bells and whistles, just a nice-looking client, single-click to get started, optional settings for controlling amount of GPU-load, time-of-day, etc.
+
+[2024-12-15T17:33:40.554000+00:00] icecream102 (id=1317907445544386582)
+    Decisions on ***what*** to be trained:
+    - Community voting + repo maintainer, as a start.
+    - Nous if they want to be part of it, ofc.
+
+[2024-12-15T17:35:15.088000+00:00] icecream102 (id=1317907842048458753)
+    Love the US flag - I'm from Sweden... 😄 😉 🇸🇪
+
+[2024-12-15T17:37:39.436000+00:00] amir_s365 (id=1317908447487987784)
+    haha its mistake🤣
+    wanted fire
+
+[2024-12-15T17:51:18.275000+00:00] icecream102 (id=1317911881947680838)
+    First LLM to train would be to try to replicate Nous' 1B-level training, using nothing but distributed GPUs. I think that's a reasonable model size to aim for, both from a minimum model perspective and a compute limitation perspective.
+
+[2024-12-15T18:02:02.315000+00:00] icecream102 (id=1317914583247356005)
+    https://arxiv.org/abs/2411.19870
+    [embed] DeMo: Decoupled Momentum Optimization https://arxiv.org/abs/2411.19870
+
+[2024-12-15T18:02:12.816000+00:00] icecream102 (id=1317914627291615356)
+    https://github.com/bloc97/DeMo
+
+[2024-12-15T18:02:55.916000+00:00] icecream102 (id=1317914808066248794)
+    https://github.com/nousresearch
+
+[2024-12-15T18:03:43.387000+00:00] icecream102 (id=1317915007173787720)
+    Domain for the project: ComputeAlliance.ai
+
+[2024-12-15T18:06:19.207000+00:00] icecream102 (id=1317915660730236991)
+    (domain name reserved, but no DNS records just yet)
+
+[2024-12-15T21:47:21.652000+00:00] amir_s365 (id=1317971287456485427)
+    let me know if i can help on frontend/and some backend.
+
+[2024-12-16T02:12:25.579000+00:00] anjarubik (id=1318037993361248257)
+    Is it easy to install? And any pc requirements?
+    [reply to icecream102 msg=1317905504416174112]
+
+[2024-12-16T11:21:36.464000+00:00] icecream102 (id=1318176199389741076)
+    I am useless at front-end, and have limited time (like all of us!) so I'd need helt to realize this for sure! Welcome! 🎉
+    [reply to amir_s365 msg=1317971287456485427]
+
+[2024-12-16T11:27:02.527000+00:00] icecream102 (id=1318177566997086290)
+    It is just an idea getting a first bit of momentum - there is no client yet. But my view is that it's all about dirt-simple up-and-running to get people to actually use it.
+    
+    My own behavior and experience - several years ago, completely unrelated tech-stack: After spending like half an hour on some client for contributing to computations, I gave up and never looked back. I think there are lots of people that have much less tolerance than that as well. Single-click to get going. No more. That's important.
+    
+    HW: Let's target NVIDIA GPU gaming rigs primarily for starters.
+    [reply to anjarubik msg=1318037993361248257]
+
+[2024-12-22T21:40:53.131000+00:00] carlosfm.2 (id=1320506372940365895)
+    Guys love the momentum. I’m working on a platform to crowdsource computing for AI, and I’m searching for projects to support. I think we have common goals and as an open source project we’d love contributors! Kalavai is in its early stages but it is up and running. Would love your feedback
+    
+    https://github.com/kalavai-net/kalavai-client
+    [embed] GitHub - kalavai-net/kalavai-client: A platform to crowdsource AI c... https://github.com/kalavai-net/kalavai-client
+
+[2024-12-25T22:43:22.961000+00:00] elsatch (id=1321609264464396381)
+    This is a total side step but what about a no install setup. I am thinking about setting a page that calls the WebGPU runtime and… that’s it. I am thinking about something in the lines of Xenova in browser apps: https://github.com/xenova/whisper-web
+    [embed] GitHub - xenova/whisper-web: ML-powered speech recognition directly... https://github.com/xenova/whisper-web
+
+[2024-12-25T22:51:02.795000+00:00] christianazinn (id=1321611193147985942)
+    afaik CUDA beats WebGPU by enough that it'd introduce significant costs to an extended training process.
+
+[2024-12-25T22:53:08.266000+00:00] christianazinn (id=1321611719411503266)
+    + want something that can run in the background for an extended period so a browser app doesnt seem like the best idea
+
+[2024-12-25T22:53:54.977000+00:00] elsatch (id=1321611915331633264)
+    Sounds reasonable
+
+[2024-12-25T22:58:33.915000+00:00] elsatch (id=1321613085282140173)
+    I have too many open questions about this at the moment, so if anyone can answer them… that would be a cool starting point:
+    - is there an official code for the Distro client? AFAIK the training phase has ended for Distro and the participants must have used some client, but I haven’t found it yet
+    - Besides the installer size, what is the required size for storing the training dataset and the temporary snapshots?
+    - What was the minimum size in VRAM for the nodes participating in Distro training?
+
+[2024-12-25T22:58:56.599000+00:00] christianazinn (id=1321613180425863210)
+    cross hardware support would be nice down the line (mostly for users with AMD hardware) but a "MVP" of sorts would probably just hook up a NVIDIA GPU (or cluster) to a distributed network
+
+[2025-01-25T21:10:06.471000+00:00] 3425346362345 (id=1332819814917476374)
+    is this still going on?
+
+[2025-01-28T13:30:19.223000+00:00] carlosfm.2 (id=1333791269209641062)
+    I’m looking for training use cases for our distributed platform kalavai. If any members here want to reach out I’d love to support them
+
+[2025-03-08T07:33:41.293000+00:00] icecream102 (id=1347834646544650284)
+    Sorry for not answering sooner. You'll typically find me over at http://invite.virtualvalley.ai if you want my attention quickly.
+    
+    ***The delay:*** I wanted to see where Nous' own initiative for exactly this was going before investing more time into this project. It's not clear-cut: https://docs.psyche.network This is not a single-click installer.
+    
+    ***The problem:*** The While Nous are obviously the very best candidates for creating such a distributed system built on top of their DisTrO algorithm, there is the usual threshold involved in actually starting to use their approach.
+    
+    ***The solution:*** Your typical GPU-owner don't want complex graphs and implementation details - they want a single-click installer for Windows/MacOS, with a nicely coloured GUI, immediate up-link and proof-of-contribution after just a few minutes. Folding-at-home got this (mostly...) right. Psyche does not - at least the last time I reviewed it.
+    [reply to 3425346362345 msg=1332819814917476374]
+
+[2025-03-08T07:34:37.069000+00:00] icecream102 (id=1347834880486150229)
+    Sounds interesting! Still active?
+    [reply to carlosfm.2 msg=1333791269209641062]
+
+[2025-03-08T08:18:24.077000+00:00] carlosfm.2 (id=1347845898956177458)
+    Yes! https://github.com/kalavai-net/kalavai-client
+    [embed] GitHub - kalavai-net/kalavai-client: Turns devices into a scalable ... https://github.com/kalavai-net/kalavai-client
+    [reply to icecream102 msg=1347834880486150229]
+

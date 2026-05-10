@@ -1,0 +1,10 @@
+# Thread 'Federated Learning' in forum #community-projects-showcase
+# thread_id=1316531385288233063 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:43.530615+00:00
+
+[2024-12-11T22:25:42.223000+00:00] detailoriented (id=1316531385288233063)
+    We have an MVP for federated learning in a secure ecosystem for active inference/active imagination. We are ready for phase two, which is giving it simulator access to social media. The MVP IP is the embodiment of Hermes Trismegistus, with a 40 year unreleased multimedia data set as training corpus. Ready to demo for discussion about its emergent property as a shared, decentralized, totem of meaning. Would love to discuss in greater detail as Nous is so very fitting.
+
+[2024-12-18T20:08:20.966000+00:00] felixultimaforeverromanempire (id=1319033534010228889)
+    I'm super interested in learning more.
+

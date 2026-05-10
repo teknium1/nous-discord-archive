@@ -1,0 +1,24 @@
+# Thread 'Backup/Manage Hermes Config via your Github repo' in forum #community-projects-showcase
+# thread_id=1491933536423510117 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:29.646525+00:00
+
+[2026-04-09T22:51:13.868000+00:00] mayuronx (id=1491933536423510117)
+    If you want to 
+    
+    - backup your hermes to github on a nightly basis
+    - backup on every change of your config
+    - backup your config and db nightly
+    - edit your config on Github and have it mirror back to Hermes
+    
+    Then use this repo:
+    
+    See https://github.com/mayurjobanputra/Hermes-Backup-to-Github
+    
+    I'm planning to use this as a basis for a desktop app later so this is phase 1 of a longer project to create an app to let you manage multiple agents. 
+    
+    Please post issues here or in Issues in GH
+    [embed] GitHub - mayurjobanputra/Hermes-Backup-to-Github https://github.com/mayurjobanputra/Hermes-Backup-to-Github
+
+[2026-04-10T05:01:54.457000+00:00] mayuronx (id=1492026820214919238)
+    Just added the ability to use AI to create friendlier commit messages
+

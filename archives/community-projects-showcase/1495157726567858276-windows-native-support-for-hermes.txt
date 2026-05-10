@@ -1,0 +1,50 @@
+# Thread 'windows native support for hermes' in forum #community-projects-showcase
+# thread_id=1495157726567858276 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:57.713488+00:00
+
+[2026-04-18T20:23:00.701000+00:00] tdamre (id=1495157726567858276)
+    https://github.com/NousResearch/hermes-agent/pull/10565
+    
+    review please guys
+    [attachment] Recording_2026-04-18_194344.mp4 https://cdn.discordapp.com/attachments/1495157726567858276/1495157798449971482/Recording_2026-04-18_194344.mp4?ex=6a0191f5&is=6a004075&hm=31daa2f43df861b53fcf862ccf352a8d9cb064efba076baa40486b600be65e35&
+    [embed] fix(installer): support native Windows PowerShell install by adybag... https://github.com/NousResearch/hermes-agent/pull/10565
+
+[2026-04-18T20:23:22.283000+00:00] tdamre (id=1495157817089327184)
+    local testing
+
+[2026-04-18T20:23:26.100000+00:00] tdamre (id=1495157833099120881)
+    video included
+
+[2026-04-18T20:26:27.851000+00:00] cosm_0 (id=1495158595418067044)
+    This is hype
+
+[2026-04-18T20:26:33.780000+00:00] thablackpanda (id=1495158620285960402)
+    Peak
+
+[2026-04-19T00:31:42.110000+00:00] tdamre (id=1495220311493312572)
+    <@387972437901312000> since you have opened a windows native pr should I close mine?
+
+[2026-04-19T01:27:23.284000+00:00] tdamre (id=1495234325392916581)
+    <@215893062377799681>
+
+[2026-04-19T01:30:03.224000+00:00] fluoroamphetamine (id=1495234996229636187)
+    hi, I was just wondering if there's any issues you're running into getting native windows install working and if there's any noticable trade offs vs WSL2.
+
+[2026-04-19T10:22:18.349000+00:00] tdamre (id=1495368941852426300)
+    if you checkoiut this pr it will not work out of the box becuase the installer expects the main hermes agent branch to have native windows support already thus this pr has to be merged to work out of the box
+    [reply to fluoroamphetamine msg=1495234996229636187]
+
+[2026-04-20T13:54:52.946000+00:00] tdamre (id=1495784826375241920)
+    [attachment] Recording_2026-04-20_144628_compressed.mp4 https://cdn.discordapp.com/attachments/1495157726567858276/1495784825460625570/Recording_2026-04-20_144628_compressed.mp4?ex=6a01dfac&is=6a008e2c&hm=b9b78dab46c81c46de216c654000aa2d2a1a4da105789581c75f4bb59969621e&
+
+[2026-04-20T13:55:01.456000+00:00] tdamre (id=1495784862068506664)
+    he did it
+
+[2026-04-20T14:07:52.416000+00:00] tdamre (id=1495788095709380670)
+    he also setup hindsight
+    [attachment] image.png https://cdn.discordapp.com/attachments/1495157726567858276/1495788095625498676/image.png?ex=6a01e2b8&is=6a009138&hm=25b7f5f2f12eedb13344858b433b933ac3165b941cfe69ce88ca03cba4b605b7&
+
+[2026-04-25T13:50:19.989000+00:00] zkydiver (id=1497595620838346984)
+    I found this and it works... https://github.com/RedWoodOG/Hermes-Desktop
+    [embed] GitHub - RedWoodOG/Hermes-Desktop: Hermes_Desktop https://github.com/RedWoodOG/Hermes-Desktop
+

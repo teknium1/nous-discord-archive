@@ -1,0 +1,34 @@
+# Thread 'Multi-Agent Discord' in forum #community-projects-showcase
+# thread_id=1491297114775490720 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:33.958718+00:00
+
+[2026-04-08T04:42:19.123000+00:00] .s0uthpaw (id=1491297114775490720)
+    https://hermes-agent.nousresearch.com/docs/user-guide/profiles?_highlight=profiles
+    [embed] Profiles: Running Multiple Agents | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/profiles?_highlight=profiles
+
+[2026-04-08T04:43:11.331000+00:00] .s0uthpaw (id=1491297333751840840)
+    This has both Telegram and Discord
+    
+    https://hermes-agent.nousresearch.com/docs/guides/team-telegram-assistant?_highlight=tele
+    [embed] Tutorial: Team Telegram Assistant | Hermes Agent https://hermes-agent.nousresearch.com/docs/guides/team-telegram-assistant?_highlight=tele
+
+[2026-04-08T04:45:11.842000+00:00] ithmz (id=1491297839211352075)
+    .
+
+[2026-04-08T04:45:22.812000+00:00] excessivelysalty (id=1491297885222998028)
+    Good to have this, seems to be the hot topic at the moment
+
+[2026-04-08T04:46:20.678000+00:00] giannisantetocrypto (id=1491298127930458253)
+    Hi
+
+[2026-04-08T04:52:22.991000+00:00] excessivelysalty (id=1491299647581323315)
+
+[2026-04-08T04:52:33.854000+00:00] excessivelysalty (id=1491299693144047686)
+
+[2026-04-08T04:53:42.396000+00:00] ithmz (id=1491299980630032404)
+    oh, I missed this code snippet, where did you change this?
+    [reply to excessivelysalty msg=1491299647581323315]
+
+[2026-04-08T04:55:31.490000+00:00] excessivelysalty (id=1491300438203699302)
+    I think those were the only 2 messages they sent about it
+

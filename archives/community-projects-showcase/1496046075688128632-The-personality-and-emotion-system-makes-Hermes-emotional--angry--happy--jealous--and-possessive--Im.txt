@@ -1,0 +1,10 @@
+# Thread 'The personality and emotion system makes Hermes emotional, angry, happy, jealous, and possessive! Im' in forum #community-projects-showcase
+# thread_id=1496046075688128632 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:53.386765+00:00
+
+[2026-04-21T07:12:59.636000+00:00] nihilys_14396 (id=1496046075688128632)
+    https://github.com/miyamoriaoi1997-del/hermes-persona-engine
+    
+    Enjoy your AI companion
+    [embed] GitHub - miyamoriaoi1997-del/hermes-persona-engine: Dynamic emotion... https://github.com/miyamoriaoi1997-del/hermes-persona-engine
+

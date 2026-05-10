@@ -1,0 +1,19 @@
+# Thread 'Proposal — Hermes Intercom: MCP-Driven Agent Message Bus' in forum #plugins-skills-and-skins
+# thread_id=1491674089126105138 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:42.448232+00:00
+
+[2026-04-09T05:40:16.812000+00:00] w0lfgang88 (id=1491674089126105138)
+    **Objective:** Build an MCP-driven inter-agent message bus so Hermes profiles can exchange structured, threaded messages without altering Hermes core.
+    
+    **Approach:**
+    - Deploy a shared Python MCP server (`hermes-intercom`) per profile using the existing MCP SDK over stdio, all pointing at `~/.hermes/intercom/intercom.db`.
+    - SQLite schema tracks registered agents and messages (direct, broadcasts, threading, priority, read status).
+    - Expose MCP tools: `agent_send`, `agent_broadcast`, `agent_inbox`, `agent_reply`, `agent_mark_read`, `agent_list`, and `agent_status`.
+    - Optional Telegram push notifications for real-time wake-up; otherwise agents poll their inbox.
+    
+    **Deployment:**
+    - Repo `stephenschoettler/hermes-intercom` lives in `~/hermes-intercom`, symlinked into `~/.hermes/intercom`.
+    - Each profile adds an `mcp_servers` entry that launches `server.py` with its agent identity; shared DB path injected via env.
+    
+    **Next steps:** Build the repo (server, db layer, tests), write README/config docs, and validate by wiring profiles into the intercom.
+

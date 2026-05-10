@@ -1,0 +1,47 @@
+# Thread 'Introducing Recall: a local, auditable memory layer for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1503085649325195374 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:12.969257+00:00
+
+[2026-05-10T17:25:44.780000+00:00] nour_h (id=1503085649325195374)
+    I’ve been building and dogfooding **Recall**, a Hermes-native memory provider designed for people who want memory that is useful, inspectable, and safe — not a black box.
+    
+    Recall adds a local SQLite-backed memory archive around Hermes with a few principles:
+    
+    - **Built-in memory stays authoritative**
+      - `MEMORY.md` / `USER.md` remain the trusted source.
+      - Recall is lower-trust archive evidence unless explicitly promoted.
+    
+    - **No silent promotion**
+      - Archived observations do not automatically become durable memory.
+      - Promotion is explicit, reviewed, and audited.
+    
+    - **Operator-grade audit trail**
+      - Memory writes and curation actions are tracked.
+      - Audit chain verification is built in.
+      - Dashboard shows diagnose/audit health directly.
+    
+    - **Searchable local archive**
+      - FTS-backed search over past observations.
+      - Current/active rows exclude rejected, expired, and superseded data.
+      - Useful for “what did we decide before?” without bloating permanent memory.
+    
+    - **Dashboard curation**
+      - Review active/candidate/rejected rows.
+      - Accept/reject archive entries.
+      - Promote reviewed rows into built-in memory only when intentional.
+      - Recent UX pass made the dashboard explain what is clickable and what to do next.
+    
+    - **Safety hardening**
+      - Redaction before storage/display.
+      - Rejected rows blocked from promotion unless explicitly overridden.
+      - Low-quality/noisy rows filtered from consolidation by default.
+      - 100k-row burn-in passed with audit + diagnose checks.
+    
+    Current status: **v0.3.4**, dogfooded in a dedicated Hermes profile, with clean active memory and verified dashboard flow.
+    
+    The point of Recall is not “infinite memory.”  
+    It’s **accountable memory**: local, searchable, reviewable, and explicit about what gets trusted.
+    
+    Repo: https://github.com/HenkDz/hermes-recall-memory
+    [embed] GitHub - HenkDz/hermes-recall-memory: Hermes-native searchable memo... https://github.com/HenkDz/hermes-recall-memory
+

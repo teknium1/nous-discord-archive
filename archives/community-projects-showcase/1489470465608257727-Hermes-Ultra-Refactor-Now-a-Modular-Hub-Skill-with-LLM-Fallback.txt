@@ -1,0 +1,37 @@
+# Thread 'Hermes Ultra Refactor Now a Modular Hub Skill with LLM Fallback!' in forum #community-projects-showcase
+# thread_id=1489470465608257727 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:57.750833+00:00
+
+[2026-04-03T03:43:52.024000+00:00] dusk.1e (id=1489470465608257727)
+    Hey everyone! I’ve just finished a complete overhaul of Hermes Ultra following <@387972437901312000>1's feedback on my hackathon submission.
+    
+    What's new in this version?
+    
+    Zero Core Impact: Fully migrated to a modular Hub Skill structure (optional_skills/shopping/).
+    
+    LLM Fallback Layer: Added autonomous recovery if site selectors fail, the LLM takes over to parse price/stock data. Much more resilient!
+    
+    Maintenance-Free: All selectors are now decoupled into a standalone selectors.yaml.
+    
+    72/72 Tests Passing: Verified everything with pytest-asyncio.
+    
+    I've also resolved all recent merge conflicts with the latest upstream/main. Would love some eyes on this!
+    
+    PR Link: https://github.com/NousResearch/hermes-agent/pull/4704
+    [attachment] 573370962-321a1f65-0553-406a-a9a3-da38e29a3306.png https://cdn.discordapp.com/attachments/1489470465608257727/1489470466379874445/573370962-321a1f65-0553-406a-a9a3-da38e29a3306.png?ex=6a01f938&is=6a00a7b8&hm=cf006176ef0a8fbbcb642a8200f9a681f9244988453b4e01f1a0b2c02bb0ea5b&
+    [embed] refactor: Migrate Hermes Ultra to Optional Hub Skill with LLM-Augme... https://github.com/NousResearch/hermes-agent/pull/4704
+
+[2026-04-03T03:58:23.984000+00:00] teknium (id=1489474122873442465)
+    <a:hype:1151299876395696189>
+
+[2026-04-03T14:52:58.726000+00:00] vamned (id=1489638853080776958)
+    oh interesting, so focused on scoring good deals on products?
+
+[2026-04-03T19:06:12.749000+00:00] dusk.1e (id=1489702581432487936)
+    Exactly. Finding deals is the fun part, but the real goal was to build a scraper that actually lasts. I got tired of selectors breaking every time a site updates, so the LLM fallback is there to keep it running no matter what. 🤝
+    [reply to vamned msg=1489638853080776958]
+
+[2026-04-03T19:06:22.983000+00:00] dusk.1e (id=1489702624356733050)
+    <a:partyblob:1151261550032724052>
+    [reply to teknium msg=1489474122873442465]
+

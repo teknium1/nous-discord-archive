@@ -1,0 +1,31 @@
+# Thread 'Labtasker: make ML experiment wrapper scripts smarter with 1 line of code change' in forum #community-projects-showcase
+# thread_id=1356116505925910600 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:45.462542+00:00
+
+[2025-03-31T04:02:50.439000+00:00] abc2357702 (id=1356116505925910600)
+    Hi guys, I’ve built a utility tool that saves you time and effort from messy wrapper scripts when running AIGC experiments across multiple GPUs—meet Labtasker!
+    
+    Who is this for?
+    
+    Graduate students, researchers, and hobbyists running multiple experiments under different settings.
+    
+    What does it do?
+    
+    Labtasker simplifies experiment scheduling with a task queue for efficient job distribution.
+    
+    ✅ Automates task distribution across GPUs
+    ✅ Tracks progress & prevents redundant execution
+    ✅ Easily reprioritizes & recovers failed tasks
+    ✅ Supports plugins and event notifications for customized workflows.
+    ✅ Easy installation via pip or Docker Compose
+    
+    Simply replace loops in your wrapper scripts with Labtasker, and let it handle the rest!
+    
+    🔗 Check it out: 
+    
+    Code: https://github.com/luocfprime/labtasker
+    Documentation: https://luocfprime.github.io/labtasker/
+    
+    I'd love to hear your thoughts—feel free to ask questions or share suggestions!
+    [attachment] comparison.png https://cdn.discordapp.com/attachments/1356116505925910600/1356116506353598631/comparison.png?ex=6a01fdaa&is=6a00ac2a&hm=a79a03e1d1d851b48bd1d1ce2d6978cb08a9d33c9bf79f9371ebf993b8c9e0f3&
+

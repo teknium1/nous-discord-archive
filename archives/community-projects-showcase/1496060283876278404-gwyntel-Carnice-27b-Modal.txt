@@ -1,0 +1,30 @@
+# Thread 'gwyntel/Carnice-27b-Modal' in forum #community-projects-showcase
+# thread_id=1496060283876278404 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:52.579596+00:00
+
+[2026-04-21T08:09:27.132000+00:00] gwyntel (id=1496060283876278404)
+    https://tenor.com/view/kamala-harris-and-joe-biden-gif-22291622
+    
+    https://github.com/gwyntel/Carnice-27b-Modal
+    [embed]  https://tenor.com/view/kamala-harris-and-joe-biden-gif-22291622
+    [embed] GitHub - gwyntel/Carnice-27b-Modal: Carnice-27b (Qwen3.5-27B hermes... https://github.com/gwyntel/Carnice-27b-Modal
+
+[2026-04-21T08:10:21.819000+00:00] gwyntel (id=1496060513250181162)
+    Useful free fallback if you're willing to pay the 50¢ micro-fee for kyc to get $30/mo in compute.
+
+[2026-04-21T09:18:14.025000+00:00] lordasado. (id=1496077593319964702)
+    thank you i'm gonna try and set this up.
+
+[2026-04-22T00:40:25.141000+00:00] gwyntel (id=1496309668841263248)
+    the warmup is quick once built, maybe under 60s? But it does have to warm up, so I had to patch Hermes agent's default connection back off to start at 60s
+
+[2026-04-22T00:40:35.257000+00:00] gwyntel (id=1496309711270580439)
+    Works GREAT as an auxiliary model and as a "cheap model" for Hermes if you have smart prompt routing
+
+[2026-05-06T02:49:37.110000+00:00] tmcdnotes (id=1501415613074112532)
+    this was easy to set up - Modal wasn’t on my radar but the free tier is generous.  Thanks.
+
+[2026-05-08T07:43:51.014000+00:00] gwyntel (id=1502214434645606441)
+    happy it helped :)
+    [reply to tmcdnotes msg=1501415613074112532]
+

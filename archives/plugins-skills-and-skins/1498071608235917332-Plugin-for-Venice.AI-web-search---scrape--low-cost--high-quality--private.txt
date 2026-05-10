@@ -1,0 +1,11 @@
+# Thread 'Plugin for Venice.AI web search & scrape (low cost, high quality, private)' in forum #plugins-skills-and-skins
+# thread_id=1498071608235917332 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:13.449235+00:00
+
+[2026-04-26T21:21:44.228000+00:00] thegreg.eth (id=1498071608235917332)
+    https://github.com/MnrGreg/hermes-venice-web
+    [embed] GitHub - MnrGreg/hermes-venice-web: Hermes plugin that uses Venice.... https://github.com/MnrGreg/hermes-venice-web
+
+[2026-05-03T09:08:54.245000+00:00] austrian_guy (id=1500423899819675762)
+    Intriguing.
+

@@ -1,0 +1,22 @@
+# Thread 'New Hermes Memory Plugin: Ladybug' in forum #plugins-skills-and-skins
+# thread_id=1491609245248917504 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:42.892674+00:00
+
+[2026-04-09T01:22:36.827000+00:00] coder948629 (id=1491609245248917504)
+    https://github.com/Ladybug-Memory/hermes-memory-plugin
+    
+    This is also available as a PR:
+    
+    https://github.com/NousResearch/hermes-agent/pull/6009
+    
+    But I just learned that posting here is a recommended step for new plugins.
+    
+    Related repos:
+    
+    https://github.com/LadybugDB/ladybug/
+    https://github.com/Ladybug-Memory/ladybug-memory/
+    [embed] GitHub - Ladybug-Memory/hermes-memory-plugin https://github.com/Ladybug-Memory/hermes-memory-plugin
+    [embed] Add ladybug as a memory plugin by adsharma · Pull Request #6009 ·... https://github.com/NousResearch/hermes-agent/pull/6009
+    [embed] GitHub - LadybugDB/ladybug: LadybugDB a graph database https://github.com/LadybugDB/ladybug/
+    [embed] GitHub - Ladybug-Memory/ladybug-memory: Ladybug Memory Python Imple... https://github.com/Ladybug-Memory/ladybug-memory/
+

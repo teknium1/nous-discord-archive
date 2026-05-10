@@ -1,0 +1,10 @@
+# Thread 'Hermes Deep Memory' in forum #plugins-skills-and-skins
+# thread_id=1492487392257380422 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:36.094636+00:00
+
+[2026-04-11T11:32:03.389000+00:00] nachtkr (id=1492487392257380422)
+    Reasoning memory system plugin for Hermes Agent. Built as a native toolset — no external hosting required.
+    https://github.com/RichardHojunJang/deep-memory
+    [attachment] Hermes-Deep-Memory.png https://cdn.discordapp.com/attachments/1492487392257380422/1492487392895172628/Hermes-Deep-Memory.png?ex=6a01be33&is=6a006cb3&hm=1545467498231f443f769a99f3e5e4e7567819e89a80f8ca174417d8e396613a&
+    [embed] GitHub - RichardHojunJang/deep-memory: Deep Memory https://github.com/RichardHojunJang/deep-memory
+

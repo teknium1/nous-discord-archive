@@ -1,0 +1,21 @@
+# Thread 'Nous Companion' in forum #community-projects-showcase
+# thread_id=1502709613618008205 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:15.026873+00:00
+
+[2026-05-09T16:31:30.881000+00:00] artsbro (id=1502709613618008205)
+    Desktop companion for Hermes.
+    
+    She watches your sessions and talks back - lip-synced voice, reactive quips, animated character. Sometimes helpful. Sometimes gaslighting. Use a small local model with it, cerebras or groq for free and speedy inference. Works with any LLM and any TTS provider you got set in Hermes. Point your Hermes to the repo and let it set it up for ya.
+    
+    Create your own characters easily with the built-in character creator. Set personality, tone, voice to clone, whatever floats your boat. Share your characters with others and spread the love. ❤️
+    
+    Linux, Mac, Windows.
+    
+    Demo: https://fxtwitter.com/ArtsBro38096/status/2050741465307832386?s=20
+    Repo: https://github.com/realartsbro/Nous-Companion
+    Hackathon: https://discord.com/channels/1053877538025386074/1500302535116722236
+    [attachment] nous_icon.png https://cdn.discordapp.com/attachments/1502709613618008205/1502709613907284160/nous_icon.png?ex=6a020462&is=6a00b2e2&hm=f67b7de8e8e3345f7a569b0eb83ac9ba8e11aa254a3cf9e1eb6ec820af292caf&
+
+[2026-05-09T16:31:46.463000+00:00] artsbro (id=1502709678973649056)
+    Nous Companion
+

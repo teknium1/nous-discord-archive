@@ -1,0 +1,2482 @@
+# Thread 'hipfire alpha — Rust inference engine for AMD RDNA GPUs' in forum #community-projects-showcase
+# thread_id=1489281188467310662 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:51.324426+00:00
+
+[2026-04-02T15:11:44.837000+00:00] idkaden (id=1489281188467310662)
+    Hey everyone — the alpha build is live. hipfire is a from-scratch Rust + HIP inference engine for AMD consumer GPUs. No Python in the hot path. On a 5700 XT it runs Qwen3.5-9B at 45 tok/s (vs 4.93 tok/s on llama.cpp+ROCm with the same card).
+    
+      What it does
+      - Qwen3.5 models (0.8B → 27B) with DeltaNet hybrid attention
+      - HFQ4 and HFQ6 quantization with hand-tuned RDNA kernels
+      - TurboQuant KV cache (FWHT + 4-bit, 7.8× compression for longer context)
+      - OpenAI-compatible API server
+      - Vision-language support (--image)
+    
+      Pre-compiled kernels ship for:
+      - gfx1010 (RX 5700 XT)
+      - gfx1030 (RX 6800 XT)
+      - gfx1100 (RX 7900 XTX)
+      - gfx1200 (RX 9070)
+    
+      If your GPU isn't on that list, there's an agent skill (.skills/hipfire-tester/) that works with Hermes or any agent — it can detect your GPU, compile kernels for your specific arch, configure the engine, and walk you through fixing any errors that come up. Just point your agent at the repo and it has the full context.
+    
+      # Pull a model and go (works similar to ollama) 
+      hipfire pull qwen3.5:9b
+      hipfire pull qwen3.5:9b         # 4.5GB, 45 tok/s, best quality (8GB)
+      hipfire pull qwen3.5:27b        # 14.3GB, needs 16GB+ VRAM
+      Add -hfq6 for 6-bit (higher quality, ~15% slower): hipfire pull qwen3.5:9b-hfq6
+    
+    
+      Links
+      - GitHub: https://github.com/Kaden-Schutt/hipfire (branch: alpha-builds)
+      - Models: https://huggingface.co/schuttdev/hipfire-models
+      - 27B model: https://huggingface.co/schuttdev/Qwen3.5-27B-hipfire
+      - Contributing/benchmarks: CONTRIBUTING.md in the repo
+    
+      Benchmarks from cards other than the 5700 XT are the main thing I need right now. If you run it, drop your GPU + model + tok/s here or open an issue. The bench script auto-detects your VRAM and skips models that won't fit: bash scripts/megabench-q35.sh
+    
+    <@684067707565375560><@110688849415389184><@133035449563348993>
+    [embed] GitHub - Kaden-Schutt/hipfire: RDNA-native LLM inference engine in ... https://github.com/Kaden-Schutt/hipfire
+    [embed] schuttdev/hipfire-models · Hugging Face https://huggingface.co/schuttdev/hipfire-models
+    [embed] schuttdev/Qwen3.5-27B-hipfire · Hugging Face https://huggingface.co/schuttdev/Qwen3.5-27B-hipfire
+
+[2026-04-02T21:48:13.314000+00:00] joeydiaz69 (id=1489380964571418834)
+    Most underrated tech on Hermes
+
+[2026-04-02T21:48:22.813000+00:00] joeydiaz69 (id=1489381004413108314)
+    Not for long
+
+[2026-04-02T22:11:06.728000+00:00] joeydiaz69 (id=1489386725087121539)
+    getting my agent to make a skill to measure tokens per second before i upgrade will post all results here
+
+[2026-04-02T22:12:06.121000+00:00] joeydiaz69 (id=1489386974199677010)
+    the links to the models arent resolving on my end, not sure if thats consistent with that url
+
+[2026-04-03T00:04:30.010000+00:00] vamned (id=1489415260120023181)
+    https://huggingface.co/schuttdev <@684067707565375560>
+    [embed] schuttdev (Kaden Schutt) https://huggingface.co/schuttdev
+
+[2026-04-03T00:04:43.309000+00:00] joeydiaz69 (id=1489415315900207285)
+    ty im downloading now
+
+[2026-04-03T00:07:36.412000+00:00] joeydiaz69 (id=1489416041946943629)
+    think its working now
+
+[2026-04-03T00:23:15.550000+00:00] idkaden (id=1489419980977213621)
+    How is it running?
+    [reply to joeydiaz69 msg=1489416041946943629]
+
+[2026-04-03T00:23:47.818000+00:00] joeydiaz69 (id=1489420116318748743)
+    im at this stage currently after installing
+
+[2026-04-03T00:23:51.176000+00:00] joeydiaz69 (id=1489420130403352616)
+    PS C:\Users\fella> $env:PATH += ";C:\Users\fella\.hipfire\bin"
+    PS C:\Users\fella> hipfire pull qwen3.5:27b
+    GPU: gfx1201 (17.1 GB VRAM)
+
+[2026-04-03T00:24:18.960000+00:00] joeydiaz69 (id=1489420246937899048)
+    getting my agent to read the hipfire tester
+
+[2026-04-03T00:24:28.888000+00:00] joeydiaz69 (id=1489420288578949151)
+    is this correct order for install?
+
+[2026-04-03T00:24:52.778000+00:00] idkaden (id=1489420388780998858)
+    That looks right
+
+[2026-04-03T00:25:34.233000+00:00] joeydiaz69 (id=1489420562655740056)
+    nice
+
+[2026-04-03T00:26:07.948000+00:00] joeydiaz69 (id=1489420704066703370)
+    i also tried to run the token per second tester on my agent, it took a long time to post a result so id consider it long context tps, it was 17 tps
+
+[2026-04-03T00:26:33.585000+00:00] joeydiaz69 (id=1489420811596070944)
+    so once downloaded ill give you more results on large and small context
+
+[2026-04-03T00:27:12.743000+00:00] joeydiaz69 (id=1489420975836758127)
+    so 17 tps long context and 40-65 tps for short context on a amd 9070xt qwen 3.5 27b Q2
+
+[2026-04-03T00:30:35.166000+00:00] idkaden (id=1489421824860098560)
+    Exciting! You should be able to run 27b hfq4, but fair warning I can’t guarantee it will work, but if you hit that issue, I would hope the agent could figure out the issue! GPU arch 1201🤔 iirc I compiled for 1200 so we will see if there’s a mismatch there, it only takes a few minutes to compile kernels. You should have two options the experimental one (tries to make best use of your specific arch) and the tested one (works on 5700xt, uses same approach)
+
+[2026-04-03T00:32:50.413000+00:00] joeydiaz69 (id=1489422392127258814)
+    Yes 1200 is 9070 so makes sense 9070xt 1201, I’ll see how my agent works this
+    [reply to idkaden msg=1489421824860098560]
+
+[2026-04-03T00:33:02.092000+00:00] idkaden (id=1489422441112535070)
+    Ohhh
+
+[2026-04-03T00:33:08.980000+00:00] joeydiaz69 (id=1489422470003036370)
+    Just to clarify do I need to restart my server or use a specific server command line
+
+[2026-04-03T00:33:11.567000+00:00] joeydiaz69 (id=1489422480853434410)
+    ?
+
+[2026-04-03T00:34:02.511000+00:00] idkaden (id=1489422694528057515)
+    The installer should have set up the hipfire command on PATH so try running it and see if there’s message comes up?
+
+[2026-04-03T00:34:47.265000+00:00] idkaden (id=1489422882239942797)
+    But basically it’s the same as ollama if that’s what you’re asking
+
+[2026-04-03T00:35:03.255000+00:00] idkaden (id=1489422949306994758)
+    hipfire serve, hipfire run, hipfire pull etc
+
+[2026-04-03T00:35:59.704000+00:00] joeydiaz69 (id=1489423186071126076)
+    Ahh so it all has its own commands to call hipfire versions, was wondering if maybe the hipfire install might be priority and present when booting like I was on llama.cpp
+
+[2026-04-03T00:37:12.584000+00:00] joeydiaz69 (id=1489423491752136786)
+    [attachment] IMG_1282.png https://cdn.discordapp.com/attachments/1489281188467310662/1489423491320119447/IMG_1282.png?ex=6a01cd78&is=6a007bf8&hm=b8bf3a847e552292b021314208d475e61f4b76ec8917d5bed9f1040ae1e3fe02&
+
+[2026-04-03T00:37:17.198000+00:00] idkaden (id=1489423511104655371)
+    If you need me to compile kernels for your card I can do that for you, but the ollama-like cli seemed the most straightforward, I can make it more configurable through cli if it helps. The agent skill should be able to help with that tho
+
+[2026-04-03T00:37:40.713000+00:00] idkaden (id=1489423609733714022)
+    Was that one message?
+
+[2026-04-03T00:37:42.946000+00:00] joeydiaz69 (id=1489423619099459607)
+    Yeah let’s see how my agent does
+
+[2026-04-03T00:38:17.208000+00:00] joeydiaz69 (id=1489423762804838523)
+    Yeah it’s reading the skill page now, will probably take another 20-30 mins
+    [reply to idkaden msg=1489423609733714022]
+
+[2026-04-03T00:39:00.693000+00:00] idkaden (id=1489423945194274868)
+    Okay while it does that I’ll push a 1201 compile for you
+
+[2026-04-03T00:39:11.743000+00:00] joeydiaz69 (id=1489423991541203045)
+    Thank you my brother
+
+[2026-04-03T00:39:44.618000+00:00] joeydiaz69 (id=1489424129429078066)
+    My skillset very low apologies I can’t contribute more, really appreciate this great repo, actually going to be able to reach my throughput targets now
+
+[2026-04-03T00:42:29.116000+00:00] joeydiaz69 (id=1489424819383697578)
+    Fuck my gpu crashed haha
+
+[2026-04-03T00:42:44.506000+00:00] joeydiaz69 (id=1489424883933777990)
+    Struggled a lot with that task
+
+[2026-04-03T00:43:03.275000+00:00] joeydiaz69 (id=1489424962656928037)
+    I’ll reboot with lower layers and leave it to read overnight
+
+[2026-04-03T00:43:12.442000+00:00] joeydiaz69 (id=1489425001105985696)
+    Hopefully it can complete the task over 6 hours
+
+[2026-04-03T00:44:14.050000+00:00] idkaden (id=1489425259508666398)
+    😅 well I’d like to avoid gpu crashes so let me know if you run into any issues with hf
+
+[2026-04-03T00:50:47.162000+00:00] joeydiaz69 (id=1489426908339769494)
+    im trying to use the command line to reboot and im getting some responses ive never seen before
+
+[2026-04-03T00:51:12.097000+00:00] joeydiaz69 (id=1489427012924870807)
+    acc dont worry
+
+[2026-04-03T00:51:14.814000+00:00] joeydiaz69 (id=1489427024320659476)
+    im bugging
+
+[2026-04-03T00:51:24.522000+00:00] joeydiaz69 (id=1489427065039097886)
+    haha i need some sleep tonight haha
+
+[2026-04-03T00:58:02.826000+00:00] joeydiaz69 (id=1489428735647023196)
+    Btw the crash was from my normal agent usage, I imagine hipfire will stop most crashes I experience
+    [reply to idkaden msg=1489425259508666398]
+
+[2026-04-03T00:58:27.451000+00:00] joeydiaz69 (id=1489428838931763241)
+    I’ll continue in morning appreciate all this
+
+[2026-04-03T00:58:56.238000+00:00] joeydiaz69 (id=1489428959673450628)
+    Sweet! This is a comprehensive guide for hipfire, a Rust-native inference engine that runs LLMs directly on AMD RDNA GPUs without Python in the hot path. Here are the key takeaways for your setup:
+    
+    Your GPU (RX 9070XT - gfx1200) is supported! The guide lists it as an alpha target with 16GB VRAM.
+    
+    Key optimizations that could help you hit >50 TPS:
+    
+    1. HFQ4/HFQ6 quantization formats - These are hipfire-specific formats:
+       - HFQ4 (0.53 B/w): Fastest, good quality
+       - HFQ6 (0.78 B/w): Better quality, slightly slower
+       
+    2. TurboQuant KV compression:
+       - --turbo4: 7.8x KV compression, ~97% speed retention
+       - --turbo2: 15.5x KV compression, ~94% speed retention (good for ≤4B models)
+    
+    3. No Python overhead - The entire inference path is Rust-native HIP, which should eliminate the Python hot path bottleneck you're hitting with llama.cpp
+    
+    Your Qwen3.5-27B would need:
+    - HFQ4: ~14.3GB VRAM (fits on your 16GB card)
+    - HFQ6: ~21.1GB VRAM (too large, use --turbo4 for KV cache reduction)
+    
+    Next steps if you want to try this:
+    1. Clone and build hipfire
+    2. Quantize Qwen3.5-27B to HFQ4 format
+    3. Run benchmarks with --turbo4 flag
+    4. Compare tok/s against your current 17 TPS baseline
+    
+    Want me to help you set this up, or do you have questions about specific parts of the guide?
+
+[2026-04-03T00:59:00.753000+00:00] joeydiaz69 (id=1489428978610733117)
+    Agent just said this
+
+[2026-04-03T00:59:33.384000+00:00] joeydiaz69 (id=1489429115475066972)
+    Ggx1200 apparently !?!? Not sure how true that is
+
+[2026-04-03T01:01:59.557000+00:00] idkaden (id=1489429728569065655)
+    Okay got it, don’t run wait for me to compile for you.
+
+[2026-04-03T01:02:24.566000+00:00] idkaden (id=1489429833464152244)
+    The detect script lumps 9070 and 9070xt together
+
+[2026-04-03T01:03:43.805000+00:00] idkaden (id=1489430165816873172)
+    Or 9060 and 9070 together my bad
+
+[2026-04-03T01:03:53.330000+00:00] joeydiaz69 (id=1489430205767356630)
+    I’ve built hipfire, do you think I should get my agent to do the rest ?
+    [reply to idkaden msg=1489429833464152244]
+
+[2026-04-03T01:04:19.254000+00:00] joeydiaz69 (id=1489430314500755647)
+    No stress, if you think I should let agent do it I’ll instruct and go sleep
+
+[2026-04-03T01:04:22.243000+00:00] vamned (id=1489430327037395025)
+    looks like you're gfx1201 . not 1201 see: https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c4229#:~:text=Graphics%20Processor%20Navi%2048,MHz%20(20.1%20Gbps%20effective).
+    [embed] AMD Radeon RX 9070 XT Specs https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c4229
+
+[2026-04-03T01:04:37.340000+00:00] joeydiaz69 (id=1489430390358675517)
+    If I need to do manually I’ll wake up tomorrow and get to it
+
+[2026-04-03T01:04:49.495000+00:00] idkaden (id=1489430441340702741)
+    I pushed the update
+    [reply to joeydiaz69 msg=1489430390358675517]
+
+[2026-04-03T01:05:06.242000+00:00] idkaden (id=1489430511582576670)
+    The kernel should be up, working on the optimized one
+
+[2026-04-03T01:05:36.572000+00:00] idkaden (id=1489430638795817042)
+    The one you’ll get from the update is the safe 5700xt 1:1
+
+[2026-04-03T01:05:48.505000+00:00] idkaden (id=1489430688846319698)
+    I’ll add some variants for you to test here shortly
+
+[2026-04-03T01:05:59.522000+00:00] joeydiaz69 (id=1489430735055093924)
+    Nice
+
+[2026-04-03T01:06:22.643000+00:00] joeydiaz69 (id=1489430832031465473)
+    With the procedures my agent wants to do you think it’s ok to let it try and complete ?
+
+[2026-04-03T01:06:54.374000+00:00] joeydiaz69 (id=1489430965120925857)
+    Agent seems to be running faster at 70 layers than I’ve experienced at 90 before hipfire
+
+[2026-04-03T01:07:46.178000+00:00] idkaden (id=1489431182402781375)
+    Hm
+
+[2026-04-03T01:07:52.347000+00:00] idkaden (id=1489431208277573783)
+    No, it has detected the wrong arch, the kernel won’t run properly
+
+[2026-04-03T01:08:15.039000+00:00] idkaden (id=1489431303454589010)
+    This is my bad
+
+[2026-04-03T01:08:21.191000+00:00] joeydiaz69 (id=1489431329258082425)
+    All good
+
+[2026-04-03T01:08:50.302000+00:00] joeydiaz69 (id=1489431451358335046)
+    If i get it to look at repo again now you’ve pushed update it will read correct arch?
+
+[2026-04-03T01:09:11.404000+00:00] idkaden (id=1489431539866669076)
+    Recompiling for RDNA4 on Rocm 7.0 currently and good question my agent flagged that but I’ll check right now
+
+[2026-04-03T01:10:18.160000+00:00] joeydiaz69 (id=1489431819861627127)
+    No worries my friend, it’s 2 am here and the 18 hour sessions have caught up, I’ll try and get everything running by next time we speak 🫡 good night
+
+[2026-04-03T01:12:26.977000+00:00] vamned (id=1489432360159154227)
+    hmm wonder what I'm doing wrong:
+    Trying to pull the model (windows install)
+    hipfire pull qwen3.5:9b-hfq6
+    I get:
+    Download failed: 401 Unauthorized
+
+[2026-04-03T01:14:58.643000+00:00] idkaden (id=1489432996292333728)
+    Ah, it was pointing at the wrong path hold on
+
+[2026-04-03T01:18:15.748000+00:00] joeydiaz69 (id=1489433823010881586)
+    also it says this when i tru to run the pwoershell install command however i think i completed all the steps   Updating...
+    git : From https://github.com/Kaden-Schutt/hipfire
+    At line:185 char:9
+    +         git -C $SrcDir fetch origin $GithubBranch --depth 1 2>$null
+    +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : NotSpecified: (From https://gi...-Schutt/hipfire:String) [], RemoteException
+        + FullyQualifiedErrorId : NativeCommandError
+    [embed] GitHub - Kaden-Schutt/hipfire: RDNA-native LLM inference engine in ... https://github.com/Kaden-Schutt/hipfire
+
+[2026-04-03T01:18:36.486000+00:00] idkaden (id=1489433909992231012)
+    Re-run the  installer  to  pick  up  the  fix:
+      `irm https://raw.githubusercontent.com/Kaden-Schutt/hipfire/master/scripts/install.ps1  |  iex`
+      Then  `hipfire  pull  qwen3.5:9b-hfq6` should work.  After  this,  future
+       updates  are  just ` hipfire  update`
+
+[2026-04-03T01:20:52.335000+00:00] idkaden (id=1489434479784230942)
+    Try `irm https://raw.githubusercontent.com/Kaden-Schutt/hipfire/master/scripts/install.ps1 | iex` that should update you and fix the issue, also it should have the correct kernel for your card now
+    [reply to joeydiaz69 msg=1489433823010881586]
+
+[2026-04-03T01:21:31.912000+00:00] joeydiaz69 (id=1489434645782200442)
+    [attachment] runtimer.png https://cdn.discordapp.com/attachments/1489281188467310662/1489434645354250360/runtimer.png?ex=6a01d7db&is=6a00865b&hm=887d2ff7527b7aed279d74005bffbc5b3ad76cc7250bf7719a1e799931176038&
+
+[2026-04-03T01:21:35.777000+00:00] joeydiaz69 (id=1489434661993189456)
+    still getting this error
+
+[2026-04-03T01:34:22.866000+00:00] idkaden (id=1489437879397777569)
+    `irm https://raw.githubusercontent.com/Kaden-Schutt/hipfire/master/scripts/force-update.ps1  |  iex`
+      This  backs  up   your models then nukes everything else on your current install and puts the models back safely
+    [reply to joeydiaz69 msg=1489434645782200442]
+
+[2026-04-03T01:41:37.695000+00:00] vamned (id=1489439703202664529)
+    Worked, got a few of these
+    
+     --> crates\engine\src\llama.rs:7:5
+      |
+    7 | use std::path::Path;
+      |     ^^^^^^^^^^^^^^^
+      |
+      = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+    
+    warning: unused variable: `index_start`
+      --> crates\engine\src\hfq.rs:51:13
+       |
+    51 |         let index_start = metadata_offset;
+       |             ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_index_start`
+       |
+       = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+    
+    Looks like there's a bunch of dead end variables.
+    
+    All warnings, no errors, downloading qwen3.5:9b-hfq6 now.
+
+[2026-04-03T01:43:52.730000+00:00] joeydiaz69 (id=1489440269580374078)
+    still same error as before
+    [reply to idkaden msg=1489437879397777569]
+
+[2026-04-03T01:44:00.217000+00:00] idkaden (id=1489440300983255061)
+    Alr I’ll clean that up shortly 🤔
+    [reply to vamned msg=1489439703202664529]
+
+[2026-04-03T01:44:03.637000+00:00] idkaden (id=1489440315327643751)
+    🤔
+    [reply to joeydiaz69 msg=1489440269580374078]
+
+[2026-04-03T01:44:05.229000+00:00] joeydiaz69 (id=1489440322005237790)
+    what container should i run this command in ?
+
+[2026-04-03T01:44:21.620000+00:00] vamned (id=1489440390753947760)
+    do you want the full lines? I can DM them to keep this clean(ish)
+    [reply to idkaden msg=1489440300983255061]
+
+[2026-04-03T01:44:35.593000+00:00] idkaden (id=1489440449360822394)
+    Yes that would be perfect thank you
+    [reply to vamned msg=1489440390753947760]
+
+[2026-04-03T01:44:56.272000+00:00] idkaden (id=1489440536095101092)
+    It should work fine on windows
+    [reply to joeydiaz69 msg=1489440322005237790]
+
+[2026-04-03T01:45:18.291000+00:00] joeydiaz69 (id=1489440628449476689)
+    ah ok was wondering if i had to get the vs 22 command prompt up
+
+[2026-04-03T01:45:27.985000+00:00] joeydiaz69 (id=1489440669108797513)
+    im trying on normal powershell and getting these errors
+
+[2026-04-03T01:45:29.134000+00:00] idkaden (id=1489440673928057004)
+    But I just spotted a version mismatch bug so one second you both might have to reinstall
+
+[2026-04-03T01:45:42.336000+00:00] joeydiaz69 (id=1489440729301258240)
+    all good
+
+[2026-04-03T01:45:52.697000+00:00] vamned (id=1489440772758704189)
+    <@204498098515476480> 
+    This is the warning stack!
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1489281188467310662/1489440772297326672/message.txt?ex=6a01dd90&is=6a008c10&hm=bb0629cc2fb7feec2fb2c9d263b0ce86c75b490c238b2d4003b6b24ef4eda75f&
+
+[2026-04-03T01:48:58.584000+00:00] idkaden (id=1489441552425291907)
+    Thank you
+
+[2026-04-03T01:50:45.943000+00:00] vamned (id=1489442002721312798)
+    Of course, thanks!
+
+[2026-04-03T01:57:34.656000+00:00] idkaden (id=1489443716987879474)
+    Your install didn't finish last time — hipfire never got added to PATH. This should start you clean:
+    
+    ```
+    Remove-Item -Recurse -Force "$env:USERPROFILE\.hipfire"
+    irm https://raw.githubusercontent.com/Kaden-Schutt/hipfire/master/scripts/install.ps1 | iex
+    ```
+    
+    Then restart your terminal for PATH to take effect. After that, hipfire should work.
+    
+    If it doesn’t work try to add it to PATH manually for now:
+    ```
+    $env:PATH = "$env:USERPROFILE\.hipfire\bin;$env:PATH"
+    hipfire
+    ```
+    If that prints the help text, the binaries are there, just PATH wasn't set. Then do `hipfire update` to get latest.
+    [reply to joeydiaz69 msg=1489440729301258240]
+
+[2026-04-03T02:09:17.027000+00:00] joeydiaz69 (id=1489446662945509527)
+    ok done
+
+[2026-04-03T02:09:28.212000+00:00] joeydiaz69 (id=1489446709858926693)
+    installed correctly and hipfired updated
+
+[2026-04-03T02:09:45.639000+00:00] vamned (id=1489446782952800419)
+    so mine is in path, just downloaded and updated but got this guy:
+    
+    ```
+    hipfire run qwen3.5-9b.hfq6.hfq
+    89 |     const bins = [
+    90 |       resolve(__dirname, "../target/release/examples/daemon"),
+    91 |       join(HIPFIRE_DIR, "bin", "daemon"),
+    92 |     ];
+    93 |     const bin = bins.find(p => existsSync(p));
+    94 |     if (!bin) throw new Error("daemon not found. cargo build --release --features deltanet --example daemon -p engine");
+                                 ^
+    error: daemon not found. cargo build --release --features deltanet --example daemon -p engine
+          at start (C:\Users\FJ\.hipfire\cli\index.ts:94:25)
+          at run (C:\Users\FJ\.hipfire\cli\index.ts:219:11)
+          at C:\Users\FJ\.hipfire\cli\index.ts:378:11
+    
+    Bun v1.3.11 (Windows x64)
+    ```
+
+[2026-04-03T02:21:59.542000+00:00] joeydiaz69 (id=1489449861165088940)
+    PS C:\Users\fella> hipfire run qwen3.5:27b
+    89 |     const bins = [
+    90 |       resolve(__dirname, "../target/release/examples/daemon"),
+    91 |       join(HIPFIRE_DIR, "bin", "daemon"),
+    92 |     ];
+    93 |     const bin = bins.find(p => existsSync(p));
+    94 |     if (!bin) throw new Error("daemon not found. cargo build --release --features deltanet --example daemon -p engine");
+                                 ^
+    error: daemon not found. cargo build --release --features deltanet --example daemon -p engine
+          at start (C:\Users\fella\.hipfire\cli\index.ts:94:25)
+          at run (C:\Users\fella\.hipfire\cli\index.ts:219:11)
+          at C:\Users\fella\.hipfire\cli\index.ts:378:11
+
+[2026-04-03T02:22:30.975000+00:00] joeydiaz69 (id=1489449993004646570)
+    fully downloaded, not sure about this message
+
+[2026-04-03T03:06:41.465000+00:00] idkaden (id=1489461109965721822)
+    What happens when you guys run `hipfire` can you show me?
+
+[2026-04-03T03:07:42.229000+00:00] idkaden (id=1489461364828274789)
+    bins were missing from the build chain 😅 never uploaded to gh for whatever reason. Probably got wiped by some push. Thank you guys for your patience
+    [reply to vamned msg=1489446782952800419]
+
+[2026-04-03T03:08:53.036000+00:00] idkaden (id=1489461661814493426)
+    You’ll have to do this again, but the exes should be linked now
+    [reply to idkaden msg=1489443716987879474]
+
+[2026-04-03T03:21:14.105000+00:00] vamned (id=1489464770083164280)
+    hmm ran "hipfire update", I got
+    
+    ```
+    warning: `engine` (example "infer") generated 3 warnings (run `cargo fix --example "infer" -p engine` to apply 1 suggestion)
+        Finished `release` profile [optimized] target(s) in 0.09s
+    428 |       if (existsSync(src)) { copyFileSync(src, join(binDir, bin)); }
+    429 |     }
+    430 |     // Recopy CLI
+    431 |     copyFileSync(join(repoDir, "cli/index.ts"), join(HIPFIRE_DIR, "cli/index.ts"));
+    432 |     // Recopy kernels
+    433 |     const arch = Bun.spawnSync(["cat", "/sys/class/kfd/kfd/topology/nodes/1/properties"], { stdout: "pipe" });
+                               ^
+    error: Executable not found in $PATH: "cat"
+      path: "cat",
+     errno: -4058,
+      code: "ENOENT"
+    
+          at C:\Users\FJ\.hipfire\cli\index.ts:433:22
+    ```
+
+[2026-04-03T03:22:05.242000+00:00] vamned (id=1489464984567021608)
+    running
+    ```
+    irm https://raw.githubusercontent.com/Kaden-Schutt/hipfire/master/scripts/force-update.ps1 | iex
+    ```
+
+[2026-04-03T03:23:05.531000+00:00] vamned (id=1489465237437677678)
+    then I get:
+    ```
+    89 |     const bins = [
+    90 |       resolve(__dirname, "../target/release/examples/daemon"),
+    91 |       join(HIPFIRE_DIR, "bin", "daemon"),
+    92 |     ];
+    93 |     const bin = bins.find(p => existsSync(p));
+    94 |     if (!bin) throw new Error("daemon not found. cargo build --release --features deltanet --example daemon -p engine");
+                                 ^
+    error: daemon not found. cargo build --release --features deltanet --example daemon -p engine
+          at start (C:\Users\FJ\.hipfire\cli\index.ts:94:25)
+          at run (C:\Users\FJ\.hipfire\cli\index.ts:219:11)
+          at C:\Users\FJ\.hipfire\cli\index.ts:378:11
+    
+    Bun v1.3.11 (Windows x64)
+    ```
+    
+    Looks like the same thing agaiN?
+
+[2026-04-03T06:59:18.972000+00:00] idkaden (id=1489519651993030783)
+    you may need to download HIP sdk, I tried to engineer around that but clearly it's causing issues.
+    https://www.amd.com/en/developer/resources/rocm-hub/hip-sdk.html
+
+[2026-04-03T07:04:00.311000+00:00] idkaden (id=1489520832014319696)
+    <@110688849415389184> <@684067707565375560> Install HIP SDK 7.1.1 from: https://www.amd.com/en/developer/resources/rocm-hub/hip-sdk.html 
+    After installing, re-run the hipfire installer — it'll find the DLL automatically.
+
+[2026-04-03T07:20:21.695000+00:00] vamned (id=1489524948237029418)
+    Hmm still running in the same issue after installing HIP SDK 7.1.1.
+    
+    ```
+    warning: `engine` (example "infer") generated 3 warnings (run `cargo fix --example "infer" -p engine` to apply 1 suggestion)
+        Finished `release` profile [optimized] target(s) in 15.06s
+    428 |       if (existsSync(src)) { copyFileSync(src, join(binDir, bin)); }
+    429 |     }
+    430 |     // Recopy CLI
+    431 |     copyFileSync(join(repoDir, "cli/index.ts"), join(HIPFIRE_DIR, "cli/index.ts"));
+    432 |     // Recopy kernels
+    433 |     const arch = Bun.spawnSync(["cat", "/sys/class/kfd/kfd/topology/nodes/1/properties"], { stdout: "pipe" });
+                               ^
+    error: Executable not found in $PATH: "cat"
+      path: "cat",
+     errno: -4058,
+      code: "ENOENT"
+    
+          at C:\Users\FJ\.hipfire\cli\index.ts:433:22
+    
+    Bun v1.3.11 (Windows x64)
+    ```
+    
+    Previously I've renamd amdhip64_7.dll to amdhip64.dll
+    
+    Here it mentions the change under HIP SDK Changes https://rocm.docs.amd.com/projects/install-on-windows/en/docs-7.1.1/about/releasenotes.html
+    Also notes the lack of backwards compatability.
+    [embed] AMD HIP SDK for Windows 7.1.1 — Release Notes — HIP SDK for Win... https://rocm.docs.amd.com/projects/install-on-windows/en/docs-7.1.1/about/releasenotes.html
+
+[2026-04-03T09:29:21.338000+00:00] joeydiaz69 (id=1489557410652885042)
+    I installed amd sdk prior to doing setup as I thought it was necessary for install so same as <@110688849415389184> I had it installed and it didn’t solve the issue
+    [reply to idkaden msg=1489520832014319696]
+
+[2026-04-03T10:03:53.866000+00:00] joeydiaz69 (id=1489566103465099385)
+    my powershell and cmd prompt wont work normall now too haha
+
+[2026-04-03T10:04:04.308000+00:00] joeydiaz69 (id=1489566147262021692)
+    the hipfire build overrides it
+
+[2026-04-03T12:19:46.180000+00:00] joeydiaz69 (id=1489600296748449883)
+    ok i fixed it, <@110688849415389184> i ran powershell with administrator and used command "Copy-Item "C:\Program Files\AMD\ROCm\7.1\bin\amdhip64_7.dll" "C:\Program Files\AMD\ROCm\7.1\bin\amdhip64.dll"
+
+[2026-04-03T12:20:08.079000+00:00] joeydiaz69 (id=1489600388599513139)
+    should run fine then
+
+[2026-04-03T12:22:44.300000+00:00] joeydiaz69 (id=1489601043838013571)
+    stuck how to run it as a server with hermes though
+
+[2026-04-03T12:37:19.471000+00:00] joeydiaz69 (id=1489604714571104346)
+    ill tell my agent to come up with a solution now everythings built and put it in here
+
+[2026-04-03T13:28:34.793000+00:00] vamned (id=1489617613406474422)
+    I did the manually before, must've gotten deleted at some point haha
+    [reply to joeydiaz69 msg=1489600296748449883]
+
+[2026-04-03T13:30:37.643000+00:00] vamned (id=1489618128676847747)
+    hmm that still gives me the same error as above 🙁
+    [reply to joeydiaz69 msg=1489600388599513139]
+
+[2026-04-03T13:43:17.471000+00:00] vamned (id=1489621315626467420)
+    Okay I did a clean install and that fixed it for me. (didn't want to do that when I was previously messaging about it, it was 3-4am!
+
+[2026-04-03T13:43:23.406000+00:00] vamned (id=1489621340519534783)
+    Did you get it going?
+    [reply to joeydiaz69 msg=1489601043838013571]
+
+[2026-04-03T13:54:02.482000+00:00] joeydiaz69 (id=1489624020998688888)
+    no my gpu crashed when getting agent to compile guide
+    [reply to vamned msg=1489621340519534783]
+
+[2026-04-03T13:54:14.507000+00:00] joeydiaz69 (id=1489624071434928269)
+    might wait for kaden to advise
+
+[2026-04-03T14:12:31.881000+00:00] vamned (id=1489628674155090060)
+    Aw still getting my previous error when running "hipfire run qwen3.5:9b-hfq6
+
+[2026-04-03T14:14:18.345000+00:00] joeydiaz69 (id=1489629120697471208)
+    I haven’t tried -hfq6 only “hipfire run qwen3.5:27b”
+    [reply to vamned msg=1489628674155090060]
+
+[2026-04-03T14:20:58.924000+00:00] vamned (id=1489630800847573074)
+    I'll try that as well, just to see what will happen. I doubt that solves my problem here though
+
+[2026-04-03T14:23:51.999000+00:00] joeydiaz69 (id=1489631526776995972)
+    I put the error codes when running commands in deepseek and gave some context
+
+[2026-04-03T14:24:13.069000+00:00] joeydiaz69 (id=1489631615150985278)
+    Seemed to fix things for me I’m just a lil lost on how to run the Hermes server through hipfire
+
+[2026-04-03T18:20:39.873000+00:00] outbreak7777 (id=1489691118919483635)
+    Hey @Kaden — first RX 7900 XTX (gfx1100) benchmark here. Pre-compiled kernels produce garbage output (only "!" repeated). Deleting ~/.hipfire/bin/kernels/compiled/gfx1100 and letting hipfire recompile locally fixes it. Full details + numbers in the attached file. Also found a minor install.sh issue on openSUSE (missing /usr/lib64/ in libamdhip64 search paths). Happy to run more tests.
+    [attachment] hipfire-bug-report.md https://cdn.discordapp.com/attachments/1489281188467310662/1489691117510463488/hipfire-bug-report.md?ex=6a021df7&is=6a00cc77&hm=cf8ff3f1e7d14d5cdb2677676005446574a4676f94ddbe90f3a801ebaad33d54&
+
+[2026-04-03T19:55:00.574000+00:00] outbreak7777 (id=1489714861620334692)
+    hipfire update — full benchmark + more bugs found (RX 7900 XTX, gfx1100, ROCm 6.4)
+    
+    Updated the GitHub issue with everything: https://github.com/Kaden-Schutt/hipfire/issues/2#issuecomment-4184960247
+    
+    TL;DR:
+    
+    Speed is impressive:
+    - 9B HFQ4: 62 tok/s
+    - 27B HFQ4: 25-27 tok/s
+    - 27B HFQ6: 16-20 tok/s
+    
+    But found more problems:
+    - 27B HFQ4 output quality is broken — gibberish on coding tasks, works only for trivial one-word answers. HFQ6 is fine.
+    - `hipfire serve` crashes on second request (ReadableStream locked — getReader() called per recv() without releasing previous reader)
+    - 27B crashes the daemon entirely when loaded through serve
+    - `infer` CLI has no --max-tokens flag, so models ramble forever
+    - Default repeat_penalty (1.3/128) too weak — patched to 1.5/256, helps with loops but doesn't fix HFQ4 quality
+    
+    For comparison: llama.cpp Q5_K_M same model, same GPU = perfect output at 15-18 tok/s. Slower but actually usable.
+    
+    9B is genuinely useful for simple tasks at 62 tok/s. Looking forward to fixes on serve and 27B HFQ4 quality.
+    [embed] gfx1100 (RX 7900 XTX): pre-compiled kernels produce garbage output,... https://github.com/Kaden-Schutt/hipfire/issues/2
+
+[2026-04-04T00:40:47.899000+00:00] idkaden (id=1489786782714167346)
+    Working on a fix now
+    [reply to outbreak7777 msg=1489714861620334692]
+
+[2026-04-04T00:45:10.992000+00:00] idkaden (id=1489787886206193795)
+    Noted, will be first target once I have reliable multi-arch, which is what I’m working on now
+    [reply to joeydiaz69 msg=1489631615150985278]
+
+[2026-04-04T00:57:03.208000+00:00] joeydiaz69 (id=1489790873456873712)
+    I think I’ve got the right command line to run the model, working on a tight schedule atm so after reading qwen27:b was having difficulties in the benchmark results above I’ve decided to hold off till I can get your insight. Looks good though when it’s giving me 40 TOK/S when I run the model
+    [reply to idkaden msg=1489787886206193795]
+
+[2026-04-04T01:39:22.908000+00:00] idkaden (id=1489801525730480199)
+    https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.1-alpha should help with the issues you have described, will look more into the specifics
+    [embed] Release hipfire v0.1.1-alpha · Kaden-Schutt/hipfire https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.1-alpha
+    [reply to outbreak7777 msg=1489714861620334692]
+
+[2026-04-04T01:43:06.188000+00:00] idkaden (id=1489802462234939583)
+    The new release should help with your issues as well
+    [reply to joeydiaz69 msg=1489790873456873712]
+
+[2026-04-04T01:45:04.817000+00:00] joeydiaz69 (id=1489802959800897648)
+    lovely
+    [reply to idkaden msg=1489802462234939583]
+
+[2026-04-04T01:45:38.415000+00:00] joeydiaz69 (id=1489803100720992330)
+    ill give it a test in 20 mins
+
+[2026-04-04T01:57:16.524000+00:00] joeydiaz69 (id=1489806028802621631)
+    do i need a command line like this to start the hipfire server ?
+    [reply to idkaden msg=1489802462234939583]
+
+[2026-04-04T01:57:34.114000+00:00] joeydiaz69 (id=1489806102580297918)
+    ./hipfire \
+      --model /path/to/qwen3.5-27b-hip.bin \
+      --host 127.0.0.1 \
+      --port 8080 \
+      --context 32768 \
+      --gpu-layers 99 \
+      --threads 24 \
+      --batch-size 512 \
+      --ubatch-size 128 \
+      --temp 0.6 \
+      --top-k 20 \
+      --top-p 0.95 \
+      --repeat-penalty 1.1 \
+      --device hip \
+    > ~/hipfire.log 2>&1 &
+
+[2026-04-04T02:00:52.514000+00:00] idkaden (id=1489806934730211619)
+    If you do it shouldn’t be that hard, I am working on 0.1.2 currently given your and others feedback 0.1.1 was mainly based on the GitHub issue
+
+[2026-04-04T02:01:31.214000+00:00] joeydiaz69 (id=1489807097049776259)
+    ive been trying that command on wsl2 and it doesnt load my gpu
+    [reply to idkaden msg=1489806934730211619]
+
+[2026-04-04T02:01:55.928000+00:00] joeydiaz69 (id=1489807200707805204)
+    not sure if the server is actually working either, it doesnt let me run it in powershell so i assume its wsl2
+
+[2026-04-04T02:03:05.300000+00:00] idkaden (id=1489807491674931412)
+    Oh WSL will kneecap your performance on windows esp if the models are run from there vs native windows, let me see what’s going on that may be blocking you from using hipfire serve on windows
+
+[2026-04-04T02:03:36.676000+00:00] joeydiaz69 (id=1489807623275679917)
+    thank you my friend i appreciate all the work and input
+    [reply to idkaden msg=1489807491674931412]
+
+[2026-04-04T02:12:27.753000+00:00] idkaden (id=1489809850773803128)
+    Okay so there is a bug causing the server to crash after one prompt lmao working on that now, also, configuration is mostly automatic currently, would you like me to add more configurability like llama.cpp?
+    [reply to joeydiaz69 msg=1489807623275679917]
+
+[2026-04-04T02:13:58.251000+00:00] joeydiaz69 (id=1489810230350184518)
+    ok great to know its only a small hurdle, i think ill be happy running an automatic config you set as i shouldnt have to modify server config like llama.cpp as they are mainly parameters to prevent my gpu crashing which shouldnt happen with hipfire
+    [reply to idkaden msg=1489809850773803128]
+
+[2026-04-04T02:17:16.718000+00:00] idkaden (id=1489811062780858468)
+    ideally yes it shouldn’t happen and also turbo kv should progressively swap in to make more headroom as your conversation gets longer soon
+
+[2026-04-04T02:19:20.872000+00:00] idkaden (id=1489811583520735252)
+    so: llama.cpp -> fp16 kv = long context slows output
+    hipfire (you may be able to use - -turbo to do this now) -> turboquant for AMD step-ups until out of model context, which actually may mean model starts slow, ends faster lol
+
+[2026-04-04T02:28:05.229000+00:00] joeydiaz69 (id=1489813782833135647)
+    haha sounds good to me, i know the server needs to warm up but as it progresses the server becoming faster instead of slower is good for my long tasks
+    [reply to idkaden msg=1489811583520735252]
+
+[2026-04-04T04:17:52.667000+00:00] vamned (id=1489841412550819850)
+    I think the new install.ps1 is got an error?
+    
+    
+    ```
+    PS C:\Users\FJ> irm https://raw.githubusercontent.com/Kaden-Schutt/hipfire/master/scripts/install.ps1 | iex
+    iex : At line:85 char:27
+    +             Write-Host "  $dllName: found at $candidate ✓" -Foregroun ...
+    +                           ~~~~~~~~~
+    Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+    At line:102 char:35
+    +                     Write-Host "  $dllName: found at $candidate ✓" -F ...
+    +                                   ~~~~~~~~~
+    Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+    At line:113 char:27
+    +             Write-Host "  $dllName: found at $candidate ✓" -Foregroun ...
+    +                           ~~~~~~~~~
+    Variable reference is not valid. ':' was not followed by a valid variable name character. Consider using ${} to delimit the name.
+    At line:1 char:89
+    + ... usercontent.com/Kaden-Schutt/hipfire/master/scripts/install.ps1 | iex
+    +                                                                       ~~~
+        + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
+        + FullyQualifiedErrorId : InvalidVariableReferenceWithDrive,Microsoft.PowerShell.Commands.InvokeExpressionCommand
+    ```
+
+[2026-04-04T04:18:04.875000+00:00] vamned (id=1489841463754887219)
+    It doesn't seem to like $dllName:
+
+[2026-04-04T04:20:14.202000+00:00] vamned (id=1489842006191771829)
+    it thinks ":" is part of the variable name
+
+[2026-04-04T09:08:44.355000+00:00] idkaden (id=1489914610235609148)
+    <@684067707565375560> <@110688849415389184> <@1259055114677911585> https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.2-alpha
+    [embed] Release hipfire v0.1.2-alpha · Kaden-Schutt/hipfire https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.2-alpha
+
+[2026-04-04T09:09:54.780000+00:00] idkaden (id=1489914905619333242)
+    ## Bug Fixes
+    
+    repeat_penalty + ngram_block in daemon — fixes 27B repetition loops
+    hipfire serve crash on second request (ReadableStream locked)
+    Windows install.ps1: PowerShell parse error ($dllName: syntax), PATH length guard, --no-path flag
+    Windows DLL: versioned filename fallback (amdhip64_7.dll, amdhip64_6.dll) for HIP SDK 6.x/7.x
+    Linux install.sh: /usr/lib64/ paths for openSUSE + ldconfig fallback
+    Qwen3 repeat_window overflow clamped to scratch buffer capacity
+    Daemon load errors now include GPU arch + VRAM info
+    infer CLI --max-tokens flag
+
+[2026-04-04T10:29:02.606000+00:00] outbreak7777 (id=1489934819444916334)
+    @Kaden Tested v0.1.2-alpha on my RX 7900 XTX (gfx1100, ROCm 6.4). Serve improvements are solid
+    👍
+    
+    Filed a detailed diagnostic issue + a PR with 7 CLI/serve fixes:
+    
+    Issue #8 — runtime diagnostics: https://github.com/Kaden-Schutt/hipfire/issues/8
+    - shared output corruption across both quants (2,3,5711 on HFQ4 and HFQ6)
+    - severe context-length degradation (-65% tok/s at ~500 tok prompt)
+    - confirmed cross-request state bleed in concurrent serve
+    - precompiled gfx1100 kernels still need JIT workaround
+    
+    PR #9 — 7 CLI fixes: https://github.com/Kaden-Schutt/hipfire/pull/9
+    - OpenAI-compatible response format (id, model, usage, etc.)
+    - streaming lock leak fix
+    - idle timeout fix (10s → 255s)
+    - repeat_penalty/top_p passthrough in serve
+    - cat → native file read in update
+    - SSE headers
+    
+    Speed results: 9B HFQ4 still ~60 tok/s, 27B HFQ4 dropped to 20-22 (was 25-27), 27B HFQ6 stable
+    at 16-18.
+
+[2026-04-04T15:00:15.579000+00:00] joeydiaz69 (id=1490003073240793119)
+    Thanks I’ll update now, swapped down to qwen3.5:14b and my god I had no idea how bad my agent performance was constraining 27b on my gpu was, can only imagine what 27b will be like on hipfire, about to head out but I’ll run hipfire later and post results, thanks for all the quick repo pushes
+    [reply to idkaden msg=1489914610235609148]
+
+[2026-04-05T03:19:05.071000+00:00] vamned (id=1490189004606275584)
+    hmm regardless of what I do, I get this:
+    ```
+    PS C:\Users\FJ\.hipfire> hipfire run qwen3.5:9b
+    90 |     const bins = [
+    91 |       resolve(__dirname, "../target/release/examples/daemon"),
+    92 |       join(HIPFIRE_DIR, "bin", "daemon"),
+    93 |     ];
+    94 |     const bin = bins.find(p => existsSync(p));
+    95 |     if (!bin) throw new Error("daemon not found. cargo build --release --features deltanet --example daemon -p engine");
+                                 ^
+    error: daemon not found. cargo build --release --features deltanet --example daemon -p engine
+          at start (C:\Users\FJ\.hipfire\cli\index.ts:95:25)
+          at run (C:\Users\FJ\.hipfire\cli\index.ts:225:11)
+          at C:\Users\FJ\.hipfire\cli\index.ts:414:11
+    
+    Bun v1.3.11 (Windows x64)
+    ```
+
+[2026-04-05T04:00:32.718000+00:00] vamned (id=1490199438554300456)
+    I tried reinstalling, updating, reinstalling (again) and changing some stuff around but there is a daemon in the "bin" folder which is in ".hipfire"
+
+[2026-04-05T06:43:24.048000+00:00] idkaden (id=1490240422482673765)
+    I'm sorry my windows friens
+
+[2026-04-05T06:43:33.960000+00:00] idkaden (id=1490240464056746117)
+    I am building from linux so bear with me
+
+[2026-04-05T06:44:40.269000+00:00] idkaden (id=1490240742176854169)
+    <@1259055114677911585> found it and fixed the incoherence issue from my end, though turboquant is broken now, q8 KV works coherently across long context
+
+[2026-04-05T06:44:46.272000+00:00] idkaden (id=1490240767354998854)
+    will push soon
+
+[2026-04-05T06:46:11.604000+00:00] idkaden (id=1490241125263474729)
+    <@110688849415389184> the bun program is looking for the daemon but on windows it needs daemon.exe, pushing a change now that should fix
+
+[2026-04-05T06:48:16.531000+00:00] idkaden (id=1490241649245294682)
+    okay changes pushed run `hipfire update` to get the changes
+
+[2026-04-05T06:52:31.274000+00:00] idkaden (id=1490242717714874439)
+    ## Push 1: Merge redline + engine fixes (42 files, +5,573 lines)
+    
+    **Redline engine (new crate):**
+    - Direct-KMD GPU compute via bare libdrm_amdgpu.so — no HIP/ROCm
+    - FastDispatch: 30.5µs/kernel, 0.5ms startup, 2.8MB RSS
+    - RELEASE_MEM + WAIT_REG_MEM compute barriers (one-bit SHADER_TYPE fix)
+    - KFD/AQL research (blocked on gfx1010, ready for gfx1100)
+    - Benchmark suite with redline vs HIP numbers
+    - Dispatch API: load module, kernel, command buffer, chain dispatch
+    
+    **Kernel fixes:**
+    - Stochastic rounding in DeltaNet Q8/Q4 state requant (fixes 500-token degradation)
+    - Deinterleave kernel replaces per-head memcpy loop (15→43 tok/s on 9B)
+    
+    **Daemon fixes:**
+    - Multi-turn conversation — cumulative KV cache + DeltaNet state across turns
+    - System prompt support via ChatML ("system" field)
+    - KV capacity guard with auto-reset
+    - DeltaNet state zeroed on reset (all three paths: text, VL, reset command)
+    - "reset" command to clear conversation without unloading
+    - VL capacity guard uses real visual token count
+    
+    **New features:**
+    - Interactive REPL (run.rs) — ollama-style multi-turn with /reset, /stats, /help
+    - TURBO=N and MAX_TOKENS=N env vars for infer_qwen35
+    - CLI builds and deploys run binary on hipfire update
+    
+    **Windows fix:**
+    - .exe extension appended for daemon/infer/run binary lookup (3 places)
+    
+    ## Push 2: Remove pre-compiled kernels (1,018 files deleted, -9MB)
+    
+    - Removed 522 .hsaco blobs + 496 .hash files across 5 arch dirs
+    - Added kernels/compiled/ to .gitignore
+    - hipcc recompiles on first run when source hash mismatches
+
+[2026-04-05T07:20:17.694000+00:00] idkaden (id=1490249707187081337)
+    noticed turboquant errors, working to fix now
+
+[2026-04-05T09:05:44.421000+00:00] rakaarwaky (id=1490276243403313152)
+    <@204498098515476480>  thank you so much this is what iam Looking for
+    
+    I will try on my Rx 6800xt 16gb RDNA2
+
+[2026-04-05T09:26:36.780000+00:00] idkaden (id=1490281496177676318)
+    https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.3-alpha
+    [embed] Release v0.1.3-alpha — DeltaNet Stable + 3x Speed + Multi-Turn ·... https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.3-alpha
+
+[2026-04-05T09:27:12.098000+00:00] idkaden (id=1490281644312104970)
+    no longer card specific, hipfire compiles JIT for your gpu arch
+
+[2026-04-05T09:36:08.278000+00:00] idkaden (id=1490283893214150726)
+    carnice port+quant coming next
+
+[2026-04-05T09:45:50.792000+00:00] rakaarwaky (id=1490286336454955059)
+    Can we run hipfire on  Jackrong/Qwopus3.5-9B-v3-GGUF with turboquant?
+
+[2026-04-05T09:48:35.210000+00:00] idkaden (id=1490287026073763960)
+    working on that now
+    [reply to rakaarwaky msg=1490286336454955059]
+
+[2026-04-05T09:49:05.715000+00:00] idkaden (id=1490287154021269544)
+    merged your pr
+    [reply to outbreak7777 msg=1489934819444916334]
+
+[2026-04-05T10:06:30.160000+00:00] idkaden (id=1490291534740852756)
+    https://huggingface.co/schuttdev/hipfire-qwopus-9b
+    
+    use the hf6 version, hf4 is questionable
+    [embed] schuttdev/hipfire-qwopus-9b · Hugging Face https://huggingface.co/schuttdev/hipfire-qwopus-9b
+    [reply to rakaarwaky msg=1490286336454955059]
+
+[2026-04-05T10:16:10.679000+00:00] idkaden (id=1490293969614147584)
+    also run `hipfire update` to get the changes that allow `hipfire pull qwopus-9b:hf6`
+
+[2026-04-05T10:29:57.611000+00:00] idkaden (id=1490297438018207884)
+    now working on supporting hermes agent with https://huggingface.co/schuttdev/hipfire-carnice-9b served through hipfire
+    [embed] schuttdev/hipfire-carnice-9b · Hugging Face https://huggingface.co/schuttdev/hipfire-carnice-9b
+
+[2026-04-05T15:45:17.778000+00:00] outbreak7777 (id=1490376794950598657)
+    @Kaden Tested v0.1.3 on 7900 XTX. Speed is up +7% (9B: 65 tok/s, 27B: 23.5). Found and
+    fixed 3 bugs, filed PR #10:
+    
+    1. GPT-2 byte map bug in tokenizer — gpt2_char_to_byte() had wrong offsets for bytes 127-
+    160. Was causing the U+FFFD artifacts (2�.3�.5...). Fixed with correct
+    bytes_to_unicode() tables.
+    
+    2. turbo: 4 hardcoded in CLI — all run/serve calls forced TurboQuant. That's why long
+    context collapsed (0.3 tok/s). With Q8 KV, 27B HFQ4 does 10.4 tok/s on 500-tok prompts.
+    Changed default to Q8, opt-in via TURBO=N env.
+    
+    3. Serve state bleed — reset wasn't in daemon IPC handler. Added it + rewrote serve with
+    OpenAI fields, ChatML, safe lock, think-tag stripping, pre-warm.
+    
+    TurboQuant is still broken on long context for 27B — that's the remaining blocker for
+    HFQ6 on 24GB cards.
+    
+    PR: https://github.com/Kaden-Schutt/hipfire/pull/10
+    Full results on issue #8.
+    [embed] fix(engine+cli): GPT-2 byte map, incremental UTF-8 streaming, daemo... https://github.com/Kaden-Schutt/hipfire/pull/10
+
+[2026-04-05T16:32:20.139000+00:00] vamned (id=1490388632790630522)
+    ```
+    hipfire update
+    ```
+    breaks and doesn't work for me. Gives me what I've attached to as txt
+    
+    Then when running the carnice model (deleting repo and reinstalling):
+    ```
+    
+    thread 'main' (61484) panicked at crates/engine/examples/daemon.rs:50:45:
+    GPU init failed: HipError { code: 100, message: "hipGetDeviceCount: no ROCm-capable device is detected" }
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+    120 |     while (true) {
+    121 |       if (this.lines.length > 0) {
+    122 |         return JSON.parse(this.lines.shift()!);
+    123 |       }
+    124 |       const { value, done } = await this.reader.read();
+    125 |       if (done) throw new Error("daemon closed");
+                                    ^
+    error: daemon closed
+          at recv (C:\Users\FJ\.hipfire\cli\index.ts:125:27)
+          at async run (C:\Users\FJ\.hipfire\cli\index.ts:237:43)
+    ```
+    [attachment] Hipfire_Update_warnings_and_error.txt https://cdn.discordapp.com/attachments/1489281188467310662/1490388632433983629/Hipfire_Update_warnings_and_error.txt?ex=6a020494&is=6a00b314&hm=e5a25c61975f6bdeb573d90e83b3e49da4f923b7f0e1c30ca608485d01cd2c8c&
+
+[2026-04-06T06:33:24.141000+00:00] ivabom (id=1490600294155948052)
+    AMD 6800 running qwen3.5 27b q3km (vulkan llama.cpp) vs qwen3.5 27b hf4 (hipfire)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1490600293887508590/image.png?ex=6a0220f4&is=6a00cf74&hm=2bbb825618b7dc7a1f7e487bcc441865663196f9f7f3d331b8cc47f6168a861a&
+
+[2026-04-06T08:28:27.069000+00:00] rakaarwaky (id=1490629247134601326)
+    <@184771059340279808>  How do you do benchmark comparisons? What tools do you use?
+
+[2026-04-06T09:01:12.125000+00:00] ivabom (id=1490637489176838154)
+    I spun up each model manually and got hermes to run through the same tests against each model. Initially I wanted to know what the performance compairson was between the two, im going to do one now that looks at the quality of the output after 5 runs of the same tests.
+
+[2026-04-06T10:11:34.737000+00:00] ivabom (id=1490655200094982244)
+    testing was all over the place, only thing I can think is the different quant layers is breaking things. Going to test a more 1:1 model at 9b
+
+[2026-04-06T10:29:29.998000+00:00] rakaarwaky (id=1490659710066757765)
+    i ask qwen coder cli  do benchmark test . Llama ccp still better
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1490659709424767108/image.png?ex=6a01af89&is=6a005e09&hm=3db58c4c9875e5235a4a2f57365d4893dcc5093b078e1bf3281e66ac75d90fd9&
+
+[2026-04-06T10:44:19.629000+00:00] rakaarwaky (id=1490663441449357524)
+    please let me know too
+    [reply to ivabom msg=1490655200094982244]
+
+[2026-04-06T10:49:22.556000+00:00] rakaarwaky (id=1490664712017416336)
+    how many tokens/s do you get in qwen 9b model <@184771059340279808>
+
+[2026-04-06T15:15:19.634000+00:00] idkaden (id=1490731640853495948)
+    I’ve made some changes, no new release yet but if you run hipfire update you should pick up stability changes
+
+[2026-04-06T15:28:22.435000+00:00] idkaden (id=1490734924158992454)
+    Interesting result. HF4 should be faster than Q8 but as <@184771059340279808> noted it does have quality issues. Looking into those now, glad you could get it working with Hermes!
+    [reply to rakaarwaky msg=1490659710066757765]
+
+[2026-04-06T15:30:21.559000+00:00] idkaden (id=1490735423801004134)
+    HF6 is intended to fit models like 27b in under 16gb vram with similar accuracy to Q8–also since hipfire JIT compiles kernels tok/s are always slower on first run
+
+[2026-04-06T15:38:33.863000+00:00] rakaarwaky (id=1490737488673771601)
+    I'm currently still using llama ccp for my actual work. But I'm hoping this project can outperform llama ccp. Please let me know if you need any help testing with the rx6800xt.
+    [reply to idkaden msg=1490734924158992454]
+
+[2026-04-06T15:51:50.357000+00:00] idkaden (id=1490740829411610777)
+    After some investigation, it’s clear; I optimized for the 5700xt and its constraints. RDNA2+ will benefit greatly if I take the same approach that I did to unburden the 5700xt the newer cards are so much better and still so underutilized
+    [reply to rakaarwaky msg=1490737488673771601]
+
+[2026-04-06T16:34:28.001000+00:00] idkaden (id=1490751556948066375)
+    Okay <@395559919597649933> <@184771059340279808> I’ve added some arch-specific variants for RDNA2 just run `hipfire update` then `hipfire bench [--runs N (default is 5)]  --exp <model>` should help
+
+[2026-04-06T18:16:53.476000+00:00] idkaden (id=1490777332938571877)
+    [attachment] IMG_2275.png https://cdn.discordapp.com/attachments/1489281188467310662/1490777332682723450/IMG_2275.png?ex=6a021d15&is=6a00cb95&hm=2c64ebb63550794174c2e188bb7a2b06cb00204804c774133ca98b6a5b1e9584&
+
+[2026-04-06T18:17:15.735000+00:00] idkaden (id=1490777426299719751)
+    Same model on 5700xt currently
+    [reply to rakaarwaky msg=1490659710066757765]
+
+[2026-04-06T19:15:31.722000+00:00] ivabom (id=1490792089531973746)
+    <@204498098515476480> just to confirm hipfire uses turboquant?
+
+[2026-04-06T19:20:01.458000+00:00] ivabom (id=1490793220886761695)
+    the reason I ask is that hipfire tends to output quickly but suffers as soon as context is added. Are any of the models youve converted MoE varients?
+
+[2026-04-06T23:53:10.125000+00:00] joeydiaz69 (id=1490861959938310206)
+    When I run hipfire serve I can’t get it to connect to my Hermes agent when pointing to local host with the designated port hipfire serve shows, I know you made the wsl2 patch so maybe it’s a skill issue on my end, could you clarify the process to point the custom endpoint? Much love <@204498098515476480>
+
+[2026-04-07T01:41:26.374000+00:00] rakaarwaky (id=1490889207181475840)
+    Hey <@204498098515476480> , I'm running into an issue where `hipfire serve` loads the model but almost never responds to  requests . `hipfire run` works perfectly every time (35-39 tok/s). I filed an https://github.com/Kaden-Schutt/hipfire/issues/12
+    [embed] hipfire serve model loads but never responds on gfx1030 · Issue #1... https://github.com/Kaden-Schutt/hipfire/issues/12
+
+[2026-04-07T12:15:01.798000+00:00] idkaden (id=1491048655426162699)
+    Kinda, I haven’t optimized it for RDNA2+ yet, a lot of the hipfire arch still assumes you’re me running the unc 5700xt, 4MB L2 (vs 128mb on RDNA2+) installing 7900xtx today. Should help me bring RDNA2+ up to where it needs to be for turboquant. But iirc I added a configure command flag so you can turn off forced turbo because it uses sign flip and I haven’t quite worked out how to get that reliable yet, 
+     my card gives up after 500toks, so set KV to Q8, it should be faster that way anyway
+    [reply to ivabom msg=1490792089531973746]
+
+[2026-04-07T12:15:17.747000+00:00] idkaden (id=1491048722321244291)
+    Investigating the issue now
+    [reply to rakaarwaky msg=1490889207181475840]
+
+[2026-04-07T12:17:16.504000+00:00] idkaden (id=1491049220424077483)
+    wsl2 patch is next, but I will warn you, if you’re not running native Linux it will hurt performance. Native windows support deferred for now until I can figure out the HIP DLL issue
+    [reply to joeydiaz69 msg=1490861959938310206]
+
+[2026-04-07T12:20:42.497000+00:00] idkaden (id=1491050084421468271)
+    MOE + Gemma support after I get hipfire serve stable for you guys
+
+[2026-04-07T12:46:36.356000+00:00] idkaden (id=1491056601778491506)
+    <@395559919597649933> try `hipfire update`
+    `hipfire config set kv_cache q8` 
+    should clear up incoherence issues, also shipped improvements for `hipfire serve`
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1489281188467310662/1491056601623433508/image0.jpg?ex=6a01cfac&is=6a007e2c&hm=8917a9da8750af8497da1b1f15a890ad1f52adddaefdd065490aab4d9030db07&
+    [reply to ivabom msg=1490792089531973746]
+
+[2026-04-07T15:54:11.582000+00:00] joeydiaz69 (id=1491103809617920071)
+    Completely understand, hopefully I can migrate my whole stack to Linux soon
+    [reply to idkaden msg=1491049220424077483]
+
+[2026-04-07T19:31:26.831000+00:00] lonelyspliff (id=1491158483414814800)
+    Does this work on steam deck?
+
+[2026-04-08T02:08:25.735000+00:00] idkaden (id=1491258387139395806)
+    not sure, but after dGPU's I'll target APU's/gpu's with unified memory
+    [reply to lonelyspliff msg=1491158483414814800]
+
+[2026-04-08T02:09:15.029000+00:00] idkaden (id=1491258593893417090)
+    it should autocompile as long as you have ROCm/HIP SDK
+
+[2026-04-08T08:54:34.983000+00:00] rakaarwaky (id=1491360599173496843)
+    <@204498098515476480> It seems like it's still not working on my device? Is anyone experiencing the same problem? Or is this just on my side?
+    [attachment] hipfireserve.webm https://cdn.discordapp.com/attachments/1489281188467310662/1491360599056060576/hipfireserve.webm?ex=6a01994a&is=6a0047ca&hm=594f206c82b328ce58797988c9f82e0dfa2568567ad2d4462d43a3b817b40865&
+
+[2026-04-08T08:56:34.983000+00:00] idkaden (id=1491361102490107975)
+    just fired up my 7900xtx
+
+[2026-04-08T08:57:11.204000+00:00] idkaden (id=1491361254412124210)
+    looks like the server is hanging or crashing? it seems to load but the agent never gets a response
+
+[2026-04-08T08:57:22.144000+00:00] idkaden (id=1491361300297814037)
+    looking into it now
+
+[2026-04-08T09:05:06.916000+00:00] idkaden (id=1491363249692606465)
+    early tests on 7900xtx kinda crazy lol
+
+[2026-04-08T09:05:08.331000+00:00] idkaden (id=1491363255627677767)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1491363255418097674/image.png?ex=6a019bc4&is=6a004a44&hm=1e7bdd66191a6346b193523d244ddafd495e5cf648f972c8e60d87ec008b7be2&
+
+[2026-04-08T09:05:50.273000+00:00] idkaden (id=1491363431545045004)
+    plenty of room too, probably can get 9b near 100toks/s if not beyond
+
+[2026-04-08T09:18:58.102000+00:00] idkaden (id=1491366735939502231)
+    `hipfire serve` never sends stop bruh smh
+
+[2026-04-08T09:19:07.196000+00:00] idkaden (id=1491366774082371708)
+    the model streams forever and hangs
+
+[2026-04-08T09:19:10.934000+00:00] idkaden (id=1491366789760811080)
+    fixing now
+
+[2026-04-08T09:39:33.848000+00:00] rakaarwaky (id=1491371919033761833)
+    You're really underrated, bro. Where did you learn from, if I may ask?
+
+[2026-04-08T09:56:22.394000+00:00] idkaden (id=1491376149182287872)
+    https://github.com/Kaden-Schutt/hipfire/pull/13
+    [embed] fix(serve): fix Hermes agent hang + streaming tool calls by Kaden-S... https://github.com/Kaden-Schutt/hipfire/pull/13
+
+[2026-04-08T09:57:08.681000+00:00] idkaden (id=1491376343324295269)
+    ^^
+    [reply to rakaarwaky msg=1491360599173496843]
+
+[2026-04-08T09:57:23.622000+00:00] idkaden (id=1491376405991264287)
+    you should be able to run `hipfire update` to pick up the changes
+
+[2026-04-08T09:59:33.853000+00:00] idkaden (id=1491376952219533385)
+    I didn't really follow a learning path. I thought that RDNA cards offer much more than they get credit for and built the path to that reality I suppose. I noticed that ROCm was just CUDA adapted for AMD not AMD native so I saw a gap to optimize, and that's what my whole goal is
+    [reply to rakaarwaky msg=1491371919033761833]
+
+[2026-04-08T09:59:56.720000+00:00] idkaden (id=1491377048130818139)
+    to make AMD cards first class inference engines even if AMD themselves wont
+
+[2026-04-08T10:00:49.299000+00:00] idkaden (id=1491377268663128226)
+    a lot of it was going back and forth with claude about RDNA and what instructions it is best suited for
+
+[2026-04-08T10:01:22.984000+00:00] idkaden (id=1491377409948123237)
+    then optimizing for those instructions rather than CUDA ported to AMD
+
+[2026-04-08T21:53:52.359000+00:00] ivabom (id=1491556713822818397)
+    As the saying goes, AMD ages like fine wine.
+    AMD have also positioned themselves to be the edge compute whereas nvidia are going balls deep on enterprise/Datacenter compute.
+    My view is that AMD is playing the long game with AI, they are far less exposed to the bubble around SOTA models. AMD will eventially be the king of self hosted AI, so the work you are doing <@204498098515476480> will likely be invaluable into the future.
+
+[2026-04-08T22:59:47.900000+00:00] ivabom (id=1491573304564383844)
+    what is the quality like and context? Ive found so far more context = fast degredation of TPS and they are incoherant.
+    [reply to idkaden msg=1491363255627677767]
+
+[2026-04-08T23:40:31.859000+00:00] idkaden (id=1491583555271393310)
+    It was a sampling problem, model would degenerate at 200-500 toks because penalty was too high
+    [reply to ivabom msg=1491573304564383844]
+
+[2026-04-08T23:40:37.149000+00:00] idkaden (id=1491583577459003423)
+    Let me commit the fix
+
+[2026-04-08T23:48:14.579000+00:00] idkaden (id=1491585496059744388)
+    If you set penalty to 1.05 it should fix
+
+[2026-04-09T00:11:45.198000+00:00] idkaden (id=1491591412624392293)
+    Okay this fix is pushed now https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.4-alpha
+    [embed] Release v0.1.4-alpha: Long generation fix + ds_swizzle FWHT + gfx11... https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.4-alpha
+
+[2026-04-09T00:51:28.379000+00:00] ivabom (id=1491601408409993418)
+    Ill give it another test tonight once im done with work shit. Also just ordered a 7900 XTX I found for cheap online 🙂
+    [reply to idkaden msg=1491585496059744388]
+
+[2026-04-09T01:05:27.901000+00:00] idkaden (id=1491604929620738220)
+    Nice, the 7900 XTX has a lot more exploitable compute than RDNA2 or below
+
+[2026-04-09T01:40:26.087000+00:00] ivabom (id=1491613730050408489)
+    Yeah its also going to help improve the processing speed of a service im running for one of my customers 🙂
+
+[2026-04-09T01:40:39.791000+00:00] ivabom (id=1491613787529154721)
+    Nice little tax writeoff
+
+[2026-04-09T18:27:27.343000+00:00] idkaden (id=1491867155166400532)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1491867154969002024/image.png?ex=6a021f8f&is=6a00ce0f&hm=e1bb44a418b0625a703dd652abde75e74db66130cc2828586a271f3d95e30bb9&
+
+[2026-04-09T19:43:18.775000+00:00] ivabom (id=1491886245255581698)
+    nice
+
+[2026-04-09T19:44:07.891000+00:00] ivabom (id=1491886451263017073)
+    whats the quality of the output though, ive been struggling with really bad hallucenations and incoherance, not sure if its the settings I am using
+
+[2026-04-09T23:08:08.361000+00:00] rakaarwaky (id=1491937791515430942)
+    that crazy
+    [reply to idkaden msg=1491867155166400532]
+
+[2026-04-10T06:39:50.017000+00:00] ivabom (id=1492051464099729519)
+    What are the current restrictions or difficulties when it comes to converting models into hipfire?
+
+[2026-04-10T20:23:27.649000+00:00] idkaden (id=1492258736671031359)
+    It’s only qwen3/3.5 and llama models currently
+    [reply to ivabom msg=1492051464099729519]
+
+[2026-04-10T20:25:39.440000+00:00] idkaden (id=1492259289442553938)
+    [attachment] voice-message.ogg https://cdn.discordapp.com/attachments/1489281188467310662/1492259289283166299/voice-message.ogg?ex=6a019283&is=6a004103&hm=333625d85055eab58355c90c4cc7ba2c78fc75200065b2c264255de570bd38f4&
+
+[2026-04-10T20:25:53.091000+00:00] idkaden (id=1492259346699255980)
+    Oh, I was thinking that would transcribe my speech
+
+[2026-04-10T20:25:58.533000+00:00] idkaden (id=1492259369524662422)
+    Whoops
+
+[2026-04-10T21:13:17.882000+00:00] ivabom (id=1492271278617268284)
+    I need to learn more about how things get quantized, might have a play around with it this weekend and test out on gemma.
+
+[2026-04-10T21:24:22.875000+00:00] ivabom (id=1492274067800330341)
+    <@204498098515476480> is it possible to add a --thinking-tokens to get hipfire to handle thinking and answering differently? The output I get its all one stream and sometimes exhausts the max tokens before ever reaching FINAL or the output gets cut off.
+
+[2026-04-10T21:40:31.212000+00:00] idkaden (id=1492278129299951808)
+    Yes I will do that now
+    [reply to ivabom msg=1492274067800330341]
+
+[2026-04-10T21:47:04.110000+00:00] ivabom (id=1492279777233469520)
+    Nice thanks! What were your plans with speculative decoding? It looks like its mostly done just not activated?
+
+[2026-04-10T21:49:56.475000+00:00] idkaden (id=1492280500184940605)
+    Are you on the 7900xtx now? I’m thinking of implementing d-flash for qwen 3.5
+    [reply to ivabom msg=1492279777233469520]
+
+[2026-04-10T21:50:48.577000+00:00] ivabom (id=1492280718716436510)
+    not yet still in the post 🙁
+
+[2026-04-10T21:52:19.148000+00:00] ivabom (id=1492281098598613223)
+    I am going to work out if I have to replace my 6800 or if I can just add the 7900xtx into the same system. Some inference engines allow you to select which GPU but I need to check the TDP of the system too. So 2 problems to work out before I get the card.
+
+[2026-04-10T21:55:18.276000+00:00] idkaden (id=1492281849915904112)
+    Make sure you have Gen 4x16 lanes for both cards
+
+[2026-04-10T21:55:26.558000+00:00] idkaden (id=1492281884653125653)
+    Or at least for the 7900xtx
+
+[2026-04-10T21:55:41.551000+00:00] ivabom (id=1492281947538329611)
+    Monday.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1492281947462828073/image.png?ex=6a01a79d&is=6a00561d&hm=4b41be73ac0ae7fc0cee5a933818d5372ce654bf6a2a7bd58ba14e13df6570fe&
+
+[2026-04-10T21:56:02.237000+00:00] idkaden (id=1492282034301829170)
+    But I guess I’m trying to move everything off the cpu now, so maybe pci doesn’t matter so much at this moment
+
+[2026-04-10T21:56:26.496000+00:00] idkaden (id=1492282136051453972)
+    But there is still plenty of headroom on the 7900xtx for me to work with BEFORE dflash
+
+[2026-04-10T21:57:10.290000+00:00] idkaden (id=1492282319736668242)
+    I’m looking at 0.8b 500tok/s+ currently, with dflash could accelerate to 1500-2000tok/s
+
+[2026-04-10T21:57:29.783000+00:00] ivabom (id=1492282401496371394)
+    insane
+
+[2026-04-10T21:57:48.987000+00:00] ivabom (id=1492282482043912263)
+    Yeah I have pcie4 slots
+
+[2026-04-10T21:58:34.509000+00:00] idkaden (id=1492282672976891915)
+    Anyway I should probably bring the CLI up to date with what I’ve implemented on the 7900xtx at least; there’s a new quant mq4 which retains coherence much better than hf4 and even hf6
+
+[2026-04-10T21:58:51.979000+00:00] idkaden (id=1492282746251378708)
+    -2% speed though
+
+[2026-04-10T21:58:54.568000+00:00] ivabom (id=1492282757110567024)
+    oh wait x16 I think mine is only x8 with 2 slots...
+
+[2026-04-10T21:59:05.203000+00:00] idkaden (id=1492282801716986029)
+    Wait what
+
+[2026-04-10T21:59:38.792000+00:00] ivabom (id=1492282942599336087)
+    unless this means if I bifurcate the slot?
+
+[2026-04-10T22:01:57.673000+00:00] ivabom (id=1492283525108601003)
+    yeah if I have both slots populated it splits them into two x8 lanes, it cant do two slots at x16 there are only 24 lanes on this mobo
+
+[2026-04-10T22:02:36.797000+00:00] ivabom (id=1492283689206288546)
+    yeah I think mq4 only works with rdna3+ right?
+    [reply to idkaden msg=1492282672976891915]
+
+[2026-04-10T22:07:17.166000+00:00] idkaden (id=1492284865159106612)
+    No it works on the bc250 as well in my testing
+
+[2026-04-10T22:07:27.578000+00:00] idkaden (id=1492284908830462043)
+    Which is basically a lobotomized 5700xt
+
+[2026-04-10T22:07:33.825000+00:00] idkaden (id=1492284935032013032)
+    With more vram
+
+[2026-04-10T22:44:26.036000+00:00] ivabom (id=1492294213717463150)
+    this would be amazing, would it mean requantizing the models or would it work with hf4 weights?
+    [reply to idkaden msg=1492280500184940605]
+
+[2026-04-10T23:32:19.595000+00:00] idkaden (id=1492306266297598003)
+    As I suspected hf4 is slightly faster than mq4 after my most recent changes on the redline branch
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1489281188467310662/1492306266033492008/image0.jpg?ex=6a01be43&is=6a006cc3&hm=bb7d0d217a517ad92c4f5e6bb2db63b6eee169ac1382a0cb5aa6507e24d90778&
+
+[2026-04-10T23:32:50.265000+00:00] idkaden (id=1492306394936905889)
+    Except 9b for some reason
+
+[2026-04-10T23:42:59.296000+00:00] idkaden (id=1492308949398061106)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1489281188467310662/1492308949213380638/image0.jpg?ex=6a01c0c3&is=6a006f43&hm=c6970e9c05a72de9decf57762a2e69a33cab645a96f7f4b6a12ff0ff97ff85f9&
+
+[2026-04-10T23:43:39.293000+00:00] idkaden (id=1492309117157769216)
+    Okay got it figured out, about to prepare the commit for master and port to the 5000/6000 series and bc-250
+
+[2026-04-10T23:46:21.392000+00:00] idkaden (id=1492309797050122280)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1489281188467310662/1492309796815372308/image0.jpg?ex=6a01c18d&is=6a00700d&hm=f97ce58efbf49783cb84141fd6e5c3bb0831a79a57b0e3e8155162401ef076d1&
+
+[2026-04-10T23:54:54.942000+00:00] ivabom (id=1492311951034945616)
+    nice, let me know when you do and ill test it out on my 6800
+
+[2026-04-10T23:55:47.015000+00:00] idkaden (id=1492312169444802591)
+    This is still before spec decode which idk if I should do that or more model support first
+
+[2026-04-10T23:56:20.289000+00:00] idkaden (id=1492312309006340229)
+    Bc right now I have a highly tuned and optimized engine for qwen models
+
+[2026-04-10T23:56:29.613000+00:00] idkaden (id=1492312348113899530)
+    Specifically
+
+[2026-04-10T23:56:50.701000+00:00] idkaden (id=1492312436563251423)
+    Allowing for Gemma and other arches would probably kill llama.cpp on AMD
+
+[2026-04-10T23:56:59.394000+00:00] idkaden (id=1492312473024331796)
+    Since it’s now coherent
+
+[2026-04-11T00:03:13.514000+00:00] ivabom (id=1492314042197610507)
+    What other problems are there to fix with the qwen ecosystem?
+
+[2026-04-11T00:04:25.618000+00:00] ivabom (id=1492314344623571104)
+    What makes more sense, more qwen optimization or different model supports?
+
+[2026-04-11T00:05:03.855000+00:00] ivabom (id=1492314505001304094)
+    did you fix coherance in 0.14?
+
+[2026-04-11T00:08:14.444000+00:00] idkaden (id=1492315304389513359)
+    mq4 should fix coherence (does better than hf4) but yes now I have a QA gate for every commit to ensure the model can 1:1
+
+[2026-04-11T08:42:24.104000+00:00] idkaden (id=1492444697241714688)
+    https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.5-alpha
+    [embed] Release v0.1.5-alpha "ichigo": MagnumQuant (MQ4) family + cross-arc... https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.5-alpha
+
+[2026-04-11T08:42:44.807000+00:00] idkaden (id=1492444784076394497)
+    pre-release currently, would like someone on RDNA2 to test
+
+[2026-04-11T09:21:44.249000+00:00] ivabom (id=1492454596407464037)
+    ill test now
+
+[2026-04-11T09:22:11.175000+00:00] ivabom (id=1492454709343293540)
+    do you want just want a benchmark?
+
+[2026-04-11T09:27:14.459000+00:00] ivabom (id=1492455981408325792)
+    V  Name                       Decode tok/s
+         launch_bounds               mean   min   max   stdev
+      ────────────────────────────────────────────────────────────
+      1  baseline-rdna2     (32,16) 2x-unroll   36.3   36.3   36.3    0.0
+      2  high-occupancy     (32,20) 2x-unroll   36.2   36.1   36.3    0.1
+      3  wide-unroll        (32,12) 4x-unroll   36.3   36.3   36.3    0.0
+      4  dp4a-packed        (32,16) dp4a+factored   36.2   36.2   36.3    0.0
+      5  cache-aggressive   (32,16) packed+factored   36.2   36.2   36.3    0.0
+    
+      Best: v1 baseline-rdna2 at 36.3 tok/s
+      Set default: export HIPFIRE_RDNA2_VARIANT=1
+
+[2026-04-11T09:29:12.501000+00:00] idkaden (id=1492456476512616539)
+    huh
+
+[2026-04-11T09:29:27.935000+00:00] ivabom (id=1492456541247246336)
+    1 sec
+
+[2026-04-11T09:29:39.021000+00:00] ivabom (id=1492456587745558599)
+    was qwen9b bench
+
+[2026-04-11T09:29:58.454000+00:00] ivabom (id=1492456669253341384)
+    trying to start the coherance tests I was running yesterday
+
+[2026-04-11T09:30:02.637000+00:00] idkaden (id=1492456686797983754)
+    36 would be worse than gfx1010
+
+[2026-04-11T09:30:24.005000+00:00] idkaden (id=1492456776422002769)
+    aka 5700xt
+
+[2026-04-11T09:30:35.200000+00:00] ivabom (id=1492456823377367130)
+    Yeah I think turbo4 might be enabled
+
+[2026-04-11T09:30:45.165000+00:00] idkaden (id=1492456865173471242)
+    OH those are the old kernels and yeah turbo is broken
+
+[2026-04-11T09:30:55.591000+00:00] idkaden (id=1492456908903157791)
+    for now
+
+[2026-04-11T09:31:19.092000+00:00] idkaden (id=1492457007473627356)
+    I havent found something that works yet
+
+[2026-04-11T09:34:39.316000+00:00] ivabom (id=1492457847273816216)
+    hmm q8 bench for qwen3.5 8b hf6 is about the same 37tps not sure if the update applied? these seem like the same numbers
+
+[2026-04-11T09:35:37.285000+00:00] idkaden (id=1492458090413686946)
+    one sec
+
+[2026-04-11T09:38:03.597000+00:00] ivabom (id=1492458704090693682)
+    update didnt apply
+
+[2026-04-11T09:38:08.038000+00:00] ivabom (id=1492458722717466726)
+    error: Your local changes to the following files would be overwritten by merge:
+            Cargo.lock
+            Cargo.toml
+    Please commit your changes or stash them before you merge.
+    Aborting
+
+[2026-04-11T09:56:20.485000+00:00] rakaarwaky (id=1492463304772419655)
+    downlaoding all your MQ4 model now
+    [reply to idkaden msg=1492444697241714688]
+
+[2026-04-11T09:59:43.198000+00:00] idkaden (id=1492464155012370442)
+    working on that now, you may have to force reinstall via `curl -L https://raw.githubusercontent.com/Kaden-Schutt/hipfire/master/scripts/install.sh | bash` backup your models folder just in case. the new update command should work as intended after this
+    [reply to ivabom msg=1492458722717466726]
+
+[2026-04-11T10:25:04.985000+00:00] rakaarwaky (id=1492470537849540760)
+    <@204498098515476480>  Can we set the context length manually in hipfire ? 
+    
+    can it go up to 256k?
+
+[2026-04-11T10:50:54.951000+00:00] ivabom (id=1492477038878265415)
+    better! 
+      V  Name                       Decode tok/s
+         launch_bounds               mean   min   max   stdev
+      ────────────────────────────────────────────────────────────
+      1  baseline-rdna2     (32,16) 2x-unroll   48.1   48.0   48.2    0.1
+      2  high-occupancy     (32,20) 2x-unroll   48.1   47.9   48.2    0.1
+      3  wide-unroll        (32,12) 4x-unroll   48.0   47.9   48.1    0.1
+      4  dp4a-packed        (32,16) dp4a+factored   48.1   48.0   48.2    0.1
+      5  cache-aggressive   (32,16) packed+factored   48.1   48.0   48.1    0.0
+    
+      Best: v1 baseline-rdna2 at 48.1 tok/s
+      Set default: export HIPFIRE_RDNA2_VARIANT=1
+
+[2026-04-11T10:51:17.662000+00:00] ivabom (id=1492477134134972649)
+    This is a 6800 (non XT)
+
+[2026-04-11T13:24:21.785000+00:00] rakaarwaky (id=1492515655138672660)
+    ================================================================================
+                  HIPFIRE COMPLETE BENCHMARK — RX 6800 XT (gfx1030)
+    ================================================================================
+    
+      Hardware:         AMD Radeon RX 6800 XT
+      GPU Arch:         gfx1030 (RDNA2)
+      VRAM:             16 GB 
+      HIP Version:      7.2
+      hipfire version:  v0.1.5-alpha "ichigo"
+      KV Cache:         Q8 (default)
+      Benchmark date:   11 April 2026
+      Prompt:           "Explain the theory of general relativity in simple terms."
+    
+    ================================================================================
+      ALL MQ4 MODELS
+    ================================================================================
+    
+      #  Model               File Size   Decode tok/s   ms/tok   VRAM Used   Status
+      ──────────────────────────────────────────────────────────────────────────────
+      1  qwen3.5:0.8b-mq4    0.5 GB      267.3          3.7      ~1 GB       ✅ OK
+      2  qwen3.5:4b-mq4      2.6 GB      97.2           10.3     ~4 GB       ✅ OK
+      3  qwen3.5:9b-mq4      5.3 GB      64.1           15.6     ~7 GB       ✅ OK
+      4  qwen3.5:27b-mq4     15.0 GB     —              —        >16 GB      ❌ OOM
+
+[2026-04-11T20:14:55.674000+00:00] nucleosynth (id=1492618977158107226)
+    I have a strix halo 👀
+
+[2026-04-11T21:57:23.997000+00:00] ivabom (id=1492644765093597363)
+    I still have quality issues with the mq4 models I think d-flash will help a LOT here. Anything past 512 context gets hammered with latency.
+
+[2026-04-11T22:06:51.163000+00:00] ivabom (id=1492647143960350802)
+    <@204498098515476480> do you have a list of features or problems that we could potentially help out with?
+
+[2026-04-11T22:14:21.410000+00:00] idkaden (id=1492649032433274900)
+    I am working on prefill currently
+
+[2026-04-11T22:14:35.488000+00:00] ivabom (id=1492649091480424649)
+    ack
+
+[2026-04-11T22:14:45.586000+00:00] idkaden (id=1492649133834764388)
+    what
+
+[2026-04-11T22:16:21.279000+00:00] ivabom (id=1492649535200297081)
+    acknowledge as in ok sorry I need to use less military references
+
+[2026-04-11T22:16:47.164000+00:00] ivabom (id=1492649643769856151)
+    its habit I need to get out of
+
+[2026-04-11T22:16:47.396000+00:00] idkaden (id=1492649644742938725)
+    all good
+
+[2026-04-11T22:25:10.780000+00:00] idkaden (id=1492651756088197244)
+    ```
+         === Speed Gate (arch=gfx1100) ===
+           0.8b MQ4 prefill:  3390.6 tok/s
+           0.8b MQ4 gen    :   380.5 tok/s
+    ```
+
+[2026-04-11T22:25:29.137000+00:00] idkaden (id=1492651833083301938)
+    that will help with dflash
+
+[2026-04-11T22:32:59.170000+00:00] idkaden (id=1492653720658382908)
+    working on RDNA2 now (I got ssh access to a v620)
+
+[2026-04-12T03:24:30.915000+00:00] cerberus. (id=1492727086354272349)
+    Is there an actual Hipfire discord?
+
+[2026-04-12T05:23:19.383000+00:00] idkaden (id=1492756985316114482)
+    no
+
+[2026-04-12T05:23:24.493000+00:00] idkaden (id=1492757006749139015)
+    not yet at least
+
+[2026-04-12T05:48:33.991000+00:00] idkaden (id=1492763338042507385)
+    okay I'm onto flash attention now
+
+[2026-04-12T05:50:16.740000+00:00] idkaden (id=1492763769003180199)
+    such a pain
+
+[2026-04-12T05:51:02.436000+00:00] idkaden (id=1492763960665968742)
+    something in prefill broke long context coherence, which I got figured out but for my current version of flash attention it only has any benefit after 2048 toks
+
+[2026-04-12T05:51:08.192000+00:00] idkaden (id=1492763984808378458)
+    so working on v3 now
+
+[2026-04-12T05:54:01.200000+00:00] idkaden (id=1492764710456791181)
+    now we're talking
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1492764710200672276/image.png?ex=6a0217b9&is=6a00c639&hm=1ad57faf1b5ecccae047e3a268e2bda5d734ef81df92c20df5196d417db6b694&
+
+[2026-04-12T06:07:37.625000+00:00] ivabom (id=1492768134791172096)
+    look at that response time
+
+[2026-04-12T06:07:51.751000+00:00] ivabom (id=1492768194040037516)
+    way better than the 500ms I was getting...
+
+[2026-04-12T06:41:16.036000+00:00] ivabom (id=1492776600620503180)
+    im getting more better TPS than I was yesterday now too
+
+[2026-04-12T06:41:33.153000+00:00] ivabom (id=1492776672414531604)
+    went from 30>49>60 over the last few days
+
+[2026-04-12T06:45:14.305000+00:00] idkaden (id=1492777599993122856)
+    flash attention seems stable, about to push changes that unlock full coherence at full context length!
+
+[2026-04-12T06:56:16.830000+00:00] ivabom (id=1492780378824642720)
+    https://tenor.com/view/imexcited-bigkev-goodmorningaustralia-bertnewton-gif-27562923
+    [embed]  https://tenor.com/view/imexcited-bigkev-goodmorningaustralia-bertnewton-gif-27562923
+
+[2026-04-12T06:56:35.096000+00:00] ivabom (id=1492780455437799556)
+    lil austrlian reference for you 🙂
+
+[2026-04-12T07:08:08.150000+00:00] rakaarwaky (id=1492783362316959794)
+    Great thank you
+    [attachment] image0.gif https://cdn.discordapp.com/attachments/1489281188467310662/1492783361977225266/image0.gif?ex=6a022918&is=6a00d798&hm=471336a763ad56dc36c02ceafd408547f94cdaed1b4b13519cb86bf93f202490&
+    [reply to idkaden msg=1492777599993122856]
+
+[2026-04-12T07:23:45.502000+00:00] idkaden (id=1492787293855944784)
+    changes are live, next is flash turbo
+
+[2026-04-12T07:24:16.359000+00:00] idkaden (id=1492787423279579146)
+    q8 kv is the only one currently benefitting
+
+[2026-04-12T07:29:35.281000+00:00] ivabom (id=1492788760935530526)
+    am I going crazy or is there a delay in github showing the update?
+
+[2026-04-12T07:58:12.196000+00:00] idkaden (id=1492795962198851734)
+    0.1.5 is in pre-release
+
+[2026-04-12T07:58:19.624000+00:00] idkaden (id=1492795993354403940)
+    so no you're not going crazy
+
+[2026-04-12T08:41:23.444000+00:00] ivabom (id=1492806830680969296)
+    sweet as ill test in the morning before I start work
+
+[2026-04-12T09:23:36.386000+00:00] idkaden (id=1492817454609469521)
+    swapped turbo for rotorquant(givens)+flash
+
+[2026-04-12T11:46:30.400000+00:00] jimgvo (id=1492853416630816918)
+    Am I doing something wrong?  hipfire run carnice:9b
+    GPU: gfx1100 (21.5 GB VRAM, HIP 7.2)
+      pre-compiled kernels: /cache/home/jwl/.hipfire/bin/kernels/compiled/gfx1100
+      loading token_embd...
+        (HFQ4-G256 raw, 540 MB)
+      loading output_norm...
+      loading output (separate lm_head, qt=6)...
+      loading layer 0/32 (LinearAttention)...
+      loading layer 1/32 (LinearAttention)...
+      loading layer 2/32 (LinearAttention)...
+    ...
+      loading layer 30/32 (LinearAttention)...
+      loading layer 31/32 (FullAttention)...
+      KV cache: Q8
+    [qwen3_5] 4096d 32L 248320 vocab
+    Hello! How can I help you today?
+    [14 tok, 84.5 tok/s]
+    
+    And it brings me back to the command line prompt.  No interactive chat.  I ran it with a prompt on the command line and it seemed to work giving me [178 tok, 109.5 tok/s]
+
+[2026-04-12T11:47:31.195000+00:00] jimgvo (id=1492853671623524402)
+    BTW that's on a RX 7900 XT
+
+[2026-04-12T11:51:42.974000+00:00] jimgvo (id=1492854727661191360)
+    Also it used about 6 GB VRAM and pegged the GPU for a brief time.
+
+[2026-04-12T12:03:23.519000+00:00] jimgvo (id=1492857665959759902)
+    Oh and it hallucinates once in a while.  This is part of the output: allthesameaswellasmightbeexpectedotherwiseunexpectedlysurprisinglyperhapsunpredictablyyetstillmoreoverfurthermorebesidesadditionallyin additionto furthermore additionally moreover besides also likewise similarly alike equally identically identical same-like similar-similar equal-equal equivalent-equivalent like-ahead ahead-of-ahead of-above above-mentioned before-hand hereunderneath underneath below underbelow aforementioned foregoing heretherefore thereforewherewherebywhatsoeverhowsoeverifnotwithstandingallthesame aswellasmight be expected otherwise unexpectedly surprisingly perhaps unpredictably yet still more over furthermore besides additionally moreover besidesalso likewise similarly alike equal-equal identical same-like like-ahead head-of-head of-below below-mentioned beforehand hereinunderneath underneath above aforementioned foregoing herethefore therefore
+
+[2026-04-12T14:26:40.157000+00:00] jimgvo (id=1492893722873172018)
+    I downloaded qwen3.5:9b and it seems to be fine, it seems to want to run at something a bit over 10 GB.  Also I can't seem to increase the max_tokens.  hipfire config list
+    Config: /home/jwl/.hipfire/config.json
+    
+      kv_cache           q8            (default)
+      default_model      qwen3.5:9b    (default)
+      temperature        0.3           (default)
+      top_p              0.8           (default)
+      repeat_penalty     1.3           (default)
+      max_tokens         8192          
+      port               11435         (default)
+    But yet when I run this: curl http://localhost:11435/v1/chat/completions \
+      -H "Content-Type: application/json" \
+      -d '{"max_tokens":"8192","model":"qwen3.5:9b","messages":[{"role":"user","content":"Explain the theory of general relativity in simple terms."}],"stream":false}' 
+    It returns an incomplete response showing it still thinks the limit is 512 : "usage":{"prompt_tokens":0,"completion_tokens":512,"total_tokens":512}}
+
+[2026-04-12T15:54:45.565000+00:00] idkaden (id=1492915891481088270)
+    the model you downloaded is it hf4 or mq4?
+
+[2026-04-12T15:55:21.590000+00:00] jimgvo (id=1492916042580885605)
+    Hi I don't know.  How can I tell?
+
+[2026-04-12T15:55:58.244000+00:00] idkaden (id=1492916196318908626)
+    oh you're using carnice, okay that's probably hf4, let me get you on the right track
+
+[2026-04-12T15:57:24.539000+00:00] jimgvo (id=1492916558266105966)
+    Also qwen3.5:9b behaves the same.  I iced the model from the hipfire list -r
+
+[2026-04-12T15:58:48.762000+00:00] jimgvo (id=1492916911522976035)
+    iced^used
+
+[2026-04-12T15:59:55.594000+00:00] idkaden (id=1492917191836827798)
+    gotcha, the hf4 models are unstable, and I suspect that's what's currently wired to the cli. let me quickly ship a commit+correct quant of mq4 carnice for you
+
+[2026-04-12T16:14:48.954000+00:00] idkaden (id=1492920938860253359)
+    can you run hipfire diag for me
+    [reply to jimgvo msg=1492916911522976035]
+
+[2026-04-12T16:20:00.091000+00:00] jimgvo (id=1492922243863285841)
+    hipfire diag
+    hipfire diagnostics
+    
+    platform:      Linux (native)
+    
+    PCI GPUs:
+      09:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Navi 31 [Radeon RX 7900 XT/7900 XTX/7900M] (rev cc)
+    /dev/dri/:     by-path, card1, renderD128
+      DRM driver:  amdgpu
+      Redline:     COMPATIBLE (libdrm_amdgpu path available)
+    /dev/kfd:      present, readable
+      vendor:      0x1002 (AMD)
+      device:      0x744c
+    amdgpu module: loaded
+    
+    hipcc:         HIP version: 7.2.26015-fc0010cf6a
+    rocminfo GPUs:
+      Marketing Name:          AMD Ryzen 5 5600T 6-Core Processor
+      Name:                    gfx1100
+      Marketing Name:          Radeon RX 7900 XT
+      Name:                    amdgcn-amd-amdhsa--gfx1100
+    
+    daemon:        found
+    local models:  1
+      qwen3.5-9b.hf6                       7.3GB
+    kernels/gfx1100: 29 blobs, 29 hashes
+    
+    Probing GPU via HIP runtime...
+    GPU: gfx1100 (21.5 GB VRAM, HIP 7.2)
+      pre-compiled kernels: /cache/home/jwl/.hipfire/bin/kernels/compiled/gfx1100
+      GPU arch:    gfx1100
+      HIP version: 7.2
+      VRAM free:   7682 MB
+      VRAM total:  20464 MB
+    
+    config:        /home/jwl/.hipfire/config.json
+      max_tokens = 8192
+
+[2026-04-12T16:23:20.864000+00:00] idkaden (id=1492923085966544956)
+    okay thanks
+
+[2026-04-12T16:24:29.033000+00:00] idkaden (id=1492923371887923221)
+    do `hipfire update`
+
+[2026-04-12T16:25:08.226000+00:00] idkaden (id=1492923536275148971)
+    actually wait
+
+[2026-04-12T16:25:13.752000+00:00] idkaden (id=1492923559452868728)
+    hold off for a sec
+
+[2026-04-12T16:25:24.631000+00:00] idkaden (id=1492923605082964088)
+    let me make sure this lands as intended
+
+[2026-04-12T19:40:14.172000+00:00] ivabom (id=1492972634571542548)
+    still waiting
+
+[2026-04-12T19:42:34.859000+00:00] ivabom (id=1492973224655589506)
+    what is needed to add more qwen models? is this something we can work on in the meantime?
+
+[2026-04-13T00:07:24.319000+00:00] jimgvo (id=1493039869880963183)
+    @kaden Sorry honey does now it's bed time.
+
+[2026-04-13T01:44:33.788000+00:00] ivabom (id=1493064320446365841)
+    oh changes were applied 2 hours ago
+
+[2026-04-13T01:44:45.829000+00:00] ivabom (id=1493064370949849138)
+    its updating!
+
+[2026-04-13T01:44:54.650000+00:00] ivabom (id=1493064407947804742)
+    annddd it failed..
+
+[2026-04-13T02:18:06.575000+00:00] ivabom (id=1493072762686931055)
+    I added an issue to github for the missing kernel files, once I commented them out it built fine <@204498098515476480>
+
+[2026-04-13T05:16:07.124000+00:00] ivabom (id=1493117560156061786)
+    my 7900xtx rocked up!
+
+[2026-04-13T05:50:13.145000+00:00] idkaden (id=1493126141790126093)
+    getting finishing touches in place for turbo quant now (really it's rotorquant as it actually handles multiturn without speed penalty)
+
+[2026-04-13T05:50:37.227000+00:00] idkaden (id=1493126242797621308)
+    THEN I will ship 0.1.5 full version, and it should be backwards compatible AND forwards compatible
+
+[2026-04-13T05:56:53.441000+00:00] idkaden (id=1493127820753375393)
+    we are so close!
+
+[2026-04-13T05:57:25.918000+00:00] idkaden (id=1493127956971913266)
+    I'm excited to see if it works out once I ship, I may finally post it to the internet
+
+[2026-04-13T06:06:43.131000+00:00] ivabom (id=1493130294092365844)
+    nice one, yeah I saw an update to the repo this morning and tried to update. It has a few issues, one I was just diagnosing now. Not sure if its something I have conflicting locally but there was a pointer issue which was failing the serve function. Was if it was from the update I was going to open another issue for it.
+
+[2026-04-13T06:07:08.299000+00:00] ivabom (id=1493130399654744064)
+    honestly might just be easier to kill my pc and swap the GPU anyway ha
+
+[2026-04-13T06:30:50.103000+00:00] ivabom (id=1493136363132813462)
+    Ive updated the issue 16 with what I could work out. Seems like the change that went out earlier today broke everything. The only way to get it working is to roll back to an older version.
+
+[2026-04-13T07:26:29.084000+00:00] idkaden (id=1493150367834439680)
+    yep
+    [reply to ivabom msg=1493136363132813462]
+
+[2026-04-13T08:25:04.872000+00:00] ivabom (id=1493165114117853245)
+    have you noticed a degredation in opus over the last few weeks?
+
+[2026-04-13T08:31:52.982000+00:00] jimgvo (id=1493166825855389839)
+    Updating hipfire...
+    remote: Enumerating objects: 336, done.
+    remote: Counting objects: 100% (335/335), done.
+    remote: Compressing objects: 100% (78/78), done.
+    remote: Total 287 (delta 142), reused 286 (delta 141), pack-reused 0 (from 0)
+    Receiving objects: 100% (287/287), 143.40 KiB | 3.26 MiB/s, done.
+    Resolving deltas: 100% (142/142), completed with 34 local objects.
+    From https://github.com/Kaden-Schutt/hipfire
+     * branch            master     -> FETCH_HEAD
+       5264edb..b7ac66a  master     -> origin/master
+    HEAD is now at b7ac66a wmma correctness fix + MQ6 family + cross-arch prefill + gate framework
+    Rebuilding...
+       Compiling hip-bridge v0.1.5-alpha (/cache/home/jwl/.hipfire/src/crates/hip-bridge)
+       Compiling rdna-compute v0.1.5-alpha (/cache/home/jwl/.hipfire/src/crates/rdna-compute)
+    error: couldn't read `crates/rdna-compute/src/../../../kernels/src/gemm_hfq4g256_residual_wmma2.hip`: No such file or directory (os error 2)
+       --> crates/rdna-compute/src/kernels.rs:108:52
+        |
+    108 | ... = include_str!("../../../kernels/src/gemm_hfq4g256_residual_wmma2.hip");
+        |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+    error: couldn't read `crates/rdna-compute/src/../../../kernels/src/gemm_hfq4g256_residual_wmma_k4.hip`: No such file or directory (os error 2)
+       --> crates/rdna-compute/src/kernels.rs:110:54
+        |
+    110 | ... = include_str!("../../../kernels/src/gemm_hfq4g256_residual_wmma_k4.hip");
+        |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+    msg too long, deleted some nderscore: `_head_dim`
+    
+    warning: `rdna-compute` (lib) generated 2 warnings
+    error: could not compile `rdna-compute` (lib) due to 2 previous errors; 2 warnings emitted
+    Build failed.
+    [embed] GitHub - Kaden-Schutt/hipfire: RDNA-native LLM inference engine in ... https://github.com/Kaden-Schutt/hipfire
+
+[2026-04-13T08:50:38.668000+00:00] ivabom (id=1493171547324809336)
+    yeah you have to compile the version prior to commit b7ac66a that one is missing two kernels and it has some other issues. Or wait until hes done with the current changes
+    [reply to jimgvo msg=1493166825855389839]
+
+[2026-04-13T08:52:18.013000+00:00] idkaden (id=1493171964007813183)
+    https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.5
+    [embed] Release hipfire 0.1.5 "redline" · Kaden-Schutt/hipfire https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.5
+
+[2026-04-13T08:52:34.050000+00:00] ivabom (id=1493172031271862312)
+    speak of the devil!
+
+[2026-04-13T08:52:42.463000+00:00] ivabom (id=1493172066558542024)
+    right in time to test on the 7900xtx
+
+[2026-04-13T08:52:59.837000+00:00] idkaden (id=1493172139430379570)
+    Should run smoothly on RDNA3 now!
+
+[2026-04-13T08:54:00.393000+00:00] idkaden (id=1493172393420652564)
+    Plus `hipfire config` is TUI now so you can mess with settings if you’re getting errors
+
+[2026-04-13T08:54:09.313000+00:00] jimgvo (id=1493172430833717311)
+    Yes, it compiled cleanly this time.
+
+[2026-04-13T08:54:27.950000+00:00] idkaden (id=1493172509002960927)
+    Good to hear
+
+[2026-04-13T09:12:56.749000+00:00] ivabom (id=1493177159643168809)
+    what kv do you find best with the 7900?
+
+[2026-04-13T09:13:05.300000+00:00] idkaden (id=1493177195508666489)
+    asym3
+
+[2026-04-13T09:13:17.202000+00:00] idkaden (id=1493177245429403750)
+    Which is just rotorquant
+
+[2026-04-13T09:13:43.308000+00:00] idkaden (id=1493177354925903902)
+    If that’s buggy then q8 flash should be usable at least
+
+[2026-04-13T09:16:25.097000+00:00] ivabom (id=1493178033518018630)
+    118tps on 9b.mq4 is much better than what I was getting yesterday 🙂
+
+[2026-04-13T09:16:40.489000+00:00] ivabom (id=1493178098076749944)
+    like double the performance from the 6800
+
+[2026-04-13T09:17:15.586000+00:00] idkaden (id=1493178245284233277)
+    asym3 flash should help that stay consistent across 128k context too!
+
+[2026-04-13T09:18:52.104000+00:00] idkaden (id=1493178650110201908)
+    I've also done a lot of optimization for RDNA3 specifically with this update, RDNA2 maxxes out at ~600tps prefill  on 9b so I'm thinking of adding rocBLAS fallback for earlier cards if hipfire cant max it out
+
+[2026-04-13T09:20:17.211000+00:00] idkaden (id=1493179007074570374)
+    otherwise important question, MoE first or dflash ?
+
+[2026-04-13T09:27:15.808000+00:00] idkaden (id=1493180762797903934)
+    going to add an autoheal agent skill to allow people to use their agents to properly config hipfire followed by autoresearch for optimal configuration
+
+[2026-04-13T09:32:51.864000+00:00] ivabom (id=1493182172318924940)
+    yeah wicked, im just firing up the coherance tests again to see, being able to set thinking is good too.
+
+[2026-04-13T10:47:05.709000+00:00] jimgvo (id=1493200853098561576)
+    I just set the default model to a non existent model (
+
+[2026-04-13T10:47:57.253000+00:00] jimgvo (id=1493201069289898016)
+    and started the server.  It grabed half of my VRAM  What is it doing?
+
+[2026-04-13T11:02:15.210000+00:00] jimgvo (id=1493204667822374994)
+    I still can't figure out how to increase the max_tokens.  I set via hipfire config set max_tokens 8192 but it still truncates the output at 512 tokens: long to get there! This was"}}],"usage":{"prompt_tokens":0,"completion_tokens":512,"total_tokens":512}}
+
+[2026-04-13T11:07:10.569000+00:00] jimgvo (id=1493205906647810078)
+    I just received this message: [hipfire] idle for 300s — unloading model (VRAM freed; next request will reload)
+    However it only unloaded half of the VRAM.
+
+[2026-04-13T14:56:57.809000+00:00] idkaden (id=1493263734523826296)
+    🤔
+
+[2026-04-13T16:30:04.131000+00:00] joeydiaz69 (id=1493287165256274063)
+    Hope you’re having a good start to the week my bro, suns finally coming out this side of the pond. Was wondering if the wsl2 fix has been implemented as I’ve seen you patched some of the daemon issues. No worries if not still happy to potentially use this on the horizon
+    [reply to idkaden msg=1493263734523826296]
+
+[2026-04-13T22:16:17.472000+00:00] idkaden (id=1493374294963650580)
+    if you can install ROCm on your wsl hipfire should work from there now
+    [reply to joeydiaz69 msg=1493287165256274063]
+
+[2026-04-13T22:21:51.357000+00:00] joeydiaz69 (id=1493375695378714654)
+    Nice yeah I have ROCM 7.2.1
+    [reply to idkaden msg=1493374294963650580]
+
+[2026-04-13T22:21:54.426000+00:00] joeydiaz69 (id=1493375708251291840)
+    I’ll give a try
+
+[2026-04-13T22:21:57.198000+00:00] joeydiaz69 (id=1493375719877771436)
+    Thank you
+
+[2026-04-13T22:32:46.003000+00:00] joeydiaz69 (id=1493378441163177994)
+    I’m trying  “hipfire pull qwopus:9b” and it says unknown model
+
+[2026-04-13T22:33:18.654000+00:00] joeydiaz69 (id=1493378578111402107)
+    I’ve ran hipfire update and still not working
+
+[2026-04-13T23:59:44.760000+00:00] idkaden (id=1493400330216669284)
+    damn
+
+[2026-04-14T00:48:17.508000+00:00] joeydiaz69 (id=1493412547167260682)
+    think this mightve fixed the roadblock ive had
+
+[2026-04-14T00:48:20.209000+00:00] joeydiaz69 (id=1493412558496071861)
+    This is the critical finding. AMD's official WSL how-to guide now says ROCm on WSL works through librocdxg (ROCDXG) — not /dev/kfd. As of ROCm 7.2.1, AMD switched to the ROCDXG implementation, which is an open-source user-mode library that translates between the Linux ROCm runtime and the Windows GPU driver stack via /dev/dxg. It explicitly does NOT use /dev/kfd. AMD ROCm
+    Your agent had this exactly backwards. /dev/kfd is the old path. The current official path is librocdxg + /dev/dxg. Tell your agent:
+
+[2026-04-14T00:48:45.444000+00:00] joeydiaz69 (id=1493412664339206214)
+    # 1. Check if librocdxg is already present from earlier work
+    ls -la /opt/rocm*/lib/librocdxg.so* 2>/dev/null
+    
+    # 2. If missing, build it from the develop branch
+    git clone https://github.com/ROCm/librocdxg.git
+    cd librocdxg
+    git checkout develop
+    mkdir build && cd build
+    cmake .. -DWIN_SDK="/mnt/c/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/shared"
+    make -j$(nproc)
+    sudo make install
+    
+    # 3. Set the required env vars (these are what make it work)
+    export HSA_ENABLE_DXG_DETECTION=1
+    export LD_LIBRARY_PATH=/opt/rocm-7.2.0/lib:$LD_LIBRARY_PATH
+    
+    # 4. Test
+    rocminfo 2>&1 | head -30
+    [embed] GitHub - ROCm/librocdxg: repo for AMD ROCDXG project https://github.com/ROCm/librocdxg.git
+
+[2026-04-14T01:03:21.328000+00:00] joeydiaz69 (id=1493416338062970950)
+    yeah that fixed it
+
+[2026-04-14T01:03:31.359000+00:00] joeydiaz69 (id=1493416380136034375)
+    nearly done, fingers crossed
+
+[2026-04-14T01:04:40.563000+00:00] joeydiaz69 (id=1493416670398775536)
+    updating the instructions on github for wsl2 to read; The current official path is librocdxg + /dev/dxg would help anyone else in future
+
+[2026-04-14T01:05:05.492000+00:00] joeydiaz69 (id=1493416774958452736)
+    my agent was confused haha
+
+[2026-04-14T03:01:28.949000+00:00] joeydiaz69 (id=1493446065700081794)
+    Overwhelmed rn! Can’t believe I got it to work thank you some much Kaden, I built a RAG today and my llama.cpp was crashing constantly, now I’m running 27b with api also outputting tokens and not a single crash
+
+[2026-04-14T03:01:58.765000+00:00] joeydiaz69 (id=1493446190757314580)
+    Such underrated tek you deserve 1000 stars, I’m going to make another GitHub just to star twice
+
+[2026-04-14T03:49:05.132000+00:00] idkaden (id=1493458045399859240)
+    how's it running on your card?
+
+[2026-04-14T03:49:34.666000+00:00] idkaden (id=1493458169274437662)
+    and thank you for helping me out there, did your agent use the autoheal skill? or one of the skills I baked in? I would hope that would help
+
+[2026-04-14T05:33:56.977000+00:00] idkaden (id=1493484435310641292)
+    don't try to launch multiple daemons lol
+    [reply to joeydiaz69 msg=1493446065700081794]
+
+[2026-04-14T10:23:33.445000+00:00] rakaarwaky (id=1493557317499617401)
+    waiting for webui 👀
+
+[2026-04-14T10:35:49.705000+00:00] rakaarwaky (id=1493560405598142464)
+    did u have plan to web ui ?
+
+[2026-04-14T10:40:58.121000+00:00] joeydiaz69 (id=1493561699188604988)
+    Let me download those skills as it’s currently stuggling with think context
+    [reply to idkaden msg=1493458169274437662]
+
+[2026-04-14T11:48:19.397000+00:00] idkaden (id=1493578649528569986)
+    no but I will add it to the roadmap
+    [reply to rakaarwaky msg=1493560405598142464]
+
+[2026-04-14T11:50:25.084000+00:00] idkaden (id=1493579176698183710)
+    I made some updates let me know if they help with the thinking. You can now configure max thinking and there's an experimental option to inject tokens to the thinking block. qwopus is generally more efficient with difficult thinking, qwen 3.5 in general is more adaptive
+    [reply to joeydiaz69 msg=1493561699188604988]
+
+[2026-04-14T11:50:42.702000+00:00] idkaden (id=1493579250593304586)
+    working on MoE currently, Gemma support is next up after MoE optimization
+
+[2026-04-14T12:21:29.858000+00:00] joeydiaz69 (id=1493586998127104102)
+    will update now
+
+[2026-04-14T12:30:59.030000+00:00] joeydiaz69 (id=1493589385407496273)
+    it fixed a few problems but im now getting this message instructing my agent to rebuild and run qwopus:9b
+
+[2026-04-14T12:31:00.108000+00:00] joeydiaz69 (id=1493589389928960040)
+    ✅ hipfire rebuilt — latest code pulled, daemon running healthy
+    
+    ✅ Think stripping fixed — the serve_wrapper was looking for <|think|> tags but the model outputs — fixed both formats
+    
+    **⚠️ Core problem: qwopus-9b can't do structured JSON scoring** — the model generates 2000+ tokens of think content and either produces garbled text or nothing after stripping. It's too small for this pipeline's complex JSON output task.
+    
+    **❌ No 27B model installed** — only qwopus-4b (2.5GB) and qwopus-9b (5.0GB) in ~/.hipfire/models/. The pipeline defaults to qwopus-27b.mq4` which doesn't exist.
+
+[2026-04-14T12:31:32.349000+00:00] joeydiaz69 (id=1493589525157384274)
+    im thinking i need to turn reasoning off or thinking on, i think my agent turned it off so ill try now and update you
+
+[2026-04-14T15:40:20.298000+00:00] joeydiaz69 (id=1493637038019444966)
+    Seems like 27b is too much for my gpu
+
+[2026-04-14T15:40:29.167000+00:00] joeydiaz69 (id=1493637075218731098)
+    Going to have to use 9b
+
+[2026-04-14T15:41:12.840000+00:00] joeydiaz69 (id=1493637258396438648)
+    Also getting this error with qwopus
+
+[2026-04-14T15:41:15.269000+00:00] joeydiaz69 (id=1493637268584267818)
+    The qwopus model is a reasoning fine-tune — it refuses to output clean JSON. Let me try with stop sequences to force it:
+
+[2026-04-14T15:43:10.610000+00:00] idkaden (id=1493637752359489738)
+    Try running hipfire update, I just pushed 0.1.6 with a bunch of cli and daemon housekeeping
+
+[2026-04-14T15:43:47.783000+00:00] idkaden (id=1493637908274348064)
+    Hmm maybe I will do triattention next
+    [reply to joeydiaz69 msg=1493637038019444966]
+
+[2026-04-14T15:47:04.217000+00:00] joeydiaz69 (id=1493638732178526369)
+    Would be great to fit 27b on 9070xt, you think overclocking would help with the cache limit that I’m assuming causes the crash?
+    [reply to idkaden msg=1493637908274348064]
+
+[2026-04-14T15:47:16.959000+00:00] joeydiaz69 (id=1493638785622216875)
+    Or reducing power limit?
+
+[2026-04-14T16:42:23.273000+00:00] joeydiaz69 (id=1493652653308379277)
+    Also is it necessary to stay on port 11435?
+
+[2026-04-14T16:42:50.400000+00:00] joeydiaz69 (id=1493652767087267880)
+    I’m running on port 8080 right now but I’m thinking maybe 11435 has built in support?
+
+[2026-04-14T17:46:57.937000+00:00] idkaden (id=1493668904826835127)
+    🤔 fitting is a matter of vram so I could create a new mq3/mq2 quant for larger models if you’re having trouble fitting 27b
+    [reply to joeydiaz69 msg=1493638732178526369]
+
+[2026-04-14T17:49:37.074000+00:00] idkaden (id=1493669572295921874)
+    You can run `hipfire config` it should give the option to change port
+    [reply to joeydiaz69 msg=1493652767087267880]
+
+[2026-04-14T17:49:55.721000+00:00] joeydiaz69 (id=1493669650507235338)
+    ok i think i fixed qwopus issue also with help of claude
+
+[2026-04-14T17:50:00.621000+00:00] joeydiaz69 (id=1493669671059067065)
+    heres prompt i used Fixes, in order of effort
+    1. Don't strip think tags — extract the post-think content instead
+    Change your serve_wrapper strip logic from "remove everything between <think>...</think>" to "return everything after </think>":
+    pythonimport re
+    
+    def strip_think(text: str) -> str:
+        # Return only the content after </think>, not the whole block removal
+        match = re.search(r'</think>(.*)', text, re.DOTALL)
+        if match:
+            return match.group(1).strip()
+        return text  # no think tags, return as-is
+    This is the minimal fix and works immediately.
+    2. Force /no_think in the system prompt
+    Qwen3.5-based models accept a special token. Try prepending to your system prompt:
+    /no_think
+    or using the chat template's enable_thinking=False parameter if your runner exposes it (llama.cpp does via --no-thinking on recent builds). Results are mixed on fine-tuned variants like Qwopus but worth trying.
+    3. Accept that Qwopus always thinks and budget for it
+    The model card explicitly warns: "CoT length in v3 will be slightly longer than v2." For an agent pipeline that needs fast, non-reasoning responses, this model is genuinely a poor fit — the thinking is baked in by design as part of its "act-then-refine" philosophy.
+    
+    Summary
+    qwen3.5-9b.mq4qwopus:9b-mq6thinking=off respected✅ Yes❌ No — trained awaythink tags always generatedNoYes, unconditionallyserve_wrapper safe✅❌ Strips the only answer content
+    Quickest fix: patch serve_wrapper to extract post-</think> content rather than deleting the whole think block.
+
+[2026-04-14T17:50:11.327000+00:00] joeydiaz69 (id=1493669715963547829)
+    and heres outcome
+
+[2026-04-14T17:50:12.168000+00:00] joeydiaz69 (id=1493669719490695178)
+    **qwopus-9b.mq6**: Working. Think tag issue fixed.
+    
+    **What was wrong**: The old `serve_wrapper.py` stripped everything between ``, old code removed all of it → empty response.
+    
+    **Fix applied**: Now extracts content AFTER `` instead of removing the block. Works for both closed and unclosed think tags.
+    
+    **Pipeline**: Running on qwen3.5-9b.mq4 (the reliable workhorse). qwopus-9b.mq6 is available at 52-60 tok/s decode if you want to swap it in for testing — just change `HIPFIRE_MODEL` in the wrapper start command.
+
+[2026-04-14T17:50:40.643000+00:00] joeydiaz69 (id=1493669838923632731)
+    i changed back thanks need to do some tests to see if my pipelines good now
+    [reply to idkaden msg=1493669572295921874]
+
+[2026-04-14T17:50:58.918000+00:00] joeydiaz69 (id=1493669915574534164)
+    yeah a lower quantization would be great
+    [reply to idkaden msg=1493668904826835127]
+
+[2026-04-14T17:51:23.520000+00:00] idkaden (id=1493670018762932344)
+    Also, it could be that default max context is too low, default is 32k could be causing errors
+
+[2026-04-14T17:52:34.543000+00:00] joeydiaz69 (id=1493670316654723172)
+    yeah that makes sense and i was using 32k, my gpu has been prone to crashing with 27b on llama.cpp so i wasnt too shocked, maybe if i try again with your new commits it will be fine
+    [reply to idkaden msg=1493670018762932344]
+
+[2026-04-14T19:00:50.340000+00:00] idkaden (id=1493687495672467456)
+    The daemon had some nasty bugs
+
+[2026-04-14T20:18:21.412000+00:00] joeydiaz69 (id=1493707003682619542)
+    Yh I’ve got to rework the DXG bridge a few times
+
+[2026-04-14T20:19:29.686000+00:00] joeydiaz69 (id=1493707290044534844)
+    Just wanted to clarify I had conflictions causing the constant crashes, I felt it was odd as last night I had a long session on hipfire and today was constant gpu crashes, turns out I had a watchdog cron job to activate llama server I thought I had pointed to hipfire so it was trying to boot llama.cpp along side hipfire
+
+[2026-04-15T00:57:26.569000+00:00] idkaden (id=1493777237961347082)
+    Ah
+
+[2026-04-15T00:57:56.257000+00:00] idkaden (id=1493777362481975418)
+    That will do it
+
+[2026-04-15T00:58:23.576000+00:00] idkaden (id=1493777477066297465)
+    🤔 60 tok/s seems low
+
+[2026-04-15T00:58:36.694000+00:00] idkaden (id=1493777532087177316)
+    But it is mq6
+
+[2026-04-15T00:58:51.391000+00:00] idkaden (id=1493777593730728066)
+    I get 120 so WMMA isn’t applying on your card
+
+[2026-04-15T06:41:02.671000+00:00] texbluboy (id=1493863708160426044)
+    Same 💪🤠
+    [reply to nucleosynth msg=1492618977158107226]
+
+[2026-04-15T20:44:42.060000+00:00] ivabom (id=1494076021266190346)
+    <@204498098515476480> I am currently fighting vision optimization gremlins and working out how to quantize so it doesnt mistake colors like purple as green...
+
+[2026-04-16T08:59:52.177000+00:00] idkaden (id=1494261032506495008)
+    Oh 🤔 I’ll work on vision, I haven’t touched it since the 5700xt->7900xt upgrade, but it needs work
+    [reply to ivabom msg=1494076021266190346]
+
+[2026-04-16T11:05:30.239000+00:00] joeydiaz69 (id=1494292649430220920)
+    I’ve moved over to Linux after building scripts to remove my dependency on windows 11 software so should be sweet now
+
+[2026-04-16T11:06:10.302000+00:00] joeydiaz69 (id=1494292817466359819)
+    WSL doesn’t seem to viable for hipfire, lots of VRAM leaking from DXG bridge from what I experienced
+
+[2026-04-16T20:09:14.494000+00:00] ivabom (id=1494429485473206304)
+    I found a performance improvement with vision and put it into a PR
+    [reply to idkaden msg=1494261032506495008]
+
+[2026-04-16T20:09:31.521000+00:00] ivabom (id=1494429556889747577)
+    still havnt nailed down the colour misidentification
+
+[2026-04-16T20:09:52.592000+00:00] ivabom (id=1494429645267927091)
+    welcome to greener pastures windows is so shit now
+    [reply to joeydiaz69 msg=1494292649430220920]
+
+[2026-04-16T21:42:28.856000+00:00] joeydiaz69 (id=1494452949928120471)
+    Yes windows is real bloatware! Linux feels much snappier, trying to fix qwopus atm but once I fix I think it’s going to be a world of a difference. ATM qwopus handles simple outputs but I had low max tokens so getting agent to configure quickly and I should be set
+    [reply to ivabom msg=1494429645267927091]
+
+[2026-04-16T21:44:20.412000+00:00] joeydiaz69 (id=1494453417828155513)
+    I’ll probably buy opus 4.7 api tomorrow so it can go through my whole pipeline and implement fixes to improve efficiency/reduce failures/make improvements etc. I have been holding off as I heard Claude has been degraded recently and I didn’t want to spend a shit ton on tokens building and would rather it refine at the end for a fraction
+
+[2026-04-16T21:44:52.801000+00:00] joeydiaz69 (id=1494453553677209753)
+    I think I definitely need it to upgrade my RAG, that’s a system that’s very complex even for 1T models
+
+[2026-04-16T22:04:54.339000+00:00] joeydiaz69 (id=1494458593292849192)
+    Yeah having a lot of problems with qwopus on hipfire, might have to settle for qwen3.5
+
+[2026-04-16T22:05:22.054000+00:00] joeydiaz69 (id=1494458709538242590)
+    I’ve also been rate limited by NOUS for next hour
+
+[2026-04-16T23:36:35.681000+00:00] ivabom (id=1494481667593732227)
+    I have a few more weeks on my max 20 plan before it drops to just pro. My initial test so far for 4.7 are okay, nothing as good as what opus 4.6 was 6 weeks ago. Honestly, ive seen many good things being said about codex 5.4. Opus really went to shit around march 19, prior to that it was a beast, now it makes way more mistakes and completely misses things.
+    [reply to joeydiaz69 msg=1494453417828155513]
+
+[2026-04-16T23:37:31.581000+00:00] ivabom (id=1494481902055325766)
+    Im going to let my max 20 sub run out for a few more weeks then probably swap over to gpt as much as I dont want to, I need things to be consistent for the stuff im building
+
+[2026-04-16T23:51:58.927000+00:00] joeydiaz69 (id=1494485539967991948)
+    Yeah consistency is everything or your just wasting time/effort  and money
+
+[2026-04-16T23:52:14.597000+00:00] joeydiaz69 (id=1494485605692870928)
+    I can’t seem to get hipfire server to load the models properly
+
+[2026-04-16T23:52:32.590000+00:00] joeydiaz69 (id=1494485681161113701)
+    Think I’m gonna get Mimo to uninstall and start fresh again
+
+[2026-04-16T23:53:01.220000+00:00] joeydiaz69 (id=1494485801243906078)
+    Really annoying as “hipfire run” works fine but server just endless thinking with no output
+
+[2026-04-17T00:05:34.220000+00:00] ivabom (id=1494488959554818251)
+    yeah ive been having the same issue with thinking never ending. Not sure if its a quantization issue or if hipfire is stripping the <thinking> tags too early?
+
+[2026-04-17T00:08:09.952000+00:00] ivabom (id=1494489612742033428)
+    I thought the thinking issue got patched, ill need to retest on my end to see what is happening
+
+[2026-04-17T00:09:50.603000+00:00] ivabom (id=1494490034903191683)
+    im diagnosing why hipfire vision "sees" things differently to llama.cpp
+
+[2026-04-17T00:28:27.218000+00:00] ivabom (id=1494494718325686496)
+    opus4.7 uses ~33% more tokens but apparently they have given us more tokens per week to account for it
+
+[2026-04-17T00:32:15.763000+00:00] joeydiaz69 (id=1494495676912894022)
+    Yeah might need to implement that caveman speech method for less token usage
+    [reply to ivabom msg=1494494718325686496]
+
+[2026-04-17T00:32:53.191000+00:00] joeydiaz69 (id=1494495833897439384)
+    Yeah the thinking glitch is a stressful block, I’m going to wait for more direction before trying qwopus
+
+[2026-04-17T00:34:07.527000+00:00] ivabom (id=1494496145685217280)
+    https://tenor.com/view/me-think-kevin-kevin-malone-the-office-many-word-gif-8931878844271137865
+    [embed]  https://tenor.com/view/me-think-kevin-kevin-malone-the-office-many-word-gif-8931878844271137865
+
+[2026-04-17T04:51:23.819000+00:00] idkaden (id=1494560890186367036)
+    yeah it's killing me to use 4.7 w/ max thinking currently
+    [reply to ivabom msg=1494494718325686496]
+
+[2026-04-17T04:51:50.001000+00:00] idkaden (id=1494561000001638440)
+    10% weekly in just a few hours 4.7 max vs ~5% w/ 4.6
+
+[2026-04-17T04:52:40.518000+00:00] idkaden (id=1494561211885289493)
+    in other news I have dflash running on my end
+
+[2026-04-17T04:53:02.206000+00:00] idkaden (id=1494561302851485707)
+    ~60-100tok/s for 27b
+
+[2026-04-17T04:53:18.841000+00:00] idkaden (id=1494561372623605891)
+    150-300tok/s for 9b
+
+[2026-04-17T05:37:59.194000+00:00] ivabom (id=1494572614839042050)
+    I just wish they didn't Bork opus 4.6 last month. It's been such a good model for so long and I really don't want to rebuild my workflows 🙁
+
+[2026-04-17T06:52:44.512000+00:00] ivabom (id=1494591427626270780)
+    Qwen3.6 35b a3b looks promising <@204498098515476480> you need to clone yourself 😂
+
+[2026-04-17T06:55:44.216000+00:00] idkaden (id=1494592181359349770)
+    I can do that, just doing triattention now to secure dflash stability and long ctx stability beyond just rotorquant
+
+[2026-04-17T10:53:48.267000+00:00] ivabom (id=1494652093011726386)
+    Ok I just watched the latest podcast with jensen and now I want hipfire to be even more successful to the point AMD GPUs are better than theirs. That dude is gross.
+
+[2026-04-17T11:40:44.635000+00:00] joeydiaz69 (id=1494663905715421224)
+    I’ve swapped back to llama.cpp for now my hipfire server doesn’t seem to connect with the models and generate outputs. I’ll try again in a week or two once my builds complete
+    [reply to idkaden msg=1494592181359349770]
+
+[2026-04-17T11:46:40.250000+00:00] idkaden (id=1494665397272842271)
+    that is the plan
+    [reply to ivabom msg=1494652093011726386]
+
+[2026-04-17T23:00:48.447000+00:00] ivabom (id=1494835049307308123)
+    Hypothetically, is it possible to write inference engines in assembly?
+
+[2026-04-17T23:01:46.679000+00:00] ivabom (id=1494835293549760513)
+    Say I know a human-assembly ultra nerd, and if they could be convinced to take on a project like that....
+
+[2026-04-17T23:14:08.238000+00:00] joeydiaz69 (id=1494838403873636352)
+    OK, here's the revised diagnosis:
+    
+    The GPU was your real crash problem, not the USB NIC.
+    
+    The BACO power management on your RX 9070 XT was putting the GPU into a low-power state, and when it tried to wake back up under load, the display engine hung — black screen, unresponsive, fans spinning up. You'd force reboot, system came back, repeat.
+    
+    What I just fixed:
+    - ✅ BACO disabled now (performance level: high)
+    - ✅ Persistent across reboots (disable-baco.service enabled)
+    - ✅ GPU drawing 49W at idle — normal, won't cause issues
+    
+    Updated confidence:
+    - GPU BACO hang = 90% cause of your crashes
+    - USB NIC flapping = separate annoyance (PCIe NIC still recommended)
+    - ROCm path = was a factor in service failures, now fixed
+    
+    What to watch for: The GPU will run slightly warmer at idle since it won't clock down. If you notice temps climbing too high under heavy load, we can look at fan curves. But 49W at idle is fine for the 9070 XT.
+    
+    Try running your normal workload for a while and see if the black screen crashes stop. If they do, we've nailed it.
+
+[2026-04-17T23:14:17.647000+00:00] joeydiaz69 (id=1494838443337846974)
+    This fixed all my crashes
+
+[2026-04-17T23:14:37.110000+00:00] joeydiaz69 (id=1494838524971581491)
+    BACO enabled was making my gpu crash
+
+[2026-04-17T23:15:12.579000+00:00] joeydiaz69 (id=1494838673739350187)
+    Thought it would be useful to relay in here in case any one future has constant crashes with large models
+
+[2026-04-18T00:26:02.006000+00:00] ivabom (id=1494856497128018010)
+    <@684067707565375560> what OS are you running now? I've had this issue before, I had to disable sleep or the power state I can't remember
+
+[2026-04-18T01:35:56.252000+00:00] ivabom (id=1494874089070923807)
+    Hipfire is faster than tinygrad running qwen3.6 35b a3b and there is still the MoE issue to fix which will push tok/s past 150
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1494874088789774336/image.png?ex=6a01db3c&is=6a0089bc&hm=9e1667d3b771bef3ceff185325b73fb072c29399f5d8c8d9a5bd3863de3d86d8&
+
+[2026-04-18T02:34:45.260000+00:00] idkaden (id=1494888890803425441)
+    sorry I haven't pushed master in a while, let me actually do that
+
+[2026-04-18T02:48:29.233000+00:00] ivabom (id=1494892346796544084)
+    No problems dude we're all busy! One thing for qwen3.6 35b I had to set max_seq to 4096 or it spilled over into gtt and slowed down a lot.
+
+[2026-04-18T02:48:56.975000+00:00] ivabom (id=1494892463155052575)
+    That's just adjustment to fit on the gpu though I don't think it's a hipfire issue
+
+[2026-04-18T03:56:20.817000+00:00] ivabom (id=1494909424257466488)
+    <@204498098515476480> do you reckon its safe to cherry pick some othe MoE commits from your other branches into master?
+
+[2026-04-18T05:06:06.682000+00:00] idkaden (id=1494926981048045650)
+    https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.7-alpha
+    [embed] Release v0.1.7-alpha: FlashTriAttn + CASK + A3B family + MI300X wav... https://github.com/Kaden-Schutt/hipfire/releases/tag/v0.1.7-alpha
+
+[2026-04-18T05:10:30.227000+00:00] idkaden (id=1494928086435631254)
+    Yes, I just decided to push this update because I realized I was keeping master way behind the D flash Branch I needed to merge so you can either cherry pick if you’d rather or just do the full version update but it’s not quite finished. Waiting on tuning from AMD developer cloud.
+    [reply to ivabom msg=1494909424257466488]
+
+[2026-04-18T07:51:23.328000+00:00] joeydiaz69 (id=1494968574475763773)
+    Ubuntu 24, it’s fixed now since my Agent made that change, pc has been humming all night with full pipeline for the first time, going to download Qwopus 27b and see if it can handle
+    [reply to ivabom msg=1494856497128018010]
+
+[2026-04-18T09:02:55.927000+00:00] ivabom (id=1494986578941182093)
+    I updated to the new update and had some regression issues gotta test some more
+
+[2026-04-18T11:17:57.455000+00:00] joeydiaz69 (id=1495020559212220626)
+    I got limit rated again, will update and see if my problems disappear
+
+[2026-04-18T11:18:47.052000+00:00] joeydiaz69 (id=1495020767237247016)
+    When something in my pipeline breaks MIMO really struggles trying to repair it for some reason compared to the initial build
+
+[2026-04-18T16:02:14.164000+00:00] rakaarwaky (id=1495092100235001996)
+    there is something wrong with the hip fire config?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1495092099953987735/image.png?ex=6a01fd86&is=6a00ac06&hm=068a07e64ca34ee61b36fcec3bff477ed2f195d7cda35c90a5a9e2617ab3c5a1&
+
+[2026-04-19T03:12:21.961000+00:00] ivabom (id=1495260743958925372)
+    Man opus4.7 is shittttt I've been getting codex to review a pr and patch issues that codex was finding. Every new update introduced a new p1 or p2
+    [reply to joeydiaz69 msg=1495020559212220626]
+
+[2026-04-19T03:12:59.642000+00:00] ivabom (id=1495260902004359320)
+    Yes I think 0.1.6 was last stable version
+    [reply to rakaarwaky msg=1495092100235001996]
+
+[2026-04-19T04:47:04.226000+00:00] idkaden (id=1495284577105739997)
+    Pushed 100+ commits to master just now, would like to see if the changes fixed the instability
+    [reply to ivabom msg=1495260902004359320]
+
+[2026-04-19T08:21:40.849000+00:00] ivabom (id=1495338585576964216)
+    <@204498098515476480> can you test out pr 28? I think and hope this is the coherence issue fixed. Was testing against qwen3.5 9b.
+
+[2026-04-19T08:41:56.901000+00:00] idkaden (id=1495343686068867142)
+    on it, sorry got distracted by dflash again lol
+    [reply to ivabom msg=1495338585576964216]
+
+[2026-04-19T20:41:00.105000+00:00] joeydiaz69 (id=1495524641781846220)
+    Damn I thought is was the clear winner for frontier models
+    [reply to ivabom msg=1495260743958925372]
+
+[2026-04-19T21:22:07.855000+00:00] ivabom (id=1495534992275673239)
+    nah dude its so neutered that it gets performance anxiety and just does a shit job. It made like 4 suggestions to me yesterday to reduce security controls to fix bugs.. On one PR it kept introducing P1 bugs as well like constant regression.
+    [reply to joeydiaz69 msg=1495524641781846220]
+
+[2026-04-19T22:32:45.164000+00:00] joeydiaz69 (id=1495552764837888141)
+    What a shame, guess I’ll do some research into what’s the best alternative frontier model, might use codex with Oauth
+    [reply to ivabom msg=1495534992275673239]
+
+[2026-04-19T22:38:49.378000+00:00] ivabom (id=1495554292462125117)
+    I think it is codex to be honest. I see a LOT of people are pushing hard now in building their own compute locally becuase this degredation has bitten many people in the ass. Opus 4.6 was so good when it first came out and whatever they've done to it and 4.7 since then has absolutely killed its quality.
+
+[2026-04-19T22:55:20.367000+00:00] ivabom (id=1495558448971120781)
+    I figured out the bug that was causing misidentification of colours in the vision processing!
+
+[2026-04-19T22:56:46.226000+00:00] idkaden (id=1495558809090002955)
+    what was it
+
+[2026-04-19T22:57:44.151000+00:00] ivabom (id=1495559052045062206)
+    the green and blue channels needed to be swapped lol
+
+[2026-04-19T22:58:35.680000+00:00] ivabom (id=1495559268173086720)
+    its like the equivilent of "it was plugged in the wrong way" haha man technology never changes when you think about it
+
+[2026-04-19T22:59:28.387000+00:00] ivabom (id=1495559489242398770)
+    im doing the regression testing now and a final confirmation that the image I am supplying to it is in fact, a GREEN leaf and then ill open a PR with all the evidence for you
+
+[2026-04-19T23:01:20.946000+00:00] idkaden (id=1495559961349197955)
+    okay, I'll run it against some images too, exciting findings!
+
+[2026-04-19T23:16:04.530000+00:00] ivabom (id=1495563667369103491)
+    PR 35 is up
+
+[2026-04-20T08:07:27.950000+00:00] ivabom (id=1495697396125007934)
+    How's the dflash coming along <@204498098515476480>? Now the coherence is sorted and the vision is identify objects with the right colours I'm going to build a benchmark for vision. 
+    I also ran qwen3.6 35b and got 146tok/s but I had to turn graph off, it would hallucinate too often.
+
+[2026-04-20T21:21:34.383000+00:00] idkaden (id=1495897239749660963)
+    146 is decent, but I think we can do better. And yeah hipgraph+MOE is weird at the moment. Dflash works, I could push a PoC, but it’s not in the state I would like it to be
+    [reply to ivabom msg=1495697396125007934]
+
+[2026-04-20T21:21:59.159000+00:00] idkaden (id=1495897343667474543)
+    You could quantize one of the existing zlab dflash models and test it if you like
+
+[2026-04-20T21:47:05.349000+00:00] ivabom (id=1495903661086212288)
+    I will once I work out why im getting nonsense past 2000k context.
+
+[2026-04-20T22:28:56.115000+00:00] idkaden (id=1495914192002224228)
+    Wait 2M context or 2k?
+
+[2026-04-20T22:32:40.966000+00:00] idkaden (id=1495915135095541780)
+    If it’s 2k then it’s triattention and cask
+
+[2026-04-20T23:16:03.894000+00:00] ivabom (id=1495926052567126096)
+    sorry not 2m haha 2k
+
+[2026-04-21T23:23:24.334000+00:00] ivabom (id=1496290287771979959)
+    <@204498098515476480> are you looking at any specific datasets for sidecar calibration?
+
+[2026-04-21T23:33:30.393000+00:00] ivabom (id=1496292829767536771)
+    also what do you think is the right path to take triattention or CASK?
+
+[2026-04-22T00:51:29.197000+00:00] idkaden (id=1496312454093733898)
+    I trained some sidecars on Hermes agent traces, and if I understand correctly, cask is triattention+caveman roughly so it does the most I think
+    [reply to ivabom msg=1496290287771979959]
+
+[2026-04-22T00:51:50.737000+00:00] idkaden (id=1496312544439046184)
+    It really only works at high context though
+
+[2026-04-22T00:54:51.071000+00:00] ivabom (id=1496313300814925894)
+    Yeha they are slightly different in how they function from what I have seen but apply in the same area. The route im going down now is triattention and putting cask behind a featureflag so I dont have remove the code. What I plan on exploring is IF we can use them both together as they can be good together if done right. Essentially I want to test if its even feasable to combine them with really long running context sessions.
+
+[2026-04-22T06:13:23.761000+00:00] rakaarwaky (id=1496393465247039569)
+    Hi <@204498098515476480> . I want to try to Hipfire on hermes again. But it seems there is a problem with Hipfire service.?  Is my configuration the problem?
+    [attachment] hipfiretest.webm https://cdn.discordapp.com/attachments/1489281188467310662/1496393464818958406/hipfiretest.webm?ex=6a021c43&is=6a00cac3&hm=4780b3534e9f12fd35794521957bcdfdf932cbc5955241cd4340a2ffc2dbcc6e&
+
+[2026-04-22T06:16:48.877000+00:00] rakaarwaky (id=1496394325565771826)
+    what is the best configuration for hermes agentic task  on  hipfire ?  especially on 16gb vram ?
+
+[2026-04-22T10:02:58.719000+00:00] idkaden (id=1496451241608347710)
+    update:
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1496451241512009789/image.png?ex=6a01a952&is=6a0057d2&hm=b36d9de4f1cd15c70045de7281c9dcf32d9dd4c2eed6505f19676f1769371bd9&
+    [reply to ivabom msg=1495697396125007934]
+
+[2026-04-22T10:07:32.454000+00:00] idkaden (id=1496452389736288367)
+    I'm making good progress on dflash currently, once I'm done I'll look at issues and pr's and refocus on kv
+
+[2026-04-22T10:31:56.163000+00:00] idkaden (id=1496458528976666774)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489281188467310662/1496458528729206835/image.png?ex=6a01b01c&is=6a005e9c&hm=4f826e68f5f3e441dc1ceb5876a3b04222263d64d465665a632fed450b8fdb99&
+
+[2026-04-22T10:32:05.155000+00:00] idkaden (id=1496458566691848364)
+    that's before ddtree
+
+[2026-04-22T10:33:40.983000+00:00] idkaden (id=1496458968623480842)
+    3090 *soon to be dethroned
+
+[2026-04-22T10:33:43.200000+00:00] idkaden (id=1496458977922514944)
+    https://github.com/Luce-Org/lucebox-hub
+    [embed] GitHub - Luce-Org/lucebox-hub: Lucebox optimization hub: hand-tuned... https://github.com/Luce-Org/lucebox-hub
+
+[2026-04-22T21:20:34.457000+00:00] idkaden (id=1496621764132995092)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1489281188467310662/1496621763914629171/image0.jpg?ex=6a019f62&is=6a004de2&hm=8a1a1312466589fcb005442a2fea02f9be391acadd3263cb0926c72742187257&
+
+[2026-04-22T21:25:10.502000+00:00] idkaden (id=1496622921949646869)
+    Still before implementing DDTree, which if it yields the same improvement as it does on other arches should give us near 200tok/s at least
+
+[2026-04-23T05:15:35.281000+00:00] ivabom (id=1496741305252974643)
+    wild
+
+[2026-04-23T05:16:09.512000+00:00] ivabom (id=1496741448828321935)
+    I have had a shit day and feel like punching my monitor. Things just diverging and doing unnecessary changes
+
+[2026-04-23T05:41:38.280000+00:00] idkaden (id=1496747860945797210)
+    what do you mean?
+
+[2026-04-23T05:44:03.243000+00:00] ivabom (id=1496748468964687912)
+    I just feel like ive had a lot of unnecssary problems today with my workflow. Stuff I thought was very clear to prevent code conflicts and stuff. Just dumb shit
+
+[2026-04-23T06:02:53.385000+00:00] ivabom (id=1496753209123803227)
+    I need to review how I work I think, I feel like a caveman when I see how others are working
+
+[2026-04-23T11:08:14.004000+00:00] idkaden (id=1496830051369484298)
+    Idk what model you were using but yesterday it felt like opus was dumb
+
+[2026-04-26T10:34:10.832000+00:00] artsbro (id=1497908645281927339)
+    hipfire doing well in the charts: https://www.localmaxxing.com/
+    [embed] localmaxxing — Local LLM Inference https://www.localmaxxing.com/
+
+[2026-04-26T10:36:53.619000+00:00] idkaden (id=1497909328059830405)
+    dflash is really boosting the numbers, but it is doing well even on AR
+
+[2026-04-26T10:37:40.326000+00:00] artsbro (id=1497909523963318408)
+    congratulations 🙂
+
+[2026-04-26T10:39:02.158000+00:00] idkaden (id=1497909867191730206)
+    thanks I couldn't have done it without this community to be honest, couldn't find anyone to test anywhere else
+
+[2026-04-27T06:17:00.709000+00:00] idkaden (id=1498206314520907797)
+    uhhhh
+
+[2026-04-27T06:17:10.849000+00:00] idkaden (id=1498206357050888213)
+    I hit local llama
+
+[2026-04-28T22:49:12.545000+00:00] ivabom (id=1498818397004370060)
+    Is anyone having any success with vision output on hipfire?
+
+[2026-04-29T09:22:37.805000+00:00] ivabom (id=1498977802618273853)
+    Its thinking again
+
+[2026-04-29T09:23:01.821000+00:00] ivabom (id=1498977903348547635)
+    I keep running into problems related to thinking, anyone else noticed this?
+
+[2026-05-01T02:30:29.101000+00:00] nucleosynth (id=1499598858647507034)
+    can you say more? and what model?
+    [reply to ivabom msg=1498977903348547635]
+
+[2026-05-01T04:37:42.267000+00:00] ivabom (id=1499630874466058240)
+    It has been across multiple over the last few weeks, whenever I went above a few thousand context I got nonsense output, repeating words or thinking about thiking. Ive been trying to get vision working for a few weeks now and im hitting the same issue with thinking bugs. I was just asking if anyone else has noticed or run into weird output related to thinking
+    [reply to nucleosynth msg=1499598858647507034]
+
+[2026-05-02T05:43:51.078000+00:00] idkaden (id=1500009908731379846)
+    yeah, and it's not acceptable to me. I want to figure out why qwen is so finnickey in that regard
+    [reply to ivabom msg=1499630874466058240]
+
+[2026-05-05T10:18:10.963000+00:00] floory (id=1501166110089674812)
+    is this usable/recommended? looking to use qwen3.6 27b but given this is experimental asf i wanna know i'm not just wasting time
+
+[2026-05-08T11:58:39.029000+00:00] rakaarwaky (id=1502278557227946005)
+    Is there new update?
+
+[2026-05-08T14:27:57.474000+00:00] floory (id=1502316131669512416)
+    there are a lot of commits since last update but no tagged releases
+

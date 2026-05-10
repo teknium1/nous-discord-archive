@@ -1,0 +1,407 @@
+# Thread 'Native UI for @nousresearch Hermes Agent @teknium+ Mobile Access 📲' in forum #community-projects-showcase
+# thread_id=1483128092263321862 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:53.753208+00:00
+
+[2026-03-16T15:41:32.383000+00:00] outsourc_e (id=1483128092263321862)
+    💬 Chat with live tool execution
+    🖥 Built-in Terminal
+    📦 90 Skills Browser
+    🧠 Memory Viewer
+    📂 File Explorer
+    🎨 8 Themes (Dark + Light)
+    ⚙️ Provider & Model Config
+    🔍 Inspector Panel
+    
+    Built for the Hermes Agent Hackathon⭐️
+    https://github.com/outsourc-e/hermes-workspace
+    https://x.com/outsourc_e/status/2033404808393113918
+    [attachment] HermesWorksapce.mp4 https://cdn.discordapp.com/attachments/1483128092263321862/1483128093253308538/HermesWorksapce.mp4?ex=6a01f8ac&is=6a00a72c&hm=9a47d4bab923f6594b7f76c8383f2a30b6aa1585ca4d428140395d8439b45629&
+    [embed] GitHub - outsourc-e/hermes-workspace: Native web workspace for Herm... https://github.com/outsourc-e/hermes-workspace
+    [embed]  https://twitter.com/outsourc_e/status/2033404808393113918
+
+[2026-03-16T16:49:27.302000+00:00] nock4864 (id=1483145183712379000)
+    this is pretty slick! esp for non-technical bozos like me
+
+[2026-03-17T12:56:57.970000+00:00] baltikum (id=1483449063839109241)
+    Is this a discord killer?
+
+[2026-03-17T14:28:36.684000+00:00] outsourc_e (id=1483472127117103146)
+    If you like it let me know! Try it out
+    [reply to baltikum msg=1483449063839109241]
+
+[2026-03-17T14:31:01.285000+00:00] baltikum (id=1483472733617520842)
+    Yes I will I miss the terminal design though use my terminalcraft glyph animation to spice it up a bit, i want to feel like I am a hacker, will try it out!
+    this is really good for mobile if you are tired of the telegram/discord stuff
+     https://terminal-craft.vercel.app/
+    [embed] TERMCRAFT – Terminal UI Builder https://terminal-craft.vercel.app/
+    [reply to outsourc_e msg=1483472127117103146]
+
+[2026-03-17T14:33:09.978000+00:00] outsourc_e (id=1483473273395085425)
+    thats dope, I can add those things to how the chat looks and outputs data!
+    [reply to baltikum msg=1483472733617520842]
+
+[2026-03-17T22:38:42.867000+00:00] hydro._ (id=1483595465588084961)
+    Hey <@1470639051819319367>  I'm very interested in trying it out but there's no webapi command for hermes? What should I use instead?
+
+[2026-03-17T22:42:12.423000+00:00] outsourc_e (id=1483596344529780776)
+    Run hermes gateway not hermes webapi. 
+    
+    cd hermes-agent && source .venv/bin/activate && hermes gateway
+    
+    That starts the web API on port 8642. Then point the workspace UI at HERMES_API_URL=http://127.0.0.1:8642/
+    [reply to hydro._ msg=1483595465588084961]
+
+[2026-03-17T22:49:09.363000+00:00] hydro._ (id=1483598093302632538)
+    I have the gateway running as a service but the interface doesn't seem to finish loading correctly. It just looks like this?
+    [attachment] KOepJaF.png https://cdn.discordapp.com/attachments/1483128092263321862/1483598092904431769/KOepJaF.png?ex=6a01b425&is=6a0062a5&hm=35a93365f3b130a132f28f4bf5c3c28bbbc76ff0ed2653df3dc495b061db982b&
+    [reply to outsourc_e msg=1483596344529780776]
+
+[2026-03-17T23:03:34.642000+00:00] outsourc_e (id=1483601722545799373)
+    The workspace UI connects to the Hermes gateway, not the CLI directly. 1. Start the gateway: cd hermes-agent source .venv/bin/activate hermes gateway This starts the API on port 8642. 2. In your workspace .env, set: HERMES_API_URL=http://127.0.0.1:8642 3. Then start the workspace: cd hermes-workspace pnpm dev The gateway handles all the AI communication — the workspace UI just talks to it via REST/SSE.
+    [reply to hydro._ msg=1483598093302632538]
+
+[2026-03-17T23:10:22.013000+00:00] outsourc_e (id=1483603431183614105)
+    just tell your hermes agent to configure if any issues
+
+[2026-03-17T23:43:48.268000+00:00] hydro._ (id=1483611846027247786)
+    It's trying to have me patch the project, are you running and testing this with the latest version of hermes?
+    [reply to outsourc_e msg=1483603431183614105]
+
+[2026-03-17T23:49:41.159000+00:00] kidtaroi (id=1483613326159384646)
+    Hi, great work, How do I connect it to existing hermes agent
+
+[2026-03-17T23:59:08.544000+00:00] hydro._ (id=1483615705944428705)
+    Yeah I asked my hermes agent and it's saying these things 
+    ```   The bigger issue is:
+       - hermes-workspace expects old/custom endpoints like /api/sessions and /api/skills
+       - your installed Hermes gateway only exposes the newer/smaller API like:
+         - /health
+         - /v1/models
+    
+       So even if you launch the gateway correctly, hermes-workspace can still hang unless:
+       - you run a Hermes version that matches that workspace repo, or
+       - you patch the workspace compatibility layer
+    
+    
+    ```
+    [reply to outsourc_e msg=1483603431183614105]
+
+[2026-03-18T00:45:28.435000+00:00] outsourc_e (id=1483627365652234311)
+    Got it ill push a fix shortly
+    [reply to hydro._ msg=1483615705944428705]
+
+[2026-03-18T04:40:59.457000+00:00] outsourc_e (id=1483686635454468230)
+    **Connecting Hermes Workspace to your Hermes Agent** 🔧
+    > 
+    > Quick answer: the Workspace needs our **WebAPI fork** — the upstream `hermes-agent` doesn't include the FastAPI server yet.
+    > 
+    > **Setup (2 min):**
+    > ```bash
+    > # 1. Backend — use our fork (has the WebAPI)
+    > git clone https://github.com/outsourc-e/hermes-agent.git
+    > cd hermes-agent
+    > python -m venv .venv && source .venv/bin/activate
+    > pip install -e .
+    > hermes setup          # configure your API key
+    > hermes webapi         # starts FastAPI on :8642
+    > 
+    > # 2. Frontend — in a new terminal
+    > git clone https://github.com/outsourc-e/hermes-workspace.git
+    > cd hermes-workspace
+    > pnpm install && pnpm dev   # opens on :3000
+    > ```
+    > 
+    > **Already installed upstream?** Just pull our fork instead:
+    > ```bash
+    > cd hermes-agent
+    > git remote add webapi https://github.com/outsourc-e/hermes-agent.git
+    > git fetch webapi && git merge webapi/main
+    > pip install -e . && hermes webapi
+    > ```
+    > 
+    > **Latest workspace update** (just pushed): auto-detects which gateway APIs are available. If endpoints are missing, it shows you exactly what's unsupported instead of crashing. Check your terminal for:
+    > ```
+    > [gateway] available: health, models; missing: sessions, skills, memory
+    > ```
+    > 
+    > The upstream `hermes gateway` command is a process manager for Telegram/Discord bridges — it's different from `hermes webapi` which runs the REST API the workspace connects to.
+
+[2026-03-18T04:41:27.482000+00:00] outsourc_e (id=1483686752999964839)
+    pushed an update to git, my agents summary ^^ let me know any issues
+
+[2026-03-18T07:51:36.516000+00:00] hydro._ (id=1483734605956776029)
+    Uh, I think you should check your git :/
+    [reply to outsourc_e msg=1483686635454468230]
+
+[2026-03-18T07:51:47.963000+00:00] hydro._ (id=1483734653968978021)
+    \
+    [attachment] Cr01YnZ.png https://cdn.discordapp.com/attachments/1483128092263321862/1483734653452943370/Cr01YnZ.png?ex=6a018a93&is=6a003913&hm=1a615f19683c5581fafa523d8cbf58e4047543b0b3169d918f5178135749d775&
+
+[2026-03-18T08:18:04.075000+00:00] outsourc_e (id=1483741264661971165)
+    haha agent is drunk
+
+[2026-03-18T08:18:05.392000+00:00] outsourc_e (id=1483741270185869352)
+    brb
+
+[2026-03-18T08:37:36.561000+00:00] outsourc_e (id=1483746182424559657)
+    all fixed was working on a few things at the same time please review
+
+[2026-03-18T08:37:44.014000+00:00] outsourc_e (id=1483746213684580382)
+    all fixed was working on a few things at the same time please review
+    [reply to hydro._ msg=1483734605956776029]
+
+[2026-03-18T12:38:04.446000+00:00] nock4864 (id=1483806697360326799)
+    Going to set this up today as a rather non-technical bozo.
+
+[2026-03-18T12:56:50.153000+00:00] mr.r0b0t.eth (id=1483811418917834823)
+    https://www.hermeshub.xyz/#/skill/hermes-workspace
+    [embed] HermesHub — Security-Scanned Skills for Hermes Agent https://www.hermeshub.xyz/
+
+[2026-03-18T12:57:12.141000+00:00] mr.r0b0t.eth (id=1483811511142187159)
+    Added as a skill ❤️
+
+[2026-03-18T19:04:23.468000+00:00] hydro._ (id=1483903917225021542)
+    ```
+    hermes skills install github:amanning3390/hermeshub/skills/hermes-workspace
+    
+    Fetching: github:amanning3390/hermeshub/skills/hermes-workspace
+    Error: Could not fetch 'github:amanning3390/hermeshub/skills/hermes-workspace' from any source.
+    
+    ```
+    [reply to mr.r0b0t.eth msg=1483811418917834823]
+
+[2026-03-18T19:06:41.481000+00:00] hydro._ (id=1483904496093626478)
+    so we *have* to use your fork of Hermes Agent to use this?
+    [reply to outsourc_e msg=1483686635454468230]
+
+[2026-03-18T19:17:50.049000+00:00] outsourc_e (id=1483907300271067257)
+    You can utilize it to see if its easier or try the newest version its the same atm. I can adjust if any issues
+    [reply to hydro._ msg=1483904496093626478]
+
+[2026-03-18T20:48:23.297000+00:00] kidtaroi (id=1483930088964620553)
+    I connected to the exisitng agent,  but it only works localhost, not on any other device on the network
+
+[2026-03-18T20:53:23.273000+00:00] hydro._ (id=1483931347155423345)
+    You did not need to use the webapi fork?
+    [reply to kidtaroi msg=1483930088964620553]
+
+[2026-03-18T20:54:12.680000+00:00] mibayy (id=1483931554383138926)
+    thats amazing, amazing work
+
+[2026-03-18T21:05:00.589000+00:00] outsourc_e (id=1483934271910580324)
+    Did you get Tailscale setup
+    [reply to kidtaroi msg=1483930088964620553]
+
+[2026-03-18T21:05:35.362000+00:00] kidtaroi (id=1483934417758982225)
+    No, just running locally, trying to reach from toher device on network
+
+[2026-03-18T21:07:04.669000+00:00] hydro._ (id=1483934792339820765)
+    I followed the instructions merging the fork into my main Hermes repo, then ran “uv pip install -e .” But wasn’t able to get the Hermes webapi command working for some reason <:ScuffedWolf:1014054564061782066>
+    [reply to outsourc_e msg=1483934271910580324]
+
+[2026-03-18T21:08:36.690000+00:00] outsourc_e (id=1483935178303869078)
+    Setup Tailscale works like a charm same network or not
+    [reply to kidtaroi msg=1483934417758982225]
+
+[2026-03-18T21:16:40.015000+00:00] kidtaroi (id=1483937205515980841)
+    I was thinking to use cloudflare tunnel,as I m using clouldflare tunnel for everyty other service
+
+[2026-03-19T00:02:52.583000+00:00] nock4864 (id=1483979033497833573)
+    i'm in. i love it so far
+
+[2026-03-19T00:03:17.763000+00:00] nock4864 (id=1483979139110277282)
+    running on 4gb hetzner VPS
+
+[2026-03-19T00:04:09.403000+00:00] nock4864 (id=1483979355704000592)
+    i had claude set it all up for me and perform a comprehensive UX audit testing all the features
+
+[2026-03-19T00:33:52.247000+00:00] outsourc_e (id=1483986833493983343)
+    Nice 🔥🔥
+
+[2026-03-19T04:22:19.162000+00:00] kidtaroi (id=1484044324462268416)
+    Hi. I changed the deployment to docker,  is it possible to have custom model at the set up ?
+
+[2026-03-19T04:23:57.976000+00:00] kidtaroi (id=1484044738918224024)
+    I did put my environment as open ai compatible api,  Hermes api end point
+
+[2026-03-19T04:28:17.933000+00:00] outsourc_e (id=1484045829256904854)
+    Nice I’m pushing these updates for mobile 🔥🔥
+    [attachment] IMG_3147.png https://cdn.discordapp.com/attachments/1483128092263321862/1484045828711649351/IMG_3147.png?ex=6a0203a1&is=6a00b221&hm=3d5142b5995f983ebdff309caa6137f562fec141e0abcaa2e0c11ffa63b45ec9&
+    [attachment] IMG_3148.png https://cdn.discordapp.com/attachments/1483128092263321862/1484045829038936155/IMG_3148.png?ex=6a0203a1&is=6a00b221&hm=d577f6aa68cc4117bdcc08713645bc84205015e061184bc2d2bf8d5a4aaf9f3b&
+
+[2026-03-19T04:37:13.792000+00:00] kidtaroi (id=1484048076812451880)
+    update :I updated the model using terminal, Problem is Im able to see the messages on the front end but cannot perform any tasks from front end
+    [reply to kidtaroi msg=1484044738918224024]
+
+[2026-03-19T04:50:41.751000+00:00] outsourc_e (id=1484051465638121612)
+    no worries im pushing a fix for this  to make model config and swapping easier
+    [reply to kidtaroi msg=1484048076812451880]
+
+[2026-03-19T08:49:20.101000+00:00] hydro._ (id=1484111521150926920)
+    How did you get it working so easily? <:RAAAAGGGGGGGGHHHHHAHAHAAAAAA:1110320218443616307>
+    [reply to kidtaroi msg=1484048076812451880]
+
+[2026-03-19T13:27:43.072000+00:00] kidtaroi (id=1484181578488877067)
+    Terminal it always works, whenever I try on front end it never does
+
+[2026-03-20T01:08:59.061000+00:00] outsourc_e (id=1484358057977843862)
+    [attachment] Screenshot_2026-03-19_at_8.22.13_PM.png https://cdn.discordapp.com/attachments/1483128092263321862/1484358057659207721/Screenshot_2026-03-19_at_8.22.13_PM.png?ex=6a01d4ea&is=6a00836a&hm=c37259be93b585f11f1520620af027286f54b243e234ccb8bebd03e2cfbac9d5&
+
+[2026-03-20T01:09:01.526000+00:00] outsourc_e (id=1484358068316934357)
+    New update guys!
+
+[2026-03-20T15:04:23.106000+00:00] kidtaroi (id=1484568293460414605)
+    Deployed a fresh instance, getting this ``` Error: hermes-agent not found. Clone it as a sibling directory or set HERMES_AGENT_PATH in .env
+    Hint: git clone https://github.com/outsourc-e/hermes-agent.git ../hermes-agent```
+    [reply to outsourc_e msg=1484358057977843862]
+
+[2026-03-20T15:04:46.570000+00:00] kidtaroi (id=1484568391875297363)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1483128092263321862/1484568391493619712/image.png?ex=6a01f00e&is=6a009e8e&hm=210262dd9b32216dadb35b0a75a2230afa9a56fe380374a5a762c93fb83c8aa8&
+
+[2026-03-20T15:33:23.446000+00:00] outsourc_e (id=1484575592975306964)
+    Got it, looking into
+
+[2026-03-20T16:21:36.214000+00:00] .gheatza (id=1484587726123827363)
+    do we still need another branch or has the API needed been merged into main?
+
+[2026-03-20T18:07:00.762000+00:00] hydro._ (id=1484614253200801953)
+    I gave up on trying to use this project until it's officially merged, it broke my install by merging somehow lmao
+    [reply to .gheatza msg=1484587726123827363]
+
+[2026-03-20T18:13:10.309000+00:00] outsourc_e (id=1484615803193266318)
+    Im working on getting onbaording smoothed and hopefully merged to main hermes 🏆
+    [reply to hydro._ msg=1484614253200801953]
+
+[2026-03-20T18:56:42.179000+00:00] .gheatza (id=1484626758169923595)
+    that would be awesome 😄
+
+[2026-03-20T19:24:49.216000+00:00] outsourc_e (id=1484633834115956987)
+    we didnt win chat 😭 we go again
+
+[2026-03-20T19:30:17.408000+00:00] nock4864 (id=1484635210652979260)
+    all good no worries
+
+[2026-03-21T01:04:24.104000+00:00] outsourc_e (id=1484719292590194849)
+    Would you guys want a native dashboard?
+    [attachment] IMG_3193.png https://cdn.discordapp.com/attachments/1483128092263321862/1484719292128956486/IMG_3193.png?ex=6a01d3d7&is=6a008257&hm=666940ac41f7fc69cbf215ce099355626559ef526ccc4c7fe51a675dcb2301fb&
+
+[2026-03-21T07:59:12.869000+00:00] hydro._ (id=1484823683636662392)
+    I'd love that! But first I'd love to get this up and running 😭
+    [reply to outsourc_e msg=1484719292590194849]
+
+[2026-03-22T12:50:25.558000+00:00] nock4864 (id=1485259357271752815)
+    Jobs tab should work cleanly right out of the box now
+    [attachment] IMG_6115.png https://cdn.discordapp.com/attachments/1483128092263321862/1485259357028614274/IMG_6115.png?ex=6a01d091&is=6a007f11&hm=7a2c779d27b021eab1668816e2d176540cc2ca84f3a7debfcdcbf101adc77fee&
+
+[2026-03-22T14:57:08.637000+00:00] outsourc_e (id=1485291246896545944)
+    Nice
+
+[2026-03-24T17:53:19.720000+00:00] hydro._ (id=1486060360963330282)
+    we're only missing  `sessions, skills, memory, config` now after a fresh clean install :D
+
+[2026-03-24T18:46:48.646000+00:00] outsourc_e (id=1486073820174614693)
+    new hermes update that maeks the connection easier so ill push an update on this
+
+[2026-03-25T09:00:25.388000+00:00] artsbro (id=1486288638760190043)
+    last update was 5 days ago, correct?
+    [reply to outsourc_e msg=1486073820174614693]
+
+[2026-03-26T00:35:03.061000+00:00] outsourc_e (id=1486523845568626739)
+    yess just busy working on some stuff pushing this next
+
+[2026-03-27T02:23:48.949000+00:00] outsourc_e (id=1486913604992110612)
+    guys i shipped
+
+[2026-03-27T07:22:54.606000+00:00] lemurboye (id=1486988874533310524)
+    Awesome man!
+
+[2026-03-27T07:25:36.551000+00:00] lemurboye (id=1486989553779867791)
+    Its all on this branch seems: https://github.com/outsourc-e/hermes-workspace/tree/fix/mobile-default-user-name
+    [embed] GitHub - outsourc-e/hermes-workspace at fix/mobile-default-user-name https://github.com/outsourc-e/hermes-workspace/tree/fix/mobile-default-user-name
+
+[2026-03-27T07:29:46.200000+00:00] lemurboye (id=1486990600883671071)
+    I suggest you merge all changes or stash them into individual commits, its quite a lot change there 😄
+
+[2026-03-27T13:45:35.074000+00:00] outsourc_e (id=1487085177715818496)
+    yes jsut been away wil ldo
+
+[2026-03-31T07:20:00.381000+00:00] jezza2463 (id=1488437695243096184)
+    Agent cannot get the dashboards to work. Tinkered away for 30mins trying to fix it and still nothing. No idea what it’s messed with while it was doing it 😂
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1483128092263321862/1488437695024730242/image0.jpg?ex=6a022be0&is=6a00da60&hm=22a84a2d8ef8bb10dbe208ff0e6d94c9035e590a37a0ab70c9301b9186b6be07&
+
+[2026-03-31T12:00:00.507000+00:00] outsourc_e (id=1488508160078643343)
+    Will review
+
+[2026-04-01T16:56:45.015000+00:00] outsourc_e (id=1488945225463234611)
+    For HermesWorkspace users, ditching FastAPI connection and pushing a PR to main HermesAgent to make it seamlessly connect 🙏 just finishing up
+    [attachment] Screenshot_2026-04-01_at_12.56.34_PM.png https://cdn.discordapp.com/attachments/1483128092263321862/1488945223886311554/Screenshot_2026-04-01_at_12.56.34_PM.png?ex=6a020a4c&is=6a00b8cc&hm=cbe9b9f75c4938b68d06eb23ae37f719dd4e1d25b3193863092e504cd1d88eb1&
+
+[2026-04-02T13:44:48.222000+00:00] olafgeibig (id=1489259308398153769)
+    It's a very cool UI but running a hermes-agent fork and not getting the updates as they are published is quite a bummer. Have you tried to create a PR with your API server to the OG repo?
+
+[2026-04-02T14:05:43.179000+00:00] outsourc_e (id=1489264572069183539)
+    IT will be merged today dont worry
+
+[2026-04-02T18:31:37.881000+00:00] outsourc_e (id=1489331490939736215)
+    Pushed a PR for main hermes agent to connect seamlessly to hermes workspace https://github.com/NousResearch/hermes-agent/pull/4639
+    
+    also for HermesAgent users you can connect to hermesworkspace without needed fork! Just limited features until PR is merged 🎉
+    [embed] feat(api-server): add sessions, memory, skills, config endpoints to... https://github.com/NousResearch/hermes-agent/pull/4639
+
+[2026-04-02T21:12:31.295000+00:00] chfarhan_ (id=1489371980292559091)
+    Does this ui support multi profile switching or add new profile
+
+[2026-04-02T22:25:34.069000+00:00] outsourc_e (id=1489390362979209326)
+    ill add soon
+    [reply to chfarhan_ msg=1489371980292559091]
+
+[2026-04-03T01:31:34.250000+00:00] vamned (id=1489437172170752120)
+    I'm excited for this!
+
+[2026-04-06T16:23:23.175000+00:00] falkonsnow (id=1490748768465977444)
+    Quick question: why is this UI using a different model than the one I set up? Its set up in default, but it goes through the model selector? Thats very limited and asking myself why its scoped to openrouter, with limited options.
+    [attachment] IMG_0434.png https://cdn.discordapp.com/attachments/1483128092263321862/1490748768193216653/IMG_0434.png?ex=6a02027b&is=6a00b0fb&hm=5c17ed3391a555a205c49c77fbbf95cada85ab0d103546c7e37d793c9d67ea3f&
+
+[2026-04-06T18:55:12.328000+00:00] outsourc_e (id=1490786975022579964)
+    thats not worksapce?
+
+[2026-04-06T20:19:18.213000+00:00] falkonsnow (id=1490808138998218792)
+    well this is awkward
+
+[2026-04-06T20:19:27.437000+00:00] falkonsnow (id=1490808177686610102)
+    https://tenor.com/view/simpsons-homer-simpson-gif-13518564799186478937
+    [embed]  https://tenor.com/view/simpsons-homer-simpson-gif-13518564799186478937
+
+[2026-04-06T20:23:45.753000+00:00] falkonsnow (id=1490809261142577435)
+    I’m sorry 😂
+
+[2026-04-06T20:30:09.789000+00:00] falkonsnow (id=1490810871906046053)
+    Sorry, it’s indeed a totally different webui
+
+[2026-04-06T20:30:16.139000+00:00] falkonsnow (id=1490810898540138646)
+    Sent you a request
+
+[2026-04-06T21:24:09.264000+00:00] native_444 (id=1490824459249127506)
+    I wanna know why do we have to connect a different provider for Hermes workspace To chat!? Can’t we talk directly to our agent am very confused
+
+[2026-04-06T21:24:36.326000+00:00] native_444 (id=1490824572755382294)
+    !?
+    [reply to outsourc_e msg=1490786975022579964]
+
+[2026-04-06T21:45:25.816000+00:00] outsourc_e (id=1490829813496152296)
+    it picks up your config of hermes agent
+
+[2026-04-06T21:45:30.687000+00:00] outsourc_e (id=1490829833926742148)
+    what are you having issues with
+
+[2026-04-07T02:17:54.518000+00:00] native_444 (id=1490898384922607807)
+    this
+    [attachment] image.png https://cdn.discordapp.com/attachments/1483128092263321862/1490898384867954760/image.png?ex=6a01e512&is=6a009392&hm=e286c10380026fb87c1bd345a131a8f0f1d5628157ee5c27559ee9a5a044f3f8&
+    [reply to outsourc_e msg=1490829833926742148]
+
+[2026-04-07T02:18:51.685000+00:00] native_444 (id=1490898624698257489)
+    i told hermes to install it for me and i dont know what to do after that
+
+[2026-04-07T05:38:22.260000+00:00] outsourc_e (id=1490948832928993420)
+    use my fork
+

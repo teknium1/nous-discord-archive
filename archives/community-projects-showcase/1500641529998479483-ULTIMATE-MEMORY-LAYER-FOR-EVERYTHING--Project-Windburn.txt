@@ -1,0 +1,128 @@
+# Thread 'ULTIMATE MEMORY LAYER FOR EVERYTHING: Project Windburn' in forum #community-projects-showcase
+# thread_id=1500641529998479483 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:25.219012+00:00
+
+[2026-05-03T23:33:41.323000+00:00] _0xvox (id=1500641529998479483)
+    https://zonicdesign.art · We ship with evidence, not promises.
+    
+    Repo: https://github.com/Fearvox/multica-ultimate-workbench
+    
+    Cookbook here: https://docs.zonicdesign.art/
+    
+    https://x.com/Synslius/status/2050953573500940711?s=20
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500641529998479483/1500642662833852566/image.png?ex=6a01bfa3&is=6a006e23&hm=2566332f78cc2e03d9f36b95ee29fb4d398bd084302a29666f34962a7389693b&
+    [embed] DASH — Custom Digital Systems https://zonicdesign.art/
+    [embed] GitHub - Fearvox/multica-ultimate-workbench: Public multi-agent wor... https://github.com/Fearvox/multica-ultimate-workbench
+    [embed]  https://twitter.com/Synslius/status/2050953573500940711?s=20
+
+[2026-05-03T23:38:48.830000+00:00] _0xvox (id=1500642819776319508)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500641529998479483/1500642819436576828/image.png?ex=6a01bfc8&is=6a006e48&hm=001c7a3d99910dd21add47faa24702b1c059ee542f1bf11dd4fc89d89dff70f7&
+
+[2026-05-04T01:14:30.481000+00:00] isaaclev (id=1500666902005944331)
+    What UI is this?
+
+[2026-05-04T01:14:36.299000+00:00] isaaclev (id=1500666926408663070)
+    Looks slick <@407438656043876353>
+
+[2026-05-04T01:58:46.110000+00:00] _0xvox (id=1500678040521539705)
+    Multica right here, great Kanban integration.
+    [reply to isaaclev msg=1500666926408663070]
+
+[2026-05-04T04:31:03.216000+00:00] isaaclev (id=1500716364321783909)
+    <@407438656043876353> how does it compete / work with the new Kanban skills?
+
+[2026-05-04T04:38:23.190000+00:00] _0xvox (id=1500718209706491974)
+    will update cookbook here: https://docs.zonicdesign.art/
+    [embed] DASH Docs — operator-grade design infrastructure for agents and h... https://docs.zonicdesign.art/
+    [reply to isaaclev msg=1500716364321783909]
+
+[2026-05-04T04:38:51.005000+00:00] _0xvox (id=1500718326371057736)
+    https://docs.zonicdesign.art/pages/getting-started.html
+
+[2026-05-04T04:39:28.677000+00:00] _0xvox (id=1500718484378619946)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500641529998479483/1500718483846201526/image.png?ex=6a020640&is=6a00b4c0&hm=189bd89cdd42e753986ca777ade16a0c667c6bc115097d8b92b2d8b6d7bd447e&
+
+[2026-05-04T06:47:41.276000+00:00] isaaclev (id=1500750749477634128)
+    I meant that Nous just launched there own Kanban. Are you seeing isses/conflict with Multica / why use Multica over the new native functionality?
+
+[2026-05-04T06:50:20.042000+00:00] _0xvox (id=1500751415390502912)
+    planning on pr train to adapt these into native hermes still thinking about the intiative approaches but it is on the roadmap for now
+    [reply to isaaclev msg=1500750749477634128]
+
+[2026-05-04T06:50:56.288000+00:00] _0xvox (id=1500751567417118772)
+    https://github.com/NousResearch/hermes-agent/pull/19536
+    [embed] feat(web): add loading-ui ring status primitive by Fearvox · Pull ... https://github.com/NousResearch/hermes-agent/pull/19536
+
+[2026-05-04T07:50:48.502000+00:00] .papasoma (id=1500766634254798929)
+    that typography is giving "windbum"
+
+[2026-05-04T07:55:04.654000+00:00] _0xvox (id=1500767708633894922)
+    lowkey😭
+
+[2026-05-04T07:55:23.876000+00:00] _0xvox (id=1500767789257064488)
+    should change some strokes, gonna park this
+
+[2026-05-04T09:31:22.953000+00:00] little.mou (id=1500791944576766032)
+    22s1CƯCCC
+
+[2026-05-04T09:31:29.867000+00:00] little.mou (id=1500791973576052816)
+    250
+
+[2026-05-04T10:02:03.408000+00:00] _0xvox (id=1500799664004268192)
+    chat wtf
+
+[2026-05-04T10:02:33.316000+00:00] _0xvox (id=1500799789447512085)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500641529998479483/1500799789250515116/image.png?ex=6a01a939&is=6a0057b9&hm=534bc0e77db1f92ff9d60ad659f9247d7ec982cea04c73ea80afd276088b102b&
+
+[2026-05-05T06:29:47.233000+00:00] _0xvox (id=1501108632480383037)
+    What should we add chat?
+
+[2026-05-05T06:30:21.629000+00:00] _0xvox (id=1501108776747532420)
+    Now got a MSW lab using it, and it's speeding up! Tryna add use-case safely.
+
+[2026-05-05T06:30:43.957000+00:00] _0xvox (id=1501108870397952141)
+    https://blog.zonicdesign.art
+    [embed] Writing — Zonic Design https://blog.zonicdesign.art/
+
+[2026-05-05T06:42:13.587000+00:00] _0xvox (id=1501111762915688519)
+    [attachment] 2026-05-05_02.42.06.png https://cdn.discordapp.com/attachments/1500641529998479483/1501111762173427712/2026-05-05_02.42.06.png?ex=6a022305&is=6a00d185&hm=58ab9348595ab4a9264d335e9eb184ae34c7d13eb5dfa7934fcb683dd2d4b0a2&
+
+[2026-05-05T22:06:28.521000+00:00] _0xvox (id=1501344357767450705)
+    we made it chat, we made it
+    [attachment] IMG_2981.jpg https://cdn.discordapp.com/attachments/1500641529998479483/1501344357780029470/IMG_2981.jpg?ex=6a01aa24&is=6a0058a4&hm=10e5fb179d35d9939fc70bb689daa6e748f59c4a577a6941671775130fb9bb32&
+
+[2026-05-05T22:08:14.412000+00:00] _0xvox (id=1501344801906364436)
+    Working on new stuffs for more fixes
+    [attachment] IMG_2983.png https://cdn.discordapp.com/attachments/1500641529998479483/1501344801629409420/IMG_2983.png?ex=6a01aa8e&is=6a00590e&hm=1db1d8a6168327f3cbfb6edeb8c2b768a661da24e36ebf411a59aaff19909936&
+
+[2026-05-06T04:50:52.071000+00:00] _0xvox (id=1501446126472138863)
+    https://blog.zonicdesign.art/writing/agent-runtime-safety-operating-discipline
+    [embed] Agent Runtime Safety Is an Operating Discipline — Zonic Design https://blog.zonicdesign.art/writing/agent-runtime-safety-operating-discipline
+
+[2026-05-06T04:51:24.906000+00:00] _0xvox (id=1501446264192106579)
+    New thoughts on creating an unified way of running harness systems. Working on it now~
+
+[2026-05-06T04:51:35.369000+00:00] _0xvox (id=1501446308077113415)
+    <a:pls:1362920673781092525> <:pepe_think:1151261558043848785>
+
+[2026-05-06T04:52:28.483000+00:00] _0xvox (id=1501446530853503098)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500641529998479483/1501446530723348530/image.png?ex=6a02094c&is=6a00b7cc&hm=e8364c131d0f186d2f8574f059aed9391a82414792bad023435c3ea427845551&
+
+[2026-05-06T04:52:41.407000+00:00] _0xvox (id=1501446585060556880)
+    Lasor focused after a few memory leakages
+
+[2026-05-06T04:53:16.406000+00:00] _0xvox (id=1501446731856875531)
+    [attachment] IMG_2934.jpg https://cdn.discordapp.com/attachments/1500641529998479483/1501446731873783939/IMG_2934.jpg?ex=6a02097c&is=6a00b7fc&hm=da5e246f7aaa502ed6b54cc55967efb4c706f7cc7bb4ee2bf1b3087fd5b482ed&
+
+[2026-05-06T04:53:26.162000+00:00] _0xvox (id=1501446772776636467)
+    😭😭😭
+
+[2026-05-06T07:41:00.135000+00:00] _0xvox (id=1501488942195937340)
+    Realize a dumb decision for not including repo link...
+    https://github.com/Fearvox/multica-ultimate-workbench
+    [embed] GitHub - Fearvox/multica-ultimate-workbench: Public multi-agent wor... https://github.com/Fearvox/multica-ultimate-workbench
+
+[2026-05-09T21:47:50.835000+00:00] dalekc72 (id=1502789221314859100)
+    IM0 - Multica is a little more mature and polished.  You can only use Hermes agents  as well vs. Multica.  Just depends on the use case.
+    [reply to isaaclev msg=1500750749477634128]
+

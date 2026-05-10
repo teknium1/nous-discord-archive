@@ -1,0 +1,43 @@
+# Thread 'SYNAPSE SWARM' in forum #community-projects-showcase
+# thread_id=1483106205512634508 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:15.153967+00:00
+
+[2026-03-16T14:14:34.175000+00:00] devorun11 (id=1483106205512634508)
+    Synapse Swarm is not just a passive chatbot; it is an active autonomous AI headquarters that sees, hears, strategizes, and debates internally to provide high-level intelligence.
+    
+    By merging a Local LLM infrastructure with a custom "Frosted Glass" interface, this project was designed to accelerate operational workflows and professional content creation.
+    
+    ** CORE SYSTEM CAPABILITIES**
+    
+    📸 Live Vision Perception: The system doesn't just read text; it utilizes the camera as an active sensor to analyze objects, environments, and context in real-time.
+    
+    🎙️/⌨️ Hybrid Command Module: Operators can issue directives via microphone or use the "Silent Protocol" text input for quiet environments.
+    
+    🇹🇷/🇬🇧 Bilingual Processing: The voice module understands both Turkish and English simultaneously. The system switches between languages in milliseconds for seamless communication.
+    
+    Dynamic Agent Control Panel: No hard-coding required. Via the sidebar, you can instantly re-program the agents' characteristics and mission focus (System Prompts) to match any operation.
+    
+    THE SWARM ARCHITECTURE
+    
+    The system operates using 3 distinct autonomous agents in a Chain-of-Thought workflow:
+    
+     **ZERO **(Vision): The Observer. ZERO scans the visual input and extracts tactical details based on the operator's specific command.
+    
+     **NOVA **(Tactical): The Brain. NOVA takes the visual data from ZERO and formulates unconventional, creative strategies or content plans.
+    
+     **TITAN **(Arbiter): The Judge. TITAN synthesizes the discussion between the first two agents, delivers the final authoritative verdict, and concludes the operation.
+    
+    Synapse Swarm is a next-generation autonomous assistant where image processing, speech recognition, and multi-agent logic converge into a single command center. Ready for inspection
+    X:https://x.com/Devran1An/status/2033392585423696254?s=20   / https://x.com/Devran1An/status/2033393862194889166?s=20
+    G: https://github.com/devorun/synapse-swarm
+    [attachment] Ekran_goruntusu_2026-03-16_060724.png https://cdn.discordapp.com/attachments/1483106205512634508/1483106205755768953/Ekran_goruntusu_2026-03-16_060724.png?ex=6a01e44a&is=6a0092ca&hm=e9a7d3e722a1a666cd14c958d11cb0e5801e8721f667ab0af0713df61d1cf278&
+    [attachment] Ekran_goruntusu_2026-03-16_074035.png https://cdn.discordapp.com/attachments/1483106205512634508/1483106206385180683/Ekran_goruntusu_2026-03-16_074035.png?ex=6a01e44a&is=6a0092ca&hm=95e81630d4d45bcbb9acef1dfa56c9fc5aefa0e26ed993352876145d907f7c2d&
+    [attachment] Ekran_goruntusu_2026-03-16_053350.png https://cdn.discordapp.com/attachments/1483106205512634508/1483106206829514893/Ekran_goruntusu_2026-03-16_053350.png?ex=6a01e44a&is=6a0092ca&hm=01b5d9ecf9bddf229796633a813c29fb9e6f888c4f7513bee1d3f367dfb4eee7&
+    [embed]  https://twitter.com/Devran1An/status/2033392585423696254?s=20
+    [embed]  https://twitter.com/Devran1An/status/2033393862194889166?s=20
+    [embed] GitHub - devorun/synapse-swarm https://github.com/devorun/synapse-swarm
+
+[2026-03-18T13:11:38.463000+00:00] mr.r0b0t.eth (id=1483815144759758929)
+    Added to HermesHub ❤️ https://www.hermeshub.xyz/#/skill/synapse-swarm
+    [embed] HermesHub — Security-Scanned Skills for Hermes Agent https://www.hermeshub.xyz/
+

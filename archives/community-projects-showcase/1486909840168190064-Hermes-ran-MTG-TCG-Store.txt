@@ -1,0 +1,12 @@
+# Thread 'Hermes ran MTG TCG Store' in forum #community-projects-showcase
+# thread_id=1486909840168190064 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:09.007648+00:00
+
+[2026-03-27T02:08:51.345000+00:00] .s0uthpaw (id=1486909840168190064)
+    https://github.com/SouthpawIN/pocket-shop
+    [embed] GitHub - SouthpawIN/pocket-shop: Automated MTG card shop using brow... https://github.com/SouthpawIN/pocket-shop
+
+[2026-03-27T03:48:03.704000+00:00] .s0uthpaw (id=1486934806171353289)
+    EDIT:
+    rewritten as a set of 5 Skills, including a full loop
+

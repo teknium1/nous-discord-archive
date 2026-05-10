@@ -1,0 +1,27 @@
+# Thread 'Hermes TUI HUD' in forum #community-projects-showcase
+# thread_id=1497454939310391409 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:42.349957+00:00
+
+[2026-04-25T04:31:18.899000+00:00] gumbyender (id=1497454939310391409)
+    Just pushed Hermes TUI HUD — a keyboard-first terminal operator console for Hermes Agent.
+    
+    Full-screen Textual HUD with tabs for:
+    • Live Sessions + export
+    • Skills toggle
+    • Config YAML editing
+    • Cron, Logs, Analytics, Env
+    • Multiple cyber themes (Neon, Matrix, Vaporwave…)
+    
+    Stays 100% native to Hermes APIs — no extra data layer.
+    
+    Terminal chads, this one's for you.
+    
+    → https://github.com/GumbyEnder/hermes-tui-hud
+    
+    #HermesAgent #AI #TUI #Terminal
+    [attachment] tui-hud-commands.png https://cdn.discordapp.com/attachments/1497454939310391409/1497454940031946832/tui-hud-commands.png?ex=6a020457&is=6a00b2d7&hm=911fb144a8b70f80871b66f1a9b5c3ad41680a4641655a45cea421aa761081b2&
+    [attachment] tui-hud-logs.png https://cdn.discordapp.com/attachments/1497454939310391409/1497454940480733266/tui-hud-logs.png?ex=6a020457&is=6a00b2d7&hm=b12e361056599f70ffe7a014a4ce8aeae8cf9b4abd77a1863d3e1c357e633253&
+    [attachment] tui-hud-sessions.png https://cdn.discordapp.com/attachments/1497454939310391409/1497454941122330644/tui-hud-sessions.png?ex=6a020457&is=6a00b2d7&hm=cf0d357499ad74d2322df7fda2128c4cbbc54fe088a6d2d9e46db7ca01bb898a&
+    [attachment] tui-hud-tokyo-skills.png https://cdn.discordapp.com/attachments/1497454939310391409/1497454941525114910/tui-hud-tokyo-skills.png?ex=6a020457&is=6a00b2d7&hm=81f1c051e3fb1012648ef257c69047b10be17f7473f38fd14dbb99b6c0343caa&
+    [embed] GitHub - GumbyEnder/hermes-tui-hud https://github.com/GumbyEnder/hermes-tui-hud
+

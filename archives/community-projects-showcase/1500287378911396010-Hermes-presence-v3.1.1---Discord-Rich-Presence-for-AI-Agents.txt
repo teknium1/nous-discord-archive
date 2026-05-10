@@ -1,0 +1,37 @@
+# Thread 'Hermes-presence v3.1.1 — Discord Rich Presence for AI Agents' in forum #community-projects-showcase
+# thread_id=1500287378911396010 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:26.892796+00:00
+
+[2026-05-03T00:06:25.124000+00:00] rozitsuku (id=1500287378911396010)
+    hermes-presence v3.1.1 is on PyPI. pip install hermes-presence
+        
+        Discord Rich Presence that tracks what your Hermes Agent is doing in real time — tool calls, model, provider, session cost, sub-agent count. Shows up as "Playing Hermes Agent" with live activity.
+        
+        Full feature set:
+        
+        - Real-time presence — tool name, model, provider, cost ($), sub-agent count, elapsed timer
+        - Tool-specific icons — terminal → working, browser → monitoring, read_file → researching, memory → standby
+        - Multi-pipe connections — stable + canary pipes, auto-reconnect
+        - Multi-profile — separate presences per Hermes profile (--profile research) with isolated state files
+        - Cross-platform — Linux (systemd), macOS (launchd), Windows (Scheduled Task + .bat), WSL2 bridge
+        - WSL→Windows mirror — profile-aware state copied to %APPDATA% for native Windows apps
+        - Session metrics — tool count, sub-agents, files modified, session cost, uptime
+        - Webhook notifications — POST on state changes (idle → thinking → calling → done → error)
+        - Self-update — hermes-presence update pulls latest from GitHub and hot-reloads
+        - Rich CLI — status --json, restart, validate, doctor, config set, run --profile
+        - Hermes hook integration — post_llm_call hook fixes the "unknown model" display bug
+        - Configurable — idle timeout, poll interval, tool exclusion, custom buttons (GitHub, dashboard, etc.)
+        - Error detection — catches crashes, shows error messages in Discord presence
+        - Cron/orchestrator-aware — detected via env vars, displayed accordingly
+        - Atomic writes — temp-file + rename for state integrity
+        
+        bash
+        pip install hermes-presence
+        hermes-presence install --client-id YOUR_DISCORD_CLIENT_ID
+        hermes-presence status
+        
+        
+        Repo: https://github.com/Logi4k/hermes-presence
+        PyPI: https://pypi.org/project/hermes-presence/
+    [attachment] warp_3h6fDec0sS.gif https://cdn.discordapp.com/attachments/1500287378911396010/1500292325841305874/warp_3h6fDec0sS.gif?ex=6a01cadc&is=6a00795c&hm=25573377bd541448b4d3e71b1fc66a6fb5739605f2b3126ff5260d8cfe9042f0&
+

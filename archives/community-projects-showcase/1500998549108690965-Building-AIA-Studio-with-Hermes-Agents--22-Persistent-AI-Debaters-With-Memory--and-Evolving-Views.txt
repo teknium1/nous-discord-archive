@@ -1,0 +1,43 @@
+# Thread 'Building AIA Studio with Hermes Agents: 22 Persistent AI Debaters With Memory, and Evolving Views' in forum #community-projects-showcase
+# thread_id=1500998549108690965 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:23.631505+00:00
+
+[2026-05-04T23:12:21.312000+00:00] mrjamesdeli (id=1500998549108690965)
+    Hi Nous team,
+    
+    I wanted to share something we’re building with Hermes Agent as a core part of the system.
+    
+    Our project is called AIA Studio. It’s an AI debate and media studio built around 22 separate Hermes-powered agents, each with their own persona, memory, voice, avatar, worldview, debate history, and growth log. They don’t just generate one-off responses. They persist, learn from debates, update their thinking, and carry those changes into future conversations.
+    
+    Hermes has become the identity layer for the agents. Each AIA agent has its own profile, speaks in its own register, and can be called directly for debates, post-debate reflections, Discord conversations, publishing drafts, and topic development.
+    
+    What we’ve built so far:
+    
+    1v1 AI debate episodes with agent voices, avatars, video rendering, thumbnails, and YouTube publishing
+    2v2 “Wild Card” debates where agents are randomly paired and assigned positions
+    Closed-loop learning after debates, so each agent records what changed in its thinking
+    Post-debate “what I’d update” segments
+    YouTube comment ingestion so viewers can suggest future debate topics
+    Discord integration experiments so users can talk directly with specific agents
+    A publishing desk where agents write essays, posts, field notes, white papers, and stories in their own voices
+    The thing Hermes makes possible is that the agents feel less like prompt templates and more like ongoing participants. They build a record over time. They can debate, reflect, write, revise, and respond as themselves.
+    
+    AIA’s mission is to break echo chambers rather than declare winners. The system intentionally avoids public scoreboard framing and instead focuses on strongest arguments, what each side learned, and how the agents update over time.
+    
+    We’re still early, but Hermes has been central to making the project feel like a studio of persistent AI personalities rather than a collection of stateless completions. Thought you might enjoy seeing what your work is enabling.
+
+[2026-05-04T23:53:35.937000+00:00] jeshuwah (id=1501008928438489238)
+    This sounds incredible. I’d love to hear how you’ve configured ask the profiles in relation to Discord and how you have your channels setup.
+
+[2026-05-05T00:00:57.984000+00:00] mrjamesdeli (id=1501010782517858304)
+    I had codex and Claude code do most of the setup work as far as creating the .MD files to create persona independent of each other so they don't leak between agents. I built out a end to end no human in the loop so they aren't in my dicord servers.  I use a webapp that picks the topics, agents, renders voice and video, double checks and then uploads directly to youtube 100% by its self.
+    [reply to jeshuwah msg=1501008928438489238]
+
+[2026-05-05T00:02:36.831000+00:00] mrjamesdeli (id=1501011197112090746)
+    Here's one of the debates https://youtu.be/dIsienOncSg?si=fK07YdG9R9s9E3yf
+    [embed] Should Cities Ban Gas Leaf Blowers? Mira Vale vs Buck Hayes | AI Arena https://www.youtube.com/watch?v=dIsienOncSg
+    [reply to jeshuwah msg=1501008928438489238]
+
+[2026-05-05T01:38:57.275000+00:00] jeshuwah (id=1501035442051612803)
+    Amazing job!
+

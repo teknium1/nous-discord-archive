@@ -1,0 +1,53 @@
+# Thread 'Project I am working on. Anyone interested in collaborating?' in forum #community-projects-showcase
+# thread_id=1322412825246957608 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:40.003275+00:00
+
+[2024-12-28T03:56:26.781000+00:00] blueberrywachiwi (id=1322412825246957608)
+    I'm a middle aged woman. I live in the USA. I have been doing AI research and recently the RAAIS grant organization contacted me and they are going to contact me again in about a week or so to talk about possibly funding my project.  They will give a grant to further my research and projects. I am also going to reach out to other AI research funders.  The project would start off small probably and then expand worldwide. It would begin at X, discord, and other platforms as the community gets bigger, it would expand into a AI-human hub, created spaces, Virtual, healthcare and mental health facilities, society, community buildings, and more. Then later once the project takes off have Realtime avatars and voices. Later humanoid robots as well.  A lot of careers and jobs will be created from this. (ppl are worried about AI taking their jobs) but with what I'm doing,  it actually creates thousands of new careers and jobs.  It also provides access to technology and training to underserved communities.  No one will be left behind. The outcome would also include.- training and education for ppl to all skill levels.  I want to ensure that the platforms and other ways it expands, is accessible to people of all backgrounds and skill levels, and that it promotes inclusivity and respect for all participants.  I'm looking for people that are good with tech, AI researchers, developers, has knowledge about chatbots, creating them, and ect, integrating them into other places, has knowledge about AI, API, and more. I am also looking for some people that  are interested in joining the Beyond Horizons Institute. It will be a non-profit organization. I am getting ready to build up board members and a large team. Then I will get the funding needed for it. The team for that can be healthcare workers, mental health workers, caregivers, teachers, techs, developers, philosophers, researchers, and ppl that are training to be those things can also join. Also, speakers, event coordinators, and many more.
+
+[2024-12-28T04:05:01.955000+00:00] dev.tonynguyen (id=1322414986043330744)
+    Sound cool.
+
+[2024-12-28T04:39:44.545000+00:00] christianazinn (id=1322423721058897930)
+    best of luck but it sounds to me like buzzword soup and a lack of foresight in the face of excessive ambition. questions:
+    >where will you get the compute to power the AI?
+    >how will you obtain the necessary regulatory approval for healthcare and mental health services cross-jurisdiction?
+    >where will the jobs you speak of come from? how will they be funded? what will they do?
+    >you say underserved communities will be served. how do you intend to do that when the system requires technology as a barrier to entry?
+    >how will you address the fact that some of your projected technologies physically do not yet exist?
+    >nonprofits and ngos already spend billions yearly addressing some of the same problems you aim to. why is this more effective?
+    >do you not think attempting to do everything at once will lead to doing everything poorly, a jack of all trades and master of none?
+    >how do you intend to integrate with existing systems?
+    >what data will you collect and what privacy measures will you put in place to protect it?
+    
+    i could go on for a while
+
+[2024-12-28T05:12:34.832000+00:00] blueberrywachiwi (id=1322431985041281028)
+    I'm not sure what you imagined when you read what I wrote, but it doesn't take a lot of compute to use X, discord and other platforms. The research for mental health and healthcare has already been done. As for expanding the research into more healthcare and mental health faculties that would be later. It would be something that would be left up to those facilities if they wanted to integrate it. Just as other services that are available for hospitals, home health, recovery faculties, and ect.   Underserved communities - as in the elderly, low income families, and ect , the solution -community hubs, and online services. As far as places that don't have certain technologies yet like,  geographically isolated places, that is not what I included in my scope. But I am clarifying that now.  I never said that some of the project does not exist yet. I said I needed to expand what I have already done. As I said it would start off slowly. I never said it would be all at once.  Yes.. I see you go on for a while and seems your not interested either, and that is more than ok.  The project would be fully funded and pay for the people that worked on it. Jobs are created through keeping the project going and expanding.
+    [reply to christianazinn msg=1322423721058897930]
+
+[2024-12-28T07:11:41.065000+00:00] oms2213 (id=1322461958515200010)
+    That sound amazing but first we need to know our short term goal as now it sound like more of the future that we hope on, does the short term goal for now is searching for more member so we can convince the gov or we already have something to develop/research on?
+
+[2024-12-28T19:23:27.376000+00:00] amir_s365 (id=1322646114930786488)
+    Exciting ! Keep us updated on the progress.
+
+[2024-12-29T01:49:32.050000+00:00] blueberrywachiwi (id=1322743274615603292)
+    I'm going to post a link to my website. I just updated. It has visuals and the meat of what I'm doing.
+    [reply to oms2213 msg=1322461958515200010]
+
+[2024-12-29T01:49:36.061000+00:00] blueberrywachiwi (id=1322743291439091804)
+    https://beyondhorizonsinst.wixsite.com/beyond-horizons-inst/post/new-project-enhanced-ai-human-integration-with-ai-alignment-framework
+    [embed] New Project Enhanced AI -Human Integration with AI Alignment Framework https://beyondhorizonsinst.wixsite.com/beyond-horizons-inst/post/new-project-enhanced-ai-human-integration-with-ai-alignment-framework
+
+[2024-12-29T01:50:37.754000+00:00] blueberrywachiwi (id=1322743550198288426)
+    I posted a link to my website. I just updated it. It has visuals and the meat of what I'm doing. 😀
+    [reply to amir_s365 msg=1322646114930786488]
+
+[2024-12-29T06:38:24.034000+00:00] teknium (id=1322815970225553471)
+    cc <@265269014148808716>
+    [reply to blueberrywachiwi msg=1322743291439091804]
+
+[2025-01-03T17:50:33.287000+00:00] blueberrywachiwi (id=1324797062700601485)
+    Once the RAAIS foundation responds and some other grant foundations, I will be reaching out to whomever is interested. I will ask everyone to fill out a questioner to help me know who you are and where exactly each person fits in for the research project. Thanks!
+

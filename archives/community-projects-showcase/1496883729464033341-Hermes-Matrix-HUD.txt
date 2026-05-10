@@ -1,0 +1,8 @@
+# Thread 'Hermes Matrix HUD' in forum #community-projects-showcase
+# thread_id=1496883729464033341 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:44.019114+00:00
+
+[2026-04-23T14:41:31.859000+00:00] gumbyender (id=1496883729464033341)
+    I realize there are a thousand and I bounce between mine and the built in one - still - if you can gain something useful from this, have at it! https://github.com/GumbyEnder/hermes-dashboard-matrix-plus
+    [embed] GitHub - GumbyEnder/hermes-dashboard-matrix-plus: An attractive das... https://github.com/GumbyEnder/hermes-dashboard-matrix-plus
+

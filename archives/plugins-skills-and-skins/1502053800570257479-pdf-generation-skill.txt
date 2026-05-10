@@ -1,0 +1,9 @@
+# Thread 'pdf generation skill' in forum #plugins-skills-and-skins
+# thread_id=1502053800570257479 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:00.752405+00:00
+
+[2026-05-07T21:05:32.866000+00:00] gluedmosquito (id=1502053800570257479)
+    https://github.com/slapash/weasyprint-pdf-skill
+    based on templates you can generate good pdfs without fighting a browser
+    [embed] GitHub - slapash/weasyprint-pdf-skill: Hermes/skills.sh skill and s... https://github.com/slapash/weasyprint-pdf-skill
+

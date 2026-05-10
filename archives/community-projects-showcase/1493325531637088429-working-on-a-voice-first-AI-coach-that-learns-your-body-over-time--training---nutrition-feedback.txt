@@ -1,0 +1,25 @@
+# Thread 'working on a voice-first AI coach that learns your body over time (training + nutrition feedback' in forum #community-projects-showcase
+# thread_id=1493325531637088429 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:11.811252+00:00
+
+[2026-04-13T19:02:31.389000+00:00] muschi2396 (id=1493325531637088429)
+    most people train hard but have no idea what’s happening in their body
+    
+    so i built an AI agent that actually learns it over time
+    
+    you tell it things like:
+    “leg day, sore in glutes not quads”
+    “ate x today”
+    “low energy”
+    
+    and it starts connecting the dots:
+    training → nutrition → recovery → performance
+    
+    then tells you:
+    “if you do this now, next session will be better”
+    
+    it runs on telegram, voice-first, no tracking friction
+    
+    looking for people who lift consistently and want to try something different
+    [attachment] agent_hermes.PNG https://cdn.discordapp.com/attachments/1493325531637088429/1493325532098724051/agent_hermes.PNG?ex=6a0227c7&is=6a00d647&hm=0dc8a6ae17d1320749f734ffb92e26bc2386ac9f29bdc4d2d61e8de04d23fab8&
+

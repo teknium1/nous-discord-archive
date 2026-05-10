@@ -1,0 +1,57 @@
+# Thread 'Discover Cultural Comparisons Between Countries' in forum #community-projects-showcase
+# thread_id=1370108851034259456 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:38.350170+00:00
+
+[2025-05-08T18:43:25.478000+00:00] 0xmyopic (id=1370108851034259456)
+    https://culture-alpha.vercel.app/
+    Today, the world is more connected than ever before.
+    But these connections aren't sustainable without a true understanding of cultural differences.
+    
+    That’s why me developed Culture
+    
+    Powered by the Nous Research API, this platform visualizes and interprets cultural data in a way that anyone can understand.
+    
+    From academia to the business world, cross-cultural awareness is no longer a choice — it’s a necessity.
+    Feel free to test it out and let me know if you have any issues or suggestions. Thank you!
+
+[2025-05-08T18:46:21.977000+00:00] teknium (id=1370109591324590253)
+    Hey it works - nice job 🙂
+    [reply to 0xmyopic msg=1370108851034259456]
+
+[2025-05-08T18:46:23.016000+00:00] teknium (id=1370109595682607104)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1370108851034259456/1370109595414036570/image.png?ex=6a0223fe&is=6a00d27e&hm=9f59ece127ecbafa1ed764c7b8f18820e5c12a8d2e7a4f5aa9bb4bb0e8f8a31b&
+
+[2025-05-08T19:02:54.822000+00:00] 0xmyopic (id=1370113755618480281)
+    Thank you !
+
+[2025-05-14T09:58:25.159000+00:00] bynextex (id=1372151056313614336)
+    Good job congratulations
+    [reply to 0xmyopic msg=1370108851034259456]
+
+[2025-05-15T07:13:50.007000+00:00] 0xmyopic (id=1372472024789811372)
+    Thank you for your feedback 🙌
+    [reply to bynextex msg=1372151056313614336]
+
+[2025-05-25T17:30:55.045000+00:00] con7701 (id=1376251197710663761)
+    tested it out today, nice job man
+    [reply to 0xmyopic msg=1370108851034259456]
+
+[2025-05-27T19:46:41.361000+00:00] 0xmyopic (id=1377010141567651941)
+    Thank you mate !
+    [reply to con7701 msg=1376251197710663761]
+
+[2025-05-30T00:46:20.384000+00:00] con7701 (id=1377810326787199026)
+    Also, did you host that website for free? Or do you actively have to pay to host the website?
+    [reply to 0xmyopic msg=1377010141567651941]
+
+[2025-05-30T07:42:17.737000+00:00] 0xmyopic (id=1377915005512716290)
+    No, it is completely free. Vercel app is there for this purpose. You upload the project you have built to github, connect to your Vercel app account with github and deploy it.
+    [reply to con7701 msg=1377810326787199026]
+
+[2025-05-30T14:37:15.843000+00:00] con7701 (id=1378019435738038272)
+    Thanks mate!
+    [reply to 0xmyopic msg=1377915005512716290]
+
+[2025-06-03T08:34:08.920000+00:00] 0xpedzino (id=1379377606222151781)
+    haha an app i never knew i needed!
+

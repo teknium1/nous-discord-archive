@@ -1,0 +1,22 @@
+# Thread 'Built a simulated arbitration case using Leviathan AEP.' in forum #community-projects-showcase
+# thread_id=1501848172723572846 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:18.042818+00:00
+
+[2026-05-07T07:28:27.367000+00:00] ccy0573 (id=1501848172723572846)
+    The agent was only allowed to trade within a $200k limit, but executed a $1M+ position with 8.7% slippage.
+    
+    AEP reconstructed:
+    • original intent
+    • policy boundary
+    • execution path
+    • responsibility verdict
+    • on-chain proof trail
+    
+    Currently testing the arbitration dashboard before public release.
+    
+    GitHub:
+    https://github.com/LeviathanMatrix/Leviathan-Frontier
+    [attachment] 8b523f7b1cfa5c8f9e28fd92aec4cee1.jpg https://cdn.discordapp.com/attachments/1501848172723572846/1501848173063307415/8b523f7b1cfa5c8f9e28fd92aec4cee1.jpg?ex=6a022ddb&is=6a00dc5b&hm=ed1b50c327968a9a0787ea01e29c296c37087e202d218f96605d5b98075fa7a6&
+    [attachment] IMG_2145.jpg https://cdn.discordapp.com/attachments/1501848172723572846/1501848173507776633/IMG_2145.jpg?ex=6a022ddb&is=6a00dc5b&hm=fd3bc0966e07c74bdd0b8b9577fbd6f88847b2cd25aa369a2564fb57f36012b3&
+    [embed] GitHub - LeviathanMatrix/Leviathan-Frontier: The open execution-con... https://github.com/LeviathanMatrix/Leviathan-Frontier
+

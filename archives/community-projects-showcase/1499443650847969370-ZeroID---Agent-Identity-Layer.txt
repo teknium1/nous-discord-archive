@@ -1,0 +1,7 @@
+# Thread 'ZeroID - Agent Identity Layer' in forum #community-projects-showcase
+# thread_id=1499443650847969370 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:33.654038+00:00
+
+[2026-04-30T16:13:44.678000+00:00] justin_albrethsen (id=1499443650847969370)
+    One of the problems I run into with Hermes is high cost when context windows fill up, one method to fix this is heavy use of sub-agents, but permissions/scope delegation to the sub-agent is often problematic. ZeroID is an agent identity layer that uses RFC 8693 token exchange to handle scope delegation with sub-agents. Check it out here https://github.com/highflame-ai/zeroid. It is fully open source. I am looking to add a Hermes integration for this, I would welcome any help from this community
+

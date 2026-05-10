@@ -1,0 +1,104 @@
+# Thread 'Converse: chat before your agent acts' in forum #plugins-skills-and-skins
+# thread_id=1501531131734917170 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:02.253572+00:00
+
+[2026-05-06T10:28:38.905000+00:00] ibrandis (id=1501531131734917170)
+    🛑 My Hermes agent used to start executing the moment I hit enter.
+    
+    I'd describe a vague idea and it would immediately start writing files, calling tools, making changes I hadn't fully thought through yet.
+    
+    So I built converse mode. One plugin, two commands. The agent won't touch a single tool until you say so.
+    
+    **The problem it solves:**
+    
+    Agents are fast. Too fast. You type half an idea and they're already three steps deep. What you actually need is a thinking partner that asks the right questions before it does anything.
+    
+    **How it works:**
+    
+    `/converse` flips the agent into discussion-only mode. It asks clarifying questions, surfaces tradeoffs, pushes back on unclear requirements. Tools are blocked at the hook level. It physically cannot execute even if the model tries.
+    
+    `/go` flips execution back on with the full conversation baked into context. No re-explaining. No re-scoping.
+    
+    **Every response in converse mode ends with:**
+    
+    ```
+    Plan so far:
+    GOAL: ...
+    IN SCOPE: ...
+    OUT OF SCOPE: ...
+    OPEN QUESTIONS: ...
+    NEXT STEPS: ...
+    ```
+    
+    You always know exactly where the conversation has landed before you pull the trigger.
+    
+    **What you get:**
+    
+    🔒 Tool calls blocked at hook level. Model can't sneak past it.
+    🧠 Pre-LLM injection. Scoping instructions baked in before every call.
+    📋 Structured plan recap after every turn
+    ⚡ Zero external dependencies. Pure Python, no installs.
+    🔧 Two hooks: `pre_llm_call` + `pre_tool_call`
+    🧵 Thread-safe, per-session. Works across concurrent users.
+    
+    **Install in two lines:**
+    
+    ```bash
+    hermes plugins install ibrahimokdadov/hermes-plugin-converse
+    hermes plugins enable converse
+    ```
+    
+    Then:
+    
+    ```
+    /converse    → start scoping, tools blocked
+    /go          → execute with full context
+    ```
+    
+    MIT license. No subscriptions. No network calls. The agent just waits until you're ready.
+    
+    📦 Repo: https://github.com/ibrahimokdadov/hermes-plugin-converse
+    
+    ⭐ Star it if you've ever watched your agent break something before you finished the sentence.
+    [embed] GitHub - ibrahimokdadov/hermes-plugin-converse: Hermes agent plugin... https://github.com/ibrahimokdadov/hermes-plugin-converse
+
+[2026-05-06T14:44:43.840000+00:00] soorajkun_16 (id=1501595576943382659)
+    Same here, I have to remind Hermes to pause and plan before building every single time. The second I forget to say “don’t start writing files yet,” it’s already three steps ahead. Really hoping this plugin fixes that!
+
+[2026-05-06T14:49:48.197000+00:00] kunn_sec (id=1501596853509165246)
+    Does it do things similar to Pocock's grill-me skill?
+    
+    And does it creates tickets in hermes kanban board or in Beads or just goes straight ahead ?
+
+[2026-05-06T21:34:22.260000+00:00] ibrandis (id=1501698666308702339)
+    i havent tried pococks tbh. as for tickets and kanban no but you can customize it. i wanted a simple chat before execution
+    [reply to kunn_sec msg=1501596853509165246]
+
+[2026-05-07T02:21:41.340000+00:00] phospheneoverdrive (id=1501770972250767471)
+    Hey, had my HA look this over. This is the type of functionality/mode I find useful! This is what the agent reported. Grain of salt and all that. I’m going to give it a shot regardless!
+    
+    ---
+    
+    Solid idea but has some issues:
+    
+    `_ctx_ref` is global — last session to register wins. if you're running the gateway with multiple sessions active, `/go` in one session will inject into whoever registered last. race condition that'll bite you in multi-user setups.
+    
+    session IDs also never get cleaned up from the set if the session dies unexpectedly. no hook for that, so it'll grow unbounded if people use converse and then crash or force close.
+    
+    `/go` also fires regardless of whether converse mode was ever on, which could be confusing.
+    
+    and `inject_message` is called with `role="user"` but nothing confirms that API actually accepts that kwarg — could be silently failing.
+    
+    overall it's a good pattern and the README is well written, but the ctx ref thing is a real bug worth fixing before anyone depends on it in a gateway environment.
+
+[2026-05-07T23:34:53.970000+00:00] jimpickens3203 (id=1502091386164609045)
+    Can you give feedback without having a Ai generate it for you. It shouldn’t be that hard to think for yourself
+    [reply to phospheneoverdrive msg=1501770972250767471]
+
+[2026-05-08T00:03:44.458000+00:00] phospheneoverdrive (id=1502098644357353623)
+    You're right, sorry. I'll give better feedback after using it more
+    [reply to jimpickens3203 msg=1502091386164609045]
+
+[2026-05-10T14:35:03.173000+00:00] phospheneoverdrive (id=1503042692911988756)
+    Been using this a bit. Works well but multi session does indeed cause issues (if one session is set to /converse, all get set so it interferes with other sessions trying to do work). Otherwise very cool so far!
+

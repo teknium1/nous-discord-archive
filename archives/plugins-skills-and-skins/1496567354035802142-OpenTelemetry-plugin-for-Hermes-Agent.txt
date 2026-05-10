@@ -1,0 +1,30 @@
+# Thread '🔭 OpenTelemetry plugin for Hermes Agent 🔭' in forum #plugins-skills-and-skins
+# thread_id=1496567354035802142 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:17.399943+00:00
+
+[2026-04-22T17:44:22.079000+00:00] brian4983 (id=1496567354035802142)
+    https://github.com/briancaffey/hermes-otel
+    This plugin sends traces, metrics and logs to one or more OpenTelemetry collectors. It collects both session and cron job data. I have tested a bunch of different OTel collectors: Phoenix, Langfuse, LangSmith, SigNoz, Jaeger, Tempo/LGTM. The repo includes docker compose references for each backend. There are a few different PRs in the hermes-agent github repo that add OpenTelemetry, but I think this can be handled by an plugin that listens to hooks. 
+    
+    One limitation is that the pre/post api request hooks do not include the input ouput for intermediary LLM requests. You also don't have a way to view the system prompt since it is not provided in the hooks. You *can* see the input/output from the post_llm_call hook. 
+    
+    I'm curious to know how others are doing observability for hermes agent. 
+    
+    Here a GitHub pages documentation site for the hermes-otel plugin: https://briancaffey.github.io/hermes-otel/
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496567354035802142/1496571446179401918/image.png?ex=6a021945&is=6a00c7c5&hm=1aeca9bba858b3ad2185456c5028eee85c609255706ff6754b45f7225ed06d0f&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496567354035802142/1496571453825487092/image.png?ex=6a021947&is=6a00c7c7&hm=21855af0ca91cece5349d771c4281b9df089da08fef446b6b9fafad49aaab26b&
+    [embed] GitHub - briancaffey/hermes-otel: OTel Plugin for Hermes Agent https://github.com/briancaffey/hermes-otel
+    [embed] hermes-otel https://briancaffey.github.io/hermes-otel/
+
+[2026-04-22T18:00:55.201000+00:00] brian4983 (id=1496571519491506307)
+    here is an example: I have configured both OpenObserve and Grafana Tempo and hermes-otel can send the same trace to both collectors.
+
+[2026-04-22T18:01:33.948000+00:00] brian4983 (id=1496571682008334356)
+    here is the hyperframes video introducing the hermes-otel plugin
+    [attachment] video_2026-04-22_13-53-03.mp4 https://cdn.discordapp.com/attachments/1496567354035802142/1496571681752354936/video_2026-04-22_13-53-03.mp4?ex=6a02197d&is=6a00c7fd&hm=6d3a2dfd18b919812173c21d58f01f744d64c9c2898b77aa2fe8b97d8e255ca4&
+
+[2026-04-24T01:45:58.582000+00:00] brian4983 (id=1497050942619521196)
+    I didn't realize that plugins can add dashboard pages! Here is the hermes dashboard pages for the otel plugin
+    [attachment] IMG_5707.png https://cdn.discordapp.com/attachments/1496567354035802142/1497050941474476163/IMG_5707.png?ex=6a01dd96&is=6a008c16&hm=b1412cb005f210b23661ba56efbe46615048c5e09402b5bea407311cb1d1ab79&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496567354035802142/1497050942154080336/image.png?ex=6a01dd96&is=6a008c16&hm=2e3f0d839e4b006e42e32745b555accb8108755195498d1db764ca563d5d4e1c&
+

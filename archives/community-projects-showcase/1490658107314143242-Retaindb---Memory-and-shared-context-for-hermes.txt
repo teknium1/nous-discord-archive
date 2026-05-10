@@ -1,0 +1,52 @@
+# Thread 'Retaindb - Memory and shared context for hermes' in forum #community-projects-showcase
+# thread_id=1490658107314143242 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:40.195116+00:00
+
+[2026-04-06T10:23:07.872000+00:00] alameenpd (id=1490658107314143242)
+    We just pushed a big update to the RetainDB integration.
+    
+    This goes beyond “memory that works” and turns Hermes into a system where agents can persist and share context across sessions and across each other.
+    
+    What’s new
+    
+    Reliable memory
+    All routes fixed and writes are now durable. Every turn is queued locally before sending, so nothing is lost on crashes or network issues.
+    
+    No latency
+    Memory writes don’t block the agent loop anymore. Everything flushes in the background with retry.
+    
+    Smarter context
+    Instead of just recall, RetainDB prepares context ahead of time:
+    
+    relevant long term memory
+    a synthesized understanding of the user
+    a persistent self model for the agent
+    
+    Shared files
+    Agents now share a file system:
+    rdb://files/org/...
+    
+    They can upload, read, list, ingest, and delete files. Anything uploaded by one agent is available to others.
+    
+    Files become memory
+    After ingest, documents are parsed, embedded, and turned into memory. They show up in the same memory search. No separate pipeline.
+    
+    What this enables
+    
+    agents that don’t reset every session
+    real multi agent workflows
+    documents that become usable context
+    shared knowledge across a project or org
+    
+    Most tools stop at storing chats.
+    
+    RetainDB now handles memory, files, and shared context in one system. its in built in hermes , ust ru hermes memory setup and if youre building ai agents check out https://retaindb.com
+    [embed] RetainDB — Persistent Memory for AI Agents | SOTA on LongMemEval https://retaindb.com/
+
+[2026-04-06T16:37:28.143000+00:00] amazon1148 (id=1490752312518643875)
+    How do we think about RetainDB versus Honcho?
+
+[2026-04-06T17:16:15.283000+00:00] alameenpd (id=1490762073250988042)
+    Time will tell but you can also tell by trying both
+    [reply to amazon1148 msg=1490752312518643875]
+

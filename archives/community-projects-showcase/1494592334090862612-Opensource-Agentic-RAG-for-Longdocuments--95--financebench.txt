@@ -1,0 +1,26 @@
+# Thread 'Opensource Agentic RAG for Longdocuments (95% financebench)' in forum #community-projects-showcase
+# thread_id=1494592334090862612 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:02.614646+00:00
+
+[2026-04-17T06:56:20.630000+00:00] shhdwi7162 (id=1494592334090862612)
+    hey! I just open-sourced NanoIndex, an agentic RAG harness built for long financial and legal documents. thought this community would find the architecture interesting.
+    
+    most RAG systems fail on long docs because they get extraction wrong before retrieval even starts. flatten a 200-page report into chunks and you lose the structure the answer depends on.
+    
+    NanoIndex indexes documents as trees and builds domain-specific entity graphs in a single indexing call. the agentic harness navigates structure at query time: breaks the question into required data points, reads the document outline, retrieves in multiple rounds, checks sufficiency, verifies arithmetic before returning anything.
+    
+    two modes:
+    - fast mode: entity graph traversal, 2 LLM calls, queries in 10 seconds
+    - agentic mode: full tree navigation, multi-round retrieval, sufficiency checks
+    
+    95% on FinanceBench. 96% on DocBench Legal.
+    
+    benchmarks are verifiable. the demo shows the actual questions, retrieved tree nodes, and ground truth side by side.
+    
+    demo: https://nanoindex.nanonets.com/demo
+    github: https://github.com/NanoNets/nanoindex
+    
+    happy to get into the agent architecture if anyone's curious.
+    [embed] NanoIndex - Open Source Agentic RAG for Long Documents https://nanoindex.nanonets.com/demo
+    [embed] GitHub - NanoNets/nanoindex: Agentic RAG Harness for long documents... https://github.com/NanoNets/nanoindex
+

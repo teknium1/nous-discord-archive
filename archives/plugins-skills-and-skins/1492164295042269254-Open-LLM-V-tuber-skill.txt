@@ -1,0 +1,12 @@
+# Thread 'Open LLM V tuber skill' in forum #plugins-skills-and-skins
+# thread_id=1492164295042269254 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:38.160553+00:00
+
+[2026-04-10T14:08:11.010000+00:00] 123mikeyd (id=1492164295042269254)
+    https://github.com/123mikeyd/hermes-vtuber
+    [attachment] Timeline_1.mp4 https://cdn.discordapp.com/attachments/1492164295042269254/1492164296225067210/Timeline_1.mp4?ex=6a01e2cb&is=6a00914b&hm=b1e4e656a8d907904d1e037b4afb92f137a296efcbf0d3ec6d947d4c715eee5e&
+    [embed] GitHub - 123mikeyd/hermes-vtuber: Hermes Agent integration for Open... https://github.com/123mikeyd/hermes-vtuber
+
+[2026-04-10T14:09:21.499000+00:00] 123mikeyd (id=1492164590694306033)
+    I got it started and might need someone to clean it up.
+

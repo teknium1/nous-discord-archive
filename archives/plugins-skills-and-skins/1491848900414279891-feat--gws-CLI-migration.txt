@@ -1,0 +1,16 @@
+# Thread 'feat: gws CLI migration' in forum #plugins-skills-and-skins
+# thread_id=1491848900414279891 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:40.615281+00:00
+
+[2026-04-09T17:14:55.071000+00:00] spideystreet (id=1491848900414279891)
+    yo guys just opened a PR for #411 (gws migration)
+    
+    Took a different approach than #1403 , full delegation to gws instead of hybrid, and using GOOGLE_WORKSPACE_CLI_TOKEN for auth bridging since CREDENTIALS_FILE doesn't work with Hermes' token format 
+    4 files, backward-compatible CLI interface
+    
+    Would love feedback
+    
+    https://github.com/NousResearch/hermes-agent/pull/6713
+    [attachment] google-logo.jpg https://cdn.discordapp.com/attachments/1491848900414279891/1491848900838166720/google-logo.jpg?ex=6a020e8f&is=6a00bd0f&hm=e3b48318e1c0247551220849c68eee1e9dc89f90ae9aca5e3e26d5f1c8eeead3&
+    [embed] feat(skills): migrate google-workspace to gws CLI backend by spidey... https://github.com/NousResearch/hermes-agent/pull/6713
+

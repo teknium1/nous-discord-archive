@@ -1,0 +1,29 @@
+# Thread 'Meta Ads Kit for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1499394737088626810 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:09.481001+00:00
+
+[2026-04-30T12:59:22.729000+00:00] masonjames (id=1499394737088626810)
+    Yesterday Meta released their official CLI & MCP so I built a Hermes skill pack to connect and provide some great defaults:
+    https://x.com/masonjames/status/2049833615190561225?s=20
+    
+    Source:
+    https://github.com/masonjames/meta-ads-kit
+    
+    An open-source AI ad manager that replaces 20 minutes of Ads Manager clicking with a 2-minute summary over coffee.
+    
+    Monitor → Detect Fatigue → Find Winners → Shift Budget → Generate Copy → Upload to Meta → Repeat
+    
+    This kit helps with the full Meta Ads management loop:
+    
+    Morning briefing — spend pacing, active campaigns, 7-day trends
+    Find bleeders — ads with high spend + low CTR bleeding your budget
+    Spot winners — top performers ready to scale
+    Detect fatigue — CTR declining, frequency climbing, CPC rising
+    Generate copy — AI writes ad copy matched to your actual image creatives
+    Upload to Meta — push new ads straight to your account via Graph API
+    Pixel + CAPI audit — audit tracking, test server-side events, optimize Event Match Quality
+    Take action — pause, resume, adjust budgets, or change tracking only after your approval
+    The result: a full ad management loop without opening Ads Manager for every check.
+    [embed]  https://twitter.com/masonjames/status/2049833615190561225?s=20
+    [embed] GitHub - masonjames/meta-ads-kit: Open source AI ad manager. Use He... https://github.com/masonjames/meta-ads-kit
+

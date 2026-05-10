@@ -1,0 +1,10 @@
+# Thread 'NanoGPT TikTok scraper skill' in forum #community-projects-showcase
+# thread_id=1501590566281019433 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:20.107875+00:00
+
+[2026-05-06T14:24:49.205000+00:00] jcrabapple (id=1501590566281019433)
+    Scrape TikTok hashtags, profiles, keyword searches, and video URLs — with full ASR transcripts — through NanoGPT billing.
+    
+    https://github.com/jcrabapple/hermes-skills/tree/main/nanogpt-tiktok
+    [embed] hermes-skills/nanogpt-tiktok at main · jcrabapple/hermes-skills https://github.com/jcrabapple/hermes-skills/tree/main/nanogpt-tiktok
+

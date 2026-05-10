@@ -1,0 +1,14 @@
+# Thread 'Hermes AdGuard Home Plugin' in forum #plugins-skills-and-skins
+# thread_id=1487973263455031296 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:53.298051+00:00
+
+[2026-03-30T00:34:31.214000+00:00] anibal3608 (id=1487973263455031296)
+    I created also plugin for AdGuard Home, to browse faster without ads on the web 🙂 
+    Is needed to install and configure adguarhome first, and then install and enable plugin on Hermes
+    
+    https://github.com/anibalardid/hermes-plugin-adguard-home
+    [embed] GitHub - anibalardid/hermes-plugin-adguard-home https://github.com/anibalardid/hermes-plugin-adguard-home
+
+[2026-03-30T04:32:54.842000+00:00] ungergames (id=1488033257219166258)
+    So this just skips the nonsense.
+

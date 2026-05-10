@@ -1,0 +1,11 @@
+# Thread 'COCO-CONVERTER' in forum #community-projects-showcase
+# thread_id=1397694923670552596 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:37.066444+00:00
+
+[2025-07-23T21:40:37.719000+00:00] brokingsandelsar (id=1397694923670552596)
+    if anybody has a csv file or a folder (subfolder structure) of images and they want them for an object detection task, I made  a python script that takes either of the data formats and converts them to a json file with COCO -like  annotations  and makes a pytorch dataset off it so all you have to do is load it, wrap it in dataloader and start training. 
+    
+     LINK:https://github.com/Brokttv/COCO-CONVERTER
+    [attachment] deepseek_mermaid_20250723_c2e94c.png https://cdn.discordapp.com/attachments/1397694923670552596/1397694923884597258/deepseek_mermaid_20250723_c2e94c.png?ex=6a01a415&is=6a005295&hm=2d707496faee91b14ec7e9f30f2b5ab1296f273cd5e39a77f103f3b004295ccc&
+    [embed] GitHub - Brokttv/COCO-CONVERTER: turning image CSV files and folder... https://github.com/Brokttv/COCO-CONVERTER
+

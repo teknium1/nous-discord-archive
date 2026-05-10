@@ -1,0 +1,18 @@
+# Thread 'I gave my Hermes agent hands (aka the ability to ship now)' in forum #community-projects-showcase
+# thread_id=1496701579234119850 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:45.352820+00:00
+
+[2026-04-23T02:37:43.860000+00:00] alpaca1712 (id=1496701579234119850)
+    I wrote a blog post about how you can instantly have Hermes ship ideas with Vals. This allows me to easily create micro applications which are  pretty fun without having to setup a deployment pipeline. I used Val Town, a platform that allows you to create micro applications and instantly deploy them. It's even easier than setting up Github with Vercel, Supabase etc and makes it so that your agent can just deploy any idea you have instantly.
+    
+    I used it to create a notification service to remind me of my basketball games. If you are interested in reading more about it you can check out my blog in here:
+    https://rocotosec.substack.com/p/i-gave-my-ai-agent-hands
+    
+    If you are interested in trying it out yourself I created a skill that calls the Val Town API. You can check that out here: https://github.com/NousResearch/hermes-agent/pull/12678
+    
+    I am curios if anyone has any better way to do this or what things people are using their Hermes agent for other than coding!
+    
+    Disclaimer: I am no affiliated with Hermes or Val Town, but I have met some folks at Val Town.
+    [embed] I gave my AI agent hands https://rocotosec.substack.com/p/i-gave-my-ai-agent-hands
+    [embed] feat(skills): add Val Town optional skill by Alpaca1712 · Pull Req... https://github.com/NousResearch/hermes-agent/pull/12678
+

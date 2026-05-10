@@ -1,0 +1,61 @@
+# Thread 'On the fly reasoning effort switching' in forum #community-projects-showcase
+# thread_id=1492218225419878410 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:26.415859+00:00
+
+[2026-04-10T17:42:29.014000+00:00] ianpascoe (id=1492218225419878410)
+    Dogfooding this idea of Hermes being able to control it's own reasoning effort: https://github.com/NousResearch/hermes-agent/issues/7273
+    [embed] feat: add runtime reasoning_effort tool for on-the-fly agent reason... https://github.com/NousResearch/hermes-agent/issues/7273
+
+[2026-04-10T17:49:50.560000+00:00] ianpascoe (id=1492220077397774366)
+    <@387972437901312000>
+
+[2026-04-10T17:51:33.456000+00:00] teknium (id=1492220508975005766)
+    Make this a plugin and share it in <#1485392832154832906>
+
+[2026-04-10T18:01:12.442000+00:00] ianpascoe (id=1492222937418174534)
+    Can plugins inject into the system prompt like this?
+
+[2026-04-10T18:11:04.725000+00:00] ianpascoe (id=1492225421633126530)
+    <@387972437901312000> I can implement reasoning_effort as a plugin if the plugin runtime can either:
+    - access the live AIAgent instance from the tool handler, or
+    - mutate outbound request reasoning config via a hook.
+
+[2026-04-10T18:12:16.335000+00:00] teknium (id=1492225721987240097)
+    yes you can add any tool for the agent with a plugin
+
+[2026-04-10T18:12:27.637000+00:00] teknium (id=1492225769391525930)
+    I have an extremely high bar at this point to adding any tools
+
+[2026-04-10T18:12:38.553000+00:00] teknium (id=1492225815176413194)
+    Too many complaints about tool context use
+
+[2026-04-10T18:12:45.301000+00:00] teknium (id=1492225843479449681)
+    It may actually be better as a skill tbh
+
+[2026-04-10T18:16:58.203000+00:00] ianpascoe (id=1492226904227578019)
+    A skill could work but I think it needs more explicit prompt guidance around when/how to change it that wouldn't be good for a skill description.
+    So you're proposing a skill that basically tells the agent to use `hermes config set agent.reasoning_effort <level>`
+
+[2026-04-10T18:17:50.913000+00:00] ianpascoe (id=1492227125309345912)
+    I think that would be a good basic implementation but say you have multiple sessions going, there would be conflicting levels being set
+
+[2026-04-10T18:18:41.470000+00:00] ianpascoe (id=1492227337360507123)
+    One session coding needs reasoning_effort=high, another session needs reasoning_effort=low, but are forces to share the config level. Where as in the PR I have open it can persist it at the session level
+
+[2026-04-10T19:42:48.982000+00:00] ianpascoe (id=1492248508160540752)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/7345
+    
+    I would need this to be able to do this effectively as a plugin
+    [embed] feat: pass live agent context to plugin tools by ian-pascoe · Pull... https://github.com/NousResearch/hermes-agent/pull/7345
+
+[2026-04-10T19:54:49.336000+00:00] teknium (id=1492251529544208454)
+    well I guess if it did that it couldn't edit the reasoning level live
+    [reply to ianpascoe msg=1492226904227578019]
+
+[2026-04-10T20:57:25.562000+00:00] ianpascoe (id=1492267284297945159)
+    Yeah so that last PR would be the minimal way to unlock the plugin route at least.
+    [reply to teknium msg=1492251529544208454]
+
+[2026-04-11T09:30:05.280000+00:00] ianpascoe (id=1492456697883656343)
+    <@387972437901312000> - let me know if there's anything else that I can do to get this shipped. I plan to run some evals that show token use vs intelligence given the adaptive reasoning effort. So far, based off of vibes it seems to be working quite well for software dev tasks
+

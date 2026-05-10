@@ -1,0 +1,859 @@
+# Thread 'Mnemosyne - Native, zero-cloud memory for AI agents. SQLite-backed. Sub-millisecond. Fully private.' in forum #plugins-skills-and-skins
+# thread_id=1496124109766000690 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:21.293766+00:00
+
+[2026-04-21T12:23:04.410000+00:00] nulledvector (id=1496124109766000690)
+    🧠 Tired of your Hermes agent forgetting everything — or shipping your context to a paid third-party memory service?
+    
+    I built Mnemosyne to kill both problems. It's the native memory system for Hermes. One SQLite database, zero network calls, zero subscriptions, zero vendor lock-in.
+    
+    Why I ditched the cloud:
+    I was paying for Honcho and juggling legacy memory tools that added latency and sent my data somewhere else. I deleted them all. Mnemosyne runs entirely in-process with SQLite and has completely replaced every legacy and third-party memory framework in my stack.
+    
+    The numbers:
+    ⚡ 0.8 ms writes  
+    ⚡ 0.076 ms reads  
+    That's 56× to 500× faster than hitting an external API.
+    
+    But we didn't stop at speed. Mnemosyne just got a major "Level Up":
+    
+    🏆 LongMemEval: 98.9% Recall@All@5 — dense retrieval with fastembed (bge-small-en-v1.5) + hybrid scoring  
+    🗜️ AAAK compression: 14.9% fewer tokens injected into context  
+    🕸️ Temporal triples: a time-aware knowledge graph that tracks when facts were true and auto-invalidates stale ones  
+    📦 Export / import: move your entire memory to a new machine with one JSON file — zero lock-in  
+    
+    What you get:
+    🔒 100% local — your memories stay in one .db file  
+    📴 Fully offline — no internet required  
+    🧠 Auto context injection — relevant memories surface before every LLM call automatically  
+    🔧 Native Hermes plugin — hooks into pre_llm_call, zero setup  
+    📦 Cross-machine migration — export your memory, move it anywhere, import it back  
+    
+    Install it in 30 seconds:
+    
+    git clone https://github.com/AxDSan/mnemosyne.git
+    cd mnemosyne
+    pip install -e .
+    python -m mnemosyne.install
+    hermes memory setup
+    
+    No vendor lock-in. No subscription. No latency tax. No third-party memory services. Just a .db file that moves with you.
+    
+    📦 Repo: https://github.com/AxDSan/mnemosyne  
+    ⭐ Star it if you want native memory for your agents!  
+    💬 Drop questions here or https://discord.com/channels/1053877538025386074/1490447053791428718/1490447053791428718
+    [attachment] mnemosyne-pfp.jpg https://cdn.discordapp.com/attachments/1496124109766000690/1496124110076510288/mnemosyne-pfp.jpg?ex=6a01ca28&is=6a0078a8&hm=a151e63e8d0072119ac0367e9f759d77add67268bfd296b2afd31220efa26196&
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne.git
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+
+[2026-04-21T19:49:46.250000+00:00] jimpickens3203 (id=1496236524830724308)
+    What is the difference between what you have and what every other tool that does the same thing has?
+
+[2026-04-21T22:12:54.611000+00:00] nulledvector (id=1496272547027746886)
+    good question!
+    
+    most tools just give your agent a fancy search box basically. Mnemosyne actually gives it memory.
+    
+    it remembers recent stuff sharp, older stuff in summaries, and knows what actually mattered. plus you can set stuff to expire so it doesn't drag around dead info like "user lives at X street" forever because at some point in time you'll move out unless you don't  deal with a rental.
+    
+    runs straight into Hermes, no slow api calls. everything local on sqlite, your data stays yours.
+    
+    it even compresses old memories automatically instead of letting the context blow up.
+    try it for a week and you'll see the difference when your agent randomly recalls something from days ago perfectly. most others can't do that without feeling clunky.
+    [reply to jimpickens3203 msg=1496236524830724308]
+
+[2026-04-21T23:03:12.054000+00:00] ae53633805 (id=1496285203101122560)
+    <@151598363131904000> Have you ever heard of Brainstack? 
+    
+    https://github.com/yepyhun/Brainstack
+    
+    I'm asking because I'm new to agentic AI and I want to get your thougths on it. DM if possible.
+    [embed] GitHub - yepyhun/Brainstack: Memory kernel stack for Hermes agent https://github.com/yepyhun/Brainstack
+
+[2026-04-21T23:31:55.945000+00:00] ae53633805 (id=1496292433624039494)
+    <@151598363131904000> ignore me. I’m trying to figure out which memory provider to hitch my cart to, and there are so many to choose from! I’m in a bit of a panic because I want to settle on one and I’m not sure I picked the right one.
+
+[2026-04-24T20:54:15.548000+00:00] steezkelly (id=1497339917439602943)
+    Honestly, just run one and if you want to switch (out of curiosity), you can always ask your agent to help pick the right one for you. I'm doing the same with my agent running honcho locally, and seeing what would happen if we switched to mnemosyne
+    [reply to ae53633805 msg=1496292433624039494]
+
+[2026-04-24T21:00:38.957000+00:00] nulledvector (id=1497341525573632050)
+    i second that.. honestly that would be the best output, the one your own agent gives, as it may already know your pain points, it will help you decide which is best 🙂
+
+[2026-04-24T21:13:37.971000+00:00] ae53633805 (id=1497344792995041380)
+    Funny you should say that. She already has, the project spec was just finished.
+    [reply to nulledvector msg=1497341525573632050]
+
+[2026-04-24T21:14:43.250000+00:00] ae53633805 (id=1497345066795270286)
+    I’ve been having that discussion with her for almost two weeks now.
+    [reply to steezkelly msg=1497339917439602943]
+
+[2026-04-24T21:14:56.606000+00:00] nulledvector (id=1497345122814267564)
+    oh wow
+    [reply to ae53633805 msg=1497345066795270286]
+
+[2026-04-24T21:15:10.639000+00:00] nulledvector (id=1497345181673062470)
+    how it went? or still debating
+
+[2026-04-24T21:16:07.442000+00:00] skylinx79 (id=1497345419921854464)
+    Hey <@151598363131904000> - at the moment I am using Hindsight. What would I gain and what would I lose if I switched to your version?
+
+[2026-04-24T21:16:54.125000+00:00] ae53633805 (id=1497345615724810350)
+    Went from Brainstack, to Hindsight (three times, because it kept hanging and then created a new DB each time), and a couple of others. None of which worked.
+    [reply to steezkelly msg=1497339917439602943]
+
+[2026-04-24T21:18:10.521000+00:00] ae53633805 (id=1497345936152723530)
+    Finished the spec and started phase 0 today. Let me grab the cliff notes.
+    [reply to nulledvector msg=1497345181673062470]
+
+[2026-04-24T21:21:53.783000+00:00] ae53633805 (id=1497346872581292202)
+    <@151598363131904000> I’ll DM you the architecture so you can take a look at what it devised.
+
+[2026-04-24T21:24:29.092000+00:00] ae53633805 (id=1497347523994452242)
+    Sadly, it’s above my current knowledge, but I performed a feasibility study, and made it research its ideas to confirm that they’re sound and that they already have real world applications.
+
+[2026-04-25T12:17:09.253000+00:00] nulledvector (id=1497572171591979119)
+    hey  <@689592654559969396> ! you gain zero-dependency local speed, BEAM architecture, and full data ownership; you lose cloud sync across devices and a managed web dashboard. If they value privacy, speed, and zero ongoing cost, Mnemosyne is the move. If they need team collaboration or a web UI, stay put.
+    [reply to skylinx79 msg=1497345419921854464]
+
+[2026-04-25T12:17:25.646000+00:00] nulledvector (id=1497572240349331466)
+    Learn more at https://mnemosyne.site/#comparison
+    [embed] Mnemosyne — The Zero-Dependency AI Memory System https://mnemosyne.site/
+
+[2026-04-25T12:37:23.224000+00:00] skylinx79 (id=1497577263355658280)
+    What I am most interested in is, is this tool better at finding stuff across sessions than say Hindsight and Honcho?
+
+[2026-04-25T17:20:53.429000+00:00] harrynguyen2107 (id=1497648609326399528)
+    Is mnemosyne currenly supporting the backup feature?
+
+[2026-04-25T17:50:53.325000+00:00] nulledvector (id=1497656158637391968)
+    Our retrieval system is built on three layers that work together to find what matters across sessions. At the core is hybrid search that blends vector similarity, full text search, and importance scoring into a single ranked result set. Vector search handles semantic meaning even when wording changes between sessions. Full text search catches exact phrases and keywords. Importance scoring learned from your behavior boosts memories you recall frequently. Below that sits the BEAM architecture with working memory for hot recent context and episodic memory for long term storage. Old working memories automatically consolidate into episodic summaries through sleep cycles, so nothing gets lost to time. The entire system runs on SQLite with sub millisecond latency, no network calls, no rate limits, and no vendor lock in. Cross session recall is opt in via scope equals global, which keeps privacy first by default rather than blindly persisting everything. The honest caveat is that retrieval quality depends on what you mark global and our 384 dimension embeddings are smaller than cloud alternatives. If you want zero config cloud memory, Honcho is less work. If you want fast, private, controllable cross session recall that learns what matters to you, Mnemosyne wins.
+    [reply to skylinx79 msg=1497577263355658280]
+
+[2026-04-25T17:51:51.344000+00:00] nulledvector (id=1497656401986850997)
+    But just like with everything else, I can dump as much as information as possible I can give you all the docs there is and, I can do this all day long but at the end of the day, obviously you will have to run the tool yourself and then test waters with it and see where it actually stands to your flavor and your liking because that’s where the actual value is.
+
+[2026-04-26T05:22:14.275000+00:00] wysie_ (id=1497830142351904841)
+    For hindsight I see that the vectorize docs asks us to disable the inbuilt memory via tools (hermes tools disable memory). Do we need to do the same for mnemosyne?
+
+[2026-04-26T05:22:32.840000+00:00] wysie_ (id=1497830220219154523)
+    I'm currently running hindsight locally with a local llm as well
+
+[2026-04-26T06:29:31.050000+00:00] jimpickens3203 (id=1497847073813303327)
+    That's a good question actually. I would like to know as well
+
+[2026-04-26T06:48:47.552000+00:00] wysie_ (id=1497851924534525952)
+    The more I ask the more I'm confused, lol. From my Hermes.
+    
+    I was slightly too simplistic saying disabling Memory toolset disables built-in memory. It disables the built-in memory tool, not necessarily the built-in MEMORY.md / USER.md injection. That injection is controlled by `memory_enabled` and `user_profile_enabled`.
+    
+    So the real matrix is:
+    
+    - `memory_enabled/user_profile_enabled`: controls built-in memory injection
+    - `memory` toolset: controls built-in memory edit tool
+    - `memory.provider`: controls external memory provider
+    - `skip_memory=True`: disables both built-in and external memory for that agent instance
+    
+    And there’s no smart arbitration. It’s just additive context + tool-name routing. (2/2)
+
+[2026-04-26T19:05:24.168000+00:00] nulledvector (id=1498037298577805494)
+    You don't need to disable built-in memory for Mnemosyne. The Hindsight docs suggest that because their vector DB replaces the same function, so you'd get duplicate context otherwise.
+    
+    With Mnemosyne it depends on what you want:
+    
+    - Keep both on (default): agent sees MEMORY.md + Mnemosyne recall results. More context, no conflict. They're additive, not competing.
+    - Disable built-in memory toolset (hermes tools disable memory): agent can't edit MEMORY.md anymore, only uses Mnemosyne. Cleaner if you want Mnemosyne as your single source of truth.
+    - Disable injection too (memory_enabled=false, user_profile_enabled=false): agent stops seeing MEMORY.md/USER.md entirely. Only Mnemosyne feeds it memories.
+    
+    The reason it's confusing is there's no smart switch. It's 4 independent toggles that stack:
+    
+    1. memory_enabled / user_profile_enabled → injects text into prompt
+    2. memory toolset → gives agent the tool to edit those files
+    3. memory.provider → routes mnemosyne_recall/mnemosyne_remember to Mnemosyne
+    4. skip_memory=True → kills everything
+    
+    They don't override each other. They just pile on. So pick what fits your setup and ignore the rest.
+
+[2026-04-26T19:05:46.142000+00:00] nulledvector (id=1498037390743441498)
+    👆
+    [reply to wysie_ msg=1497830142351904841]
+
+[2026-04-27T00:27:28.610000+00:00] wysie_ (id=1498118351162048774)
+    Thanks !
+
+[2026-04-27T18:06:11.983000+00:00] bowtiedbernard (id=1498384787499384973)
+    Looks really cool, what's different than honcho? I'm not paying for honcho. Patched + locally hosted and end up with a paid api key using gemma 4 31b as the model. So besides keeping your data here, what am I missing vs honcho?
+
+[2026-04-27T18:35:31.284000+00:00] nulledvector (id=1498392166542737458)
+    Hey there! Welcome in, I invite you to check the official comparison @ https://mnemosyne.site/#comparison but here's the TLDR; basically.. 
+    
+    ```
+    Switching from Honcho
+    You gain
+    500x faster reads, zero monthly bill, 100% offline, no Docker, no credit system
+    
+    You lose
+    Cloud dashboard, managed scaling, team sharing
+    ```
+    [reply to bowtiedbernard msg=1498384787499384973]
+
+[2026-04-27T18:35:54.636000+00:00] bowtiedbernard (id=1498392264487993556)
+    Will do, thank you
+    [reply to nulledvector msg=1498392166542737458]
+
+[2026-04-27T18:37:26.306000+00:00] bowtiedbernard (id=1498392648980103250)
+    I assume it uses a GPU for some of this work? (Bad news for me, I'm on an arm server from oracle, but will be saving this for when I move it back to a local mini desktop)
+
+[2026-04-27T18:40:07.511000+00:00] nulledvector (id=1498393325122748427)
+    No!
+    [reply to bowtiedbernard msg=1498392648980103250]
+
+[2026-04-27T18:40:44.044000+00:00] bowtiedbernard (id=1498393478353260824)
+    Oh 👀 well I guess I know what I'm doing later
+
+[2026-04-27T18:41:25.392000+00:00] nulledvector (id=1498393651779211475)
+    One of the core and primary principles that formed Mnemosyne when I designed it was so that it can run on bare-minimum everyday development hardware this means CPU, no GPU
+
+[2026-04-27T18:43:23.802000+00:00] nulledvector (id=1498394148426743970)
+    (I run this alongside hermes on a fly.io instance with 4GB RAM and 15GB Storage  XD)
+
+[2026-04-27T18:43:33.214000+00:00] steezkelly (id=1498394187903533176)
+    Gotta say <@151598363131904000> your memory system is pretty cool, been running with it for fourish days now we've been checking it out and learning the core principles of its design and making sure it meshes with the current system. Last night it did a PR for expanding health-stats metrics (to make sure the systems of mnemosyne are supposed to be running properly)
+
+[2026-04-27T18:43:37.763000+00:00] nulledvector (id=1498394206983684239)
+    Sure thing, please do let me know if you ever need some assistance
+    [reply to bowtiedbernard msg=1498393478353260824]
+
+[2026-04-27T18:43:44.401000+00:00] bowtiedbernard (id=1498394234825478185)
+    Will do. Gonna take a look at it, and potentially re-embed from honcho, since I used Gemini embeds there. Not sure yet. Gotta see it first
+
+[2026-04-27T18:44:27.043000+00:00] nulledvector (id=1498394413678985226)
+    Hey! thanks for the feedback, just checked the PR! will review soon, been juggling a couple things here IRL lol, but thanks for the support
+    [reply to steezkelly msg=1498394187903533176]
+
+[2026-04-27T18:44:39.137000+00:00] nulledvector (id=1498394464404901938)
+    sounds really nice!
+
+[2026-04-27T18:45:19.111000+00:00] steezkelly (id=1498394632067874839)
+    yeah man thanks for building this, just want to contribute where i can and well we're in the early days of hermes-agent, it's just gonna build and grow over time -- we can help each other do that
+
+[2026-04-27T18:50:49.986000+00:00] nulledvector (id=1498396019858341930)
+    Heck yeah! definitely!
+    [reply to steezkelly msg=1498394632067874839]
+
+[2026-04-27T18:59:25.848000+00:00] skylinx79 (id=1498398183540129954)
+    How come? All the memory plugins I have tried so far use LLMs to process the memories
+    [reply to nulledvector msg=1498393325122748427]
+
+[2026-04-27T19:02:59.960000+00:00] skylinx79 (id=1498399081590947915)
+    <@151598363131904000> I am getting `Error: Claude binary not found in any Node.js version directory` even though Claude is installed. Why does it need Claude? I am installing with `pip install mnemosyne-memory[all]` to include more features
+
+[2026-04-27T19:07:46.211000+00:00] skylinx79 (id=1498400282214797355)
+    I installed without `all` and I am getting this when I run `hermes mnemosyne stats`:
+    
+    ```
+    Error: Mnemosyne not available:
+    
+    IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+    
+    Importing the numpy C-extensions failed. This error can happen for
+    many reasons, often due to issues with your setup or how NumPy was
+    installed.
+    The following compiled module files exist, but seem incompatible
+    with with either python 'cpython-311' or the platform 'darwin':
+    
+      * _multiarray_umath.cpython-314-darwin.so
+    ```
+
+[2026-04-27T19:09:48.492000+00:00] skylinx79 (id=1498400795098349568)
+    nvm, my bad
+
+[2026-04-27T19:10:43.927000+00:00] skylinx79 (id=1498401027609727037)
+    Curious to see how it perform. Is it possible to import memories from hindsight somehow?
+
+[2026-04-27T19:11:44.483000+00:00] nulledvector (id=1498401281599995904)
+    this is really weird!!! checking it out
+    [reply to skylinx79 msg=1498399081590947915]
+
+[2026-04-27T19:12:21.734000+00:00] skylinx79 (id=1498401437842145422)
+    I made a mistake, I didn't activate hermes' venv 🙂
+    [reply to nulledvector msg=1498401281599995904]
+
+[2026-04-27T19:12:23.709000+00:00] skylinx79 (id=1498401446125768857)
+    all good now
+
+[2026-04-27T19:12:36.031000+00:00] skylinx79 (id=1498401497807847524)
+    But I was wondering if I can import data from hindsight?
+
+[2026-04-27T19:12:50.101000+00:00] nulledvector (id=1498401556821708800)
+    it happens lol
+    [reply to skylinx79 msg=1498401437842145422]
+
+[2026-04-27T19:15:05.190000+00:00] nulledvector (id=1498402123426037772)
+    Mnemosyne is built for bare minimum CPU.
+    
+    Embedding model: Default is BAAI/bge-small-en-v1.5 via fastembed (ONNX runtime, no PyTorch, no GPU). 384 dimensions. Falls back to FTS5-only if fastembed isn't installed. You can plug in your own via env vars? Let me check:
+    
+    The embeddings module hardcodes _DEFAULT_MODEL = "BAAI/bge-small-en-v1.5" with no override mechanism. The local_llm module does have MNEMOSYNE_LLM_REPO and MNEMOSYNE_LLM_FILE env vars for swapping the consolidation model, but embeddings has no equivalent.
+    
+    LLM for consolidation: Default is TinyLlama-1.1B-Chat Q4_K_M (~600MB) via ctransformers (GGUF, CPU-only). Also supports remote OpenAI-compatible endpoints via MNEMOSYNE_LLM_BASE_URL, MNEMOSYNE_LLM_API_KEY, MNEMOSYNE_LLM_MODEL.
+    
+    Architecture support: ctransformers uses llama.cpp under the hood, so anything GGUF supports: x86_64, ARM64 (Apple Silicon, Raspberry Pi), etc. fastembed/ONNX runs on the same.
+    [reply to skylinx79 msg=1498398183540129954]
+
+[2026-04-27T19:15:30.245000+00:00] nulledvector (id=1498402228514459729)
+    > Falls back to FTS5-only if fastembed isn't installed
+    this is why its really important to indstall fastembed
+
+[2026-04-27T19:16:03.380000+00:00] skylinx79 (id=1498402367492853920)
+    Are 384 dimensions enough for this kind of task?
+
+[2026-04-27T19:17:02.474000+00:00] skylinx79 (id=1498402615350919170)
+    Installed, but I didn't see this in the docs. Perhaps I missed it
+    [reply to nulledvector msg=1498402228514459729]
+
+[2026-04-27T19:18:33.055000+00:00] skylinx79 (id=1498402995275038902)
+    I see this in the logs: `2026-04-27 22:17:59,330 DEBUG [96e57522-a275-40ba-b7a8-5b427986b3af] _hermes_user_memory.mnemosyne: Mnemosyne prefetch failed: fts5: syntax error near "?"`
+
+[2026-04-27T19:31:53.323000+00:00] skylinx79 (id=1498406351842443355)
+    Seems to be working though. I'll let you know how it goes. Thanks!
+
+[2026-04-27T19:34:56.872000+00:00] nulledvector (id=1498407121702752278)
+    forgot to add it... its in the gh repo readme tho
+    [reply to skylinx79 msg=1498402615350919170]
+
+[2026-04-27T19:35:08.295000+00:00] nulledvector (id=1498407169614287070)
+    will; check it out!
+    [reply to skylinx79 msg=1498402995275038902]
+
+[2026-04-27T19:36:45.732000+00:00] skylinx79 (id=1498407578294550589)
+    Nice! I asked Herms to import all the memories from Hindsight to Mnemosyne and it did it nicely within a few minutes.
+
+[2026-04-27T19:37:32+00:00] nulledvector (id=1498407772356739262)
+    yes thats the way!
+    [reply to skylinx79 msg=1498407578294550589]
+
+[2026-04-27T19:37:50.484000+00:00] nulledvector (id=1498407849884258477)
+    sorry i dint replied earlier to that was going to say this
+
+[2026-04-27T19:39:16.203000+00:00] skylinx79 (id=1498408209415929896)
+    It does seem faster than Hindsight 🙂 I tried asking Herms to list topics we discussed on different dates and the recall was pretty quick
+
+[2026-04-27T19:42:35.153000+00:00] nulledvector (id=1498409043872583780)
+    https://tenor.com/view/hardpretzel-sonic-3d-running-3dblast-gif-14031851104128980591
+    [embed]  https://tenor.com/view/hardpretzel-sonic-3d-running-3dblast-gif-14031851104128980591
+
+[2026-04-27T19:42:39.154000+00:00] nulledvector (id=1498409060653858899)
+    les ggoooo!!
+
+[2026-04-27T19:42:40.144000+00:00] nulledvector (id=1498409064806350899)
+    🙂
+
+[2026-04-27T23:47:07.354000+00:00] wysie_ (id=1498470583543795752)
+    I moved from hindsight to this as well. Currently have a cronjon running every night that imports the memories from mnemosyne into hindsight as a fallback plan.
+
+[2026-04-28T05:02:35.536000+00:00] skylinx79 (id=1498549974093267024)
+    I am going to do the same now, good idea
+    [reply to wysie_ msg=1498470583543795752]
+
+[2026-04-28T06:39:47.304000+00:00] youhavewhyplayme (id=1498574434301378590)
+    On my installation, BAAI/bge-small-en-v1.5 is being saved to /tmp, which is volatile and may get wiped. When HF_HUB_OFFLINE=1 is set in .env, during session startup, mnemosyne may fail to load up the embedding model for fastembed if it's wiped in /tmp. Would it be possible to fix the path for the downloaded embedding model to another dir?
+    [reply to nulledvector msg=1498402123426037772]
+
+[2026-04-28T06:48:39.956000+00:00] youhavewhyplayme (id=1498576668405534780)
+    The full path is now /tmp/fastembed_cache/models--qdrant--bge-small-en-v1.5-onnx-q
+
+[2026-04-28T13:16:09.618000+00:00] m1crogr00ve (id=1498674184556122263)
+    Quick question, I have my Hermes on OCI, nothing local, do you foresee any issues with installing your repo? The only issue I think might be dependencies not there by default.
+
+[2026-04-28T17:37:49.381000+00:00] _voscko_ (id=1498740034134609920)
+    <@151598363131904000> I am honestly confused with how you position Mnemosyne compared to other memory systems, especially Hindsight.
+    
+    On the comparison page you say that switching from Hindsight means losing “cloud sync, managed inference, web dashboard”. But that does not really match how I, and probably other Hermes/OpenClaw users, are actually using Hindsight.
+    
+    I am not using Hindsight as a cloud product. I am using it locally/self-hosted as a shared memory layer for Hermes Agent and OpenClaw. No cloud sync. No managed inference. No web dashboard as a core part of my workflow. Yes, it can be connected to an LLM for extraction/summarization/rerank/embeddings depending on config, but that is not the same thing as relying on a managed cloud memory platform.
+    
+    So the comparison feels like it is mostly comparing Mnemosyne against Hindsight Cloud, not against Hindsight local/self-hosted.
+    
+    And to be honest, this is exactly where I am struggling a bit. Everyone is building their own memory system now and every project claims to be simpler, faster, more local, more agent-native, or just “better”. But from the information currently provided, I am not yet convinced that this comparison is apples-to-apples.
+
+[2026-04-28T17:37:57.371000+00:00] _voscko_ (id=1498740067647098940)
+    <@151598363131904000> What I would really like to understand is the factual/technical case for why Mnemosyne is different or better, specifically for a local Hermes/OpenClaw-style setup.
+    
+    For example:
+    
+    • Is Mnemosyne meant to replace Hindsight local/self-hosted for Hermes users, or mainly cloud memory providers like Mem0/Zep/Honcho?
+    
+    • Can Mnemosyne be used as a shared memory layer across Hermes Agent and OpenClaw, or is it mostly Hermes-native only?
+    
+    • What is the equivalent of Hindsight’s Retain / Recall / Reflect model?
+    
+    • Does it support durable cross-agent/project memory banks, or only local/session/global scopes inside Hermes?
+    
+    • How does it handle entity resolution, temporal memory, conflicting facts, and preference/opinion updates over time?
+    
+    • When you say “zero dependencies” and “no network calls”, does that still apply when using dense retrieval, consolidation, summarization, or embeddings? Or only in the minimal keyword/local mode?
+    
+    • Do you have benchmarks, architecture notes, or concrete examples that show where Mnemosyne outperforms Hindsight local/self-hosted in practice?
+    
+    I am genuinely interested because Mnemosyne looks fast and clean, and I like the idea of a local-first SQLite-native memory layer. But the current comparison makes Hindsight look like a cloud/dashboard product, which is not really how local Hermes/OpenClaw users are using it.
+    
+    If Mnemosyne is actually better for this local shared-agent use case, I would love to see the technical argument for that comparison.
+
+[2026-04-28T17:41:24.012000+00:00] skylinx79 (id=1498740934362267678)
+    Good points actually.
+
+[2026-04-28T18:50:04.121000+00:00] nulledvector (id=1498758215351926835)
+    Ty for reporting this!! 
+    
+    Here is the fix for this https://github.com/AxDSan/mnemosyne/commit/cbcf6f4ee0bef45dd793841f91472f2ab5432bba
+    [embed] fix(embeddings): persist fastembed model cache to ~/.hermes · AxDS... https://github.com/AxDSan/mnemosyne/commit/cbcf6f4ee0bef45dd793841f91472f2ab5432bba
+    [reply to youhavewhyplayme msg=1498576668405534780]
+
+[2026-04-28T20:26:48.311000+00:00] nulledvector (id=1498782559889260667)
+    Here is the honest detailed and technical comparison from each solution hope it helps!
+    
+    Thanks for the feedback on this particular topic! Transparency and honesty is a core trait we value! We'll do our best to keep enhancing then docs with truthful information! 
+    
+    https://docs.mnemosyne.site/comparisons/hindsight
+    [embed] Mnemosyne vs Hindsight — Honest Technical Comparison https://docs.mnemosyne.site/comparisons/hindsight
+    [reply to _voscko_ msg=1498740034134609920]
+
+[2026-04-29T03:24:51.770000+00:00] steezkelly (id=1498887767541940274)
+    BTW, thank you for this docs site. Made it a reference for my agent to make sure it has something fall back to while it continues to build its system
+    [reply to nulledvector msg=1498782559889260667]
+
+[2026-04-29T11:33:29.451000+00:00] nulledvector (id=1499010734808502282)
+    No worries! You welcome
+    [reply to steezkelly msg=1498887767541940274]
+
+[2026-04-30T09:36:44.520000+00:00] zinkdifferent_49268 (id=1499343741864120411)
+    You don’t need to pay for honcho, it’s open source, you can run it locally. It’s what I do.
+
+[2026-04-30T11:27:09.112000+00:00] quocanh261997 (id=1499371527416713327)
+    <@151598363131904000> it seems like Mnemosyne doesn't need an LLM model to do the retrieval and writing to the memory vault like Hindsight and Honcho do right?
+
+[2026-04-30T23:08:35.837000+00:00] dev_0x1 (id=1499548051935596575)
+    I tried setup with vector enabled but agent says this memory plugin is incompatible with the current sqlite vector.
+
+[2026-05-02T07:01:44.233000+00:00] steezkelly (id=1500029509364088852)
+    Mnemosyne uses a local llm that runs CPU-only it's I believe a 1B model, and it runs as a background process (unless the agent calls upon mnemosyne_remember or something). One command to try after a day or two of mnemosyne is in the terminal hermes mnemosyne stats, then you can see how many working and episodic memories you have.
+    [reply to quocanh261997 msg=1499371527416713327]
+
+[2026-05-02T12:49:07.296000+00:00] wysie_ (id=1500116931506864148)
+    Yeah u can modify that to point at another model as well in the config
+
+[2026-05-04T19:46:58.862000+00:00] steezkelly (id=1500946865007493214)
+    <@151598363131904000> curious what you think about this and what the architecture/philosophy is on how mnemosyne should consolidate memories.
+    
+    == Mnemosyne  ==  TTL RESPECTED, DESIGNED TO FLATLINE
+        
+          The 8h/4h TTL config is alive — MNEMOSYNE_WM_TTL_HOURS=8 is set.
+          Problem: the mnemosyne_sleep consolidation has hardcoded episodic limits
+          (likely a BEAM tier ceiling around ~240-250). So episodic is designed to
+          flatline while working_memory balloons. It's not a bug — it's a budget
+          cap. The TTL is doing its job (filtering queries), but the growth ceiling
+          is enforced at the storage layer. Manual consolidation ran: 2 items
+          processed, episodic held at 239.
+        
+          Recommendation: if you want episodic to grow past 239, raise the BEAM
+          tier limit in beam.py, OR accept the flatline as working memory acting
+          as the volatile buffer while episodic stays a curated long-term summary.
+
+[2026-05-05T12:31:13.749000+00:00] austrian_guy (id=1501199592321056800)
+    Installed it, so good so far
+
+[2026-05-05T13:04:22.138000+00:00] nulledvector (id=1501207932228866130)
+    Checking this out btw
+    [reply to steezkelly msg=1500946865007493214]
+
+[2026-05-05T17:52:34.142000+00:00] charanis (id=1501280460150542357)
+    How does this fare vs an approriately set up and maintained llmwiki?
+
+[2026-05-05T18:20:43.663000+00:00] steezkelly (id=1501287546515361793)
+    funny, i have my agent using this with the llmwiki if you want me to have my agent explain how we have it setup I can
+    [reply to charanis msg=1501280460150542357]
+
+[2026-05-05T18:39:58.572000+00:00] charanis (id=1501292390554533989)
+    Please do. I have a nice llmwiki setup but it's becoming cumbersome
+    [reply to steezkelly msg=1501287546515361793]
+
+[2026-05-05T19:30:27.285000+00:00] nulledvector (id=1501305093897588816)
+    Awesome! Welcome to the Mnemosyne gang! make sure to drop a feedback or if you or your agent encounter bugs report them right away! https://github.com/AxDSan/mnemosyne/issues
+    [embed] Issues · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/issues
+    [reply to austrian_guy msg=1501199592321056800]
+
+[2026-05-06T09:36:15.050000+00:00] wordsmachine666 (id=1501517945451450479)
+    Hi <@151598363131904000> , so yesterday I asked my Hermes Agent to install Mnemosyne, and it is active now. Also, I am too dumb to remember everything or check the configurations LOL. But as far as I remember, she installed Mnemosyne, and it is active as the memory provider for my Hermes Agent. For consolidation, it uses another LLM with the correct model, provider, base_url, and API, and download the local model as a fallback. Someone built Mnemosyne Dashboard for Hermes Agent, and I use it too. As can be seen in this Screenshot. Yes, Mnemosyne works. But I'm still struggling with how to use it or what the best setup is, because, as it is active now, when I ask my Hermes about some things, she cannot recall them. She cannot find it because she said it is now in episodic memory and not in working memory, and the LLM summarizes those memories. So she suggests that we change the setup by adding
+    ```MNEMOSYNE_WM_TTL_HOURS=87600 
+    MNEMOSYNE_WM_MAX_ITEMS=999999``` on `/.hermes/.env`
+    and then `hermes gateway restart`. She argues that by adding that, all her memories will stay active and not be consolidated, and it's okay because it will make all her memories verbose and complete without being summarized by LLM, and the Mnemosyne Database will be fine, like it's gonna be just a couple of MiB total (we have 80 GiB storage where my Hermes lives on the VPS).
+    Can you help me understand this? Or give me the better setup, so Mnemosyne works well? The thing is, I want my Hermes to have better memories. That's all. Sorry for my dumb questions and CMIIW. Thank you. 😊
+    [attachment] Mnemosyne_Dashboard.png https://cdn.discordapp.com/attachments/1496124109766000690/1501517944772104334/Mnemosyne_Dashboard.png?ex=6a01a30e&is=6a00518e&hm=7133501040bc5f981be41f3ba43fb271cf70d9c1b74fbda110fb1ae5b1852747&
+
+[2026-05-06T10:48:13.653000+00:00] ramenthief (id=1501536058985287690)
+    trying to get it setup but have this error >_<
+    
+    ```
+    Error: Mnemosyne not available: 
+    
+    IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+    
+    Importing the numpy C-extensions failed. This error can happen for
+    many reasons, often due to issues with your setup or how NumPy was
+    installed.
+    The following compiled module files exist, but seem incompatible
+    with with either python 'cpython-311' or the platform 'linux':
+    
+      * _multiarray_umath.cpython-314-x86_64-linux-gnu.so
+    
+    We have compiled some common reasons and troubleshooting tips at:
+    
+        https://numpy.org/devdocs/user/troubleshooting-importerror.html
+    
+    Please note and check the following:
+    
+      * The Python version is: Python 3.11 from "/home/neil/.hermes/hermes-agent/venv/bin/python3"
+      * The NumPy version is: "2.4.4"
+    
+    and make sure that they are the versions you expect.
+    
+    Please carefully study the information and documentation linked above.
+    This is unlikely to be a NumPy issue but will be caused by a bad install
+    or environment on your machine.
+    
+    Original error was: No module named 'numpy._core._multiarray_umath'
+    ```
+
+[2026-05-06T18:37:15.670000+00:00] kohai_ut (id=1501654095159754883)
+    I think this may be an issue I ran into with my ubuntu.  If you are using ubuntu and hit the PEP 668-protected message, the instructions below may get you unstuck.  I submitted this doc change as an issue on git, if this isn't correct I'll tell the maintainer to ignore it. 😉   Your Hermes is running Python 3.11, but NumPy contains a CPython 3.14 binary, so the Hermes venv is polluted or Mnemosyne was installed from the wrong venv. Reinstall Mnemosyne and NumPy using Hermes’ own Python.
+    
+    ─ bash
+    # Use Hermes' own Python, not a separate .venv
+    HERMES_PY="$HOME/.hermes/hermes-agent/venv/bin/python"
+    # Remove the broken/cross-version NumPy + Mnemosyne install
+    "$HERMES_PY" -m pip uninstall -y numpy mnemosyne-memory fastembed sqlite-vec
+    rm -rf "$HOME/.hermes/hermes-agent/venv/lib/python3.11/site-packages/numpy"*
+    rm -rf "$HOME/.hermes/hermes-agent/venv/lib/python3.11/site-packages/mnemosyne"*
+    rm -rf "$HOME/.hermes/hermes-agent/venv/lib/python3.11/site-packages/fastembed"*
+    rm -rf "$HOME/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sqlite_vec"*
+    # Reinstall into the Hermes venv
+    "$HERMES_PY" -m pip install --no-cache-dir --force-reinstall "mnemosyne-memory[all]"
+    (if you want sqlite-vec reinstall)
+    "$HERMES_PY" -m pip install --no-cache-dir --force-reinstall sqlite-vec
+    "$HERMES_PY" -m mnemosyne.install
+    # Restart Hermes/gateway if it is running
+    hermes gateway restart 2>/dev/null || true
+    # Verify
+    hermes memory status
+    hermes mnemosyne stats
+    [reply to ramenthief msg=1501536058985287690]
+
+[2026-05-07T00:33:51.083000+00:00] nulledvector (id=1501743834025951252)
+    Hey! It's seems to me that your agent gave you bad advice. Let me explain what is happening and what to do instead.
+    
+    The problem with `MNEMOSYNE_WM_MAX_ITEMS=999999`
+    
+    This setting prevents consolidation. Working memory grows forever, never gets summarized, and retrieval gets slower and noisier over time. Your agent said "it will be just a couple of MiB" — that is wrong. Unbounded growth hits hundreds of MB then GBs. Not a fix.
+    
+    Also your agent says memories are "in episodic memory and not in working memory" as if episodic is invisible. That is not how Mnemosyne works. recall() searches BOTH tiers. If consolidated memories are not being found, the issue is recall quality, not visibility.
+    
+    So why your memories are not surfacing??? I could think only on a few items...
+    
+    1. The local LLM for consolidation is producing weak summaries
+    2. Your recall query does not match the summary text
+    3. Vector search is not finding semantic matches
+    4. Hybrid scoring ranks episodic entries too low
+    
+    Let's try fix this for now... Do not disable consolidation. Tune it instead:
+    
+    ```
+    MNEMOSYNE_WM_MAX_ITEMS=5000
+    MNEMOSYNE_WM_TTL_HOURS=48
+    MNEMOSYNE_VEC_WEIGHT=0.6
+    MNEMOSYNE_FTS_WEIGHT=0.3
+    MNEMOSYNE_IMPORTANCE_WEIGHT=0.1
+    ```
+    
+    Also please run `hermes mnemosyne stats`. If episodic count is 0, consolidation is broken. If episodic count is high but recall still fails, the summaries are poor quality.
+    
+    Just remember setting WM_MAX_ITEMS to 999999 is the memory equivalent of "just keep everything in RAM forever." And that's not healthy neither
+    [reply to wordsmachine666 msg=1501517945451450479]
+
+[2026-05-07T00:38:24.608000+00:00] nulledvector (id=1501744981273219163)
+    Hey were you able to fix this? By any chance?
+    [reply to ramenthief msg=1501536058985287690]
+
+[2026-05-07T00:48:22.465000+00:00] nulledvector (id=1501747488867221504)
+    We pushed a fix for issue #26 covering this let me know if you need further explanation!
+    [reply to ramenthief msg=1501536058985287690]
+
+[2026-05-07T00:50:24.876000+00:00] wordsmachine666 (id=1501748002295906304)
+    Hi, thank you for responding. I've just run `hermes mnemosyne stats`, and these are the results:
+    ```hermes mnemosyne stats
+    {
+      "working": {
+        "total": 155,
+        "last": "2026-05-07T07:34:18.812017"
+      },
+      "episodic": {
+        "total": 72,
+        "last": "2026-05-06T09:03:23.199878",
+        "vectors": 0,
+        "vec_type": "none"
+      }
+    }```
+    I remember now: we've set up two LLMs for a fallback chain for consolidations: `Mistral-3 14B` from `DigitalOcean`, and do `pip install ctransformers`, then download `TinyLlama 1.1B GGUF Q4_K_M` as a local model. But as far as I remember, the main `Mistral-3 14B` works fine, so it never falls back to the local model. Perhaps my main LLM choice, `Mistral-3 14B`, is wrong? I mean, the model isn't so good, so it summarizes the memories badly?
+    
+    And for your suggestions on this:
+    
+    ```MNEMOSYNE_WM_MAX_ITEMS=5000
+    MNEMOSYNE_WM_TTL_HOURS=48
+    MNEMOSYNE_VEC_WEIGHT=0.6
+    MNEMOSYNE_FTS_WEIGHT=0.3
+    MNEMOSYNE_IMPORTANCE_WEIGHT=0.1```
+    
+    Should I put it in `/.hermes/.env` and then run `hermes gateway restart`? Or could you suggest some good prompts for my Hermes Agent so she can fix it herself? I think she will handle it properly if I know the best prompts for her. It's just that I am a newbie to this Agent stuff and have a lot of other things to do, so IMO I'd better do my real job instead of tinkering with the configurations and let my Hermes Agent fix it. Sorry for my dumb questions. Thank you.
+    [reply to nulledvector msg=1501743834025951252]
+
+[2026-05-07T01:06:56.480000+00:00] nulledvector (id=1501752161384530101)
+    Ok so... Your stats show consolidation is working fine. 72 episodic entries from 155 working memories. The problem is Mistral 3 14B produces weak summaries. That model is too small for good memory consolidation.
+    
+    What is happening:
+    
+    Mistral 3 14B is fine for chat but not great at compressing memories into dense, retrievable summaries. Your episodic summaries are probably vague or lose key details. So when you ask Hermes to recall something, the search query does not match the watered-down summary text.
+    
+    So my bad for what I suggested previously... The fix is NOT more env vars. The fix is a better consolidation model.
+    
+    Options:
+    
+    1. Upgrade the consolidation LLM. Mistral 3 14B is the bottleneck. Switch to something stronger for consolidation:
+       - Qwen 2.5 32B (good at structured output)
+       - Llama 3.1 70B (better summarization)
+       - Even GPT-4o-mini via API for consolidation only (cheap, fast, good summaries)
+    
+    2. If you must keep Mistral 3 14B, reduce consolidation pressure.
+       - Smaller batches = less content per summary = less compression loss
+       - More frequent consolidation = memories are fresher when summarized
+    
+    ```
+    MNEMOSYNE_SLEEP_BATCH=50    # Default is 5000, way too big for weak models
+    MNEMOSYNE_WM_TTL_HOURS=12   # Consolidate faster, while memories are fresh
+    ```
+    
+    3. Check your summaries. Run this to see what episodic memory actually looks like:
+    
+    ```
+    from mnemosyne.core.memory import Mnemosyne
+    m = Mnemosyne()
+    for ep in m.beam.get_episodic(limit=5):
+        print(ep["content"][:200])
+    ```
+    
+    If the summaries are vague like "user talked about various topics" then your model is failing. Good summaries name specific entities, actions, and outcomes.
+
+[2026-05-07T01:08:50.846000+00:00] nulledvector (id=1501752641070436463)
+    About env vars:
+    
+    Yes, put them in `~/.hermes/.env` then hermes gateway restart. But the recall weight tweaks are band-aids. The real fix is the consolidation model.
+    
+    Also!!
+    
+    Tell your agent:
+    ```
+     "My Mnemosyne episodic summaries are weak. The consolidation LLM is Mistral 3 14B. I need you to either (a) suggest a stronger model for consolidation, or (b) tune MNEMOSYNE_SLEEP_BATCH and WM_TTL_HOURS to reduce compression pressure. Check my episodic memory content first to confirm summaries are low quality."
+    ```
+    
+    Or just:
+    ```
+     "Run diagnostics on my Mnemosyne setup. Check if episodic consolidation summaries are high quality. If not, fix the consolidation configuration."
+    ```
+    
+    Your setup is not broken. Your model is just too weak for the job. Either upgrade the consolidation LLM or reduce how much it has to compress at once.
+
+[2026-05-07T01:33:30.535000+00:00] kohai_ut (id=1501758847336054794)
+    I see that TinyLlama is referenced for local consolidation which I think is what gets used if 'MNEMOSYNE_LLM_ENABLED: true'.  Is it sufficient if Mistral isn't?  Or, are these two different consolidations and thus different needs?
+    [reply to nulledvector msg=1501752641070436463]
+
+[2026-05-07T02:48:04.485000+00:00] nulledvector (id=1501777612442435665)
+    MNEMOSYNE_LLM_ENABLED gates a single shared backend (local_llm.py) that both consolidation and fact extraction use. When enabled with no remote API configured, TinyLlama handles both tasks. Consolidation works fine because summarization is forgiving and falls back to aaak encoding if the model fails. Fact extraction does not work fine... TinyLlama cannot reliably produce structured JSON, and the extraction pipeline silently returns empty fact lists when the LLM output is unparseable. So no, TinyLlama is not sufficient as a drop-in replacement if you were depending on Mistral for extraction. The two tasks share infrastructure but have very different quality requirements.
+    [reply to kohai_ut msg=1501758847336054794]
+
+[2026-05-07T04:31:58.816000+00:00] kohai_ut (id=1501803761121755246)
+    In talking with hermes about mnemosyne using an LLM for conslidation, it indicated that mnemosyne does not support using my openai subscription as mnemosyne is coded for an api only approach.  Is that accurate?  If support is simple (few code changes), I could try to create a git PR.  I didn't realize that mnemosyne wasn't using the hermes llm config until asking hermes questions about MNEMOSYNE_LLM_ENABLED.  If this isn't the right path for openai max/pro subscription support or it isn't of any interest, I won't look into it.
+    [reply to nulledvector msg=1501777612442435665]
+
+[2026-05-07T05:53:28.372000+00:00] ramenthief (id=1501824269406048336)
+    this is greatly appreciated! fixed for me 😄 and apologies for my lack of knowledge of python i usualy only work with node T_T
+    [reply to kohai_ut msg=1501654095159754883]
+
+[2026-05-07T05:54:11.225000+00:00] ramenthief (id=1501824449144426536)
+    thanks for ammending the readme with the fix above 🙂
+    [reply to nulledvector msg=1501744981273219163]
+
+[2026-05-07T11:22:20.738000+00:00] austrian_guy (id=1501907032947687454)
+    I'm running it on a RPI5 8gb ram without issues:
+    Mnemosyne Configuration Summary
+    
+    Provider: Mnemosyne (native local memory)
+    
+    Current Statistics:
+    - Episodic memories: 113
+    - Working memories: 165
+    - Last consolidation: just now (13:19)
+    
+    Consolidation Quality:
+    - Recent consolidation produced 2 new episodic summaries
+    - Summary scores: 0.71-0.81 (good quality)
+    - No errors or issues detected
+    - Consolidation method: aaak (automated abstraction and knowledge aggregation)
+    
+    Configuration Parameters:
+    - Temporal halflife: 24 hours
+    - Temporal weight: 0.0 (no recency bias)
+    - Importance default: 0.5
+    - Scope: session and global
+    
+    Performance:
+    - Episodic consolidation working effectively
+    - Memory recall accurate and relevant
+    - No degradation issues
+    
+    Status: Healthy - No configuration changes needed.
+    [reply to kohai_ut msg=1501803761121755246]
+
+[2026-05-07T11:25:25.471000+00:00] skylinx79 (id=1501907807774052433)
+    I have been using this for a few weeks and the stats still show 0 episodic memories. Is this normal?
+    
+    ```
+    {
+      "working": {
+        "total": 2064,
+        "last": "2026-05-07T13:06:31.221480"
+      },
+      "episodic": {
+        "total": 0,
+        "last": null,
+        "vectors": 0,
+        "vec_type": "int8"
+      }
+    }
+    ```
+
+[2026-05-07T11:27:24.507000+00:00] nulledvector (id=1501908307047223346)
+    No worries! Glad we could help! Keep rocking /w Mnemosyne! 🙂
+    [reply to ramenthief msg=1501824269406048336]
+
+[2026-05-07T11:27:50.115000+00:00] nulledvector (id=1501908414454960138)
+    Hey! have you updated to the latest version?
+    [reply to skylinx79 msg=1501907807774052433]
+
+[2026-05-07T11:28:15.919000+00:00] nulledvector (id=1501908522684649523)
+    what was your install method if you remember, or you use an agent install? (ie. let your agent handle it for you)
+
+[2026-05-07T11:28:42.376000+00:00] skylinx79 (id=1501908633653346467)
+    Hi, I installed it manually following the docs. How do I check the version?
+
+[2026-05-07T12:06:02.079000+00:00] nulledvector (id=1501918027648602244)
+    just run this in the terminal where hermes is installed `hermes mnemosyne version`
+
+[2026-05-07T15:18:36.473000+00:00] skylinx79 (id=1501966490289705041)
+    I get `Mnemosyne 1.11.0 by Abdias J`
+    [reply to nulledvector msg=1501918027648602244]
+
+[2026-05-07T15:59:00.018000+00:00] 0xlfg (id=1501976655374061722)
+    What is wrong with the current  hermes memory?
+
+[2026-05-07T17:00:18.816000+00:00] wysie_ (id=1501992085371486349)
+    Hard File Size Caps: MEMORY.md is limited to roughly 2,200 characters (~800 tokens), and USER.md is limited to around 1,375 characters (~500 tokens).
+
+[2026-05-07T17:25:31.197000+00:00] kohai_ut (id=1501998428756905984)
+    Hermes memory is decent which is what makes it popular vs openclaw. Teknium himself only uses the native memory setup.  For those that want longer term memory or like to expirement with what is possible with other memory tools, hermes has the plugin path to try them.
+    [reply to 0xlfg msg=1501976655374061722]
+
+[2026-05-07T17:56:32.873000+00:00] nulledvector (id=1502006237192130723)
+    Yeah thats insanely outdated!
+    [reply to skylinx79 msg=1501966490289705041]
+
+[2026-05-07T18:13:18.239000+00:00] nulledvector (id=1502010454002892900)
+    please update with `pip install -U mnemosyne-memory`
+
+[2026-05-07T18:28:16.455000+00:00] skylinx79 (id=1502014221393596437)
+    I see, thanks! I will subscribe to the github repo so I don't miss future updates.
+
+[2026-05-07T20:59:53.934000+00:00] nulledvector (id=1502052378986418287)
+    Sure thing!
+    [reply to skylinx79 msg=1502014221393596437]
+
+[2026-05-09T09:04:26.220000+00:00] kyklooppi (id=1502597102834946079)
+    Hey Mnemosyne folks — I hit a database disk image is malformed error in one of my Hermes profiles, and it turned out the SQLite state.db had become corrupted. In my case, the DB had also grown huge because some messages were storing inline base64 image data.
+    
+    I recovered what I could, but it made me wonder: what’s the best way for us to prevent this class of failure in the future?
+    
+    I’d love to hear your patterns for:
+    - keeping binary/image data out of SQLite
+    - checking DB integrity proactively
+    - backing up / recovering profile state safely
+    - avoiding corruption when message payloads get large
+    
+    Would be great to compare approaches and help make Mnemosyne more resilient
+
+[2026-05-09T10:55:22.908000+00:00] austrian_guy (id=1502625023007916202)
+    What did your agent suggest?
+    [reply to kyklooppi msg=1502597102834946079]
+
+[2026-05-09T15:25:48.291000+00:00] kyklooppi (id=1502693077196865719)
+    What do you mean? It can suggest b but my question is how any of you have solved similar situation.
+    [reply to austrian_guy msg=1502625023007916202]
+
+[2026-05-10T01:20:45.822000+00:00] kohai_ut (id=1502842803493929091)
+    could you create an issue on git for this?  If you don't have a git account, I can post it there.  https://github.com/AxDSan/mnemosyne/issues
+    [embed] Issues · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/issues
+    [reply to kyklooppi msg=1502597102834946079]
+
+[2026-05-10T06:51:24.975000+00:00] austrian_guy (id=1502926014932717598)
+    Edit: just realized, replied to wrong person. Also, this was answered below satisfactorily. Never mind. 
+    
+    If you use a capable model, and NousResearch provides one/many even if you free tier, then you can let your agent resolve the issue. You can then create a gh account for yourself, have your agent create an issue template for you to post manually. Preferably, you tell your agent beforehand to check if there are already existing reports on the upstream repo, for your own specific issue.
+    [reply to kohai_ut msg=1502842803493929091]
+
+[2026-05-10T07:16:50.396000+00:00] kyklooppi (id=1502932413011984466)
+    I do have git account. However I do not think this is a Mnemosyne isseu. It’s more or the architecture/design question.
+    [reply to kohai_ut msg=1502842803493929091]
+
+[2026-05-10T08:48:07.979000+00:00] _voscko_ (id=1502955387660271637)
+    Yeah, that makes sense. If it was Hermes "state.db", I’d treat this mostly as a Hermes/session-storage boundary issue, not necessarily a Mnemosyne bug.
+    
+    Hermes may handle normal Telegram/Discord attachments fine by caching them as files and passing local paths around, but "state.db" still stores the actual session messages/tool payloads. So base64 can still sneak in if it arrives as text, an OpenAI-style "data:image/...;base64,..." image_url, a tool result, an API payload, or some plugin/adapter path that bypasses the normal attachment cache.
+    
+    So I think the fix is probably not “Mnemosyne should store images differently” only. It is more like: anything before SQLite should sanitize large/binary-looking payloads and replace them with artifact refs.
+    
+    Mnemosyne can still add guardrails on its own "remember"/import paths, but Hermes "state.db" needs protection too because it is upstream and stores the full session history.
+    [reply to kyklooppi msg=1502932413011984466]
+
+[2026-05-10T11:52:21.362000+00:00] charanis (id=1503001748908933200)
+    How does mnemosyne works exactly with the new kanban driven agents? Because right now with native Kanban we create specialized agents with their own soul.md config but also with their own personal memory. How will mnemosyne behave in a native kanban driven development environment where an orchestrator dispatches tasks to coders who have their code reviewed etc. - Will mnemosyne give any edge here? Will it give any edge over LLMWiki?
+
+[2026-05-10T11:53:22.526000+00:00] charanis (id=1503002005449478226)
+    <@151598363131904000> if you wouldn't mind sharing your thoughts on this
+
+[2026-05-10T12:12:36.413000+00:00] nulledvector (id=1503006845202337893)
+    Mnemosyne ships an MCP server since v1.13.0. That means any agent in your pipeline - orchestrator, coder, reviewer - just points its MCP config at Mnemosyne.
+    
+    The v2.1 identity layer means coder-A doesn't pollute coder-B's recall, but cross-agent relevance still surfaces when it should. So the orchestrator stores a design decision once, and every coder who later picks up a related task gets it injected automatically.
+    
+    LLMWiki is a markdown wiki agents have to read. 
+    
+    Mnemosyne is institutional memory that accumulates passively - every bug fix, every "don't do X here", every architectural call gets stored and recalled when relevant. Agents don't read docs. They just work, and the right context finds them.
+    
+    In a Kanban pipeline where 5+ specialized agents are spinning up and down, that's the difference between a curated library nobody reads and a living memory that makes every agent smarter than the last one.
+    [reply to charanis msg=1503001748908933200]
+
+[2026-05-10T14:27:18.050000+00:00] kohai_ut (id=1503040742044471448)
+    I think you're right and also that mnemosyne coudl be more robust with protecting itself.  I think Voscko's response is the right one.  It looks like there may also be some improvement on the db rebuild/recovery side.
+    [reply to kyklooppi msg=1502932413011984466]
+
+[2026-05-10T15:42:52.947000+00:00] rossascends (id=1503059762781098084)
+    has anyone else had problems with the hermes automated background 'skill improvement' loop exchanges cluttering up the actual memories? I get tons of 'memories' of User telling the AI to refine skills (keyword for finding these is "be ACTIVE"). This is a boilerplate outoing message, and always get an Assistant response with details of whatever skill was refined, or 'nothing to change'. Any strategy to exclude these kinds of messages? would be great if there was a simple 'ignore background tasks' config option in mnemosyne, but i haven't found it yet.
+    [reply to nulledvector msg=1502052378986418287]
+

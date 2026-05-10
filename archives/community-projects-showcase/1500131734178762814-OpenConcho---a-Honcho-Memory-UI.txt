@@ -1,0 +1,156 @@
+# Thread 'OpenConcho - a Honcho Memory UI' in forum #community-projects-showcase
+# thread_id=1500131734178762814 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:29.599105+00:00
+
+[2026-05-02T13:47:56.528000+00:00] offendingcommit (id=1500131734178762814)
+    I've tried them all, honestly. Mem0, QMD, Mempalace, and now Honcho. I freakin' love Honcho, but I hate saying it. I digress.
+    
+    Mem0 (you're using a lower model to store facts a higher model already has synthesized)
+    MemPalace (Not very mac friendly atm, but getting there and has promise)
+    QMD (Fairly, still use it, nothing beats markdown, but Honcho synthesizes in the background)
+    
+    I figured out how to self-host honcho not only on docker compose, but kubernetes. I have it humming on my home lab and served via TailScale.
+    
+    Maybe it's just me, but I didn't want my memories stored remotely (as I'm sure many of you share my same sentiments).
+    
+    Well, I decided to make a UI for it. I think whether you're self-hosting it or hosting it in Honcho's main site (and don't care for their UI) it should work?
+    
+    I figured why should I have to pay for Honcho to have a UI?
+    
+    I'd love your feedback, support, and contributions if you have time 🙂
+    
+    https://github.com/offendingcommit/openconcho
+    
+    Please let me know if you have any questions. It's still a baby, so hoping that the usefulness aids you all.
+    [embed] GitHub - offendingcommit/openconcho: Fast, privacy-first desktop & ... https://github.com/offendingcommit/openconcho
+
+[2026-05-02T21:43:27.561000+00:00] bushidocg (id=1500251402004332805)
+    This is really nice!
+
+[2026-05-02T23:12:40.188000+00:00] offendingcommit (id=1500273852549169242)
+    I really appreciate that! Please let me know if you’ve got feedback, bugs, etc. 
+    
+    You can file GH issues and make PRs
+    [reply to bushidocg msg=1500251402004332805]
+
+[2026-05-03T02:20:38.191000+00:00] jwalkersf7273 (id=1500321155922526360)
+    today’s to do list is to finally set up honcho. planning to self host so this is perfect timing
+
+[2026-05-03T02:22:25.930000+00:00] jwalkersf7273 (id=1500321607812649021)
+    my use case is a slackbot that salespeople use for getting infos from the proprietary crm (and all its 1994 proprietary ideas that it left off at) and using a combo of hindsight and api to get facts and make observations
+
+[2026-05-03T02:23:13.097000+00:00] jwalkersf7273 (id=1500321805645381673)
+    i’m wanting honcho to be the piece that makes the salespeople feel like the hermes slackbot is actually getting to know them
+
+[2026-05-03T02:23:23.372000+00:00] jwalkersf7273 (id=1500321848741724330)
+    and then also profile our clients
+
+[2026-05-03T02:23:52.475000+00:00] jwalkersf7273 (id=1500321970808684654)
+    does that sound at all coherent and possibly successful design?
+
+[2026-05-03T03:42:53.178000+00:00] offendingcommit (id=1500341854758240357)
+    Yes it does! How are you self-hosting? I have a helm-chart I can make public and I’ve patched a little bit of the upstream. I personally use Cloudflare AI Gateway because you can do so much with it and also make sure there’s a sufficient audit trail if needed.
+    
+    Honcho for sales is brilliant. I need to tweak some bugs out of the UI, but this would be a fantastic and fun way to use this. 
+    
+    I’ve learned a lot along the way on setting up Honcho so if you want to swap stories, I’m game.
+    [reply to jwalkersf7273 msg=1500321970808684654]
+
+[2026-05-03T03:50:13.835000+00:00] offendingcommit (id=1500343703007662302)
+    The brilliant thing about honcho is you can just…upload docs to it and it’ll chew on it, draw conclusions, etc.
+    
+    One of my use-cases is I kept a log of my twitch chats… from the past 18 months. So I’ve built a profile on every single of my regulars 🙂
+    [reply to jwalkersf7273 msg=1500321970808684654]
+
+[2026-05-03T03:52:03.613000+00:00] jwalkersf7273 (id=1500344163449831545)
+    well the install itself was straightforward since it has a self hosting path
+
+[2026-05-03T03:52:24.928000+00:00] jwalkersf7273 (id=1500344252851556515)
+    i just changed its default port since i think it wanted 3000 which, come on, thats prime real estate
+
+[2026-05-03T03:52:38.613000+00:00] jwalkersf7273 (id=1500344310250475664)
+    but other than moving it to 8989 it was a one and done
+
+[2026-05-03T03:53:01.395000+00:00] jwalkersf7273 (id=1500344405805105183)
+    i made it into a plugin
+
+[2026-05-03T03:53:34.660000+00:00] jwalkersf7273 (id=1500344545328500736)
+    from my docs:
+    honcho-rep-context Hermes plugin
+    
+    `pre_llm_call` hook that injects a Honcho per-rep peer card on the first turn
+    of every session. Maps the Slack `user_id` (passed by the Hermes gateway as
+    `sender_id`) to a Honcho `peer` in the configured workspace.
+    
+    ## What it does
+    
+    | Stage | Behavior |
+    | --- | --- |
+    | First turn | Look up Honcho peer = `sender_id` in workspace `deepswag` (or `HONCHO_WORKSPACE`). Auto-create the peer if missing. Fetch `peer.get_representation()`. Inject as a context block on the user message. |
+    | Subsequent turns | No-op. Per-turn recall is hindsight-context's job. |
+    | Empty card | Return `None`. Empty representation is honest — new peers won't have a representation until Honcho's deriver processes observations. Do NOT fabricate filler. |
+    | Honcho down | Return `None`, log warning. NEVER block the turn. |
+    | `sender_id` empty | Return `None`. Log at DEBUG so stale gateways surface. |
+    
+    This plugin is **complementary to**, not a replacement for, Hermes's bundled
+    `memory.provider: honcho` integration. The bundled provider handles
+    end-of-session writes (conclusions extraction, message persistence). This
+    plugin handles the per-rep first-turn peer-card injection that the memory
+    provider doesn't do natively.
+
+[2026-05-03T12:48:05.822000+00:00] offendingcommit (id=1500479061531824188)
+    So fun fact: in the UI I built you can chat directly with Honcho. It doesn’t replace Hermes, but it allows you to see what Hermes sees.
+    [reply to jwalkersf7273 msg=1500344545328500736]
+
+[2026-05-03T15:59:32.419000+00:00] ajanraj (id=1500527239811301497)
+    Would be cool if you add some images to the repository readme
+
+[2026-05-03T19:32:57.333000+00:00] offendingcommit (id=1500580947513446570)
+    Yeah, I was prepared for it. I included a “demo” mode which obfuscates the data so people could send screenshots and I can post them. I will add that to my list. Could you please make a GitHub issue so I don’t lose track?
+    [reply to ajanraj msg=1500527239811301497]
+
+[2026-05-03T22:18:02.357000+00:00] offendingcommit (id=1500622492195356894)
+    https://github.com/offendingcommit/openconcho/releases/tag/v0.5.3
+    [embed] Release v0.5.3 · offendingcommit/openconcho https://github.com/offendingcommit/openconcho/releases/tag/v0.5.3
+
+[2026-05-03T22:23:55.510000+00:00] offendingcommit (id=1500623973426270209)
+    <@513413224620883988> <@494698367738445827> You'll want to hook up your instances for more details, but here's a couple picks if you haven't dove in yet.
+    [attachment] Screenshot_2026-05-03_at_17.20.55.png https://cdn.discordapp.com/attachments/1500131734178762814/1500623972830679060/Screenshot_2026-05-03_at_17.20.55.png?ex=6a01ae3b&is=6a005cbb&hm=4ea5753b882a82cf0220e9644ae216c2dd5344c1359ef44b114cd73e1822cc5d&
+    [attachment] Screenshot_2026-05-03_at_17.21.16.png https://cdn.discordapp.com/attachments/1500131734178762814/1500623973250236466/Screenshot_2026-05-03_at_17.21.16.png?ex=6a01ae3b&is=6a005cbb&hm=46a7ef9cd78edf3f02b5f37b604313493765a4039ebe4591e49396d8e3b256dc&
+    [attachment] Screenshot_2026-05-03_at_17.21.26.png https://cdn.discordapp.com/attachments/1500131734178762814/1500623973548036126/Screenshot_2026-05-03_at_17.21.26.png?ex=6a01ae3b&is=6a005cbb&hm=f1189ce1c7f64d3d61d6003c72c631d238314f064eb53565b333464f37a8b3da&
+
+[2026-05-04T03:16:42.951000+00:00] jwalkersf7273 (id=1500697656614453389)
+    awesome. ill probably be ready tomorrow or day after to work on this part. ill let you know. thank you so much.
+
+[2026-05-04T03:16:52.619000+00:00] jwalkersf7273 (id=1500697697164988486)
+    i saw another honcho plugin awhile back but havent looked at it
+
+[2026-05-04T03:17:16.841000+00:00] jwalkersf7273 (id=1500697798759284756)
+    what do you tihnk is the differentiating factors between them? are they similar or totally different approaches?
+
+[2026-05-04T04:07:25.063000+00:00] offendingcommit (id=1500710416156721273)
+    I have my own honcho-plugin for claude, but got one for hermes. The main thing you want to be careful about is limiting tools to non-destructive methods.
+    
+    Auto-seeding is nice, but I’m not entirely convinced yet if it “knows” the right context. 
+    
+    I personally like a _little_ transparency when my agent is asking questions.
+    
+    Also, one thing to keep in mind: you don’t need LLM to seed honcho… basically you can just post messages to it via webhook and separately have your LLMs “ask the oracle”
+    [reply to jwalkersf7273 msg=1500697697164988486]
+
+[2026-05-05T03:32:55.273000+00:00] offendingcommit (id=1501064122693976105)
+    Just added support for multi-honcho instances
+
+[2026-05-06T15:55:17.003000+00:00] failcookie (id=1501613332115886202)
+    <@355864858992050177> Since you mentioned k8s with your Honcho instance, are you also using k8s for your Hermes agents? Definitely going to try out your project today and get it setup. I've been debating if I wanted to commit to that next move (compounded tinkering gets tiring 😂 )
+
+[2026-05-10T14:04:42.494000+00:00] offendingcommit (id=1503035056430776480)
+    Not for hermes, but I am using it for honcho and hindsight!
+    [reply to failcookie msg=1501613332115886202]
+
+[2026-05-10T18:01:05.326000+00:00] mobai4876162 (id=1503094543539507230)
+    I couldn't even get Honcho running locally self-hosted
+
+[2026-05-10T18:02:28.573000+00:00] mobai4876162 (id=1503094892702994432)
+    My agent said he has a bug
+

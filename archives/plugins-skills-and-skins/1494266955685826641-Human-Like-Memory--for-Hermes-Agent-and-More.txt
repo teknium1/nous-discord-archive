@@ -1,0 +1,44 @@
+# Thread 'Human-Like Memory (for Hermes Agent and More)' in forum #plugins-skills-and-skins
+# thread_id=1494266955685826641 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:29.041029+00:00
+
+[2026-04-16T09:23:24.373000+00:00] robin_pie (id=1494266955685826641)
+    Sharing a Human-Like Memory integration repo for Hermes Agent, OpenClaw, and direct API usage:
+    
+    https://github.com/qwang6-1936520/Human-like-memory-skill
+    
+    I updated the repo so the README now includes the official quick-start paths for all 3 integration modes:
+    
+    - OpenClaw plugin
+    - Hermes native memory provider
+    - Direct REST API
+    
+    For Hermes specifically, this is documented as the native memory provider flow, not just a repo-local skill:
+    - install provider
+    - configure `~/.hermes/.env`
+    - restart gateway
+    - verify provider registration and logs
+    
+    The repo also includes:
+    - OpenClaw compatibility metadata
+    - API request examples for search + add message
+    - notes on shared memory across clients via `agent_id` and `scenario`
+    - English + Chinese README
+    
+    If anyone is testing long-term memory workflows in Hermes, I’d be interested in feedback on real-world retrieval quality, shared-memory behavior, and provider ergonomics.
+    [attachment] 2026-04-16_17.23.07.png https://cdn.discordapp.com/attachments/1494266955685826641/1494266956063182909/2026-04-16_17.23.07.png?ex=6a01a00c&is=6a004e8c&hm=49549093a2c0ea2498aee9153566606a3af1942dfcfbfbfb78568b90fa64095a&
+    [embed] GitHub - qwang6-1936520/Human-like-memory-skill: Human-Like Memory ... https://github.com/qwang6-1936520/Human-like-memory-skill
+
+[2026-04-16T09:27:35.929000+00:00] huangyongqing97 (id=1494268010788032532)
+    six six six
+
+[2026-04-16T09:28:32.022000+00:00] huangyongqing97 (id=1494268246059122768)
+    👀
+
+[2026-04-16T09:29:12.515000+00:00] reuspect11 (id=1494268415899074571)
+    😆
+
+[2026-04-16T10:22:15.338000+00:00] tianchen_53676 (id=1494281765626318911)
+    <:nousgirlsilo:1383267867394441276>
+    [reply to huangyongqing97 msg=1494268010788032532]
+

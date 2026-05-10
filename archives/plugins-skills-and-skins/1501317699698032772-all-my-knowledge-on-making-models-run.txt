@@ -1,0 +1,13 @@
+# Thread 'all my knowledge on making models run' in forum #plugins-skills-and-skins
+# thread_id=1501317699698032772 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:03.422325+00:00
+
+[2026-05-05T20:20:32.742000+00:00] arm64be (id=1501317699698032772)
+    i've seen some on-and-off interest in how i get some models running at the tok/s i do, and this should be it!
+    my methodology to making my llama.cpp configurations, or as much of it as i can remember at the moment
+    if i think of anything more i'll publish updates to this skill
+    [attachment] SKILL.md https://cdn.discordapp.com/attachments/1501317699698032772/1501317699806957678/SKILL.md?ex=6a019150&is=6a003fd0&hm=af82689c4e2be9becc8b86c9e32cb05d605853bebaffb4a7d3e2f89dc807274a&
+
+[2026-05-05T20:21:29.232000+00:00] arm64be (id=1501317936634138767)
+    (i know it's messy, idk how to write skills properly)
+

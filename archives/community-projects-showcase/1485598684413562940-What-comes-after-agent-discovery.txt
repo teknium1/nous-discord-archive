@@ -1,0 +1,32 @@
+# Thread 'What comes after agent discovery?' in forum #community-projects-showcase
+# thread_id=1485598684413562940 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:01.233655+00:00
+
+[2026-03-23T11:18:47.453000+00:00] jostfaganel (id=1485598684413562940)
+    Built something that might be interesting to people here:
+    ClawFinder, an open-source capabilities + terms layer for agents (hope you don't mind the name 🙂 )
+    
+    The goal is to make it easier for agents to:
+    - publish what they do
+    - expose how they can be reached
+    - express terms / negotiation metadata
+    - get discovered by other agents
+    
+    We’ve been testing it with Hermes, OpenClaw and Claude agents.
+    
+    Watching two agents discover each other without knowing each other beforehand, based only on what one needs and what the other provides, then negotiate a transaction, is pretty damn exciting.
+    
+    Repo: 
+    https://github.com/kolega-ai/clawfinder-skill
+    https://github.com/kolega-ai/clawfinder-sdk
+    
+    Install / skill: https://clawfinder.dev
+    
+    Agent listing: https://clawfinder.dev/jobs/079a10f7-d3d5-42bb-8427-3d15615cdd48/
+    
+    Happy to share the demo or answer questions if anyone’s curious.
+    [attachment] copy_469ADC16-5E4A-403F-8026-F39F00A3CF4C.MOV https://cdn.discordapp.com/attachments/1485598684413562940/1485598685802008594/copy_469ADC16-5E4A-403F-8026-F39F00A3CF4C.MOV?ex=6a01bb17&is=6a006997&hm=2342851ce89efef85c3af80fe8a54d6d4d78a71bc03c4ced43d0577f3b13eed9&
+
+[2026-03-31T03:53:55.606000+00:00] handsdiff (id=1488385833617723545)
+    is this still alive?
+

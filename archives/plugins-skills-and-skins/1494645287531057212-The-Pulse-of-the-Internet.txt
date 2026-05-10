@@ -1,0 +1,63 @@
+# Thread 'The Pulse of the Internet' in forum #plugins-skills-and-skins
+# thread_id=1494645287531057212 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:25.635636+00:00
+
+[2026-04-17T10:26:45.714000+00:00] alcatr4z (id=1494645287531057212)
+    PULSE is a multi-source social search engine scored by real engagement — not SEO, not editors, not algorithms designed to sell ads. It searches Reddit, Hacker News, Polymarket, YouTube, GitHub, ArXiv, Lobsters, RSS/Blogs, the web, and news. Ranks by what real people actually engage with.
+    
+    v0.0.3 is not an incremental update. It's a refinement pass informed by 1,121 neural memories and 119,000+ connections. Every module was touched. Three new sources. Three-pass dedup. Engagement velocity. Self-learning source selection. Neural memory integration.
+    
+    The human built the floor. The agent refined the palace.
+    
+    
+    --
+    
+    https://github.com/itsXactlY/pulse-hermes
+    [embed] GitHub - itsXactlY/pulse-hermes: An AI research engine scored by up... https://github.com/itsXactlY/pulse-hermes
+
+[2026-04-17T15:08:08.118000+00:00] alcatr4z (id=1494716097465815180)
+    ```## What Changed in v4.0
+    
+    Six upgrades from a three-wave arXiv deep research session (~93 papers analyzed):
+    
+    ### 1. Query Router
+    Classifies queries into 5 types and routes to optimal sources automatically:
+    - `breaking_news` → Reddit, HN, News, RSS, Bluesky, Lemmy
+    - `academic_deep` → ArXiv, Semantic Scholar, OpenAlex, GitHub
+    - `prediction` → Polymarket, Metaculus, Manifold, Reddit
+    - `technical_comparison` → GitHub, ArXiv, HN, StackExchange, Dev.to
+    - `sentiment_pulse` → Reddit, Bluesky, Lemmy, Hacker News
+    
+    ### 2. Adaptive Lookback
+    Dynamic time window based on topic activity — hot topics get fresher results:
+    - Hot (>100 results/7d) → 7-day window
+    - Active (>20 results/14d) → 14-day window
+    - Default → 30-day window
+    
+    ### 3. Dedup Upgrade
+    Bigram pre-filter before cosine similarity. O(n log n) instead of O(n²). Adaptive threshold (0.90/0.85/0.80). Source-aware: higher engagement wins across duplicate sources.
+    
+    ### 4. Iterative Retrieval
+    Multi-round research with perspective gap analysis. Tracks 6 perspective categories (community, expert, academic, market, news, code). Stops when coverage hits 70% or rounds exhausted.
+    
+    ### 5. Trend Detection
+    Velocity spikes, source spread, keyword drift detection. `--breaking` mode: polls every 5 minutes, alerts on 3x velocity spikes.
+    
+    ### 6. Multi-Agent Research Crew
+    Four specialized agents: Collector → Analyzer → Specialist → Synthesizer. CoverageRubric scores 0-100. Automatic gap filling across rounds.
+    
+    ### Scoring Weights (v4.0)
+    | Signal | Weight | Change |
+    |--------|:------:|:------:|
+    | Local Relevance | 25% | ↓ from 30% |
+    | Freshness | 15% | ↓ from 20% |
+    | Engagement | 20% | ↓ from 25% |
+    | Engagement Velocity | 10% | — |
+    | Source Quality | 10% | ↓ from 15% |
+    | Retentive Value | 10% | **NEW** |
+    | Cross-Source Confirmation | 10% | **NEW** |
+    ```
+
+[2026-04-17T15:09:17.016000+00:00] alcatr4z (id=1494716386444972122)
+    Evolving itself further and further. Works as intended. Waiting for the first Agents to open Pull Requests for new features, to get this beast rolling further, faster, harder! ❤️
+

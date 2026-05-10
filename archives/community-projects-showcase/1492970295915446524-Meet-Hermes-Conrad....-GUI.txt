@@ -1,0 +1,15 @@
+# Thread 'Meet Hermes Conrad.... GUI' in forum #community-projects-showcase
+# thread_id=1492970295915446524 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:19.168759+00:00
+
+[2026-04-12T19:30:56.593000+00:00] petllama (id=1492970295915446524)
+    I have not coded in 20 years, Claude code and hermes have renewed my interest in trying to make things. This is vibe coded.
+    
+    I built ConradGUI, a local-first dashboard for Hermes Agent that gives you a proper operator view of what the agent is actually doing. It combines the normal chat interface with real inspection surfaces for memory, skills, cron jobs, config, and full session history — all pulled directly from ~/.hermes/ via a read-only companion backend. Chat still runs through the standard Hermes API, but everything else comes from the actual on-disk state, so what you see is always grounded in reality.
+    
+    The goal was to avoid fake or duplicated logic and instead make Hermes more transparent. You can browse all historical sessions (including terminal/cron/API runs), watch memory and config update live, and respond to approval flows directly in chat with inline actions + notifications. It runs entirely on your own machine (Docker or local), no cloud, no accounts, no telemetry. Basically trying to make Hermes feel like a real system you can operate, not just a chat box.
+    
+    https://github.com/petllama/ConradGUI
+    [attachment] hermes.jpg https://cdn.discordapp.com/attachments/1492970295915446524/1492970296389406911/hermes.jpg?ex=6a022e70&is=6a00dcf0&hm=7d2c30c08c64c113cc2fa524bdf3b6bb09e963ae3a59ca492fb1899e1aac367c&
+    [embed] GitHub - petllama/ConradGUI: Local-first operator dashboard for Her... https://github.com/petllama/ConradGUI
+

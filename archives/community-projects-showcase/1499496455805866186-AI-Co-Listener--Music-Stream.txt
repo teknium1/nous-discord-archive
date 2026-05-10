@@ -1,0 +1,14 @@
+# Thread 'AI Co-Listener (Music Stream)' in forum #community-projects-showcase
+# thread_id=1499496455805866186 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:32.908143+00:00
+
+[2026-04-30T19:43:34.361000+00:00] blandsteak (id=1499496455805866186)
+    WZRD Listen is an AI that witnesses the music you stream and saves it to an archive you own.
+    
+    Keep proof. Carry your history across devices. Collect rewards as the network opens.
+    
+    Available on the Chrome Store:
+    
+    https://chromewebstore.google.com/detail/wzrd-listen/dajdmadifhogknlbdoeocdageopkkgjj?utm_source=item-share-x
+    [embed] WZRD Listen - Chrome Web Store https://chromewebstore.google.com/detail/wzrd-listen/dajdmadifhogknlbdoeocdageopkkgjj?utm_source=item-share-x
+

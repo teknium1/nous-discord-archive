@@ -1,0 +1,29 @@
+# Thread 'Integrating Clooi and UniversalBackrooms' in forum #community-projects-showcase
+# thread_id=1347541471691149396 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:45.019303+00:00
+
+[2025-03-07T12:08:42.961000+00:00] cyber_jock (id=1347541471691149396)
+    I'm an AI researcher interested in developing an intuitive interface that seamlessly integrates both manual (human-to-AI) and automated (AI-to-AI) conversations.
+    
+    I believe Clooi by <@800858801220878376> is a crucial advancement in LLM interfaces due to its intuitive nature and essential features such as saving, loading, and rewinding conversations. These capabilities should be foundational standards across all conversational AI software.
+    
+    I aim to  integrate UniversalBackrooms in  Clooii. Specifically, I want to develop a system where agents can interact naturally within Clooi's interface:
+    
+    Clooi: https://github.com/repligate/clooi
+    
+    UniversalBackrooms: https://github.com/scottviteri/UniversalBackrooms/branches
+    
+    Key Goals:
+    
+    - Integrate AI-to-AI conversation capabilities from UniversalBackrooms into Clooi's  UI.
+    
+    - Develop the ability to fluidly switch agents between human-directed and autonomous conversations.
+    
+    I will begin development soon, if this is of interest to you let me know and I can share updates and code along the way.  If you are interested collaborating let me know!
+    
+    Sam
+    [embed] Branches · scottviteri/UniversalBackrooms https://github.com/scottviteri/UniversalBackrooms/branches
+
+[2025-04-06T02:45:50.887000+00:00] proprietary (id=1358271457314078770)
+    <@800858801220878376>
+

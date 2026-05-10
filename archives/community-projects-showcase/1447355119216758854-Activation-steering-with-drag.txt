@@ -1,0 +1,10 @@
+# Thread 'Activation steering with drag' in forum #community-projects-showcase
+# thread_id=1447355119216758854 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:30.159738+00:00
+
+[2025-12-07T22:32:30.979000+00:00] _samandcheese (id=1447355119216758854)
+    I was playing around with activation steering and got much better results after adding a "dampening parameter" or "drag force" to the steering vector "force"
+    https://gitlab.com/sringram/drift/-/tree/4fd918b8eee0bc596c2a07c4500ac08252586687/
+    This is the code if anyone wants to try it for themselves. It's hardcoded for Qwens config because that's what I was experimenting on. Open to any questions or comment on my theory or method
+    [embed] Files · 4fd918b8eee0bc596c2a07c4500ac08252586687 · Sam Ingram / D... https://gitlab.com/sringram/drift/-/tree/4fd918b8eee0bc596c2a07c4500ac08252586687/
+

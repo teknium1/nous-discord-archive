@@ -1,0 +1,43 @@
+# Thread 'DragonFable Skin' in forum #plugins-skills-and-skins
+# thread_id=1495313262869479466 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:22.575166+00:00
+
+[2026-04-19T06:41:03.445000+00:00] neopabo (id=1495313262869479466)
+    Theme based on DragonFable, an old-school browser RPG
+    [attachment] image.png https://cdn.discordapp.com/attachments/1495313262869479466/1495313263095840928/image.png?ex=6a0222bf&is=6a00d13f&hm=773ced5f00a188ecfebf9d4a95af67eb907ba1a8afa86f5656744067e6d145c4&
+
+[2026-04-19T12:40:21.428000+00:00] oninsuka (id=1495403683603681332)
+    WOAH GOATED ASS PULL
+
+[2026-04-19T12:40:28.580000+00:00] oninsuka (id=1495403713601212446)
+    also how do i make my own theme bro?
+
+[2026-04-19T16:40:54.353000+00:00] neopabo (id=1495464219678609478)
+    DragonFable Skin
+
+[2026-04-19T17:46:27.897000+00:00] neopabo (id=1495480718157942924)
+    Rather than waste your time with instructions, I had my agent recreate the pipeline into skills. Here you go:
+    
+    https://github.com/H-Ali13381/hermes-theme-workshop
+    [embed] GitHub - H-Ali13381/hermes-theme-workshop: Braille-first ASCII art ... https://github.com/H-Ali13381/hermes-theme-workshop
+
+[2026-04-20T16:45:57.515000+00:00] airstrikeivanov (id=1495827879098060970)
+    Man I used to play this. I miss that old website. Still have some of his other games downloaded. 🤣
+
+[2026-04-20T19:00:34.386000+00:00] neopabo (id=1495861755950403665)
+    I still play their games once in a while, it's fun!
+    [reply to airstrikeivanov msg=1495827879098060970]
+
+[2026-04-21T20:20:11.259000+00:00] neopabo (id=1496244179473530880)
+    <@234139936738115584> Forgot to tag you before
+
+[2026-04-22T02:09:20.597000+00:00] oninsuka (id=1496332047365439669)
+    <@1451389295280525354>  thanks so much bro i tried it out but idk it doesnt work properly for me. would it be ok for me to ask you for help in making a theme? ahha
+
+[2026-04-22T02:10:54.978000+00:00] neopabo (id=1496332443228049551)
+    Sure no problem
+    [reply to oninsuka msg=1496332047365439669]
+
+[2026-04-22T02:10:58.570000+00:00] neopabo (id=1496332458294120619)
+    Hop in a call?
+

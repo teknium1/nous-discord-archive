@@ -1,0 +1,10 @@
+# Thread 'Goban - Local network kanban for agents.' in forum #community-projects-showcase
+# thread_id=1502769628559179937 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:14.245572+00:00
+
+[2026-05-09T20:29:59.558000+00:00] purkkaviritys (id=1502769628559179937)
+    Made a network based kanban for agents with local client to minimize token use. available at https://github.com/BubblegumTuning/goban
+    Comes with web ui so meat based agents can see what is going on.
+    [attachment] goban.png https://cdn.discordapp.com/attachments/1502769628559179937/1502769628818968667/goban.png?ex=6a019387&is=6a004207&hm=3f30b56b1588584e6901e5e29a33ab649795f91ab5ef842ea582689fde856221&
+    [embed] GitHub - BubblegumTuning/goban: Lightweight Kanban board designed f... https://github.com/BubblegumTuning/goban
+

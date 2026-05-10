@@ -1,0 +1,18 @@
+# Thread 'LLM-Wiki-style thing with Hermes + Obsidian + ObsidianClaw + Keep' in forum #community-projects-showcase
+# thread_id=1492867629327843569 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:19.642766+00:00
+
+[2026-04-12T12:42:58.971000+00:00] hugh1979 (id=1492867629327843569)
+    Chat with your agent, inside Obsidian.  ObsidianClaw connects to the Hermes API server.
+    The conversation and everything you talk *about* are indexed and linked in the Keep memory system.
+    It shows up in Obsidian as a graph.
+    Index anything - web links, pdfs, git repos...
+    
+    (Update: now with audio...!)
+    https://youtu.be/NQBiy82fGwM
+    [embed] Chatting in Obsidian, Hermes, and Keep https://www.youtube.com/watch?v=NQBiy82fGwM
+
+[2026-04-12T16:43:24.402000+00:00] hugh1979 (id=1492928133970657362)
+    Some implementation details in here: https://keepnotes.ai/blog/2026-04-12-llmwiki/
+    [embed] LLM-Wiki https://keepnotes.ai/blog/2026-04-12-llmwiki/
+

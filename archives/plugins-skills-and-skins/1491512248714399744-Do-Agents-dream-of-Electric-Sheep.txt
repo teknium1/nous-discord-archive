@@ -1,0 +1,16 @@
+# Thread 'Do Agents dream of Electric Sheep' in forum #plugins-skills-and-skins
+# thread_id=1491512248714399744 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:43.255527+00:00
+
+[2026-04-08T18:57:11.051000+00:00] ajaylakhani (id=1491512248714399744)
+    your AI agent, but it dreams at night
+    
+    5 REM cycles, 23:00–06:00, zero cron jobs. by morning it's written 9 dream thoughts + a recall you can query.
+    
+    costs ~$0.014/night on Haiku. free on local models.
+    
+    https://github.com/ajaylakhani/opendream
+    
+    feedback welcome 👀
+    [embed] GitHub - ajaylakhani/opendream https://github.com/ajaylakhani/opendream
+

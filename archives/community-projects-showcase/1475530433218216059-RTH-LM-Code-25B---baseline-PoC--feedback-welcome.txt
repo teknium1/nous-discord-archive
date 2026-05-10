@@ -1,0 +1,31 @@
+# Thread 'RTH LM Code 25B — baseline PoC (feedback welcome)' in forum #community-projects-showcase
+# thread_id=1475530433218216059 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:23.978735+00:00
+
+[2026-02-23T16:31:09.309000+00:00] christian_quintino (id=1475530433218216059)
+    Hey everyone 👋
+    I recently published RTH LM Code 25B on Hugging Face, and it unexpectedly reached 5,000 downloads in 24 hours with no public announcement.
+    
+    I’m trying to understand whether it was mirrored/scraped somewhere, or if people are quietly testing it 
+    
+    Quick context: this release is a baseline code-focused PoC, with only ~8 hours of LoRA training on a ~5GB code dataset. It’s not a finished flagship model — the main goal is to validate the architecture and collect real feedback.
+    
+    Core idea: a stable/frozen mathematical core (“genome” / scaffold) with fast iteration and experimentation.
+    
+    If anyone tries it, I’d really appreciate feedback on:
+    
+    VRAM usage / memory behavior
+    
+    inference stability
+    
+    throughput
+    
+    hardware compatibility
+    
+    bugs / weird outputs
+    
+    HF model page: https://huggingface.co/RthItalia/Rth-lm-code-25b
+    
+    Any feedback or bug reports are very welcome 🙏
+    [embed] RthItalia/Rth-lm-code-25b · Hugging Face https://huggingface.co/RthItalia/Rth-lm-code-25b
+

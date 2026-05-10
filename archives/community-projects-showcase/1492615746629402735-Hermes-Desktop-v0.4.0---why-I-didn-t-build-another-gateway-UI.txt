@@ -1,0 +1,26 @@
+# Thread 'Hermes Desktop v0.4.0 — why I didn't build another gateway UI' in forum #community-projects-showcase
+# thread_id=1492615746629402735 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:21.818272+00:00
+
+[2026-04-11T20:02:05.456000+00:00] itsdodo21 (id=1492615746629402735)
+    200 stars in under 36 hours — thank you. And thank you to Teknium for the mention on X.
+    
+    For anyone new here: Hermes Desktop is a native Mac app for Hermes Agent. Not a browser wrapper but a real SwiftUI app that connects to your Hermes host and files over SSH. Sessions from `~/.hermes/state.db`, skills from `~/.hermes/skills/`, memory files on disk.
+    
+    What's new in v0.4.0:
+    — Session search + remote deletion
+    — Even stronger conflict-aware file saves
+    — Top 5 Models by Tokens from `state.db`
+    — Skill list and search
+    
+    The conflict-aware saves are the part worth explaining. Before writing `USER.md`, `MEMORY.md`, or `SOUL.md`, the app checks a SHA-256 fingerprint of the remote file as it was when you loaded it. If Hermes wrote to that file while you were editing it, the write is blocked. That's only possible because the app talks directly to the host — not through the gateway, not against a local mirror.
+    
+    The gateway model is the right answer for Telegram and Discord. For a native Mac app that sits next to your terminal, it's just not the one I'd ship.
+    
+    https://github.com/dodo-reach/hermes-desktop/releases/tag/v0.4.0
+    [attachment] IMG_20260411_190741_433.jpg https://cdn.discordapp.com/attachments/1492615746629402735/1492615746960887960/IMG_20260411_190741_433.jpg?ex=6a018cfd&is=6a003b7d&hm=adaaf57964fbcc3c3063cecd2a468c4012bfcc8aeb7ebc16314812a549194bff&
+    [attachment] IMG_20260411_220133_482.jpg https://cdn.discordapp.com/attachments/1492615746629402735/1492615747577577573/IMG_20260411_220133_482.jpg?ex=6a018cfd&is=6a003b7d&hm=f0c501d16e44acc48d7adf10350adaac4cf850e9a11f60735beb4b01dc6bc16b&
+    [attachment] IMG_20260411_220039_408.jpg https://cdn.discordapp.com/attachments/1492615746629402735/1492615748005134367/IMG_20260411_220039_408.jpg?ex=6a018cfd&is=6a003b7d&hm=c2523760e0b004c53d86e7fe131848b9c2ca410b761a274a10c8d08945d2156c&
+    [attachment] IMG_20260411_220043_431.jpg https://cdn.discordapp.com/attachments/1492615746629402735/1492615748445667480/IMG_20260411_220043_431.jpg?ex=6a018cfd&is=6a003b7d&hm=c625185dea4292debfe7364881eece64a84a7d13324b4a9a853888130fcb2f0d&
+    [embed] Release Hermes Desktop v0.4.0 · dodo-reach/hermes-desktop https://github.com/dodo-reach/hermes-desktop/releases/tag/v0.4.0
+

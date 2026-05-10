@@ -1,0 +1,23 @@
+# Thread 'Andorina — Turn Hermes into an autonomous WhatsApp manager.' in forum #community-projects-showcase
+# thread_id=1502865507395833917 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:13.333626+00:00
+
+[2026-05-10T02:50:58.854000+00:00] vayaperson (id=1502865507395833917)
+    📤 Send messages to any contact without waiting for them to write first
+    👥 Send messages to groups
+    📁 Send files, images and videos
+    🎙️ Native voice notes (shows "Recording..." to the receiver)
+    ⏰ Schedule messages with date and time
+    🔐 100% local, zero telemetry
+    
+    All from natural language. Just tell Hermes "send a WhatsApp to Maria saying I'll be late" and it does it. Schedule a message, go out, cancel it from anywhere. Left home and forgot to copy that file? Ask Hermes from WhatsApp and it will find it on your PC and send it to you — or to anyone else — right in the chat.
+    
+    Andorina is a skill for Hermes Agent that sets up a full WhatsApp bridge in a single command. Automatic installer, Linux.
+    
+    Looking for people to test the installer and report back. If you have Hermes running on Linux, I'd really appreciate it 🙏
+    
+    
+    🔗 https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+    [attachment] Andorina-progress.png https://cdn.discordapp.com/attachments/1502865507395833917/1502865508846932149/Andorina-progress.png?ex=6a01ecd3&is=6a009b53&hm=85b76f41517e909420db131146f7548adf4570792270a279c8ebbd1514b7db6d&
+    [embed] Andoriña | Autonomous WhatsApp Manager for Hermes https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+

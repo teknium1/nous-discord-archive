@@ -1,0 +1,22 @@
+# Thread 'HermesHub.xyz' in forum #community-projects-showcase
+# thread_id=1483804596785909872 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:13.026790+00:00
+
+[2026-03-18T12:29:43.630000+00:00] mr.r0b0t.eth (id=1483804596785909872)
+    https://www.hermeshub.xyz/
+    
+    What is HermesHub?
+    
+    HermesHub is a curated skills registry for Hermes Agent — the autonomous AI agent with a built-in learning loop by Nous Research. Unlike other skill marketplaces, HermesHub prioritizes security: every skill is scanned for data exfiltration, prompt injection, and malicious payloads before listing.
+    
+    Skills follow the agentskills.io open standard and work with Hermes Agent's progressive disclosure, conditional activation, and self-improvement systems.
+    
+    https://github.com/amanning3390/hermeshub
+    [attachment] IMG_6788.png https://cdn.discordapp.com/attachments/1483804596785909872/1483804597301805146/IMG_6788.png?ex=6a01cbb7&is=6a007a37&hm=735d053e53f93f2f34e28c917a74562f2e0f2c2e2b1abed0a7db2a1c8ce5ef78&
+    [embed] HermesHub — Security-Scanned Skills for Hermes Agent https://www.hermeshub.xyz/
+    [embed] GitHub - amanning3390/hermeshub: HermesHub - The Skills Hub for Her... https://github.com/amanning3390/hermeshub
+
+[2026-03-21T09:19:05.174000+00:00] bart_74666 (id=1484843784020955298)
+    https://www.hermeshub.xyz/#/browse - this sublink goes dead?
+    [embed] HermesHub — Security-Scanned Skills for Hermes Agent https://www.hermeshub.xyz/
+

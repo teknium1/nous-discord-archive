@@ -1,0 +1,20 @@
+# Thread 'I built webclaw, a web scraping MCP server and API for AI agents' in forum #community-projects-showcase
+# thread_id=1494993288892125367 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:58.078469+00:00
+
+[2026-04-18T09:29:35.704000+00:00] massi_24 (id=1494993288892125367)
+    solo Rust project, 1000+ GitHub stars, 1.1k+ weekly npm installs, 100+ cloud users in the first 6 weeks since shipping.
+    
+    what it does: real web access for Claude, Cursor, Windsurf and any other MCP client. the agent can scrape any URL, crawl entire sites, run web searches, extract structured data with a JSON schema, track content changes between snapshots. 12 tools total.
+    
+    the main problem it solves is that most real websites block AI agents on the first request. webclaw handles TLS fingerprinting at protocol level so the request looks like a real browser, not a bot. works on the majority of Cloudflare-protected sites without extra config.
+    
+    free to use: the MCP server is open source (AGPL-3) and runs locally with zero API key needed. there is also a cloud API for JavaScript-heavy sites and harder anti-bot cases, free tier available.
+    
+    security note: the MCP server runs on your machine and makes HTTP requests to URLs your agent passes to it. it does not store URLs or page content. if you use the cloud API, requests go through webclaw's servers. no credentials are accessed or stored.
+    
+    https://webclaw.io
+    https://github.com/0xMassi/webclaw
+    [attachment] demo_1.mp4 https://cdn.discordapp.com/attachments/1494993288892125367/1494993289940697108/demo_1.mp4?ex=6a01a17f&is=6a004fff&hm=fed1b1ac2cc994401979085c6af10bc121073e84e832af5c3781fbff03832520&
+    [attachment] og.png https://cdn.discordapp.com/attachments/1494993288892125367/1494993290649407611/og.png?ex=6a01a180&is=6a005000&hm=19792665ff410f5c6be59cc4a64ff863c18e482e9e3d5fc1986677fa7619b8ac&
+

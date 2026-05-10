@@ -1,0 +1,38 @@
+# Thread 'Memory plugin: "Keep"' in forum #community-projects-showcase
+# thread_id=1490197942634807377 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:44.872621+00:00
+
+[2026-04-05T03:54:36.063000+00:00] hugh1979 (id=1490197942634807377)
+    Keep is a reflective memory system with:
+    - persistent storage, summarization and document extraction
+    - structured tagging and relationship edges
+    - version history and parts analysis
+    - semantic search and contextual retrieval
+    - prompt-backed reflection workflows for skill improvement
+    
+    It's a flexible and powerful engine for agentic storage and retrieval.  The first role as a memory plugin is to provide automatic context to each session.  Additionally, it supports explicit content curation and tagging, graph relationships derived from tag schemas, file and URL indexing and summarization, and strong open-ended query.
+    
+    All this to support the main goal, which is to practice repeated reflection on actions and their consequences, and so to produce skillful behavior over time.
+    
+    This plugin lets Hermes use Keep directly as an external memory provider without changes to Hermes core memory-manager behavior.
+    
+    Very interested to hear feedback.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/5172
+    Keep: https://github.com/keepnotes-ai
+    
+    Thanks!
+    [embed] feat: memory plugin for `keep` by hughpyle · Pull Request #5172 ·... https://github.com/NousResearch/hermes-agent/pull/5172
+    [embed] keepnotes.ai https://github.com/keepnotes-ai
+
+[2026-04-05T20:01:57.866000+00:00] hugh1979 (id=1490441387601170442)
+    The original version had a broken prompt for the agent context.  just pushed a `keep` version that fixes this.
+
+[2026-04-05T21:48:22.886000+00:00] sexy.dev (id=1490468168316227644)
+    the key chokepoint is going to be management, how is it handled conceptually (in brief)
+
+[2026-04-05T23:53:07.891000+00:00] hugh1979 (id=1490499562702635229)
+    Think of "keep" as a general-purpose long-term store for notes (conversation, files, urls, etc etc).  The main thing the plugin does is to surface "relevant context" to the agent, and to remind it to reflect and gather notes for how to do things better over time.  The main way those actions get tracked is by "tags on notes".  If you set a tag "status: open", it'll come back up as a reminder.  When resolved, the agent can tag it again.
+    
+    The tag system is my favorite thing.  Tags can define "when I see this, show me other items" (e.g. index an mp3 file --> automatically groups the same-album tracks, just because of the id3 tags).  Tags can also define "this is a relationship" (e.g. tag "user_id: foo" generates a graph edge from the message to an item that represents the user... and a background task summarizes everything we know about that user...)
+

@@ -1,0 +1,14 @@
+# Thread 'iMessage for Hermes on non-Apple devices' in forum #community-projects-showcase
+# thread_id=1490241392226865284 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:59.620062+00:00
+
+[2026-04-05T06:47:15.253000+00:00] ___sj (id=1490241392226865284)
+    Hey all!! 👋  Pretty simple: you get a SendBlue number (free, check the tweet I'm quoting), trivial setup w/ Hermes via my repo, and you get full iMessage support on *any device* without needing a Mac Mini.  Supports voice notes (to and from) and typing indicators..
+    
+    x post: https://x.com/steven__johns/status/2040297069148324270 
+    ^ would appreciate likes/rt's if you find it valuable
+    
+    repo: https://github.com/duoi/hermes-sendblue-plugin
+    [embed]  https://twitter.com/steven__johns/status/2040297069148324270
+    [embed] GitHub - duoi/hermes-sendblue-plugin https://github.com/duoi/hermes-sendblue-plugin
+

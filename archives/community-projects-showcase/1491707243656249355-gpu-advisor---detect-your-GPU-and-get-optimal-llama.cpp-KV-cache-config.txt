@@ -1,0 +1,17 @@
+# Thread 'gpu-advisor — detect your GPU and get optimal llama.cpp KV cache config' in forum #community-projects-showcase
+# thread_id=1491707243656249355 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:32.068891+00:00
+
+[2026-04-09T07:52:01.468000+00:00] outbreak7777 (id=1491707243656249355)
+    Skill that detects AMD (rocm-smi) or NVIDIA (nvidia-smi), calculates VRAM budget, and recommends the best KV cache type for your model + context length. Supports f16, q8_0, q4_0, turbo3, turbo4. SWA-aware for
+    Gemma 4 models.
+    
+    Zero dependencies — stdlib Python only.
+    
+    python3 scripts/gpu_advisor.py recommend --model Qwen3.5-27B --quant Q5_K_M --ctx 80000
+    
+    
+    Repo: https://github.com/domvox/hermes-skills/tree/main/gpu-advisor
+    [attachment] Screenshot_2026-04-09_at_09.36.32.png https://cdn.discordapp.com/attachments/1491707243656249355/1491707244599836784/Screenshot_2026-04-09_at_09.36.32.png?ex=6a018aa1&is=6a003921&hm=2d33a23ac8586462a1ec58626495f5241a5f51b5ad5fc359ffae1c8e40a83534&
+    [embed] hermes-skills/gpu-advisor at main · domvox/hermes-skills https://github.com/domvox/hermes-skills/tree/main/gpu-advisor
+

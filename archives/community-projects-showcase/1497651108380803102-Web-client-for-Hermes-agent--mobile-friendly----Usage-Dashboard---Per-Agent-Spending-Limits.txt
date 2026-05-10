@@ -1,0 +1,101 @@
+# Thread 'Web client for Hermes agent (mobile-friendly) | Usage Dashboard | Per-Agent Spending Limits' in forum #community-projects-showcase
+# thread_id=1497651108380803102 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:41.257026+00:00
+
+[2026-04-25T17:30:49.250000+00:00] dav05262 (id=1497651108380803102)
+    Hey everyone!
+    
+    A lot of us love the new Hermes Agent, but living entirely in the terminal isn't always ideal. I wanted a modern, seamless way to interact with it without having to configure extra API gateways, open ports, or babysit a separate backend.
+    
+    So, I built Hermes Client — a lightweight, web-based chat interface that acts as a direct wrapper over your local Hermes CLI.
+    
+    *Note: This is currently an Alpha release! I'm actively building it out, but the core functionality is up and running smoothly.*
+    
+    Here’s what it handles right out of the box:
+    
+     - Multi-Agent Profiles: Every "agent" in the UI maps 1:1 to a Hermes profile. It handles the hermes profile commands under the hood so you can switch contexts instantly.
+     - True CLI Streaming: No API server needed. It simply spawns hermes chat and streams stdout directly to your browser over Server-Sent Events.
+     - Seamless Terminal-to-Web Sync: Sessions started in your standalone terminal REPL automatically appear in the web sidebar. You can continue a web conversation  from the terminal, and the new turns will stream right back into your open browser window.
+     - Interactive Setup Drawer: I integrated an xterm.js terminal so things like API key wizards and arrow-key model pickers work perfectly right inside the browser.
+     - Quality of Life: Full drag-and-drop file uploads, UI management for cron/skills/plugins, dark/light themes, and it's a fully installable PWA for desktop/mobile.
+    
+    I’m building this completely open-source. If you use Hermes Agent and want a solid UI for it, I’d love for you to check it out.
+    
+    🔗 GitHub Repo: https://github.com/lotsoftick/hermes_client
+    
+    Feedback, and feature requests are super welcome. And if you find it useful, a ⭐️ on GitHub would mean the world to me as a solo dev!
+    [attachment] hermes_client_recording.mp4 https://cdn.discordapp.com/attachments/1497651108380803102/1497651109353885827/hermes_client_recording.mp4?ex=6a021249&is=6a00c0c9&hm=e16eaea131e50f1b193983a03d39d985b9eda8fe12a8ae42ef0e9f886fbaf109&
+
+[2026-04-26T11:03:23.275000+00:00] dav05262 (id=1497915995560611962)
+    Just added support for accesing UI via tailscale
+
+[2026-04-28T10:05:20.522000+00:00] monad2222 (id=1498626163566973009)
+    keep it up, your ui looks clean. I love it
+
+[2026-04-28T13:20:55.597000+00:00] dav05262 (id=1498675384038981642)
+    Thank you! Have you tried installing it as a PWA? 
+    You can do this through 
+     - Chrome(install button from address bar) 
+     - Safari (Share -> Add to Dock). 
+    It's much more convenient to use this way.
+    [reply to monad2222 msg=1498626163566973009]
+
+[2026-04-30T04:24:04.040000+00:00] dav05262 (id=1499265054707679373)
+    🚀 Minor Update & Polish
+    
+    **Improved**: General application stability and error handling.
+    **Fixed**: Addressed various minor bugs and edge cases.
+    **Polished**: Under-the-hood performance tweaks.
+
+[2026-04-30T07:47:45.192000+00:00] dve874 (id=1499316313934397614)
+    best ui so far, thank you for sharing
+
+[2026-04-30T12:35:15.096000+00:00] dav05262 (id=1499388665275617361)
+    Big update !
+    
+    💸 Cost Controls & Usage Tracking:
+    
+    **Set Spending Caps**: Define strict budget limits for each agent.
+    **Live Usage UI**: Added a sleek, unobtrusive circular progress bar right next to the agent's name so you can instantly see their current API usage at a glance.
+    [attachment] hermes_usage.mp4 https://cdn.discordapp.com/attachments/1497651108380803102/1499388665254772868/hermes_usage.mp4?ex=6a01cd03&is=6a007b83&hm=f8c6a89f3b79d9a6269d12df3bbd8fcc6971062de2dbc0523fb4919fda7a5a28&
+
+[2026-04-30T12:45:04.802000+00:00] dav05262 (id=1499391138682114048)
+    Web client for Hermes agent | Usage dashboard, ability to set spend caps
+
+[2026-04-30T18:12:41.036000+00:00] dve874 (id=1499473582903001289)
+    awesome feature
+    [reply to dav05262 msg=1499388665275617361]
+
+[2026-05-01T01:17:52.498000+00:00] dav05262 (id=1499580585729851463)
+    thank you for feedback
+    [reply to dve874 msg=1499473582903001289]
+
+[2026-05-01T08:26:46.757000+00:00] dav05262 (id=1499688523035316334)
+    For some providers such as Google or Antropic, Hermes Agnet has known bug, where it's not extracting usage cost or tokens. Untill  this bug is fixed you may see 0s in usage statistic
+
+[2026-05-01T21:38:51.249000+00:00] dav05262 (id=1499887855202205787)
+    I've opened an issue on the Hermes repo. A PR with the fix is already up, so this will be patched in the next update
+
+[2026-05-02T11:21:48.525000+00:00] dav05262 (id=1500094958508576808)
+    Web client for Hermes agent (mobile-friendly) | Usage Dashboard | Per-Agent Spending Limits
+
+[2026-05-04T18:23:11.234000+00:00] dav05262 (id=1500925777607397517)
+    We just hit 100 GitHub stars 🥳  thank you for using the client
+
+[2026-05-04T18:31:09.279000+00:00] quanatee (id=1500927782673186848)
+    finally something clean and doesn't try to overdo it
+
+[2026-05-05T01:04:12.839000+00:00] dav05262 (id=1501026699293491271)
+    thank you for feedback
+    [reply to quanatee msg=1500927782673186848]
+
+[2026-05-08T14:03:32.711000+00:00] dav05262 (id=1502309988008198165)
+    **New Feature Update:** Today we're introducing **Single User Mode**! You can now disable multi-user access and restrict the client to just one active user for better privacy and control.
+
+[2026-05-08T14:45:17.270000+00:00] ehvi8r (id=1502320492890030150)
+    This is a nice UI, trying to use the native Hermes dashboard, but it really needs a chat... so that and hermes-workspace for now, but there are a few really good web clients!
+
+[2026-05-09T20:36:54.686000+00:00] dav05262 (id=1502771369732083853)
+    thank you
+    [reply to ehvi8r msg=1502320492890030150]
+

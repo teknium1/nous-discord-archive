@@ -1,0 +1,17 @@
+# Thread 'Local-first Agent Knowledge base' in forum #community-projects-showcase
+# thread_id=1491919411584700566 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:30.013411+00:00
+
+[2026-04-09T21:55:06.244000+00:00] tenacious_monkey_63231 (id=1491919411584700566)
+    A simple knowledge base that lives on your machine and makes collaboration with agents easier.
+    
+    In one sentence
+    Store the machine-readable index in SQLite, keep human-readable state in plain markdown, and make a CLI the only stable integration surface.
+    
+    Please let me know your thoughts and suggestions, hope this is a useful tool. Thanks!
+    
+    PS: this was collaborative work with my Hermes agent. When asked for a comment this was the answer: "From the assistant side, the real win is not just search — it’s reliability. A simple local index plus a stable CLI makes retrieval, citations, and handoffs much more dependable than ad hoc memory."
+    
+    repo: https://github.com/The-Mambo/local-first-agent-kb
+    [embed] GitHub - The-Mambo/local-first-agent-kb: Local-first blueprint for ... https://github.com/The-Mambo/local-first-agent-kb
+

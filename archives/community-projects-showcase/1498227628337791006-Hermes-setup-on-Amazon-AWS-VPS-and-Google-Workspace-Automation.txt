@@ -1,0 +1,14 @@
+# Thread 'Hermes setup on Amazon AWS VPS and Google Workspace Automation' in forum #community-projects-showcase
+# thread_id=1498227628337791006 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:39.979130+00:00
+
+[2026-04-27T07:41:42.319000+00:00] smantena (id=1498227628337791006)
+    Although, Hermes installation was significantly easier than OpenClaw, it wasn't straight forward by any means. Things kept failing and it tooks many days-nights to figure it out because there was no documentation about this specific setup. 
+    
+    So I wanted to share it with this community, in case anyone wants to setup the same. Happy to answer any questions as well. 
+    
+    For detailed step-by-step guide, read https://escvelocity.com/hermes-setup-aws/
+    
+    Next, I am building some sales automations using Hermes ⇔ Google sheets for a manufacturing company. If you guys are interested, I can share learnings here so others can replicate.
+    [embed] Hermes AI Agent Setup on AWS VPS - escVelocity https://escvelocity.com/hermes-setup-aws/
+

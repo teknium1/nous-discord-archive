@@ -1,0 +1,251 @@
+# Thread 'RTK Hermes - 60%+ Token Savings' in forum #plugins-skills-and-skins
+# thread_id=1490184342507491489 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:48.341321+00:00
+
+[2026-04-05T03:00:33.540000+00:00] vgallotti (id=1490184342507491489)
+    We built an RTK integration for Hermes that transparently rewrites terminal commands to their RTK equivalents, saving 60-90% of tokens in your context window.
+    
+    How it works
+    When the agent runs git status, the plugin intercepts the pre_tool_call hook, delegates to rtk rewrite, and the command becomes rtk git status. The compressed output reaches the LLM instead of raw verbose output. 30+ commands supported — git, grep, find, ls, cargo, pytest, npm, docker, kubectl, and more.
+    
+    Install
+    
+    Step 1 — Install RTK:
+    # macOS
+    brew install rtk
+    
+    # Linux / macOS (alternative)
+    curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/install.sh | sh
+    
+    
+    Step 2 — Install the plugin:
+    pip install rtk-hermes
+    
+    
+    That's it. The plugin auto-registers via the hermes_agent.plugins entry point — no config needed. Just restart Hermes.
+    
+    Measured savings
+    - cargo test — 90-99%
+    - git log --stat — 87%
+    - ls -la — 78%
+    - git status — 66%
+    
+    Graceful degradation — if RTK isn't installed or crashes, commands pass through unchanged. The plugin never blocks execution.
+    
+    Links
+    - PyPI: https://pypi.org/project/rtk-hermes/
+    - GitHub: https://github.com/ogallotti/rtk-hermes
+    - PR on RTK repo: https://github.com/rtk-ai/rtk/pull/1006
+    [embed] GitHub - ogallotti/rtk-hermes: RTK plugin for Hermes — rewrites s... https://github.com/ogallotti/rtk-hermes
+    [embed] feat: add Hermes agent plugin for RTK command rewriting by ogallott... https://github.com/rtk-ai/rtk/pull/1006
+
+[2026-04-07T05:34:45.114000+00:00] nyandoggo (id=1490947922152525954)
+    Tried it out, not 60% but about 30% reduction in my usecase. Still great plugin!
+
+[2026-04-07T18:42:47.929000+00:00] vgallotti (id=1491146240652476636)
+    It depends on how much bash commands you are using. You can even ask it for your current stats.
+    
+    My stats right now are 11M tokens saved from 11.4M command tokens.
+
+[2026-04-30T05:37:00.870000+00:00] harrynguyen2107 (id=1499283412463259798)
+    Hi sir, my Hermes did not always use the rtk commands
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490184342507491489/1499283412199149588/image.png?ex=6a0213bc&is=6a00c23c&hm=237fe268ee3a1f97b44c99972989aacaf1a059ae1b7580be7d294e844b46a5a3&
+    [reply to vgallotti msg=1491146240652476636]
+
+[2026-04-30T05:53:31.987000+00:00] neopabo (id=1499287569509384202)
+    This is sick, thanks so much for sharing <@111887506105958400> !
+    
+    Do you know if this affects caching in any way?
+
+[2026-04-30T16:42:54.592000+00:00] wysie_ (id=1499450990519259156)
+    <@111887506105958400> shouldn't we be using Hermes' venv and installing into the plugins directory? uv pip install --python "$HOME/.hermes/hermes-agent/venv/bin/python" rtk-hermes
+
+[2026-04-30T17:36:41.717000+00:00] skylinx79 (id=1499464526062555257)
+    I am using context-mode. Is this one better?
+
+[2026-05-01T10:33:45.869000+00:00] wysie_ (id=1499720479907381441)
+    <@689592654559969396> how're u using context-mode with Hermes?
+
+[2026-05-01T10:34:29.729000+00:00] skylinx79 (id=1499720663869558845)
+    Just configured the MCP server
+    [reply to wysie_ msg=1499720479907381441]
+
+[2026-05-01T10:34:37.843000+00:00] skylinx79 (id=1499720697902272632)
+    It's called automatically
+
+[2026-05-01T10:34:52.623000+00:00] wysie_ (id=1499720759893950574)
+    Ah got it
+
+[2026-05-01T10:34:56.198000+00:00] skylinx79 (id=1499720774888722472)
+    Ah, wait, I also had to add the instructions from the README to the SOUL.md or similar, can't remember
+
+[2026-05-01T10:35:03.802000+00:00] skylinx79 (id=1499720806782079038)
+    That way context-mode is activated automaticall
+
+[2026-05-01T11:14:51.099000+00:00] wysie_ (id=1499730819831566501)
+    Yeah I understand
+
+[2026-05-01T11:14:54.184000+00:00] wysie_ (id=1499730832770863249)
+    Thanks!
+
+[2026-05-01T11:46:29.621000+00:00] harrynguyen2107 (id=1499738782809718935)
+    i'm also facing similar issue with you bro. The hermes cannot remember to call the rtk commands. Are there othe rways to make agent remember permanently instead of adding instructions to SOUL.md?
+    [reply to skylinx79 msg=1499720774888722472]
+
+[2026-05-01T11:59:02.982000+00:00] wysie_ (id=1499741942634778805)
+    <@865211877797003275> He didn't use RTK, he's using context-mode installed as an MCP server so Hermes has to have skills (or SOUL.md, etc.) to tell it to use context-mode.
+    
+    For RTK, I found another plugin here: https://github.com/ch0udry/hermes-rtk-optimizer
+    
+    Personally, I went with Omni over the last 2 days and wrote a plugin for it: https://discord.com/channels/1053877538025386074/1499622566011338902
+    [embed] GitHub - ch0udry/hermes-rtk-optimizer https://github.com/ch0udry/hermes-rtk-optimizer
+
+[2026-05-01T12:00:27.793000+00:00] harrynguyen2107 (id=1499742298358026262)
+    thanks sir
+    [reply to wysie_ msg=1499741942634778805]
+
+[2026-05-02T07:27:00.633000+00:00] austrian_guy (id=1500035869606940702)
+    <@111887506105958400> sweet tech. I ran an audit of your repo and filed a PR for some issues that were identified.
+
+[2026-05-02T07:45:21.476000+00:00] dacookingsenpai (id=1500040486877003807)
+    so it doesnt appear on the hermes plugins list output, right?
+
+[2026-05-02T10:39:05.319000+00:00] vgallotti (id=1500084207643529348)
+    Sorry guys. I haven't updated the code for some weeks and think the system architecture changed. I will try to update it today and accept the PRs
+
+[2026-05-02T18:25:19.781000+00:00] vgallotti (id=1500201541041393805)
+    I just published rtk-hermes v1.2.1.
+    
+    The new version is now available on PyPI, with updated documentation, support for the current Hermes plugin loading flow. 
+    
+    The plugin is also ready for the latest rtk rewrite behavior, including valid rewrites that return confirmation-style exit codes.
+
+[2026-05-02T18:28:51.596000+00:00] vgallotti (id=1500202429457891421)
+    I think it is solved now
+    [reply to dacookingsenpai msg=1500040486877003807]
+
+[2026-05-02T18:38:15.187000+00:00] dacookingsenpai (id=1500204793329881088)
+    Oh ok, hermes self fixed it anyway so I am using it. Gj
+    [reply to vgallotti msg=1500202429457891421]
+
+[2026-05-04T06:15:25.601000+00:00] wordsmachine666 (id=1500742630668107869)
+    Hi <@111887506105958400>, I've tried to install it using the methods from your GitHub Repo, this `"$(dirname "$(which hermes)")/python" -m pip install --upgrade rtk-hermes`, but it shows:
+    `zsh: no such file or directory: /home/my_username/.local/bin/python` Then I tried `$HOME/.hermes/hermes-agent/venv/bin/python -m pip install --upgrade rtk-hermes` and the result is `/home/my_username/.hermes/hermes-agent/venv/bin/python: No module named pip.` It's strange because I have pip installed on my machine (a Debian 13-based VPS). Then I try to go straight to `~/.hermes/hermes-agent/venv` and execute `pip install --upgrade rtk-hermes,` but it came with the warning:
+    
+    ```error: externally-managed-environment
+    × This environment is externally managed
+    ╰─> To install Python packages system-wide, try apt install
+        python3-xyz, where xyz is the package you are trying to
+        install.
+    
+        If you wish to install a non-Debian-packaged Python package,
+        create a virtual environment using python3 -m venv path/to/venv.
+        Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+        sure you have python3-full installed.
+    
+        If you wish to install a non-Debian packaged Python application,
+        it may be easiest to use pipx install xyz, which will manage a
+        virtual environment for you. Make sure you have pipx installed.
+    
+        See /usr/share/doc/python3.13/README.venv for more information.
+    
+    Note: If you believe this is a mistake, please get in touch with your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+    Hint: See PEP 668 for the detailed specification.```
+    
+    What am I missing here? Any help? BTW, I've installed RTK using `brew install rtk`. Thx.
+
+[2026-05-04T09:25:53.548000+00:00] vgallotti (id=1500790562951790743)
+    Thanks for the detailed report. You were not missing RTK — this was an install-path issue in my docs.
+    
+    `$(dirname "$(which hermes)")/python` only works when the `hermes` executable lives directly inside the same virtualenv as its Python binary. In your case, `hermes` is exposed through `~/.local/bin/hermes`, so that command incorrectly looked for `/home/<user>/.local/bin/python`.
+    
+    For the standard Hermes source install, use the Hermes virtualenv directly:
+    
+    bash
+    HERMES_PY="$HOME/.hermes/hermes-agent/venv/bin/python"
+    "$HERMES_PY" -m pip install --upgrade rtk-hermes
+    
+    If that returns `No module named pip`, the Hermes virtualenv exists but was created without pip. On Debian/Ubuntu, don't use plain `pip` and don't use `--break-system-packages`; that hits the system Python and triggers PEP 668. Use `uv` to install into the Hermes virtualenv instead:
+    
+    bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ~/.local/bin/uv pip install --python "$HOME/.hermes/hermes-agent/venv/bin/python" --upgrade rtk-hermes
+    
+    Then enable the plugin in `~/.hermes/config.yaml`:
+    
+    yaml
+    plugins:
+      enabled:
+        - rtk-rewrite
+    
+    Restart Hermes or start a new session after that.
+    
+    I pushed `rtk-hermes` `v1.2.2` with updated README/install docs covering this exact Debian/PEP 668 case:
+    https://github.com/ogallotti/rtk-hermes/releases/tag/v1.2.2
+    [embed] Release rtk-hermes v1.2.2 · ogallotti/rtk-hermes https://github.com/ogallotti/rtk-hermes/releases/tag/v1.2.2
+    [reply to wordsmachine666 msg=1500742630668107869]
+
+[2026-05-04T09:56:23.734000+00:00] lignol23 (id=1500798239308517487)
+    Use this in linux/macOs/wsl to install:
+    
+    ```bash
+    source ~/.hermes/hermes-agent/venv/bin/activate
+    
+    # when you have `uv` installed
+    uv pip install rtk-hermes
+    
+    # else
+    pip install rtk-hermes
+    
+    deactivate
+    ```
+
+[2026-05-04T16:07:52.273000+00:00] .spaceexplorer. (id=1500891724216799362)
+    Interesting is it possible to optimize Windows terminal command in similar way
+
+[2026-05-04T23:31:42.036000+00:00] sionjeon (id=1501003417538269205)
+    WoW gonna try after work 🙂 so exciting 🙂
+
+[2026-05-05T09:26:47.875000+00:00] wordsmachine666 (id=1501153178681344081)
+    Thanks. Finally, I can install it with Hermes' help. Not like 60-90% in token savings. More like 40-50%. But still it is good. 😊
+    [reply to vgallotti msg=1500790562951790743]
+
+[2026-05-05T21:05:49.694000+00:00] neopabo (id=1501329095420674151)
+    I really want to try this, anyone know if it breaks caching?
+
+[2026-05-05T22:47:57.715000+00:00] chipchu (id=1501354798203535563)
+    my claude recommended me this `rkt-hermes` plugin and brought me here. 
+    I see there were some issues previously in the thread. Is everything resolved and seamless now?
+
+[2026-05-05T23:35:40.918000+00:00] vanko_vee (id=1501366807347597343)
+    ```
+    Benchmarked savings:
+    rtk test — strips pass/fail, shows only failures → 99%,
+    rtk err — strips everything except errors → 97%,
+    rtk ls — compressed directory listing → 67%,
+    rtk find — compact file search → 44%,
+    rtk tree — drops permissions/sizes → 39%,
+    rtk git — compresses verbose log → 34%,
+    rtk summary — heuristic compress of any command → varies,
+    ,
+    
+    When to skip: output under ~200 bytes (overhead > savings), need raw format, command already compact (one-line git, --stat).,
+    ```
+    
+    Have been trying to test this for 4+ hours with my Hermes-agent with the deepinfra and deepseek model and so far it has been able to reduce my token consumption for worktree/git surgery stuff. Rebasing works feel to have the most result for me right now🙂
+
+[2026-05-05T23:38:45.098000+00:00] vanko_vee (id=1501367579854504008)
+    This has been quite an improvement for me when it comes to dealing with large codebase. You'd probably still have to tune for tool use routings but once that got done it also improves the experience for me at least. I'd probably burn some more millions of tokens if I did not try to adopt this 🙂
+
+[2026-05-07T12:09:58.745000+00:00] vgallotti (id=1501919020297748561)
+    No it does not break cache. RTK runs in the machine and intercepts all the bash calls on demand.
+    [reply to neopabo msg=1501329095420674151]
+
+[2026-05-07T12:26:00.040000+00:00] vgallotti (id=1501923052261343242)
+    I've closed every open issue. If you find anything new you can open another one or just tag me here.
+    [reply to chipchu msg=1501354798203535563]
+
+[2026-05-09T13:03:37.110000+00:00] mazak (id=1502657294830145701)
+    Thanks for bringing RTK to Hermes and all the work you’re doing! Love having this compression utility
+    [reply to vgallotti msg=1501923052261343242]
+

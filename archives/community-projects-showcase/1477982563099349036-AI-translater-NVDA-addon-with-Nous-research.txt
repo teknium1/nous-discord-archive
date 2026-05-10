@@ -1,0 +1,70 @@
+# Thread 'AI translater NVDA addon with Nous research' in forum #community-projects-showcase
+# thread_id=1477982563099349036 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:08.612267+00:00
+
+[2026-03-02T10:55:02.631000+00:00] denis_skripnik (id=1477982563099349036)
+    I have been blind since birth. I use a screen reader program. It vocalizes all my actions.
+    
+    Today I created an add-on that translates texts into the languages I need by pressing Insert+Shift+T (selected text), Insert+Shift+Y - from the clipboard.
+    
+    Now I translated this text using Nous!
+    
+    Thank you for this opportunity!
+    
+    Repository: https://github.com/denis-skripnik/ai-translator-addon
+    [embed] GitHub - denis-skripnik/ai-translator-addon: AI Translator addon fo... https://github.com/denis-skripnik/ai-translator-addon
+
+[2026-03-02T10:59:13.593000+00:00] ee.dd (id=1477983615710396439)
+    Very cool
+
+[2026-03-02T11:00:43.620000+00:00] denis_skripnik (id=1477983993311006924)
+    Is it worth posting tweets on this topic? If yes, where can I send a link to it?
+    [reply to ee.dd msg=1477983615710396439]
+
+[2026-03-02T11:01:47.202000+00:00] ee.dd (id=1477984259993243650)
+    Go for it you can share it in <#1149866623109439599> as it's on topic if you are using our models to translate
+    [reply to denis_skripnik msg=1477983993311006924]
+
+[2026-03-02T11:02:22.654000+00:00] denis_skripnik (id=1477984408689573953)
+    Ok. Thanks.
+    [reply to ee.dd msg=1477984259993243650]
+
+[2026-03-02T11:02:43.793000+00:00] ee.dd (id=1477984497352835103)
+    Could be cool to plug in an image models too for image descriptions if you don't have that yet
+
+[2026-03-02T11:04:50.273000+00:00] denis_skripnik (id=1477985027848405135)
+    I was thinking of creating an extension that would:
+    1. Identify elements on the page as icons - without text.
+    2. Connect Nous and recognize.
+    3. Immediately display the text.
+    So that you can use any poorly accessible interfaces as if they were accessible.
+    But I haven't figured out yet if this is possible.
+    
+    And I haven't studied which API you are responsible for.
+    
+    I only knew about Chat completions so far.
+    [reply to ee.dd msg=1477984497352835103]
+
+[2026-03-02T11:06:41.742000+00:00] ee.dd (id=1477985495383281704)
+    Yeah I'm not sure if we have a native image model right now. I think it's in the works tho
+
+[2026-03-02T11:07:00.318000+00:00] ee.dd (id=1477985573296934913)
+    But getting text and emojis should work well
+
+[2026-03-02T11:09:16.580000+00:00] denis_skripnik (id=1477986144821186751)
+    Alright. Thank you.
+    [reply to ee.dd msg=1477985573296934913]
+
+[2026-03-26T08:04:56.880000+00:00] willard0117 (id=1486637065851502643)
+    I am not blind but did have a typing injury that required me to interact with websites by talking since I couldn’t use the mouse or keyboard. There are tools I found they would add a letter combination as tooltip helpers to every clickable element on a webpage. They were not “icons” exactly, but I’m sure the same principle could help in this use case. Each clickable element has a unique identifier already in a text format, so it shouldn’t be too bad. 
+    
+    The main tool I was using is called Talon. I can get you more info if you’re interested. I started using and eye tracker for controlling the mouse. I would make a click noise with my mouth to click the mouse and had to learn a different phonetic alphabet just to use the “keyboard”.
+    
+    https://talonvoice.com/
+    [embed] Talon https://talonvoice.com/
+    [reply to denis_skripnik msg=1477985027848405135]
+
+[2026-03-27T05:49:53.077000+00:00] denis_skripnik (id=1486965463903633428)
+    Yes. Thanks.
+    [reply to willard0117 msg=1486637065851502643]
+

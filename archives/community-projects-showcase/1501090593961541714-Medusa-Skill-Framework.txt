@@ -1,0 +1,26 @@
+# Thread 'Medusa Skill Framework' in forum #community-projects-showcase
+# thread_id=1501090593961541714 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:22.337745+00:00
+
+[2026-05-05T05:18:06.515000+00:00] lorddetracy1782 (id=1501090593961541714)
+    An audit-based skill ranking system. Medusa scans your SKILL.md files, measures actual complexity (code blocks, steps, technical terms), and automatically promotes skills through 9 tiers - just like how cooking 1 pizza vs 20+ varieties with techniques upgrades your skill level.
+    I personally have over 1k skills for my AI agent, but I just didnt know which ones were godlike and which ones belonged in the desktop trashcan.
+    
+    Medusa reads your SKILL.md files and acts like a technical auditor:
+    Measures complexity (content length, code blocks, step-by-step instructions, technical terms)
+    Calculates objective experience score (60% complexity + 30% value + 10% keywords)
+    Assigns tier automatically (Godlike → Unique → Legendary → Mythic → Epic → Ultra Rare → Rare → Uncommon → Common → Poor)
+    Promotes as your agent improves a skill (edit SKILL.md, next scan updates rank!)
+    Fuses similar skills together. (Got 2 debugging skills? Make them into one legendary skill)
+    
+    Upcoming feature: Share your godlike skills with others.
+    http://github.com/jtshow/medusa
+    [attachment] medusa.jpg https://cdn.discordapp.com/attachments/1501090593961541714/1501090594129444946/medusa.jpg?ex=6a020f4e&is=6a00bdce&hm=870d3b00d9b22346913929225a71e860df84589a4b48e4f85ef44fd4d5cf09b5&
+    [embed] GitHub - jtshow/Medusa: Medusa Skill Framework for AI Agents. http://github.com/jtshow/medusa
+
+[2026-05-06T00:11:03.941000+00:00] lorddetracy1782 (id=1501375711951196160)
+    Whoops, I used my linkedin link... and not a direct link to the github. Fixed.
+
+[2026-05-06T00:21:34.910000+00:00] m3nt8l (id=1501378358426996807)
+    This looks promising 🍻
+

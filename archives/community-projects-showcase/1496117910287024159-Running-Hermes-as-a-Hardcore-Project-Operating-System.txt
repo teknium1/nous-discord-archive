@@ -1,0 +1,33 @@
+# Thread 'Running Hermes as a Hardcore Project Operating System' in forum #community-projects-showcase
+# thread_id=1496117910287024159 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:51.754550+00:00
+
+[2026-04-21T11:58:26.339000+00:00] ogiberstein (id=1496117910287024159)
+    From my post here: https://x.com/ogiberstein/status/2046557973380493382
+    
+    Any feedback appreciated <:nousgirl:1341983870752653352> 
+    
+    - My 'main agent' is my 'Chief of Staff'  who has his own memory cross-project/workflow. We have a weekly process to prune this memory for it to remain high-level
+    - We have a soul.md with focus on how we work together
+    - Every 'project' (1 project = 1 Slack channel) has its own agent sub-profile with its own memory. Each agent maintains his own memory file. Sometimes they still write random stuff into memory but mostly it works nowadays. 
+    - The weekly memory cleanup goes through each memory file to audit it against our 'principles of what belongs into each profile's memory'
+    - The whole system runs on VPS (I use Hostinger) and over time I have set up various hardening processes to make sure that if the main model fails, we have a backup routing in place + we have a backup of the whole agent operating system that gets backed up every night to Github 
+    - We use Obsidian as a recording system for projects & processes that both the agent/sub-agents and me access
+    - Daily reporting is sent to Whatsapp. All 'operational level' stuff gets discussed with 'Chief of Staff' agent. I have a 'Brain' channel where the 'Project Manager' lives with whom I discuss cross-project things. Each channel has its own 'Product Owner'
+    - I am also setting up something similar for investing/trading with a 'CIO'
+    - I also have Claude Code set up on the VPS. Hermes has a skill to use Claude so I get it to use Claude to audit its own code. For complex stuff I still sometimes use Claude Code locally on my laptop but sync up with Hermes via Github
+    - Every so often I will use GPT 5.4 Pro with Extended Thinking (connected to Github) to also audit code and prepare .md files which I drop into repos for fixing. Goal here: have as many independent models/sessions/prompts have a 'fresh' look at it. It's a feedback loop that tends to improve code quality quite significantly
+    [embed]  https://twitter.com/ogiberstein/status/2046557973380493382
+
+[2026-04-22T17:14:12.117000+00:00] oninsuka (id=1496559762505076917)
+    woah how did you do this bro
+
+[2026-04-24T22:08:54.925000+00:00] ogiberstein (id=1497358705308598393)
+    which part specifically?
+
+[2026-04-25T07:32:56.515000+00:00] oninsuka (id=1497500647225036891)
+    Im running hermes in an ai cloud computer and wanna know how to do something similar? Rrally just wanna be proper with my projects and track everything
+
+[2026-04-26T03:56:10.440000+00:00] yaakov_63226 (id=1497808483658109010)
+    This is really cool. Can you share the capabilities / specific tools and restrictions of each agent so I can replicate my own?
+

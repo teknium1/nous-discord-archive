@@ -1,0 +1,23 @@
+# Thread 'Hermes Agent Radar - Guia para usuarios en español' in forum #community-projects-showcase
+# thread_id=1496557014971584783 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:47.360179+00:00
+
+[2026-04-22T17:03:17.054000+00:00] anibal3608 (id=1496557014971584783)
+    Vi que la mayoria de las guias , ayudas, novedades son todas en ingles.
+    Asique mediante Hermes me hice esta paginita en github pages para poder dar un poco de ayuda y novedades a la comunidad de habla hispana 🙂 
+    
+    https://anibalardid.github.io/hermes-radar-es/#/
+    
+    Todos los dias se buscan novedades y se actualiza la página.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496557014971584783/1496557015793799300/image.png?ex=6a020bd5&is=6a00ba55&hm=416ae6cefee07c2df269329043c0fdabb63791f17d858faa669097ff01dc032e&
+    [embed] Hermes Radar — Base de conocimiento de Hermes Agent en español https://anibalardid.github.io/hermes-radar-es/
+
+[2026-04-22T17:03:19.345000+00:00] Translator Bot#1043 (id=1496557024580731041)
+    I saw that most of the guides, aids, news are all in English.
+    So through Hermes I made this little page on github pages to be able to give a little help and news to the Spanish-speaking community 🙂 
+    
+    https://anibalardid.github.io/hermes-radar-es/#/
+    
+    Every day news is searched and the page is updated.
+    [reply to anibal3608 msg=1496557014971584783]
+

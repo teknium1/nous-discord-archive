@@ -1,0 +1,17 @@
+# Thread 'Hermes Agent-Browser plugin' in forum #plugins-skills-and-skins
+# thread_id=1487972794850349199 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:51.825358+00:00
+
+[2026-03-30T00:32:39.490000+00:00] anibal3608 (id=1487972794850349199)
+    I created agent-browser plugin. 
+    This is a headless browser developed by Vercel (v0 company).
+    
+    https://github.com/anibalardid/hermes-plugin-agent-browser
+    [embed] GitHub - anibalardid/hermes-plugin-agent-browser https://github.com/anibalardid/hermes-plugin-agent-browser
+
+[2026-03-30T00:33:00.620000+00:00] anibal3608 (id=1487972883476123671)
+    Hermes Agent-Browser plugin
+
+[2026-03-30T19:14:32.706000+00:00] anibal3608 (id=1488255126941470781)
+    updated
+

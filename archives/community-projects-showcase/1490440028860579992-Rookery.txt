@@ -1,0 +1,36 @@
+# Thread 'Rookery' in forum #community-projects-showcase
+# thread_id=1490440028860579992 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:56.606940+00:00
+
+[2026-04-05T19:56:33.917000+00:00] lance960 (id=1490440028860579992)
+    Built a tool to manage llama-server if anyone's tired of killing processes and restarting with different flags.
+    
+    Rookery — Rust daemon + CLI for local inference. Swap models without downtime, monitor GPU, manage agents like Hermes.
+    
+      rookery swap gemma4_moe    # hot-swap to Gemma 4 MoE
+      rookery swap qwen_dense    # switch to Qwen3.5 dense
+      rookery status             # GPU stats, model info, health
+      rookery agent start hermes # launches + auto-restarts on crash
+    
+      - Define model profiles (quant, context, KV cache, sampling) in a config file
+      - Hot-swap between profiles — graceful shutdown, health check, ready
+      - Agent watchdog — auto-restart on crash, bounce on model swap, dependency port health
+      - GPU monitoring via NVML
+      - Web dashboard on LAN
+      - OpenAI-compatible API passthrough
+    
+      Running it 24/7 on an RTX 5090 with Hermes + Gemma 4 MoE Q8_0. Hermes restarts automatically when I swap models.
+    
+      https://github.com/lance0/rookery
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490440028860579992/1490440029208842421/image.png?ex=6a018bb2&is=6a003a32&hm=c11716e6f6eb661542c789d01af87516f27a084d5e28fe3575316cb0219edf9d&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490440028860579992/1490440029544124436/image.png?ex=6a018bb2&is=6a003a32&hm=2b4f8a3f252e6abd9326384d18831d62c6775298e46e6267e5f16ea945211dcd&
+    [embed] GitHub - lance0/rookery: Local inference command center — manage ... https://github.com/lance0/rookery
+
+[2026-04-05T19:58:40.307000+00:00] .s0uthpaw (id=1490440558978797608)
+    I have a similar project for easy local omnimodality
+    
+    https://github.com/SouthpawIN/Senter-Server
+    
+    I want to see what we can smash together, and whst Hermes already does, and see if we can carve out a clean plugin
+    [embed] GitHub - SouthpawIN/Senter-Server: server backend for Senter https://github.com/SouthpawIN/Senter-Server
+

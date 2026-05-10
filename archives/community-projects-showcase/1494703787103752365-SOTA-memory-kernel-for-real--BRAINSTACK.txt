@@ -1,0 +1,229 @@
+# Thread 'SOTA memory kernel for real (BRAINSTACK!)' in forum #community-projects-showcase
+# thread_id=1494703787103752365 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:01.075429+00:00
+
+[2026-04-17T14:19:13.099000+00:00] lauratom (id=1494703787103752365)
+    Yo!
+    
+    Do you know how did i spent my last 200-400 hours?
+     Yeah... 
+    I wrote a FKING memory kernel for hermes.......
+    
+    Why this much of a time?
+    
+    After 3 failed attempt (149 horus of work ... for real... yes...)
+    
+    I just realized it's a fucking difficult job.... and I don't have enough expereince (and agnetic coding token lol). 
+    
+    So instead of reinvent the wheel I build together the bests (for my usecase):
+    
+    3 layers:
+    
+    L1    Hindsight    temporal carry-through, bounded recent history, after-turn continuity
+    L2    Graphiti    entity/relation memory, temporal truth, conflict-aware graph state
+    L3    MemPalace    large-corpus retrieval, FTS/semantic fusion, packed evidence recall
+    
+    (Bonus:
+    Hermes-LCM for bounded transcript evidence fallback
+    RTK-style sidecar discipline for token-aware auxiliary processing without taking memory ownership)
+    
+    
+    It's not mvp, it's not "it will work someday". 
+    It's heavily tested and benchmarked.
+    
+    Please use it and write tickets if u find any problem with it.
+    
+    
+    (Why I call it SOTA(for my usecase)? Cause I wanted to use it for "second brain" persistent agents: profile memory, session continuity, hard temporal graph truth, and corpus retrieval under one runtime owner. 
+    With a fcking big amount of data!)
+    
+    Something to mention: Its working on the latest hermes now... but there is a wizzard that i wont update (for now), it's changes some thins automatically in hermes (it turns off some native memory features ect.)
+    So it's fully working now, but if hermes gets some updates it will need some thinkering (not much an agent will able to solve it.)
+    
+    But i'll find a more modular installer solution for that (or you can write me a pr if you want thankya' !)
+    
+    Enjoy! 
+    
+    https://github.com/yepyhun/Brainstack
+    [attachment] Kepernyokep_20260417_154310.png https://cdn.discordapp.com/attachments/1494703787103752365/1494703787452010496/Kepernyokep_20260417_154310.png?ex=6a01e561&is=6a0093e1&hm=ccf8f0eedb8facce2ad24afbc0598a39055d9ad9392b4af75e266750f221bf7d&
+    [embed] GitHub - yepyhun/Brainstack: Memory kernel stack for Hermes agent https://github.com/yepyhun/Brainstack
+
+[2026-04-19T03:15:53.997000+00:00] bigroons (id=1495261633302495273)
+    Sounds cool, I started using Hindsight last week and noticed my agent is alot smarter now. Could I use my current Hindsight instance with this? 
+    
+    Also have you considered Honcho as a donor too?
+
+[2026-04-20T22:42:16.486000+00:00] lauratom (id=1495917549001510963)
+    I'M not considering honcho at all, the 3 layers are way superior in every sense.
+    
+    Let me check if there is a solution (Short answer i guess nope, but ask your agent maybe?)
+    [reply to bigroons msg=1495261633302495273]
+
+[2026-04-22T02:14:53.667000+00:00] ae53633805 (id=1496333444362539119)
+    I'm using Hindsight for my main agent at the moment and like it a lot more than the rest. The overhead of a dedicated memory system can be a bit intimidating for some but it works great if you get it set up. 
+    
+    I'm actively testing Brainstack on one of my dev agents and I like it a lot. It's the closest I've seen to Hindsight yet, and it exceeds it in some ways during my tests. One way that I really like Hindsight more is that the recall doesn't have to be triggered. It's automatically running in the background. With Hindsight, I have to ask my agent to remember things, but with Brainstack, it normally already has it ready reference.
+    [reply to bigroons msg=1495261633302495273]
+
+[2026-04-22T13:27:17.496000+00:00] bigroons (id=1496502658645884970)
+    hmm so many projects going on. Ive got a nice libary of research building up in hindsight im a little hesitant to migrate lol.
+    
+    How have you found the token consumption compaired with the 2? That seems to be the final boss of a solid hermes setup is context bloat from memory systems
+
+[2026-04-22T18:20:46.650000+00:00] ae53633805 (id=1496576516790812682)
+    This is where I'm at right now. I've got a ton of info in Hindsight and I don't want to lose it. I'm thinking about asking the agent to dump it all into LLM wiki and switching over. I'm also running all local LLMs at the moment and I'm definitely having a difficult with the smaller context window. 
+    
+    I haven't been tracking tokens yet because I was on Mimo-v2-Pro for the promo and now I'm running on local inference and just chugging with all of the offloading going on. I'm still learning to tune models too.
+    [reply to bigroons msg=1496502658645884970]
+
+[2026-04-22T18:21:50.592000+00:00] ae53633805 (id=1496576784982999292)
+    <@935529517856985088> May be able to shed some light on token utilization.
+
+[2026-04-22T20:33:14.129000+00:00] lauratom (id=1496609850933903690)
+    Short answer: no clean drop-in Hindsight reuse yet.
+    
+      Brainstack borrows from Hindsight conceptually for continuity, but it does not currently plug into an existing Hindsight instance or import it automatically. On token usage,
+      Brainstack is designed to be bounded with retrieval limits and budgets, so it is not just raw memory stuffing, but I do not have a fair apples-to-apples benchmark vs a large
+      Hindsight setup yet. If migration matters, the real missing feature is an import bridge.
+    [reply to bigroons msg=1496502658645884970]
+
+[2026-04-22T20:33:31.935000+00:00] lauratom (id=1496609925617553568)
+    <@208840961177026560> thanks for interesting in the project feel free to write me any suggestion! 🙂
+
+[2026-05-01T23:39:32.609000+00:00] lauratom (id=1499918227667685446)
+    Big updates.
+    
+    I keep working on it and it gets better and better.
+    
+    You should definietly try out!
+
+[2026-05-01T23:52:16.853000+00:00] gumbiidigital_74989 (id=1499921433139089611)
+    When you say "it's been benchmarked", what are the benchmarks you used? What was the baseline versus now?
+
+[2026-05-02T00:51:44.928000+00:00] hackafterdark (id=1499936398730465482)
+    I'm also curious about benchmarks. Including performance/speed, not just retrieval (but retrieval as well). These are some pretty good projects, interesting combination!
+
+[2026-05-02T06:24:05.345000+00:00] hackafterdark (id=1500020034901377064)
+    I benchmarked it against RAGAS with their `vibrantlabsai/amnesty_qa` dataset you can find on HF. Pretty good! Not surprising, the strategies mixed in here are really good. In the benchmark I ran it scored 0.925 for faithfulness and 0.5 for context precision. I know MemPalace came out with a bunch of marketing hype and I initially liked the idea, but I'm not sure about it just yet. I think it may be attributing to the context precision here. Can that stage be configured off?
+
+[2026-05-03T12:15:50.666000+00:00] lauratom (id=1500470944899272746)
+    In a controlled ON/OFF ablation, Brainstack removed the exact kind of context noise your result points at, while preserving required evidence:
+    
+    - context precision: 0.50 → 1.00
+    - context tokens: 113 → 60
+    - noise bundles: 2 → 0
+    - protected truth drops: 0
+    
+    I’m not presenting this as a broad benchmark win yet. It’s a targeted proof that the context-control path works. The next useful step is scaling the same ablation across more cases, not tuning to one benchmark.
+    [reply to hackafterdark msg=1500020034901377064]
+
+[2026-05-03T12:23:53.704000+00:00] lauratom (id=1500472970907484170)
+    The strongest benchmark I’m referring to is a retrieval-only oracle gate, not a leaderboard-style answer benchmark.
+    In that run Brainstack processed 60/60 cases
+    produced memory context for 60/60
+    had non-empty backend population for 60/60
+    had 0 zero-backend cases.
+    
+    The memory retrieval pipeline passed the oracle retrieval gate.
+    (Yep it's not the full benchmark valid proof, but a proof that the memory kernel works fawlessly.)
+    [reply to gumbiidigital_74989 msg=1499921433139089611]
+
+[2026-05-03T12:24:04.576000+00:00] lauratom (id=1500473016507957428)
+    (longmemeval)
+
+[2026-05-03T16:01:04.059000+00:00] hackafterdark (id=1500527624177324153)
+    I see, well I don't want to retrieve everything to give to some other model to remove the noise though. Not a powerful model anyway.
+
+[2026-05-04T20:41:35.814000+00:00] ae53633805 (id=1500960609540509886)
+    I’m new to the whole benchmarking scene, <@1175593776195059813> where can I run these benchmarks? Been using Brainstack for a couple of weeks and loving it so far.
+
+[2026-05-06T00:32:31.062000+00:00] hackafterdark (id=1501381110527955074)
+    You can ask your agent to write scripts because the benchmarks, don't have a universal kinda "API" to hook into. It varies. Basically what that means is the benchmarks need to be able to run the tool calls and most good benchmark tools are doing that not in isolation but through an LLM performing RAG (using the tools). So you're running inference as well (which you could do with a cloud hosted model or a local model).
+    
+    BEAM is one benchmark that does this and was created by the Hindsight authors because their argument was people were just shoving everything into the context window and as the LLMs got larger context windows and better and better, it was having an impact on the benchmark scores (like LongMemEval). Which is fair (and people have argued this about MemPalace btw). Though you would struggle to run the full BEAM test due to the amount of data involved, you could run it with a smaller data set. Especially if you're using a model that doesn't have a large context window - which addresses the concerns of the authors anyway. For local models and local RAG/memory systems...I don't think BEAM is very suitable. You can run a shorter version of it though.
+    
+    So the question with any benchmark is, "what are you benchmarking?" In my opinion, it's important to test the entire "agent" system and not just a single component.
+    
+    For me, RAGAS is the most important benchmark for local agents because it tells you about the accuracy of the data retrieved and also the precision or efficiency. Most people aren't running 1M context windows for local models of course. So I think tokens matter more locally even if they are free, because limited context window and latency. https://docs.ragas.io/en/latest/howtos/cli/rag_eval/
+
+[2026-05-06T00:36:38.900000+00:00] hackafterdark (id=1501382150035865612)
+    LoCoMo is another one and I'd use it over LongMemEval. I don't really benchmark with LongMemEval, it's a bit dated now and doesnt offer much value. I mean not unless you want a fancy number for marketing!
+
+[2026-05-06T10:42:01.832000+00:00] lauratom (id=1501534499454849074)
+    HUGE UPDATE: Brainstack v1.0.64 is out.
+    
+      This is not a small patch. A large chunk of the work since the old public state is now shipped together.
+    
+      Brainstack has moved from “memory features wired into Hermes” toward a much cleaner Hermes-native memory kernel:
+    
+      - one canonical behavior-card path, so agent behavior rules do not get duplicated or half-injected
+      - stronger separation between truth, support evidence, profile memory, and runtime state
+      - tighter Tier2 and background-memory diagnostics, so failures are visible instead of quietly looking active
+      - cleaner retrieval and assignment handling with less brittle keyword-style routing
+      - fresh Hermes wizard install and Docker build parity verified
+      - better bloat, packet, graph, proactive, and source-sync proof surfaces
+    
+      The main theme of this release is simple:
+    
+      less memory noise, fewer parallel authority paths, cleaner agent-facing context. (Your agent now has more controll over Brainstack.)
+    
+      We also took inspiration from mature knowledge-platform designs like WeKnora (a wiki base knowledge system), but kept the Brainstack direction focused: source-backed evidence, admitted truth, compact projections, and Hermes-native agent usability.
+    
+      Brainstack is starting to feel much less like “extra memory bolted on” and much more like an actual memory kernel for agents.
+
+[2026-05-07T03:52:55.877000+00:00] hackafterdark (id=1501793934123335851)
+    Awesome! Can't wait to check it out!
+
+[2026-05-09T02:54:36.166000+00:00] sloothyyyyy (id=1502504031002824774)
+    <@935529517856985088> does this system work with having multiple hermes profiles?
+
+[2026-05-09T10:47:01.963000+00:00] lauratom (id=1502622921892434052)
+    Yesn't . 
+    
+      If you mean separate Hermes profiles, each with its own HERMES_HOME: yes, Brainstack should work with that.
+    
+      If you mean one shared Brainstack backend serving multiple Hermes profiles/agents at once: the core scoping model is designed for it, but I would not call that fully
+      certified yet. It needs a dedicated multi-profile/multi-agent isolation test pass before I’d claim official support.
+    
+    If I develop to this path would you mind help me with testing? Are you using multiple hermes agents?
+    [reply to sloothyyyyy msg=1502504031002824774]
+
+[2026-05-09T11:00:57.810000+00:00] lauratom (id=1502626427688714281)
+    (btw it's almost working at this stage.)
+
+[2026-05-09T11:19:01.883000+00:00] sloothyyyyy (id=1502630974620438588)
+    I mean the later, since thats what i have and im guessing most other people cuz the profile create command creates a subdirectory within one HERMES_HOME
+
+[2026-05-09T11:20:32.088000+00:00] sloothyyyyy (id=1502631352967630890)
+    happy to help, and yes i use 3 different agents with different use cases for each
+    [reply to lauratom msg=1502622921892434052]
+
+[2026-05-09T11:42:45.671000+00:00] lauratom (id=1502636946420400228)
+    Give me some time. I’ll work on it tomorrow, and I’ll spend a bit more time on the multi-agent side of things.
+    It shouldn’t require too much work.
+     designed it in a way that should make this easy to support later.
+
+[2026-05-09T11:42:54.570000+00:00] lauratom (id=1502636983745515660)
+    thank your for your help tho.
+    [reply to sloothyyyyy msg=1502631352967630890]
+
+[2026-05-09T11:52:27.500000+00:00] vayaperson (id=1502639386787844157)
+    Wow congrats for your great job!!! I'm searching for a new memory skill and I'm considering which. I'll take yours in count 🙂
+
+[2026-05-09T11:53:13.013000+00:00] vayaperson (id=1502639577683329024)
+    I've coded a skill too. Another topic but maybe is interesting for you 🙂 
+    https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+    [embed] Andoriña | The Ultimate WhatsApp Skill for Hermes https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+
+[2026-05-09T11:53:47.857000+00:00] sloothyyyyy (id=1502639723829788732)
+    yep no worries at all, just lmk what you need
+    [reply to lauratom msg=1502636983745515660]
+
+[2026-05-09T12:10:36.623000+00:00] lauratom (id=1502643954900930560)
+    Thank you sir! I'll check.
+    [reply to vayaperson msg=1502639577683329024]
+
+[2026-05-09T12:11:39.694000+00:00] vayaperson (id=1502644219439878154)
+    Maybe we can collab in some moment if we see tath we can integrate our skills 🙂 Very early for that, but in the future....
+    [reply to lauratom msg=1502643954900930560]
+

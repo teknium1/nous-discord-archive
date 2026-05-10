@@ -1,0 +1,79 @@
+# Thread 'PLUR - Engram Based Learning Plugin for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1488174762118090782 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:03.113105+00:00
+
+[2026-03-30T13:55:12.239000+00:00] plur9 (id=1488174762118090782)
+    ```
+    pip install plur-hermes
+    ```
+    
+    You correct your agent on Monday. On Tuesday, it remembers. You teach it your deployment process. Next week, it still knows. Every correction becomes permanent knowledge that surfaces automatically when relevant.
+    
+    PLUR hooks into the v0.5.0 lifecycle. When your agent starts a session, PLUR injects what relevant it learned from previous sessions. When you correct something, PLUR captures it. When the session ends, it extracts new learnings.
+    
+    Knowledge is stored as engrams - in cognitive science, engrams are the physical trace a memory leaves in the brain. In PLUR, they're small YAML files on your disk. An open format any tool can read. You can `cat` them, `grep` them, `git commit` them. plur.ai/spec
+    
+    Here's where it gets interesting: with enough engrams, PLUR starts extracting meta-engrams (experimental). You teach one thing in one domain, something else in another - PLUR spots the shared principle: "validate before committing." Knowledge learned in one domain, applied to another. Transfer of knowledge.
+    
+    We tested. **A learning Haiku with PLUR outperforms Opus without it - 2.6x better, 10x cheaper.** 86.7% on LongMemEval. The bottleneck was never the model. plur.ai/benchmark
+    
+    **One more thing.**
+    
+    Shared memory and learning across tools. Correct something in Hermes - your Claude Code, OpenClaw, Cursor, and CLI all know it. Same files, same directory. Across devices: `plur sync`.
+    
+    What one agent learns, every agent knows.
+    
+    As a community, we should build interoperability between our AIs - from Hermes to Claude Code to OpenClaw to any other tool. Your knowledge shouldn't be locked to one platform, one cloud, or one memory solution. Engrams are our proposal for that open format.
+    
+    plur.ai | github.com/plur-ai/plur | PyPI: plur-hermes
+    
+    Open source. No cloud. No lock-in. No cost. 1,100+ engrams in production. Contributions welcome.
+    
+    🧪 What would you want your Hermes agent to never forget?
+    🐛 Bugs → github.com/plur-ai/plur/issues
+
+[2026-03-31T05:06:20.278000+00:00] kerozelvin (id=1488404056492871720)
+    This looks interesting.  How do you guard against prompt injection attacks with the shared yaml files?
+
+[2026-03-31T22:32:52.478000+00:00] plur9 (id=1488667426068496404)
+    atm, sharing is only possible between trusted devices. Soon, we're releasing knowledge packs feature (sets of engrams)  - for this prompt injections become relevant. We'll be addressing this, essentially by slowly opening up starting with trusted source, then by creating immutable data provenance proofs. Engrams should be also scanned, ofc. Still, prompt injections are tricky and more suggestions or contributions are most welcome.
+    [reply to kerozelvin msg=1488404056492871720]
+
+[2026-04-01T08:56:52.881000+00:00] geezeruk (id=1488824462500691978)
+    This plur ai - is friggin incredible - using engrams just like a human brain way of memory - this friggin genius - so friggin good for any AI agent - now have it running across my enitre empire
+
+[2026-04-01T13:32:14.360000+00:00] plur9 (id=1488893758606020807)
+    Thank you! Btw, new release today, now teams can share engrams on projects: https://x.com/plur_ai/status/2039290020561891405
+    [embed]  https://twitter.com/plur_ai/status/2039290020561891405
+
+[2026-04-01T22:44:21.078000+00:00] geezeruk (id=1489032702131966073)
+    Been running this past couple of days and must say - wow - shared episodic memory across 6 agents is genuinely powerful and would be hard to replicate any other way.
+
+[2026-04-02T00:07:57.857000+00:00] excessivelysalty (id=1489053744027926568)
+    Just set this up with 2 agents using the new Hermes multi agent that came out the other day, we'll see how it goes but it looks promising so far.
+
+[2026-04-02T10:16:21.025000+00:00] valhalladestined (id=1489206849411612822)
+    Interesting. I have been using hindsight with dream cycles for pattern extraction and it has been a big improvement. This is an interesting approach.
+
+[2026-04-02T11:04:55.478000+00:00] lauratom (id=1489219073513357424)
+    <@451408919319805965> hey can i talk to you in dm? I'm doing something similar but different at the same time. do you have a bit of time to check my idea and think together?
+
+[2026-04-02T17:48:52.168000+00:00] plur9 (id=1489320729559302255)
+    yes, ofc!
+    [reply to lauratom msg=1489219073513357424]
+
+[2026-04-02T17:49:15.650000+00:00] plur9 (id=1489320828049821927)
+    we got a new release today that can also add to this: https://x.com/plur_ai/status/2039742661834264903
+    [embed]  https://twitter.com/plur_ai/status/2039742661834264903
+    [reply to excessivelysalty msg=1489053744027926568]
+
+[2026-04-02T17:49:28.084000+00:00] plur9 (id=1489320880201924668)
+    however, single users can also sync by using git
+
+[2026-04-02T17:50:20.443000+00:00] plur9 (id=1489321099811492064)
+    Very interested how it works for you. We're still tweaking everything and Hermes has less hooks than Claude Code, for example. Hooks infulence a lot.
+
+[2026-04-02T22:36:18.693000+00:00] lauratom (id=1489393066728095876)
+    <@451408919319805965> added u as friend i cant write you now... please write to me or accept friend request.
+    [reply to plur9 msg=1489320729559302255]
+

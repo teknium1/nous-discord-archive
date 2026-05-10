@@ -1,0 +1,35 @@
+# Thread 'Hermes VirusTotal' in forum #plugins-skills-and-skins
+# thread_id=1494140846306623700 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:30.689879+00:00
+
+[2026-04-16T01:02:17.554000+00:00] bernardo_87557 (id=1494140846306623700)
+    Hermes VirusTotal is a Hermes Agent plugin that adds VirusTotal  (https://www.virustotal.com) reputation signals for file and hash workflows. It provides reputation context that the model and the user can use when deciding what to trust.
+    
+    https://github.com/king-tero/hermes-virustotal
+    
+    Installation:
+    
+    **hermes plugins install king-tero/hermes-virustotal**
+    
+    Restart the gateway if you use Hermes through a messaging platform:  hermes gateway restart
+    
+    Features:
+    
+    Reputation tools:
+    * vt_check_hash(hash): check a MD5, SHA1, or SHA256 in VTAI/VirusTotal.
+    * vt_check_file(path): hash a file in the active Hermes execution environment and check that hash.
+    
+    Advisor context: 
+    observed artifacts are summarized via pre_llm_call as fenced, untrusted context for the model. Context is scoped to the active Hermes session, deduplicated between turns, and aged out when stale.
+    
+    Provenance metadata: 
+    content created by write_file, patch, and execute_code is hashed and recorded with its VTAI/VirusTotal verdict when available.
+    
+    Privacy-respecting upload policy: 
+    binaries (ELF, PE/MZ, Mach-O, WASM, Java class, DEX) are auto-submitted to VTAI by default so the community can analyze potential new malware.  Scripts, source code, markdown, and other text are never auto-uploaded. Archives are opt-in. A path blocklist and a secret-pattern scan short-circuit uploads that could leak user data.
+    
+    Optional enforcement: 
+    set VTAI_ENFORCE_KNOWN_MALICIOUS=1 to block only exact content hashes that VTAI/VirusTotal reports as malicious. This is off by default.
+    [embed] VirusTotal https://www.virustotal.com/
+    [embed] GitHub - king-tero/hermes-virustotal: Hermes VirusTotal plugin — ... https://github.com/king-tero/hermes-virustotal
+

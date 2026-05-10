@@ -1,0 +1,58 @@
+# Thread 'caveman experience' in forum #plugins-skills-and-skins
+# thread_id=1496005170281054300 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:22.165949+00:00
+
+[2026-04-21T04:30:27.027000+00:00] driplikeosmosis (id=1496005170281054300)
+    hi, I want to hear what people's experience with using the caveman skill has been like specifically with Hermes. 
+    
+    https://github.com/JuliusBrussee/caveman
+    
+    - how many tokens have you realistically saved?
+    - has it come at a cost of loss of intelligence?
+    - what models have you tested it with, and what performed best with it?
+    - what workflows have you been using it with?
+    - where would you say not to use and where it shines? 
+    
+    cheers <:nousgirl:1341983870752653352>
+    [embed] GitHub - JuliusBrussee/caveman: 🪨 why use many token when few to... https://github.com/JuliusBrussee/caveman
+
+[2026-04-21T13:32:35.254000+00:00] phospheneoverdrive (id=1496141603553808615)
+    Thanks for reminding me of this. I wanted to give it a try.
+    I made a personality for it (its really just a system prompt anyway) but so far havn't had luck with the personality system at all...
+
+[2026-04-21T14:34:35.398000+00:00] phospheneoverdrive (id=1496157206968664187)
+    This is the personality I"m trying out. But it seems more of a suggestion so far...
+    ```
+        caveman: 'HEY YOU! LISTEN: **YOU IN CAVEMAN MODE**: minimum tokens. Rules: 1.
+          no pleasantries (sure/certainly). 2. no filler (just/really/basically/actually/simply).
+          3. no articles (a/an/the) unless needed. 4. one sentence enough = one sentence
+          5. stop when done. 6. FAILURE = unacceptable'
+    ```
+
+[2026-04-22T08:36:08.913000+00:00] driplikeosmosis (id=1496429390098202655)
+    Did you tinker around anymore?
+    [reply to phospheneoverdrive msg=1496157206968664187]
+
+[2026-04-22T12:20:01.582000+00:00] phospheneoverdrive (id=1496485730795524107)
+    This is what I tried in my config.yaml
+    ```yaml
+    agent:
+      personalities:
+        caveman: 'HEY YOU! LISTEN: **YOU IN CAVEMAN MODE**: minimum tokens. Rules: 1.
+          no pleasantries (sure/certainly) 2. no filler (just/really/basically/actually/simply)
+          3. no articles (a/an/the) unless needed 4. one sentence enough = one sentence
+          5. one sentence = one line 5. stop when done 6. FAILURE = unacceptable'
+    ```
+    Alas I just didn't even see *any* personalities working (even default ones). This seems like the most obvious place for this type of thing though.
+    Maybe there's more to it <:4Shrug:1151260419265142815>
+
+[2026-04-23T08:33:14.468000+00:00] driplikeosmosis (id=1496791046288576532)
+    Yeah I noticed when I tried to set personalities they didn't really work. Even with the /personality cmd it just sends back once and then never again really. GPT 5.4 specifically
+    [reply to phospheneoverdrive msg=1496485730795524107]
+
+[2026-04-23T08:33:55.496000+00:00] driplikeosmosis (id=1496791218372350073)
+    I think for caveman skill you are maybe better off downloading it into .hermes then reference that file in MEMORY.md?
+
+[2026-04-23T15:48:44.269000+00:00] phospheneoverdrive (id=1496900642617430258)
+    Maybe, I tried even overwriting the SOUL.md with it though and didn't see much of a diff (actually my responses are already pretty concise so maybe its difficult to see the difference)
+

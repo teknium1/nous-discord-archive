@@ -1,0 +1,45 @@
+# Thread 'oracle radar' in forum #community-projects-showcase
+# thread_id=1481052335290712094 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:18.735005+00:00
+
+[2026-03-10T22:13:13.355000+00:00] devorun11 (id=1481052335290712094)
+    DEVORUN ORACLE RADAR
+    What it is: A self healing, terminal based realtime intelligence engine. It tracks critical market movements and target accounts on Twitter with zero API costs, using a dynamically rotating pool of Nitter RSS feeds.
+    
+    How I used Hermes Agent:
+    I didn't just ask Hermes to write a simple script; Together, we engineered complex solutions to overcome real-world data bottlenecks:
+    
+    Stealth Pooling: Built a smart-rotation algorithm to bypass severe HTTP 403 rate limits across global instances.
+    
+    Cache Busting: Injected dynamic timestamps to force servers to bypass stale caches, achieving true zero latency intelligence.
+    
+    Agentic AutoRecovery: Implemented a fault tolerant multi threaded core. If a node fails or the network drops, the terminal doesn't crash it selfheals and pivots instantly.
+    
+    Core Features (Added via Hermes Guidance):
+    
+    Hardware Audio Alerts: The radar triggers a non-blocking, hardware-level terminal 'beep' the millisecond a 🚨 CRITICAL keyword drops. It ensures the operator is alerted even when AFK (Away From Keyboard).
+    
+    Autonomous Silent Logging: A dedicated background process captures every signal into a persistent radar_history.txt file. 24/7 historical tracking with zero impact on the live UI's performance.
+    
+     Tweet : https://x.com/Devran1An/status/2030790788767260926?s=20
+    GitHub Repo: https://github.com/devorun/devorun-oracle-radar     https://github.com/devorun/devorun-oracle-radar/blob/main/main.py 
+    
+    I made more than 10 attempts, encountered errors, and solved them one by one. I've shown all these steps from beginning to end in a single video. The final version is available at the end of the video https://x.com/Devran1An/status/2030821290181853478?s=20
+    
+    -As you can see in the images and video I uploaded, if my tweets, which I use for testing purposes, are on the critical keyword list in the system, this is reflected in my radar system and a warning is issued. If the keywords are not on the critical keyword list, they appear in the informational-nominal status. As you can see in the image, Elon Musk's tweets are in the informational status.
+    [attachment] 8.png https://cdn.discordapp.com/attachments/1481052335290712094/1481052335646965851/8.png?ex=6a01abb9&is=6a005a39&hm=9d7c37014ab4dd9a2e29f6aaf408da2e4b0b29ff19b334792437425c2263e2a6&
+    [attachment] 9.png https://cdn.discordapp.com/attachments/1481052335290712094/1481052336297087178/9.png?ex=6a01abb9&is=6a005a39&hm=168756750ea575781698c856f897a5a1a4c3d1e5682543844c3b43c5e0c98814&
+    [attachment] Ekran_goruntusu_2026-03-08_233348.png https://cdn.discordapp.com/attachments/1481052335290712094/1481052336788078702/Ekran_goruntusu_2026-03-08_233348.png?ex=6a01abb9&is=6a005a39&hm=0f93060fbc33d22ed20034e707b685be8c71cad56517ef9a26059f6841c91c80&
+    [embed]  https://twitter.com/Devran1An/status/2030790788767260926?s=20
+    [embed] GitHub - devorun/devorun-oracle-radar https://github.com/devorun/devorun-oracle-radar
+    [embed] devorun-oracle-radar/main.py at main · devorun/devorun-oracle-radar https://github.com/devorun/devorun-oracle-radar/blob/main/main.py
+    [embed]  https://twitter.com/Devran1An/status/2030821290181853478?s=20
+
+[2026-03-10T22:14:11.598000+00:00] devorun11 (id=1481052579579433040)
+    The first step was monitor setup and test messages; this is the test radar screen I created for that purpose
+    [attachment] 1.png https://cdn.discordapp.com/attachments/1481052335290712094/1481052578983837716/1.png?ex=6a01abf3&is=6a005a73&hm=adbc9ba87a204b30284ae13bc19fe25709596a84bbe4741dd957a41faccc45bc&
+
+[2026-03-10T22:15:14.659000+00:00] devorun11 (id=1481052844076568647)
+    Besides the long video I uploaded, this is a sped-up version of the final product
+    [attachment] Video_Project_12.mp4 https://cdn.discordapp.com/attachments/1481052335290712094/1481052843459870810/Video_Project_12.mp4?ex=6a01ac32&is=6a005ab2&hm=18222a269ee581846c825677f0eb038a86ba1b6cff0e37e4281949dd9806295a&
+

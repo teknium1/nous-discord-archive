@@ -1,0 +1,44 @@
+# Thread 'Sovth's local server' in forum #community-projects-showcase
+# thread_id=1492412182779133952 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:19.587692+00:00
+
+[2026-04-11T06:33:12.052000+00:00] .s0uthpaw (id=1492412182779133952)
+    https://github.com/SouthpawIN/Senter-Server
+    [embed] GitHub - SouthpawIN/Senter-Server: server backend for Senter https://github.com/SouthpawIN/Senter-Server
+
+[2026-04-11T13:22:51.708000+00:00] swagbabyostrich (id=1492515277328482484)
+    yeah um this needs much more work phase 1 is no where near complete i spent a few hrs prompting to try and get it working
+
+[2026-04-11T13:23:37.246000+00:00] swagbabyostrich (id=1492515468328833046)
+    scripts dont download models since they dont point to the right links for starters
+
+[2026-04-11T13:24:02.432000+00:00] swagbabyostrich (id=1492515573966442697)
+    llama.cpp setup completely messed up took forever to get working
+
+[2026-04-11T13:24:46.215000+00:00] swagbabyostrich (id=1492515757605650473)
+    tts model launches via python and even that had to be patched to get it to auto start when using start all
+    
+    ++ start all doesnt even start all it just starts the 35b model and the rest never start so those .py files had to be patched
+
+[2026-04-11T13:25:32.566000+00:00] swagbabyostrich (id=1492515952015839342)
+    pretty sure the auto hardware detection doesnt calculate whatever it calculates properly because i simply oom on my 5090 and image gen wouldnt work
+
+[2026-04-11T13:27:30.734000+00:00] swagbabyostrich (id=1492516447648219289)
+    broke my gemini pro into fast mode i sent so many prompts
+
+[2026-04-11T13:30:13.380000+00:00] swagbabyostrich (id=1492517129834991727)
+    or its just fking wsl2 who freaking knows at this point if u care just read this entire gemini chat convo from top to bottom to see all the issues but i do not recommmend anyone try this repo.  i am over it https://gemini.google.com/share/9020b7184d18
+
+[2026-04-11T13:41:08.450000+00:00] swagbabyostrich (id=1492519877397708950)
+    someone just needs to make a wrapper around comfyui model management and put that into hermes instead of dealing with this multimodel nonsense ( not that i would know what goes into that ). i had a very pleasurable time with comfyui a year ago
+
+[2026-04-11T17:51:37.362000+00:00] .s0uthpaw (id=1492582913223557270)
+    Oh it for sure needs updated, it does NOT match my local setup, I am so bad about making my stuff public. That's my focus this weekend.
+
+[2026-04-11T21:34:46.402000+00:00] undifined. (id=1492639070927716363)
+    yes and dangerous too, so easy to forget that one logfile that had your unencrypted password
+    [reply to .s0uthpaw msg=1492582913223557270]
+
+[2026-04-11T21:36:08.492000+00:00] .s0uthpaw (id=1492639415238131862)
+    Not my home machine password but thanks.
+

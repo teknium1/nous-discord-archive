@@ -1,0 +1,27 @@
+# Thread 'Using HERMES for art: A short visual experiment + breakdown' in forum #community-projects-showcase
+# thread_id=1492523670571192360 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:22.657742+00:00
+
+[2026-04-11T13:56:12.813000+00:00] artsbro (id=1492523670571192360)
+    Hey Heralds, I put together a short video piece about the illusion of agency and how our (digital) infrastructure increasingly treats humans as peripherals. I wanted to share the breakdown here. Even if video art and philosophy isn't your usual thing, you might find the history of how mid-century cybernetics turned users into programmable machines interesting. I also included a technical breakdown at the bottom if you just want to do something like this yourself.
+    
+    I am really interested in using Hermes as a tool for art. I would love to see others sharing their own creative experiments in the community, no matter how scuffed you think they are. Let's start exchanging knowledge and exploring the creative potential of what this harness can actually do. (I know Nous has some more creative stuff waiting for release)
+    [attachment] combined_optimized.mp4 https://cdn.discordapp.com/attachments/1492523670571192360/1492523672601100328/combined_optimized.mp4?ex=6a01dffd&is=6a008e7d&hm=a7784243d3013f884a2a4310d65eecb3dd17bccc0f337358099734d470d8dc47&
+    [attachment] canvas1.png https://cdn.discordapp.com/attachments/1492523670571192360/1492523674098470973/canvas1.png?ex=6a01dffd&is=6a008e7d&hm=9e5b2e8ed1c9892307b7b8ca65fdd5f16f8f7f4aa28b77bbbd24dca9961152eb&
+    [attachment] canvas2.png https://cdn.discordapp.com/attachments/1492523670571192360/1492523675155697874/canvas2.png?ex=6a01dffd&is=6a008e7d&hm=aeecf0fd69778754e79d9e4e404838053193ecfacf55dafa43287cec18e4e61b&
+
+[2026-04-11T13:57:12.970000+00:00] artsbro (id=1492523922887803072)
+    Here is a quick look at the philosophy and history behind the piece.
+    
+    ### ABOUT THE PIECE
+    The video opens with a simple terminal command: `"$ Tell me about the Macy Conferences."` This is a representative query fed into Hermes.
+    
+    While the query demonstrates a standard human-AI interaction, the subject itself (the Macy Conferences) traces the historical lineage of how we ended up in this situation. It looks at the history that gave us these tools. Throughout the mid-20th century, the science of Cybernetics redefined humans, machines, and society as identical systems governed by feedback and control. Today, much of our digital (and physical) infrastructure is built on this exact assumption. It treats users as biological machines emitting signals to be measured and contained.
+    
+    This piece is about the dangers of those closed, black-box systems. Hermes appears at the end as a tool designed to break the cage. By giving users the open framework to build the tools themselves, we return some much needed agency to the individual. It lets us leverage the power of agents without feeding into systems designed to manage us (if you're willing to use local models, but we keep the idea for dramatic effect, artistic license lol).
+    
+    More below 🔽
+
+[2026-04-11T13:57:21.930000+00:00] artsbro (id=1492523960468902068)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1492523670571192360/1492523960146071632/message.txt?ex=6a01e041&is=6a008ec1&hm=af5a8e0c22a925dbd797e5f302e826ce9b89223612c55299f911cdcabbade384&
+

@@ -1,0 +1,796 @@
+# Thread 'Native Desktop App for Hermes' in forum #community-projects-showcase
+# thread_id=1489459150235893863 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:47.841833+00:00
+
+[2026-04-03T02:58:54.229000+00:00] fathah. (id=1489459150235893863)
+    A GUI desktop app for installing, configuring, and managing Hermes agent through an immersive interface. 
+    Built for Hermes users who want full control without touching a terminal.
+    
+    *Features:*
+    - One click setup
+    - Multi-Profile Management
+    - Settings & Keys
+    - Multi Models Save & Access
+    - Chat & Sessions
+    - Memory Management
+    - Skill Management
+    
+    https://github.com/fathah/hermes-desktop
+    [attachment] Screenshot_2026-04-02_at_10.09.58_AM.png https://cdn.discordapp.com/attachments/1489459150235893863/1489459151342928106/Screenshot_2026-04-02_at_10.09.58_AM.png?ex=6a01eeae&is=6a009d2e&hm=4cf74eda7c1786d5e9c410de89446816e8e630877ef37bce0264f1c16fed218d&
+    [attachment] 040e6581-de7b-460a-8409-e13fd5cdcbd8.jpg https://cdn.discordapp.com/attachments/1489459150235893863/1489459151749779496/040e6581-de7b-460a-8409-e13fd5cdcbd8.jpg?ex=6a01eeae&is=6a009d2e&hm=b96f9593e0006031fa8f76b14bcb553d36c064b900d142ce41e1163070f8d87a&
+    [attachment] export-1775137409952.mov https://cdn.discordapp.com/attachments/1489459150235893863/1489459152299229354/export-1775137409952.mov?ex=6a01eeae&is=6a009d2e&hm=ec536d8973952ebfff9587771c5fe798110e34eb2e983ea3d78e6d5fd18dda5a&
+    [embed] GitHub - fathah/hermes-desktop: Desktop Companion for Hermes Agent https://github.com/fathah/hermes-desktop
+
+[2026-04-03T12:35:21.009000+00:00] fathah. (id=1489604217705336862)
+    [attachment] Screenshot_2026-04-03_at_4.34.26_PM.png https://cdn.discordapp.com/attachments/1489459150235893863/1489604217407799356/Screenshot_2026-04-03_at_4.34.26_PM.png?ex=6a01cd08&is=6a007b88&hm=4132dad1db6c14d2140a3717e36a92060256b65b738673b8124dd272723fa10f&
+
+[2026-04-03T12:35:41.239000+00:00] fathah. (id=1489604302556364901)
+    Integrated CLAW3D with Hermes Desktop
+
+[2026-04-03T12:35:45.907000+00:00] fathah. (id=1489604322135249088)
+    Try it
+
+[2026-04-03T18:40:42.530000+00:00] fathah. (id=1489696163228811344)
+    Mac & Linux Release v0.3
+    
+    https://github.com/fathah/hermes-desktop/releases/
+    [embed] Releases · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/
+
+[2026-04-03T19:05:45.327000+00:00] chfarhan_ (id=1489702466416152758)
+    impressive
+    
+    can we modify each agent profile . if yes then how. also one morething to know can you add  ctrlc function in it and queue function
+
+[2026-04-03T19:05:59.390000+00:00] chfarhan_ (id=1489702525400649798)
+    also how can we use / commands in it
+
+[2026-04-03T19:27:56.035000+00:00] fathah. (id=1489708047809908847)
+    Yes. In Profiles tab activate the profile and system will pick the profile settings and all update is of that profile.
+    Slash commands are future plans.
+    [reply to chfarhan_ msg=1489702466416152758]
+
+[2026-04-03T20:06:14.847000+00:00] _analyst_1 (id=1489717689726533804)
+    there's a pretty similar project called "hermes workspace" i think
+
+[2026-04-04T02:13:31.488000+00:00] fathah. (id=1489810118097899610)
+    It's a web interface to connect the Hermes setup. Desktop version even does Hermes installation, which is good for non devs.
+    [reply to _analyst_1 msg=1489717689726533804]
+
+[2026-04-04T02:15:38.688000+00:00] fathah. (id=1489810651613237268)
+    [attachment] Screenshot_2026-04-04_at_6.14.51_AM.png https://cdn.discordapp.com/attachments/1489459150235893863/1489810651378483303/Screenshot_2026-04-04_at_6.14.51_AM.png?ex=6a01e48a&is=6a00930a&hm=84d1590147b07497c8cbd038a1b3550bfd8a47c0cbf956c6b3aebcad1dedeba1&
+
+[2026-04-04T04:43:22.879000+00:00] fathah. (id=1489847830725132338)
+    Chat is more faster now, also multi model selection is now available
+    [attachment] Hermes-desktop_Chat.mov https://cdn.discordapp.com/attachments/1489459150235893863/1489847829781282916/Hermes-desktop_Chat.mov?ex=6a02072a&is=6a00b5aa&hm=964625bbd71bc76a80d04dea01f232ad3e2bdce809ca54c1be6fd917a6ccfe67&
+
+[2026-04-04T04:46:09.672000+00:00] fathah. (id=1489848530305814528)
+    [attachment] Image_04-04-26_at_8.45_AM.png https://cdn.discordapp.com/attachments/1489459150235893863/1489848530116808765/Image_04-04-26_at_8.45_AM.png?ex=6a0207d1&is=6a00b651&hm=df5fe2bcd9976efdc08d70f4dd860fec3c3fc37951a0602f117b95a9b5ebba21&
+
+[2026-04-04T06:29:03.253000+00:00] falkonsnow (id=1489874424181297212)
+    Very nice. Maybe a collab with whoever is building the web ui? Shared codebase with two endpoints, giving the hermes community a rounded toolset?
+
+[2026-04-04T06:42:18.799000+00:00] fathah. (id=1489877760942936215)
+    That would be great🫡
+    [reply to falkonsnow msg=1489874424181297212]
+
+[2026-04-04T06:44:11.405000+00:00] fathah. (id=1489878233246863543)
+    Currently it's managed in a separate repo, once it gets stable better to merge with the core Hermes; would also be a better to make it easy for all.
+    [reply to falkonsnow msg=1489874424181297212]
+
+[2026-04-04T11:39:45.787000+00:00] fathah. (id=1489952616636223721)
+    Build v0.0.6 now out. It encompasses latest Hermes release v0.7 updates including credential pool
+    [attachment] Image_04-04-26_at_3.37_PM.png https://cdn.discordapp.com/attachments/1489459150235893863/1489952616057143429/Image_04-04-26_at_3.37_PM.png?ex=6a01c001&is=6a006e81&hm=6e30ded733f926296ea7ea2a9634c199ad789b666cdc58538fb2ca32fca6645b&
+
+[2026-04-04T12:44:26.555000+00:00] nadpobudliwosc (id=1489968893756964874)
+    cant wait for a windows version lol
+
+[2026-04-04T15:01:07.574000+00:00] drrock77 (id=1490003291323502685)
+    Would it be possible to connect to a remote hermes agent for management? I use my mac for daily use but run my hermes agents on linux.
+
+[2026-04-04T15:20:08.333000+00:00] fathah. (id=1490008076013801633)
+    Haven't worked on that. Once it's stable will look on to implement the remote.
+    [reply to drrock77 msg=1490003291323502685]
+
+[2026-04-04T15:20:43.805000+00:00] drrock77 (id=1490008224794017893)
+    Cool...that would be slick. I'll try on my linux box for now.
+
+[2026-04-04T15:20:51.943000+00:00] fathah. (id=1490008258927132803)
+    Hermes Core engine doesn't fully support windows without WSL, so we need to wait for the core engine support in windows. 🫡
+    [reply to nadpobudliwosc msg=1489968893756964874]
+
+[2026-04-04T15:21:26.196000+00:00] fathah. (id=1490008402594889909)
+    🔥 share the feedback
+    [reply to drrock77 msg=1490008224794017893]
+
+[2026-04-04T15:40:33.693000+00:00] kidtaroi (id=1490013215545888911)
+    Can we connect existing Hermes installation to it ?
+
+[2026-04-04T15:51:57.790000+00:00] fathah. (id=1490016084856672296)
+    Yep. This is a wrapper over Hermes Core installation. So it just works. 
+    It also ships with installation step, only if Hermes is not installed.
+    [reply to kidtaroi msg=1490013215545888911]
+
+[2026-04-04T15:54:18.027000+00:00] kidtaroi (id=1490016673053282495)
+    Thanks will try this over this weekend
+
+[2026-04-04T16:30:16.476000+00:00] kidtaroi (id=1490025726244552848)
+    Which version should I be installing for  apple silicion, the github says 0.0.7 but the files indicate 0.0.4
+
+[2026-04-04T16:30:32.361000+00:00] kidtaroi (id=1490025792871202846)
+    [attachment] Screenshot_2026-04-04_at_11.30.28_AM.png https://cdn.discordapp.com/attachments/1489459150235893863/1490025792644841622/Screenshot_2026-04-04_at_11.30.28_AM.png?ex=6a020428&is=6a00b2a8&hm=8463da53c4623ade501d42a60fe2e6fab036d0d061f62e273c4a5da56b56e5a2&
+
+[2026-04-04T19:11:08.720000+00:00] fathah. (id=1490066210690175110)
+    Download v0.0.8
+    
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.0.8
+    [embed] Release Hermes Desktop v0.0.8 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.0.8
+
+[2026-04-04T19:13:26.089000+00:00] fathah. (id=1490066786857779400)
+    [attachment] Screenshot_2026-04-04_at_11.12.01_PM.png https://cdn.discordapp.com/attachments/1489459150235893863/1490066786589085747/Screenshot_2026-04-04_at_11.12.01_PM.png?ex=6a022a56&is=6a00d8d6&hm=9f02e6a4812cdb78f764188e66f2f33b321efa64ea9006cd3207d49e06a0b8a5&
+
+[2026-04-04T19:26:16.386000+00:00] macromark (id=1490070017717309571)
+    I’m late but man this is dope af
+    [reply to fathah. msg=1489696163228811344]
+
+[2026-04-04T19:30:20.863000+00:00] fathah. (id=1490071043128295635)
+    Not too late, btw 🫡
+    [reply to macromark msg=1490070017717309571]
+
+[2026-04-04T19:31:05.712000+00:00] macromark (id=1490071231238635520)
+    I was literally thinking of doing this the other day and you beat me too it. Definitely going to try it💪🏾
+    [reply to fathah. msg=1490071043128295635]
+
+[2026-04-04T19:32:01.660000+00:00] fathah. (id=1490071465901555732)
+    Great, let's collab 🔥
+
+[2026-04-04T19:39:34.379000+00:00] levifast (id=1490073364742803747)
+    Is windows support coming anytime soon?
+    
+    I've using autoclaw and OpenClaw desktop now simply because it's a one click install and has a GUI and I'm not missing out on anything....
+    
+    This is exactly what I (and millions of non CLI users) need for Hermes agent!
+
+[2026-04-04T20:31:54.364000+00:00] sexy.dev (id=1490086534794313869)
+    I'm a designer. Im like 10 hours into all of this, but I already see low effort opportunities to make this and the starter package of hermes dramatically better. You wanna talk about it or you are entirely on your own path? Dm me if you want.
+
+[2026-04-05T02:11:59.117000+00:00] fathah. (id=1490172118531571863)
+    <@387972437901312000> are u planning a windows native release of Hermes? Currently it's via WSL right??
+    [reply to levifast msg=1490073364742803747]
+
+[2026-04-05T02:13:41.881000+00:00] teknium (id=1490172549554896946)
+    yes
+    [reply to fathah. msg=1490172118531571863]
+
+[2026-04-05T02:56:23.510000+00:00] fathah. (id=1490183293805789406)
+    Couldn't get it👀
+    [reply to sexy.dev msg=1490086534794313869]
+
+[2026-04-05T05:08:05.170000+00:00] codename_11 (id=1490216435769938021)
+    +1 for Windows! 🙂
+
+[2026-04-05T06:29:41.438000+00:00] zingy90210 (id=1490236972206260296)
+    Looks sick! Is there a way one could use this on android/ios?
+
+[2026-04-06T02:10:51.390000+00:00] fathah. (id=1490534222329413814)
+    Desktop only
+    [reply to zingy90210 msg=1490236972206260296]
+
+[2026-04-06T02:45:57.574000+00:00] amazon1148 (id=1490543056305258687)
+    I'm workig on a MacOS 26 version that uses Apple Containers and uses the full extent of Apple's security model (Air gapped containers, no networking between containers, virtual sockets which are secrets, guaranteed connection IDs.) 
+    
+    It's built around Apple Containers and container-compose which is similar to Docker compose for orchestrating containers. It's in the community project list.
+
+[2026-04-06T05:43:38.004000+00:00] fathah. (id=1490587769389711370)
+    FIXES:
+    - Gateway conflict between core Hermes engine and desktop app is fixed. Now if the gateway was started from the terminal, app doesn't re-create a gateway or close it on exit. This avoids gateway conflicts.
+    
+    Reported by:  yanguo1970
+
+[2026-04-06T05:44:54.894000+00:00] fathah. (id=1490588091889483948)
+    - Shell command injection via unsanitized string is fixed now.
+    
+    Issue #1
+    Reported By: consigcody94
+
+[2026-04-06T05:45:48.090000+00:00] fathah. (id=1490588315009814619)
+    Both fixes are now merged. Thanks for the contributions. 🤝🏼
+
+[2026-04-06T05:50:49.725000+00:00] chfarhan_ (id=1490589580158570536)
+    Does it have a one-click update function for the desktop app and Hermes, like we have in the CLI?
+    
+    hermes update.
+
+[2026-04-06T06:07:17.252000+00:00] fathah. (id=1490593722147012739)
+    Will add 👍🏼
+
+[2026-04-06T08:08:18.381000+00:00] fathah. (id=1490624177529553017)
+    Hermes Desktop v0.0.9
+    - Update Hermes Engine
+    - Safe migrate from OpenClaw
+    - Fixed Gateway Conflicts
+    [attachment] Screenshot_2026-04-06_at_11.57.42_AM.png https://cdn.discordapp.com/attachments/1489459150235893863/1490624177324163222/Screenshot_2026-04-06_at_11.57.42_AM.png?ex=6a018e72&is=6a003cf2&hm=0b6713d99690a77ab337b4ccd17ac375ec29e7a8c3dd557fbf8fb3ff41ed6339&
+
+[2026-04-06T08:38:00.613000+00:00] oabdulnaby (id=1490631652752359465)
+    Impressive <@703810415972450305>, I commend all your efforts to deliver such a great UI 👏
+
+[2026-04-06T08:38:47.380000+00:00] fathah. (id=1490631848907374714)
+    Thanks buddy😍
+    [reply to oabdulnaby msg=1490631652752359465]
+
+[2026-04-06T09:06:07.258000+00:00] faer1x (id=1490638727054233610)
+    Awesome stuff. Would appreciate if you could make a windows version too 🙂
+
+[2026-04-06T09:16:07.709000+00:00] fathah. (id=1490641245528133714)
+    I can, but Hermes Core engine is not supported in windows (at least for now)
+    [reply to faer1x msg=1490638727054233610]
+
+[2026-04-06T09:25:09.797000+00:00] faer1x (id=1490643519210262581)
+    A good feature would be to remotely connect to our Hermes installation
+    [reply to fathah. msg=1490641245528133714]
+
+[2026-04-06T09:26:31.423000+00:00] fathah. (id=1490643861574516837)
+    Let me tryy🤝🏼
+
+[2026-04-06T09:38:24.805000+00:00] faer1x (id=1490646853715230730)
+    You're awesome 😄
+    [reply to fathah. msg=1490643861574516837]
+
+[2026-04-06T09:40:31.457000+00:00] chfarhan_ (id=1490647384932352040)
+    how to select any workspace to do work with it.
+
+[2026-04-06T09:42:00.016000+00:00] chfarhan_ (id=1490647756375851019)
+    also / command support
+
+[2026-04-06T09:46:58.005000+00:00] fathah. (id=1490649006232309770)
+    Check "Profile", activate it. You can see the active profile name in the Sidebar (bottom)
+    [reply to chfarhan_ msg=1490647384932352040]
+
+[2026-04-06T10:01:28.350000+00:00] chfarhan_ (id=1490652656723693710)
+    thats just profile to activate. 
+    
+    a user here make a ui for hermes he gives option to select any workspace in which we can do work. workspace  like we can chose and select in which folder we can do work 
+    
+    and another member here make an ui which also support slash commands 
+    
+    for selection any workspace you can take idea from this 
+    
+    https://github.com/nesquena/hermes-webui
+    [embed] GitHub - nesquena/hermes-webui: Hermes WebUI https://github.com/nesquena/hermes-webui
+
+[2026-04-06T10:02:05.362000+00:00] chfarhan_ (id=1490652811963273278)
+    for other features to add you can read 
+    https://github.com/nesquena/hermes-webui/blob/master/ROADMAP.md
+    [embed] hermes-webui/ROADMAP.md at master · nesquena/hermes-webui https://github.com/nesquena/hermes-webui/blob/master/ROADMAP.md
+
+[2026-04-06T10:02:42.775000+00:00] chfarhan_ (id=1490652968884895828)
+    This ROADMAP.md gives you alot of ideas
+
+[2026-04-06T10:03:44.536000+00:00] chfarhan_ (id=1490653227929047151)
+    and i would like to buy coffee for you as you did gr8 job
+
+[2026-04-06T10:05:29.752000+00:00] chfarhan_ (id=1490653669237198939)
+    right now m using your`s app also nesquena web-ui just because of workspace switching option
+
+[2026-04-06T10:07:55.826000+00:00] chfarhan_ (id=1490654281915695196)
+    another suggestion add attachment button to upload picture or files . thsi will be also good feature to have
+
+[2026-04-06T18:41:42.413000+00:00] fathah. (id=1490783577993121813)
+    Thanks for sharing this, lemme go through and will check backk🤝🏼
+
+[2026-04-06T18:42:25.576000+00:00] fathah. (id=1490783759031734433)
+    Currently, I'm maintaining this repo lone, need some contributors😐
+
+[2026-04-06T18:43:15.631000+00:00] fathah. (id=1490783968977617060)
+    UPDATE:
+    
+    Connect to remote Hermes Engine
+    
+    https://github.com/fathah/hermes-desktop/tree/remote-connection
+    [embed] GitHub - fathah/hermes-desktop at remote-connection https://github.com/fathah/hermes-desktop/tree/remote-connection
+
+[2026-04-06T18:43:38.878000+00:00] fathah. (id=1490784066482606152)
+    Not merged to main yet, need to test this. 🫡
+
+[2026-04-06T18:43:54.849000+00:00] fathah. (id=1490784133469700297)
+    <@859600773029953568>
+
+[2026-04-06T21:03:09.028000+00:00] faer1x (id=1490819173436100679)
+    Oh wow! Thanks!
+    [reply to fathah. msg=1490784066482606152]
+
+[2026-04-06T21:03:29.914000+00:00] faer1x (id=1490819261038461029)
+    Let me know once merged to main haha
+
+[2026-04-06T22:37:33.606000+00:00] ponzi314 (id=1490842932398391468)
+    this is exactly what i was just coming to ask if its possible
+    [reply to fathah. msg=1490783968977617060]
+
+[2026-04-07T03:46:10.228000+00:00] freshprince3900 (id=1490920596740243496)
+    I have Hermes running on a server mac, can I use this desktop app on my main mac to control in a sense. Sick of using telegram as a gateway
+
+[2026-04-07T06:11:47.649000+00:00] soyhenry (id=1490957244139962438)
+    Nice. Does it support remote connections? My Hermes is on a vps
+
+[2026-04-07T13:16:51.993000+00:00] fathah. (id=1491064217111887902)
+    <@741144373424685137> <@459527551774097408> 
+    Plz check this branch. Not integrated with the current build, I need some test feedbacks to merge to the main branch.
+    [reply to fathah. msg=1490783968977617060]
+
+[2026-04-07T14:12:44.666000+00:00] soyhenry (id=1491078279241797652)
+    thx
+
+[2026-04-07T16:32:50.321000+00:00] geezeruk (id=1491113535114051604)
+    any news for a Windows 11 version of this friggin awesome desktop app
+
+[2026-04-07T21:55:20.766000+00:00] .bigbeanis (id=1491194696762921022)
+    yes please windows 11
+
+[2026-04-07T21:55:35.123000+00:00] .bigbeanis (id=1491194756980539432)
+    how did you install hermes on windows?
+    [reply to geezeruk msg=1491113535114051604]
+
+[2026-04-07T21:56:53.912000+00:00] geezeruk (id=1491195087445557309)
+    have hermes running on WSL - i just open command terminal/powershell then type - WSL - then type Hermes - works awesome
+    [reply to .bigbeanis msg=1491194756980539432]
+
+[2026-04-07T22:11:03.365000+00:00] .bigbeanis (id=1491198650309808141)
+    hmmm i will try
+
+[2026-04-07T22:20:30.646000+00:00] .bigbeanis (id=1491201029658775703)
+    it works but it cant acces my pc
+    [reply to geezeruk msg=1491195087445557309]
+
+[2026-04-07T22:20:39.451000+00:00] .bigbeanis (id=1491201066589487104)
+    is it fixable or no
+
+[2026-04-08T00:50:21.130000+00:00] lgwacker (id=1491238738481647636)
+    Outstanding job! Is there any kind of sandbox environment config for this? Or hermes is installed globaly in the system?
+
+[2026-04-08T01:38:16.557000+00:00] fathah. (id=1491250798896873562)
+    It's installed globally, 
+    for isolation you may setup containers
+
+[2026-04-08T01:39:38.220000+00:00] fathah. (id=1491251141416194239)
+    Testing it <:huggingface:1368674088721322045>
+    [reply to geezeruk msg=1491113535114051604]
+
+[2026-04-08T03:27:48.807000+00:00] mayuronx (id=1491278364911210606)
+    Great work!! Would love to know how I can get this running so it talks to my VPS installed Hermes on Contabo. 
+    
+    Tailscale? or is there some other better/preferred way?
+    
+    Added you on linkedin btw
+    
+    UPDATE: Can just do ssh.. trying it now. Opened a PR btw.
+    
+    https://github.com/fathah/hermes-desktop/pulls
+
+[2026-04-08T04:25:27.999000+00:00] fathah. (id=1491292873813921943)
+    have you checked this branch
+    
+    https://github.com/fathah/hermes-desktop/tree/remote-connection
+    
+    has i didn't get much time to test clearly, didn't merge to main.
+    [embed] GitHub - fathah/hermes-desktop at remote-connection https://github.com/fathah/hermes-desktop/tree/remote-connection
+    [reply to mayuronx msg=1491278364911210606]
+
+[2026-04-08T04:34:49.851000+00:00] fathah. (id=1491295230392271000)
+    UPDATE:
+    - Massive Performance improvement has been added to desktop version. Removed useless command runs.
+    - Gateway Conflicts are now fixed.
+    - Claw3D was causing a major rendering lag, now I'm building an independent 3D office dedicated for Hermes, using CLAW3D Fork.
+    
+    🔗 Merged to main
+
+[2026-04-08T04:39:17.646000+00:00] fathah. (id=1491296353605648404)
+    [attachment] Screenshot_2026-04-06_at_11.57.42_AM.png https://cdn.discordapp.com/attachments/1489459150235893863/1491296353396068454/Screenshot_2026-04-06_at_11.57.42_AM.png?ex=6a020635&is=6a00b4b5&hm=d5a9f414158ce90668565a9b4d8bd678d208bebb027f6e4bc9b3036018981333&
+
+[2026-04-08T04:47:36.441000+00:00] mayuronx (id=1491298445703643146)
+    Oh! Didn't see this.. checking
+    [reply to fathah. msg=1491292873813921943]
+
+[2026-04-08T05:01:36.842000+00:00] mayuronx (id=1491301970600788099)
+    The fork has a better UI, but has the same issue that most of the screens don't populate
+    
+    I left all the details here: https://github.com/fathah/hermes-desktop/issues/5
+    [embed] Feature Request: Support connecting to a remote Hermes instance (SS... https://github.com/fathah/hermes-desktop/issues/5
+    [reply to fathah. msg=1491292873813921943]
+
+[2026-04-08T09:48:33.011000+00:00] ddky.design (id=1491374180447555584)
+    wow this is great
+
+[2026-04-08T10:20:42.152000+00:00] ddky.design (id=1491382271851106418)
+    it's still heavy app or just me feel that
+
+[2026-04-08T12:39:19.746000+00:00] fathah. (id=1491417158368886804)
+    You mean it's lagging?
+    [reply to ddky.design msg=1491382271851106418]
+
+[2026-04-08T12:59:59.264000+00:00] fathah. (id=1491422357284327465)
+    New Update:
+    v0.1.0
+    - Added clash commands
+    - Performance Improvement
+     
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.1.0
+    [embed] Release Hermes Desktop v0.1.0 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.1.0
+
+[2026-04-08T13:08:02.351000+00:00] fathah. (id=1491424383498063882)
+    This version has huge performance enhancements. 
+    Previous versions had serious lagging because of background operations. Checkoutt⭐️
+    [reply to fathah. msg=1491422357284327465]
+
+[2026-04-08T13:40:42.701000+00:00] ddky.design (id=1491432605802041344)
+    yep2. i think i need go to the new update. thanks man
+    [reply to fathah. msg=1491417158368886804]
+
+[2026-04-08T18:23:33.780000+00:00] chfarhan_ (id=1491503787666313338)
+    wish there was folder based workspace selection also
+    [reply to fathah. msg=1491424383498063882]
+
+[2026-04-08T18:26:53.127000+00:00] fathah. (id=1491504623788228690)
+    will work on, 
+    need more maintainers for this project to go further🫡
+    [reply to chfarhan_ msg=1491503787666313338]
+
+[2026-04-08T19:46:31.903000+00:00] marc_monte (id=1491524667427520643)
+    <@703810415972450305> this is pretty cool.  I popped it on my Macbook and it was up and running in like 1 minute.  Is there a way to use the app on my Macbook and have it connect to Hermes-Agent running on my server either using the url or tailscale or something?  Not sure if I missed a setting for that somewhere.
+
+[2026-04-08T20:35:18.971000+00:00] sharpsthlm (id=1491536944440545411)
+    Super nice! Scheduled Jobs ?
+    [reply to fathah. msg=1489459150235893863]
+
+[2026-04-09T05:57:56.798000+00:00] fathah. (id=1491678535029358664)
+    https://github.com/fathah/hermes-desktop/tree/remote-connection
+    
+    check this branch.
+    it's not yet merged to main
+    [embed] GitHub - fathah/hermes-desktop at remote-connection https://github.com/fathah/hermes-desktop/tree/remote-connection
+    [reply to marc_monte msg=1491524667427520643]
+
+[2026-04-09T05:58:39.631000+00:00] fathah. (id=1491678714683981856)
+    Noted for future updates🫡
+    [reply to sharpsthlm msg=1491536944440545411]
+
+[2026-04-09T12:09:09.343000+00:00] fathah. (id=1491771952854204497)
+    ***UPDATE***
+    - Schedule Manager
+    Manage your CRON Jobs
+    
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.2.0
+    [attachment] Screenshot_2026-04-09_at_3.15.36_PM.png https://cdn.discordapp.com/attachments/1489459150235893863/1491771953462116423/Screenshot_2026-04-09_at_3.15.36_PM.png?ex=6a01c6e5&is=6a007565&hm=70563e2d54fc508e0424dded4914ecc76cfe02016bcd7c4f94c2d0ca563f647b&
+    [attachment] Screenshot_2026-04-09_at_3.11.59_PM.png https://cdn.discordapp.com/attachments/1489459150235893863/1491771953906847891/Screenshot_2026-04-09_at_3.11.59_PM.png?ex=6a01c6e5&is=6a007565&hm=c3ba8fdf3bc5120295fb45246e3124ccefa0897ae8943c4b886aea8367bd4705&
+    [embed] Release Hermes Desktop v0.2.0 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.2.0
+
+[2026-04-09T23:59:39.311000+00:00] niko5945 (id=1491950755899510907)
+    Windows version coming or nah?
+
+[2026-04-10T03:52:31.598000+00:00] tobenwarrior (id=1492009359918497893)
+    this looks amazing gonna try
+
+[2026-04-10T04:22:08.089000+00:00] tobenwarrior (id=1492016811062067321)
+    extremely laggy when i typing in the chat though
+
+[2026-04-10T14:25:47.790000+00:00] amazon1148 (id=1492168727498592418)
+    FYI: https://github.com/matthiasdebernardini/hermes-agent/tree/feat/apple-containers-backend
+    [embed] GitHub - matthiasdebernardini/hermes-agent at feat/apple-containers... https://github.com/matthiasdebernardini/hermes-agent/tree/feat/apple-containers-backend
+
+[2026-04-13T10:43:47.866000+00:00] fathah. (id=1493200023285006489)
+    🚀 Hermes Desktop v0.2.2
+    
+    A few things that should make daily use feel a lot nicer:
+    
+    - **Slash commands:** hit / in chat for /new, /clear, /web, /image, /help and more
+    - **Real multi-turn chat**:  follow-ups finally remember what you just said
+    - **New Gateway screen**: toggle Telegram / Discord / Slack with one click, no more editing configs
+    - **Nicer code blocks**: syntax highlighting, diff view, copy button
+    - **Better errors**:  when a model fails, you'll actually see why
+    - **Less lag in long chats**
+    
+    Grab it from releases. Enjoy! 🎉
+    
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.2.2
+    [embed] Release Hermes Desktop v0.2.2 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.2.2
+
+[2026-04-13T12:00:22.344000+00:00] nchaparro_ (id=1493219293922459659)
+    How do you plug in , into an existing installation?
+
+[2026-04-13T13:52:55.045000+00:00] marc_monte (id=1493247616803143722)
+    Any plans to merge in the remote-connection branch?
+    [reply to fathah. msg=1491678535029358664]
+
+[2026-04-13T13:53:13.697000+00:00] fathah. (id=1493247695035437267)
+    Next release
+
+[2026-04-13T18:55:01.445000+00:00] huhu1030 (id=1493323644435169290)
+    Looks nice! I'd love to try it once the remote connection feature is released 🙌
+
+[2026-04-14T01:53:58.238000+00:00] dingxintao_90358 (id=1493429075786862746)
+    <@703810415972450305> need help🥲  do u know how to fix this
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1493429075807703070/image.png?ex=6a01df76&is=6a008df6&hm=39e88bb26427317689b996283b4cb5555486b3ad06b5baf23116db7d11a772cf&
+
+[2026-04-14T02:02:52.064000+00:00] fathah. (id=1493431314815123597)
+    Check where's npm binary is
+
+[2026-04-14T02:03:50.130000+00:00] fathah. (id=1493431558361841684)
+    Run "which npm" in terminal
+
+[2026-04-14T02:04:06.014000+00:00] dingxintao_90358 (id=1493431624984035439)
+    i found it
+
+[2026-04-14T02:04:44.534000+00:00] dingxintao_90358 (id=1493431786548760779)
+    clone to a place where it can acess? like local/bin
+
+[2026-04-14T02:33:39.253000+00:00] dingxintao_90358 (id=1493439062487597057)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1493439062193737819/image.png?ex=6a01e8c3&is=6a009743&hm=c65ecfa74ffcc131bf048107fcc6e318fa0603dad507d20e690d72166f4dbc45&
+
+[2026-04-14T02:33:40.736000+00:00] dingxintao_90358 (id=1493439068707623092)
+    sweet
+
+[2026-04-14T11:35:55.031000+00:00] fathah. (id=1493575527431147551)
+    PR 11 Merged for multi language support.
+
+[2026-04-14T11:36:05.375000+00:00] fathah. (id=1493575570817024091)
+    Sync with Hermes 0.9
+    
+    https://github.com/fathah/hermes-desktop
+    [embed] GitHub - fathah/hermes-desktop: Desktop Companion for Hermes Agent https://github.com/fathah/hermes-desktop
+
+[2026-04-14T11:40:19.265000+00:00] fathah. (id=1493576635708997743)
+    **SSE streaming support**: new server-sent events parser for real-time responses
+    **Expanded installer**: major overhaul to installation/setup logic
+    **Richer UI**: Settings, Chat, Memory, and Tools screens all significantly expanded
+    **New IPC/preload APIs**: more capabilities exposed between main and renderer
+    **Test suite**: 5 new test suites (constants, installer, IPC, preload, SSE parser) with vitest
+    **0.9 version support**: merged the 0.9-update branch, bringing compatibility with Hermes 0.9
+
+[2026-04-14T21:11:38.993000+00:00] codename_11 (id=1493720415309266975)
+    Looking forward to Windows support to try it out! 🙂
+
+[2026-04-15T01:19:00.757000+00:00] bottium (id=1493782666179514398)
+    genuinely peak, keep up the good work brotha
+    [reply to fathah. msg=1493575527431147551]
+
+[2026-04-15T04:37:03.703000+00:00] bottium (id=1493832506867454073)
+    they should 100% add native windows support
+
+[2026-04-15T04:49:20.802000+00:00] bottium (id=1493835598484475906)
+    suggestion: you should add a api status showing if it connected to the hermes api, and add voice mode similar to discord voice chat where you can talk to it and it will talk back, also for some reason it lags a lot ESPECIALLY WHEN CLAW3D IS OPEN, and claw3d is bugged, session is also bugged
+    [reply to fathah. msg=1493575527431147551]
+
+[2026-04-15T07:15:20.906000+00:00] fathah. (id=1493872341023850496)
+    Thanks! I'll check thatt
+
+[2026-04-18T01:54:19.730000+00:00] bottium (id=1494878717392977981)
+    THANK YOU!!!
+    [reply to fathah. msg=1493872341023850496]
+
+[2026-04-19T19:57:55.035000+00:00] .geekier (id=1495513799212531712)
+    okay will wait to test, my install is on a linux server
+    [reply to fathah. msg=1493247695035437267]
+
+[2026-04-19T20:45:45.206000+00:00] .geekier (id=1495525837582110730)
+    this could prove useful, is this a considered PR?
+    [reply to amazon1148 msg=1492168727498592418]
+
+[2026-04-20T10:39:55.066000+00:00] larryzhang7497 (id=1495735761910108322)
+    <@703810415972450305> HI BOSS，Does this app surpport for WIN?
+
+[2026-04-20T10:41:32.050000+00:00] fathah. (id=1495736168690487377)
+    Not yet. We are waiting for Hermes engine to Support Windows
+    [reply to larryzhang7497 msg=1495735761910108322]
+
+[2026-04-20T10:52:40.422000+00:00] larryzhang7497 (id=1495738972045971516)
+    thanks for your work,Waiting for good news
+    [reply to fathah. msg=1495736168690487377]
+
+[2026-04-20T11:03:38.292000+00:00] sliph (id=1495741731352739991)
+    Can i have the desktop app on my mac studio connect to my hermes which is on my mac mini on the other side of the world using tailscale?
+
+[2026-04-20T13:49:31.031000+00:00] fathah. (id=1495783476165873828)
+    Remote Connection is now merged to main.
+
+[2026-04-20T13:49:46.520000+00:00] fathah. (id=1495783541131313163)
+    Upcoming release will include remote setup
+
+[2026-04-20T15:09:16.846000+00:00] nasumone (id=1495803549328605415)
+    how do you make UI changes that persist between updates? i made them a module but it still reset on the last update
+
+[2026-04-21T02:25:17.847000+00:00] fathah. (id=1495973674497478666)
+    what UI changes👀
+    [reply to nasumone msg=1495803549328605415]
+
+[2026-04-30T11:17:17.360000+00:00] fathah. (id=1499369045429063730)
+    Release 0.3.0 out
+    
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.3.0
+    [embed] Release Hermes Desktop v0.3.0 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.3.0
+
+[2026-04-30T11:18:15.019000+00:00] fathah. (id=1499369287268302858)
+    [attachment] Image_30-04-26_at_3.17_PM.png https://cdn.discordapp.com/attachments/1489459150235893863/1499369287054528666/Image_30-04-26_at_3.17_PM.png?ex=6a01baf6&is=6a006976&hm=f8e5f2e48fa24b2139531a420114205b5cb42e05b990d3a7ffdb126967bf4f46&
+
+[2026-04-30T11:18:25.369000+00:00] fathah. (id=1499369330679484527)
+    Debian Support added
+
+[2026-04-30T22:24:59.855000+00:00] larryzhang7497 (id=1499537079712088074)
+    <@703810415972450305>感谢大佬，看到支持WINDOWS了，之前在WSL中安装了hermes，现在使用您的桌面端需要重新安装hermes吗
+
+[2026-04-30T22:25:05.087000+00:00] Translator Bot#1043 (id=1499537101656555653)
+    <@703810415972450305>Thank you, I saw that WINDOWS is supported. I installed hermes in WSL before. Do you need to reinstall hermes to use your desktop now?
+    [reply to larryzhang7497 msg=1499537079712088074]
+
+[2026-04-30T22:29:18.282000+00:00] larryzhang7497 (id=1499538163633492089)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1499538163276841082/image.png?ex=6a01af7e&is=6a005dfe&hm=51e747827a442f95a5850d732c09d9a75c43b5b0bb5fd4c22e1976d35ee9b397&
+
+[2026-04-30T22:40:45.532000+00:00] larryzhang7497 (id=1499541046168780930)
+    一直卡在29%，不知道咋回事
+
+[2026-04-30T22:40:50.704000+00:00] Translator Bot#1043 (id=1499541067861594212)
+    It keeps getting stuck at 29%, I don’t know what’s going on.
+    [reply to larryzhang7497 msg=1499541046168780930]
+
+[2026-05-01T02:24:46.172000+00:00] fathah. (id=1499597420298764368)
+    No need to reinstall hermes. Desktop app works over the existing Hermes installation.
+    [reply to Translator Bot msg=1499537101656555653]
+
+[2026-05-01T06:51:19.987000+00:00] larryzhang7497 (id=1499664503221256204)
+    大佬，还是卡在29,不知道咋回事
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1499664502956752987/image.png?ex=6a022527&is=6a00d3a7&hm=b0afb9e0901ddc8d4df24decff1f6dd76ccc49ff4d3543db4c6539dfc64ae6d6&
+    [reply to fathah. msg=1499597420298764368]
+
+[2026-05-01T06:51:22.182000+00:00] Translator Bot#1043 (id=1499664512427757638)
+    Boss, it’s still stuck at 29. I don’t know what’s going on.
+    [reply to larryzhang7497 msg=1499664503221256204]
+
+[2026-05-01T06:57:17.104000+00:00] .papasoma (id=1499666001078259832)
+    I had same issues, and mostly resolved them. You need to install the dependencies on your own. The terminal inside the installer isn't triggering a request for you sudo password. So you'll need to install all dependencies on your own. I'm stuck at 87% when trying to get playwright dependency installed, which I have done in terminal, but it's not being picked up by installer procedure
+    [reply to larryzhang7497 msg=1499664503221256204]
+
+[2026-05-01T06:58:36.678000+00:00] .papasoma (id=1499666334836068453)
+    <@703810415972450305> The installer isn't properly requesting for password is what I've arrived at. I can proceed through the installation until playwright, and then I'm stuck. I'm about to flag playwright as complete and see if that works.
+
+[2026-05-01T07:00:23.602000+00:00] larryzhang7497 (id=1499666783307829330)
+    大佬，怎么解决，需要独立安装依赖吗，在POWERSHELL中？
+    [reply to .papasoma msg=1499666001078259832]
+
+[2026-05-01T07:00:28.567000+00:00] Translator Bot#1043 (id=1499666804132544663)
+    Boss, how to solve it? Do I need to install dependencies independently in POWERSHELL?
+    [reply to larryzhang7497 msg=1499666783307829330]
+
+[2026-05-01T07:01:25.448000+00:00] fathah. (id=1499667042708492358)
+    Now you can install it independently, meanwhile we’ll fix that issue. Thanks for reporting 🤗
+
+[2026-05-01T07:02:09.492000+00:00] larryzhang7497 (id=1499667227442413719)
+    那就是等新版本吗？目前一直卡在29%
+    [reply to fathah. msg=1499667042708492358]
+
+[2026-05-01T07:02:14.241000+00:00] Translator Bot#1043 (id=1499667247361167421)
+    Are you just waiting for the new version? Currently stuck at 29%
+    [reply to larryzhang7497 msg=1499667227442413719]
+
+[2026-05-01T07:03:11.541000+00:00] .papasoma (id=1499667487694786631)
+    I'm stuck at 87%. Playwright dependency. I have installed that via terminal, but desktop installer is not reading that.
+    [reply to larryzhang7497 msg=1499667227442413719]
+
+[2026-05-01T07:04:02.667000+00:00] larryzhang7497 (id=1499667702132899901)
+    那看来就是软件本身的问题，等新版本发布吧
+    [reply to .papasoma msg=1499667487694786631]
+
+[2026-05-01T07:04:06.508000+00:00] Translator Bot#1043 (id=1499667718243094559)
+    It seems to be a problem with the software itself. Let’s wait for the new version to be released.
+    [reply to larryzhang7497 msg=1499667702132899901]
+
+[2026-05-01T07:10:07.232000+00:00] .papasoma (id=1499669231229210728)
+    I'll try to push through with the last dependency. I've been excited to work with Hermes. When Agent Zero first released I was using it, but haven't been using heavily agentic solutions for some time. Mostly just single track work with opencode/roocode. I have some softwware finish development on
+
+[2026-05-01T07:26:19.217000+00:00] .papasoma (id=1499673308030046370)
+    yeah I'm still getting stuck at this stage.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1499673307757154446/image.png?ex=6a022d5b&is=6a00dbdb&hm=e2834799acc8b7c12e91daaa00585de0bc41223372770470312d18c2bc755847&
+
+[2026-05-01T07:27:39.875000+00:00] .papasoma (id=1499673646334218341)
+    whenever it wan't to switch to root user the issue comes
+
+[2026-05-01T07:28:27.530000+00:00] .papasoma (id=1499673846213775511)
+    I have playwright installed fully, but it's not seeing it
+
+[2026-05-01T07:30:28.180000+00:00] .papasoma (id=1499674352256548944)
+    can run hermes-desktop from terminal, but it seems to have some issues
+
+[2026-05-01T07:30:31.205000+00:00] .papasoma (id=1499674364944318474)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1499674364486881280/image.png?ex=6a022e57&is=6a00dcd7&hm=cb394236a16e0aca055856e4569adef4860b7f10d460a55b1a87a89268f6e7d3&
+
+[2026-05-01T07:35:38.911000+00:00] larryzhang7497 (id=1499675655556563066)
+    大佬，你的意思是，目前还是不能用是吧
+    [reply to .papasoma msg=1499673308030046370]
+
+[2026-05-01T07:35:41.799000+00:00] Translator Bot#1043 (id=1499675667669717002)
+    Boss, you mean it’s still unavailable right now, right?
+    [reply to larryzhang7497 msg=1499675655556563066]
+
+[2026-05-01T07:45:38.653000+00:00] .papasoma (id=1499678171056967830)
+    You can operate from within the terminal but it's not optimal. I recommend running TUI right now and then waiting for desktop to work better
+    [reply to larryzhang7497 msg=1499675655556563066]
+
+[2026-05-01T07:45:59.167000+00:00] .papasoma (id=1499678257098784871)
+    It will just be picking up your project and history from eixisting installation anyways
+
+[2026-05-01T07:49:40.104000+00:00] larryzhang7497 (id=1499679183775993969)
+    那还是等作者大佬修复吧
+
+[2026-05-01T07:49:44.380000+00:00] Translator Bot#1043 (id=1499679201710833705)
+    Then let's wait for the author to fix it.
+    [reply to larryzhang7497 msg=1499679183775993969]
+
+[2026-05-02T04:43:55.558000+00:00] fathah. (id=1499994828027461692)
+    Can you check the new release
+
+[2026-05-02T04:44:24.536000+00:00] fathah. (id=1499994949570138244)
+    0.3.1
+
+[2026-05-02T04:49:23.549000+00:00] .papasoma (id=1499996203721555999)
+    Still getting stuck at install. When it comes to playwright dependency install/check. It needs to have the ability to enter sudo password in the terminal
+
+[2026-05-02T04:49:32.304000+00:00] .papasoma (id=1499996240442691654)
+    without that it can't move forward
+
+[2026-05-02T09:35:13.717000+00:00] larryzhang7497 (id=1500068136739934339)
+    大佬，还是卡在29%
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1500068136509116476/image.png?ex=6a01a2d1&is=6a005151&hm=a53c3d937cc2766e6c3f6324949bd7454f80ceefd2e587a4a2df6e53a0fcdff1&
+    [reply to fathah. msg=1499994828027461692]
+
+[2026-05-02T09:35:18.210000+00:00] Translator Bot#1043 (id=1500068155584679936)
+    Boss, it’s still stuck at 29%
+    [reply to larryzhang7497 msg=1500068136739934339]
+
+[2026-05-02T09:36:08.708000+00:00] larryzhang7497 (id=1500068367388643419)
+    大佬，这种状况还是要终端中进行SUDO密码输入吗
+    [reply to .papasoma msg=1499996203721555999]
+
+[2026-05-02T09:36:13.505000+00:00] Translator Bot#1043 (id=1500068387508850719)
+    Boss, do you still need to enter the SUDO password in the terminal in this situation?
+    [reply to larryzhang7497 msg=1500068367388643419]
+
+[2026-05-02T10:08:01.019000+00:00] .papasoma (id=1500076388202450976)
+    Yes, but it doesn't let you in the installer. When installing hermes normally, you need to enter your sudo password at that stage
+    [reply to larryzhang7497 msg=1500068367388643419]
+
+[2026-05-02T10:44:02.927000+00:00] larryzhang7497 (id=1500085455901949972)
+    我在WSL后台的终端中，并没有看到跳出指令让我输入sudo
+    [reply to .papasoma msg=1500076388202450976]
+
+[2026-05-02T10:44:06.151000+00:00] Translator Bot#1043 (id=1500085469424386088)
+    In the terminal of the WSL background, I did not see a pop-up instruction asking me to enter sudo.
+    [reply to larryzhang7497 msg=1500085455901949972]
+
+[2026-05-02T10:49:54.510000+00:00] .papasoma (id=1500086930547806371)
+    What I'm talking about is when you install Hermes from terminal. NOT the desktop app.
+    [reply to Translator Bot msg=1500085469424386088]
+
+[2026-05-07T12:34:52.028000+00:00] larryzhang7497 (id=1501925283580608574)
+    <@703810415972450305> 大佬，您修复好了吗
+
+[2026-05-07T12:34:54.592000+00:00] Translator Bot#1043 (id=1501925294335066186)
+    <@703810415972450305> Boss, have you fixed it?
+    [reply to larryzhang7497 msg=1501925283580608574]
+
+[2026-05-07T13:05:04.289000+00:00] mb2288 (id=1501932884754174122)
+    How much secure is this? Can I install it on my main mac?
+
+[2026-05-07T20:54:53.546000+00:00] diogo8678 (id=1502051119067562045)
+    <@703810415972450305>  How can I run it through vps on Hermes terminal ?
+
+[2026-05-08T02:38:14.559000+00:00] novus1111 (id=1502137525979058267)
+    yep same here stuck
+    [reply to .papasoma msg=1499996203721555999]
+
+[2026-05-08T02:45:28.015000+00:00] makoto.snkw (id=1502139344025161780)
+    I've installed and tried it. But I can't point it to my existing hermes install which is on another machine in my LAN.
+    
+    How to do that?
+
+[2026-05-08T02:45:43.474000+00:00] makoto.snkw (id=1502139408865038397)
+    macOS Tahoe Mac Mini M2
+
+[2026-05-08T02:46:12.633000+00:00] makoto.snkw (id=1502139531166486538)
+    The Hermes Agent was install on macOS Sequioa Macbook Pro Intel
+

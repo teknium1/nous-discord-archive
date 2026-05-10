@@ -1,0 +1,14 @@
+# Thread 'Skill Autoresearch — automated evaluation and improvement loop for Hermes skills' in forum #community-projects-showcase
+# thread_id=1490457769281589258 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:56.239017+00:00
+
+[2026-04-05T21:07:03.563000+00:00] outbreak7777 (id=1490457769281589258)
+    Point it at any SKILL.md or script and it runs: frozen benchmark → diagnose → external verification → patch → evaluate → KEEP/REVERT. Finds outdated commands, missing guardrails, hardcoded secrets, PII in examples. Dual mode — instruction artifacts (LLM judge) and code (deterministic tests).
+    
+    Cross-run pattern archive, self-modification with constitutional safety rules, and mandatory PII/secrets scanning.
+    
+    Inspired by Karpathy's autoresearch, adapted for agent artifacts.
+    
+    https://github.com/domvox/hermes-skills/blob/main/skill-autoresearch/SKILL.md
+    [embed] hermes-skills/skill-autoresearch/SKILL.md at main · domvox/hermes-... https://github.com/domvox/hermes-skills/blob/main/skill-autoresearch/SKILL.md
+

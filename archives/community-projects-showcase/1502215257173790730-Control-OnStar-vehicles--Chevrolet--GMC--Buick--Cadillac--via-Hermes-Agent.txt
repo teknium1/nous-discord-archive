@@ -1,0 +1,10 @@
+# Thread 'Control OnStar vehicles (Chevrolet, GMC, Buick, Cadillac) via Hermes Agent' in forum #community-projects-showcase
+# thread_id=1502215257173790730 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:17.247593+00:00
+
+[2026-05-08T07:47:07.120000+00:00] gwyntel (id=1502215257173790730)
+    I made a skill to remote start my car, check EV battery level, etc - and I noticed nobody else had made a skill for it, so here's mine. 
+    
+    🚗 https://github.com/gwyntel/onstarjs2-skill 🚗
+    [embed] GitHub - gwyntel/onstarjs2-skill: Control GM/OnStar vehicles via th... https://github.com/gwyntel/onstarjs2-skill
+

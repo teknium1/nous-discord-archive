@@ -1,0 +1,21 @@
+# Thread 'Gigaxity: low-cost research stack' in forum #plugins-skills-and-skins
+# thread_id=1501578622350393404 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:01.868234+00:00
+
+[2026-05-06T13:37:21.550000+00:00] dre108 (id=1501578622350393404)
+    Not strictly a Hermes plugin per se, but very useful and cost-effective for heavy agent use.
+    
+    I got tired of paying Perplexity api to use their mcp for agentic research. It was like $10 a pop every few days just for synthesis calls on the research dumps of my other mcp tool calls. So I made my own called Gigaxity. 
+    
+    Gigaxity is comprised of 7 mcp's and some companions like SearXNG (with custom config yaml for optimal websearch settings as of May 2026). The context sources are picked in such a way as to maximize free tier api keys. Even the ones with a free trial limit that switch to paid, like Exa, can be rotated with a fresh Google account when you run out of tokens. Jina can be refreshed a certain way also (with stealth browser and proxy) if you know what you're doing. 
+    
+    The repo also comes with an instruction block to add to your agent's system prompt and a research-workflow skill to route the LLM to the correct flow for each query type. The beauty of this particular orchestration is that you can get very near or same quality research (sometimes better) than Perplexity or other closed-source tools, for a fraction of the cost. 
+    
+    Sources include web, code examples, docs, arXiv, socials, etc. You can even do OSINT fairly well. And you can absolutely add your own api's and mcp's to the stack or remove any. The main value lies in the aggregation and synthesis tools using Tongyi Deepresearch 30B. Default (main branch) is Openrouter hosted version of this model, but you can also run a quant locally with llama.cpp or vLLM on any 24gb VRAM gpu. This config is on the secondary branch of the repo. 
+    
+    https://github.com/yoloshii/gigaxity-deep-research
+    [embed] GitHub - yoloshii/gigaxity-deep-research: Open-source deep research... https://github.com/yoloshii/gigaxity-deep-research
+
+[2026-05-06T13:37:42.715000+00:00] dre108 (id=1501578711122706584)
+    If you look at the repo's on my github, there are some very useful other projects and skills as well, like ClawMem for agent memory, better-browser-use, ultimate-scraper, humanizer-pro, etc.
+

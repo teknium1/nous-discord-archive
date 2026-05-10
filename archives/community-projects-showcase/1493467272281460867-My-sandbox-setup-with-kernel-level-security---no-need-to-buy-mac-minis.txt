@@ -1,0 +1,11 @@
+# Thread 'My sandbox setup with kernel-level security - no need to buy mac minis' in forum #community-projects-showcase
+# thread_id=1493467272281460867 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:08.695825+00:00
+
+[2026-04-14T04:25:44.992000+00:00] rp1234567 (id=1493467272281460867)
+    https://x.com/rajapatnaik/status/2043736998276726962?s=46&t=DzWqNclk56b7NbM8lQ-K6g
+    
+    https://github.com/raja-patnaik/hermes-openshell
+    [embed]  https://twitter.com/rajapatnaik/status/2043736998276726962?s=46&t=DzWqNclk56b7NbM8lQ-K6g
+    [embed] GitHub - raja-patnaik/hermes-openshell: Deploy Hermes Agent in open... https://github.com/raja-patnaik/hermes-openshell
+

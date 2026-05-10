@@ -1,0 +1,85 @@
+# Thread 'LLM-Wiki Backend' in forum #plugins-skills-and-skins
+# thread_id=1491974237538353252 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:39.070554+00:00
+
+[2026-04-10T01:32:57.770000+00:00] labhund (id=1491974237538353252)
+    Put together a little treat for anyone who has been enjoying the new llm-wiki skill! 
+    
+    PSA: I have taken the learnings from llm-wiki and turned it into a comprehensive and focused package, check out Lacuna!
+    
+    Lacuna:
+    https://github.com/Labhund/lacuna-wiki
+    
+    OLD REPOSITORY (DEPRECATED): https://github.com/Labhund/llm-wiki
+    [embed] GitHub - Labhund/lacuna-wiki: Give your agent a knowledge graph tha... https://github.com/Labhund/lacuna-wiki
+    [embed] GitHub - Labhund/llm-wiki: Agent-first knowledge base — wiki over... https://github.com/Labhund/llm-wiki
+
+[2026-04-10T16:17:27.392000+00:00] marc_monte (id=1492196827666190447)
+    I'm new to the whole llm-wiki thing.  How is this different from the built in default skill set in Hermes?
+
+[2026-04-10T22:10:54.779000+00:00] mayuronx (id=1492285777894309918)
+    This is great! WikiBrain
+
+[2026-04-11T02:29:51.304000+00:00] labhund (id=1492350942803267785)
+    The built in wiki skill puts a lot of effort on behalf of hermes to remember to update the schema, update the index, stick to this formatting style. My project is making sure all of that is handled behind the scenes by code so that you and hermes can focus on what to write instead!
+    [reply to marc_monte msg=1492196827666190447]
+
+[2026-04-11T05:44:02.422000+00:00] labhund (id=1492399811134230598)
+    Oh! Also there is automated flagging of orphaned pages, automated background ingest and direct querying of the wiki via a background agent searching through relevant papers and synthesising them to answer your questions!
+    [reply to labhund msg=1492350942803267785]
+
+[2026-04-11T13:25:42.980000+00:00] marc_monte (id=1492515995695317114)
+    Nice.  I'm going to try it out.  I've already been running into issues with Hermes doing it consistently.
+
+[2026-04-11T19:51:25.685000+00:00] terminalsausage (id=1492613063235469403)
+    So, i have two LLM Knowledge Bases i just started the other day. so far i am not sure they are the right fit for me. What i would like is a LLM wiki that can also be utilized on a website for human search and review, as well as agent access for answers to questions and such. There is no note based index or summary really. it seems like its just taking a bunch of sources and generating articles out of them, links things together but also it does not appear to be made for human use as much because its just dumping all the articles in one folder instead of breaking things into topics.
+    
+    So, i guess im curious if your system is more compatible with that idea? to have the LLM basically manage the wiki which then is also a website for humans to browse for info.
+
+[2026-04-11T22:25:34.082000+00:00] labhund (id=1492651853824004186)
+    Yeah I’m working on improving that. I’m encouraging breaking it all up into clusters (and soon to come sub-clusters) of knowledge.
+    
+    There is no planned website, the browser is obsidian on your own personal file system!
+    
+    It sounds like what I’m building here matches your vision though! Accessible to both humans AND agents
+    [reply to terminalsausage msg=1492613063235469403]
+
+[2026-04-12T01:04:42.876000+00:00] terminalsausage (id=1492691904368742522)
+    Thats great news. i look forward to when the clustering is setup. I am also curious how hard it would be to migrate from one LLM KB system to a different one? No worries on the website side of it. i was planning to either hook into bookstack API or probably more likely wordpress with a plugin either i find or build. like something that just reads and formats the MD for the website and hooks up all the links or an agent that coverts the KB documents to something more web friendly.
+    [reply to labhund msg=1492651853824004186]
+
+[2026-04-13T17:18:00.519000+00:00] undifined. (id=1493299229701968003)
+    all memory can be Key =  Value systems.
+    I am working on this but imagine a large KV store with virtual tables of  graph, btree and others:
+    
+    UnifiedMemorySystem (Coordinator)
+    ├── PostgreSQL Core (Database Layer)
+    ├── KVStore (Key-Value, TTL-enabled)
+    ├── BTreeIndex (Sorted Range Queries)
+    ├── LinkedList (Ordered Sequences)
+    ├── Graph (DAG Task Dependencies)
+    ├── KanbanBoard (Workflow Tracking)
+    ├── LessonLearned (Pattern Tracking)
+    ├── CodeImplementationLedger (Metrics)
+    └── MemoryTransaction (ACID Wrapper)
+    
+    
+    
+    LLM Wiki v2. extended it with the features it was missing.
+    Memory lifecycle,
+    Confidence scoring,
+    Knowledge graphs,
+    Automated hooks,
+    Forgetting curves,
+    
+    
+    gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
+
+[2026-04-13T19:30:55.074000+00:00] labhund (id=1493332677410160844)
+    Good stuff, I’m working on a refactor to a v2 version also with a hidden SQL backend, its the way to go!
+    [reply to undifined. msg=1493299229701968003]
+
+[2026-04-13T19:36:52.112000+00:00] undifined. (id=1493334174935810309)
+    there is some of the memory stuff here, but not up to quality: https://github.com/DebVisor/PyAgent/tree/main/rust_core/src/agents
+    [embed] PyAgent/rust_core/src/agents at main · DebVisor/PyAgent https://github.com/DebVisor/PyAgent/tree/main/rust_core/src/agents
+

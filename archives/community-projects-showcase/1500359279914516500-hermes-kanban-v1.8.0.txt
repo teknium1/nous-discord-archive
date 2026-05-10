@@ -1,0 +1,16 @@
+# Thread 'hermes-kanban v1.8.0' in forum #community-projects-showcase
+# thread_id=1500359279914516500 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:26.376657+00:00
+
+[2026-05-03T04:52:07.659000+00:00] gumbyender (id=1500359279914516500)
+    hermes-kanban v1.8.0
+    46 new E2E tests. 105 total. 0 warnings.
+    • CLI → real subprocess workflows
+    • TUI → headless PTY smoke tests
+    • REST API → 20-endpoint mock server
+    
+    Also: killed 36 deprecation warnings, found & fixed a real bug in demo, 85% coverage.
+    
+    https://github.com/GumbyEnder/hermes-kanban
+    [embed] GitHub - GumbyEnder/hermes-kanban: A dedicated Obsidian plugin + He... https://github.com/GumbyEnder/hermes-kanban
+

@@ -1,0 +1,22 @@
+# Thread 'hermes-spotify-skill for Hermes on Raspberry Pi' in forum #plugins-skills-and-skins
+# thread_id=1491949701380178051 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:39.468345+00:00
+
+[2026-04-09T23:55:27.894000+00:00] alexeyisme (id=1491949701380178051)
+    hey! just wanted to share a Spotify skill for Hermes — **hermes-spotify-skill**
+    
+    works fine on headless Linux / Raspberry Pi (using it on Pi 4 with RPi OS Lite 64-bit).
+    
+    installation: Just send github repo link to your hermes agent and ask to set it up, they will ask you to help.
+    
+    what it does:
+    - search & play tracks, albums, artists, playlists
+    - pause, resume, skip, volume, transfer between devices
+    - works with raspotify so your Pi becomes a Spotify speaker Hermes can control
+    - no daemon, no server — just spotipy snippets via execute_code
+    
+    https://github.com/Alexeyisme/hermes-spotify-skill
+    
+    would love any feedback if you try it out 🙏
+    [embed] GitHub - Alexeyisme/hermes-spotify-skill: Spotify playback control ... https://github.com/Alexeyisme/hermes-spotify-skill
+

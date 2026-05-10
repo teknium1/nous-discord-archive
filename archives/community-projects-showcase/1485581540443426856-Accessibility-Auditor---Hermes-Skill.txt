@@ -1,0 +1,27 @@
+# Thread 'Accessibility Auditor — Hermes Skill' in forum #community-projects-showcase
+# thread_id=1485581540443426856 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:11.768067+00:00
+
+[2026-03-23T10:10:40.012000+00:00] denis_skripnik (id=1485581540443426856)
+    A Hermes skill for comprehensive accessibility audits of websites, GitHub repos, and mobile/desktop app source code.
+    
+    Built by a blind developer. Covers WCAG 2.1 AA, WCAG 2.2, GOST R 52872-2019 (Russian standard), and Mincifry order for Russian government sites.
+    
+    What it audits:
+    - Any public URL — full static HTML/CSS/ARIA analysis
+    - GitHub repos — web, Android, iOS, Flutter, React Native, Electron, PyQt, WPF
+    - Local project folders — same as GitHub
+    
+    What it checks:
+    - 60+ WCAG criteria with specific element-level findings
+    - ARIA correctness, keyboard navigation, focus management
+    - Modals/dialogs — full accessible pattern checklist
+    - Forms, PDFs, carousels, custom widgets
+    - Mobile: missing contentDescription, accessibilityLabel, Semantics wrappers
+    - Desktop: AutomationProperties, setAccessibleName, AT-SPI2
+    
+    Produces a scored report (0–100, letter grade) with fix recommendations per issue.
+    
+    https://github.com/web3blind/accessibility-auditor-skill
+    [embed] GitHub - web3blind/accessibility-auditor-skill: Hermes AI skill for... https://github.com/web3blind/accessibility-auditor-skill
+

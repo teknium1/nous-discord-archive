@@ -1,0 +1,28 @@
+# Thread '**AI VTuber powered by Hermes Agent & Nous Research**' in forum #community-projects-showcase
+# thread_id=1493325480710111244 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:12.179656+00:00
+
+[2026-04-13T19:02:19.247000+00:00] 123mikeyd (id=1493325480710111244)
+    [attachment] Herems_Vtuber_Editor_Demo_01.mp4 https://cdn.discordapp.com/attachments/1493325480710111244/1493325482182049932/Herems_Vtuber_Editor_Demo_01.mp4?ex=6a0227bb&is=6a00d63b&hm=82e8faf8fa0538b573d38486ad5ed2306124f245241dcc2f4eca8b521d506147&
+
+[2026-04-13T19:02:35.343000+00:00] 123mikeyd (id=1493325548221366423)
+    ** AI VTuber powered by Hermes Agent & Nous Research**
+    
+      Talk to an AI and she talks back. Nova is a voice-interactive anime avatar running entirely on your local machine — no cloud, no subscription, no data leaving your PC.
+    
+       Built with:
+       🔧 Hermes Agent (Nous Research) — the brain
+       🎙️ Whisper STT — she hears you
+       🗣️ Edge TTS — she speaks back
+       🎨 Live2D — she moves while she talks
+       🛠️ Custom Pose Studio — edit her animations in-browser
+    
+       Everything runs localhost. You talk, she listens through Whisper, thinks with Hermes,  speaks back through TTS, and her.   Live2D avatar animates in real time. Two arm poses, multiple idle and speaking animations, all customizable through a visual editor.
+    
+       The model editor lets you swap between arm poses, tweak every parameter with sliders, and save new animations — no Live2D Cubism Editor needed.
+    
+       Open source (editor + integration code): https://github.com/123mikeyd/hermes-vtuber
+       Built on top of Open-LLM-VTuber: https://github.com/Open-LLM-VTuber/Open-LLM-VTuber
+    [embed] GitHub - 123mikeyd/hermes-vtuber: Hermes Agent integration for Open... https://github.com/123mikeyd/hermes-vtuber
+    [embed] GitHub - Open-LLM-VTuber/Open-LLM-VTuber: Talk to any LLM with hand... https://github.com/Open-LLM-VTuber/Open-LLM-VTuber
+

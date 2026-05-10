@@ -1,0 +1,34 @@
+# Thread 'Agent Feeds: fast local awareness for Hermes' in forum #community-projects-showcase
+# thread_id=1500065195253301289 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:06.592761+00:00
+
+[2026-05-02T09:23:32.412000+00:00] verky5025 (id=1500065195253301289)
+    I built Agent Feeds for Hermes.
+    
+      If Agent Skills teach Hermes how to act, Agent Feeds help Hermes stay aware of what’s already happening around it.
+    
+      The output is simple: Hermes gets a compact list of available local streams, and detailed data stays in JSON state files under ~/.agentfeeds. When a question is
+      relevant, Hermes reads the right local file instead of re-fetching context or searching the web.
+    
+      That means:
+    
+      - faster responses from already-refreshed local state
+      - fewer tokens spent carrying bulky context every turn
+      - easier onboarding for a new Hermes setup, because subscriptions and state live in one inspectable local directory
+      - less repeated manual setup across conversations
+      - a clean path for adding private/local sources through providers
+    
+      Current providers include local files, RSS/Atom, Hacker News, GitHub issues/PRs/releases, ICS calendars, weather, exchange rates, and safe argv-only local commands.
+    
+      Example Hermes UX:
+      “Subscribe my project notes at ~/notes/project.md.”
+      “Subscribe me to Hacker News front page.”
+      “Refresh Project notes and summarize it.”
+      “Can Agent Feeds subscribe to my SQLite task database? If not, draft a provider.”
+    
+      Repo: https://github.com/verkyyi/agentfeeds
+    
+      Curious what streams other Hermes operators would want their agents to stay aware of.
+    [attachment] ScreenShot_2026-05-02_022123_865.png https://cdn.discordapp.com/attachments/1500065195253301289/1500065195836575784/ScreenShot_2026-05-02_022123_865.png?ex=6a01a014&is=6a004e94&hm=8d745512cbd730b1d0fc04ee61ad8b0cdd94ee5117f4cba2096105ce2c9b6b5b&
+    [embed] GitHub - verkyyi/agentfeeds: Local-first ambient context streams fo... https://github.com/verkyyi/agentfeeds
+

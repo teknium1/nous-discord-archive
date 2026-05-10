@@ -1,0 +1,445 @@
+# Thread 'Proper ZED integration for Heemes Agent' in forum #community-projects-showcase
+# thread_id=1494717991890325674 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:00.608170+00:00
+
+[2026-04-17T15:15:39.784000+00:00] nour_h (id=1494717991890325674)
+    Working on improveing the ACP integration of Hermes with ZED so we ca have proper IDE for our beloved hermes.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1494717992246972446/image.png?ex=6a01f29b&is=6a00a11b&hm=57cbfbff4efcbe3822b1e61598c92c7e8f69885527b3b71ff2536a2e24ffb22d&
+
+[2026-04-17T15:22:35.602000+00:00] nour_h (id=1494719735957291081)
+    History is here, more hummering and a PR <@575461682151686145>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1494719735701573805/image.png?ex=6a01f43b&is=6a00a2bb&hm=0522b680c7b0bd86e516ec979a9b6ee8eb6cce248c048b2f715c0dedfd823a73&
+
+[2026-04-17T15:23:11.075000+00:00] .s0uthpaw (id=1494719884741841108)
+    Clean work 👌
+    please submit a PR, yes
+
+[2026-04-17T17:39:49.188000+00:00] nour_h (id=1494754270120247479)
+    PR created:
+        - https://github.com/NousResearch/hermes-agent/pull/11716
+    [embed] fix(acp): improve Zed integration by HenkDz · Pull Request #11716 ... https://github.com/NousResearch/hermes-agent/pull/11716
+    [reply to .s0uthpaw msg=1494719884741841108]
+
+[2026-04-17T17:41:59.491000+00:00] .s0uthpaw (id=1494754816650645584)
+    I mentioned this thread to some peeps
+
+[2026-04-17T17:48:00.976000+00:00] nour_h (id=1494756332828360806)
+    <@387972437901312000> might like this one
+
+[2026-04-17T21:28:00.979000+00:00] nour_h (id=1494811697653878855)
+    merged https://github.com/NousResearch/hermes-agent/pull/11784
+    [embed] fix(acp): improve Zed integration (salvage of #11716) by teknium1 ... https://github.com/NousResearch/hermes-agent/pull/11784
+    [reply to .s0uthpaw msg=1494754816650645584]
+
+[2026-04-17T21:29:48.118000+00:00] .s0uthpaw (id=1494812147027542138)
+    HELL yeah brother!
+
+[2026-04-29T22:31:56.837000+00:00] nour_h (id=1499176440795496584)
+    More improvement for history persistent, ZED is the only IDE that integrates well with Hermes via ACP now:
+    https://github.com/NousResearch/hermes-agent/pull/17652
+    [embed] fix(acp): replay session history on load by HenkDz · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/17652
+    [reply to .s0uthpaw msg=1494812147027542138]
+
+[2026-04-29T23:54:18.757000+00:00] 74800 (id=1499197168710582494)
+    this is amazing, thank you for this, wanted this for a while!
+
+[2026-04-30T09:30:19.697000+00:00] teknium (id=1499342127799472128)
+    adding
+    [reply to nour_h msg=1499176440795496584]
+
+[2026-04-30T09:39:39.372000+00:00] nour_h (id=1499344475246559312)
+    not sure if the issue is with my PR or upstream tests but the test keep failing, all other actions pass fine,
+    [reply to teknium msg=1499342127799472128]
+
+[2026-04-30T09:46:02.055000+00:00] teknium (id=1499346080335401032)
+    its not you theres some parallelism crap breaking CI
+    [reply to nour_h msg=1499344475246559312]
+
+[2026-04-30T09:46:07.055000+00:00] teknium (id=1499346101306789888)
+    zed pr merged now 🙂
+
+[2026-04-30T12:23:35.940000+00:00] nour_h (id=1499385732803068065)
+    Added image support https://github.com/NousResearch/hermes-agent/pull/17950
+    [embed] fix(acp): advertise and forward image prompts by HenkDz · Pull Req... https://github.com/NousResearch/hermes-agent/pull/17950
+    [reply to teknium msg=1499346080335401032]
+
+[2026-04-30T12:23:56.305000+00:00] nour_h (id=1499385818219937893)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1499385817909563493/image.png?ex=6a01ca5c&is=6a0078dc&hm=0ad83d4e89829fcad0802adba1da10104337bbd440899145898e722af2ca99e5&
+
+[2026-04-30T17:32:26.115000+00:00] teknium (id=1499463453989929211)
+    merged
+    [reply to nour_h msg=1499385732803068065]
+
+[2026-04-30T19:47:16.921000+00:00] nour_h (id=1499497389290164385)
+    what do I have to do to make my PRs merged directly under my name to track my contributions better? You often cherry pick and do a PR of your own.
+    [reply to teknium msg=1499463453989929211]
+
+[2026-04-30T19:53:30.518000+00:00] teknium (id=1499498956269424944)
+    Your commits are preserved
+    [reply to nour_h msg=1499497389290164385]
+
+[2026-04-30T19:53:47.684000+00:00] teknium (id=1499499028268978388)
+    there is no other way given the rate the repo moves, I have to at minimum salvage to rebase
+
+[2026-04-30T19:54:19.199000+00:00] nour_h (id=1499499160452468736)
+    no worries then, keep building the empire brick by brick.
+    [reply to teknium msg=1499499028268978388]
+
+[2026-04-30T23:22:23.565000+00:00] nour_h (id=1499551523678458086)
+    /steer and /q have better support now. https://github.com/NousResearch/hermes-agent/pull/18114
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1499551523758280864/image.png?ex=6a01bbef&is=6a006a6f&hm=ea59c618945e27267d96a6f1fd4e0255a583751f4e2f75301a60ed10402960a7&
+    [embed] feat(acp): add steer and queue slash commands by HenkDz · Pull Req... https://github.com/NousResearch/hermes-agent/pull/18114
+
+[2026-05-01T00:14:47.522000+00:00] nour_h (id=1499564710390005880)
+    <@387972437901312000> this one seriously could use some eyes https://github.com/NousResearch/hermes-agent/pull/18128
+    [embed] fix(acp): translate Windows cwd for WSL sessions by HenkDz · Pull ... https://github.com/NousResearch/hermes-agent/pull/18128
+
+[2026-05-01T03:54:41.968000+00:00] teknium (id=1499620051907645591)
+    I got you a direct merge on this one
+    [reply to nour_h msg=1499551523678458086]
+
+[2026-05-01T16:23:39.047000+00:00] nour_h (id=1499808531677839360)
+    https://github.com/HenkDz/hermes-recall-memory is this a good condidate for the Hackathon?
+    [embed] GitHub - HenkDz/hermes-recall-memory: Hermes-native searchable memo... https://github.com/HenkDz/hermes-recall-memory
+    [reply to teknium msg=1499620051907645591]
+
+[2026-05-01T19:28:28.593000+00:00] canis.xo (id=1499855044604985544)
+    great editor, working on getting this setup with for my own Hermes agent <a:AngeGotThis:1496120198015488130>
+    [reply to nour_h msg=1494717991890325674]
+
+[2026-05-01T19:29:50.864000+00:00] canis.xo (id=1499855389674442856)
+    the instance is remote compared to the editor (not on the same OS), so there's a bit of complexity making sure everything is working. but I'm figuring it out <:NousGirlBlue_2:1497529515746918670>
+
+[2026-05-01T23:08:59.445000+00:00] nour_h (id=1499910538820325597)
+    Just fixed the streaming, tool calls, and thinking content of the Hermes ACP for ZED.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1499910538895953993/image.png?ex=6a01b8cb&is=6a00674b&hm=866dcad3110fc65f5333fcf03b1dcf18513126caf5b5045a424a1a94c96da49a&
+
+[2026-05-01T23:19:24.702000+00:00] nour_h (id=1499913161338519553)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/18578 super duper one here as well, it makes CLI obsolete.
+    [embed] fix(acp): route Zed thoughts to reasoning callbacks by HenkDz · Pu... https://github.com/NousResearch/hermes-agent/pull/18578
+    [reply to canis.xo msg=1499855044604985544]
+
+[2026-05-02T03:41:01.033000+00:00] canis.xo (id=1499978996522418306)
+    Ok this is very nice! Gives it more of the features you would expect from an agent integrated into an IDE
+
+[2026-05-02T12:46:28.192000+00:00] floory (id=1500116264176193577)
+    is this ready
+
+[2026-05-02T12:46:31.231000+00:00] floory (id=1500116276922552512)
+    would love it
+
+[2026-05-02T13:11:10.125000+00:00] nour_h (id=1500122479853703328)
+    Added:
+    **1. Proper Skill View:**
+    **2. Proper Skill Patch:**
+    **3. Proper ToDo rendering:**
+    **4. Proper Search results rendering:**
+    
+    https://github.com/NousResearch/hermes-agent/pull/18578
+    [embed] fix(acp): route Zed thoughts to reasoning callbacks by HenkDz · Pu... https://github.com/NousResearch/hermes-agent/pull/18578
+
+[2026-05-02T13:12:12.383000+00:00] nour_h (id=1500122740982550689)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1500122738872942742/image.png?ex=6a01d5ab&is=6a00842b&hm=157167780df23fe48c3635826d7a0cf08f8577c3a8994de1df1045822e98d01d&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1500122739380326400/image.png?ex=6a01d5ac&is=6a00842c&hm=df98c9cd113343e60b2d6670f4b8d1f58662d0e96dd57af73776d6fe6d8268ed&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1500122739963461835/image.png?ex=6a01d5ac&is=6a00842c&hm=a9e5cfd3791b8d4695479d7383cf0cbf2ae15dd7f59316d2d89ec73aa89257e6&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1500122740345012345/image.png?ex=6a01d5ac&is=6a00842c&hm=4a83b8ce798eeb9fc4540ab71842be33e080628cbdddcef1cf3c7e239dcc1a37&
+
+[2026-05-02T13:27:47.407000+00:00] nour_h (id=1500126662757716059)
+    Coming up next:
+    1. `process`
+    2. `delegate_task`
+    3. `session_search`
+    4. `memory`
+    5. `web_extract`
+
+[2026-05-03T09:01:48.975000+00:00] nour_h (id=1500422116107878461)
+    Just merged, enjoy.
+    [reply to floory msg=1500116264176193577]
+
+[2026-05-03T10:32:12.859000+00:00] floory (id=1500444865526239284)
+    hell yeah
+
+[2026-05-03T10:32:21.123000+00:00] floory (id=1500444900188229672)
+    ty for letting me know 🙏
+
+[2026-05-03T17:08:16.474000+00:00] nour_h (id=1500544537351684196)
+    <@387972437901312000> I just fixed the ACP session search tool. https://github.com/NousResearch/hermes-agent/pull/19300
+    [embed] fix: initialize SessionDB for session search by HenkDz · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/19300
+
+[2026-05-04T17:11:09.543000+00:00] canis.xo (id=1500907651121414174)
+    Just curious is there a way in Zed to turn off auto editing when you prompt the agent? In other words, make it so you have to approve or deny code edits/script execution after you give it a prompt
+    [reply to nour_h msg=1500422116107878461]
+
+[2026-05-04T17:13:05.463000+00:00] nour_h (id=1500908137325002942)
+    We just ACP Hermes, so it depends if herems already accepts such workflow, I have already thought about this and the only way was to catch the old file as backup before agent edits then, after the eitire session ends either you approve all or reject all.
+    [reply to canis.xo msg=1500907651121414174]
+
+[2026-05-04T17:17:19.796000+00:00] canis.xo (id=1500909204075057152)
+    You mean after prompt or after the entire session?
+    [reply to nour_h msg=1500908137325002942]
+
+[2026-05-04T17:23:30.141000+00:00] nour_h (id=1500910757414572163)
+    after the response ends, prompt in your case.
+    [reply to canis.xo msg=1500909204075057152]
+
+[2026-05-04T18:34:15.207000+00:00] canis.xo (id=1500928562511741000)
+    Ah, I guess that would be a suitable workaround
+    [reply to nour_h msg=1500910757414572163]
+
+[2026-05-04T18:35:09.094000+00:00] canis.xo (id=1500928788530466946)
+    I don't like when it does something I dont intend to the code
+
+[2026-05-04T19:33:41.216000+00:00] nour_h (id=1500943519437689023)
+    blame the model, I never face that with GPT 5.5
+    [reply to canis.xo msg=1500928788530466946]
+
+[2026-05-04T21:17:15.924000+00:00] canis.xo (id=1500969585812181174)
+    Can happen for a number of reasons, like just a bad prompt or some kind of misunderstanding/error due to session compaction or something else. It also helps me learn by actively following along at each step
+    
+    I'm using Minimax M2.7 though FWIW
+    [reply to nour_h msg=1500943519437689023]
+
+[2026-05-04T23:24:01.736000+00:00] teknium (id=1501001486899875970)
+    sorry <@764835653883658270> have been busy catching up from all weekend stuff I missed
+
+[2026-05-04T23:24:09.427000+00:00] teknium (id=1501001519158525993)
+    will get back on the review train on this later tonight if I can
+
+[2026-05-04T23:24:59.002000+00:00] nour_h (id=1501001727090888834)
+    No worries, I know how overwhelming it is for you now.
+    [reply to teknium msg=1501001486899875970]
+
+[2026-05-05T10:17:06.226000+00:00] floory (id=1501165838563147878)
+    how do yall set this up? did you just configure it as an AI provider and that's it?
+
+[2026-05-05T18:05:32.849000+00:00] nour_h (id=1501283726284427476)
+    in Zed Settings file go to agent providers and add Herems there:
+    
+        ```json
+        {
+          "agent_servers": {
+            "hermes-wsl": {
+              "type": "custom",
+              "command": "hermes",
+              "args": ["acp"]
+            },
+    
+            "hermes-windows": {
+              "type": "custom",
+              "command": "wsl.exe",
+              "args": ["-e", "bash", "-lc", "hermes acp"]
+            }
+          }
+        }```
+    [reply to floory msg=1501165838563147878]
+
+[2026-05-05T18:17:11.924000+00:00] floory (id=1501286658417627310)
+    ty
+
+[2026-05-05T18:23:05.635000+00:00] nour_h (id=1501288141988958229)
+    The reason I have two Hermes Agens one for WSL and one for Win, is because Zed allows you to either open the project in WSL or in Win which I founds needs a dedciated run method
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1501288141544358019/image.png?ex=6a021e89&is=6a00cd09&hm=cedd82c296949bfaa6bcbe154a5273661299a667e6d22b9d355af4172944fc88&
+
+[2026-05-05T18:30:25.577000+00:00] floory (id=1501289987239313560)
+    i'm on linux so it's not an issue for me
+
+[2026-05-05T19:40:33.814000+00:00] canis.xo (id=1501307637864857742)
+    Is your hermes agent in the same OS as where you are running Zed? I was running into issues when I was trying to use Zed on my windows host but Hermes inside of a WSL Ubuntu install. Specifically, tool calls that didn't work (unable to access files, terminal tool not working)
+    [reply to nour_h msg=1501288141988958229]
+
+[2026-05-05T19:41:03.524000+00:00] nour_h (id=1501307762477367296)
+    use my herems-windows from above
+    [reply to canis.xo msg=1501307637864857742]
+
+[2026-05-05T19:41:38.211000+00:00] canis.xo (id=1501307907965190154)
+    thanks! I'll try it in my settings
+    [reply to nour_h msg=1501307762477367296]
+
+[2026-05-05T21:24:01.680000+00:00] canis.xo (id=1501333675541925999)
+    Hmm its not able to connect to the ACP server for some reason when I add the -lc argument. Thats the only thing that was different about my settings compared to your's. 
+    
+    What's odd is that it launches fine when I run wsl.exe with the same args from a terminal in Windows. No worries though, I'll debug more later. Appreciate the help!
+
+[2026-05-06T23:09:15.947000+00:00] floory (id=1501722547362988063)
+    doesn't work for me
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1501722546943430686/image.png?ex=6a01b8db&is=6a00675b&hm=b878f5ec72e061a4029b73e428ca8c89d59c7964fe8c5de6b685f564483c3c7b&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1501722547287228487/image.png?ex=6a01b8db&is=6a00675b&hm=69078e41322bdff1558da9c62c3b4a01d8002822c6f3851b1e5cff803e85a4f8&
+
+[2026-05-07T03:51:35.728000+00:00] nour_h (id=1501793597953937449)
+    File attachment isn't working? That's new. Probably due to a certain update will fix soon.
+    [reply to floory msg=1501722547362988063]
+
+[2026-05-07T09:23:19.719000+00:00] floory (id=1501877081343131790)
+    asked my agent to fix it, gave me that and it seems to work. entirely AI generated though
+    [attachment] zed-acp.patch https://cdn.discordapp.com/attachments/1494717991890325674/1501877081095802900/zed-acp.patch?ex=6a01a007&is=6a004e87&hm=77d3e26cef75a51c2af49e6dc5f59b81d68f46cbad267c5d7cc4ba5d5d0caef1&
+
+[2026-05-07T16:09:42.652000+00:00] nour_h (id=1501979350776676402)
+    <@387972437901312000> just fixed the attachments issue https://github.com/NousResearch/hermes-agent/pull/21400
+    [embed] fix(acp): inline file attachment resources by HenkDz · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/21400
+
+[2026-05-07T17:27:40.290000+00:00] nour_h (id=1501998970212323488)
+    The fix is merged
+    [reply to floory msg=1501877081343131790]
+
+[2026-05-07T17:36:54.076000+00:00] nour_h (id=1502001292959154318)
+    Hey <@387972437901312000> thys is really important for sessions  https://github.com/NousResearch/hermes-agent/pull/19300
+    [reply to nour_h msg=1500544537351684196]
+
+[2026-05-07T17:42:19.770000+00:00] floory (id=1502002659018674266)
+    ngl i've been using mnemosyne memory with LCM and i've not even noticed any session issues, unless that PR is only related to session_search tool
+
+[2026-05-07T18:21:18.196000+00:00] nour_h (id=1502012467088199752)
+    Yes exactly that
+    [reply to floory msg=1502002659018674266]
+
+[2026-05-09T20:33:35.897000+00:00] teknium (id=1502770535950717031)
+    <@764835653883658270> are there any outstanding prs for zed/acp
+
+[2026-05-09T20:33:44.053000+00:00] teknium (id=1502770570159460533)
+    Have some time now to run through em if you can link me em
+
+[2026-05-09T20:33:55.628000+00:00] nour_h (id=1502770618708394115)
+    Yes the sessions tool one
+    [reply to teknium msg=1502770535950717031]
+
+[2026-05-09T20:35:47.584000+00:00] teknium (id=1502771088285761728)
+    this one
+    [reply to nour_h msg=1502001292959154318]
+
+[2026-05-09T20:36:14.207000+00:00] teknium (id=1502771199950979112)
+    hmm I'd never given you the dev role lol
+
+[2026-05-09T20:36:17.032000+00:00] teknium (id=1502771211799761007)
+    you have it now <:salute:1072217852385435768>
+
+[2026-05-09T20:36:42.428000+00:00] nour_h (id=1502771318318170329)
+    Coolio, what are the perks?
+
+[2026-05-09T21:06:28.615000+00:00] nour_h (id=1502778810129584261)
+    just checked this one wasn't fixed in upstream as well https://github.com/NousResearch/hermes-agent/pull/18312
+    [embed] fix(acp): honor task cwd for foreground terminal commands by HenkDz... https://github.com/NousResearch/hermes-agent/pull/18312
+    [reply to teknium msg=1502770535950717031]
+
+[2026-05-10T09:46:23.860000+00:00] nour_h (id=1502970050448195726)
+    Prerequisites:
+    
+    Tailscale running on both your Mac and VPS (sounds like you already have this)
+    SSH key-based auth to the VPS (password auth won't work since ACP uses stdin/stdout). If you're using Tailscale SSH, that works too.
+    Hermes installed on the VPS (hermes acp must work when you SSH in)
+    Step 1 — Verify SSH + Hermes works
+    
+    From your Mac terminal, test that this connects and prints ACP protocol output:
+    
+    ```ssh root@<your-vps-tailscale-hostname> "bash -lc 'hermes acp'"```
+    
+    Replace root with your user if different. Use either the Tailscale hostname (e.g. my-vps) or Tailscale IP (e.g. 100.x.y.z). The bash -lc wrapper ensures your PATH is loaded in the non-interactive SSH session, so hermes is found.
+    
+    If it prompts for a password, you need to set up SSH key auth first:
+    
+    ```ssh-keygen -t ed25519  # if you don't have a key yet````
+    
+    ssh-copy-id root@<your-vps-tailscale-hostname>
+    
+    Step 2 — Add to Zed settings
+    
+    Open Zed settings (Cmd+,) and add this to your agent_servers block:
+    
+    ```
+    "agent_servers": {
+      "Hermes": {
+        "type": "custom",
+        "command": "ssh",
+        "args": [
+          "-o", "StrictHostKeyChecking=accept-new",
+          "root@<your-vps-tailscale-hostname>",
+          "bash", "-lc", "PYTHONUNBUFFERED=1 hermes acp"
+        ],
+        "env": {}
+      }
+    }```
+    
+    Replace root@<your-vps-tailscale-hostname> with your actual Tailscale user/host.
+    
+    Step 3 — Use it
+    
+    Open the Agent panel in Zed, and "Hermes" should show up as an available agent. Select it, and it'll SSH into your VPS transparently each time.
+    
+    What's happening under the hood: Zed spawns ssh, which connects to your VPS over Tailscale's WireGuard tunnel, runs hermes acp on the remote machine, and pipes the ACP protocol over SSH's stdin/stdout back to Zed. No ports to open, no extra tunnels needed — Tailscale handles the networking, SSH handles the transport.
+
+[2026-05-10T09:47:40.649000+00:00] nour_h (id=1502970372524609687)
+    check the guide above
+
+[2026-05-10T10:08:04.566000+00:00] wordsmachine666 (id=1502975506004574350)
+    <@764835653883658270> Thank you so much. Really appreciate it. Yes, I've had Tailscale on both my Mac and the VPS, and I’ve also set up Tailscale SSH to connect to the VPS. Will try it, hope you don't mind if I ask about some troubleshooting stuff later if it doesn't work. 😊👌🏼
+    [reply to nour_h msg=1502970372524609687]
+
+[2026-05-10T10:13:09.585000+00:00] nour_h (id=1502976785346728027)
+    sure, test and let me know
+    [reply to wordsmachine666 msg=1502975506004574350]
+
+[2026-05-10T10:21:21.271000+00:00] floory (id=1502978847627280414)
+    has hermes in zed been fixed? last time i tried it, the agent couldn't see the contents of the file i had open, *even after* i did `@file` to attach it in chat
+
+[2026-05-10T10:21:26.758000+00:00] floory (id=1502978870641557585)
+    havven't tried since
+
+[2026-05-10T10:22:19.434000+00:00] nour_h (id=1502979091580583997)
+    https://discord.com/channels/1053877538025386074/1494717991890325674/1501998970212323488
+    [reply to floory msg=1502978847627280414]
+
+[2026-05-10T10:23:00.612000+00:00] floory (id=1502979264293638184)
+    oh you're right, somehow missed that. thank you :)
+
+[2026-05-10T10:23:10.254000+00:00] floory (id=1502979304735113256)
+    are there any other issues to be aware of?
+
+[2026-05-10T10:35:17.553000+00:00] nour_h (id=1502982355248353350)
+    not that I am aware of, stress test and let me know if you face any.
+    [reply to floory msg=1502979304735113256]
+
+[2026-05-10T11:24:07.239000+00:00] nour_h (id=1502994643242188821)
+    The problem is how SSH handles the command arguments. In your current config:
+    ```
+    "args": [
+      "-o", "StrictHostKeyChecking=accept-new",
+      "my_non_root_username@my_tailscale_vps_hostname",
+      "bash", "-lc", "PYTHONUNBUFFERED=1 hermes acp"
+    ]```
+    
+    SSH concatenates bash, -lc, and PYTHONUNBUFFERED=1 hermes acp with spaces and sends bash -lc PYTHONUNBUFFERED=1 hermes acp to the remote shell. The remote bash then parses -c as "take the next argument as the command" — which is just PYTHONUNBUFFERED=1 (a no-op env var assignment with no actual command). hermes becomes $0, acp becomes $1, and bash exits immediately with code 0. That's the silent, clean exit Zed is reporting.
+    
+    The fix — combine the remote command into a single argument so the quoting survives SSH:
+    
+    ```
+    "Hermes": {
+      "type": "custom",
+      "command": "ssh",
+      "args": [
+        "-o", "StrictHostKeyChecking=accept-new",
+        "-o", "BatchMode=yes",
+        "-T",
+        "my_non_root_username@my_tailscale_vps_hostname",
+        "bash -lc 'PYTHONUNBUFFERED=1 hermes acp'"
+      ],
+      "env": {}
+    }```
+
+[2026-05-10T11:34:23.447000+00:00] wordsmachine666 (id=1502997227805605928)
+    It works. I can talk to her. Thanks. Will explore more now. Since she's living on VPS, I'm still figuring out whether she can help with local repo/folders on my Mac, or only other repo/things on the VPS tho.  🙃👌🏼
+    [reply to nour_h msg=1502994643242188821]
+
+[2026-05-10T11:37:24.902000+00:00] nour_h (id=1502997988883038301)
+    no it can't you need to push to github than ask it to clone in VPS and work on it there.
+    [reply to wordsmachine666 msg=1502997227805605928]
+
+[2026-05-10T11:42:28.968000+00:00] wordsmachine666 (id=1502999264228409464)
+    Oh okay. That's also cool since actually before I also worked on the repo on the VPS, not on my Mac directly, but before I only used Zed Agent, codex-acp and OpenCode, and connected Zed directly via Zed's native Remote SSH feature. Since Hermes is now an Agent on Zed, too, I think I can explore more. Thank you so much.
+    Best regards.
+    [reply to nour_h msg=1502997988883038301]
+
+[2026-05-10T17:39:54.292000+00:00] floory (id=1503089212436517096)
+    i've noticed that i can't pick models in the model selection thing, only models already available at the endpoint
+
+[2026-05-10T17:40:03.031000+00:00] floory (id=1503089249090539601)
+    even though i do have providers configured in my hermes config
+

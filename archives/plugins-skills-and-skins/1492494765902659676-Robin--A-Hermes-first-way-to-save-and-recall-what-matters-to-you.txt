@@ -1,0 +1,10 @@
+# Thread 'Robin: A Hermes-first way to save and recall what matters to you' in forum #plugins-skills-and-skins
+# thread_id=1492494765902659676 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:35.695553+00:00
+
+[2026-04-11T12:01:21.403000+00:00] nuttin. (id=1492494765902659676)
+    A personal knowledge base that works seamlessly with Hermes to ensure recall — save notes, quotes, links, images, anything — and surface these on a spaced repetition schedule so you actually remember what you've collected. 
+    
+    https://github.com/gniting/robin
+    [attachment] robinHeader-socialmedia.png https://cdn.discordapp.com/attachments/1492494765902659676/1492494766414368950/robinHeader-socialmedia.png?ex=6a01c511&is=6a007391&hm=50d1886e987b7c3d74c66d2951e553c4afb78afb393eabbb0f6edd9cfa0f5d54&
+

@@ -1,0 +1,15 @@
+# Thread '3D worldsim with Hermes + Godot (pt. 3+4 of many)' in forum #community-projects-showcase
+# thread_id=1450633951868620993 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:29.300985+00:00
+
+[2025-12-16T23:41:25.601000+00:00] Deleted User#0000 (id=1450633951868620993)
+    Have movement working for the agents, entirely reliant on Hermes, as well as unique names being generated per each agent.
+    
+    Part 3: https://x.com/valhalla_dev/status/1999595127791083677
+    Part 4: https://x.com/valhalla_dev/status/2001074041256304973
+    
+    Next up: making it look less like crap. 😂
+    [attachment] Screenshot_2025-12-16_at_5.41.13_PM.png https://cdn.discordapp.com/attachments/1450633951868620993/1450633952300892311/Screenshot_2025-12-16_at_5.41.13_PM.png?ex=6a01c065&is=6a006ee5&hm=9829f37511511d950d94c0c2a9a709943b27a3d21360bb3a8f45d03efbb6434c&
+    [embed]  https://twitter.com/valhalla_dev/status/1999595127791083677
+    [embed]  https://twitter.com/valhalla_dev/status/2001074041256304973
+

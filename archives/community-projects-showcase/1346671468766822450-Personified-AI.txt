@@ -1,0 +1,8 @@
+# Thread 'Personified AI' in forum #community-projects-showcase
+# thread_id=1346671468766822450 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:48.426466+00:00
+
+[2025-03-05T02:31:38.100000+00:00] con7701 (id=1346671468766822450)
+    I fine-tuned a LLM on data from written texts like books or lectures/speeches from specific individuals. I did this to try and capture the "worldview" of those individuals, and so we can talk to them personally and get their opinion on a given topic; this topic could be something personal to yourself, or something that is happening in the world. GitHub here: https://github.com/ConLin-code/personified-AI-
+    [embed] GitHub - ConLin-code/personified-AI-: Making an AI with the worldvi... https://github.com/ConLin-code/personified-AI-
+

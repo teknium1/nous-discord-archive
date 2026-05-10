@@ -1,0 +1,18 @@
+# Thread 'Would appreciate a conventional commits skill' in forum #plugins-skills-and-skins
+# thread_id=1492904603694530622 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:34.470875+00:00
+
+[2026-04-12T15:09:54.347000+00:00] meatrition (id=1492904603694530622)
+    I just put together a custom skill for Hermes Agent that enforces Conventional Commits with a short subject line (<80 chars) and a bullet-point body explaining what & why. It’s been super helpful for keeping commit history clean and consistent. Anyone else find this useful?
+    Would be great if something like this became a built-in template or official skill.
+
+[2026-04-12T15:28:46.655000+00:00] lucasew (id=1492909352938373341)
+    Send a PR to gather feedback around it. Hermes can help you with that
+    [reply to meatrition msg=1492904603694530622]
+
+[2026-04-12T15:36:20.411000+00:00] meatrition (id=1492911256128978955)
+    The hermes agent has 2.2k pull requests, it seems they are a bit overwhelmed right now
+
+[2026-04-12T15:37:24.988000+00:00] lucasew (id=1492911526984810546)
+    But with PRs, anyone interested can take a look straight from the source, or ask Hermes to take a look at it
+

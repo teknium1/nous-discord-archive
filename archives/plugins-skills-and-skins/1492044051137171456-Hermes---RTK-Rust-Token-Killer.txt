@@ -1,0 +1,114 @@
+# Thread 'Hermes + RTK(Rust Token Killer)' in forum #plugins-skills-and-skins
+# thread_id=1492044051137171456 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:38.588873+00:00
+
+[2026-04-10T06:10:22.629000+00:00] avattava (id=1492044051137171456)
+    https://github.com/rtk-ai/rtk
+    Token-optimized CLI proxy skill - prefix shell commands with `rtk` for 60-90% context savings.
+    
+    **Overall: 85.7% token savings (138.5K saved out of 161.7K)**
+    
+    **Head-to-head comparisons:**
+    
+    ```
+    Command              Raw           RTK          Savings
+    ──────────────────────────────────────────────────────
+    docker ps            42ln / 19KB   16ln / 883B   -95%
+    docker images        95ln / 10KB   16ln / 522B   -95%
+    docker compose ps     5ln / 806B    4ln / 195B   -76%
+    docker logs (50ln)   50ln / 13KB   50ln / 13KB     0% *
+    git log -n 10        60ln / 2.6KB  10ln / 1.0KB  -60%
+    git diff (commit)   371ln / 17KB  236ln / 11KB   -35%
+    git status            4ln / 168B    2ln / 113B    -33%
+    ls -la               49ln / 2.7KB  44ln / 680B   -75%
+    grep (931 matches)  931ln / 98KB  309ln / 14KB   -85%
+    ```
+    
+    **\* docker logs**: unique access logs — nothing to dedup, so no savings. Expected behavior. Deduplication works on repetitive log lines.
+    
+    **Biggest wins:**
+    - **docker ps/images** — strips columns, truncates port noise, 95% reduction
+    - **grep** — groups by file with counts instead of dumping every line. 931 raw lines → 309 grouped lines. Actually *easier to read* than raw output
+    - **ls** — removes permissions/ownership columns, keeps file sizes
+    - **git diff** — drops context lines, shows only changed lines
+    
+    **What it doesn't touch:**
+    - Commands already inside `docker exec` (rtk runs on host)
+    - Raw output needed for debugging
+    - Commands it doesn't recognize (passes through unchanged)
+    
+    **Overhead:** avg 38ms per command, max 131ms. Negligible.
+    [embed] GitHub - rtk-ai/rtk: CLI proxy that reduces LLM token consumption b... https://github.com/rtk-ai/rtk
+
+[2026-04-17T13:32:56.736000+00:00] jimn235 (id=1494692142193446992)
+    i use `tr -s '[:space:]' <in >out ` and 
+    ```
+     jim$ cat `which showfiles`
+    #!/bin/bash
+    
+    # showfiles.sh - Display files with pretty headers
+    # Usage:
+    #   ./showfiles.sh file1 file2 ...
+    
+    COLOR=false
+    
+    # ANSI color codes
+    BLUE='\033[0;34m'
+    GREEN='\033[0;32m'
+    NC='\033[0m' # No Color
+    
+    # Function to print colored header
+    print_header() {
+        local filepath=$1
+        local width=$(( ${#filepath} + 8 ))
+        local separator=$(printf '=%.0s' $(seq 1 $width))
+    
+        if [ "$COLOR" = true ]; then
+            echo -e "${BLUE}${separator}${NC}"
+            echo -e "${BLUE}=== ${GREEN}${filepath}${BLUE} ===${NC}"
+            echo -e "${BLUE}${separator}${NC}"
+        else
+            echo "$separator"
+            echo "=== $filepath ==="
+            echo "$separator"
+        fi
+    }
+    
+    # Function to display file content
+    show_file() {
+        local filepath=$1
+    
+        # Skip if not readable
+        if [ ! -r "$filepath" ]; then
+            echo "Error: Cannot read file '$filepath'"
+            return
+        fi
+    
+        # Print header
+        print_header "$filepath"
+    
+        # Display file content
+        cat "$filepath"
+        echo # Add blank line after file
+    }
+    
+    # Main execution
+    for file in "$@"; do
+        show_file "$file"
+    ```
+
+[2026-04-17T14:23:17.990000+00:00] isekaicoders (id=1494704814251184253)
+    I patch it directly to terminal_tool.py
+
+[2026-04-21T10:24:22.951000+00:00] rikllo (id=1496094240202035290)
+    how do you install it on hermes? doesnt look like its supported on the repo
+
+[2026-04-22T00:06:52.545000+00:00] avattava (id=1496301227401547846)
+    Someone released this! I switched.
+    https://github.com/ogallotti/rtk-hermes
+    [embed] GitHub - ogallotti/rtk-hermes: RTK plugin for Hermes — rewrites s... https://github.com/ogallotti/rtk-hermes
+
+[2026-04-22T09:27:12.927000+00:00] rikllo (id=1496442241504514109)
+    this guy have 8 stars and the main one has 50k something, is his script safe?
+    [reply to avattava msg=1496301227401547846]
+

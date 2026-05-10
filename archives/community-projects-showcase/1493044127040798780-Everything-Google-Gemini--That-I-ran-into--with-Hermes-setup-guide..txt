@@ -1,0 +1,96 @@
+# Thread 'Everything Google Gemini (That I ran into) with Hermes setup guide.' in forum #community-projects-showcase
+# thread_id=1493044127040798780 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:15.003815+00:00
+
+[2026-04-13T00:24:19.305000+00:00] synthalorian (id=1493044127040798780)
+    This is a setup guide for getting gemini 0auth working with hermes through code assist api. you authenticate once through google's official gemini CLI and hermes adopts those tokens and auto-refreshes them
+      covers:
+      - full gemini-oauth provider setup (mirrors the qwen-oauth pattern)
+      - the thoughtSignature replay fix that breaks multi-turn tool calling if you miss it
+      - enabling the full 1M token context window (hermes doesn't auto-detect it from Code Assist since there's no /models
+      endpoint)
+      - handling free-tier rate limits with server-guided retry instead of blind backoff
+    -Multi-tool response grouping fix + zero-delay retry bug
+    https://github.com/synthalorian/hermes-gemini-setup-guide hope it helps.
+    [embed] GitHub - synthalorian/hermes-gemini-setup-guide https://github.com/synthalorian/hermes-gemini-setup-guide
+
+[2026-04-13T00:30:43.876000+00:00] gluedmosquito (id=1493045740048613547)
+    Oooh thanks a lot
+
+[2026-04-13T03:54:13.296000+00:00] coachcryptos (id=1493096950067888381)
+    oh this is big time!
+
+[2026-04-13T03:54:19.692000+00:00] coachcryptos (id=1493096976894394469)
+    thank you!
+
+[2026-04-13T05:24:58.218000+00:00] coachcryptos (id=1493119787725885460)
+    <@190210193609457665> my responses are extremly slow. Any idea why>
+
+[2026-04-13T05:30:47.369000+00:00] synthalorian (id=1493121252171321474)
+    im assuming your question hasnt rolled in yet
+    [reply to coachcryptos msg=1493119787725885460]
+
+[2026-04-13T05:34:11.911000+00:00] coachcryptos (id=1493122110082519040)
+    I'm referring to a question I asked the agent. It's just taking a very long time. Thought maybe you had some insight or suggesetions.
+    [reply to synthalorian msg=1493121252171321474]
+
+[2026-04-13T05:36:52.718000+00:00] synthalorian (id=1493122784556224642)
+    Oh i get what you mean. is it outputting anything?
+    [reply to coachcryptos msg=1493122110082519040]
+
+[2026-04-13T05:43:35.537000+00:00] synthalorian (id=1493124474101432381)
+    sometimes it sits at a certain output for a while if its doing a lot. gemini is kinda weird with thinking. as long as it doesnt close while youre using it you should be good if it doesnt time out, crash, or send any errors. it should still update the chat though at times. is it doing that?
+
+[2026-04-13T05:44:16.795000+00:00] coachcryptos (id=1493124647149895711)
+    about 2 mins in between each one of these.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493044127040798780/1493124646978064485/image.png?ex=6a021570&is=6a00c3f0&hm=aa7fe1ceae6abf945b6a344736bc5bf59903ed9803c593e9d6e55474c2e102d3&
+    [reply to synthalorian msg=1493122784556224642]
+
+[2026-04-13T05:44:24.731000+00:00] coachcryptos (id=1493124680436154460)
+    but yeah starting to out put some stuff now.
+
+[2026-04-13T05:45:31.117000+00:00] synthalorian (id=1493124958879088690)
+    ok cool as long as its working you should be good.
+    [reply to coachcryptos msg=1493124680436154460]
+
+[2026-04-13T23:43:43.221000+00:00] coachcryptos (id=1493396297229668393)
+    finally got it working smoothly. what model do you use the most? <@190210193609457665>
+
+[2026-04-14T00:40:38.084000+00:00] synthalorian (id=1493410620203204608)
+    Excellent. Gemini 3 flash preview
+    [reply to coachcryptos msg=1493396297229668393]
+
+[2026-04-14T14:28:39.031000+00:00] 8u773r (id=1493618997197803551)
+    Yo looking forward to try this! Hopefully i can get it to work 😂
+
+[2026-04-14T14:51:14.253000+00:00] b08x (id=1493624681410990121)
+    so a heads  up, about a month ago my gemini account was suspended because apparently using a third-party harness is quite against their acceptable terms and conditions...I was using 'oh-my-opencode' at the time; 
+    
+    if your account ends up to be suspended (from either using this or something else that uses the cloud-code-assist layer), you will be directed to a terms and conditions page to which you'll have to affrm that you basically won't use third-party tools going forward...it took about 48 hours to resolve
+    
+    personally I don't appreciate google enforcing this so hard...it really does disrupt a workflow
+    
+    https://geminicli.com/docs/resources/faq/#why-cant-i-use-third-party-software-like-claude-code-openclaw-or-opencode-with-gemini-cli
+    [embed] Frequently asked questions (FAQ) https://geminicli.com/docs/resources/faq/
+
+[2026-04-14T16:45:53.820000+00:00] 8u773r (id=1493653536406503466)
+    Thanks for the info! Might be better to wait until i’m nit depended on gemini 😂
+    [reply to b08x msg=1493624681410990121]
+
+[2026-04-15T03:19:00.765000+00:00] synthalorian (id=1493812865201602620)
+    thank you, good to know, ill set up everything to go through Vertex going forward
+    [reply to b08x msg=1493624681410990121]
+
+[2026-04-17T09:31:49.655000+00:00] senseiyoba (id=1494631462857609297)
+    So it's somewhat punishable by Google atm, right? Any workaround to take advantage of my Google One AI Ultra inside Hermes?
+
+[2026-04-17T23:59:20.183000+00:00] synthalorian (id=1494849778595659966)
+    I'm not sure. I can't confirm anything but I did a little research and bannable offenses were maxing out context using it, especially multiple instances using the same account. I had been using it for over 4 months through openclaw, then claw code, then hermes, but i cancelled my ultra sub. I'm not sure if as an individual it can get you banned, but in the doc b08x it doesnt say specifically  whether that's true or not. It just says 3rd party use is bannable.
+    [reply to senseiyoba msg=1494631462857609297]
+
+[2026-04-18T00:00:25.260000+00:00] synthalorian (id=1494850051548250223)
+    I had been using my Google One AIs Ultra plan using hermes. Instructions are in the guide how to get it setup properly, but use at your own risk.
+
+[2026-04-18T00:06:36.581000+00:00] synthalorian (id=1494851608981540865)
+    I personally am trying to switch to open-source providers and models so i set up a free google api key using 2.5 flash, and quite a few local models on my machine.
+

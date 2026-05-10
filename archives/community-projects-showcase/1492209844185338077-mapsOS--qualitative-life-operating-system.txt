@@ -1,0 +1,202 @@
+# Thread 'mapsOS: qualitative life operating system' in forum #community-projects-showcase
+# thread_id=1492209844185338077 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:26.818306+00:00
+
+[2026-04-10T17:09:10.772000+00:00] modest.maoist (id=1492209844185338077)
+    **mapsOS:** 
+    personal "OS" agent that truly learns who you are.
+    saw lifeOS going around & went 'oh! this seems dope and very useful!' got to the first question. 'rate your mood from 1 to 10." immediately went, "oh. nevermind." 
+    so i built something a little more attuned to my brain, meant to be used by hermes but nicely standalone too
+    
+      **mapsOS is different:**
+      -  no "my mood is a 7." no streaks. you write what's happening and it
+      parses it into robust data, maps out your current state, and learns your patterns over time
+      - **free-form vent parsing** — write naturally, it extracts STATE / BODY /
+      MIND / SPIRIT / WIN / DECISION / RESISTANCE / TRIGGER / PERSON / GOAL
+      automatically
+      - full **CLI + TUI** (warm amber palette, STATE-colored, raw termios + Rich —
+       no electron, no browser)
+      - **25 behavioral arcs** — not just "mood dip for 3 days." things like
+      `exec_dysfunction`, `resistance_pattern` (same friction source recurring over
+       two weeks), `intrusive_loop` (same topic appearing across flash captures
+      without resolution), `negative_interaction_pattern` (a specific person
+      showing up negatively across a month)
+      - **maps your life around you** — intelligently builds a relational network of the people around you
+      - **tooled for tough times** — depleted? grieving for 2+ days? survival mode activates. the
+      system collapses to three items: eat, sleep, water. nothing else. no
+      productivity language anywhere. no judgement. 
+      - **arc cooldown** — fires once, backs off. no alert fatigue.
+      - tracks things no wellness app tracks: unresolved decisions, internal
+      resistance, relational patterns, executive function wins
+      - **local SQLite** — works completely offline, no cloud dependency
+      - **Atropos RL environment** included — 13 training scenarios, passive
+      post-session evaluation
+    
+    easy to install. **hermes agent skiil linked in readme**
+    
+    [optional intergration for my taskwarrior/harsh upgrade; cooler to come]
+    https://github.com/nosleepcassette/mapsOS
+    [attachment] mapsos.png https://cdn.discordapp.com/attachments/1492209844185338077/1492209844332003369/mapsos.png?ex=6a020d36&is=6a00bbb6&hm=15fdbd18913fa0bcfb17e49124dec16ea18bcd0eb62759df0e6bb88b15ce91ac&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492209844185338077/1492209844684591384/image.png?ex=6a020d36&is=6a00bbb6&hm=bcc8dad7657f02734599f60bd409e8db787a3b42a3836455974639eebf37c090&
+    [embed] GitHub - nosleepcassette/mapsOS: Personal OS agent that learns who ... https://github.com/nosleepcassette/mapsOS
+
+[2026-04-11T21:06:30.141000+00:00] modest.maoist (id=1492631956293419088)
+    just bumping this in case anyone’s interested. Wondering if anyone else finds it helpful
+
+[2026-04-14T17:17:13.343000+00:00] ungupungu (id=1493661419697078414)
+    this looks really cool - neurodivergent person here, will try it out
+
+[2026-04-14T22:13:03.914000+00:00] modest.maoist (id=1493735870988288070)
+    clocked—check the original copy lol
+    [attachment] 5625E6C9-E13A-483A-875A-A72AA5DA5A8B.png https://cdn.discordapp.com/attachments/1492209844185338077/1493735870778310777/5625E6C9-E13A-483A-875A-A72AA5DA5A8B.png?ex=6a01abaf&is=6a005a2f&hm=f55af269ef0dd59eb7eae7ed10ea05c4ba3e49fff22a9aae52d40f15d1ff559c&
+    [reply to ungupungu msg=1493661419697078414]
+
+[2026-04-15T02:21:50.785000+00:00] modest.maoist (id=1493798478822768822)
+    three new big features shipped!
+    
+      maps check --role — session start now outputs agent mode guidance. STATE → suggested mode, energy tier, which arcs have mode implications, what refs to load. one command at the top of a
+      session and your agent knows where it is.
+    
+      ARC 26: cycle meta — structural manic/depleted cycling detection over a 60-day window. 3+ alternations fires an alert. distinct from a single post-manic drop — this is the pattern behind
+      the pattern.
+    
+      arc frequency threshold — any insight arc that fires 3+ times in 14 days auto-upgrades to alert. labeled [recurring × N in 14 days] in arc output. a one-off pattern is signal; the same
+      arc firing repeatedly is structural.
+    
+      outcome-based RL environment (cassette_rl_env.py) — second RL env for training agents on therapeutic effectiveness rather than data fidelity. reward weights: arc resolution (35%), state
+      trajectory (25%), role match (20%), engagement (15%), no shame spike (±5%). includes SessionOutcomeLogger for collecting live session data. genericized — adapt correct_role and
+      refs_to_load to your agent's mode system.
+    
+      SKILL.md updated with all of the above. gist linked in README.
+    
+    next feature spec is likely to be a major overhaul and upgrade of the visualization system in the TUI
+    https://github.com/nosleepcassette/mapsOS
+    [embed] GitHub - nosleepcassette/mapsOS: Qualitative life tracker that trac... https://github.com/nosleepcassette/mapsOS
+
+[2026-04-16T01:16:08.565000+00:00] modest.maoist (id=1494144331819520123)
+    # mapsOS — major update
+    
+      the TUI got a full visual overhaul and a handful of long-overdue features.
+    
+      ---
+    
+      **splash screen** on launch — animated braille spinner, logo, byline. yes it's purely cosmetic. yes it matters.
+    
+      **dashboard is now a proper layout** — three panels side by side: 30-day STATE sparkline (height-encoded, state-colored), body heat grid with green/amber/red status per category, arc
+      table with severity badges. panel borders are colored by your current STATE.
+    
+      **viz panel fixed** — body grid was misaligned due to embedding a Rich Table via ANSI string capture. switched to `rich.console.Group` so the table renders natively. columns are where
+      they're supposed to be now.
+    
+      **survival mode threshold raised** — was triggering on two bad days in a row, which is too sensitive. now requires 3 of the last 5 entries to be low. `surviving` added to the low-state
+      list. `flooded` no longer triggers it (flooded is acute, not chronic). `[i]` dismisses survival mode for 24 hours without losing data.
+    
+      **embedded role guidance** — `maps check --role` no longer requires an external agent skill. built-in ND-aware mode system with 6 modes: `witness`, `regulation-first`, `low-demand`,
+      `springboard`, `high-engagement`, `manic-aware`. `maps roles` prints the full reference. no clinical language, no external dependencies.
+    
+      **`[a]`** about screen · **`[d]`** opens docs in browser · paginated help with a docs page
+    
+      screenshots in the README now.
+    
+    > https://github.com/nosleepcassette/mapsOS
+    [attachment] about.png https://cdn.discordapp.com/attachments/1492209844185338077/1494144332033298442/about.png?ex=6a01d698&is=6a008518&hm=a4897619fc2e11037b1ddcfc78f88f56ca618167aa88673b267f747806e1e824&
+    [attachment] dashboard.png https://cdn.discordapp.com/attachments/1492209844185338077/1494144332280631436/dashboard.png?ex=6a01d698&is=6a008518&hm=13d7d5677fbd283f47af7405a421385283343c3729e098b3cbd2d893a24c8995&
+    [attachment] splash.png https://cdn.discordapp.com/attachments/1492209844185338077/1494144332578558054/splash.png?ex=6a01d698&is=6a008518&hm=839a214e95116273d6f13e8a3b686b700add5e56dc2cd03c1be1f53e087a164e&
+    [attachment] viz.png https://cdn.discordapp.com/attachments/1492209844185338077/1494144332998115426/viz.png?ex=6a01d698&is=6a008518&hm=cee86a6f2ceb53bb09263151eacda8e9d9d7f6673299d0d0678f26f1c0088b47&
+    [embed] GitHub - nosleepcassette/mapsOS: Qualitative life tracker that trac... https://github.com/nosleepcassette/mapsOS
+
+[2026-04-17T03:21:42.159000+00:00] modest.maoist (id=1494538317868564501)
+    wondering if you've had a chance to check it out. planning a massive, massive upgrade with some really cool scope imo, wondering you or anyone else in the community has had a chance to use it and has some feedback or would use it if it [x]'d or had [y] feature. cos check this idea out:
+    
+     atlas
+    
+      your knowledge is scattered across six tools that don't talk to each other and you've accepted this as normal. vimwiki, obsidian, notion, agent outputs that evaporate, tasks in a silo, logs nowhere. you're losing signal every single
+      day.
+    
+      i'm building atlas to fix this permanently. local-first knowledge filesystem. plain markdown, git-native, ~/atlas/ on your machine. the cli is called cart--the cartographer to map the atlas. 
+    
+      the real pitch: a personal palantir. every note you've written, every agent session, every task, every decision log — indexed, cross-linked, queryable, yours. not behind a login. not on someone else's server. on your filesystem, in
+      files you can read with cat.
+    
+      cart query 'type:project status:active' hits a sqlite index over your own files and pipes to anything. block references work logseq-style, stored as html comments so obsidian stays calm. vimwiki works because it's just a folder.
+      agents — hermes, codex, claude, whatever comes next — write to the same files vim reads. no api contract. no handshake. just files. your knowledge graph gets richer every session without you lifting a finger.
+    
+      plugin system is stdin/stdout json. a bash script is a valid plugin. a python script is a valid plugin. your .atlas/ config is a dotfile — shareable, forkable, composable. the ecosystem builds itself.
+    
+      this is the substrate everything else should have been built on top of. and it's just a folder.
+    
+      open sourcing after i've broken it enough on my own box.
+    
+      what would you build a plugin for first?
+    [reply to ungupungu msg=1493661419697078414]
+
+[2026-04-17T11:39:55.056000+00:00] .limay (id=1494663697766023330)
+    I'm waiting to find some quality time to try this properly as it looks quite deep, but I'm very intrigued! would be interesting to see to see how it works with diverse neurodiversity profiels and traits.
+    
+    About atlas, would this tool sync other sources? or the idea is that it becomes the source and replaces others like Obsidian.
+    
+    Also, where would mapOS sit with this idea? would it be a plugin? When I was looking at the mapsOS code I really liked it but having the option to add your other project Nota as a plugin didn't convinced me too much. It's almost as these tools are better as separate domains, and maybe under other orchestrator project (atlas? 😆 )
+
+[2026-04-17T16:05:56.825000+00:00] modest.maoist (id=1494730646277586975)
+    hah! you pre-empted the idea of atlas before i really fleshed it out. the idea is for it to be standalone in and of itself and to offer something very very similiar to obsidian, vimwiki (which it has explicit compatibility already built in with), logseq (which it's modelled after), and notion (which it's going for in scope) BUT that integrates and plays entirely nicely with all of these if they're part of your workflow. no need to replace obsidian with it: you can just point obsidian at your atlas directory and now you can seamlessly use both, with bidirectional sync. atlas/cartographer lives as a layer of infra above mapsOS that turns all the data you gather from mapsOS into your own friendly little knowledge graph while playing nicely with whatever your current workflow. i've also implemented massive changes in configurability for both mapsOS and cartographer with the goal being to eventually establish a sort of dotfile and plugin community going forward: in a month I hope to have the system i built personally for me totally upgraded by pulling in ideas from the community & installing some plugins people have built to extend features & surface. in a year? i wanna be able to play doom in it 😉 big announcement post & new cartographer thread just about to launch. (and nota's going bye bye, don't worry - that was grasping at something much better realized here. cart will automatically build a shared knowledge graph between you an your agents, including automatically compiling todos & tasks & linking them to extant projects, people, sessions, etc etc.
+    [reply to .limay msg=1494663697766023330]
+
+[2026-04-17T16:48:29.288000+00:00] modest.maoist (id=1494741352083230740)
+    big release update: mapsOS and cartographer are now actually one loop
+    
+    > Your agents should know how you're actually doing — and remember everything they learn.
+    
+      that sentence is the whole architecture now
+    
+      **mapsOS** is the qualitative state layer
+      **cartographer** is the memory / notes / tasks / graph layer
+      **atlas** is the substrate underneath both
+    
+    first few images are  mapsOS tui, other shots are my hermes agent parsing through a huge infodump & making data from it. very personal but i'm an open book + it shows you what it does on the tin: word vomit to useful data.  & that's just mapsOS...
+      what shipped:
+    
+      - `cart tui` now exists and looks sick
+      - structured atlas graph
+      - note pane with transclusion rendering
+      - backlinks toggle
+      - tasks overlay
+      - `m` in cartographer drops straight into mapsOS
+      - `C` in mapsOS drops straight into cartographer
+      - mapsOS now auto-ingests back into cartographer on TUI exit
+      - mapsOS state vocabulary is configurable
+      - tracks are configurable
+      - capacity language is configurable
+      - "survival mode" can be "low capacity mode" if that fits better
+      - releasing with several bundled hermes agent skills for intake with automatic bridging between mapsOS and atlas
+    
+      this is the first release where the whole thing actually feels like one system instead of two adjacent tools.
+    
+      if you use mapsOS:
+      it now has a real memory layer behind it.
+    
+      if you use cartographer:
+      it now has a qualitative state layer keeping it honest.
+    
+      repos:
+      - mapsOS: https://github.com/nosleepcassette/mapsOS
+      - cartographer: https://github.com/nosleepcassette/cartographer
+    
+    gonna do a separate thread for cartographer since that's the thing i really want builders to see and actually makes mapsOS worthwhile to others, and is a large enough project i think it warrants its own thread -- hope this does not offend the mods, not trying to spam, just think it's a sizable enough infra layer that i don't want it to get lost in this thread.
+    [attachment] intake1.png https://cdn.discordapp.com/attachments/1492209844185338077/1494741352452456538/intake1.png?ex=6a02085d&is=6a00b6dd&hm=c0362573ffec5aaa833b3c672483423e06d20bdee2f82919c7332b1d3b836f2e&
+    [attachment] intake2.png https://cdn.discordapp.com/attachments/1492209844185338077/1494741352842399886/intake2.png?ex=6a02085d&is=6a00b6dd&hm=9ee6ef19f8c5aff70dbb3bfce2d5c6b3a69bbc961ac96642e05243d43797690c&
+    [attachment] intake3.png https://cdn.discordapp.com/attachments/1492209844185338077/1494741353240854658/intake3.png?ex=6a02085d&is=6a00b6dd&hm=74346e8c8b6c1fd188fa18e161be2940cfcc5af3b89eef92a6888a53ea0e389b&
+    [attachment] preview.png https://cdn.discordapp.com/attachments/1492209844185338077/1494741353597243512/preview.png?ex=6a02085d&is=6a00b6dd&hm=41969ad5bd56109e283b2109b28fede59bec47d23bb30ecb8e22405759e492fb&
+    [attachment] readme.png https://cdn.discordapp.com/attachments/1492209844185338077/1494741353874198700/readme.png?ex=6a02085d&is=6a00b6dd&hm=75e0886f2357bc58301ee03b7af160e9c72d93ba684de0098661b5db0b1e7ac2&
+    [embed] GitHub - nosleepcassette/mapsOS: Qualitative life tracker that trac... https://github.com/nosleepcassette/mapsOS
+    [embed] GitHub - nosleepcassette/cartographer https://github.com/nosleepcassette/cartographer
+
+[2026-04-17T20:54:03.205000+00:00] lauratom (id=1494803150610239488)
+    hey dude can i just copy this to you.. maybe you can take some ideas from here: 
+    
+    I would like to see you impove your project to this way!
+    
+    (not claud code... thats trash... the usefull part thats gold!)
+    
+    https://github.com/gnekt/My-Brain-Is-Full-Crew
+    [embed] GitHub - gnekt/My-Brain-Is-Full-Crew: Built by a PhD whose memory w... https://github.com/gnekt/My-Brain-Is-Full-Crew
+

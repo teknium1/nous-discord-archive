@@ -1,0 +1,67 @@
+# Thread 'Living community wiki and ecosystem page' in forum #community-projects-showcase
+# thread_id=1494185277877649478 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:04.214152+00:00
+
+[2026-04-16T03:58:50.866000+00:00] avidfuturist (id=1494185277877649478)
+    Created a living Hermes Agent community wiki that **covers all the most important questions people have on Hermes**:
+    
+    * How does Hermes compare to OpenClaw or Claude Code? https://get-hermes.ai/compare/openclaw.html
+    * What are some of the coolest projects in Hermes I can setup? https://get-hermes.ai/community/
+    * What’s the best memory provider for me? https://get-hermes.ai/memory/
+    * What’s the best models to use? https://get-hermes.ai/models/
+    
+    Take a look around! Open to any and all feedback, plan to continue adding pages to it bit by bit!
+    
+    **Open source with git repo linked below on gh-pages branch**. So PRs welcome.
+    [attachment] 048A3F30-1B11-4314-AA3A-59D45C9FEE4E.jpg https://cdn.discordapp.com/attachments/1494185277877649478/1494185278191964251/048A3F30-1B11-4314-AA3A-59D45C9FEE4E.jpg?ex=6a01fcba&is=6a00ab3a&hm=1dacc65655174133cdc938b6888e8f5f26ee0b04c923f1c7baa5fc7a9be6603c&
+    [attachment] 8E6DA445-3015-461D-B4C6-9B8867E04FA7.jpg https://cdn.discordapp.com/attachments/1494185277877649478/1494185278544281610/8E6DA445-3015-461D-B4C6-9B8867E04FA7.jpg?ex=6a01fcbb&is=6a00ab3b&hm=1993c7aee154021024dc007442ffa0397bbbd56296d75c7945b3b635fcc4ca05&
+    [attachment] 0B5D4ADF-FBD7-45E8-9EEB-F23EA39BFAC2.jpg https://cdn.discordapp.com/attachments/1494185277877649478/1494185278821367949/0B5D4ADF-FBD7-45E8-9EEB-F23EA39BFAC2.jpg?ex=6a01fcbb&is=6a00ab3b&hm=4fce6b55075942efcca01b95f52652ffe021d3cb7239d3517cb4446dd9e30378&
+    [attachment] IMG_4946.png https://cdn.discordapp.com/attachments/1494185277877649478/1494185279140139028/IMG_4946.png?ex=6a01fcbb&is=6a00ab3b&hm=fc3985ed5ea373c529c84159069d3249e36de1ff2f4a13675e83d51bd50a7d55&
+    [attachment] IMG_4945.png https://cdn.discordapp.com/attachments/1494185277877649478/1494185279408308224/IMG_4945.png?ex=6a01fcbb&is=6a00ab3b&hm=f7c6bae608752830e3cbef6bfa704ffe78d0383fe105e36e2d687b62263f824d&
+    [attachment] IMG_4947.png https://cdn.discordapp.com/attachments/1494185277877649478/1494185279920144466/IMG_4947.png?ex=6a01fcbb&is=6a00ab3b&hm=9fef527a0870023ac859c9fc6a866e76e69caba3c92fc37e438f1b49ac3a3d6a&
+
+[2026-04-16T04:41:05.822000+00:00] avidfuturist (id=1494195910253609032)
+    If you have any ideas for new pages, let me know too!
+
+[2026-04-16T08:59:11.490000+00:00] nicoloboschi (id=1494260861852717138)
+    cool! it's the repo open source?
+
+[2026-04-16T15:03:55.624000+00:00] avidfuturist (id=1494352650563621045)
+    Yes it’s all open source, hosted on static GitHub pages in the gh-pages branch. Contributions welcome: https://github.com/nesquena/hermes-webui/tree/gh-pages
+
+[2026-04-20T00:45:44.532000+00:00] avidfuturist (id=1495586232733011998)
+    Pushed a major refresh of the community page and added a bunch of new projects https://get-hermes.ai/community/
+    [embed] Hermes Ecosystem — Community Projects & Tools https://get-hermes.ai/community/
+
+[2026-04-20T19:08:55.899000+00:00] toadking2 (id=1495863859448381702)
+    This is a good idea if done right. Because popularity of AI agents is still a bleeding-edge topic, the people writing documentation and wikis are the same people that use AI  most heavily. Unfortunately, IME this results in documentation being incomprehensible AI-slop. Official OpenClaw documentation is very bad at this. Official Hermes docs are very bad, but not as bad as OpenClaw's, and the few wiki articles that I browsed from your site are not really any better. What is needed for all of these things is a human editor, and it doesn't seem that anyone bothers to edit the slop before posting it. Or if I'm being charitable, perhaps they do edit it, but they are not good at expressing clear thoughts in writing, so the edited product is still not useful.
+    
+    I love OSS and have contributed code to projects in the past. I like the idea of your wiki. I want to edit articles myself and make pull requests to help improve it, but it's impossible to do without understanding what the articles are trying to say in the first place.
+    
+    Example of the problem from the Hermes official docs: https://hermes-agent.nousresearch.com/docs/integrations/providers#named-custom-providers
+    I am trying to figure out how to configure custom providers and have them accessible via their TUI chat interface `/model` command.
+    The docs never explain the difference between the top-level keys `providers:` and `custom_providers:` in `config.yaml`.  In fact, that page doesn't even mention the `providers:` key. For that, you have to go to another page entirely: https://hermes-agent.nousresearch.com/docs/user-guide/configuration
+    
+    So their docs are contradictory and there is no comprehensive `config.yaml` reference anywhere. No explanation about how subkeys keys in the yaml affect the logic of model resolution. But there are plenty of bullet lists and markdown charts with circular references to other topics.
+    [embed] Configuration | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/configuration
+    [embed] AI Providers | Hermes Agent https://hermes-agent.nousresearch.com/docs/integrations/providers
+
+[2026-04-20T19:18:12.769000+00:00] avidfuturist (id=1495866195130450153)
+    Agree I think there’s a real opportunity as a community to create more approachable guides that cover less is more, practical approach with sensible defaults. Would appreciate any ideas or contributions to the guides. 
+    
+    Already open source here https://github.com/nesquena/hermes-webui/tree/gh-pages  but if there’s enough interest I would happily turn it into its own repo
+    [reply to toadking2 msg=1495863859448381702]
+
+[2026-04-20T19:41:28.465000+00:00] toadking2 (id=1495872049103765565)
+    I wish I could help. I am good at editing. But as I said, I need to understand what something means in the first place before I can edit it. So it's a chicken-egg problem. I am not aware of any online places or forums where people are knowledgeable and responsive where you can have a back-and-forth to clarify confusions.
+
+[2026-04-20T19:50:06.291000+00:00] avidfuturist (id=1495874221023166584)
+    I understand, thanks for sharing your input!
+
+[2026-05-04T11:21:48.679000+00:00] mazak (id=1500819734885830676)
+    Love the guide! Thank you for your work
+
+[2026-05-04T15:01:58.480000+00:00] avidfuturist (id=1500875140806742148)
+    Thanks glad you found it helpful!
+    [reply to mazak msg=1500819734885830676]
+

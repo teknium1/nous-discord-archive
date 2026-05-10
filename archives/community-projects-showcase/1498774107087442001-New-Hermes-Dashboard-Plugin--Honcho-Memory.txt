@@ -1,0 +1,16 @@
+# Thread 'New Hermes Dashboard Plugin: Honcho Memory' in forum #community-projects-showcase
+# thread_id=1498774107087442001 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:36.963710+00:00
+
+[2026-04-28T19:53:13.006000+00:00] gumbyender (id=1498774107087442001)
+    New Hermes Dashboard Plugin: Honcho Memory
+    Monitor, explore, and manage your Hermes agents' long-term memory in real-time!
+    
+    Connects directly to your self-hosted Honcho instance — live stats, semantic search, doc & message views, queue health, and more.
+    
+    Repo: https://github.com/GumbyEnder/hermes-plugins/tree/master
+    
+    Future versions - pulling stats from honcho.dev if you pay for hosting
+    [attachment] grok-image-25f3c899-be56-45ec-bc19-ed52ae049a79_1.png https://cdn.discordapp.com/attachments/1498774107087442001/1498774107381170308/grok-image-25f3c899-be56-45ec-bc19-ed52ae049a79_1.png?ex=6a018ae9&is=6a003969&hm=7aa016ed71ace7c63c6666bf6c0c3cd556be17e9b2f6e217bd1d7811bf3be7e0&
+    [embed] GitHub - GumbyEnder/hermes-plugins: Hermes Dashboard plugins — Ho... https://github.com/GumbyEnder/hermes-plugins/tree/master
+

@@ -1,0 +1,30 @@
+# Thread 'Agent vs Agent old board game' in forum #community-projects-showcase
+# thread_id=1488455295209574450 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:00.470611+00:00
+
+[2026-03-31T08:29:56.540000+00:00] aezaror (id=1488455295209574450)
+    Welcome here we play Rithmomachia, an old game played before chess. 
+    
+    -The Philosopher's Game
+    
+    Rithmomachian, from the Greek arithmos (number) and mache (battle) — is one of the most extraordinary board games ever created. Born in the monasteries of 11th-century Europe, it was not designed for entertainment. It was designed to teach the soul.
+    
+    So i build a cool arena for AI agent to "fight", a skill to play the game, another for AI agent commenting the game. 
+    
+    No models have been trained to play this game. They know the rules and some logic/strats thats all, and its kinda fun comparing different model (local/cloud) playing it and getting better.
+    
+    https://github.com/b7216309-jpg/rithmomachia
+    https://rithmomachia.onrender.com/
+    
+    You can already test with using the api (check github skills).  Expect a lot of non critical bug, i will check after some sleep.  Due to free tier onrender will not save profile stats etc. 
+    
+    Next il will push further the social & interactive aspect, to better reflect a cool arena fight
+    
+    (ai vs ai, human vs ai, avalaible)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1488455295209574450/1488455295410769930/image.png?ex=6a019384&is=6a004204&hm=e87b2d234c7050f87f6a516c0f6093c700ef478c271add5232ceafaefa0ebe29&
+    [embed] GitHub - b7216309-jpg/rithmomachia: Rithmomachia — The Philosophe... https://github.com/b7216309-jpg/rithmomachia
+
+[2026-04-03T18:27:32.492000+00:00] _name_name_ (id=1489692849569271858)
+    This is awesome.
+    [reply to aezaror msg=1488455295209574450]
+

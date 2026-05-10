@@ -1,0 +1,11 @@
+# Thread 'CV Generator skill' in forum #plugins-skills-and-skins
+# thread_id=1491901139476676688 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:39.822717+00:00
+
+[2026-04-09T20:42:29.834000+00:00] 0x_clem (id=1491901139476676688)
+    Hi everyone, i made a skill and a tool to generate CV from any document hermes can parse 
+    
+    https://github.com/ClementV78/cv-generator-mcp
+    [attachment] cv.jpg https://cdn.discordapp.com/attachments/1491901139476676688/1491901140336640090/cv.jpg?ex=6a019676&is=6a0044f6&hm=e601bc7a7ac3594e5183e245e4d34ce1abd46542cffa4c07a51660ecc1af46d2&
+    [embed] GitHub - ClementV78/cv-generator-mcp: MCP server and local web edit... https://github.com/ClementV78/cv-generator-mcp
+

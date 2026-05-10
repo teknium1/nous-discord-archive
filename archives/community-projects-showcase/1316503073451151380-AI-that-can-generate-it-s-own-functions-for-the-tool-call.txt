@@ -1,0 +1,91 @@
+# Thread 'AI that can generate it's own functions for the tool call' in forum #community-projects-showcase
+# thread_id=1316503073451151380 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:42.230845+00:00
+
+[2024-12-11T20:33:12.155000+00:00] not_lain (id=1316503073451151380)
+    Hi all, I'm thinking of combining the ability of how some AI models are good at code generation with tool call.
+    maybe call `exec` or `eval` on the model-generated code.
+    I'm not sure about how to approach this, any pointers or recommendations would be appreciated, or if anyone is willing to collaborate on this, feel free to drop a message below.
+    [attachment] robot_fixing_himself.png https://cdn.discordapp.com/attachments/1316503073451151380/1316503073912393778/robot_fixing_himself.png?ex=6a019448&is=6a0042c8&hm=28b333195d3f091c4a910a3a128ada204baded94ad1eadd23bdabe5eea90d4e4&
+
+[2024-12-12T14:35:11.015000+00:00] sidxa_42668 (id=1316775362885058641)
+    Hi, interested to talk/project about this topic. Have you had a look at SynaLinks as a possible framework?
+
+[2024-12-12T17:20:24.583000+00:00] good_lux (id=1316816943403241604)
+    You might want to do this by making a tool server with a "register tool" function. Python has the capacity to register functions a runtime, so basically wrap that ability. Then when the LLM calls "list tools" their new tool appears and they can use it.
+    [reply to not_lain msg=1316503073451151380]
+
+[2024-12-12T17:22:00.168000+00:00] good_lux (id=1316817344315658251)
+    You can also do stuff like have the LLM post their code to github first, if you want to check their work (good idea). 
+    
+    Also just saw this this morning: https://x.com/skirano/status/1867240426207433173
+    [embed] Pietro Schirano (@skirano) on X https://twitter.com/skirano/status/1867240426207433173
+
+[2024-12-15T16:00:04.182000+00:00] amir_s365 (id=1317883888772710482)
+    love the idea
+    [reply to not_lain msg=1316503073451151380]
+
+[2024-12-15T16:01:55.219000+00:00] amir_s365 (id=1317884354495643658)
+    i'm already made a base app for my agents, but would love to discuss if we can collaborate for this one
+    check here:
+    https://discord.com/channels/1053877538025386074/1317882043874676747
+
+[2024-12-16T00:45:29.341000+00:00] not_lain (id=1318016114873208893)
+    your workflow is based on the fact that the tool is created manually in JS, so far, AI that can create its own tool has been achieved solely through Python.
+    [reply to amir_s365 msg=1317884354495643658]
+
+[2024-12-16T00:46:08.141000+00:00] not_lain (id=1318016277612204052)
+    I think we should build upon Anthropic's work (their idea is similar to mine), but mine is different in the sense I don't need to save something on files and read the tool directly from the generated code and executed in real time (or add a popup menu to request a validation right after) 
+    hope this explains further the workflow.
+
+[2024-12-16T00:46:29.957000+00:00] not_lain (id=1318016369115009095)
+    As to why python is exactly, it's because i can run `eval` on string, not sure how js does that, but i think support for js would be nice down the line.
+    rn i need :  
+    * funding (for compute resources, and possibly some API tokens to validate other provider's baselines against ours) 
+    * some other people to help with building the pipeline and or building the thing
+
+[2024-12-16T00:49:32.788000+00:00] not_lain (id=1318017135963930655)
+    didn't find anything interesting, i think except for claude nothing comes close, also thanks for raising this, but i do admit that i did not research much on the subject, feel free to share below any interesting research papers
+    [reply to sidxa_42668 msg=1316775362885058641]
+
+[2024-12-16T02:08:18.426000+00:00] amir_s365 (id=1318036956726165596)
+    yes eval is supported by js too
+    [reply to not_lain msg=1318016369115009095]
+
+[2024-12-16T02:09:44.415000+00:00] amir_s365 (id=1318037317390307369)
+    so do you mean making agents in runtime between conversation or just something created by ai and registered before conversation?
+
+[2024-12-16T02:10:32.874000+00:00] amir_s365 (id=1318037520642085005)
+    give your most hard use cases and lets check how it's possible
+
+[2024-12-16T02:24:24.612000+00:00] not_lain (id=1318041009203970071)
+    first comes the : 
+    * planning phase what pipeline we're going for 
+    * once done, if further training is required then i will give priority to python ngl, but js will come later.
+    [reply to amir_s365 msg=1318037317390307369]
+
+[2024-12-16T02:26:34.192000+00:00] not_lain (id=1318041552701882420)
+    > give your most hard use cases and lets check how it's possible
+    we're still planning how to make this work (we have no prototype nor a stable planning, i want to organize this with some folks and start working on this) which is why i'm reaching in this channel
+
+[2024-12-16T02:26:57.562000+00:00] not_lain (id=1318041650722897980)
+    we have nothing yet, no js no python no plan, just an idea
+
+[2024-12-16T02:27:09.921000+00:00] not_lain (id=1318041702560305153)
+    (well some plans)
+
+[2024-12-16T02:29:25.517000+00:00] not_lain (id=1318042271291150447)
+    if you have some suggestions about modeling this (ofc modeling is always done in python as per the standard), which is why i said js will come later
+
+[2024-12-16T02:30:21.798000+00:00] not_lain (id=1318042507350904967)
+    if you have some knowledge about python and have some suggestion about how tackle how the AI will create things that will run himself feel free to share them
+
+[2024-12-16T02:32:29.858000+00:00] amir_s365 (id=1318043044473208832)
+    i mean it's like code interpreter, how much it's different in your mind ?
+
+[2024-12-16T02:34:00.485000+00:00] amir_s365 (id=1318043424590663691)
+    the good point is storing and using useful functions for later
+
+[2024-12-16T12:13:06.229000+00:00] khalid8401 (id=1318189158803701833)
+    Hi everyone, I have experienced with tool call and I would love to help here. As far as I understand that the project goal is to make AI model that not only invoke tool call, but also create the code or function for the tool call. Is that right ?
+

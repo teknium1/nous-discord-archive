@@ -1,0 +1,16 @@
+# Thread 'Hermes Agent Home Assistant Add-on' in forum #community-projects-showcase
+# thread_id=1487152060465156216 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:08.150816+00:00
+
+[2026-03-27T18:11:21.164000+00:00] wolframravenwolf (id=1487152060465156216)
+    Run Hermes Agent right inside your Home Assistant. This add-on that takes you from zero to working agent in less than five minutes. https://github.com/WolframRavenwolf/hermes-ha-addon
+    [attachment] Hermes_Agent_Home_Assistant_Add-on.mp4 https://cdn.discordapp.com/attachments/1487152060465156216/1487152062230827098/Hermes_Agent_Home_Assistant_Add-on.mp4?ex=6a021bc9&is=6a00ca49&hm=ee88b8a91d92a21311717d140119302cf91a81ed5559329e4dc4860e22ae0c55&
+    [embed] GitHub - WolframRavenwolf/hermes-ha-addon: Hermes Agent Home Assist... https://github.com/WolframRavenwolf/hermes-ha-addon
+
+[2026-03-27T18:59:31.998000+00:00] evangineer (id=1487164185501765632)
+    w00t, just listened to you mention it on ThursdAI!
+
+[2026-03-27T19:09:43.442000+00:00] wolframravenwolf (id=1487166750083645500)
+    Great to meet a ThursdAI listener here! 👋  Hermes Agent was definitely my AI highlight this week. We even continued the discussion in our first-ever ThursdAI After-Hours Space right after the main event. If you want to check it out as well, the recording is here: https://x.com/i/spaces/1AKEmOjqnNgKL?s=20 - our Hermes discussion starts at 08:40.
+    [embed] Play recording: ThursdAI After-Hours https://twitter.com/i/spaces/1AKEmOjqnNgKL?s=20
+

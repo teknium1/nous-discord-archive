@@ -1,0 +1,8 @@
+# Thread 'Humanoids need stable camera tracking' in forum #community-projects-showcase
+# thread_id=1492163214488768512 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:27.621163+00:00
+
+[2026-04-10T14:03:53.386000+00:00] reavatar (id=1492163214488768512)
+    https://x.com/fpv_labs/status/2042585804162371713
+    [embed]  https://twitter.com/fpv_labs/status/2042585804162371713
+

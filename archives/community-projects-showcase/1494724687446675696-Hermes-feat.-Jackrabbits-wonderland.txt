@@ -1,0 +1,40 @@
+# Thread 'Hermes feat. Jackrabbits wonderland' in forum #community-projects-showcase
+# thread_id=1494724687446675696 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:59.733093+00:00
+
+[2026-04-17T15:42:16.129000+00:00] alcatr4z (id=1494724687446675696)
+    Zero-knowledge AES256 layer for Hermes Agent. Your data stays yours. The provider sees noise.
+    
+    ## What This Is
+    
+    A four-component encryption layer for Hermes Agent:
+    
+    | Component | Role |
+    |-----------|------|
+    | **JackrabbitDLM** | Volatile key vault — keys in memory only, TTL-bound, auto-destroy on crash |
+    | **cryptographic_middleware** | AES256-GCM encrypt/decrypt, key rotation, chaff injection |
+    | **cryptographic_plugin** | Hermes-agent plugin — injects cryptographic header into system prompt |
+    | **lan_gateway** | HTTP + raw TCP server — control from any LAN device (browser, curl, netcat, iOS Shortcuts) |
+    
+    --
+    
+    https://github.com/itsXactlY/Jackrabbit-wonderland/blob/main/USECASES.md
+    [embed] Jackrabbit-wonderland/USECASES.md at main · itsXactlY/Jackrabbit-w... https://github.com/itsXactlY/Jackrabbit-wonderland/blob/main/USECASES.md
+
+[2026-04-17T18:18:08.521000+00:00] lauratom (id=1494763914221588661)
+    Keep up the good work bro!
+
+[2026-04-17T18:41:04.488000+00:00] alcatr4z (id=1494769685445742592)
+    Keeping my best, this can be formed into an awesome 💎 together as crowd. 🙂
+
+[2026-04-17T20:10:25.935000+00:00] vynxe_vainglory (id=1494792172984340570)
+    Big
+
+[2026-04-17T20:57:18.114000+00:00] lauratom (id=1494803968117706954)
+    yeye very good! u are the best lol ! ❤️
+    [reply to alcatr4z msg=1494769685445742592]
+
+[2026-04-17T21:03:01.289000+00:00] alcatr4z (id=1494805407498113094)
+    Filtering... ^^ Than as screenshot here. ❤️
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494724687446675696/1494805407233867907/image.png?ex=6a019b45&is=6a0049c5&hm=ddf8291b50d737cef95e428872256a09de9a71c7388869ac972a47d92dcc13b0&
+

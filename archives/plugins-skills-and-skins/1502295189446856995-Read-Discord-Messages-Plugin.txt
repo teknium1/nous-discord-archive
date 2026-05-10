@@ -1,0 +1,32 @@
+# Thread 'Read Discord Messages Plugin' in forum #plugins-skills-and-skins
+# thread_id=1502295189446856995 forum_id=1485392832154832906
+# Started 2026-05-10T19:51:59.890278+00:00
+
+[2026-05-08T13:04:44.459000+00:00] jonmichaels (id=1502295189446856995)
+    I was so used to telling OpenClaw to read a specific Discord message for context that when I switched to Hermes Agent and it told me it couldn't, I was shocked.
+    
+    So I asked it to write the code so that it could.
+    
+    Now I have asked it to turn it into a plugin and publish it so that everyone could do the same.
+    
+    https://github.com/hermes90201/hermes-discord-tools
+    [embed] GitHub - hermes90201/hermes-discord-tools: Discord message reading ... https://github.com/hermes90201/hermes-discord-tools
+
+[2026-05-09T12:44:10.004000+00:00] ejectzero (id=1502652399633039504)
+    Gonna give it a shot thanks..
+
+[2026-05-09T15:39:31.217000+00:00] vayaperson (id=1502696528798679205)
+    If you need something similar for whatsapp:
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    
+    It extends the native Hermes whatsapp tool functions. You can automate all your whatsapp account 🙂 SHARE IF YOU FIND IT USEFUL ❤️
+    <@352655177612001284> maybe we should collab? 🙂
+    [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Andoriña: ... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    [reply to ejectzero msg=1502652399633039504]
+
+[2026-05-09T19:21:20.001000+00:00] ejectzero (id=1502752349884514458)
+    Cool, I currently only use discord and am rate limited atm :/, but will consider it for future builds using whatsapp 💪
+
+[2026-05-10T01:44:24.583000+00:00] zinkdifferent_49268 (id=1502848754208870511)
+    You’re using a ‘feature’ that has been deprecated by Discord since 2023. You might want to address and update that.
+

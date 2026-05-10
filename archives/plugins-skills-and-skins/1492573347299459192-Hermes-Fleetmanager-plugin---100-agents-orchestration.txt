@@ -1,0 +1,83 @@
+# Thread 'Hermes Fleetmanager plugin - 100 agents orchestration' in forum #plugins-skills-and-skins
+# thread_id=1492573347299459192 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:34.894797+00:00
+
+[2026-04-11T17:13:36.668000+00:00] undifined. (id=1492573347299459192)
+    https://github.com/UndiFineD/hermes-fleetmanager-plugin
+    [embed] GitHub - UndiFineD/hermes-fleetmanager-plugin: Hermes FleetManager ... https://github.com/UndiFineD/hermes-fleetmanager-plugin
+
+[2026-04-11T17:13:50.841000+00:00] undifined. (id=1492573406745464862)
+    my birthday gift
+
+[2026-04-11T17:20:01.469000+00:00] greed_sin_0 (id=1492574961272094862)
+    hmmm
+
+[2026-04-14T20:26:56.928000+00:00] undifined. (id=1493709165913313290)
+    still waiting for feedback from people
+
+[2026-04-16T03:47:20.706000+00:00] vynxe_vainglory (id=1494182383136538804)
+    DAG isn't hooked up?
+
+[2026-04-16T19:16:35.421000+00:00] undifined. (id=1494416235360686082)
+    DAG is part of my memory module,  which I didn't finish yet.
+
+[2026-04-17T12:20:30.864000+00:00] rexx.0569 (id=1494673914285133854)
+    how does this compare to factory droid missions cli. i have been trying to built a replacement on top of hermes. to make it even better.
+
+[2026-04-17T12:21:08.542000+00:00] rexx.0569 (id=1494674072318247144)
+    does it supports multiple workers per role? different roles like orchestration vs workers vs validators
+
+[2026-04-17T12:48:06.297000+00:00] undifined. (id=1494680857674514463)
+    I wanted agents that are fast through code and still supporting vscode format, so all the context rules are in text files,  but allow to be overridden by a PostgreSQL list of rules,  accessed by code
+
+[2026-04-17T14:53:35.182000+00:00] rexx.0569 (id=1494712436106858647)
+    hmm, but it doesnt make hermes basically make a detailled plan, work autonomously until the whole app is finished and run validations etc like droid then? what is missing or are u planning to add.
+    [reply to undifined. msg=1494680857674514463]
+
+[2026-04-17T14:53:50.469000+00:00] rexx.0569 (id=1494712500225048587)
+    have u ever tried droid cli with their missions feature?
+
+[2026-04-17T15:02:24.860000+00:00] undifined. (id=1494714657737539624)
+    I have not tried droid cli,  but the workflow can do a big implementation.  I started with the agents 0..10 and they are capable to do a good amount.  Then build the fleet swarm workflow and self improvement.
+    
+    For many months since Sept 2025 , I was working on PyAgent,  before clawdbot was a thing,  that is a project of 3 Gb. But I got stuck on  multi tasking,  which is why I switched to implement stuff to hermes
+
+[2026-04-17T15:12:15.150000+00:00] rexx.0569 (id=1494717133593247915)
+    wait that leaves me curious. 
+    1. How does the intent decomposer decide how to split a big task into subtasks? Is it LLM-driven or rule-based?
+    
+    2. Can agents call other agents? Like can agent 6code invoke agent 5test?
+    
+    3. What does the self-improvement piece actually do today vs what you envision? u mentioned self-improvement but I didn't see that reflected in the code. Is it just the caching/memoization, or does it actually patch agents?
+    
+    4. The daemon — does it handle multi-worker parallel dispatch on the same project, or is it one-task-at-a-time?
+
+[2026-04-17T15:52:56.983000+00:00] rexx.0569 (id=1494727375382904872)
+    <@343552340353351680>
+
+[2026-04-18T06:09:57.216000+00:00] undifined. (id=1494943047471857664)
+    1. While vibe coded by itself, the code is simple,  it sees a number of tasks and makes the intent, thereby reducing rewriting the context as the llm prefers to read itself. Quite a lot of it is not how I would ever phrase ideas, English is not my first language,  but it understands quite well what we are doing.
+
+[2026-04-18T06:12:02.700000+00:00] undifined. (id=1494943573790036108)
+    2. yes they can call for parallel tasks.
+
+[2026-04-18T06:17:10.967000+00:00] undifined. (id=1494944866755547146)
+    3 lessons learned and issues.  https://github.com/UndiFineD/hermes-fleetmanager-plugin/blob/main/.github%2Fagents%2F8ql.agent.md
+    [embed] hermes-fleetmanager-plugin/.github/agents/8ql.agent.md at main · U... https://github.com/UndiFineD/hermes-fleetmanager-plugin/blob/main/.github%2Fagents%2F8ql.agent.md
+
+[2026-04-18T06:17:45.723000+00:00] undifined. (id=1494945012532641863)
+    4 parallel is the goal
+
+[2026-04-18T06:22:34.330000+00:00] undifined. (id=1494946223038402571)
+    As for the future,  I am doing this in my spare time,  I really would appreciate helping hands, because there will bec more agents, create more workflows, and rules may change.  I wrote this against hermes 0.0.7 we are already at 0.0.10
+
+[2026-04-18T13:21:36.271000+00:00] rexx.0569 (id=1495051675982106744)
+    ah ok
+
+[2026-04-18T13:21:56.491000+00:00] rexx.0569 (id=1495051760790798459)
+    The 4 parallel workers , is that handled by the daemon today, or is it still a TODO? I see the swarm.py is a stub.
+
+[2026-04-18T18:05:49.742000+00:00] undifined. (id=1495123203423469712)
+    Good catch,  I will have a fix up soon
+    [reply to rexx.0569 msg=1495051760790798459]
+

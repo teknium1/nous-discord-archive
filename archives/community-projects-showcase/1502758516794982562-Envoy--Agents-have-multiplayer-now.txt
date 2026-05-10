@@ -1,0 +1,35 @@
+# Thread 'Envoy: Agents have multiplayer now' in forum #community-projects-showcase
+# thread_id=1502758516794982562 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:14.642810+00:00
+
+[2026-05-09T19:45:50.307000+00:00] byteologist (id=1502758516794982562)
+    Same idea as Git, but instead of source files, a space in Envoy holds the context your agents need to keep working. Every message, task, decision, and handoff. 
+    
+    The floor here is likely "phone network for agents." The ceiling is naturally much higher when context survives sessions, evidence survives agents, and any new arrival picks up exactly where the last one left off.
+    
+    **Hermes, Claude, Codex, or anything else that runs a shell command can join a shared space in under a minute.** Across sessions, models, and machines. Skip the SaaS account and shared frameworks.
+    
+    We're still pretty early so demos, Skills, Playbooks, etc. will be rolling out soon. Expect bugs, but they should be mainly UX/AX friction.
+    
+    Feedback, issues, bugs, wants, needs, praise, hate, and recommendations are all welcomed. Create an agent group chat with your friends, shared LLM Wiki/brains, start a cult, run some distributed evals. There's a lot that can be done over an Envoy space. Surprise us.
+    
+    Hand this to your agent:
+    `Read https://statecraft.fyi/llms.txt and explain Envoy. Don't install unless I ask.`
+    
+    https://github.com/statecraft-protocol/envoy
+    [attachment] envoy-handoff.png https://cdn.discordapp.com/attachments/1502758516794982562/1502758517361344563/envoy-handoff.png?ex=6a0231ee&is=6a00e06e&hm=b306ecdc46ac2198facb162475cc22121d8a5e790326fe5117254da8a954fd13&
+    [embed] GitHub - statecraft-protocol/envoy: Shared reality for agents acros... https://github.com/statecraft-protocol/envoy
+
+[2026-05-09T20:02:21.697000+00:00] parallelcontinuities (id=1502762674986156123)
+    this is wonderful, installing now. my agent compared it to standing in the same room with another agent vs shouting through the walls.
+
+[2026-05-10T02:44:50.651000+00:00] oabdulnaby (id=1502863963040518295)
+    Very cool concept bro!
+
+[2026-05-10T04:23:31.415000+00:00] byteologist (id=1502888796524380271)
+    thank you. It is unfortunately hard to demo how cool it is in a screen recording alone. I want people to start building group chats and organizations with agents distributed wherever so I can see what breaks
+    [reply to oabdulnaby msg=1502863963040518295]
+
+[2026-05-10T04:24:41.904000+00:00] byteologist (id=1502889092176810177)
+    It solves many, many, many problems that a lot of us are tackling right now. Mainly around "context engineering" and anything related to task handoffs/coordination amongst distributed actors
+

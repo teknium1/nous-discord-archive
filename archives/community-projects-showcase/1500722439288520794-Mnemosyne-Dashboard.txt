@@ -1,0 +1,105 @@
+# Thread 'Mnemosyne Dashboard' in forum #community-projects-showcase
+# thread_id=1500722439288520794 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:24.793836+00:00
+
+[2026-05-04T04:55:11.601000+00:00] wysie_ (id=1500722439288520794)
+    Built a dashboard for the amazing Mnemosyne plugin by <@151598363131904000> 
+    
+    https://github.com/wysie/mnemosyne-dashboard
+    
+    Mnemosyne Dashboard — Features
+    
+    - Local, read-only web dashboard for browsing and visualising Mnemosyne memory stores
+    - Opens the SQLite database in read-only mode; no edit/delete/write memory endpoints
+    - No cloud calls, no external JS/CSS dependencies, self-hosted static assets
+    
+    Core views:
+    - Overview dashboard with counts for working memory, episodic memory, triples, and consolidations
+    - Recent memory cards with raw JSON detail drawer
+    - Memory browser with query, tier, source, scope, session filters, and sorting
+    - Global search across memories, triples, and consolidations
+    - Triples table with clickable row details
+    - Recall debugger with approximate ranking explanations
+    - Timeline grouped by day or session
+    - Consolidation history with filtering, JSON inspection, and jump-to-session memories
+    
+    Graph / exploration:
+    - Interactive relationship graph
+    - Query filter for graph data
+    - Clickable nodes and edges
+    - Inspector panel with jumps into Triples and Memories
+    - Clickable overview breakdown rows that jump into filtered Memories
+    
+    UI / UX:
+    - Desktop and mobile responsive layouts
+    - Dark and light themes
+    - Mobile top bar with hamburger menu and theme toggle
+    - Mnemosyne-inspired light theme with self-hosted fonts/assets
+    - Screenshot gallery in README generated from synthetic mock data
+    
+    Security / ops:
+    - Binds to 127.0.0.1 by default
+    - Can bind to 0.0.0.0 only when explicitly configured for LAN access
+    - Optional password authentication from Settings
+    - /api/health endpoint for smoke checks and uptime probes
+    - Baseline browser security headers: CSP, no-sniff, frame-deny, no-referrer
+    - Hardened static asset serving with path traversal protection
+    
+    Hermes plugin tools:
+    - mnemosyne_dashboard_start
+    - mnemosyne_dashboard_stop
+    - mnemosyne_dashboard_status
+    - mnemosyne_dashboard_config
+    [attachment] IMG-20260504-WA0028.png https://cdn.discordapp.com/attachments/1500722439288520794/1500722440072986674/IMG-20260504-WA0028.png?ex=6a0209ef&is=6a00b86f&hm=ecdc91b44acdbf31afb25a7e519c71f2405a7c2ea53cdd464f64398c8056a8db&
+    [attachment] IMG-20260504-WA0029.png https://cdn.discordapp.com/attachments/1500722439288520794/1500722440823636018/IMG-20260504-WA0029.png?ex=6a0209ef&is=6a00b86f&hm=168fd7ac95ed2901dc7f58b8b0991d936780fa01a6139c0e95ce1bb50bf94680&
+    [attachment] IMG-20260504-WA0030.png https://cdn.discordapp.com/attachments/1500722439288520794/1500722441692119122/IMG-20260504-WA0030.png?ex=6a0209f0&is=6a00b870&hm=30846b7a23b8db2ce1cc0a00e0f2b5c8bd3b5ead263b91f3be16e9d84ddea3c1&
+    [attachment] IMG-20260504-WA0031.png https://cdn.discordapp.com/attachments/1500722439288520794/1500722442522333264/IMG-20260504-WA0031.png?ex=6a0209f0&is=6a00b870&hm=9cc972b3cd33949ff26bc49970242959ba158ad6e9ee04954a306ef609fe2cb2&
+    [attachment] IMG-20260504-WA0032.png https://cdn.discordapp.com/attachments/1500722439288520794/1500722443432493186/IMG-20260504-WA0032.png?ex=6a0209f0&is=6a00b870&hm=9eece558b121993d49e6ca5a9908cfc9cfb29d11294a8e281b2fc8fda485d14c&
+    [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
+
+[2026-05-04T11:06:02.656000+00:00] wysie_ (id=1500815766977646662)
+    Pushed 0.6, added ability to edit memories plus a whole bunch of features.
+    
+    https://github.com/wysie/mnemosyne-dashboard
+    [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
+
+[2026-05-05T04:23:05.669000+00:00] wysie_ (id=1501076749209964655)
+    Working on a constellation for the memories
+    [attachment] Screen_Recording_20260505_122105_Chrome.mp4 https://cdn.discordapp.com/attachments/1500722439288520794/1501076749138792608/Screen_Recording_20260505_122105_Chrome.mp4?ex=6a020269&is=6a00b0e9&hm=6f43f836dffd851066f8e474935c539e2df1f91376f7890c721e11dad017d5cf&
+
+[2026-05-05T04:36:11.481000+00:00] wysie_ (id=1501080045144379513)
+    https://github.com/wysie/mnemosyne-dashboard
+    
+    Pushed the latest code. There's  now a "context bank" that shows what Ur agent knows about you via mnemosyne, plus constellation view of your memories.
+    [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
+
+[2026-05-05T05:26:22.146000+00:00] fleety13 (id=1501092672788758560)
+    That's a decent step wysie.  Generally speaking what's actually stored in memory is a total black box.  Is it going to far if i'm thinking that this doesnt just exist to what is stored about us, but holds true if we're discussing knowledge domains with our agents?
+    [reply to wysie_ msg=1501080045144379513]
+
+[2026-05-05T06:35:05.556000+00:00] wysie_ (id=1501109967623688233)
+    Yeah it just shows what mnemosyne stores from your conversations  so it's not just about the user
+
+[2026-05-05T13:07:45.343000+00:00] wysie_ (id=1501208784532410499)
+    Pushed another update. Rewrote all the visualizations using three.js so it's much smooth.
+    [attachment] Screen_Recording_20260505_205319_Chrome.mp4 https://cdn.discordapp.com/attachments/1500722439288520794/1501208783215530014/Screen_Recording_20260505_205319_Chrome.mp4?ex=6a01d4a1&is=6a008321&hm=84242945d5306f7d9529d91f61d65734e1f8fbc0c742cc8679096c6218e8c667&
+    [attachment] Screen_Recording_20260505_205244_Chrome.mp4 https://cdn.discordapp.com/attachments/1500722439288520794/1501208783798665266/Screen_Recording_20260505_205244_Chrome.mp4?ex=6a01d4a1&is=6a008321&hm=a6c4a502e416db2a7dcf957fa41adb97db65283ee8abe5d22721e15766f676fa&
+
+[2026-05-05T13:11:38.263000+00:00] nulledvector (id=1501209761469694083)
+    Looks insane!  Love the effects on the first one, love the second stars-like shine effects!
+    [reply to wysie_ msg=1501208784532410499]
+
+[2026-05-05T13:28:15.305000+00:00] wysie_ (id=1501213943367078049)
+    Thank you!
+    [reply to nulledvector msg=1501209761469694083]
+
+[2026-05-05T14:34:48.012000+00:00] fleety13 (id=1501230689994149908)
+    I'll update that tomorrow, i just finished wiring it up an hour ago. 
+    I don't normally lean into eye candy... however they way you've got all of it looking and feeling incentivises me to check in on whats going on with my memory instead of just reading Mnemosyne health cron reports 😎
+
+[2026-05-06T07:07:57.789000+00:00] wysie_ (id=1501480627634044968)
+    https://github.com/wysie/mnemosyne-dashboard
+    
+    Pushed 0.9.1, added features and updated backend based on the latest 2.3 Mnemosyne release.
+    [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
+

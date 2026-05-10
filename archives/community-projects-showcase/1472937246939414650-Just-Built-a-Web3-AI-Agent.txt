@@ -1,0 +1,16 @@
+# Thread 'Just Built a Web3 AI Agent!' in forum #community-projects-showcase
+# thread_id=1472937246939414650 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:25.119142+00:00
+
+[2026-02-17T11:58:48.757000+00:00] mrpedro. (id=1473287568782266368)
+    I created these agents using OpenRouter, Nous model, HTML, and JavaScript. 
+    
+    You can take a look: https://c371d9d3-8985-408d-93e6-f13d2a826c24-00-hz6u30wnxzam.spock.replit.dev/
+    
+    An upgrade will be done in a few days where the UI will improve with added features. 
+    With these agents, you can type your favorite projects and get to know more about them. It lets you have more information about the project that interests you.
+
+[2026-02-17T11:59:52.339000+00:00] mrpedro. (id=1473287835464499272)
+    I will be needing your input on this. Tell me what you think about it and where I need to improve. Thanks
+    [reply to mrpedro. msg=1473287568782266368]
+

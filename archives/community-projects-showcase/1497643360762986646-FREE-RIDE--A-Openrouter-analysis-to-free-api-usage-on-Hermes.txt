@@ -1,0 +1,20 @@
+# Thread 'FREE-RIDE: A Openrouter analysis to free api usage on Hermes' in forum #community-projects-showcase
+# thread_id=1497643360762986646 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:41.630087+00:00
+
+[2026-04-25T17:00:02.074000+00:00] .pool. (id=1497643360762986646)
+    https://github.com/plcunha/hermes-free-ride
+    Hermes Free-Ride
+    Robust module for Hermes to use free OpenRouter templates in sub-agents and lightweight tasks, without changing the main primary template.
+    
+    The idea comes from the original OpenClaw free-ride, but with a focus on the Hermes ecosystem:
+    
+    Free template discovery
+    Filters for truly useful templates for text agents
+    Real probes in chat/completions
+    Caching with TTL
+    Cooldown for problematic templates
+    Health check and automatic delegation template rotation
+    Secure integration with ~/.hermes/config.yaml
+    [embed] GitHub - plcunha/hermes-free-ride https://github.com/plcunha/hermes-free-ride
+

@@ -1,0 +1,18 @@
+# Thread 'Coherent theme engine with tree-sitter (WIP)' in forum #community-projects-showcase
+# thread_id=1489440981630849095 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:04.472189+00:00
+
+[2026-04-03T01:46:42.496000+00:00] sizablehog (id=1489440981630849095)
+    really just trying to remove any hard coded color preferences, trying to set up everything as variables in config.yaml. it points to current users current theme and can work with transparent terminals. would like to hear any suggestions for additions or improvements.  i am no coder plz b nice
+    [attachment] Screenshot_20260402_192800.png https://cdn.discordapp.com/attachments/1489440981630849095/1489440982683488286/Screenshot_20260402_192800.png?ex=6a01ddc2&is=6a008c42&hm=697037d782cf346029edd451e8191a0ee828d3d38570bd2b4b84d8274ee6db02&
+    [attachment] Screenshot_20260402_193243.png https://cdn.discordapp.com/attachments/1489440981630849095/1489440983597715647/Screenshot_20260402_193243.png?ex=6a01ddc2&is=6a008c42&hm=a78caf36ce00f310edc9899980499506fc667cbb08032658d2a292889c5ed48c&
+
+[2026-04-03T02:01:53.181000+00:00] jcrabapple (id=1489444801320321075)
+    YES
+
+[2026-04-03T02:02:01.611000+00:00] jcrabapple (id=1489444836678570004)
+    How?! How do I have it?
+
+[2026-04-03T02:24:46.079000+00:00] sizablehog (id=1489450559672029275)
+    good question 😑 would you want to try out whole custom theme engine? i can make public fork i think, there are lots of changes though and it is work in progress. im new to computers and git so im not sure what would be best
+

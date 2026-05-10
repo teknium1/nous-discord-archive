@@ -1,0 +1,73 @@
+# Thread 'HERMES TUI Companion' in forum #community-projects-showcase
+# thread_id=1489107955327570081 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:51.781768+00:00
+
+[2026-04-02T03:43:22.838000+00:00] synextco (id=1489107955327570081)
+    Hey Team! Just built something I found useful over the past few days. Hermes hud is a TUI dashboard that watches your ai agent think. it reads from your agent's memory, tracks skills, sessions, corrections, projects, cron jobs, all of it. live. 
+    
+    It mirrors everything the agent knows about itself. conversations held, mistakes corrected, growth over time. if the data's there it shows up. if not it tells you what's missing.
+    
+    Let me know if you find utlility. 
+    
+    https://github.com/joeynyc/hermes-hud
+    [embed] GitHub - joeynyc/hermes-hud: TUI consciousness monitor for Hermes https://github.com/joeynyc/hermes-hud
+
+[2026-04-02T10:55:14.529000+00:00] angelitusss (id=1489216636836642996)
+    I like the HUD! Very useful. THanks for sharing
+
+[2026-04-02T11:09:29.832000+00:00] synextco (id=1489220224237699244)
+    That's so awesome to know. Very welcome!! Working on something else for those that might want a web app instead.
+    [reply to angelitusss msg=1489216636836642996]
+
+[2026-04-02T11:38:04.969000+00:00] angelitusss (id=1489227418043416704)
+    A lot of insightful information at glance and cool retro look. Just installed and running solid.
+
+[2026-04-02T12:22:33.728000+00:00] angelitusss (id=1489238611630227610)
+    BTW, a useful alias:
+    ```bash
+    # hermes-hud alias
+    alias hud='(cd ~/hermes-hud && source venv/bin/activate && hermes-hud)'
+    ```
+
+[2026-04-02T12:25:47.332000+00:00] synextco (id=1489239423664128062)
+    nice one!! thanks for the feedback!! if you have any ideas or suggestion for me to add, please let me know. i want to be thoguhtful when i add stuff.
+    [reply to angelitusss msg=1489238611630227610]
+
+[2026-04-02T12:27:17.220000+00:00] angelitusss (id=1489239800681726073)
+    IDK if possible in Hermes, but I used to have a web-based dashboard with OpenClaw to monitor the active agents running (showing model and how many seconds were running) along with past sessions. That was very helpful to see in real time what the agent was doing.
+
+[2026-04-02T12:27:54.968000+00:00] synextco (id=1489239959008313547)
+    yeah , thats a streaming feature. im working on that now with another project
+    [reply to angelitusss msg=1489239800681726073]
+
+[2026-04-04T04:20:13.922000+00:00] binzel (id=1489842005017235509)
+    thank you for this! its very useful! just curious have you thought about integrating profile stats ?
+    [reply to synextco msg=1489107955327570081]
+
+[2026-04-04T11:45:55.288000+00:00] synextco (id=1489954166435483770)
+    100%. Having coffee now and I will continue working on it.
+    [reply to binzel msg=1489842005017235509]
+
+[2026-04-04T15:54:59.916000+00:00] synextco (id=1490016848748482562)
+    check it out
+    [attachment] Screenshot_2026-04-04_115059.png https://cdn.discordapp.com/attachments/1489107955327570081/1490016848673243436/Screenshot_2026-04-04_115059.png?ex=6a01fbd3&is=6a00aa53&hm=c258767e91585b74ac02141eead2272a3f440a44b7fa95550c62dde40a35c78f&
+    [reply to binzel msg=1489842005017235509]
+
+[2026-04-04T16:41:29.888000+00:00] synextco (id=1490028550739464355)
+    New Release is out with Profiles.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489107955327570081/1490028550101795037/image.png?ex=6a0206b9&is=6a00b539&hm=a51f4256d09b89943bbd5513dd2fb160fa6c1cb5faf12beb5ab00f3141594ad4&
+
+[2026-04-04T18:21:55.853000+00:00] binzel (id=1490053825468432464)
+    fire thank you so much
+    [reply to synextco msg=1490016848748482562]
+
+[2026-04-06T23:22:43.720000+00:00] synextco (id=1490854299440517172)
+    Couple new updates that really matter.
+
+[2026-04-06T23:22:58.998000+00:00] synextco (id=1490854363520962731)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489107955327570081/1490854362850005134/image.png?ex=6a01bc12&is=6a006a92&hm=283b471faf40bcc0fc00ea718fa282884dbdbaf7159c9699fd42d25268931d12&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489107955327570081/1490854363210579968/image.png?ex=6a01bc12&is=6a006a92&hm=bb1608a5bd95b0b86db2e4c5f8d2cfd8aeab3d9bf17848312730cfc8ba6d8bbd&
+
+[2026-04-08T09:46:44.994000+00:00] olafgeibig (id=1491373727391416372)
+    Using uv, running this is a oneliner: `uvx --from git+https://github.com/joeynyc/hermes-hud hermes-hud`
+

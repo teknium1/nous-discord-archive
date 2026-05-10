@@ -1,0 +1,94 @@
+# Thread 'Embeddr' in forum #community-projects-showcase
+# thread_id=1476331598529040526 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:21.411128+00:00
+
+[2026-02-25T21:34:42.004000+00:00] nynxz (id=1476331598529040526)
+    Apache 2.0 - Local First Orchestration Layer
+    [attachment] ee2.png https://cdn.discordapp.com/attachments/1476331598529040526/1476331598767980697/ee2.png?ex=6a01a2b2&is=6a005132&hm=56baf6b4a2e0a2c570f0972c941b9866147558d784ac016128ff188dc346607f&
+
+[2026-02-25T21:35:30.302000+00:00] nynxz (id=1476331801105662076)
+    [attachment] 2026-02-25-190251_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476331801181028376/2026-02-25-190251_hyprshot.png?ex=6a01a2e2&is=6a005162&hm=c142c6337a27cd20342a4309488a1315229f4fc393009c734a5e9c3483b2f611&
+
+[2026-02-25T21:35:50.327000+00:00] nynxz (id=1476331885096599695)
+    [attachment] 2026-02-25-164531_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476331881720053841/2026-02-25-164531_hyprshot.png?ex=6a01a2f5&is=6a005175&hm=c86cbc1fd88c20a4882dd7664dfc8c4d7f5ac98e6b4f1fba8d52caede7df1cc3&
+    [attachment] 2026-02-25-164620_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476331882818834627/2026-02-25-164620_hyprshot.png?ex=6a01a2f5&is=6a005175&hm=5148db67f90cd5add6c2f54f1eed2d608841377fefbb310837eaab78cdd51cc1&
+    [attachment] 2026-02-25-163819_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476331883506827294/2026-02-25-163819_hyprshot.png?ex=6a01a2f5&is=6a005175&hm=a6b39a3afaa071bdb9e197fd0448f52d00a9c7898c18734132326fae107de7c1&
+    [attachment] 2026-02-25-163642_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476331884593025165/2026-02-25-163642_hyprshot.png?ex=6a01a2f6&is=6a005176&hm=fd3fa683c93c990cf87fe04460cc5ddd52a35e81953ca87f1db0503e2d2cc149&
+
+[2026-02-25T21:35:56.998000+00:00] nynxz (id=1476331913076801648)
+    [attachment] 2026-02-25-151545_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476331912628015297/2026-02-25-151545_hyprshot.png?ex=6a01a2fc&is=6a00517c&hm=706a9a2d5038ae31d39b317f5dc9512bb11e3d68efe1d955e47b34a5a5b01883&
+
+[2026-02-25T21:36:18.075000+00:00] nynxz (id=1476332001480020049)
+    [attachment] 2026-02-24-032223_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476331999865081907/2026-02-24-032223_hyprshot.png?ex=6a01a311&is=6a005191&hm=806f1a9f8b09b9c4df10c5828c24dc1fd4ee29f7dc111a80282d63bdf5ecb3ea&
+    [attachment] 2026-02-24-032408_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476332000460673235/2026-02-24-032408_hyprshot.png?ex=6a01a311&is=6a005191&hm=2f61185ef2b6ca5ed9fc04a89763d16057b73e11b16234c23e1107ba94ec8aeb&
+    [attachment] 2026-02-24-032606_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476332001123369072/2026-02-24-032606_hyprshot.png?ex=6a01a311&is=6a005191&hm=ce5465e8a67af25c6f5426b4e0f4d23a4292fee4c5f32f65f199d741b3527aba&
+
+[2026-02-25T21:36:28.528000+00:00] nynxz (id=1476332045323206879)
+    [attachment] 2026-02-23-000323_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476332044911902830/2026-02-23-000323_hyprshot.png?ex=6a01a31c&is=6a00519c&hm=eec684d26a914f1a563f81b89882d4b7c50978d935ace6b1e7971d1632e6e36b&
+
+[2026-02-25T21:36:35.586000+00:00] nynxz (id=1476332074926608568)
+    [attachment] 2026-02-22-162804_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476332074532339903/2026-02-22-162804_hyprshot.png?ex=6a01a323&is=6a0051a3&hm=5190145bbfec8a4485ecf07d3cc92050b9d3fd7c7591a41f4f3bc54ef350ea31&
+
+[2026-02-25T21:37:12.099000+00:00] nynxz (id=1476332228073099284)
+    [attachment] 2026-02-18-164510_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476332227561259048/2026-02-18-164510_hyprshot.png?ex=6a01a347&is=6a0051c7&hm=ccee009c1d0d3413d2d89f388ccb903645b8b449ceac4dc741bec66b8c43b049&
+
+[2026-02-25T21:39:41.075000+00:00] nynxz (id=1476332852923596930)
+    [attachment] Kooha-2026-02-25-16-48-42.mp4 https://cdn.discordapp.com/attachments/1476331598529040526/1476332845051023461/Kooha-2026-02-25-16-48-42.mp4?ex=6a01a3db&is=6a00525b&hm=6791beedfa51803488eed33badd4111aad3a5b5d39a3548c4140f57c72999fa4&
+
+[2026-02-25T21:41:13.837000+00:00] nynxz (id=1476333241995755550)
+    [attachment] 2026-02-12-153310_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476333238518808657/2026-02-12-153310_hyprshot.png?ex=6a01a439&is=6a0052b9&hm=fde3d6d60a6e29f56dc69ca609c29ac6100e9565dfe3eefa994c29f45f5b3b6f&
+    [attachment] 2026-02-12-153353_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476333239298822296/2026-02-12-153353_hyprshot.png?ex=6a01a439&is=6a0052b9&hm=4450a67f3f03b5fe5e3c871e462526e54ff7e51dee1ffc06d50fc130cfa5bf11&
+    [attachment] 2026-02-12-153432_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476333240645189753/2026-02-12-153432_hyprshot.png?ex=6a01a439&is=6a0052b9&hm=65a3419921094568968e095b34d1f4ec93aefe7126eb6c6e956922edc7ea4d86&
+    [attachment] 2026-02-12-153445_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476333241521668248/2026-02-12-153445_hyprshot.png?ex=6a01a439&is=6a0052b9&hm=512cbae81454a211823a7398a024b352a59913bd2f2d69f1e7d90489770c3d51&
+
+[2026-02-25T21:41:23.745000+00:00] nynxz (id=1476333283552923842)
+    [attachment] 2026-02-12-190520_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1476333283204927550/2026-02-12-190520_hyprshot.png?ex=6a01a443&is=6a0052c3&hm=04424122ff21ae6fa237eac9a5d486a9c431796cf59c2cb459744262adb2bf7e&
+
+[2026-02-25T21:42:10.469000+00:00] nynxz (id=1476333479527583846)
+    (older vid)
+    [attachment] Kooha-2026-01-22-15-48-07.mp4 https://cdn.discordapp.com/attachments/1476331598529040526/1476333477476569119/Kooha-2026-01-22-15-48-07.mp4?ex=6a01a471&is=6a0052f1&hm=f6d6f2aed94e06e56bf5774041f038d5e95badef7f06f14ac24037ced6dda833&
+
+[2026-02-25T21:48:08.046000+00:00] nynxz (id=1476334979314090024)
+    [attachment] splat-2048x2048-2026-02-25T12-47-52.png https://cdn.discordapp.com/attachments/1476331598529040526/1476334972473442484/splat-2048x2048-2026-02-25T12-47-52.png?ex=6a01a5d6&is=6a005456&hm=07aa137f53c38e403a07e3a12931678e403520e97157140e8ebbcbc75b1aa80d&
+    [attachment] splat-2048x2048-2026-02-25T12-51-41.png https://cdn.discordapp.com/attachments/1476331598529040526/1476334973563699353/splat-2048x2048-2026-02-25T12-51-41.png?ex=6a01a5d6&is=6a005456&hm=62ef8323f539fca4c19a17681becaeac2632537a773642fdbb7f37752d99a6ec&
+    [attachment] splat-2048x2048-2026-02-25T12-55-23.png https://cdn.discordapp.com/attachments/1476331598529040526/1476334974285254827/splat-2048x2048-2026-02-25T12-55-23.png?ex=6a01a5d6&is=6a005456&hm=e6115b8c43aaf5c7c5c108dc88cdd2954e840965915d1d32017e11ad6724fef3&
+    [attachment] splat-2048x2048-2026-02-25T15-16-36.png https://cdn.discordapp.com/attachments/1476331598529040526/1476334975359127748/splat-2048x2048-2026-02-25T15-16-36.png?ex=6a01a5d7&is=6a005457&hm=e6781436acf8615dce5e1f0a8f6a2ba4393e209decf46c65a9adcd758ca65202&
+    [attachment] splat-2048x2048-2026-02-25T11-39-27.png https://cdn.discordapp.com/attachments/1476331598529040526/1476334976881397963/splat-2048x2048-2026-02-25T11-39-27.png?ex=6a01a5d7&is=6a005457&hm=fab75db12a847736f6fbf1ad43499d070b8c92b245afce5744f0d9bbbd3550dc&
+    [attachment] splat-2048x2048-2026-02-25T11-40-05.png https://cdn.discordapp.com/attachments/1476331598529040526/1476334977535705190/splat-2048x2048-2026-02-25T11-40-05.png?ex=6a01a5d7&is=6a005457&hm=8f4932337daed39f391cfbbdb260beccd3f3ba690a25b877fef48523bf1e53db&
+    [attachment] splat-2048x2048-2026-02-25T11-34-55.png https://cdn.discordapp.com/attachments/1476331598529040526/1476334978647199794/splat-2048x2048-2026-02-25T11-34-55.png?ex=6a01a5d7&is=6a005457&hm=ecc3006aae89c50ca11d8edaf1a653b135e3c16ca8483c0c6bb2f484550526f1&
+
+[2026-02-27T17:17:55.359000+00:00] evangineer (id=1476991754107355368)
+    Is this it?
+    
+    > Embeddr is a local-first substrate for artifacts and tools — track lineage, search across systems, and compose capabilities without locking you into a UI.
+    
+    https://embeddr.net/
+    [embed] Embeddr Network https://embeddr.net/
+
+[2026-02-27T19:57:44.928000+00:00] ee.dd (id=1477031975675236394)
+    GitHub link ?
+    [reply to nynxz msg=1476334979314090024]
+
+[2026-02-27T23:35:58.065000+00:00] nynxz (id=1477086892271861790)
+    https://github.com/embeddr-net/embeddr-cli
+     
+    am working on cleaning up packages for plugins and things getting a new version out... I dont recommend the old version at the moment - lots of things have changed 
+    
+    https://github.com/embeddr-net/embeddr-plugins/tree/0.2.0a/plugins/examples/embeddr-stocks
+    
+    this is a kinda example of a more up to date plugin <a:scrajj:1136141358919336006> 
+    
+    getting sidetracked with SAE's
+    is like mini palantir ontology AIP thingy for creative ai stuff or anything but free and not for bizniz <:sadge_business:901025284407590912>  <:PogU:852993148983443456>
+    [embed] GitHub - embeddr-net/embeddr-cli https://github.com/embeddr-net/embeddr-cli
+    [embed] embeddr-plugins/plugins/examples/embeddr-stocks at 0.2.0a · embedd... https://github.com/embeddr-net/embeddr-plugins/tree/0.2.0a/plugins/examples/embeddr-stocks
+
+[2026-03-09T17:50:04.572000+00:00] nynxz (id=1480623724469424290)
+    [attachment] 2026-03-10_03-09-55noaud.mp4 https://cdn.discordapp.com/attachments/1476331598529040526/1480623719775998002/2026-03-10_03-09-55noaud.mp4?ex=6a0216cb&is=6a00c54b&hm=b0f0a55b5e365b1dc0b86bc8738a0ffe0c891ea6ec36fbb900490c5ce89d8656&
+    [attachment] 2026-03-10_02-04-51.mp4 https://cdn.discordapp.com/attachments/1476331598529040526/1480623721730543869/2026-03-10_02-04-51.mp4?ex=6a0216cb&is=6a00c54b&hm=0e96cc98c5d2567ea148ce093aab20b5debafbee89922b84c7b79baff357d8e4&
+    [attachment] 2026-03-10_02-16-14.mp4 https://cdn.discordapp.com/attachments/1476331598529040526/1480623723307470878/2026-03-10_02-16-14.mp4?ex=6a0216cc&is=6a00c54c&hm=3e802d6a58ae816412502a40b3cfad979e1b029830607cd511755f80bb21b854&
+
+[2026-03-09T17:50:10.986000+00:00] nynxz (id=1480623751371423886)
+    [attachment] 2026-03-09-234940_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1480623750784356423/2026-03-09-234940_hyprshot.png?ex=6a0216d2&is=6a00c552&hm=6e0e1dc5721f1490ec2da1acd7b825a4d66400f098a125bf61eda9f534ea23a5&
+    [attachment] 2026-03-09-235254_hyprshot.png https://cdn.discordapp.com/attachments/1476331598529040526/1480623751388467321/2026-03-09-235254_hyprshot.png?ex=6a0216d2&is=6a00c552&hm=a1ad3005c1264e363588e3c1369c10222b1a3ec1e40992420421c7fc1c014c79&
+

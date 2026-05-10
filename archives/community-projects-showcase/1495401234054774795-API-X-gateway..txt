@@ -1,0 +1,8 @@
+# Thread 'API X gateway.' in forum #community-projects-showcase
+# thread_id=1495401234054774795 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:56.292255+00:00
+
+[2026-04-19T12:30:37.410000+00:00] autumnn5389 (id=1495401234054774795)
+    https://github.com/NousResearch/hermes-agent/pull/12352
+    [embed] feat: add Twitter/X gateway platform adapter with X API v2 streamin... https://github.com/NousResearch/hermes-agent/pull/12352
+

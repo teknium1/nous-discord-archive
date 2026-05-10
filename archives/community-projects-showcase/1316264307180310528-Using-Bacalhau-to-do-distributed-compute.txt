@@ -1,0 +1,20 @@
+# Thread 'Using Bacalhau to do distributed compute?' in forum #community-projects-showcase
+# thread_id=1316264307180310528 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:43.121153+00:00
+
+[2024-12-11T04:44:25.840000+00:00] aronchick (id=1316264307180310528)
+    Hi! 
+    
+    I'm David Aronchick - co-founder of Bacalhau (bacalhau.org). We've always wanted to unlock folks to be able to contribute together using our (open source) platform. I was wondering if there's anyone who would like to contribute and/or give feedback on how we might be able to do this?
+    
+    Thanks!
+
+[2024-12-11T23:17:59.908000+00:00] carlosfm.2 (id=1316544545693110313)
+    Hi there, great project, love the space. I’m Carlos, founder of Kalavai, an open platform to crowdsource AI computation. I’d love to chat and see if there’s anything we may do to collaborate!
+
+[2024-12-16T13:37:14.786000+00:00] oms2213 (id=1318210333986390057)
+    Is it about connecting people from different region and place then distributed those compute needed for training model/inference across them that want to contribute to it?.
+
+[2024-12-16T18:20:54.812000+00:00] carlosfm.2 (id=1318281721149395115)
+    I’m not sure about OP, but kalavai facilitates that kind of interaction. Effectively harnessing the compute power of many. That’s why i thought <@614201743106113546> original idea might be a good overlap
+

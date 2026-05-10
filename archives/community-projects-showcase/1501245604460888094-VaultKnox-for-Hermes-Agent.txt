@@ -1,0 +1,69 @@
+# Thread 'VaultKnox for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1501245604460888094 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:20.892755+00:00
+
+[2026-05-05T15:34:03.898000+00:00] ufonik88 (id=1501245604460888094)
+    🌟 Hermes VaultKnox v0.2.0 is here with autonomous secrets – no more master passwords, no manual unlocks. Scripts and cron jobs can now read credentials without human intervention. 🌟
+    
+    I wrote it as a project for myself to fix a need I had with Hermes, to protect private or secret information that get's used often by the agent. You can expect:
+    
+    🔒 Key Features:
+    • Key-file-backed security (like SSH keys)
+    • AES-256-GCM encryption
+    • Auto-seal mechanism prevents plaintext leaks
+    • Safe for backups, git, and session logs
+    • Branch protection & public repo ready
+    
+    🌐 Ready to automate your security? Check out the project now on GitHub: Hermes-VaultKnox
+    
+    🎉 Perfect for Hermes Agent users seeking secure, automated credential management. 🎉
+    
+    The project is now publicly available on GitHub:
+    👉 https://github.com/Ufonik88/Hermes-VaultKnox
+    [attachment] IMG_5760.jpeg https://cdn.discordapp.com/attachments/1501245604460888094/1501245604565618758/IMG_5760.jpeg?ex=6a01f6eb&is=6a00a56b&hm=fd5dbe5b2ed82d125f9dd0a86c9b5db046338b55631228656035ab9346026ed0&
+    [embed] GitHub - Ufonik88/Hermes-VaultKnox https://github.com/Ufonik88/Hermes-VaultKnox
+
+[2026-05-06T12:26:28.685000+00:00] ufonik88 (id=1501560784541454459)
+    🚨 VaultKnox v0.3.0 for HERMES AGENT has released 🚨
+    
+    🚀 Devs & AI Enthusiasts, it's time to level up your secret-keeping game! 🚀
+    
+    🔑 - Your agent's ultimate shield for sensitive data!
+    
+    💥 Why you shouldn't miss this: 💥
+    ✅ Unbeatable Security: Argon2id encryption, dual systems, auto-seal, and zeroization.
+    ✅ Master Key Twist: Securely swap your master password with atomic decrypt/re-encrypt and automatic rollback.
+    ✅ Instant API Key Tester: Verify OpenAI, Anthropic, GitHub, Google, and Generic Bearer keys on the fly, no logging required!
+    ✅ Leaked Key Radar: Scan files for exposed keys (21 regex detectors), flag world-readable files, and deduplicate with SHA-256.
+    ✅ Vault Health Check: One-command audit for DB/file permissions, SQLite integrity, and encryption verification.
+    ✅ Audit Log Explorer: Filter VaultKnox actions by type, secret ID, date range, and limit. JSON/CLI output.
+    
+    🎉 Ready to fortify your secrets?
+    • Repo Drop: Simply add the Repo URL to Hermes.
+    • Magic Install: pip install hermes-vaultknox
+    • Agent Power: hermes-vault
+    
+    🔗 github.com/Ufonik88/Hermes-VaultKnox
+
+[2026-05-07T16:49:02.909000+00:00] ufonik88 (id=1501989250411790468)
+    🚀 Introducing VaultKnox v0.4.0 Release! 🎉
+    Say goodbye to accidental API key leaks! VaultKnox now equips your AI agent with:
+    
+    🔍 21 advanced secret detectors scanning every chat message before it hits storage. From OpenAI to Stripe, we’ve got you covered.
+    
+    🛡️ Real-time secret protection with our secret-guard hook – auto-redact sensitive info on the fly with a single command.
+    
+    🤖 Agent autonomy package – Your AI intuitively knows when to secure credentials.
+    
+    🧹 History scrubbing made easy with vaultknox sanitize-history. Clean up past leaks from sessions, DB, and logs effortlessly.
+    
+    With 203 tests and Apache 2.0, you're ensured a clean and robust deployment. Seamlessly integrated with @HermesAgent.
+    
+    https://github.com/Ufonik88/Hermes-VaultKnox
+    [embed] GitHub - Ufonik88/Hermes-VaultKnox https://github.com/Ufonik88/Hermes-VaultKnox
+    [reply to ufonik88 msg=1501560784541454459]
+
+[2026-05-07T17:23:04.916000+00:00] ufonik88 (id=1501997815209922590)
+    https://github.com/Ufonik88/Hermes-VaultKnox/releases/tag/v0.4.0
+    [embed] Release VaultKnox v0.4.0: Chat Secret Detection and Agent Autonomy ... https://github.com/Ufonik88/Hermes-VaultKnox/releases/tag/v0.4.0
+

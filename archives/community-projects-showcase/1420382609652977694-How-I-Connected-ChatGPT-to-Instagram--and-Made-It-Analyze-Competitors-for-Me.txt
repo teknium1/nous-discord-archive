@@ -1,0 +1,27 @@
+# Thread 'How I Connected ChatGPT to Instagram (and Made It Analyze Competitors for Me)' in forum #community-projects-showcase
+# thread_id=1420382609652977694 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:32.907036+00:00
+
+[2025-09-24T12:13:23.574000+00:00] mariia081452 (id=1420382609652977694)
+    Most people think ChatGPT is just for writing text or brainstorming ideas. But here’s the truth: with the right setup, you can plug it directly into Instagram and let it analyze real posts, reels, and competitors — all automatically.
+    
+    I built a custom GPT that scans Instagram content, pulls the data, and explains why some posts go viral while others flop. No manual scrolling, no guessing — just AI-powered insights.
+    
+    Here’s what I did:
+    Created a custom GPT inside ChatGPT with Instagram-specific instructions
+    Linked it to an external API that fetches real Instagram posts and stats
+    Used Cloudflare Workers as a “bridge” so the data flows securely
+    Tweaked the response so ChatGPT only sees the useful insights (not 6,000 lines of raw code)
+    🧠 Now my GPT can spot patterns across reels
+     📊 It shows what formats perform best
+     ⚡ And it does in minutes what used to take me hours
+    
+    But here’s the thing — this process has some tricky parts (like authentication and data limits) that you must solve, otherwise ChatGPT won’t work with Instagram at all.
+    
+    👉 That’s exactly what I show step by step in the video — including a live demo where the GPT pulls Instagram data and explains why certain reels exploded.
+    
+    🎥 Watch the full tutorial here: https://www.youtube.com/watch?v=9M1ZyKUQDVo
+    
+    This is how AI assistants go from “chatting” to doing real business analysis. Ready to build your own?
+    [embed] How to Integrate a Custom ChatGPT Into Social Media? Instagram, You... https://www.youtube.com/watch?v=9M1ZyKUQDVo
+

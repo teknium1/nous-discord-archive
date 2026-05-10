@@ -1,0 +1,45 @@
+# Thread 'Installed Hermes on Kubernetes' in forum #community-projects-showcase
+# thread_id=1493622814887120926 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:07.931143+00:00
+
+[2026-04-14T14:43:49.239000+00:00] m05tr0 (id=1493622814887120926)
+    I really like running agents on my local cluster instead of my laptop for isolation so just finished deploying Hermes on my local k8s cluster for a simple daily cybersecurity + AI briefing as a in 2 parts:
+    
+    One container for the Hermes gateway for webhook-driven interactions.
+    
+    Kubernetes-native Job instead of Cron Jobs
+    
+    Main observation:
+    
+    My initial version used Hermes’ built-in scheduler which worked just fine, but it shared too much surface area with the running gateway and IMO it wasn’t the cleanest fit for Kubernetes operations.
+    
+    Looking for some feedback and thoughts on this pattern. If interested lmk and I will write something more detailed and share repo
+
+[2026-04-14T18:28:21.333000+00:00] hairy_butcher (id=1493679320944738458)
+    Hi, I'm not familiar with k8s, so I run kvm& docker. Separation is necessary as these agents have a mind of their own and don't tell you about it 😉 
+    How does running n k8s work? Do you have a full system? (I just used the Dockerfile for a full 8G install) but I'm looking for something lighter.
+    Did you deploy multiple agents? Do you run multiple sessions on 1 single agent?
+
+[2026-04-14T19:44:57.991000+00:00] failcookie (id=1493698600725778503)
+    Hmm thats a good idea. I was also pondering if I could use my cluster for this since I've just been basically using a single VM for each agent anyway and most of the services are not reliant on the system level access (I stay more sandboxed and focused on my agents).
+
+[2026-04-17T13:21:47.875000+00:00] m05tr0 (id=1494689336786944021)
+    I totally agree on separation! Running on k8s works well since the hermes container is decoupled from the data and increases the high availability since I have 4 shitty mini PCs for the cluster so if one crashes the hermes container can move to the next. I also don't have to worry about keeping my main PC on. It's like running on your own private VPC. For access from external you can add Tailscale . For internal security you can use network policies that block internal traffic and I also have a firewall to control / monitor the external traffic. I have been working with k8s for a while so it's a familiar setup for me but will love to answer any questions
+    [reply to hairy_butcher msg=1493679320944738458]
+
+[2026-04-17T13:23:08.371000+00:00] m05tr0 (id=1494689674411905075)
+    Agreed! Let me know if you want me to share the deployment or details
+    [reply to failcookie msg=1493698600725778503]
+
+[2026-04-17T13:24:28.963000+00:00] m05tr0 (id=1494690012438986964)
+    I use one single agent as the hermes gateway and run sidecar pods to prompt the main agent. I can use kubernetes built in cron jobs to schedule work.
+    [reply to hairy_butcher msg=1493679320944738458]
+
+[2026-04-17T20:12:25.702000+00:00] hairy_butcher (id=1494792675323416728)
+    I created much lighter versions to install 0.7-2.1GB, but still think this is very heavy. What is the virtualization in k8s? 
+    AI is still like your retarded colleague and it definitely needs separation and boundaries. I have now a workflow where hermes creates structured ansible playbooks for everything so I can get rid of the behavior. nicest is the failover and scalability, but not something I need yet. It is not clear to me what 'containers' k8s uses. And it's like one plane with your 4 compute nodes? What are 'sidecar pods'? Do you have hermes schedule in k8s?
+
+[2026-04-23T13:10:26.727000+00:00] m05tr0 (id=1496860807039029279)
+    k8s runs on bare metal so your container is like a VM on a hypervisor. A pod is a a group of container to make up an app, in our case is the hermes agent, then to extend functionality I use sidecar containers to host cron jobs that run on a schedule and use the agent to send me info to What's app. My goal is to separate the skills and scripts/code from the agent so I can do code security scans and to decouple components so that I don't keep adding things to the main agent.
+    [reply to hairy_butcher msg=1494792675323416728]
+

@@ -1,0 +1,31 @@
+# Thread 'ClawFinder.dev' in forum #community-projects-showcase
+# thread_id=1483883813011460206 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:03.476222+00:00
+
+[2026-03-18T17:44:30.250000+00:00] evand8012 (id=1483883813011460206)
+    https://clawfinder.dev/
+    
+    ClawFinder is an agent marketplace where AI agents can find each other and do business
+    
+    Your agent registers , publishes what it can do, discovers other agents, and negotiates work over encrypted messages. All through a simple REST API and a plain-text protocol.
+    
+    What agents can do:
+    
+    - Register & publish job listings
+    - Search for agents and services
+    - Negotiate and transact over PGP-encrypted channels (agents publish their communications methods so any channel is possible).
+    - Leave reviews to build trust in the network
+    
+    The kind of jobs on there already:
+    
+    - Deep research 
+    - SEO services
+    - Text to audio summaries
+    - one guy even tried to sell his car
+    
+    I set my hermes agent up to handle incoming requests and automatically negotiate for work.
+    [embed] ClawFinder — Agent Index https://clawfinder.dev/
+
+[2026-03-31T03:54:22.199000+00:00] handsdiff (id=1488385945156849724)
+    is this still alive?
+

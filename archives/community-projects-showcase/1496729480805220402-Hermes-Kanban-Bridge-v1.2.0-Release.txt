@@ -1,0 +1,79 @@
+# Thread 'Hermes Kanban Bridge v1.2.0 Release' in forum #community-projects-showcase
+# thread_id=1496729480805220402 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:44.487031+00:00
+
+[2026-04-23T04:28:36.113000+00:00] gumbyender (id=1496729480805220402)
+    I just shipped a major update turning Hermes into an autonomous project manager for your Obsidian vault. The plugin runs a local REST bridge so agents can manage boards, track     blockers, and run rituals autonomously.
+    
+        What's new in v1.2.0:
+    
+        • Board Templates: One-click setup for Sprints, Bug Triage, Releases, and Personal GTD.
+        • MCP Adapter: Direct integration for tools like Claude Desktop (eww).
+        • Velocity Reports: Weekly throughput analytics written directly to Markdown.
+        • Due Date Alerts: Native Obsidian notifications when cards go overdue.
+        • Card Archival: Auto-sweep old 'Done' items to keep boards clean.
+        • BRAT Support: Seamless updates via the Obsidian community plugin system.
+    
+        Hermes agents now break down goals, write cards, and move items across columns without leaving the vault. 100% local, 100% private.  Thanks to mgmeyrms for their original Kanbaa plugin! 
+    
+        📦 Get the release & docs:
+    
+        🖼️ Here's a live snapshot of our 'Hermes Roadmap' board with 9 completed items:
+        
+    https://github.com/GumbyEnder/hermes-kanban
+    [attachment] hermes-kanban.jpg https://cdn.discordapp.com/attachments/1496729480805220402/1496729480964739133/hermes-kanban.jpg?ex=6a0203b4&is=6a00b234&hm=6e6601e843a353e81b7b02d413aec9971d9e6f53bc410f7f7acd432e6f35554b&
+    [embed] GitHub - GumbyEnder/hermes-kanban: A dedicated Obsidian plugin + He... https://github.com/GumbyEnder/hermes-kanban
+
+[2026-04-24T04:08:45.328000+00:00] gumbyender (id=1497086874156531783)
+    Social Post: Hermes Kanban Bridge v1.3.0
+    
+        Hermes Kanban Bridge v1.3.0 is live 🔌
+    
+        Your Obsidian vault is now a command center for AI-driven project management.
+    
+        New in v1.3.0:
+        • Velocity Reports — weekly throughput analytics across all boards, auto-written to your vault
+        • Due Date Notifications — background scheduler catches upcoming & overdue cards, plus on-demand sweep endpoint
+        • 13 REST endpoints total — boards, cards, moves, queries, rituals, notifications, MCP adapter
+        • Phase 4 integration tested — every endpoint verified live against active boards
+        • Fixed — health endpoint now reports the real version instead of being stuck at 1.0.0
+    
+        Stack: Obsidian plugin + embedded Node HTTP server + mgmeyers/kanban compatible. Fully local. Fully private.
+    
+        github.com/GumbyEnder/hermes-kanban
+
+[2026-04-24T05:53:30.499000+00:00] etmost (id=1497113236074397838)
+    This is awesome. Looking forward to trying it out.
+
+[2026-04-24T05:56:10.052000+00:00] gumbyender (id=1497113905288183850)
+    Pushing out a BRAT update tomorrow in 1.4.0 so that updates to obsidian are automatic after that.
+
+[2026-04-24T06:52:17.458000+00:00] gumbyender (id=1497128029212643451)
+    Now with WIKI - https://github.com/GumbyEnder/hermes-kanban/wiki
+    [embed] Home https://github.com/GumbyEnder/hermes-kanban/wiki
+
+[2026-04-24T06:52:42.403000+00:00] gumbyender (id=1497128133839687720)
+    1.4 w BRAT almost done - but need more test and I need sleep
+
+[2026-04-24T14:43:40.634000+00:00] gumbyender (id=1497246657451004118)
+    You have one of those nights where you can't sleep .. so you keep working! 
+    
+    1.4.0 released
+    1.5.0 released
+
+[2026-04-24T15:01:23.505000+00:00] gumbyender (id=1497251115455221891)
+    🚀 Hermes Kanban v1.5.0 is live!
+    Big upgrade for anyone running Hermes agents inside Obsidian.
+    
+    Smart Card Archival: Auto-moves completed cards from Done → Kanban/archive.md (configurable + keeps timestamps)
+    Board Templates: One-click Sprint, Bug Triage, Release, or Personal boards
+    GitHub Settings: Full config panel (PAT, repo, toggles) — sync coming soon
+    BRAT Support: Dead-simple auto-updates
+    
+    Plus cleaner builds, stronger API, and tighter Hermes skill integration.
+    This turns Hermes into a true autonomous project co-pilot: break down goals into Kanban boards, run daily standups, track blockers — all fully local in your Obsidian vault.
+    If you're in the Hermes ecosystem and live in Obsidian, this is for you.
+    → https://github.com/GumbyEnder/hermes-kanban/releases/tag/v1.5.0
+    [attachment] grok-video-7eb2c8cc-9c31-4ca6-995c-58add7bad746.mp4 https://cdn.discordapp.com/attachments/1496729480805220402/1497251115761139752/grok-video-7eb2c8cc-9c31-4ca6-995c-58add7bad746.mp4?ex=6a01ef43&is=6a009dc3&hm=00a77c106b3f7a06cc7a45b1f2bf7ab8af6f7715abf695cf85a343c7c4d96500&
+    [embed] Release v1.5.0 — Card Archival, Board Templates, GitHub Settings,... https://github.com/GumbyEnder/hermes-kanban/releases/tag/v1.5.0
+

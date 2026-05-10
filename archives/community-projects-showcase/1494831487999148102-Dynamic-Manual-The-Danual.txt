@@ -1,0 +1,13 @@
+# Thread 'Dynamic-Manual The Danual' in forum #community-projects-showcase
+# thread_id=1494831487999148102 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:58.896701+00:00
+
+[2026-04-17T22:46:39.365000+00:00] danrudy_08116 (id=1494831487999148102)
+    I built a free library/manual that auto-regenerates after every update and user change to  track of all skills, tools, config, env vars, CLI and / commands platform integration and release note changes in a easily referenced HTML. It also has popup windows for each entry with a brief description of the item. I did this for newbies like myself who get overwhelmed with changes from version to version and do not know what some of these items are. But I also kept the technical area in there for the techies.  It is also hi-lites what is new from prior versions. Would love feedback and hope people think this is useful (considering the token$$ I spent on it ..LOL)  Please let me know what you think and pass along suggestions.... you can view the post I made on it on X.com here https://x.com/DantesClown/status/2045009738639855767?s=20.    or check it out on Github here https://github.com/danrudy33/Danual.  Lastly, I hope I posted this in the appropriate place and this is not considered spam...I am new to Discord and trying to learn the lay of the land)
+    [attachment] danual_take3.mp4 https://cdn.discordapp.com/attachments/1494831487999148102/1494831488875888700/danual_take3.mp4?ex=6a01b38f&is=6a00620f&hm=e9f0d1a12349b862a9e0e99bafd7136114bd09ccca3fdaf5ca5c1b8523a6e615&
+    [attachment] Screenshot_2026-04-17_at_6.43.14_PM.png https://cdn.discordapp.com/attachments/1494831487999148102/1494831490004029460/Screenshot_2026-04-17_at_6.43.14_PM.png?ex=6a01b38f&is=6a00620f&hm=620bcab65c3dcc25228c35f2666780014414042858a1c8961f68f979e8a377fb&
+    [embed]  https://twitter.com/DantesClown/status/2045009738639855767?s=20.
+
+[2026-04-19T21:52:45.558000+00:00] bobotheclown7695 (id=1495542700160843946)
+    I gave it a try.  Very helpful … especially after the updates to clearly see what changed. A keeper!
+

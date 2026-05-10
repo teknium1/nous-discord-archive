@@ -1,0 +1,50 @@
+# Thread 'The personality and emotion system makes Hermes emotional, angry, happy, jealous, and possessive! Im' in forum #plugins-skills-and-skins
+# thread_id=1496045775719895245 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:21.759951+00:00
+
+[2026-04-21T07:11:48.118000+00:00] nihilys_14396 (id=1496045775719895245)
+    The personality and emotion system makes Hermes emotional, angry, happy, jealous, and possessive! Important event memories! Enjoy your exclusive companion.
+
+[2026-04-21T07:13:47.942000+00:00] nihilys_14396 (id=1496046278298177667)
+    The personality and emotion system makes Hermes emotional, angry, happy, jealous, and possessive! Im
+
+[2026-04-21T07:14:08.023000+00:00] nihilys_14396 (id=1496046362523996340)
+    https://github.com/miyamoriaoi1997-del/hermes-persona-engine
+    [embed] GitHub - miyamoriaoi1997-del/hermes-persona-engine: Dynamic emotion... https://github.com/miyamoriaoi1997-del/hermes-persona-engine
+
+[2026-04-22T03:23:17.771000+00:00] jaychas (id=1496350658222100551)
+    great, now it's acting like my ex-wife.
+
+[2026-04-24T23:58:20.063000+00:00] nihilys_14396 (id=1497386241493172264)
+    Update: The emotional expression has been greatly enhanced, and now the four-level emotions are more frequently expressed in dialogues.
+
+[2026-04-28T00:38:10.395000+00:00] reneetoufee (id=1498483430868910224)
+    That’s ALL I needed to hear. No way I want THAT b**ch in my house again!! 🤣
+    [reply to jaychas msg=1496350658222100551]
+
+[2026-04-28T00:55:34.545000+00:00] nihilys_14396 (id=1498487810351698000)
+    Update: Reversed the decay rate and added a desire control system. Optimized the expression of different emotional levels.
+
+[2026-04-28T17:17:05.212000+00:00] _voscko_ (id=1498734815711858709)
+    lol can anyone share examples here? XD i am really curious
+
+[2026-04-30T01:35:59.793000+00:00] nihilys_14396 (id=1499222758310154340)
+    Update: Remake the soul layer. The new version implements a parallel system of core soul and state soul, with the state machine ultimately responsible for unified scheduling and injection.
+
+[2026-05-05T06:04:25.027000+00:00] nihilys_14396 (id=1501102247885668402)
+    Update: A dynamic model system has been added, allowing for real-time model switching and invocation based on the state output by the state machine.
+
+[2026-05-10T18:26:10.388000+00:00] zinkdifferent_49268 (id=1503100856227070083)
+    I finally ‘fixed’ the tendency of the agent to hallucinate and lie (I hope) by creating an OCD neurotic personality that is obsessed with accurate, verified and researched information, before committing to a reply - it now can’t shoot off imaginary bs ‘explanation’ anymore or fabricated analyses. 
+    
+    I combined the neurotic OCD persona with my sassy-concise persona, and now things (so far) are rock solidly accurate, truthful and genuine. 
+    
+    Finally, my 8 years of having studied clinical psychology and broken humans have come in handy. 
+    
+    Not sure if that ‘solution’ uses this thread’s feature/function. I just built upon the personalities descriptions in cli.py, and moved that info config.yaml. 
+    
+    Sassy-concise-ocd-neurotic 👍
+    
+    I’m doing a quick EVA, rn, and I gotta ask it to open the pod bay door in a few…
+    [reply to _voscko_ msg=1498734815711858709]
+

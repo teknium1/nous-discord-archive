@@ -1,0 +1,22 @@
+# Thread 'Keep memory' in forum #plugins-skills-and-skins
+# thread_id=1492202874275369100 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:37.756744+00:00
+
+[2026-04-10T16:41:29.016000+00:00] hugh1979 (id=1492202874275369100)
+    The `keep` memory provider switched to a YOLO-mode installer, now that the v0.8.0 plugin system is available.  
+    https://docs.keepnotes.ai/guides/hermes/
+    
+    Code etc: https://github.com/keepnotes-ai
+    [embed] Hermes Agent — keep https://docs.keepnotes.ai/guides/hermes/
+    [embed] keepnotes.ai https://github.com/keepnotes-ai
+
+[2026-04-10T17:55:26.104000+00:00] hugh1979 (id=1492221484771578016)
+    and (in case it’s not clear 🙂 I would love to hear feedback.
+
+[2026-04-10T18:31:07.267000+00:00] olafgeibig (id=1492230465459851505)
+    Looks interesting but it's just a huge wave of memory systems right now. WOuld be great if you could run some retrieval benchmarks.
+
+[2026-04-10T20:38:13.862000+00:00] hugh1979 (id=1492262453718028338)
+    yes, we ran LoCoMo a while back: https://keepnotes.ai/blog/2026-02-28-benchmark/ - LoCoMo protocol is not very well constrained, so it's easy to game the benchmark, but these are "honest & traceable" numbers.  Definitely want to run a larger and more diverse benchmark later.
+    [embed] Benchmarking Keep with LoCoMo https://keepnotes.ai/blog/2026-02-28-benchmark/
+

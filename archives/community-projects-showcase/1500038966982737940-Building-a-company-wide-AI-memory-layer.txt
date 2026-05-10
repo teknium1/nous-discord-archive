@@ -1,0 +1,54 @@
+# Thread 'Building a company-wide AI memory layer' in forum #community-projects-showcase
+# thread_id=1500038966982737940 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:30.513991+00:00
+
+[2026-05-02T07:39:19.105000+00:00] alph_117 (id=1500038966982737940)
+    I’m trying to design the memory/context layer for an "AI-native" company and would love advice from people who have built something similar.
+    
+    The goal is not just “chatbot memory.” I’m thinking about a real company-wide second brain / agentic coworker setup.
+    
+    **Use case:**
+    We need to store and continuously update context across multiple users, projects, clients, and internal agents. 
+    The knowledge sources would include things like:
+    - Slack discussions and decisions
+    - email threads
+    - client call transcripts
+    - product analytics alerts
+    - GitHub commits / PRs
+    - internal docs
+    - client reports
+    - research notes
+    - maybe CRM/project-management data later
+    
+    The system should update itself after each new piece of knowledge, e.g. after a Slack thread, email, call, new commit, analytics alert, etc.
+    
+    I’m currently comparing Honcho and Supermemory.
+    
+    So my rough hypothesis is:
+    - Supermemory = company knowledge brain/retrieval layer
+    - Honcho = user/agent memory layer
+    
+    
+    But I’m not sure if this is overengineering.
+    
+    Some questions:
+    1. Has anyone used Honcho or Supermemory in production for a real multi-user/team/company use case?
+    
+    2. If the goal is a “company second brain” connected to Slack, email, calls, GitHub, docs, and analytics — which architecture would you choose?
+    
+    3. How do you handle “latest truth”? For example, Slack says one thing, a later client email says another, and a signed contract says a third thing. Do you encode source priority manually?
+    
+    4. How do you prevent the memory layer from becoming polluted with speculation, outdated context, or low-quality Slack noise?
+    
+    But maybe I’m making this too complex too early.... idk
+    Would love to hear how others are thinking about memory architecture for "AI-native" companies
+
+[2026-05-02T19:48:43.655000+00:00] kohai_ut (id=1500222528810123435)
+    Gary tan's gbrain tool can slurp up anything. I don't know how well it extends to multi-user scenario, but probably more so than Honcho (guessing here).
+
+[2026-05-09T17:16:53.732000+00:00] matthew_68962 (id=1502721034082582588)
+    Hermes would work for this too, I don't mind answering any questions if you'd like to reach out. I don't represent a company. I was logged out of my email without my permission so I am creating a new Discord account.
+
+[2026-05-09T20:24:46.704000+00:00] byteologist (id=1502768316354269284)
+    https://discord.com/channels/1053877538025386074/1502758516794982562
+

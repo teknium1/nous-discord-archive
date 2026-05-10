@@ -1,0 +1,24 @@
+# Thread '🪄 Claude-like Artifacts for Hermes Agent — New Skill: **artifact-preview**' in forum #plugins-skills-and-skins
+# thread_id=1494068228861984848 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:31.067870+00:00
+
+[2026-04-15T20:13:44.206000+00:00] chucksrq (id=1494068228861984848)
+    Now you can tell Hermes to build anything (interactive dashboards, games, forms, beautiful UIs, widgets, etc.) and it instantly generates a complete, self-contained HTML/CSS/JS app — then automatically opens a live, clickable preview in your browser.
+    
+    - Real working buttons, inputs, animations  
+    - Edit your prompt → instant refresh  
+    - Feels just like Claude Artifacts, but fully local  
+    - Bonus: auto-saves cleanly to Obsidian with proper frontmatter
+    
+    Super useful for rapid prototyping and visual feedback.
+    
+    Full skill + setup instructions:  
+    https://github.com/ChuckSRQ/awesome-hermes-skills/blob/main/productivity/artifact-preview/SKILL.md
+    
+    Also posted on X: https://x.com/ChuckSRQ/status/2044504539978465658
+    
+    Would love feedback or ideas for improvements!  
+    cc <@387972437901312000>  👀
+    [embed] awesome-hermes-skills/productivity/artifact-preview/SKILL.md at mai... https://github.com/ChuckSRQ/awesome-hermes-skills/blob/main/productivity/artifact-preview/SKILL.md
+    [embed]  https://twitter.com/ChuckSRQ/status/2044504539978465658
+

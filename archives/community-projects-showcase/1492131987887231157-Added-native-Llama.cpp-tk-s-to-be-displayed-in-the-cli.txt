@@ -1,0 +1,15 @@
+# Thread 'Added native Llama.cpp tk/s to be displayed in the cli' in forum #community-projects-showcase
+# thread_id=1492131987887231157 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:28.009414+00:00
+
+[2026-04-10T11:59:48.384000+00:00] petersteele111 (id=1492131987887231157)
+    Added a way to display tk/s for llama.cpp automatically in the cli. This makes testing local models and seeing how they run much nicer. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/7141
+    [attachment] Screenshot_2026-04-10_072853.png https://cdn.discordapp.com/attachments/1492131987887231157/1492131988490948618/Screenshot_2026-04-10_072853.png?ex=6a01c4b4&is=6a007334&hm=c11aae17d708fd66850f0de5f6f75fdea367045fc62f1bcd901e381bc8e211eb&
+    [attachment] Screenshot_2026-04-10_072902.png https://cdn.discordapp.com/attachments/1492131987887231157/1492131989019426927/Screenshot_2026-04-10_072902.png?ex=6a01c4b4&is=6a007334&hm=2bd78c17173e3871ea4bdc35f2537e4bdc57b08f61542b85acf68ec5a503ab66&
+    [embed] feat(cli): add llama.cpp native tk/s display by petersteele111 · P... https://github.com/NousResearch/hermes-agent/pull/7141
+
+[2026-04-10T12:01:11.175000+00:00] petersteele111 (id=1492132335137853651)
+    It automatically checks if llama.cpp is being used and will display it after the first call. Non llama.cpp backends just won't show it al all, keeping it targeted and hasslefree with no setup needed on anyones part.
+

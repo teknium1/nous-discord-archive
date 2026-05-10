@@ -1,0 +1,12 @@
+# Thread 'skills' in forum #plugins-skills-and-skins
+# thread_id=1498647474150183012 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:11.514865+00:00
+
+[2026-04-28T11:30:01.361000+00:00] anubis3207 (id=1498647474150183012)
+    This repo is a bunch of "hand-built" skills, with the autoresearch loop (inspired by Karpathy's autoresearch) wired up to refine them
+    
+    38 skills (for now) covering mostly infra (Kubernetes, Terraform, Docker, Ansible), distros (Arch, Debian, Fedora, Kali, NixOS), networking and firewalls, security and pentesting, code review and prose audits, frontend and UI design, AI/ML and MCP server work, virtualization, dev workflow tooling, and meta-tooling (the skill creator, refiner, and full-review orchestrator).
+    
+    https://github.com/iuliandita/skills
+    [embed] GitHub - iuliandita/skills: Hand-crafted Agent Skills for DevOps, i... https://github.com/iuliandita/skills
+

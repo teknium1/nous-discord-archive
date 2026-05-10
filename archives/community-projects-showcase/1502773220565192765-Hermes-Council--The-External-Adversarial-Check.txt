@@ -1,0 +1,33 @@
+# Thread 'Hermes-Council: The External Adversarial Check' in forum #community-projects-showcase
+# thread_id=1502773220565192765 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:13.743724+00:00
+
+[2026-05-09T20:44:15.959000+00:00] ggudman (id=1502773220565192765)
+    Agents can’t reliably self-critique. hermes-council fixes this by requiring an external jury debate before an agent commits to an action.
+    
+    Key Features
+    
+    - The Jury: Five personas (Advocate, Skeptic, Oracle, Contrarian, Arbiter) debate the task.
+    
+    -The Verdict: The Arbiter uses Bayesian synthesis to issue a structured allow, allow_with_conditions, or deny.
+    
+    - Hardened Grounding: Includes 8 specialized tools and SSRF-hardened evidence fetching via URL/DDG.
+    
+    - DPO Flywheel: Emits preference pairs from internal disagreements to provide a direct training signal for future finetuning.
+    
+    Quick Start
+    
+    pip install "hermes-council>=0.1.1"
+    
+    Uncomment the council block in cli-config.yaml.
+    
+    Resources:
+    
+    GitHub: https://github.com/Ridwannurudeen/hermes-council
+    
+    https://pypi.org/project/hermes-council/0.1.1/
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/1972
+    [embed] GitHub - Ridwannurudeen/hermes-council: Adversarial multi-perspecti... https://github.com/Ridwannurudeen/hermes-council
+    [embed] feat(mcp): add hermes-council adversarial deliberation server confi... https://github.com/NousResearch/hermes-agent/pull/1972
+

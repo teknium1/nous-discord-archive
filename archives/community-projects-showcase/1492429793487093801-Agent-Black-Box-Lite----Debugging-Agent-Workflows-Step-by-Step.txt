@@ -1,0 +1,32 @@
+# Thread 'Agent Black Box Lite -  Debugging Agent Workflows Step-by-Step' in forum #community-projects-showcase
+# thread_id=1492429793487093801 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:23.966940+00:00
+
+[2026-04-11T07:43:10.772000+00:00] doppler2u (id=1492429793487093801)
+    I noticed that debugging agent workflows is still pretty opaque.
+    
+    So I built a small tool that logs and replays agent steps — including decisions, tool usage, and outputs.
+    
+    It acts like a lightweight “black box” for agents.
+    
+    Example output:
+    
+    Step 1:
+    User Input → Analyze this repo  
+    Agent Decision → Use file_search tool  
+    Tool Used → file_search  
+    Tool Output → Found relevant files  
+    
+    Step 2:
+    User Input → What files are there?  
+    Final Response → Repo contains storage.py, logger.py, replay.py, cli.py  
+    
+    It’s fully local, minimal, and designed with Hermes-style workflows in mind.
+    
+    Repo: https://github.com/Doppler2u/agent-blackbox-lite
+    
+    I also added a small example of how this could integrate into Hermes workflows.
+    
+    Would love feedback or ideas on how this could be improved or integrated further.
+    [embed] GitHub - Doppler2u/agent-blackbox-lite https://github.com/Doppler2u/agent-blackbox-lite
+

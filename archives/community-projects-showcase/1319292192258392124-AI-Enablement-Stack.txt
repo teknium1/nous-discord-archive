@@ -1,0 +1,12 @@
+# Thread 'AI Enablement Stack' in forum #community-projects-showcase
+# thread_id=1319292192258392124 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:41.689433+00:00
+
+[2024-12-19T13:16:09.898000+00:00] nibalic (id=1319292192258392124)
+    Wasn't sure where Nous goes. 😄
+    
+    But, many VC firms have been publishing their AI ecosystem maps, but we believe there's a need for a truly crowdsourced and open-source AI enablement stack. We would love your thoughts and support with a share.
+    But wants important is that you can create a PR to add or correct anything. The idea is to have the only truly live crowdsourced AI market map. 🙂   https://x.com/daytonaio/status/1869727933046112578 https://www.linkedin.com/feed/update/urn:li:activity:7275492155224174592/
+    [embed] Daytona.io (@daytonaio) on X https://twitter.com/daytonaio/status/1869727933046112578
+    [embed] Ivan Burazin on LinkedIn: Introducing the AI Enablement Stack: A Co... https://www.linkedin.com/feed/update/urn:li:activity:7275492155224174592/
+

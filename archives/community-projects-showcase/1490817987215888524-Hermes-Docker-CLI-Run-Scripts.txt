@@ -1,0 +1,14 @@
+# Thread 'Hermes Docker CLI Run Scripts' in forum #community-projects-showcase
+# thread_id=1490817987215888524 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:38.461398+00:00
+
+[2026-04-06T20:58:26.211000+00:00] naetuir (id=1490817987215888524)
+    Hey guys. I created some simple scripts for managing my local Hermes instance in docker, and handle updates, watching logs, et al. Entirely vibed up, but I gave 'em a good solid once over, and I'm using them on my computer. Wanted to keep Hermes quarantined in Docker.
+    
+    Check 'em out if you want to do something similar.
+    
+    Maybe a link to something like this could be added to the Hermes Agent - Docker doc page?
+    
+    https://gist.github.com/crueber/a7a8cb586f5eee09ff668cbc9e9ba7c2
+    [embed] Hermes CLI utility scripts for managing Docker-based development en... https://gist.github.com/crueber/a7a8cb586f5eee09ff668cbc9e9ba7c2
+

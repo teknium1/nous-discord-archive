@@ -1,0 +1,11 @@
+# Thread 'Smart(?) context compressor to test' in forum #community-projects-showcase
+# thread_id=1493649290449649815 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:07.539121+00:00
+
+[2026-04-14T16:29:01.505000+00:00] roninxpl (id=1493649290449649815)
+    https://github.com/iRonin/hermes-context-compressor
+    [embed] GitHub - iRonin/hermes-context-compressor https://github.com/iRonin/hermes-context-compressor
+
+[2026-04-17T09:01:34.632000+00:00] rexx.0569 (id=1494623850099507303)
+    boost, anybody that tried this?
+

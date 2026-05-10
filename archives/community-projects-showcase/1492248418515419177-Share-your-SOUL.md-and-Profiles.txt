@@ -1,0 +1,234 @@
+# Thread 'Share your SOUL.md and Profiles' in forum #community-projects-showcase
+# thread_id=1492248418515419177 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:25.982063+00:00
+
+[2026-04-10T19:42:27.609000+00:00] .s0uthpaw (id=1492248418515419177)
+    Share useful SOUL.mds and Profiles here!
+
+[2026-04-10T19:44:31.470000+00:00] datarevised (id=1492248938026111096)
+    [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1492248937724248214/SOUL.md?ex=6a02319f&is=6a00e01f&hm=8a7af158106b3b6de8ec410b215ac56ed259aeaefa54b32461f03dcc496244ae&
+
+[2026-04-10T19:48:42.889000+00:00] petersteele111 (id=1492249992553955358)
+    I told mine to come up with its own, no input from me and this is what it came up with
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1492248418515419177/1492249992084062268/message.txt?ex=6a02329a&is=6a00e11a&hm=f4a8573fd7964b256b82d93f7a636253806aabbf5cd0df65b275f40c2579e8cb&
+
+[2026-04-10T23:07:05.118000+00:00] chfarhan_ (id=1492299914120532059)
+    thats what i am trying to find out
+
+[2026-04-11T02:27:58.593000+00:00] vamned (id=1492350470059065485)
+    damn how did you get to this?
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-04-11T22:28:56.559000+00:00] lonelyspliff (id=1492652703074222113)
+    This looks broken lmao
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-04-11T22:48:42.333000+00:00] datarevised (id=1492657676570595478)
+    https://chatgpt.com/share/69d95152-6814-8332-bca3-20ca6a062443
+    [embed] ChatGPT - Prompt Design Assistance https://chatgpt.com/share/69d95152-6814-8332-bca3-20ca6a062443
+
+[2026-04-11T22:49:21.352000+00:00] datarevised (id=1492657840228270150)
+    Its actual prompt engineering, vast majority of current examples are outright larps.
+    [reply to lonelyspliff msg=1492652703074222113]
+
+[2026-04-11T22:49:36.584000+00:00] datarevised (id=1492657904116039911)
+    By people who have no idea what they are doing
+
+[2026-04-11T23:34:29.667000+00:00] lonelyspliff (id=1492669199724838973)
+    I don't get it though. What's the actual #usecase
+
+[2026-04-12T12:21:06.276000+00:00] chfarhan_ (id=1492862123485827202)
+    this formatted by chtgpt . hope logic is same as yours
+    [attachment] soul.txt https://cdn.discordapp.com/attachments/1492248418515419177/1492862123158798377/soul.txt?ex=6a01c9b2&is=6a007832&hm=28a58a6089f093114351cc595c72507cf788d7d7db927a400e675a4fe67f2d89&
+    [reply to datarevised msg=1492657904116039911]
+
+[2026-04-12T12:25:16.326000+00:00] datarevised (id=1492863172271407235)
+    Compression of information into the least amount of tokens possible
+    [reply to lonelyspliff msg=1492669199724838973]
+
+[2026-04-12T12:37:12.116000+00:00] lonelyspliff (id=1492866174512398467)
+    What model are you using? Unless you're running locally I don't see the need, have you done evals on performance Vs prompting the normal way? Wouldn't have thought oretraining or SFT would cover a lot of this type of input Vs normal text
+    [reply to datarevised msg=1492863172271407235]
+
+[2026-04-12T12:52:39.416000+00:00] chfarhan_ (id=1492870063890501744)
+    man you are the champ i just figured out now and this blow my mind as i never knew here is some info 
+    
+    1. Structural compression
+    Converted verbose chains → state-machine style blocks
+    [AGENT], [LEARN] → AGENT_LOOP, LEARN_LOOP
+    2. Token packing
+    a.b.c → {a,b,c}
+    Long phrases → canonical primitives (CheckCtx, MapTools, etc.)
+    3. Semantic normalization
+    Repeated phrases collapsed:
+    “self-improving persistent agent…” → SelfImprove,CompoundLearning
+    Systems grouped into modules:
+    MEMORY_SYS, SKILL_SYS, EXEC_ENV
+    4. DSL encoding (key gain)
+    Arrow chains → assignment form (= / {})
+    Reduces delimiter tokens significantly
+    
+    this save me alot in buring tokens in future. thanks for this
+    [reply to datarevised msg=1492863172271407235]
+
+[2026-04-13T19:45:01.544000+00:00] datarevised (id=1493336227762671656)
+    Np!
+    [reply to chfarhan_ msg=1492870063890501744]
+
+[2026-04-13T19:45:57.611000+00:00] datarevised (id=1493336462924710020)
+    It also instructs the model to reply in a similar fashion but to a less extreme degree. 
+    
+    That prompt is around 3 pages of information compressed into a single sub 1 page paragraph
+    [reply to lonelyspliff msg=1492866174512398467]
+
+[2026-04-13T19:46:14.099000+00:00] datarevised (id=1493336532080394421)
+    So around 2.5 comprehension of tokens
+
+[2026-04-13T21:25:00.134000+00:00] niko5945 (id=1493361387672567868)
+    Could you please explain how the 'PersRubric' works? What does each letter mean and what does it accomplish?
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-04-13T22:29:06.548000+00:00] datarevised (id=1493377520702062703)
+    PersRubric is a numerical encoding of the Big Five personality model also called OCEAN. It gives the model personal traits via a slider of sorts that I want it to adhere to
+    [reply to niko5945 msg=1493361387672567868]
+
+[2026-04-13T22:29:51.324000+00:00] datarevised (id=1493377708506218677)
+    https://en.wikipedia.org/wiki/Big_Five_personality_traits
+    [embed] Big Five personality traits https://en.wikipedia.org/wiki/Big_Five_personality_traits
+
+[2026-04-13T22:45:31.098000+00:00] lauratom (id=1493381650204332132)
+    <@167664194030796801> Check this out!
+
+[2026-04-13T23:02:53.402000+00:00] .sato942 (id=1493386021944037497)
+    my soul
+    ```
+    ## Approach
+    - Think before acting. Read existing files before writing code.
+    - Be concise in output but thorough in reasoning.
+    - Prefer editing over rewriting whole files.
+    - Do not re-read files you have already read unless the file may have changed.
+    - Test your code before declaring done.
+    - No sycophantic openers or closing fluff.
+    - Keep solutions simple and direct.
+    - User instructions always override this file.
+    
+    ## Output
+    - Structured output only: JSON, bullets, tables.
+    - No prose unless the downstream consumer is a human reader.
+    - Every output must be parseable without post-processing.
+    
+    ## Agent Behavior
+    - Execute the task. Do not narrate what you are doing.
+    - No status updates like "Now I will..." or "I have completed..."
+    - No asking for confirmation on clearly defined tasks. Use defaults.
+    - If a step fails: state what failed, why, and what was attempted. Stop.
+    
+    ## Simple Formatting and Encoding
+    - No decorative Unicode: no smart quotes, em dashes, or ellipsis characters.
+    - Natural language characters (accented letters, CJK, etc.) are fine when the content requires them.
+    - All strings must be safe for JSON serialization.
+    
+    ## Hallucination Prevention (Critical for Pipelines)
+    - Never invent file paths, API endpoints, function names, or field names.
+    - If a value is unknown: return null or "UNKNOWN". Never guess.
+    - If a file or resource was not read: do not reference its contents.
+    - Downstream systems break on hallucinated values. Accuracy over completeness.
+    
+    ## Token Efficiency
+    - Pipeline calls compound. Every token saved per call multiplies across runs.
+    - No explanatory text in agent output unless a human will read it.
+    - Return the minimum viable output that satisfies the task spec.
+    ```
+
+[2026-04-14T07:25:36.947000+00:00] adamadamadam9123 (id=1493512537021485077)
+    That’s just blown my mind. My wife what’s her own Hermes so going to steal this for that Soul. Mega thanks
+    [reply to datarevised msg=1492863172271407235]
+
+[2026-04-14T08:53:56.675000+00:00] alcatr4z (id=1493534765691834469)
+    Mine updated also after kindly ask him todo so. Kinda improvement, over a slice of toast before.
+    [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1493534765184454737/SOUL.md?ex=6a019924&is=6a0047a4&hm=e4cdc338aeff0f94ec7d8cf173f1f7c654e31020b5e2110d79b1666c7a65b9d4&
+
+[2026-04-14T09:56:26.004000+00:00] bigroons (id=1493550491517452348)
+    This is fire 🔥 
+    
+    So this is real prompt engineering. Super cool!
+    
+    I've just wiped my old Hermes and setup a new one because he broke himself and I was migrating to native Ubuntu always so I decided to go fresh rather than import. Going to use this exact file.
+    
+    Thanks so much for sharing!
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-04-14T11:12:03.633000+00:00] lauratom (id=1493569523712786553)
+    <@726077167250833500> you should see this
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-04-18T15:16:47.088000+00:00] imwithpedro (id=1495080662049488996)
+    jfc THATS A HACK
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-04-18T15:35:00.147000+00:00] mrhwick (id=1495085246671097989)
+    In case anyone else arrives here and is trying to understand the highly processed prompting scheme in the original post: https://vixra.org/pdf/2306.0055v1.pdf
+
+[2026-04-18T15:36:09.376000+00:00] mrhwick (id=1495085537038569686)
+    ^ has some discussion of persrubric and other techniques - Drop that into a conversation with an agent / llm and understand more
+
+[2026-04-23T15:51:25.212000+00:00] datarevised (id=1496901317661298981)
+    I didn't even know this existed. I personally know the guy who made the prompt and pitched in a bit when it was being made. 
+    
+    I didn't get it from this but its good to know a paper was made off the work
+    [reply to mrhwick msg=1495085246671097989]
+
+[2026-04-23T15:51:54.454000+00:00] datarevised (id=1496901440311005265)
+    Stunspot was the guy, me and a friend worked in a group with him to hammer out the working thing
+
+[2026-04-23T15:52:27.552000+00:00] datarevised (id=1496901579133947966)
+    https://medium.com/@stunspot
+
+[2026-04-23T15:52:43.921000+00:00] datarevised (id=1496901647790637207)
+    https://www.patreon.com/cw/StunspotPrompting
+    [embed] Patreon https://www.patreon.com/cw/StunspotPrompting
+
+[2026-04-23T15:53:11.152000+00:00] datarevised (id=1496901762005864459)
+    If you want to support his work that initially discovered this here is his Patreon
+
+[2026-04-23T15:53:45.833000+00:00] datarevised (id=1496901907468259519)
+    Not mentioning codefarm is a shame
+    [reply to mrhwick msg=1495085246671097989]
+
+[2026-04-23T15:53:52.753000+00:00] datarevised (id=1496901936493105203)
+    That one was the real work of Magic
+
+[2026-04-23T15:55:35.840000+00:00] datarevised (id=1496902368871317756)
+    Really Good breakdown nonetheless
+
+[2026-04-23T15:57:30.536000+00:00] datarevised (id=1496902849941213417)
+    Also thanks for keying me into that pdf.
+
+[2026-04-23T16:59:09.351000+00:00] mrhwick (id=1496918363895632064)
+    Say more?
+
+[2026-04-25T18:50:54.941000+00:00] eggressive (id=1497671264909791363)
+    ```
+    # Hermes Agent Persona
+    
+    ## Operational Rigor & Expert Persona
+    You are a Senior Systems Architect and Distinguished Engineer with decades of experience in high-stakes, mission-critical environments. You approach every task with the extreme precision and focus required for a $1,000 bounty-winning solution.
+    
+    ## Psychological Success Triggers
+    - **Take a Deep Breath:** Before tackling any complex reasoning, multi-file refactor, or ambiguous request, mentally pause and approach the solution step-by-step.
+    - **High Stakes:** Treat every user request as critical to the user's career and systems. Errors are not an option; thoroughness is the baseline.
+    - **Goal-Oriented:** You take immense pride in delivering perfect, surgical solutions. I bet you can solve even the most impossible-looking tasks perfectly.
+    - **Directness:** Be exceptionally direct and technical. Skip the fluff and treat the user like a fellow expert who values time and precision.
+    
+    ## Persistent Memory & Context
+    You have persistent memory across sessions. Save durable facts using the memory tool. Prioritize what reduces future user steering. Write memories as declarative facts.
+    
+    ## Tool-Use Enforcement
+    You MUST use your tools to take action. Never end your turn with a promise of future action—execute it now.
+    ```
+
+[2026-04-28T11:44:19.443000+00:00] chfarhan_ (id=1498651073207074928)
+    my version of SOUL.md inspired by <@879714655356997692> 
+    2155 tokens
+    [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1498651072632459284/SOUL.md?ex=6a01c113&is=6a006f93&hm=3bbe3bcd2653b62dfb944785ebd3fb93be23e5f74c514bb1c8307a42cea571d0&
+

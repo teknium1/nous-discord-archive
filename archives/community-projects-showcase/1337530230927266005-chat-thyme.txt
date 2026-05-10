@@ -1,0 +1,11 @@
+# Thread 'chat-thyme' in forum #community-projects-showcase
+# thread_id=1337530230927266005 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:51.167894+00:00
+
+[2025-02-07T21:07:37.163000+00:00] nanop (id=1337530230927266005)
+    hello friends, I want to share something I built: https://github.com/chilir/chat-thyme.
+    
+    chat-thyme is a system for setting up Discord bots interfacing with any LLM framework with OpenAI compatibility. Search capabilities (w/ Exa) is also available for any models that support tool use. The Exa search demo in the README is using `hermes3:8b-llama3.1-q6_K`  served through Ollama on a M1 Macbook Pro.
+    
+    Fully open source (MIT), please check it out if you're interested 😄
+

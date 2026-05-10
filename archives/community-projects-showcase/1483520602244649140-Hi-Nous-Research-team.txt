@@ -1,0 +1,42 @@
+# Thread '👋 Hi Nous Research team!' in forum #community-projects-showcase
+# thread_id=1483520602244649140 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:15.942376+00:00
+
+[2026-03-17T17:41:14.055000+00:00] emrah4862 (id=1483520602244649140)
+    I'm **Osman Emrah Eroğlu**, a full-stack developer from Turkey. I've built a production AI system using **Hermes as a primary scoring engine** and I'd love to contribute to the Nous ecosystem.
+    
+    ## 🚀 What I Built
+    
+    **HyliLabs** — AI-Powered HR Recruitment Platform
+    - **Live:** https://hylilabs.com
+    - **GitHub:** https://github.com/osmanemraheroglu/hylilabs (just made it public!)
+    
+    ### Key Features:
+    - **Hermes Integration** — Nous Research Hermes as primary AI model
+    - **Multi-AI Consensus** — Parallel scoring with Hermes + Gemini + Claude + GPT-4
+    - **Automatic Fallback Chain** — Hermes → Gemini → OpenAI → Claude
+    - **Sector Intelligence** — Construction industry canonical mapping & certificate tracking
+    - **KVKK Compliant** — Turkish data protection law compliance
+    
+    ## 🔧 Tech Stack
+    Python (FastAPI) | TypeScript (React) | SQLite | Multi-model AI orchestration | PM2/Nginx deployment
+    
+    ## 💡 What I Want to Do at Nous
+    
+    1. **Contribute to hermes-agent** — I've studied the codebase and can help with:
+       - Issue #879 (Local model routing) — My fallback chain is a working implementation
+       - Issue #844 (Knowledgebase RAG) — Experience with SQLite + vector search
+       
+    2. **Build integration tools** — Help developers deploy Hermes in multi-model architectures
+    
+    3. **Documentation** — Improve onboarding based on my experience as a Hermes user
+    
+    ## 📫 Contact
+    - GitHub: https://github.com/osmanemraheroglu
+    - Email: emraherogluneta@gmail.com
+    
+    I'm ready to submit PRs and contribute immediately. Would love to discuss how I can help! 🙏
+    [embed] HyliLabs https://hylilabs.com/
+    [embed] GitHub - osmanemraheroglu/hylilabs: HyliLabs - AI-Powered HR Platform https://github.com/osmanemraheroglu/hylilabs
+    [embed] osmanemraheroglu - Overview https://github.com/osmanemraheroglu
+

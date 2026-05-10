@@ -1,0 +1,8 @@
+# Thread 'skill conversion' in forum #plugins-skills-and-skins
+# thread_id=1490628462837502052 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:47.052472+00:00
+
+[2026-04-06T08:25:20.078000+00:00] vasant5587 (id=1490628462837502052)
+    Can Hermes agent convert Hermes skill into gemma4 skill in bulk? https://github.com/NousResearch/hermes-agent/tree/main/skills or any other skill converter available?
+    [embed] hermes-agent/skills at main · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/tree/main/skills
+

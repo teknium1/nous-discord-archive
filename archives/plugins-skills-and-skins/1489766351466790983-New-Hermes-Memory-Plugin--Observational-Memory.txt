@@ -1,0 +1,62 @@
+# Thread 'New Hermes Memory Plugin: Observational Memory' in forum #plugins-skills-and-skins
+# thread_id=1489766351466790983 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:48.711289+00:00
+
+[2026-04-03T23:19:36.710000+00:00] intertwiner (id=1489766351466790983)
+    Hey all — I just published a standalone Hermes memory-provider plugin for **Observational Memory**:
+    
+    https://github.com/intertwine/hermes-observational-memory
+    
+    **What it is:**
+    - A local-first memory backend for Hermes that keeps memory in plain markdown
+    - Can share the same memory store with Claude Code and Codex
+    - Gives Hermes compact startup context, local search, explicit remember tools, and optional writeback into the shared OM store
+    
+    **Why this is interesting:**
+    - If you use multiple coding agents, memory is usually siloed per tool
+    - This plugin lets Hermes read/write the same local memory used by Claude Code + Codex, so context carries across tools instead of restarting from scratch
+    - Memory stays inspectable, greppable, and easy to back up
+    
+    **Where it fits vs other Hermes memory providers:**
+    - vs. Honcho / Mem0 / RetainDB: this is much more local and inspectable, with less SaaS / black-box behavior
+    - vs. Hindsight / OpenViking: this is less graph / hierarchy oriented, and more focused on session continuity + derived startup context
+    - vs. Holographic / ByteRover: this is less of a fact DB / knowledge tree, and more of an observation + reflection layer over real agent sessions
+    - Best fit if you want cross-agent continuity, local files, no extra memory server to run
+    
+    **Tech basis:**
+    - Uses the `observational-memory` package: an Observer + Reflector compress conversation history into a stable observation log instead of relying on per-turn retrieval
+    - Mastra’s published results for that OM architecture report 94.87% on LongMemEval with gpt-5-mini
+    
+    **Why I think it’s a good fit for Hermes specifically:**
+    - stable, prompt-cache-friendly context
+    - local markdown memory instead of opaque remote state
+    - shared memory across Hermes / Claude Code / Codex
+    - easy to inspect what the system is actually remembering
+    
+    **Install:**
+    ```bash
+    hermes plugins install intertwine/hermes-observational-memory
+    uv pip install "observational-memory>=0.3.1,<0.4.0"
+    hermes memory setup
+    [attachment] om-system-diagram.jpeg https://cdn.discordapp.com/attachments/1489766351466790983/1489766351835762728/om-system-diagram.jpeg?ex=6a01bb48&is=6a0069c8&hm=95f6fa9e3502e9dab0fa7f4a8742bdb9333356b7e75be0a7eddb16c1e97ecbd6&
+    [embed] GitHub - intertwine/hermes-observational-memory: Observational Memo... https://github.com/intertwine/hermes-observational-memory
+
+[2026-05-07T23:50:01.948000+00:00] intertwiner (id=1502095194500104365)
+    Quick follow-up on this OM thread because Zayn suggested discussing native/new provider support in Discord before PR merge.
+    
+    Native-provider PR: https://github.com/NousResearch/hermes-agent/pull/12583
+    
+    I refreshed it onto current main and kept the diff scoped to the OM provider, memory setup/help wiring, plugin README/metadata, and focused tests. Focused OM/provider validation is green locally (`69 passed`), and CI e2e/Nix/attribution/supply-chain are green.
+    
+    Why I think OM is worth including as a native memory provider, not only as a standalone plugin:
+    
+    - It covers a different niche: shared cross-agent continuity. Hermes can read/write the same local markdown OM store that Claude Code and Codex use.
+    - It stays inspectable: profile/active context, observations, and reflections are ordinary files users can read, grep, back up, or edit.
+    - It is prompt-cache-friendly: compact startup context plus search/remember tools, rather than rebuilding a large dynamic memory blob every turn.
+    - It remains optional and one-provider-at-a-time like the existing external memory providers; no SaaS or background service required.
+    
+    I don’t see this as “the one memory everyone should use.” If someone wants a sub-ms SQLite fact store, Mnemosyne-style memory is a great fit. If they want cloud/SaaS memory, Honcho/Mem0/RetainDB fit. OM’s niche is local, transparent, cross-tool continuity for people using Hermes alongside other coding agents.
+    
+    Happy to answer objections here, especially around dependency shape, writeback defaults, or whether this should remain plugin-only vs bundled provider.
+    [embed] feat(memory) add observational memory provider by intertwine · Pul... https://github.com/NousResearch/hermes-agent/pull/12583
+

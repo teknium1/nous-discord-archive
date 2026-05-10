@@ -1,0 +1,92 @@
+# Thread 'Hermes-Console' in forum #community-projects-showcase
+# thread_id=1491166607861481554 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:35.182046+00:00
+
+[2026-04-07T20:03:43.850000+00:00] shan8851 (id=1491166607861481554)
+    A local-first dashboard for your Hermes setup
+    
+    Open source web UI that reads your local Hermes state directly from disk and makes it legible at a glance.
+    
+    **What it does:**
+    Runtime overview - gateway health, connected platforms, update drift, diagnostics
+    Session history - browse, filter, search across agents and platforms
+    Crons - status, schedules, recent outputs, health indicators
+    Skills browser - View skills, categories, linked files, detail views
+    Memory - MEMORY.md / USER.md visibility with pressure warnings
+    Key files - config and instruction file previews
+    Usage - token counts and cost estimates from local session data
+    
+    **What it isn't:**
+    
+    Not a chat client
+    Not a terminal replacement
+    Not a multi-agent platform
+    
+    Reads from `~/.hermes` by default. No external services, no auth, no cloud dependency.
+    
+    Repo: https://github.com/shan8851/hermes-console
+    [embed] GitHub - shan8851/hermes-console: Local-first web dashboard for Her... https://github.com/shan8851/hermes-console
+
+[2026-04-08T07:57:08.463000+00:00] gwyntel (id=1491346143421005845)
+    WOW installing this!!
+
+[2026-04-08T10:42:36.929000+00:00] shan8851 (id=1491387786425667645)
+    let me know what you think! It is super early, so potentially pretty thin and will likely need more love, but figured best to let people use it first.
+    
+    And yeah it is intentionally read only, imo we don't need another gui for chat and everything else, there are a bunch of those and tbh I am happy enough with tui and all other platforms for chatting, this is just a convenient way to see what is setup and identify any areas you need to pay attention to
+    [reply to gwyntel msg=1491346143421005845]
+
+[2026-04-08T13:28:26.517000+00:00] xxbelocxx (id=1491429518022410331)
+    So I guess this could be adapted to be "multi-agent" aware and even write permissions?
+
+[2026-04-08T13:29:12.149000+00:00] xxbelocxx (id=1491429709416894605)
+    I know you said its not a generic multi-agent platform, but it could be modified to be mult-hermes I assume?
+
+[2026-04-08T19:34:00.087000+00:00] shan8851 (id=1491521514082795660)
+    Yeah wouldn't  be difficult to be multi Hermes
+
+[2026-04-10T21:53:34.465000+00:00] gwyntel (id=1492281414501142699)
+    this is incredible <@451930700808060940> ! my agent had an issue getting it up on the local network so it might be helpful to package a skill to instruct it on the right way to do things, but wow, I am impressed with the polish!!!
+
+[2026-04-10T21:55:31.969000+00:00] shan8851 (id=1492281907348508814)
+    Thanks <@203663993741639680>  I’m actually doing a polish pass right now adding a few more bits like better global search , agent filtering and some keyboard navigation and stuff
+    
+    I’ll also make sure to get a skill in there too in order to help people get up and running better
+    
+    Thanks for the feedback
+
+[2026-04-10T21:56:51.778000+00:00] gwyntel (id=1492282242091843794)
+    Absolutely!
+
+[2026-04-10T23:23:25.071000+00:00] shan8851 (id=1492304024341577788)
+    I just pushed a bunch of changes:
+    
+    - global search
+    - better keyboard nav
+    - better filtering
+    - some other UI nicities
+    
+    I dindt get around to a skill yet but improved the readme a bit, so hopefully that helps
+    [reply to gwyntel msg=1492281414501142699]
+
+[2026-04-11T12:46:35.996000+00:00] gwyntel (id=1492506151731068929)
+    ok great!! upon testing theres a slight issue with the groq api key detection but otherwise i dont notice issues! 
+    
+    ```Found it. 
+    
+    **Problem:** `GROQ_API_KEY` not in `status.py` hardcoded keys dict.
+    
+    `hermes status` only checks these keys (lines 117-132):
+    - OpenRouter, OpenAI, Z.AI/GLM, Kimi, MiniMax, MiniMax-CN, Firecrawl, Tavily, Browserbase, FAL, Tinker, WandB, ElevenLabs, GitHub, Anthropic
+    
+    GROQ is used by `transcription_tools.py` for Whisper STT, and it's in the environment isolation list in `local.py`, but **it was never added to the status display**.
+    
+    Console reads from `hermes status` output → status doesn't show GROQ → console doesn't show GROQ.```
+
+[2026-04-11T16:38:10.818000+00:00] shan8851 (id=1492564430838300935)
+    Ah yeah. I didn’t think about that. There will be keys that don’t show up from status and doctor stuff
+    
+    Should be able to get those in too though
+    
+    Will add it to the list - thanks
+

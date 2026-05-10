@@ -1,0 +1,27 @@
+# Thread '3D worldsim with Hermes + Godot (pt. 1+2 of many)' in forum #community-projects-showcase
+# thread_id=1448486620587098154 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:29.781840+00:00
+
+[2025-12-11T01:28:41.928000+00:00] Deleted User#0000 (id=1448486620587098154)
+    Doing the updates on twitter for now, eventually will switch to my blog.
+    Pt. 1:
+    https://x.com/valhalla_dev/status/1998507529932828724
+    Pt. 2:
+    https://x.com/valhalla_dev/status/1998897738830709190
+    
+    So far, just getting the object oriented model right, but I did manage to get Hermes-3-Llama-3.1-70B to randomly generate names for about 8 agents with no issue.
+    
+    I have a home where there will eventually be a farm plot, as well as a market where the agents will be able to sell their crops, buy seeds, etc.
+    
+    My plan is to ramp this up into a very large, full society/political/economic sim, like https://arxiv.org/pdf/2304.03442 but ramped up in complexity with full white/gray/black markets, elections, complex economies, etc. 
+    
+    You can read more about the idea here:
+    https://valhallaresearch.net/blog/anarkos-agents-pt-1
+    [attachment] Screenshot_2025-12-10_at_5.18.56_PM.png https://cdn.discordapp.com/attachments/1448486620587098154/1448486621417832611/Screenshot_2025-12-10_at_5.18.56_PM.png?ex=6a01d98a&is=6a00880a&hm=c371b6f962b2b9bfa2a8d58cd04eee5aa5396518982fe00c946f7119a4e41061&
+    [embed]  https://twitter.com/valhalla_dev/status/1998507529932828724
+    [embed]  https://twitter.com/valhalla_dev/status/1998897738830709190
+    [embed] anarkos agents part 1 - the idea https://valhallaresearch.net/blog/anarkos-agents-pt-1
+
+[2025-12-11T10:31:05.882000+00:00] ee.dd (id=1448623119823667231)
+    Looking forward to seeing where this goes!
+

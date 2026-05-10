@@ -1,0 +1,95 @@
+# Thread 'Milla Jovovich's Mempalace Plugin' in forum #plugins-skills-and-skins
+# thread_id=1491117605464051965 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:44.390415+00:00
+
+[2026-04-07T16:49:00.768000+00:00] dreamymaerd (id=1491117605464051965)
+    This is an implementation of Milla's Mempalace memory management system for agents. 
+    Original Repo: https://github.com/milla-jovovich/mempalace
+    
+    Hermes Plugin: https://github.com/NehuenD/hermes_mempalace
+    
+    It's a memory system that categorizes the different memories separated by wings and rooms so the agent can store memories from different sources or contexts such as personal life vs work in different ways, or different topics and so on. 
+    
+    Working on improving the different ways the user can check those memories, the wings and rooms. 
+    
+    This is a direct implementation, testing this new system to see how it goes with my hermes agent. Comments and ides are welcome. Also this is my first post, I hope I formatted decently enough.
+    [attachment] hermes.jpeg https://cdn.discordapp.com/attachments/1491117605464051965/1491120100458369185/hermes.jpeg?ex=6a020acf&is=6a00b94f&hm=b4c97e39c591015317830c47e64279195eb198fa7143699bcc2411223343c95f&
+    [embed] GitHub - milla-jovovich/mempalace: The highest-scoring AI memory sy... https://github.com/milla-jovovich/mempalace
+    [embed] GitHub - NehuenD/hermes_mempalace https://github.com/NehuenD/hermes_mempalace
+
+[2026-04-08T09:44:47.709000+00:00] niz3841 (id=1491373235462471731)
+    https://x.com/advicebyaimar/status/2041559354034344438?s=46
+    [embed]  https://twitter.com/advicebyaimar/status/2041559354034344438?s=46
+
+[2026-04-08T13:46:37.981000+00:00] dreamymaerd (id=1491434095954231499)
+    I have already seen and read those. And I have analyzed their code as well. I still wanted to give their idea a shot and see if I could shape it for my own use
+
+[2026-04-09T05:24:04.593000+00:00] coder948629 (id=1491670011343802389)
+    The Skeuomorphism of palace, rooms and wings is a marketing trick.
+    
+    You're better off using a graph database and a 3-4 level hierarchical clustering to achieve something similar in a more general way instead of benchmaxxing.
+
+[2026-04-09T12:00:21.017000+00:00] jycen (id=1491769736894087309)
+    how it goes so far ?
+
+[2026-04-09T14:25:01.370000+00:00] enderxen (id=1491806144933527653)
+    How does it compare to Honcho system ?
+
+[2026-04-10T10:56:46.471000+00:00] dreamymaerd (id=1492116125394141225)
+    Not the best not the worst. I haven't had the time to finish improving it though. We'll see
+
+[2026-04-10T10:56:51.539000+00:00] dreamymaerd (id=1492116146650878063)
+    Thanks for the interest
+
+[2026-04-10T11:58:14.814000+00:00] undifined. (id=1492131595426070621)
+    all memory can be Key =  Value systems.
+    I am working on this but imagine a large KV store with virtual tables of  graph, btree and others:
+    
+    UnifiedMemorySystem (Coordinator)
+    ├── PostgreSQL Core (Database Layer)
+    ├── KVStore (Key-Value, TTL-enabled)
+    ├── BTreeIndex (Sorted Range Queries)
+    ├── LinkedList (Ordered Sequences)
+    ├── Graph (DAG Task Dependencies)
+    ├── KanbanBoard (Workflow Tracking)
+    ├── LessonLearned (Pattern Tracking)
+    ├── CodeImplementationLedger (Metrics)
+    └── MemoryTransaction (ACID Wrapper)
+
+[2026-04-14T10:42:18.322000+00:00] defizealot (id=1493562035575717991)
+    I just asked my assistant to install it.
+
+[2026-04-14T10:43:15.152000+00:00] defizealot (id=1493562273938280468)
+    The original mempalace one, and I'm actually liking it.  I didn't have the best time  with Honcho
+
+[2026-04-14T11:39:27.068000+00:00] chfarhan_ (id=1493576416779046913)
+    is there any multi profle setup for this ???  or just install  plugin and thats it for multi profile ???
+
+[2026-04-17T21:44:44.331000+00:00] dreamymaerd (id=1494815906017050625)
+    Sorry, working on this on my free time which hasn't been much lately. It should be up soon
+    [reply to chfarhan_ msg=1493576416779046913]
+
+[2026-04-17T21:53:17.662000+00:00] dreamymaerd (id=1494818059083448504)
+    Just merged:
+    - add Multi Profile option. Each profile has its own set of drawers.
+    - The palace now blocks "empty" states or when the agent determines there is nothing to save.
+    - add TTL archival policies. Optional expires_at or last_ accessed.
+    - add summarization command for both user and agent
+
+[2026-04-17T21:53:34.715000+00:00] dreamymaerd (id=1494818130608787607)
+    Let me know if there are any issues or bugs
+
+[2026-04-18T18:58:21.581000+00:00] dreamymaerd (id=1495136423194661075)
+    ### Today's Patch:
+    - Fix some known issues and bugs.
+    - Add a new command for the agent to register and remember its own mistakes when they happen.
+
+[2026-04-20T23:17:35.182000+00:00] dreamymaerd (id=1495926435456614481)
+    ### New Additions:
+    - Add session memory making each session a continuation of the previous ones.
+    - Modify the system_prompt_block() to make the agent recall previous sessions on wake_up
+
+[2026-04-30T01:49:48.760000+00:00] dreamymaerd (id=1499226235249627166)
+    - Add a learning framework with the corresponding tools. The agent can now learn facts and recall them when needed. (structurally loosely based on Google's paper https://arxiv.org/abs/2509.25140 minus the looping parts)
+    [embed] ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory https://arxiv.org/abs/2509.25140
+

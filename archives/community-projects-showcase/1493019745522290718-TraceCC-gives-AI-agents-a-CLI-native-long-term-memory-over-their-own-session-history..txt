@@ -1,0 +1,42 @@
+# Thread 'TraceCC gives AI agents a CLI-native long-term memory over their own session history.' in forum #community-projects-showcase
+# thread_id=1493019745522290718 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:15.462510+00:00
+
+[2026-04-12T22:47:26.298000+00:00] madbuda (id=1493019745522290718)
+    Currently supports Claude Code, Codex, and Hermes Agent JSONL traces. The adapter architecture is designed for additional runtimes without renderer changes.
+    
+    Current agent memory is either summarized (lossy, someone decided what mattered at write time) or raw traces (lossless but useless without parsing hundreds of JSONL files). TraceCC sits in between. The agent runs a CLI call, gets back targeted results with stable pointers, and can drill deeper only if needed. The token cost is a search result, not a transcript.
+    
+    - Zero summarization loss. The actual transcript, not someone's summary of it.
+    - Token-efficient. Search returns pointers and snippets, not full sessions.
+    - Agent-native. CLI tool, JSON output, designed for tool_call workflows.
+    - Multi-agent. Claude Code, Codex, and Hermes traces unified in one index.
+    - Project-scoped. One bundle per project, not one global blob.
+    
+    Github: https://github.com/lludlow/TraceCC
+    [embed] GitHub - lludlow/TraceCC: TraceCC gives AI agents a CLI-native long... https://github.com/lludlow/TraceCC
+
+[2026-04-12T22:50:25.682000+00:00] rakaarwaky (id=1493020497913577624)
+    Hi <@160779338676043776> 
+    Could you compare your memory vs
+    https://github.com/AxDSan/mnemosyne
+    by <@151598363131904000> 
+    
+    Sorry but I'm really curios?
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+
+[2026-04-12T22:51:37.730000+00:00] madbuda (id=1493020800104530122)
+    That is 
+    BEAM Architecture
+    Bilevel Episodic-Associative Memory splits storage into three tiers:
+    
+    working_memory — hot, recent context auto-injected into prompts
+    episodic_memory — long-term storage retrieved via semantic + full-text search
+    scratchpad — temporary agent reasoning workspace
+    
+    This is literally just giving the agent CLI access to its session history. No hooks, no filtering, no bloat
+
+[2026-04-12T22:53:05.475000+00:00] madbuda (id=1493021168134000822)
+    Here is the paper the concept comes from https://arxiv.org/abs/2603.29678
+    [embed] View-oriented Conversation Compiler for Agent Trace Analysis https://arxiv.org/abs/2603.29678
+

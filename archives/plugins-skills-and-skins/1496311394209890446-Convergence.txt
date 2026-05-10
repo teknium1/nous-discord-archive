@@ -1,0 +1,73 @@
+# Thread 'Convergence' in forum #plugins-skills-and-skins
+# thread_id=1496311394209890446 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:19.386576+00:00
+
+[2026-04-22T00:47:16.501000+00:00] podjdev (id=1496311394209890446)
+    https://github.com/peterpodj/convergence -A simple script to find more ideas, the convergence of two existing ideas is where novel insights lie.
+    
+     Convergence Investigation is a general-purpose research methodology that orchestrates six investigative sub-methods under strict epistemic-tier discipline. It produces a standard deliverable bundle including tier-disciplined knowledge graphs, investigation reports, comparison tables, handoff documents, and interactive visualizations.
+    
+    The methodology is project-agnostic — equally effective for cross-domain academic investigation, corporate due-diligence, journalistic source-mapping, institutional-history projects, or any research requiring multiple sources and rigorous synthesis.
+    [attachment] dots-2-.png https://cdn.discordapp.com/attachments/1496311394209890446/1496311394537050263/dots-2-.png?ex=6a01cfd4&is=6a007e54&hm=0d5e3925d870d4dcb09cf934820b43b9286d5d6b8bf474e03607e1ddd11b5cdd&
+    [embed] GitHub - peterpodj/convergence: A simple script to find more ideas,... https://github.com/peterpodj/convergence
+
+[2026-04-22T01:04:22.072000+00:00] mconstant (id=1496315695766700062)
+    Very cool! Browsing this gives a lot more context and explains how you got your results. Cannot wait to try it myself later.
+    [reply to podjdev msg=1496311394209890446]
+
+[2026-04-22T01:06:48.075000+00:00] mconstant (id=1496316308147409048)
+    Is the Python script fresh and new or was that a part of this from the beginning?
+
+[2026-04-22T04:32:48.104000+00:00] podjdev (id=1496368149866741880)
+    Thanks! I’ve accidentally deleted some important components so I may need to revert some changes in the git
+
+[2026-04-22T14:01:13.269000+00:00] mconstant (id=1496511197296722021)
+    git is your friend!
+
+[2026-04-22T14:01:18.381000+00:00] mconstant (id=1496511218737746135)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496311394209890446/1496511217857204385/image.png?ex=6a01e12e&is=6a008fae&hm=5171c577a09f11dd6704bf71c6cdf3cd9866d56b352ffbc23d4945fd75635bff&
+
+[2026-04-22T14:01:37.392000+00:00] mconstant (id=1496511298475659388)
+    it certainly helps save your bacon if something goes wrong...
+
+[2026-04-22T14:02:19.661000+00:00] mconstant (id=1496511475764690995)
+    also if you check in and push any secrets you can clear them out of history with `git-filter-repo` or `bfg` if needed... just rotate your tokens as well if that happens
+
+[2026-04-22T14:02:35.965000+00:00] mconstant (id=1496511544148623441)
+    there are tools to scan history and detect if that happens
+
+[2026-04-22T14:03:13.523000+00:00] mconstant (id=1496511701678428400)
+    so far this works really well, in this case, for the worldwide hacking groups I had to tell it to pick up some known groups it somehow skipped over
+
+[2026-04-22T14:03:59.438000+00:00] mconstant (id=1496511894259892301)
+    it just left out the Israeli groups and NSA (Unit 8200, Equation Group, etc)
+
+[2026-04-22T14:04:19.288000+00:00] mconstant (id=1496511977516962024)
+    so I have been prompting it further to not forget...
+
+[2026-04-22T14:05:02.064000+00:00] mconstant (id=1496512156932374548)
+    problem would have been if I hadn't known they were a thing, the skill would not have necessarily picked them up and shown them with the prompt I gave and I may have missed them
+
+[2026-04-22T14:05:29.945000+00:00] mconstant (id=1496512273873637548)
+    but I love the Apophenia Audit and other integral parts of this system
+
+[2026-04-22T14:05:50.829000+00:00] mconstant (id=1496512361467482236)
+    that elevates this from conspiracy nut to fact checking investigator
+
+[2026-04-22T14:06:31.067000+00:00] mconstant (id=1496512530238013710)
+    it accomplishes its goal of finding verified convergence unless people start forging sources that look legitimate and can fool this
+
+[2026-04-22T14:06:43.412000+00:00] mconstant (id=1496512582016565288)
+    then we may need a world with better information provenance
+
+[2026-04-22T14:21:17.797000+00:00] mconstant (id=1496516249453199482)
+    Also, I’m quite curious to learn more about Holographic Verification
+
+[2026-04-22T14:23:42.744000+00:00] mconstant (id=1496516857404981258)
+    And you know I’m going to set this loose to try and ascertain the identity of Satoshi Nakamoto
+
+[2026-04-22T14:25:25.910000+00:00] podjdev (id=1496517290114551889)
+    Thank you! I'm adding another skill
+
+[2026-04-22T23:40:32.702000+00:00] podjdev (id=1496656988925329451)
+

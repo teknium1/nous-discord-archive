@@ -1,0 +1,25 @@
+# Thread 'We build AI agents. Just open-sourced our framework - self-contained, supports self-hosted models.' in forum #community-projects-showcase
+# thread_id=1491119162112606288 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:35.588237+00:00
+
+[2026-04-07T16:55:11.902000+00:00] marcos_65879 (id=1491119162112606288)
+    Hey everyone, Marcos from the GrowthX. We build AI agents for clients like Lovable, Webflow, Airbyte. We just open-sourced our AI framework - self-contained, supports self-hosted models, all data stays on your infrastructure.
+    
+    We kept hitting the same problems. AI development has a lot of things to figure out that are unique to it - how do you iterate on a codebase packed with prompts? How do you orchestrate API calls that fail in unpredictable ways? How do you track what things actually cost? How do you test code that's non-deterministic? On top of that, every piece of the tooling ecosystem is a different SaaS product that doesn't talk to each other.
+    
+    We focused on solving three things:
+    
+    1. Make it easy for coding agents to work with your AI codebase. Filesystem-first - everything your agent needs is files it can read, organized in self-contained folders. TypeScript because it's compiled and Zod gives agents validation and documentation together.
+    
+    2. Self-contained. One package instead of a dozen SaaS subscriptions - prompts, evals, tracing, cost tracking, credentials. Your data stays on your infrastructure. Supports self-hosted models out of the box.
+    
+    3. Fast learning curve. We have engineers at different levels and a lot of AI dev patterns are still being figured out. We baked in conventions so people don't have to figure things out on their own for every project.
+    
+    We finally got it to the point where we could finish the extraction and wanted to share it. Hope it's useful.
+    
+    https://github.com/growthxai/output
+    [embed] GitHub - growthxai/output: Output.ai: The AI Workflow Framework https://github.com/growthxai/output
+
+[2026-04-22T17:48:32.442000+00:00] oninsuka (id=1496568404134330370)
+    woah would love to learn more about this bro
+

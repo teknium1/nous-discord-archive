@@ -1,0 +1,96 @@
+# Thread 'Tidal Music Player Skills' in forum #plugins-skills-and-skins
+# thread_id=1494297717420199996 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:28.606194+00:00
+
+[2026-04-16T11:25:38.542000+00:00] splosh123 (id=1494297717420199996)
+    Being an avid music lover and using Tidal I've created this skill set up:
+    
+    TIDAL SKILLS OVERVIEW
+    
+    1. tidal-curator (Base Skill)
+    Purpose: Foundation for all Tidal integration  
+    What it does:
+    - OAuth authentication handling
+    - Playlist creation/management
+    - Track search and addition
+    - Rate limiting protection
+    
+    Used by: All other Tidal skills
+    
+    ---
+    
+    2. tidal-dual-curator (Daily Automation)
+    Purpose: Automated twice-daily music curation  
+    Schedule: 9am (morning vibe) + 6pm (evening vibe)
+    
+    Features:
+    - Curated track database with context
+    - Time-of-day matching (energetic morning, chill evening)
+    - Artist background and "why this track" explanations
+    - No duplicates (state tracking)
+    - Cron-scheduled
+    
+    Track database includes: Mac Miller, Kid Cudi, Aminé, East Forest, Horrorshow, Satsang, etc.
+    
+    ---
+    
+    3. tidal-playlist-creator (Bulk/Export)
+    Purpose: Create playlists from track lists or ListenBrainz data  
+    Three approaches:
+    1. Daily curated additions (rate-limit safe, recommended)
+    2. Direct Tidal API (bulk, needs 2s delays)
+    3. Export to third-party (CSV/M3U/JSON for TuneMyMusic/Soundiiz)
+    
+    Key learning: Tidal API has strict rate limits (HTTP 412 errors if too fast)
+    
+    ---
+    
+    4. tidal-recommendation (Smart Discovery)
+    Purpose: ListenBrainz-powered recommendations with web search  
+    User: splosh123 (ListenBrainz)
+    
+    Two modes:
+    1. On-demand: "Recommend me something funky" → web search + analysis
+    2. Scheduled: Daily discovery cron jobs
+    
+    Discovery sources:
+    - ListenBrainz listening history analysis
+    - Web search for new releases
+    - Music blog crawling
+    - Similar artist exploration
+    - Underground trending tracks
+    
+    Output: Rich context (why this track, artist background, mood classification)
+    
+    ---
+    
+    CURRENT SETUP STATUS
+    
+    | Skill  | Automation |
+    |-------|---------|
+    | tidal-curator | Base library |
+    | tidal-dual-curator | Cron: 9am & 6pm daily |
+    | tidal-playlist-creator | On-demand |
+    | tidal-recommendation |  Cron + on-demand |
+    
+    Next task: Create ASCII Album art with each music recommendation!
+
+[2026-04-16T12:13:44.346000+00:00] jcrabapple (id=1494309821359460453)
+    I made something similar for Deezer
+
+[2026-04-16T15:11:49.415000+00:00] lecturesfrom (id=1494354637787103344)
+    I been a huge advocate for tidal. dope to see this bro
+
+[2026-04-16T23:10:17.542000+00:00] splosh123 (id=1494475048398885034)
+    <@1356861006311194706> I'll get the skills production ready and release them to the wild if you'd like it? This is my most recent morning vibe message.
+    [attachment] Screenshot_20260417-090945.png https://cdn.discordapp.com/attachments/1494297717420199996/1494475048172650506/Screenshot_20260417-090945.png?ex=6a01b919&is=6a006799&hm=26ee0284783231510ebc38b44b83e82048efde3f9f815017d0c53186268d2817&
+
+[2026-04-28T07:05:51.004000+00:00] alf.1337 (id=1498580992934285342)
+    wow! can you release this please? 🙂
+
+[2026-05-04T08:29:06.333000+00:00] splosh123 (id=1500776272056422430)
+    All the skills are now live here is the main connector skill, other skills are on my github.
+    
+    https://github.com/RegeneratusLabs/hermes-tidal-curator
+    [embed] GitHub - RegeneratusLabs/hermes-tidal-curator: Tidal integration sk... https://github.com/RegeneratusLabs/hermes-tidal-curator
+

@@ -1,0 +1,18 @@
+# Thread 'Built a multi-agent desktop client for Hermes Agent :rocket:' in forum #community-projects-showcase
+# thread_id=1493135312107475096 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:13.578297+00:00
+
+[2026-04-13T06:26:39.519000+00:00] demilgkentpk_17970 (id=1493135312107475096)
+    Instead of one agent doing everything, it has 20 AI specialists (PM, devs, designers, QA...) that auto-collaborate. The PM decomposes your task and delegates to the right experts.
+    
+    Also added a visual Skill Store with 50+ skills from CocoLoop.
+    
+    GitHub: https://github.com/Felix-Forever/hermes-agent-desktop
+    [attachment] 750DE2C6-0738-4841-A479-DE6A9E60B705.png https://cdn.discordapp.com/attachments/1493135312107475096/1493135312610656336/750DE2C6-0738-4841-A479-DE6A9E60B705.png?ex=6a021f5f&is=6a00cddf&hm=38686955d9abf5506dec7640c7bb47ea5be90caeddbc04061908b172b98b561e&
+    [attachment] DE36AFFB-670E-4A70-A800-63FDFC67A989.png https://cdn.discordapp.com/attachments/1493135312107475096/1493135313009377290/DE36AFFB-670E-4A70-A800-63FDFC67A989.png?ex=6a021f5f&is=6a00cddf&hm=d4c34e0e8c005af111704134119f488309e9bc83fba3ea83ed0ae896e595ba47&
+    [attachment] BD8E5D9D-09F1-4BEB-B2ED-E7D364BC5D8A.png https://cdn.discordapp.com/attachments/1493135312107475096/1493135313285939221/BD8E5D9D-09F1-4BEB-B2ED-E7D364BC5D8A.png?ex=6a021f5f&is=6a00cddf&hm=bbab8f1f92c8d135584e78528b2a311794b9d04ad99008849e13b8eba299ee6c&
+    [embed] GitHub - Felix-Forever/hermes-agent-desktop: Multi-Agent AI Desktop... https://github.com/Felix-Forever/hermes-agent-desktop
+
+[2026-04-20T10:21:02.750000+00:00] xflowx (id=1495731012632580250)
+    Is possible use Codex subscription?
+

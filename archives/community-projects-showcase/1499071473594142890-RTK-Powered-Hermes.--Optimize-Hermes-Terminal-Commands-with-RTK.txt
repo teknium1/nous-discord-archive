@@ -1,0 +1,161 @@
+# Thread 'RTK-Powered Hermes.  Optimize Hermes Terminal Commands with RTK' in forum #community-projects-showcase
+# thread_id=1499071473594142890 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:35.684004+00:00
+
+[2026-04-29T15:34:50.706000+00:00] chfarhan_ (id=1499071473594142890)
+    I built hermes-rtk-optimizer, a Hermes Agent plugin that brings RTK-powered command optimization and smarter output handling directly into Hermes.
+        
+        Repo: https://github.com/ch0udry/hermes-rtk-optimizer
+        
+        The plugin works inside Hermes? normal tool flow. When Hermes is about to run a terminal command, the plugin passes that command through RTK?s rewrite logic first. This helps commands become safer, cleaner, and more agent-friendly before execution.
+        
+        It also improves how large tool outputs are handled. Long terminal logs, big file reads, search results, test output, and process logs can be compacted before they go back into the model context. That means Hermes keeps the important information while reducing noise and token usage.
+        
+        Benefits:
+        - Cleaner terminal command execution through RTK rewrite
+        - Less noisy tool output
+        - Better context efficiency during long coding sessions
+        - Safer handling of large logs and file reads
+        - Works through Hermes plugin hooks, without patching Hermes core
+        - Keeps JSON tool results valid for downstream use
+        - Supports foreground terminal output, file reads, search results, and process output
+        - Includes a /rtkopt command for status and metrics
+        
+        This is useful if you run Hermes for development, debugging, repo inspection, or long autonomous tasks where command quality and context efficiency matter.
+    [embed] GitHub - ch0udry/hermes-rtk-optimizer https://github.com/ch0udry/hermes-rtk-optimizer
+
+[2026-04-29T15:36:54.420000+00:00] chfarhan_ (id=1499071992488526026)
+    hermes-rtk-optimizer uses 3 main Hermes hooks:
+        
+        1. pre_tool_call
+        
+        Use:
+        Runs before Hermes executes a tool call.
+        
+        What it does:
+        When Hermes is about to run a terminal command, this hook checks the command and sends it through RTK rewrite logic.
+        
+        Example behavior:
+        - Hermes wants to run: grep something file
+        - Plugin rewrites it to: rtk grep something file
+        - Hermes then executes the rewritten command.
+        
+        Benefit:
+        - Cleaner terminal commands
+        - Safer command handling
+        - RTK can optimize shell usage before execution
+        - Works before the command touches the system
+
+[2026-04-29T15:37:08.542000+00:00] chfarhan_ (id=1499072051720487034)
+    2. transform_terminal_output
+        
+        Use:
+        Runs after a foreground terminal command finishes, before the output goes back into model context.
+        
+        What it does:
+        Compacts noisy terminal output such as long logs, build output, test output, git status, lint output, and repeated lines.
+        
+        Benefit:
+        - Reduces token usage
+        - Keeps important terminal information
+        - Prevents huge logs from flooding context
+        - Makes long development sessions cleaner
+
+[2026-04-29T15:37:11.531000+00:00] chfarhan_ (id=1499072064257265776)
+    3. transform_tool_result
+        
+        Use:
+        Runs after non-terminal tools return results.
+        
+        What it handles:
+        - read_file
+        - search_files
+        - process
+        - other JSON-style tool outputs
+        
+        What it does:
+        Compacts large file reads, search results, and background process output while keeping the result valid JSON.
+        
+        Benefit:
+        - Keeps tool output structured
+        - Preserves compatibility with Hermes tools
+        - Reduces noise from large files/searches
+        - Helps Hermes keep more useful context
+        
+        Simple summary:
+        
+        - pre_tool_call = optimize command before execution
+        - transform_terminal_output = clean terminal output after execution
+        - transform_tool_result = clean non-terminal tool results before model sees them
+        
+        Why this matters:
+        
+        Hermes can work longer with less context waste. Commands become RTK-aware, and outputs become smaller, cleaner, and more useful without changing Hermes core.
+
+[2026-04-30T10:18:17.605000+00:00] chfarhan_ (id=1499354198620508160)
+    hermes-rtk-optimizer v0.2.0
+        
+        Repo:
+        https://github.com/ch0udry/hermes-rtk-optimizer
+        
+        New in v0.2.0:
+        
+        - Added visible RTK rewrite notifications so users can tell when RTK is active.
+        - Added concise rewrite mode by default to reduce terminal noise and save context window.
+        - Added full audit mode for debugging rewrite behavior when needed.
+        - Added new config option:
+          show_rewrite_notifications
+        - Added new config option:
+          rewrite_notification_detail
+          - concise: shows short messages like ?RTK rewrite applied?
+          - full: shows full rewrite traces for audit/debug
+        - Added better rewrite visibility in logs.
+        - Added CHANGELOG.md.
+        - Updated README config docs.
+        - Added tests for:
+          - rewrite notifications
+          - full rewrite audit messages
+          - suggest-mode notifications
+          - disabled notifications
+          - concise/default behavior
+        
+        What works:
+        
+        - Terminal commands are RTK-rewritten through Hermes hooks.
+        - Terminal output is compacted before going back into context.
+        - read_file, search_files, and process outputs are optimized through result compaction.
+        - execute_code stays native and is not wrapped, which keeps Hermes behavior safe and structured.
+        - Old rtk-rewrite plugin has been removed.
+        - hermes-rtk-optimizer is now the active plugin.
+        
+        Main benefit:
+        
+        Hermes now gets RTK-powered command optimization and cleaner tool output with less UI noise, lower context usage, and better audit visibility when needed.
+        
+        Verification:
+        
+        - Tests pass: 12 passed
+        - Version bumped to: 0.2.0
+        - Pushed commit:
+          a9621bd chore: bump version to 0.2.0
+    [embed] GitHub - ch0udry/hermes-rtk-optimizer https://github.com/ch0udry/hermes-rtk-optimizer
+
+[2026-04-30T11:59:45.187000+00:00] chfarhan_ (id=1499379731789910017)
+    v0.2.1 Latest
+    Changelog
+    Added a plugin-side RTK preview marker for rewritten terminal commands.
+    Rewritten terminal previews now show commands like : RTK && rtk grep ..., making RTK activity visible in Hermes' normal tool-progress feed without patching Hermes core.
+    Added preview_marker config support; set it to false to keep previews as plain rtk ... commands.
+    Verification
+    pytest: 13 passed
+    Plugin manager loads hermes-rtk-optimizer enabled with 3 hooks and 1 slash command
+    pre_tool_call rewrites grep def create_profile to : RTK && rtk grep def create_profile
+    Real hermes chat -q ... terminal preview showed : RTK && rtk grep def create_profile /dev/null
+
+[2026-05-06T02:22:38.912000+00:00] yerts (id=1501408825859903583)
+    https://github.com/ether-btc/hermes-rtk-optimizer
+    [embed] GitHub - ether-btc/hermes-rtk-optimizer https://github.com/ether-btc/hermes-rtk-optimizer
+
+[2026-05-06T02:22:53.459000+00:00] yerts (id=1501408886874308781)
+    not mine, but old repo gone, new seems to live here
+

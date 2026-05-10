@@ -1,0 +1,17 @@
+# Thread 'Hermes Memory w/ Cloudflare D1' in forum #community-projects-showcase
+# thread_id=1488184596569919730 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:04.859179+00:00
+
+[2026-03-30T14:34:16.955000+00:00] lemurboye (id=1488184596569919730)
+    https://github.com/flashfork/Hermes-Agent-Memory-Cloudflare-MCP
+    [embed] GitHub - flashfork/Hermes-Agent-Memory-Cloudflare-MCP: ⏺ Hermes A... https://github.com/flashfork/Hermes-Agent-Memory-Cloudflare-MCP
+
+[2026-03-30T19:42:12.309000+00:00] renaissance5973 (id=1488262087820972222)
+    why should cloudflare? why not local? any advantages?
+
+[2026-03-31T07:57:42.766000+00:00] lemurboye (id=1488447184373416109)
+    Read the readme.md
+
+[2026-03-31T07:58:55.741000+00:00] lemurboye (id=1488447490452885514)
+    Local is fine and works well. This is an alternative (with own memory-gauging) over time so if you want to do more with your memory you could do vectoriztion, elastic search, workers, etc. for your memory or share it across devices and users
+

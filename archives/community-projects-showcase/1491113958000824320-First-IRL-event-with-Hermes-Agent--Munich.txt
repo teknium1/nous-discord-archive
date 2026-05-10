@@ -1,0 +1,9 @@
+# Thread 'First IRL event with Hermes Agent (Munich)' in forum #community-projects-showcase
+# thread_id=1491113958000824320 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:35.951700+00:00
+
+[2026-04-07T16:34:31.145000+00:00] igorkudryk (id=1491113958000824320)
+    Hey everyone, we are doing the first-ever live event in Munich. If you live around here, I'd love to see you there in real life: https://luma.com/kytuoom5
+    [attachment] Untitled_design3.png https://cdn.discordapp.com/attachments/1491113958000824320/1491113959183355985/Untitled_design3.png?ex=6a020517&is=6a00b397&hm=e786404f640a85800ac2de7884f548b9d60fbd6cdc7b8d547f610651251a0ba4&
+    [embed] Agentic AI Meetup with Hermes Agent · Luma https://luma.com/kytuoom5
+

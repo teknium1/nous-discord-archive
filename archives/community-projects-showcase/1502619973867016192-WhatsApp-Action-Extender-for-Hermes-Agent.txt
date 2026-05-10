@@ -1,0 +1,13 @@
+# Thread 'WhatsApp Action Extender for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1502619973867016192 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:55.865104+00:00
+
+[2026-05-09T10:48:06.739000+00:00] vayaperson (id=1502623193582534707)
+    Andorina v1.0.1: WhatsApp Integration for Hermes Agent
+
+[2026-05-09T16:02:08.156000+00:00] vayaperson (id=1502702220213354590)
+    WhatsApp ACtion Extender for Hermes Agent
+
+[2026-05-09T16:02:13.617000+00:00] vayaperson (id=1502702243118579774)
+    WhatsApp Action Extender for Hermes Agent
+

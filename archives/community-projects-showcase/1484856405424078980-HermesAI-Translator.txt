@@ -1,0 +1,18 @@
+# Thread 'HermesAI Translator' in forum #community-projects-showcase
+# thread_id=1484856405424078980 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:12.621749+00:00
+
+[2026-03-21T10:09:14.351000+00:00] misswuhanliang (id=1484856405424078980)
+    I'm thrilled to share a massive contribution I've made to the ecosystem! I've developed and released HermesAI Translator, an open-source, AI-powered browser extension for seamless translation, reading assistance, text polishing, and summarization directly within the browser, driven by Hermes-4-70B. 
+    
+    I've pushed this to the community to make cross-language reading easier than ever. You can check out all the resources and the tool in action below:
+    
+    🚀 GitHub Repo (Open Source): https://github.com/wodesiku/hermesai-translator
+    📺 Demo & Walkthrough: https://www.youtube.com/watch?v=IltObAsd6Zw
+    🐦 Announcement on X: https://x.com/bonassr7/status/2035239487320859036?s=20
+    
+    I’ve put a ton of effort into building this and super proud to bring this to the community!
+    [embed] GitHub - wodesiku/hermesai-translator https://github.com/wodesiku/hermesai-translator
+    [embed] demo https://www.youtube.com/watch?v=IltObAsd6Zw
+    [embed]  https://twitter.com/bonassr7/status/2035239487320859036?s=20
+

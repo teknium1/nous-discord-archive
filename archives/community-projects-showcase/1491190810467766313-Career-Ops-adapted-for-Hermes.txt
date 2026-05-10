@@ -1,0 +1,8 @@
+# Thread 'Career-Ops adapted for Hermes' in forum #community-projects-showcase
+# thread_id=1491190810467766313 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:34.770069+00:00
+
+[2026-04-07T21:39:54.201000+00:00] mrhoneybuniii (id=1491190810467766313)
+    https://github.com/DottsGit/hermes-career-ops
+    [embed] GitHub - DottsGit/hermes-career-ops: AI-powered job search system b... https://github.com/DottsGit/hermes-career-ops
+

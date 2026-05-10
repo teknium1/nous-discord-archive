@@ -1,0 +1,160 @@
+# Thread 'Hermes Agent on Apple Containers' in forum #community-projects-showcase
+# thread_id=1486768386926055635 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:52.729534+00:00
+
+[2026-03-26T16:46:46.264000+00:00] amazon1148 (id=1486768386926055635)
+    Apple's containerization framework (v0.11.0) in macOS 26 (Tahoe) provides managed Micro-VM isolation. The architecture utilizes a security model:
+    
+    Filesystem-Layer IPC: Employs Unix Domain Sockets (UDS) over Virtio-FS mounts for inter-container communication.
+    
+    Hardware-Level Isolation: Each service runs in a Micro-VM with a vmlinux-6.18.5-177 kernel, ensuring memory boundaries.
+    
+    Identity-Augmented Logging: Context IDs (CIDs) serve as identity for hardware-level audit trails in the Endpoint Security Framework.
+    
+    Network-Level Governance: vmnet assigns per-container IP addresses, with  isolation policies securing the virtual network perimeter.
+    
+    TCC-Gated Enclaves: Inter-service access is governed by Transparency, Consent, and Control (TCC) permissions on shared Virtio-FS directories.
+    
+    Hermes Agent utilizes kubectl to manage K3s clusters. Honcho services are accessible to pods.
+    
+    The container coordination is managed through container-compose:
+    
+    * honcho-db: PostgreSQL with WAL-G continuous archiving for PITR and pgvector support.
+    
+    * honcho-hub: API server with an embedded Deriver for async knowledge synthesis.
+    
+    * hermes-agent: Gateway integrating the K3s bridge with Honcho MCP integration.
+    
+    Also run:
+    
+    code-graph: Indexes repos, system configs, and logs as an MCP.
+    
+    honcho-deriver: processing sessions and cross-peer reasoning.
+    
+    Container-compose features in production use:
+    up -d, down --timeout-seconds, ps --format json, health --json, up --recover (drift-aware recovery), service definitions, image, env, command, bind mounts, and named volumes.
+    
+    Health monitoring runs in watch mode — status per cycle with WAL-G backup age/lag, auto-recovery escalation, and notifications.
+    
+    Secret Management:
+    Utilizes x-apple-secrets for memory enclave mounts into containers as read-only tmpfs, ensuring zero-disk exposure. Keychain support is planned.
+    
+    The stack is in production with 6,000+ agent transcripts and 6,100+ embeddings facilitating robot research and fleet management.
+
+[2026-04-03T01:19:09.216000+00:00] ungergames (id=1489434047271927869)
+    Bro. This is seriously helpful. Stays on the machine. How can I help?
+
+[2026-04-03T10:28:49.318000+00:00] fresh37 (id=1489572375845535825)
+    Yeah while I have only basic container experience, I’d be interested in helping a bit. Containerization is the only way I’m considering using autonomous agents like this
+
+[2026-04-03T23:26:14.375000+00:00] amazon1148 (id=1489768019394695209)
+    Install https://github.com/apple/container/releases/tag/0.11.0. I am working on a release of Container-Compose 0.11.0 that will make a lot of the management of the containers dead simple.
+    [reply to ungergames msg=1489434047271927869]
+
+[2026-04-03T23:26:37.065000+00:00] amazon1148 (id=1489768114563449004)
+    <@143439177256665090> Install https://github.com/apple/container/releases/tag/0.11.0.
+    [reply to fresh37 msg=1489572375845535825]
+
+[2026-04-04T16:43:59.049000+00:00] amazon1148 (id=1490029176366039080)
+    Quick update. Container-Compose was updated to 0.11.0 and I did an adversarial-review with Opus 4.6 last night and I'm now fixing about a dozen issues raised. I'm running it in production and bringing services up and down. 
+    
+    I'm also incorporating some of the latest nework features in Container into Container-Compose so that we minimize the amount of manual networking necessary for external agents to access the container.
+
+[2026-04-05T01:40:16.955000+00:00] ungergames (id=1490164140285755512)
+    Cool. I am going to test it soon.
+
+[2026-04-05T12:58:16.912000+00:00] fresh37 (id=1490334764391993516)
+    I was able to set up a Container and got Hermes running in it successfully. The hard part is coping that my M5 Air can’t handle great models lol
+
+[2026-04-05T16:38:11.666000+00:00] amazon1148 (id=1490390107201601716)
+    @Fresh great! https://github.com/Arthur-Ficial/apfel
+    [embed] GitHub - Arthur-Ficial/apfel: Apple Intelligence from the command l... https://github.com/Arthur-Ficial/apfel
+    [reply to fresh37 msg=1490334764391993516]
+
+[2026-04-05T17:11:43.120000+00:00] amazon1148 (id=1490398543851290746)
+    Quick update on progress. Apple container is designed to absolutely block any network traffic between containers which makes Honcho DB, Honcho Hub, and Hermes Agent container communications particularly challenging. We got around it with dedicated socat bridges in container 0.9 - 0.10 but in container 0.11.0 Apple locked inter-container networking down absolutely in their proprietary MacOs sub-system. 
+    
+    While this was initially frustrating it forced a re-architecture to fully and completely embrace Apple's security model to the maximum.
+    
+    All inter-container communication is now declarative in the container-compose scripts exclusively using virtio-vsock. All communication is anchored in Context ID (CID) with zero-file presense that can not be discovered on the host OS.  We are adding network trace so you can debug vsock otherwise container communication is invisible.
+    
+    We are also adding System Integrity Protection (SIP), Entitlement, and the Hardened runtime. 
+    
+    Why so extreme? Hermes agent is going to write code in a container that we assume will try to break through the container and compromise your Mac. It's inevitable, so we are planning for the worst.  
+    
+    This means that Hermes Agent can't just discover a MCP or Password service on the fly, it's explicitly declared or it can not be reached, because it's Air-gapped at the hardware level. 
+    
+    So we've added a lot of container-compose recovery features so it's easy to declare a new MCP service, remote logging service, password service, and then container-compose down and up --recover and it's all working. 
+    
+    Users are worried about Honcho token costs and using embedding, derivation, and conclusion LLM tokens is an investment. We've added DB image with Write-Ahead Log Garbage (WAL-G) and Point In Time Recovery.  container-compose up --recover now will recover your Postgress DB.  
+    
+    Dream away and don't worry Honcho will lose your conclusions, they are recoverable from your off container/machine back-up to the minute.
+
+[2026-04-06T21:44:56.097000+00:00] amazon1148 (id=1490829688845897839)
+    Another quick update. 
+    
+    I've got Honcho hub, honcho db, Hermes Agent, and 3 deriver containers running . It works but doesn't support IP based connections so we've got rough edges to work out.
+    
+    I've also learned that Apple Neural Engine NaturalLanguage Framework can do the embedding processing so I've done some experiments using vSock to connect to it. 
+    
+    If you are kicking the tires with Apple containers, be sure to also try apfel which is a command line chat with Apple's MacOS native LLM. They are going to come into play here if it can do 24/7 background processing for Honcho at zero additional cost.
+
+[2026-04-09T16:39:38.692000+00:00] amazon1148 (id=1491840023677632563)
+    Updated the project description after a long exhaustive implementaion and R&D reveal vSock and CID were not available in the container runtime.
+
+[2026-04-10T04:51:24.789000+00:00] amazon1148 (id=1492024179195641888)
+    https://github.com/matthiasdebernardini/hermes-agent/tree/feat/apple-containers-backend
+    [embed] GitHub - matthiasdebernardini/hermes-agent at feat/apple-containers... https://github.com/matthiasdebernardini/hermes-agent/tree/feat/apple-containers-backend
+
+[2026-04-11T01:18:11.109000+00:00] amazon1148 (id=1492332906478047353)
+    Update: 
+    * Container-Compose now works with Unix Domain Sockets operating within the File System Domain to transfer data. 
+    * Secrets are now injected from a tmpfs memory enclave into the container startups as environment variables. 
+    
+    In practice this means a single compose file launches or recovers: 8 containers connected via UDS with secrets passed in securely and MCP and Log streaming is still managed by outbound socat bridges.
+    
+    We inject a UDS relay binary into the PostgreSQL container so it auto-connects to the 7 other containers. Apple security requires that any cross-kernel sharing between the micro-vms must be signed by the developer if it is to be distributed.
+
+[2026-04-13T12:28:08.475000+00:00] gwyntel (id=1493226282182377553)
+    Following this thread, love the infrastructure
+
+[2026-04-14T03:46:08.245000+00:00] amazon1148 (id=1493457303481876581)
+    Update on test harness engineering: 
+    In Swift 6.3 the SPM runner fails to reconcile multi-product dependencies like StaticTests, SecurityTests, DynamicTests and stalls at the first target boundary. We had to discover this and:  
+    
+    1.  Embrace Explicit Orchestration. swift test --filter "TargetName.*". 
+    2. Use Manifest-Driven Orchestration with JSON/Bash array
+    3. Apple containers do not expose exit codes reliably so we use a sentinel flag
+    4. We expanded our XPC Health and CCT_ and CCT_orphan container clean up libraries. 
+    
+    Our test harness now has the following features:
+    * PoolWatcher - resets pooled containers on file changes
+    * ContainerLogStreamer
+    * TIA(Incremental Execution Arbiter)
+    * Concurrency Govenor
+    * Custom test traits - .minMemory, .heavyContainer, .containerPooled
+    * ContainerSnapshotManager
+    * BackgroundHydrator - queues containers for clean-up
+    * MemoryBudget Actor - prevent memory crashes of system due to testing containers
+    * ResourceMonitor - real-time telemetry
+    * ContainerReaper - aka orphan hunter
+    * Fail-Fast Performance Gate
+    
+    Test totals:
+    295 Container-Compose-StaticTests - 133 runnable
+    113   Container-Compose-Dynamic/E2E Tests
+    247  Container-Compose-Tests-Integration
+    180 SecurityHardeningTests
+    
+    Total 830 Tests
+
+[2026-04-14T04:26:52.752000+00:00] rp1234567 (id=1493467556487495791)
+    Love this and need to try it!
+
+[2026-04-14T04:36:38.383000+00:00] amazon1148 (id=1493470012802076683)
+    Just to set expectations, Apple's security model is really significant in MacOS Tahoe. That means no software can move data between kernels, in our case micro-kernels from the linux containers, unless it's been signed by a member of the Apple Developer program with an organization with a DUNS number. 
+    
+    So it's ultimately going to have to distributed as a signed binary. What this means, is I can't even run some of the software for testing because Apple's security runtime is currently so strict in the security model that I had to build a mocking layer to simulate some scenarios. 
+    
+    When it ships it will be as a binary just like docker-compose and you just describe in YAML all the containers, how they are connected internally and externally and how to load in all the secrets from a memory enclave so it's fully zero-disk secret sharing. Perfect for agents who might go rogue Mythos style.
+

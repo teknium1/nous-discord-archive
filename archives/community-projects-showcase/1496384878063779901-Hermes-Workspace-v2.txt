@@ -1,0 +1,473 @@
+# Thread 'Hermes-Workspace v2' in forum #community-projects-showcase
+# thread_id=1496384878063779901 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:50.001313+00:00
+
+[2026-04-22T05:39:16.417000+00:00] outsourc_e (id=1496384878063779901)
+    Native UI for  Hermes Agent 
+    + Mobile Access 📲
+    
+    💬 Chat with live tool execution
+    🖥 Built-in Terminal
+    📦  Skills Browser
+    🧠 Memory Viewer
+    📂 File Explorer
+    🎨 8 Themes (Dark + Light)
+    ⚙️ Provider & Model Config
+    🔍 Inspector Panel
+    👥Conductor Agent Mission
+    🤖Operations Agent Orchestration 
+    🏆Profiles + More!
+    
+    2000+⭐️ https://github.com/outsourc-e/hermes-workspace
+    https://Hermes-Workspace.com
+    https://x.com/outsource_/status/2046079580105064787?s=20
+    [attachment] Chat.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384880521642014/Chat.png?ex=6a021445&is=6a00c2c5&hm=47e74448e7715bd267d545b427a6df8a4a6ccf18adcfa98e7651af5e586fe6e3&
+    [attachment] conductor.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384881209376909/conductor.png?ex=6a021445&is=6a00c2c5&hm=3c6977d3dd16cc237e49c7560f81bac12d3c480803c7841b034c5277fe82d81e&
+    [attachment] dashboard.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384882128064663/dashboard.png?ex=6a021445&is=6a00c2c5&hm=374bf3d3860072300d44f77a30cfe6f13e6c59689b243ab0aac95c4c1c6e122b&
+    [attachment] Jobs.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384882824188025/Jobs.png?ex=6a021445&is=6a00c2c5&hm=76ed84296b0636b8c5b842f35cac77a1d64de6180ec0d43b2baa64a1325c3571&
+    [attachment] Loading_social_preview.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384883566837850/Loading_social_preview.png?ex=6a021445&is=6a00c2c5&hm=67e42eaca7d972ed968c1132c4dcc98736226debd1a0a541c85c731a82d3ed60&
+    [attachment] memory.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384884372013116/memory.png?ex=6a021445&is=6a00c2c5&hm=f358a9a09bc26a2f760939242262113aae1e00b339928fb2a5866ad206eb0a2c&
+    [attachment] Settings.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384885407875123/Settings.png?ex=6a021446&is=6a00c2c6&hm=4b108ae3a357d490f669f23ede49cc8704534d18fdf8d1d7cfd851b12ec7db99&
+    [attachment] Tasks.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384886272168018/Tasks.png?ex=6a021446&is=6a00c2c6&hm=aebff5672fef53a430ea342903942413eaa168f7b6c563084c1ff8dd75f837db&
+    [attachment] terminal.png https://cdn.discordapp.com/attachments/1496384878063779901/1496384887395975229/terminal.png?ex=6a021446&is=6a00c2c6&hm=c9733f9b8613cd145f664a160b2a5c19d885152fd3429dc8d77866ea03ea204f&
+    [embed] GitHub - outsourc-e/hermes-workspace: Native web workspace for Herm... https://github.com/outsourc-e/hermes-workspace
+    [embed] Hermes Workspace · Your AI agent’s command center https://hermes-workspace.com/
+    [embed]  https://twitter.com/outsource_/status/2046079580105064787?s=20
+
+[2026-04-22T05:39:58.428000+00:00] w.ock (id=1496385054270558209)
+    Lets goooo 🚀
+
+[2026-04-22T05:47:07.294000+00:00] outsourc_e (id=1496386853064933376)
+    glad you like it let me know feebdack/ feature requests!
+    [reply to w.ock msg=1496385054270558209]
+
+[2026-04-22T08:11:22.915000+00:00] _bl00dbyte (id=1496423157370851368)
+    This looks clean af! I'll try it out tomorrow
+
+[2026-04-22T13:11:27.982000+00:00] w.ock (id=1496498676095385701)
+    i love it honestly
+
+[2026-04-22T13:13:06.074000+00:00] outsourc_e (id=1496499087523184640)
+    🚀🚀
+
+[2026-04-22T13:15:01.294000+00:00] .s0uthpaw (id=1496499570790760549)
+    Kinda sick
+
+[2026-04-22T13:15:12.133000+00:00] .s0uthpaw (id=1496499616252690432)
+    🤘🤖
+
+[2026-04-22T13:16:08.752000+00:00] outsourc_e (id=1496499853730123967)
+    thanks bro 🔥
+    [reply to .s0uthpaw msg=1496499570790760549]
+
+[2026-04-22T13:17:26.793000+00:00] .s0uthpaw (id=1496500181057671359)
+    I am thinking about (this is me personally, this is not from Nous, but I'd like to show them) wrapping this up in an APK for a Hermes Android app
+    [reply to outsourc_e msg=1496499853730123967]
+
+[2026-04-22T13:17:45.867000+00:00] .s0uthpaw (id=1496500261059821599)
+    Webapps are pretty easy to do that too
+
+[2026-04-22T13:19:22.638000+00:00] outsourc_e (id=1496500666947080204)
+    has built in mobile!
+    [attachment] IMG_3788.jpg https://cdn.discordapp.com/attachments/1496384878063779901/1496500665541726220/IMG_3788.jpg?ex=6a01d75a&is=6a0085da&hm=49f313236d59ca872675cfe4e3a86f3e38919a7a17d15f8c76ad842cbbcbc146&
+    [attachment] IMG_3789.jpg https://cdn.discordapp.com/attachments/1496384878063779901/1496500666405879810/IMG_3789.jpg?ex=6a01d75a&is=6a0085da&hm=1aca4edee07f83a3972808929c9ac64f42285f1e40059e8056c46a37066864c0&
+    [attachment] IMG_3790.PNG https://cdn.discordapp.com/attachments/1496384878063779901/1496500666921910474/IMG_3790.PNG?ex=6a01d75a&is=6a0085da&hm=72406f6dd554d4765fe0c2847eecf3c394e2c6dc5438a4a8b69d37e128c7c9b0&
+    [reply to .s0uthpaw msg=1496500181057671359]
+
+[2026-04-22T13:26:57.397000+00:00] .s0uthpaw (id=1496502574344573060)
+    my opinion, bump tf out of that 🤘 that's killer. Make a version that just downloads and installs mobile first version. May need to make a graphical setup, but if someone non-techie could download and install Hermes right from the Play Store, that's *good real estate*
+
+[2026-04-22T13:30:06.800000+00:00] .s0uthpaw (id=1496503368758333440)
+    I have some Termux tools not included in Hermes (yet?) that could be interesting
+    
+    https://github.com/SouthpawIN/burner-phone
+    [embed] GitHub - SouthpawIN/burner-phone: Skill to control an Android devic... https://github.com/SouthpawIN/burner-phone
+
+[2026-04-22T13:32:23.815000+00:00] outsourc_e (id=1496503943440760954)
+    it would have to live on a cloud for someones phone tho or connect locally no ? i wanna push development more that direction
+    [reply to .s0uthpaw msg=1496502574344573060]
+
+[2026-04-22T13:34:20.029000+00:00] .s0uthpaw (id=1496504430877474918)
+    App should install locally, model will be API. I would hide local models in an Advanced Settings or something. Don't lead non-techies to think a phone-sized model will give them a fair judgement of Hermes-Agent
+
+[2026-04-22T13:35:04.920000+00:00] .s0uthpaw (id=1496504619164238007)
+    Just point them at Nous, OpenRouter, NVIDIA NIM, and other providers at setup
+
+[2026-04-22T13:36:14.367000+00:00] .s0uthpaw (id=1496504910445940746)
+    I like mobile Hermes a lot though lol
+    [attachment] 20260403_192506.jpg https://cdn.discordapp.com/attachments/1496384878063779901/1496504910047350814/20260403_192506.jpg?ex=6a01db4e&is=6a0089ce&hm=c19f4cf234876017535dac8b6535bdf22a0b7f1c35168191b4d8c86a1e8b39af&
+
+[2026-04-22T13:40:51.051000+00:00] outsourc_e (id=1496506070942879806)
+    I will look into this for mobile native app
+    [reply to .s0uthpaw msg=1496504430877474918]
+
+[2026-04-22T13:42:31.583000+00:00] .s0uthpaw (id=1496506492604645436)
+    I can only promise to put it in front of eyes, but I'm pretty jazzed about this 🤙
+
+[2026-04-22T13:44:20.989000+00:00] outsourc_e (id=1496506951486673038)
+    its been out for 1 month i shipepd for the last hackathon. I just released v2 so now ill lock this in!!
+    [reply to .s0uthpaw msg=1496506492604645436]
+
+[2026-04-22T13:45:12.167000+00:00] .s0uthpaw (id=1496507166142631968)
+    I've seen videos on it in the youtube ether, it's impressive, you should be proud of yourself 🤘
+
+[2026-04-22T14:43:40.179000+00:00] w.ock (id=1496521879811526899)
+    pls make an app tailscale is cool but app would be killer <@1470639051819319367>
+
+[2026-04-22T14:44:00.812000+00:00] outsourc_e (id=1496521966352470180)
+    added to the list!!!
+    [reply to w.ock msg=1496521879811526899]
+
+[2026-04-22T15:39:09.760000+00:00] fathah. (id=1496535845086429266)
+    Is this web or native mobile app?
+
+[2026-04-22T15:46:45.441000+00:00] xflowx (id=1496537756350939339)
+    I have a question i possible have different workspaces (for example one per project)
+
+[2026-04-22T16:20:56.370000+00:00] outsourc_e (id=1496546358570778634)
+    its a native web app + mobile support with tailscale
+    [reply to fathah. msg=1496535845086429266]
+
+[2026-04-22T16:21:10.952000+00:00] outsourc_e (id=1496546419731992767)
+    yes theres multiple profiles inside you can switch between them
+    [reply to xflowx msg=1496537756350939339]
+
+[2026-04-22T16:21:27.912000+00:00] outsourc_e (id=1496546490867253350)
+    [attachment] Screenshot_2026-04-22_at_12.21.18_PM.png https://cdn.discordapp.com/attachments/1496384878063779901/1496546490661998633/Screenshot_2026-04-22_at_12.21.18_PM.png?ex=6a020207&is=6a00b087&hm=6ab53531766bdabb9dd9d9d47c3a79ff81b1b1ee366960cd65682122f02080a5&
+    [reply to xflowx msg=1496537756350939339]
+
+[2026-04-22T16:22:41.027000+00:00] xflowx (id=1496546797533794537)
+    But the profiles is not for differents roles?
+
+[2026-04-22T16:33:16.134000+00:00] outsourc_e (id=1496549461365620788)
+    theres also the ability to configure sub agents here in operations if thats what you mean
+    [attachment] Screenshot_2026-04-22_at_12.32.58_PM.png https://cdn.discordapp.com/attachments/1496384878063779901/1496549461332197426/Screenshot_2026-04-22_at_12.32.58_PM.png?ex=6a0204cc&is=6a00b34c&hm=3fd74a11452925bef4e872a65624cc51c66ce6b293272ade7e73268aa6aa79b0&
+    [reply to xflowx msg=1496546797533794537]
+
+[2026-04-22T16:41:30.811000+00:00] xflowx (id=1496551536191606844)
+    When i tried to create a new one and i select the default in Clone from existing  i have an error says  "Default profile cannot be modified here"
+    [reply to outsourc_e msg=1496546490867253350]
+
+[2026-04-22T16:43:39.759000+00:00] outsourc_e (id=1496552077038714890)
+    got it ill look into this try havign the hermes agent create one itself it should pickup in there
+    [reply to xflowx msg=1496551536191606844]
+
+[2026-04-22T19:16:19.761000+00:00] modafoka777 (id=1496590496871612657)
+    i access my mac mini via screensharing from my macbook, and after installing the hermes workspace i keep getting flooded with requests for access to the Keychain Password for different processes on my macbook. I deleted the desktop app and was still getting the pop-ups just from the active gateway. i have completely deleted the hermes workspace and hope that this will soon be solved. i really liked the features that it has to offer
+
+[2026-04-22T19:23:12.786000+00:00] outsourc_e (id=1496592229223895052)
+    not sure what this is specifcally around is it notfications?
+    [reply to modafoka777 msg=1496590496871612657]
+
+[2026-04-22T19:44:58.333000+00:00] modafoka777 (id=1496597705085030580)
+    it is a pop-up that showed up fro multiple processes related to the screen sharing feature asking for me to input the Keychain Password.
+    Two examples: callservicesd wants to use the "login" keychain. Please enter the keychain password. 
+    Security wants to use your confidential information stored in "com.apple.scopedbookmarksagent.xpc.encrypted" in your keychain.
+    [reply to outsourc_e msg=1496592229223895052]
+
+[2026-04-22T19:48:38.527000+00:00] outsourc_e (id=1496598628645601450)
+    got it not sure about that, havent heard anyone having that issue I pushed a new update retry
+    [reply to modafoka777 msg=1496597705085030580]
+
+[2026-04-22T20:25:02.637000+00:00] modafoka777 (id=1496607789467041923)
+    thanks for the ultra quick response. i isolated it to it becuase it was the only change that i made during the timeframe when it appeared. I will test it out again after a fresh restart of both devices and get back with an update
+    [reply to outsourc_e msg=1496598628645601450]
+
+[2026-04-22T20:28:37.028000+00:00] outsourc_e (id=1496608688687943790)
+    awesome let me know any issues
+    [reply to modafoka777 msg=1496607789467041923]
+
+[2026-04-22T22:03:24.283000+00:00] noxerz. (id=1496632542764204193)
+    no plugin support?
+    [reply to outsourc_e msg=1496608688687943790]
+
+[2026-04-22T23:14:54.289000+00:00] outsourc_e (id=1496650536353665166)
+    What plugins exactly? we have skills/ tools / mcp do you mean custom integrations etc?
+    [reply to noxerz. msg=1496632542764204193]
+
+[2026-04-22T23:17:02.448000+00:00] noxerz. (id=1496651073891471470)
+    built in plugin
+    [reply to outsourc_e msg=1496650536353665166]
+
+[2026-04-22T23:20:24.075000+00:00] outsourc_e (id=1496651919576400072)
+    Can add any specifc one you want?
+    [reply to noxerz. msg=1496651073891471470]
+
+[2026-04-22T23:21:02.792000+00:00] noxerz. (id=1496652081967136778)
+    i try using slash command of my plugin which not appear
+    [reply to outsourc_e msg=1496651919576400072]
+
+[2026-04-22T23:24:26.496000+00:00] daz56 (id=1496652936363774072)
+    yooo this is sick
+
+[2026-04-22T23:24:51.188000+00:00] tdamre (id=1496653039929524467)
+    mobile android app?
+
+[2026-04-22T23:32:28.060000+00:00] outsourc_e (id=1496654956189712425)
+    it works with tailscale! set it up pairs to your desktop. I will push an app soon hoenstly
+    [attachment] Screenshot_2026-04-22_at_7.32.07_PM.png https://cdn.discordapp.com/attachments/1496384878063779901/1496654955862294658/Screenshot_2026-04-22_at_7.32.07_PM.png?ex=6a01be4b&is=6a006ccb&hm=82c4081e93c4a65e861376d2fd490d407a38a1c61eefae24897f2835006cc0b5&
+    [reply to tdamre msg=1496653039929524467]
+
+[2026-04-22T23:32:45.425000+00:00] outsourc_e (id=1496655029023674478)
+    okay ill add better / commands and plugin detection
+    [reply to noxerz. msg=1496652081967136778]
+
+[2026-04-22T23:32:58.910000+00:00] outsourc_e (id=1496655085583994982)
+    thanks bro try it!
+    [reply to daz56 msg=1496652936363774072]
+
+[2026-04-22T23:33:51.410000+00:00] daz56 (id=1496655305784819732)
+    I'm working on my own UI currently - its a lot of fun! I'll give yours a shot and see what I can borrow 😉
+    [reply to outsourc_e msg=1496655085583994982]
+
+[2026-04-22T23:36:25.685000+00:00] outsourc_e (id=1496655952861200465)
+    just use mines did all the hard work/ fork it if you want of course
+    [reply to daz56 msg=1496655305784819732]
+
+[2026-04-22T23:45:21.595000+00:00] tdamre (id=1496658200630399097)
+    [attachment] Screenshot_20260413_230728.jpg https://cdn.discordapp.com/attachments/1496384878063779901/1496658199284027602/Screenshot_20260413_230728.jpg?ex=6a01c151&is=6a006fd1&hm=78b3b61c4b8fb4526a072e0a2f3e8d8c4fc26c4d1cdfa4a792bb90a492e67719&
+    [attachment] Screenshot_20260413_230650.jpg https://cdn.discordapp.com/attachments/1496384878063779901/1496658199762440222/Screenshot_20260413_230650.jpg?ex=6a01c151&is=6a006fd1&hm=2fd6733fcad1a8d397f34d1275f349da8a3da4b1f8e196a5342be57d18d77076&
+    [attachment] Screenshot_20260413_220324.jpg https://cdn.discordapp.com/attachments/1496384878063779901/1496658200261427281/Screenshot_20260413_220324.jpg?ex=6a01c151&is=6a006fd1&hm=5365ade1e1f66601281df517d5acc02e5cb24281cae8ee2d14f26411d2b97eab&
+    [reply to outsourc_e msg=1496654956189712425]
+
+[2026-04-22T23:45:57.558000+00:00] tdamre (id=1496658351470411887)
+    I've been working on a Hermes app with built in downloads for mobile llms off hugging face so you can run Hermes on phone with an on phone llm
+
+[2026-04-22T23:46:31.470000+00:00] tdamre (id=1496658493707518002)
+    Needs some optimizations but might be pretty good
+
+[2026-04-22T23:47:16.734000+00:00] tdamre (id=1496658683558494208)
+    https://github.com/adybag14-cyber/hermes-agent/tree/feat/termux-install-path/android
+    [embed] hermes-agent/android at feat/termux-install-path · adybag14-cyber/... https://github.com/adybag14-cyber/hermes-agent/tree/feat/termux-install-path/android
+
+[2026-04-22T23:47:27.205000+00:00] outsourc_e (id=1496658727477051543)
+    gonna add that funcitonality in soon for mobile looks good. android apps are easy to push?
+    [reply to tdamre msg=1496658200630399097]
+
+[2026-04-22T23:47:32.421000+00:00] tdamre (id=1496658749354410135)
+    This is the android Hermes app you see in the screenshots
+
+[2026-04-22T23:47:59.749000+00:00] tdamre (id=1496658863976349807)
+    Nah depends on play store but anyways if you do like me straight download from release tab lol
+    [reply to outsourc_e msg=1496658727477051543]
+
+[2026-04-23T00:19:13.002000+00:00] m3jsh (id=1496666720968904797)
+    Anyone else on android using Brave/Chrome unable to get the PWA to work? I select Add to Home Screen and the app icon loads hermes-workspace in the browser.
+
+[2026-04-23T00:26:16.118000+00:00] outsourc_e (id=1496668495646031882)
+    no use tailscale, set up tail scale on your phone and your comptuer and you can open the same link on mobile
+    [reply to m3jsh msg=1496666720968904797]
+
+[2026-04-23T00:26:25.190000+00:00] outsourc_e (id=1496668533696757831)
+    let me know if you need more help i can drop a guide
+
+[2026-04-23T00:37:49.888000+00:00] m3jsh (id=1496671405528580097)
+    Is tailscale absolutely required? I usually wireguard into my home network when I want to access local applications.
+
+[2026-04-23T00:38:32.751000+00:00] m3jsh (id=1496671585309032580)
+    So I figured I'd be able to select "Add to Home Screen" from within Chrome/Brave and the PWA app would function as it does for other PWAs
+
+[2026-04-23T00:40:24.235000+00:00] outsourc_e (id=1496672052906557572)
+    Its required for this setup, you can figure out another workaround but its seamless same tailsclae account on phone + desktop you can open same local host on phone
+
+[2026-04-23T00:40:39.638000+00:00] outsourc_e (id=1496672117511684246)
+    I would ask your hermes agent how else to set it up with your use case
+
+[2026-04-23T00:40:53.616000+00:00] m3jsh (id=1496672176139538673)
+    Sounds good, thank you
+
+[2026-04-23T01:56:36.779000+00:00] outsourc_e (id=1496691231546278009)
+    adding plugins 😉
+    [attachment] Screenshot_2026-04-22_at_9.56.28_PM.png https://cdn.discordapp.com/attachments/1496384878063779901/1496691231353344151/Screenshot_2026-04-22_at_9.56.28_PM.png?ex=6a01e014&is=6a008e94&hm=fe3c00edc99517f3aeb1dadf7288dcba24521092d82f54e51baff9599f35faf1&
+    [reply to noxerz. msg=1496652081967136778]
+
+[2026-04-23T12:55:47.860000+00:00] outsourc_e (id=1496857120803655701)
+    any other feature request?
+
+[2026-04-23T22:14:48.132000+00:00] modafoka777 (id=1496997798900666499)
+    i wanted to let you know that I tested it for a couple of hours today and all is solved. no more pop-ups and it is working cleanly. i am using it in the browser for now both the dashboard and the workspace. thanks for the fix!
+    [reply to outsourc_e msg=1496608688687943790]
+
+[2026-04-23T22:52:05.300000+00:00] outsourc_e (id=1497007182263091300)
+    awesome pushing new fixes
+    [reply to modafoka777 msg=1496997798900666499]
+
+[2026-04-23T23:56:55.586000+00:00] antshill (id=1497023499305353357)
+    Hi.  Looking to try this out.  From what I can see it installs another hermes instance.  Can it run as we webui  ontop of an existing hermes instance?
+
+[2026-04-24T08:46:39.266000+00:00] deor42 (id=1497156809721643110)
+    Yes, read the section directly after the Quick Start on github and it tells you how.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496384878063779901/1497156809385967697/image.png?ex=6a01976f&is=6a0045ef&hm=7b7b16ed8855246582a4547d6c59c8c9426f842bb4c90d115b96c4f76a71111d&
+    [reply to antshill msg=1497023499305353357]
+
+[2026-04-24T10:04:04.344000+00:00] modafoka777 (id=1497176292590747729)
+    <@1470639051819319367> wanted let you know that I ran into an issue yesterday after i restarted the computer but got this answer. I am still running it in the browser. I will wait some time to use the desktop one but here is the suggestion my agent gave me to the issue:
+     *Why it stopped
+        Short version: it wasn’t actually installed as a persistent service, so when the old interactive/dev/manual process ended, Workspace disappeared.
+        
+        Evidence for that:
+        - There is no LaunchAgent for Hermes Workspace in ~/Library/LaunchAgents
+        - There were no existing Hermes Workspace log files under ~/.hermes/logs
+        - Before I started it, there was no listener on XXXX
+        - Before I started it, .runtime/ and .runtime/hermes-workspace.pid were missing, which is what you see when the stable launcher is not currently managing a running instance
+        - Session history shows the earlier working runs were manual/dev-style runs, and a persistent launchd setup was noted as a possible follow-up, not something already completed
+        
+        So the most likely root cause is:
+        - Workspace had been run manually before
+        - that process eventually exited or got cleaned up
+        - because nothing persistent was supervising it, port XXXX stayed down
+        
+        What I can say confidently vs. what I can’t
+        Confident:
+        - it was not being kept alive by launchd or another persistent service
+        - XXX was down because no process was running
+        - it is now running again
+        
+        Less certain:
+        - the exact moment/cause the previous process exited
+          - terminal/session closed
+          - reboot/logout
+          - manual kill
+          - process crash
+        I don’t have prior persistent logs proving which of those happened.
+        
+        If you want, I can make Hermes Workspace persistent under launchd so XXXX survives reboots and doesn’t silently disappear again.*
+
+[2026-04-24T12:28:32.554000+00:00] outsourc_e (id=1497212649698754652)
+    any issues?
+    [reply to antshill msg=1497023499305353357]
+
+[2026-04-24T12:29:09.345000+00:00] outsourc_e (id=1497212804011397241)
+    okay hows it todat what do you want it to be like i can adjust
+    [reply to modafoka777 msg=1497176292590747729]
+
+[2026-04-24T13:25:54.266000+00:00] modafoka777 (id=1497227085284900896)
+    i did it locally. for me it works but i think each one is different 🙂
+    [reply to outsourc_e msg=1497212804011397241]
+
+[2026-04-24T13:28:15.153000+00:00] modafoka777 (id=1497227676208070777)
+    i mean it could be a toggle the settings section where people could select it if they want it to start when hermes agent starts. i needed it becuase i dont want to start each gateway separately
+
+[2026-04-24T13:29:34.182000+00:00] modafoka777 (id=1497228007679725701)
+    i don't know if it's just me but in the Workspace UI, when selecting terminal after 7 letters it freezes. you can't delete  or add more letters. I don't use terminal there but I was testing it 🙂
+
+[2026-04-24T15:08:58.481000+00:00] outsourc_e (id=1497253023762874489)
+    okay put any specifc detailed issues on repo and ill review and fix put OS etc
+    [reply to modafoka777 msg=1497227676208070777]
+
+[2026-04-25T03:08:28.524000+00:00] jaychas (id=1497434092046782555)
+    Been using it past 2 days and love it.. Great work!
+
+[2026-04-25T17:20:10.185000+00:00] outsourc_e (id=1497648427947790637)
+    thanks man! I have new things coming just working on a bunch of stuff let me know any issues / prs
+    [reply to jaychas msg=1497434092046782555]
+
+[2026-04-25T19:05:10.818000+00:00] jaychas (id=1497674854718242968)
+    The only thing I don't like is how it only views a few available models vs if I list them all in the terminal client
+    [attachment] rn_image_picker_lib_temp_61b60131-56e3-43b8-955f-4c28f3527638.jpg https://cdn.discordapp.com/attachments/1496384878063779901/1497674854357405787/rn_image_picker_lib_temp_61b60131-56e3-43b8-955f-4c28f3527638.jpg?ex=6a022866&is=6a00d6e6&hm=37ec3ae955d73eb6214e802f7806947c42ad66f1e15093f48f7bf2c5cd5c2fc8&
+
+[2026-04-26T06:11:50.642000+00:00] outsourc_e (id=1497842626139914261)
+    add this as apull request
+    [reply to jaychas msg=1497674854718242968]
+
+[2026-04-26T06:12:06.412000+00:00] outsourc_e (id=1497842692283957348)
+    New Hermes Workspace - Agent swarm system to orchestrate individual agent clones with full context memory skills etc
+    [attachment] Screenshot_2026-04-26_at_1.50.51_AM.png https://cdn.discordapp.com/attachments/1496384878063779901/1497842691990487180/Screenshot_2026-04-26_at_1.50.51_AM.png?ex=6a021bf6&is=6a00ca76&hm=79f9da95d1132208260eb4294dac28c2529b69d839abe3ef43de80351b058b0d&
+
+[2026-04-26T21:21:13.669000+00:00] sollymay (id=1498071480062316686)
+    Awesome project! Love it!! I just migrated from openclaw to Hermes and still getting setup. I've had some issues with the app recognizing my local model. Getting an error with API key required but for local ollama to local hermes I think you don't need one? This was working for me a few days ago, not sure what I changed that broke it 🤣. I think I am getting the following error
+    
+    ```
+    [local-discovery] Ollama detected on :11434 — 4 model(s)
+    [local-discovery] Ollama detected but not in custom_providers. Gateway restart needed after adding it.
+    [model-info] falling back to gateway capabilities (source=gateway-capabilities mode=zero-fork)
+    ```
+    although i can reach my gateway and ollama is in custom_providers?
+
+[2026-04-27T18:08:50.023000+00:00] outsourc_e (id=1498385450367189002)
+    just tell your agent to  conifg it if your having issues lmk
+    [reply to sollymay msg=1498071480062316686]
+
+[2026-04-28T23:18:54.183000+00:00] jaychas (id=1498825869735760022)
+    Great thank you!
+    [reply to outsourc_e msg=1497842626139914261]
+
+[2026-04-29T23:16:32.603000+00:00] outsourc_e (id=1499187663771795486)
+    new swarm feature releasing guys!
+
+[2026-04-30T02:35:28.894000+00:00] frankjon1 (id=1499237728204623973)
+    <@1470639051819319367> Hello!  Having issues Running missions inside the conductor. My agent has worked on it endlessly to no avail.  Mission starts., then loops spawning workers and fails.
+
+[2026-04-30T04:12:50.401000+00:00] outsourc_e (id=1499262229260796045)
+    Have you configured the models?
+    [reply to frankjon1 msg=1499237728204623973]
+
+[2026-05-01T21:27:56.828000+00:00] outsourc_e (id=1499885110361718844)
+    NEW SWARM LANDED https://x.com/outsource_/status/2050080325213040984?s=20
+    [embed]  https://twitter.com/outsource_/status/2050080325213040984?s=20
+
+[2026-05-02T16:49:12.841000+00:00] outsourc_e (id=1500177352741752912)
+    shipped new tool cards too 😉
+    [attachment] Screenshot_2026-05-02_at_2.40.19_AM.png https://cdn.discordapp.com/attachments/1496384878063779901/1500177352498610196/Screenshot_2026-05-02_at_2.40.19_AM.png?ex=6a020888&is=6a00b708&hm=438826173873a6c421bd3282a0d4b929854a5dc7fb292fdc6b6e7336727817fb&
+
+[2026-05-02T19:48:29.960000+00:00] .s0uthpaw (id=1500222471368872097)
+    This looks *nice* bro 👌
+
+[2026-05-04T01:58:55.313000+00:00] outsourc_e (id=1500678079121588415)
+    new dashboard!
+    [attachment] Screenshot_2026-05-03_at_9.58.50_PM.png https://cdn.discordapp.com/attachments/1496384878063779901/1500678078886576158/Screenshot_2026-05-03_at_9.58.50_PM.png?ex=6a01e09f&is=6a008f1f&hm=4b97d08a8f03d02cc2a0dd44cb61e97291e29892118b6a63f72915d31d37357d&
+
+[2026-05-04T01:59:16.303000+00:00] outsourc_e (id=1500678167160033423)
+    agent view
+    [attachment] Screenshot_2026-05-03_at_9.59.11_PM.png https://cdn.discordapp.com/attachments/1496384878063779901/1500678167268950026/Screenshot_2026-05-03_at_9.59.11_PM.png?ex=6a01e0b4&is=6a008f34&hm=f52bcd3b7444bb98a7d7272e294dcb6823b4f9e3142cc5b0680eccd59d464d1d&
+
+[2026-05-04T13:22:02.498000+00:00] eliottcesi (id=1500849991835713627)
+    Do you have a video for multi agent please ?
+    [reply to outsourc_e msg=1500678079121588415]
+
+[2026-05-04T14:42:46.599000+00:00] outsourc_e (id=1500870309467783229)
+    https://x.com/JulianGoldieSEO/status/2050832731362259077?s=20
+    [embed]  https://twitter.com/JulianGoldieSEO/status/2050832731362259077?s=20
+    [reply to eliottcesi msg=1500849991835713627]
+
+[2026-05-05T15:42:36.220000+00:00] ae53633805 (id=1501247753294975036)
+    Loving this project! Does anyone on here have any docs about persistence either through systemd service or Docker? I'm trying to decide which path to go with.
+
+[2026-05-05T15:57:09.705000+00:00] lemoussel (id=1501251416956862574)
+    I'm a bit lost... 
+    What are the differences compared to hermes-hudui
+    https://github.com/joeynyc/hermes-hudui
+    [embed] GitHub - joeynyc/hermes-hudui: Web UI consciousness monitor for Her... https://github.com/joeynyc/hermes-hudui
+
+[2026-05-05T16:41:06.542000+00:00] outsourc_e (id=1501262476652576889)
+    workspace is everything chat, sessions, dashboard, terminal + mobile and more!!
+    [reply to lemoussel msg=1501251416956862574]
+
+[2026-05-05T16:50:29.231000+00:00] ae53633805 (id=1501264836741300254)
+    Do you need to use the Hermes Agent forked by the dev in order to have full functionality, or is the built in Hermes Dashboard on port 9119 the only requirement for Swarm, Conductor, etc.?
+    [reply to outsourc_e msg=1501262476652576889]
+
+[2026-05-05T17:06:02.321000+00:00] outsourc_e (id=1501268750404423832)
+    no works with vanilla
+    [reply to ae53633805 msg=1501264836741300254]
+
+[2026-05-05T17:06:12.737000+00:00] ae53633805 (id=1501268794092290220)
+    Understood. Thank you!
+    [reply to outsourc_e msg=1501268750404423832]
+
+[2026-05-05T17:09:26.240000+00:00] asheriif (id=1501269605702697070)
+    Hi, planning to try this later today but I'm curious, how mature is the current state? Are there any known bugs or features not implemented yet?
+
+[2026-05-05T17:09:46.961000+00:00] outsourc_e (id=1501269692613132410)
+    patching bugs as we go
+    [reply to asheriif msg=1501269605702697070]
+
+[2026-05-09T19:24:23.843000+00:00] charanis (id=1502753120973750354)
+    Hey guys does anyone else have problems with hermes agent not compacting it's own memory automatically when running with workspace? I never had this problem but now instead of doing auto compression, workspace will just send me a notification that I should consider compacting the session, but it won't compress automatically despite having the default settings for auto. I am running my hermes in a docker image in WSL
+
+[2026-05-10T15:17:03.717000+00:00] outsourc_e (id=1503053264839770323)
+    submti a pr if your having issues
+
+[2026-05-10T16:26:21.903000+00:00] will_e3848 (id=1503070705535946922)
+    This is great bro, is it Windows compatible?
+

@@ -1,0 +1,26 @@
+# Thread 'Built a Hermes skill for streaming micropayments on Tempo' in forum #community-projects-showcase
+# thread_id=1497640849368940634 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:41.976569+00:00
+
+[2026-04-25T16:50:03.311000+00:00] .zmaxx (id=1497640849368940634)
+    **tempo-meter** — when your agent hits an HTTP 402 with **intent="session"**, it opens a **TempoStreamChannel** escrow, signs EIP-712 vouchers per chunk, closes with automatic refund of unused deposit. Two on-chain transactions for the full session regardless of how many requests go through.
+    
+    Tested end-to-end with Hermes v0.10.0. Agent received the task, found the 402, read the payment header, opened the channel, signed the voucher, got 200. Figured out the CLI itself mid-session (24 tool calls, 1m3s). Screenshots below.
+    
+    Close TX on Moderato testnet: ***0xb4ed176ed4d9f430e3a83103bcff47ad358781c0533a3fd621afe7f698d26664***
+    
+    > bashhermes skills install Zhekinmaksim/tempo-meter
+    > python scripts/tempo_meter.py init --network testnet
+    
+    **vs hermes-payguard** — nativ3ai's skill is the right tool for one-shot x402 charges on Base. tempo-meter is for streaming/metered billing — different chain, different protocol, different use case. Complements it.
+    
+    If you're building a metered API and want sessions instead of per-request charges, **veil-test/demo_server.py** in the repo is a drop-in MPP session server with real ecrecover verification.
+    
+    GitHub: https://github.com/Zhekinmaksim/tempo-meter
+    [attachment] Tempo-meter_twitter_preview.png https://cdn.discordapp.com/attachments/1497640849368940634/1497640849830318160/Tempo-meter_twitter_preview.png?ex=6a0208bb&is=6a00b73b&hm=855aa91d7ea0056b96899b3739bfae1ba80ba87af26e95c2a0f32fd569166893&
+    [attachment] Tempo-meter_hermes_1.png https://cdn.discordapp.com/attachments/1497640849368940634/1497640850300211425/Tempo-meter_hermes_1.png?ex=6a0208bb&is=6a00b73b&hm=2a59d10a556a645302c5f6115e5260c87a859566a9dd8b3601115cf6ea494c70&
+    [attachment] Tempo-meter_hermes_2.png https://cdn.discordapp.com/attachments/1497640849368940634/1497640850774036480/Tempo-meter_hermes_2.png?ex=6a0208bb&is=6a00b73b&hm=578c81bac808d0d285d46f5111b6b9ac999de657d9cd0516a1f4b20beb2c56ad&
+    [attachment] Tempo-meter_hermes_3.png https://cdn.discordapp.com/attachments/1497640849368940634/1497640851252314282/Tempo-meter_hermes_3.png?ex=6a0208bb&is=6a00b73b&hm=4e23a6f83ae8a77b8e0b3d98259f2d0c593b1afd1555a3761688250388882628&
+    [attachment] Tempo_explorer.png https://cdn.discordapp.com/attachments/1497640849368940634/1497640851688652810/Tempo_explorer.png?ex=6a0208bb&is=6a00b73b&hm=269e94e1222398773f7ea8f43d74b413f51da44463d107d369069f2f7523897e&
+    [embed] GitHub - Zhekinmaksim/tempo-meter: Streaming micropayments on Tempo... https://github.com/Zhekinmaksim/tempo-meter
+

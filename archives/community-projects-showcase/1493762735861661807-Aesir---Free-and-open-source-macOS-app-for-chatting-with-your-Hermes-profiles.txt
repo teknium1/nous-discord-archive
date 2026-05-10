@@ -1,0 +1,76 @@
+# Thread 'Aesir - Free and open source macOS app for chatting with your Hermes profiles' in forum #community-projects-showcase
+# thread_id=1493762735861661807 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:06.363609+00:00
+
+[2026-04-14T23:59:48.999000+00:00] bk__w (id=1493762735861661807)
+    https://github.com/aexis-b/aesir-oss/releases/tag/v0.1.0
+    
+    **Aesir** is a local-first desktop shell for Hermes `profile` threads.
+    
+    **It automatically:**
+    - detects your local Hermes install
+    - discovers and uses your Hermes profiles
+    - imports transcript history as read-only threads
+    - starts new or resumed profile-backed chats through Hermes CLI
+    - works as a desktop app and as a local web app from the same codebase
+    
+    **Current status:**
+    - dynamic Hermes install discovery
+    - dynamic profile sidebar
+    - imported transcript threads per discovered profile
+    - local writable thread state in `data/sessions.json`
+    - Electron desktop bundle
+    - first-run connect/install screen when Hermes is missing or incomplete
+    
+    **Requirements**
+    - Hermes installed locally
+    - default Hermes home at `~/.hermes`, or a valid `HERMES_HOME`
+    - macOS for the current desktop packaging workflow
+    
+    **Run in web/dev mode**
+    `npm install`
+    `npm run dev`
+    
+    **Run production web mode**
+    `npm run build`
+    `npx next start -p 3000`
+    
+    **Build the desktop app**
+    `npm run desktop:bundle`
+    
+    **Built app**
+    `desktop-dist/mac-arm64/Aesir OSS.app`
+    
+    **Core checks**
+    `npm test`
+    `npm run lint`
+    `npm run build`
+    
+    **Data model**
+    - imported Hermes transcript threads are read-only
+    - new GUI-created threads are stored locally in `data/sessions.json`
+    - profile-backed runs use Hermes CLI and preserve external Hermes session ids for resume flows
+    
+    **Planning / spec docs:**
+    `AESIR_OSS_SPEC.md`
+    `.hermes/plans/`
+    [attachment] Aesir-OSS.png https://cdn.discordapp.com/attachments/1493762735861661807/1493762736427896892/Aesir-OSS.png?ex=6a01c4b5&is=6a007335&hm=5447d817bb604c321dc0805eb404a53197424ea5172b27cb59eda3c9091ab05a&
+    [embed] Release Aesir OSS v0.1.0 · aexis-b/aesir-oss https://github.com/aexis-b/aesir-oss/releases/tag/v0.1.0
+
+[2026-04-17T12:26:46.034000+00:00] oabdulnaby (id=1494675487862030507)
+    <:catlick:1151260427645366375> <:catlick:1151260427645366375> <:catlick:1151260427645366375>
+
+[2026-04-19T00:33:07.230000+00:00] oabdulnaby (id=1495220668512338090)
+    I encourge you to puplish it!
+
+[2026-04-20T04:55:35.450000+00:00] bk__w (id=1495649109200076840)
+    <@1008336427727196160> https://github.com/aexis-b/aesir-oss/releases/tag/v0.1.0
+    [embed] Release Aesir OSS v0.1.0 · aexis-b/aesir-oss https://github.com/aexis-b/aesir-oss/releases/tag/v0.1.0
+
+[2026-04-20T04:55:48.672000+00:00] bk__w (id=1495649164657299556)
+    Okay, here's a first release of this: https://github.com/aexis-b/aesir-oss/releases/tag/v0.1.0
+    [embed] Release Aesir OSS v0.1.0 · aexis-b/aesir-oss https://github.com/aexis-b/aesir-oss/releases/tag/v0.1.0
+
+[2026-04-20T04:56:48.488000+00:00] bk__w (id=1495649415543783567)
+    Aesir - Free and open source macOS app for chatting with your Hermes profiles
+

@@ -1,0 +1,8 @@
+# Thread 'RSS and Github Improve' in forum #plugins-skills-and-skins
+# thread_id=1490592574107418664 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:47.428209+00:00
+
+[2026-04-06T06:02:43.538000+00:00] terexitarius_ (id=1490592574107418664)
+    So many cool advancements coming out, I can't keep up but potentially Hermes can-https://github.com/TerexitariusStomp/rss-github-reviewer
+    [embed] GitHub - TerexitariusStomp/rss-github-reviewer: RSS + GitHub Review... https://github.com/TerexitariusStomp/rss-github-reviewer
+

@@ -1,0 +1,71 @@
+# Thread 'Hermes Skill Generator Experiment' in forum #plugins-skills-and-skins
+# thread_id=1501626691938685239 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:01.503826+00:00
+
+[2026-05-06T16:48:22.233000+00:00] hayder_10880 (id=1501626691938685239)
+    Hi everyone,
+    
+    A small experiment is being tested with this Apify Actor:
+    
+    https://apify.com/solutionssmart/hermes-skill-builder-for-apify-apis
+    
+    It generates a Hermes skill package from an Apify Actor page.
+    
+    As a test, this Actor was used:
+    
+    https://apify.com/solutionssmart/fast-google-map-scraper
+    
+    Hermes Agent reported that the generated skill was installed successfully under:
+    
+    "~/.hermes/skills/fast_google_maps_scraper/"
+    
+    and it recognized the skill files, schema, and tool contract.
+    
+    Has anyone tested a similar workflow before, where Hermes skills are generated automatically from API docs, OpenAPI specs, or external tools?
+    
+    Also, is this the right structure for a real Hermes skill, especially the "tool_call_contract.json" part?
+    
+    Any feedback would be really appreciated.
+    [embed] Hermes Skill Builder - AI Skill Generator for APIs · Apify https://apify.com/solutionssmart/hermes-skill-builder-for-apify-apis
+    [embed] Fast Google Maps Scraper – Cheap Business Lead Extractor · Apify https://apify.com/solutionssmart/fast-google-map-scraper
+
+[2026-05-06T16:49:06.151000+00:00] hayder_10880 (id=1501626876144259072)
+    Update: the generated Hermes skill was also tested successfully.
+    
+    The skill was generated from this Apify Actor:
+    
+    https://apify.com/solutionssmart/fast-google-map-scraper
+    
+    Then it was used inside Hermes Agent with a simple test query:
+    
+    “coffee shops in Berlin, Germany”
+    
+    Test parameters:
+    
+    {
+      "mode": "search",
+      "query": "coffee shops",
+      "searchLocation": "Berlin, Germany",
+      "maxPlaces": 5,
+      "maxReviews": 0,
+      "enrichWebsites": false
+    }
+    
+    Result: 5 structured Google Maps listings were returned successfully.
+    
+    Sample output:
+    
+    {
+      "name": "Fauve Coffee Berlin",
+      "address": "Neue Schönhauser Str. 8, 10178 Berlin",
+      "rating": 4.7,
+      "categories": ["Coffee roastery", "Cafe", "Coffee shop"]
+    }
+    
+    So the generated skill was not only installed, but also able to execute the Apify Actor and return structured data.
+    
+    I would still really appreciate feedback from the Hermes community:
+    
+    Is this kind of generated skill structure correct for real Hermes usage, especially around the "tool_call_contract.json" file?
+    [embed] Fast Google Maps Scraper – Cheap Business Lead Extractor · Apify https://apify.com/solutionssmart/fast-google-map-scraper
+

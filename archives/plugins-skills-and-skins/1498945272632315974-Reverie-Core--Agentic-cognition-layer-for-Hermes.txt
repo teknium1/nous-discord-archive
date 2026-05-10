@@ -1,0 +1,41 @@
+# Thread 'Reverie Core: Agentic cognition layer for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1498945272632315974 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:11.100098+00:00
+
+[2026-04-29T07:13:22.052000+00:00] hackafterdark (id=1498945272632315974)
+    I’ve been iterating on a local-first memory/cognition layer for Hermes and finally pushed it to public visibility.
+    
+    Unlike passive document stores, Reverie Core treats memory as a dynamic, self-pruning knowledge graph. It’s built for developers who want a predictable, tunable memory layer with deep observability.
+    
+    **Why it’s different:**
+     
+    **Hybrid Retrieval:** Combined high-speed sqlite-vec similarity search with bi-directional graph traversal. You get the immediate relevance of vectors plus the structural context of the graph to bridge non-obvious relationship
+     
+    **Tunable Performance:** Everything is config-driven (~/.reveriecore.yaml). Adjust various thresholds and enable/disable handlers in the ingestion and retrieval pipelines. You are in complete control to balance performance vs. speed as you need.
+    
+    **Elite Grounding:** Benchmarked at 0.875 Faithfulness / 0.650 Context Precision (RAGAS). Effectively minimizes hallucinations.
+     
+    **Observability:** Built-in OpenTelemetry instrumentation (OTLP) to trace how your agent "thinks."
+    
+    **Data Portability:** Hive-style partitioned Markdown exports. Keep your agent’s brain portable and Git-friendly.
+    
+    If you’re tired of black-box RAG providers and want a local-first framework where you can actually tune your retrieval precision, check out the benchmarks and architecture:
+    
+    👉  https://github.com/hackafterdark/reveriecore
+    
+    Would love to hear your thoughts!
+    [embed] GitHub - hackafterdark/reveriecore: Reverie Core is an agentic cogn... https://github.com/hackafterdark/reveriecore
+
+[2026-04-29T14:53:14.708000+00:00] hackafterdark (id=1499061004619874354)
+    So much to mention I don't know where to start but another thing I thought was worth noting - the system has lightweight (still evolving) "permissions" in there. This is so that agents can have their own memories. The goal being sub-agents working with one another manage their own memories. These may not be memories available to you the user upon recall as they could be marked private. You could of course open the db or dump to markdown files. Still much more research and work in this area, but that's the general idea.
+
+[2026-04-30T02:51:03.782000+00:00] hackafterdark (id=1499241649409232896)
+    Reverie Core: Agentic cognition layer for Hermes
+
+[2026-05-02T05:21:36.911000+00:00] hackafterdark (id=1500004312829530282)
+    Note: I also built this to be a framework to learn about and test various memory/RAG strategies. That's a big part of why there's a configuration to drive things. Latest RAGAS benchmarks are now at 0.925 faithfulness and 0.70 context precision, putting it into the top-tier memory system category. This avoids hallucination, uses fewer tokens, and prevents context rot. In my opinion, memory systems are useless if they result in context rot and more token usage.
+    
+    So if you want to try out new techniques and ideas, you can add new handlers to this framework (or turn on/off and tweak the existing strategies in there as there are many common techniques going on). I'm going to make it a bit easier to add plugins so it doesn't result in forks/deviation of the code, allowing things to be easily updated. In other words, real plugin system.
+    
+    Pro tip: Ask your agent about the strategies in Reverie Core. It will happily explain! I don't even think I could write a book that would make for a better way to learn about RAG.
+

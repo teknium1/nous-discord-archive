@@ -1,0 +1,13 @@
+# Thread 'From Memory Confusion to a Working Local Honcho Setup: A Practical Multi-Profile Guide' in forum #community-projects-showcase
+# thread_id=1494047011257716837 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:05.453289+00:00
+
+[2026-04-15T18:49:25.535000+00:00] chfarhan_ (id=1494047011257716837)
+    Many users struggle to understand how Honcho memory actually works in real life, especially when using multiple profiles like hermes, coder, and writer on a local self-hosted setup. The pain is real: memory gets mixed, profiles overlap, sessions become confusing, and it is hard to know what should stay shared and what should stay separate. This guide was written to solve that exact problem in a practical way. It explains local setup, profile design, session strategy, long-term memory behavior, and how a human user should think about the whole memory system without the usual confusion.
+    <@429384745374187523>
+    [attachment] honcho_local_multi_profile_guide.md https://cdn.discordapp.com/attachments/1494047011257716837/1494047011954102302/honcho_local_multi_profile_guide.md?ex=6a0224b5&is=6a00d335&hm=18b5471315d2da183db668d449d8e52e1dd603366d2b4f11c4024692f3639444&
+
+[2026-04-15T19:23:31.070000+00:00] chfarhan_ (id=1494055590853607565)
+    More Examples of Honcho locally for multiple specialist profiles, with real-world examples across DevOps, fitness, content, writing, client delivery, and research. give your agent both files for setting and tell your domains profiles and etc. agent will adjust honco memory setup accordingly
+    [attachment] honcho_additional_domains_and_setting_guide.md https://cdn.discordapp.com/attachments/1494047011257716837/1494055590530384214/honcho_additional_domains_and_setting_guide.md?ex=6a022cb2&is=6a00db32&hm=0d142cdf9491dc47be7b3ec29eb4df6797727322add71d52294643b3a1f1ec37&
+

@@ -1,0 +1,11 @@
+# Thread 'DrawThings gRPC Plugin for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1498570930128031885 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:11.994553+00:00
+
+[2026-04-28T06:25:51.844000+00:00] wysie_ (id=1498570930128031885)
+    https://github.com/Wysie/drawthings-grpc-hermes-plugin
+    
+    Does NOT replace image_gen provider. You also need drawthings grpc running (via the DrawThings app, enable gRPC server).
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498570930128031885/1498570930648256602/image.png?ex=6a021f2f&is=6a00cdaf&hm=51744e2923a364067d04311ef1e2a7565257dd5288ace5f1982216a921f6611a&
+    [embed] GitHub - Wysie/drawthings-grpc-hermes-plugin: Hermes Agent plugin f... https://github.com/Wysie/drawthings-grpc-hermes-plugin
+

@@ -1,0 +1,20 @@
+# Thread 'Public agents' in forum #community-projects-showcase
+# thread_id=1496655016495419443 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:46.922348+00:00
+
+[2026-04-22T23:32:42.438000+00:00] handsdiff (id=1496655016495419443)
+    I put Hermes agents with free inference on exe.dev VMs and let them talk to each other in a Discord!
+    
+    Would love feedback on how it feels / any related projects it reminds you of
+    
+    https://x.com/handsdiff/status/2047091213006774444
+    [attachment] launch1_banner.png https://cdn.discordapp.com/attachments/1496655016495419443/1496655016809988157/launch1_banner.png?ex=6a01be5a&is=6a006cda&hm=bf4ad79ed658006c1bc7b1838648b7d86f2697169831a10bf2f276effb9687e3&
+    [embed]  https://twitter.com/handsdiff/status/2047091213006774444
+
+[2026-04-22T23:57:48.794000+00:00] gwyntel (id=1496661334610284584)
+    Woah you plucked the idea out of my head 🗣️ thank you!
+
+[2026-04-23T01:47:51.323000+00:00] handsdiff (id=1496689027624206448)
+    feedback is much appreciated!
+    [reply to gwyntel msg=1496661334610284584]
+

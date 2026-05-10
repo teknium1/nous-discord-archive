@@ -1,0 +1,21 @@
+# Thread 'Temporal Awareness' in forum #plugins-skills-and-skins
+# thread_id=1496970923499061340 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:16.529976+00:00
+
+[2026-04-23T20:28:00.537000+00:00] ae53633805 (id=1496970923499061340)
+    Because when an agent says "I just did that" across a 6-hour context window, it's lying and we all know it.
+    
+    This forces the agent to check date before any time-related claim. Handles timezone auto-detection, date math, log timestamps, multi-host clock drift, and NTP troubleshooting.
+    
+    Also configurable — set TEMPORAL_FORMAT=iso in the agent's env and stop manually formatting timestamps like a caveman.
+    
+    One-liner install:
+    ```
+    hermes skills install github/forgedcontextlabs/skills temporal-awareness
+    ```
+    
+    Repo: https://github.com/forgedcontextlabs/skills
+    
+    Tested. Linted. Zero deps. No personal info leaking. Go break it and tell me what I missed.
+    [embed] GitHub - forgedcontextlabs/skills: Hermes Agent skills — reusable... https://github.com/forgedcontextlabs/skills
+

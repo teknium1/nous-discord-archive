@@ -1,0 +1,19 @@
+# Thread 'Hermes x Cardputer' in forum #community-projects-showcase
+# thread_id=1494518737116729394 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:03.018859+00:00
+
+[2026-04-17T02:03:53.744000+00:00] jesus359_ (id=1494518737116729394)
+    I used MiniMax to connect my M5 Cardputer to Hermes Agent through its API. This is a very  barebone app right now but I will keep working on it. So far it has OTA for fw update and being able to text to Hermes. I added tts and stt but it’s still a work in progress. 
+    
+    - I’m currently working on:
+        - cleaning up the code MiniMax made to get the Cardputer up and working. 
+        - Finalize adding the tts and stt.
+        - Being able to use something other than Arduino and esphome to flash and upload the firmware. Choosing the M5 Launcher way to flash the .bin file. 
+    
+    Next: 
+        - Adding a xiaosense Cam for vision. 
+    
+    Link: https://github.com/jesus359/hermes-cardputer
+    [attachment] IMG_0004.mov https://cdn.discordapp.com/attachments/1494518737116729394/1494518737318182942/IMG_0004.mov?ex=6a01e1c9&is=6a009049&hm=c43f9740ba9a2f4a5be114c8347ae67300ae63c32bf465d90585503ff33a976f&
+    [embed] GitHub - jesus359/hermes-cardputer: Interface with Hermes Agent  th... https://github.com/jesus359/hermes-cardputer
+

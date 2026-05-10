@@ -1,0 +1,23 @@
+# Thread 'buraq_c' in forum #community-projects-showcase
+# thread_id=1481017951703531711 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:19.198796+00:00
+
+[2026-03-10T19:56:35.669000+00:00] buraq_c (id=1481017951703531711)
+    https://x.com/buraq_c/status/2030923433052160457
+    
+    Install it on a machine, give it your messaging accounts, and it becomes a persistent personal agent
+    [attachment] Ekran_Resmi_2026-03-09_11.03.50.png https://cdn.discordapp.com/attachments/1481017951703531711/1481017951933956116/Ekran_Resmi_2026-03-09_11.03.50.png?ex=6a018bb3&is=6a003a33&hm=b4b57c0b5e09685199ae7aa7488a23a19fe97799642c4b86d2660bccbcb0453b&
+    [attachment] Ekran_Resmi_2026-03-09_11.03.31.png https://cdn.discordapp.com/attachments/1481017951703531711/1481017952701517864/Ekran_Resmi_2026-03-09_11.03.31.png?ex=6a018bb3&is=6a003a33&hm=dedb8f3834887419a0244e9b4d032e1fac56c4757a1f19d0389aa626e6f058c3&
+    [embed]  https://twitter.com/buraq_c/status/2030923433052160457
+
+[2026-03-11T14:09:16.392000+00:00] buraq_c (id=1481292933305995478)
+    [attachment] Ekran_Resmi_2026-03-11_17.08.55.png https://cdn.discordapp.com/attachments/1481017951703531711/1481292933042012282/Ekran_Resmi_2026-03-11_17.08.55.png?ex=6a01e30c&is=6a00918c&hm=aea6ac018f4141f3aaf9db130eb72ad7938455f2035ffb35e54dc0116e50be64&
+
+[2026-03-11T18:45:00.832000+00:00] buraq_c (id=1481362325716865044)
+    https://github.com/NousResearch/hermes-agent/pull/972
+    [embed] feat: add crypto-prices skill (market-data category) by buraksk1 ·... https://github.com/NousResearch/hermes-agent/pull/972
+
+[2026-03-15T14:28:29.773000+00:00] buraq_c (id=1482747322398937171)
+    https://x.com/buraq_c/status/2033188558417109500
+    [embed]  https://twitter.com/buraq_c/status/2033188558417109500
+

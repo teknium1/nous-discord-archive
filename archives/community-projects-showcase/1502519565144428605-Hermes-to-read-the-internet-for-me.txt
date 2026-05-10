@@ -1,0 +1,10 @@
+# Thread 'Hermes to read the internet for me' in forum #community-projects-showcase
+# thread_id=1502519565144428605 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:16.800851+00:00
+
+[2026-05-09T03:56:19.794000+00:00] awais_h (id=1502519565144428605)
+    Playing around with Hermes for the first time and it's a lot of fun!
+    
+    I was able to get it to read HackerNews once a day and send me an email summary of what I should be paying attention to. I'm going to extend it to read RSS feeds, and find other interesting content online.
+    [attachment] Screenshot_2026-05-08_at_11.54.36_PM.png https://cdn.discordapp.com/attachments/1502519565144428605/1502519565521784995/Screenshot_2026-05-08_at_11.54.36_PM.png?ex=6a01fc23&is=6a00aaa3&hm=5914b505261978901c0d3912dc292929ef4ffc733a18f10b6924a342d76df17b&
+

@@ -1,0 +1,7 @@
+# Thread 'Will skills/plugins like scrapling not work in a docker?' in forum #plugins-skills-and-skins
+# thread_id=1502955423244877884 forum_id=1485392832154832906
+# Started 2026-05-10T19:51:57.141648+00:00
+
+[2026-05-10T08:48:16.463000+00:00] hydraxiann (id=1502955423244877884)
+    As hermes apparently stated it uses debian trixie, which ships python 3.13 with no pip, so it can't pip install dependencies for that plugin apparently.
+

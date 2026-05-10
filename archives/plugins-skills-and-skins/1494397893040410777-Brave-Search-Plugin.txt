@@ -1,0 +1,16 @@
+# Thread 'Brave Search Plugin' in forum #plugins-skills-and-skins
+# thread_id=1494397893040410777 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:27.398273+00:00
+
+[2026-04-16T18:03:42.271000+00:00] rabilrbl (id=1494397893040410777)
+    Enable Brave Search in Hermes agent.
+    
+    **Steps**
+    1. Add `BRAVE_API_KEY` to `~/.hermes/.env` , Get it at https://api-dashboard.search.brave.com/app/keys 
+    The free tier is very generous, haven't hit any limits so far.
+    
+    2. Use one-line install script or local install as defined in README.
+    
+    **Link:** https://github.com/rabilrbl/hermes-brave-search-plugin
+    [embed] GitHub - rabilrbl/hermes-brave-search-plugin: Enable brave search i... https://github.com/rabilrbl/hermes-brave-search-plugin
+

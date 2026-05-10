@@ -1,0 +1,77 @@
+# Thread 'Android Tools for Hermes' in forum #community-projects-showcase
+# thread_id=1490746179892543671 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:39.348111+00:00
+
+[2026-04-06T16:13:06.011000+00:00] .s0uthpaw (id=1490746179892543671)
+    https://github.com/SouthpawIN/burner-phone
+    [embed] GitHub - SouthpawIN/burner-phone: Skill to control an Android devic... https://github.com/SouthpawIN/burner-phone
+
+[2026-04-09T20:14:10.537000+00:00] _voscko_ (id=1491894012108476507)
+    Cool, will have a look this weekend 💪🏼 <@575461682151686145>
+
+[2026-04-09T20:15:51.002000+00:00] .s0uthpaw (id=1491894433489092608)
+    Please do! Lots of directions this can go
+
+[2026-04-09T20:26:51.211000+00:00] .s0uthpaw (id=1491897202606477372)
+    <@466701167838101531> show me your Kung Fu
+
+[2026-04-09T20:27:09.578000+00:00] tdamre (id=1491897279643258970)
+    [attachment] Screenshot_Termux_20260409_185553.jpg https://cdn.discordapp.com/attachments/1490746179892543671/1491897277587914974/Screenshot_Termux_20260409_185553.jpg?ex=6a0192dd&is=6a00415d&hm=79c8fba24d1589b117784511ab1565fc7ffc2cf00c86cc16053f24e6632536fd&
+    [attachment] Screenshot_Termux_20260409_170343.jpg https://cdn.discordapp.com/attachments/1490746179892543671/1491897278095691817/Screenshot_Termux_20260409_170343.jpg?ex=6a0192dd&is=6a00415d&hm=2b1f71e6fcc81e82d0502b5a60ed939bd3fdb6854f669cd85452450791eb3ce7&
+    [attachment] Screenshot_Termux_20260409_222159.jpg https://cdn.discordapp.com/attachments/1490746179892543671/1491897278754193418/Screenshot_Termux_20260409_222159.jpg?ex=6a0192dd&is=6a00415d&hm=a8f1d7fab0e11d02d11963928caae1725927d9d99aed915cb9d5e0f8168f40d9&
+    [attachment] Screenshot_Termux_20260409_222350.jpg https://cdn.discordapp.com/attachments/1490746179892543671/1491897279194464327/Screenshot_Termux_20260409_222350.jpg?ex=6a0192dd&is=6a00415d&hm=1532a6c50bf9776479c7b581a61dabb5041745d508b3fe655c85967fc3e621dc&
+    [reply to .s0uthpaw msg=1491897202606477372]
+
+[2026-04-09T20:27:13.704000+00:00] tdamre (id=1491897296948826304)
+    https://github.com/NousResearch/hermes-agent/pull/6201
+    [embed] feat: add tested Termux install path and EOF-aware gh auth by adyba... https://github.com/NousResearch/hermes-agent/pull/6201
+
+[2026-04-09T20:27:27.074000+00:00] tdamre (id=1491897353026801765)
+    Chatgpt web authentication through website login flow
+
+[2026-04-09T20:27:31.650000+00:00] tdamre (id=1491897372219932692)
+    No need for api key
+
+[2026-04-09T20:27:36.534000+00:00] tdamre (id=1491897392704782457)
+    No need for oauth
+
+[2026-04-09T20:29:55.652000+00:00] .s0uthpaw (id=1491897976207966328)
+    Nice! There's some access to sensors and Android stuff in there
+
+[2026-04-11T07:23:56.869000+00:00] tdamre (id=1492424953666994327)
+    That pr is now closed
+
+[2026-04-11T07:24:03.346000+00:00] tdamre (id=1492424980833763531)
+    For up to date branch fork
+
+[2026-04-11T07:25:05.712000+00:00] tdamre (id=1492425242415464559)
+    https://github.com/adybag14-cyber/hermes-agent/tree/feat/termux-install-path
+    [embed] GitHub - adybag14-cyber/hermes-agent at feat/termux-install-path https://github.com/adybag14-cyber/hermes-agent/tree/feat/termux-install-path
+
+[2026-04-11T19:36:03.182000+00:00] rexx.0569 (id=1492609193977450528)
+    how is this better than tasker
+
+[2026-04-11T20:14:13.452000+00:00] _voscko_ (id=1492618800065941584)
+    The biggest difference is the control model.
+    • Tasker is rule-based: “when X happens, do Y.”
+    • burner-phone is agentic/perceptual: it continuously watches for gaze + speech, uses models for attention detection, can analyze screenshots with vision models, and then act on the phone through coordinates, screen control, audio, and notifications.
+    [reply to rexx.0569 msg=1492609193977450528]
+
+[2026-04-11T20:25:37.434000+00:00] rexx.0569 (id=1492621668894376046)
+    fair fair. is it called burner phone because ti is only useful if u can burn tokens easy? or coincidence
+    [reply to _voscko_ msg=1492618800065941584]
+
+[2026-04-11T20:28:36.089000+00:00] _voscko_ (id=1492622418227757118)
+    lol we can only speculate.. <@575461682151686145> please do share your thinking proces why it's called burner-phone 😛
+    [reply to rexx.0569 msg=1492621668894376046]
+
+[2026-04-11T20:31:59.879000+00:00] .s0uthpaw (id=1492623272985235637)
+    1. I originally wasn't gonna share it haha
+    2. Bc it's intended to be for a spare phone you have in a drawer. Reclaimed hardware is very OSS-coded. What is more world compatible with more sensors AND easily obtainable than a spare Android?
+
+[2026-04-11T20:33:18.906000+00:00] .s0uthpaw (id=1492623604448235700)
+    Spare device as a dedicated Hermes device that is aware of all of its sensors and apps and capabilities. Embodiment v0.0.1
+
+[2026-04-11T20:35:57.327000+00:00] rexx.0569 (id=1492624268914327816)
+    ahhh makes sense
+

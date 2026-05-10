@@ -1,0 +1,84 @@
+# Thread 'ClikDeploy is the easy app deployment platform!' in forum #community-projects-showcase
+# thread_id=1491910958497403022 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:30.383209+00:00
+
+[2026-04-09T21:21:30.871000+00:00] horizon03260 (id=1491910958497403022)
+    I built ClikDeploy because i i believe that deploying and using apps should be simple! Connect any server (including an always on computer) and deploy apps in just a few clicks! Want automation, deploy n8n! Websites, deploy Wordpress! Personal AI agent, deploy Hermes! Easy connection, easy deployment, easy management! Check it out at https://clikdeploy.com 😉
+    [embed] ClikDeploy - Deploy First, Configure Later https://clikdeploy.com/
+
+[2026-04-09T21:22:41.081000+00:00] .s0uthpaw (id=1491911252979748905)
+    🤘🤖
+
+[2026-04-09T21:23:13.810000+00:00] horizon03260 (id=1491911390255124571)
+    What up!!
+
+[2026-04-09T21:24:34.685000+00:00] .s0uthpaw (id=1491911729469329553)
+    How much overlap do we have? Can we fusion dance? Or completely off?
+    
+    This is an easy to setup all modality local server meant for Hermes (pay no attention to the Senter branding lol)
+    
+    https://github.com/SouthpawIN/Senter-Server
+    [embed] GitHub - SouthpawIN/Senter-Server: server backend for Senter https://github.com/SouthpawIN/Senter-Server
+
+[2026-04-09T21:25:26.432000+00:00] .s0uthpaw (id=1491911946511843529)
+    Roll up an Everything Bagel Backend lol
+
+[2026-04-09T21:25:56.416000+00:00] .s0uthpaw (id=1491912072273854564)
+    This is sick one sec
+    [reply to horizon03260 msg=1491910958497403022]
+
+[2026-04-09T21:26:12.432000+00:00] horizon03260 (id=1491912139449827559)
+    Some people want to deploy agents into the cloud so they get a VPS, this simplifies that
+
+[2026-04-09T21:26:40.982000+00:00] .s0uthpaw (id=1491912259197341785)
+    Love it! Let's go with yours
+
+[2026-04-09T21:27:23.339000+00:00] .s0uthpaw (id=1491912436855345274)
+    add followers here
+
+[2026-04-09T21:27:52.790000+00:00] horizon03260 (id=1491912560381919365)
+    Dope!!
+
+[2026-04-09T21:28:07.204000+00:00] horizon03260 (id=1491912620838621326)
+    To this thread?
+    [reply to .s0uthpaw msg=1491912436855345274]
+
+[2026-04-09T21:29:03.223000+00:00] .s0uthpaw (id=1491912855799333137)
+    Yes! take the lead on a project that could be added to Hermes 😉
+
+[2026-04-09T21:30:47.323000+00:00] horizon03260 (id=1491913292426514503)
+    Dude, i'm sort of taken back... Since getting this thing launched i've been slapped with the reality that i have no clue how to get this out there 🤣  I'm almost confused that you're enthusiastic about it 🤣
+
+[2026-04-09T21:31:30.480000+00:00] horizon03260 (id=1491913473439957296)
+    OpenClaw was hostile to this kind of promotion
+
+[2026-04-09T21:31:50.593000+00:00] horizon03260 (id=1491913557799862483)
+    How?
+    [reply to .s0uthpaw msg=1491912855799333137]
+
+[2026-04-09T21:35:29.502000+00:00] .s0uthpaw (id=1491914475970892007)
+    Talk about this project and how it can relate to Hermes add motivated people to this chat. Check with <#1490200229406838955> and see if you can get any sparks to focus here.  It's gaining steam over there
+
+[2026-04-09T21:37:31.892000+00:00] horizon03260 (id=1491914989311889438)
+    That's dope! I know that ClikDeploy solves a really needed problem because so many have an issue with cloud deployments. I'm really excited to have some support in this channel!
+
+[2026-04-09T21:38:39.131000+00:00] horizon03260 (id=1491915271332565083)
+    Free usage is generous so realistically most people wouldn't need to pay anything to use it
+
+[2026-04-10T16:37:24.743000+00:00] horizon03260 (id=1492201849720410112)
+    Here’s a quick demo of what it looks like to have Hermes accessible through ClikDeploy from anywhere!
+    [attachment] ScreenRecording_04-10-2026_10-35-42_1.mov https://cdn.discordapp.com/attachments/1491910958497403022/1492201849095323821/ScreenRecording_04-10-2026_10-35-42_1.mov?ex=6a0205c4&is=6a00b444&hm=04d2a353bb52ca024dc5e3ec455a6343dfc1e5cca8cbba0254e78354fbcf5dd7&
+
+[2026-04-10T16:43:16.169000+00:00] .s0uthpaw (id=1492203323707883520)
+    Share this in main, video too. Idk want to tag anyone from Nous directly, but this will gain steam and possibly the right attention. 
+    clean work 👌
+
+[2026-04-10T16:44:29.366000+00:00] horizon03260 (id=1492203630718222446)
+    Bro hell ya!! Thanks dude, it’s been a long time coming but it’s finally coming along!
+
+[2026-04-10T17:05:41.494000+00:00] horizon03260 (id=1492208966409912553)
+    Whether in the cloud or using self host you can access and configure your Hermes from anywhere so you never get stuck “shoot, I’m not at my computer”. Phone, laptop, tablet, apps can be deployed and used through ClikDeploy from anywhere!
+
+[2026-04-10T17:10:44.805000+00:00] horizon03260 (id=1492210238588325888)
+    Let me know if you want a discord invite to keep up on the latest updates and discussions!
+

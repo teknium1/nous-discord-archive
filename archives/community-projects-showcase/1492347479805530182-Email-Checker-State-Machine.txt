@@ -1,0 +1,104 @@
+# Thread 'Email Checker State Machine' in forum #community-projects-showcase
+# thread_id=1492347479805530182 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:25.097554+00:00
+
+[2026-04-11T02:16:05.661000+00:00] mayuronx (id=1492347479805530182)
+    I have no idea if there is a better way to do this. If there is, please let me know. 
+    
+    ========
+    
+    Two-tier email processing system for my agent (I gave it Spacemail IMAP via himalaya).
+    
+    Tier 1 (Dumb): Pure Python script, no LLM. Detects new email, manages state.
+    Tier 2 (Smart): LLM session via hermes chat -q. Only invoked when new email detected.
+    
+    Key goal: Zero LLM calls when inbox is idle.
+    
+    ┌─────────────────────────────────────────────────┐
+    │  CRON: check-email.py (every 1 min)             │
+    │  Pure Python, no LLM, ~50ms                     │
+    │                                                  │
+    │  1. himalaya envelope list                       │
+    │  2. Diff against seen_ids.json                   │
+    │  3. If .lock exists → log deferred, exit         │
+    │  4. If .trigger exists → append new IDs, exit    │
+    │  5. New email → write .trigger, log              │
+    │  6. Spawn hermes chat -q (background, detached)  │
+    └─────────────────────────────────────────────────┘
+                          │
+                          ▼ (only when new email)
+    ┌─────────────────────────────────────────────────┐
+    │  LLM SESSION: hermes chat -q "Process email..." │
+    │  One-shot, exits when done                      │
+    │                                                  │
+    │  1. Read .trigger for email IDs                  │
+    │  2. Write .lock (email ID + timestamp)           │
+    │  3. himalaya message read each email             │
+    │  4. Check SPF/DKIM/DMARC headers                 │
+    │  5. Reply (trusted+auth) or forward (rest)       │
+    │  6. Delete .trigger + .lock                      │
+    │  7. Log to events.log                            │
+    └─────────────────────────────────────────────────┘
+
+[2026-04-11T02:16:16.631000+00:00] mayuronx (id=1492347525816914030)
+    ## State Files
+    
+    All in `~/.hermes/email/`:
+    
+    | File | Purpose | Lifecycle |
+    |------|---------|-----------|
+    | `seen_ids.json` | Array of processed email IDs | Persistent, updated after processing |
+    | `.trigger` | JSON: `{timestamp, ids, summary}` | Created by dumb script, deleted by LLM |
+    | `.lock` | JSON: `{email_id, timestamp, pid}` | Created by LLM, deleted by LLM on completion |
+    | `events.log` | Timestamped action log | Append-only, rotated manually |
+    | `rules.md` | Reply/forward rules | Static, human-editable |
+    
+    ## Lock Protocol
+    
+    1. **Dumb script checks .lock first.** If exists → log "deferred, LLM busy", exit.
+    2. **LLM writes .lock immediately** on startup (before any email reads).
+    3. **LLM deletes .lock + .trigger** on completion (success or failure).
+    4. **Stale lock detection:** If .lock is older than 10 minutes, dumb script deletes it and proceeds.
+    
+    ## Trigger Batching
+    
+    If multiple emails arrive between checks:
+    - First check: email A detected → .trigger created with [A]
+    - Second check: email B detected → .trigger exists → append B → .trigger has [A, B]
+    - LLM processes both A and B in one session
+
+[2026-04-11T02:17:01.026000+00:00] mayuronx (id=1492347712023298160)
+    ## Event Log Format
+    
+    ```
+    [2026-04-11 03:45:01] CHECK: Found 2 new emails (IDs: 45, 46)
+    [2026-04-11 03:45:01] TRIGGER: Written for IDs [45, 46]
+    [2026-04-11 03:45:02] SPAWN: LLM session started (PID 12345)
+    [2026-04-11 03:45:15] LOCK: Set for ID 45
+    [2026-04-11 03:45:30] ACTION: Replied to ID 45 (hello@mayur.ca)
+    [2026-04-11 03:45:45] ACTION: Forwarded ID 46 to  (unknown sender)
+    [2026-04-11 03:45:46] CLEANUP: .trigger + .lock deleted
+    [2026-04-11 03:46:01] CHECK: No new emails
+    [2026-04-11 03:47:01] DEFERRED: .lock exists, skipping (LLM busy)
+    ```
+    
+    ## Cron Setup
+    
+    ```
+    */1 * * * *  /usr/bin/python3 ~/.hermes/scripts/email/check-email.py >> ~/.hermes/email/cron.log 2>&1
+    ```
+    
+    Single cron job. No LLM cron — the dumb script spawns the LLM directly via `hermes chat -q`.
+    
+    ## Files
+    
+    - `~/.hermes/scripts/email/check-email.py` — dumb detection script
+    - `~/.hermes/email/rules.md` — reply/forward rules
+    - `~/.hermes/email/EMAIL-SYSTEM-DESIGN.md` — this file
+    
+    ## Backup
+    
+    All email files under `~/.hermes/email/` and `~/.hermes/scripts/email/` are included in the Hermes backup manifest. Changes sync to:
+    - `~/projects/Hermes-Backup/` (private, with creds)
+    - `~/projects/Hermes-Backup-to-Github/` (public, sanitized)
+

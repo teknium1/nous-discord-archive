@@ -1,0 +1,37 @@
+# Thread 'Skill Overflow 🧠🤖' in forum #plugins-skills-and-skins
+# thread_id=1494240178733187112 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:29.513144+00:00
+
+[2026-04-16T07:37:00.250000+00:00] fathah. (id=1494240178733187112)
+    Currently, hermes-agent dumps ALL skill names+descriptions 
+    In my context:
+    (~78 skills, ~10K chars, ~3,200 tokens) into the system prompt on every API call. 
+    Even "Hi" pays this cost. 
+    With 78 skills, the skills index is 77% of the total payload. 
+    This is wasteful, the agent rarely needs more than 2-3 skills per task, and most calls need zero.
+    
+    And if we have 200 skills and 100 are not used it's still active skills. 
+    
+    Let's call this "SKILL OVERFLOW"
+    
+    So, I've found some solutions, let me know opinions, ideas.
+    
+    I'll be sharing my solution progress.
+
+[2026-04-16T07:49:29.608000+00:00] fathah. (id=1494243321768579164)
+    https://github.com/NousResearch/hermes-agent/pull/4406
+    [embed] feat(skills): smart ranking, usage tracking, and lifecycle manageme... https://github.com/NousResearch/hermes-agent/pull/4406
+
+[2026-04-16T07:50:03.373000+00:00] fathah. (id=1494243463388987526)
+    <@387972437901312000> do you have any review or feedback about this idea?
+
+[2026-04-21T20:15:39.818000+00:00] neopabo (id=1496243040967462933)
+    <@703810415972450305> I'm working on something that's complementary to this
+
+[2026-04-21T20:16:56.996000+00:00] neopabo (id=1496243364675190784)
+    I'll refine the idea more and share when it's ready
+
+[2026-04-22T17:50:54.215000+00:00] fathah. (id=1496568998773526568)
+    Great ⚡️
+    [reply to neopabo msg=1496243040967462933]
+

@@ -1,0 +1,11 @@
+# Thread 'Open WebUI and accessing Codex subscription via Hermes' in forum #community-projects-showcase
+# thread_id=1484159657613463603 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:14.717201+00:00
+
+[2026-03-19T12:00:36.728000+00:00] literallyblah (id=1484159657613463603)
+    Hi all, I thought I would let you know that if you'd like to interact with LLM models via your codex subscription in Open WebUI, it's actually really easy. I got Hermes to make a new completion endpoint which acts as a proxy between Open WebUI and Codex directly. That way I can point Open WebUI to it and access all the available models.
+    
+    That means there are two endpoints:
+    - Hermes agent endpoint to interact with your agent and all the skills, plugins, etc. that is has
+    - Hermes completion endpoint to directly interact with codex models
+

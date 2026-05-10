@@ -1,0 +1,223 @@
+# Thread 'Herm - Chat and Dashboard TUI' in forum #community-projects-showcase
+# thread_id=1498955668311248948 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:36.584593+00:00
+
+[2026-04-29T07:54:40.575000+00:00] liftaris (id=1498955668311248948)
+    Before Hermes, OpenCode was my daily driver. I built Herm because I wanted Hermes capabilities with an OpenCode-like interface. Herm uses the same TUI framework OpenCode is built with, and also exposes dashboard style tabs that give easy access everything and anything I might want to do, all within my interface of choice: the terminal.
+    
+    I see a lot of Web UIs being made, but this is for the TUI lovers out there!
+    
+    https://github.com/liftaris/herm
+    
+    **11 Tabs**
+    Chat · Context · Sessions · Agents · Analytics · Skills · Cron · Toolsets · Config · Env · Memory
+    
+    **Chat**
+    - Streaming markdown, syntax-highlighted code, inline diffs
+    - Animated ASCII avatar (.eikon format) with 6 agent states
+    - Thought cloud overlay for reasoning tokens
+    - Rewind / fork / branch from any message
+    
+    **Context Visualizer**
+    - Every segment (system, skills, tools, memory, conversation) shown to scale
+    - Drill into any segment to see what's in it
+    
+    **Look & feel**
+    - 33 themes, all interchangeable with Opencode
+    - drop any .json from opencode's theme registry into ~/.hermes/herm/themes/ and it works
+    - Fully rebindable keys and shortcuts
+    
+    **Built on**
+    - OpenTUI React renderer (same framework as OpenCode)
+    - Bun runtime
+    - Connects to Hermes the same  gateway the native hermes TUI does
+    
+    ---------------------------
+    **In active development. Feedback welcome! **
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1498955668852441138/image.png?ex=6a018b40&is=6a0039c0&hm=211d4a9119c21e234d72777a4a486bf58d3a743f60640875f5bd66dfeb2cd289&
+    [embed] GitHub - liftaris/herm: The Hermes TUI built with OpenTUI https://github.com/liftaris/herm
+
+[2026-04-29T18:58:39.144000+00:00] liftaris (id=1499122763380691034)
+    Context Visualizer
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1499122763154194472/image.png?ex=6a0226df&is=6a00d55f&hm=713cffdec47e4882f2e88ec47bf5dcae96ed8a7189775c0f814bcf43a7c31524&
+
+[2026-05-02T04:46:21.281000+00:00] liftaris (id=1499995439234285599)
+    Splash screen coming together
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1499995438877511812/image.png?ex=6a0207dd&is=6a00b65d&hm=ce6d7384254cee0f897fb90b7f23123b583ea95aa785f0a8a6a374ea19d35015&
+
+[2026-05-03T19:17:29.095000+00:00] liftaris (id=1500577054201086073)
+    122 commits since Apr 29. 
+    
+    **New**
+    - Published on npm, `npm i -g herm-tui` and run `herm` to use it today
+    - slash command parity with native hermes TUI
+    - /compact shows live progress + the resulting summary
+    - 16 session-mutating slash commands now bind correctly to the live session (were previously hitting a worker subprocess)
+    - /reload hot-reloads ~/.hermes/.env without restart; /reload-mcp gets a pre-flight confirm
+    - Import your opencode keybinds — press o in the /keys dialog
+    <leader>+digit jumps to tab N
+    
+    **Agents**
+    - in-TUI profile switch from Agents tab
+    - per-agent Themes and Keybinds
+    
+    **Skill**
+    - New Curator integration— see pinned/last-used/state per skill, open the curator report as rendered markdown, and a control panel to run/pause it on demand
+    - Per-skill lineage: the curator events that touched each skill
+
+[2026-05-03T19:19:01.284000+00:00] liftaris (id=1500577440869650613)
+    **Kanban**
+    - read and operate the Hermes multi-agent task board from inside herm
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1500577440546816113/image.png?ex=6a022ba5&is=6a00da25&hm=3c0b088d4fc8a978b54e3043fa633198de0b65777228533a0c9066988ddf5b16&
+
+[2026-05-03T19:22:06.481000+00:00] liftaris (id=1500578217642168330)
+    **Chat**
+     - inline image previews using chafa 
+     - **LaTeX → unicode** — math in assistant output renders as real glyphs
+    - ThoughtCloud gets a tab strip: all / reasoning / tools
+    - File edits show as collapsible diff chips in the transcript
+    - Agent clarify-prompts render inline instead of stealing focus in a modal
+    [attachment] Pasted_image_20260503115410.png https://cdn.discordapp.com/attachments/1498955668311248948/1500578217298231466/Pasted_image_20260503115410.png?ex=6a022c5e&is=6a00dade&hm=f6ba8274e4496ce3ade3055a45598a8a59cf9b5508729393ffc389823ebf079d&
+
+[2026-05-04T03:01:25.505000+00:00] mobai4876162 (id=1500693808567029820)
+    图像预览太有用了
+
+[2026-05-04T03:01:28.040000+00:00] Translator Bot#1043 (id=1500693819199590432)
+    Image preview is so useful
+    [reply to mobai4876162 msg=1500693808567029820]
+
+[2026-05-04T03:01:34.172000+00:00] mobai4876162 (id=1500693844919062639)
+    不然都不知道自己上传了什么图像
+
+[2026-05-04T03:01:37.475000+00:00] Translator Bot#1043 (id=1500693858772713512)
+    Otherwise, you don’t even know what images you uploaded.
+    [reply to mobai4876162 msg=1500693844919062639]
+
+[2026-05-04T03:58:39.288000+00:00] liftaris (id=1500708210896797728)
+    yes i agree. most TUIs need to appeal to everyone and ignore features that modern terminals support. 
+    
+    right now image preview relies on `chafa` already existing on your system, but falls back to inline image chips if you don't have it
+
+[2026-05-04T04:14:27.037000+00:00] liftaris (id=1500712186044219433)
+    integrating `/skin`! here is the `ares` example. added 9 color pallettes for each skin, and am working on unique avatars for each!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1500712185796759622/image.png?ex=6a020062&is=6a00aee2&hm=f4362d134bd39505541b8db08b3011604baec3b415e516532b0d760e45a2acd9&
+
+[2026-05-04T04:15:16.895000+00:00] liftaris (id=1500712395163697253)
+    (avatars are fully animated btw)
+
+[2026-05-04T07:34:58.094000+00:00] liftaris (id=1500762647954460673)
+    hackathon submission made: https://x.com/Liftaris1/status/2051201950038048810
+    [embed]  https://twitter.com/Liftaris1/status/2051201950038048810
+
+[2026-05-05T19:28:11.826000+00:00] frostmage10 (id=1501304525741363220)
+    idc you should win
+    [reply to liftaris msg=1500762647954460673]
+
+[2026-05-05T19:28:22.719000+00:00] frostmage10 (id=1501304571430179047)
+    insanely clean and sexy
+
+[2026-05-05T19:29:23.352000+00:00] frostmage10 (id=1501304825743147058)
+    the themes could use a bit of work tho
+
+[2026-05-05T19:43:38.145000+00:00] jcrabapple (id=1501308411005112422)
+    holy shit this is incredible
+
+[2026-05-05T20:42:13.823000+00:00] liftaris (id=1501323156827406488)
+    33 of the themes are 1:1 imports from OpenCode themes, 9 of them are ports from Hermes /skin themes. But if you want to customize any of them, just ask Hermes to!
+    [reply to frostmage10 msg=1501304825743147058]
+
+[2026-05-05T20:55:43.400000+00:00] frostmage10 (id=1501326552439328778)
+    Nah, some of them of them dont really match properly with the ui
+    [reply to liftaris msg=1501323156827406488]
+
+[2026-05-05T20:57:16.810000+00:00] liftaris (id=1501326944229134346)
+    Gotcha, any suggestions or specific examples I can look into?
+
+[2026-05-05T21:01:58.596000+00:00] frostmage10 (id=1501328126125281280)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1501328125831676055/image.png?ex=6a019b06&is=6a004986&hm=b2e55f8afa9fb15d0fed4f799de092617fd8ff9da657e411967a0d92f8847114&
+    [reply to liftaris msg=1501326944229134346]
+
+[2026-05-05T21:02:39.438000+00:00] frostmage10 (id=1501328297429041243)
+    Material theme
+
+[2026-05-06T04:44:54.212000+00:00] liftaris (id=1501444625502568589)
+    <@575461682151686145> can't message you in the hackathon forum post anymore since it's locked, but the key to change themes is Ctrl+x, t. Or Ctrl+k brings up the command palette, and you can get to the theme picker from there
+
+[2026-05-06T05:49:59.099000+00:00] liftaris (id=1501461003785994260)
+    Multi-board Kanban now supported on the kanban tab! Alt+→ all the way to the end to see it (better ux coming soon)
+    
+    Also fixed the other avatars not bundling properly
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1501461003500523611/image.png?ex=6a0216c7&is=6a00c547&hm=ba95c349e52039b13cbbb4d49bfc8d3023121240a7bb76131841112c6d08a4a4&
+
+[2026-05-06T13:00:31.600000+00:00] frostmage10 (id=1501569353148006494)
+    Hello!
+    [reply to liftaris msg=1501461003785994260]
+
+[2026-05-06T13:21:32.270000+00:00] frostmage10 (id=1501574640781496403)
+    Is there any possibilities you add a models management pane?
+
+[2026-05-06T14:43:11.076000+00:00] liftaris (id=1501595187862835341)
+    Ctrl+ k and you'll see models pane, it works but it can be a bit buggy
+
+[2026-05-06T15:21:52.485000+00:00] yerts (id=1501604924557889556)
+    Thanks for checking out my issue!
+
+[2026-05-08T10:39:11.146000+00:00] heartl1ne (id=1502258559277076562)
+    This is now the ONLY way I want to interact with my hemes agent. I fucking LOVE this
+    
+    Would love to know how you made the animated avatars
+
+[2026-05-08T18:42:30.499000+00:00] liftaris (id=1502380191379488778)
+    I'm working on making it simple so that anyone can add their own! Rn it's a hodge podge of comfyui video generation and scripts
+
+[2026-05-09T06:55:39.559000+00:00] bondanadnob. (id=1502564694869671977)
+    really love thow Herm looks, and definitely going to replace the default TUI from now.
+
+[2026-05-09T06:59:52.817000+00:00] bondanadnob. (id=1502565757110845490)
+    though, i am wondering  if anyone here have the same issue. Whenever i click "7 Cron" menu on the top, it is causing the tui to crash and go black.
+
+[2026-05-09T07:50:03.289000+00:00] liftaris (id=1502578383945601114)
+    I will check in the morning--open an issue if you can to keep track of it
+
+[2026-05-09T09:23:47.730000+00:00] likiusinik (id=1502601974560854037)
+    Will this work on a mobile phone? 📱
+
+[2026-05-09T10:21:50.788000+00:00] yerts (id=1502616583565217894)
+    Do not have this issue
+    [reply to bondanadnob. msg=1502565757110845490]
+
+[2026-05-09T10:31:58.258000+00:00] bondanadnob. (id=1502619131478933616)
+    yeah i'll just ask hermes to check and fix. probably something that's misconfigured.
+    [reply to yerts msg=1502616583565217894]
+
+[2026-05-09T10:36:56.496000+00:00] vayaperson (id=1502620382379643001)
+    OMG I'll try this!!!
+
+[2026-05-09T13:08:24.005000+00:00] liftaris (id=1502658498154987540)
+    Not tested on phone at all, but I would guess it works well enough in most cases or not at all in others, because the UI is not optimized for it 🙃
+    [reply to likiusinik msg=1502601974560854037]
+
+[2026-05-09T14:50:26.377000+00:00] parallelcontinuities (id=1502684177244618772)
+    hey, just wondering how you made the eikons? I'd like to create my own custom ones
+
+[2026-05-09T16:20:42.785000+00:00] liftaris (id=1502706895306227733)
+
+[2026-05-09T16:20:43.402000+00:00] liftaris (id=1502706897893982333)
+    I'll prioritize it today, it's the most requested feature!
+
+[2026-05-09T16:30:07.267000+00:00] parallelcontinuities (id=1502709262915338321)
+    awesome ^_^ thank you so much!!
+
+[2026-05-09T21:09:06.762000+00:00] liftaris (id=1502779473446043708)
+    We passed 100 stars!
+    Thank you everyone for giving herm a try. There are several improvements to be made and wanted to thank the people who have already submitted pull requests! The transition from hackathon project to project maintainer is real, so thank you in advance for your patience during the growing pains. Some things coming up to look forward to:
+    - Eikon creation. This is by far the most anticipated request 
+    - Establishing contribution guidelines 
+    - Plugins... More on this later. (Got something in the works with <@575461682151686145> 
+    - Continual QoL improvements to the tabs, navigation, and UI in genera
+    - I saw some reports of session corruption during compaction -- that's a big deal and is high on the priority list
+    [attachment] Screenshot_20260509-131704.png https://cdn.discordapp.com/attachments/1498955668311248948/1502779472485810316/Screenshot_20260509-131704.png?ex=6a019cb2&is=6a004b32&hm=edf1b82c5b7cf4ba827ffbb5a7d6ff2179a3d7dd704658551fa119203047404e&
+
+[2026-05-10T00:31:09.987000+00:00] t4r10records (id=1502830321937289376)
+    Thank you bro you are insane  ❤️ (from france)
+

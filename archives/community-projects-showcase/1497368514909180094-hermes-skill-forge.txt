@@ -1,0 +1,9 @@
+# Thread 'hermes-skill-forge' in forum #community-projects-showcase
+# thread_id=1497368514909180094 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:43.231898+00:00
+
+[2026-04-24T22:47:53.716000+00:00] edub8828 (id=1497368514909180094)
+    reads your local Hermes skills directory and turns it into a search
+    https://github.com/enw/hermes-skill-forge
+    [embed] GitHub - enw/hermes-skill-forge https://github.com/enw/hermes-skill-forge
+

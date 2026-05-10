@@ -1,0 +1,26 @@
+# Thread 'Hermes Memory Keep-Alive for Obsidian' in forum #community-projects-showcase
+# thread_id=1489021054629445803 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:02.385080+00:00
+
+[2026-04-01T21:58:04.097000+00:00] cali_it_guy (id=1489021054629445803)
+    **The problem:** You give your Hermes agent a big task. It's humming along, making progress — then the session ends, context compacts, or the LLM just quietly stalls. You come back and everything is gone. No memory of what it was doing, no way to pick up where it left off. You start over from scratch.
+    
+    **The solution:** This skill gives your agent a brain that survives anything and a heartbeat monitor that never sleeps.
+    
+    **Task memory** — every task your agent touches automatically gets persistent notes in Obsidian (RESUME, CHECKLIST, DOCS). No matter what happens — restarts, compaction, crashes — your agent can pick up exactly where it left off. It always knows what it was doing, what's next, and what files matter.
+    
+    **Keep-alive loop** — arm it before a long task and walk away with confidence. A watchdog checks every 15 minutes for stalls. If something goes wrong, a replayer takes one recovery step. If that fails, an escalator forces a fresh restart. Your task stays alive through anything the LLM throws at it.
+    
+    The workflow is dead simple:
+    1. Give your agent a task
+    2. `/loop-start` if it's a long one
+    3. Walk away
+    4. `/loop-stop` when it's done
+    
+    No wasted tokens when you're not using it. No lost work when you are.
+    
+    It's fully self-contained — no other skills required. The prompts bootstrap everything they need on first run. One install command and you're up.
+    
+    https://github.com/TechieTer/hermes-memory-keep-alive-for-obsidian
+    [embed] GitHub - TechieTer/hermes-memory-keep-alive-for-obsidian: Automatic... https://github.com/TechieTer/hermes-memory-keep-alive-for-obsidian
+

@@ -1,0 +1,19 @@
+# Thread 'Hermes Audit Plugin & Grafana Dashboards' in forum #plugins-skills-and-skins
+# thread_id=1503114142117265448 forum_id=1485392832154832906
+# Started 2026-05-10T19:51:55.919065+00:00
+
+[2026-05-10T19:18:57.991000+00:00] bert_71849 (id=1503114142117265448)
+    I created a small Hermes plugin that records every tool call and every LLM API call into a local SQLite database (one DB per profile), with five ready-to-go Grafana dashboards   bundled:                                                                                                                                                                   
+                                                                                                                                                                    
+      - Tool Calls — success rate, errors, latency percentiles, slowest calls                               
+      - API Calls — tokens, durations, finish reasons per call
+      - Sessions — activity rollup per session_id                                            
+      - Models — per-provider / per-model usage and token totals
+      - Skills — skill_view / skill_manage activity per skill                                                                                                                    
+                                                                                                                   
+      Self-contained docker compose setup for Grafana included.   Not a Langfuse replacement — just a lightweight way to see what your  
+      agent has actually been doing.       
+    
+    https://github.com/nhranitzky/hermes_audit_db_plugin
+    [embed] GitHub - nhranitzky/hermes_audit_db_plugin: Local observability plu... https://github.com/nhranitzky/hermes_audit_db_plugin
+

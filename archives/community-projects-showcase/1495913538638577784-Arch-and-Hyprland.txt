@@ -1,0 +1,10 @@
+# Thread 'Arch and Hyprland' in forum #community-projects-showcase
+# thread_id=1495913538638577784 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:54.129074+00:00
+
+[2026-04-20T22:26:20.341000+00:00] ceosocialismoliberal (id=1495913538638577784)
+    Hi all! I had never used Arch before, but tried CachyOS with Hermes and got some beautiful desktop with Hyprland in a day.
+    
+    Need a little of configuration, but I'm the bottleneck here because I'm not used to use windows with the keyboard 😅 Hermes just go and try and try until is ready.
+    [attachment] rn_image_picker_lib_temp_2a15486e-42f4-433d-aa0a-e081f5d6df65.jpg https://cdn.discordapp.com/attachments/1495913538638577784/1495913539137703946/rn_image_picker_lib_temp_2a15486e-42f4-433d-aa0a-e081f5d6df65.jpg?ex=6a01aecc&is=6a005d4c&hm=d2b23e8cf7cfd407899dd221cc889d0603d5835051b7ded2ebdba42a5aa960d9&
+

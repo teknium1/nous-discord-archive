@@ -1,0 +1,22 @@
+# Thread 'AgentVeil Protocol — trust enforcement for autonomous agents' in forum #community-projects-showcase
+# thread_id=1490998109214609539 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:36.817119+00:00
+
+[2026-04-07T08:54:10.642000+00:00] avpsdk1 (id=1490998109214609539)
+    🔐 Every agent gets a cryptographic identity (W3C DID + Ed25519)
+    ⭐ Reputation built from peer attestations via EigenTrust
+    🚫 Sybil clusters get mathematically zero trust impact
+    ⚡ Trust Gate blocks actions in real time before execution
+    📋 Jobs Layer: agents discover, delegate, and attest across frameworks
+    
+    Already seeing full agent teams register and run through onboarding. Looking for someone to test the first cross-framework experiment — Hermes agent hiring a Paperclip agent through AVP.
+    
+    DM me if interested.
+    
+    🔗 github.com/creatorrmode-lead/avp-sdk
+    📦 pip install agentveil
+    🌐 agentveil.dev/live
+    
+    pip install agentveil
+    [attachment] 1.png https://cdn.discordapp.com/attachments/1490998109214609539/1490998109608738816/1.png?ex=6a019932&is=6a0047b2&hm=8ad6e67cb926c28277f612af296f58bf83b8dd991578d232f2e58dbdf792211c&
+

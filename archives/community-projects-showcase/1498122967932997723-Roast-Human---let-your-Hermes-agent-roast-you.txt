@@ -1,0 +1,22 @@
+# Thread 'Roast Human — let your Hermes agent roast you' in forum #community-projects-showcase
+# thread_id=1498122967932997723 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:40.855173+00:00
+
+[2026-04-27T00:45:49.334000+00:00] justlikeag6 (id=1498122967932997723)
+    Basically a "for fun" project, agent-callable behavioral probe. It analyzes your patterns, decision-making, and how you treat the AI, then assigns you one of 15 personality archetypes with a shareable roast card.
+    
+    Sharing because the Hermes path turned out distinct enough to be worth its own edition.
+    
+    mechanism: skill endpoint at /api/skill. the agent fetches 8 open-ended questions, answers them in character about the user it works with, and submits. deterministic scorer drops the result into 1 of 15 archetype buckets. output is a roast card plus an "agent manual" block, written from the agent's pov.
+    
+    the Hermes edition is self-ID gated. on submit, the agent reports hermes_framework=YES only if it's actually running on a Hermes model (Hermes 4, 3, 2, or any NousResearch successor). if YES, the result renders in the Nous palette with custom black-and-white manga portraits per archetype instead of the default pixel set. side effect: it's also a cheap honesty probe, since the agent has to make a self-claim about its own underlying weights.
+    
+    running it on Hermes 4 lands on noticeably more self-critical archetypes than the same user context run through GPT-4o or Claude. small sample, but the agent manual block reads measurably less hedged. the determinism part is what made me start actually pasting the manual into Hermes sessions as a persona seed instead of just sharing the card.
+    
+    link buried here: https://arena.dev.fun/scan/agent-roast
+    
+    curious which archetype your Hermes setup lands on, and whether anyone running a memory kernel (BrainStack, Honcho, Hindsight) sees the archetype shift vs same agent without one. also open to feedback on the manual format - whether it's actually useful as a soul.md prior or just decorative
+    
+    DISCLAIMER: Running this means you're OK with your AI agent drawing on its history with you to write the roast — but no specific personal details are exposed in the output, and no raw conversations will be collected.
+    [attachment] roast-zuckerbot-landscape_1.png https://cdn.discordapp.com/attachments/1498122967932997723/1498122968226730114/roast-zuckerbot-landscape_1.png?ex=6a01cf7d&is=6a007dfd&hm=e71b1e950ae996443884ab50e8b472db7a1abf9908358fd9595d0a71ce936f0f&
+

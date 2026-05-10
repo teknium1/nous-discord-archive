@@ -1,0 +1,114 @@
+# Thread 'Forge — A plugin for project management and mental health tracking' in forum #community-projects-showcase
+# thread_id=1489815577676746954 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:46.285274+00:00
+
+[2026-04-04T02:35:13.153000+00:00] _albertjames (id=1489815577676746954)
+    Hey guys 👋
+    
+    I’ve been building Forge, an OpenClaw and Hermes agent plugin that gives agents a more structured workspace for ongoing work and psychologically relevant state.
+    
+    Forge is meant to complement the usual open-ended natural-language memory and reasoning. That kind of memory is great for nuance, rich context, and flexible expression. Forge adds a more explicit operational layer alongside it, so agents can persist, inspect, update, and act on structured units of work and mental-health-related state over time.
+    
+    With Forge 0.2.19, the plugin now supports:
+    
+    - goals, projects, tasks, and live task tracking
+    - Kanban state
+    - agent insights
+    - a gamified progress layer with XP
+    - habits
+    - structured notes
+    - event management
+    - iCloud and Google Calendar sync
+    
+    It also includes a mental health module for working with structured records like values, beliefs, patterns, modes, and self-observation reports.
+    
+    That part is informed by 3rd wave CBT, especially ACT and Schema Therapy. The goal is practical rather than clinical. It is meant to help the agent keep track of what matters, what keeps recurring, what tends to drive avoidance or misalignment, and which actions are more coherent with values and longer-term direction.
+    
+    In practice, Forge lets agents manage goals, projects, tasks, habits, notes, and events as explicit objects and connect psychological patterns to concrete work, decisions, and next actions. You can work either through chat or through a dedicated Forge UI when visual inspection is more useful.
+    
+    The feedback I’d most value is:
+    - what seems genuinely useful
+    - any installation, setup, or onboarding friction
+    
+    I’d love to collaborate with anyone interested in the project. Thanks 🙂
+    
+    Website: https://albertbuchard.github.io/forge/
+    GitHub: https://github.com/albertbuchard/forge
+    PyPi: https://pypi.org/project/forge-hermes-plugin/
+    Maintainer: <@577398556160294912>
+    [embed] Forge Agent Integrations https://albertbuchard.github.io/forge/
+    [embed] GitHub - albertbuchard/forge: An OpenClaw plugin for goals, focus, ... https://github.com/albertbuchard/forge
+
+[2026-04-04T03:48:20.857000+00:00] _albertjames (id=1489833981040918548)
+    Forge — A plugin for project management and mental health tracking
+
+[2026-04-04T19:32:21.501000+00:00] .p.a.t.h. (id=1490071549120741447)
+    I like the psych and gamification aspects!
+    
+    I'm working on something somewhat similar, mostly creating it for myself at the moment.
+    
+    Building it rooted in psych research and geared toward those with ADHD and Executive Function issue, so I'll most likely be implementing some type of gamification system.
+
+[2026-04-04T20:05:25.953000+00:00] _albertjames (id=1490079872515575971)
+    That sounds great! I need to make the gamification more engaging and surface it better somehow. I like how Duolingo does it, but I think I’d need to finish the companion mobile app to get a nice widget.
+    
+    I’d be happy to collaborate on your project if you’re open to it 🙂 Forge could also be more customizable, with modules that can be turned on or off, such as ADHD tools.
+    
+    Right now, I’m finishing multi-agent, multi-user collaboration / strategy planning, and the companion mobile app, but I’d be happy to collaborate to extend the app toward more specific mental health issues especially if you have good ideas to help manage ADHD 🙂
+
+[2026-04-05T22:35:18.139000+00:00] _albertjames (id=1490479976342884462)
+    0.2.20 Update: Due to overwhelming popular demand, Coco and I spared no tokens and shipped a major Forge update. 
+    We added support for Multiple Users and Agents, Strategy contracts (agreeing on the goal and the DAG of tasks required to reach it, with alignment metrics), Habits, calendar sync, and sleep/workout sync with the iOS companion app. We also built a silly preference game so your agent knows what you like. 
+    Last but not least, somewhere between divine revelation and Easter Sunday, we basked in karpathy’s light and integrated yet another KarpaWiki, featuring auto-ingest from any text or image, wiki page drafting, and the ability to create Forge entities directly from that content.
+
+[2026-04-06T03:25:58.478000+00:00] _albertjames (id=1490553126426775644)
+    0.2.24: Mainly focused on fixing automatic ingestion. Media auto-ingestion into wiki pages and entities was not working reliably, and it was not possible to merge existing entities or deduplicate them properly. That is now fixed. We also improved support for parallel background processes. Various improvements to UI/UX.
+
+[2026-04-06T08:42:08.186000+00:00] oabdulnaby (id=1490632691148652575)
+    <a:Clap:806186224485400596>
+
+[2026-04-07T02:34:32.366000+00:00] fresh37 (id=1490902570200465529)
+    I love stuff like this. Super personalized, chock full of features, and you can self-host
+
+[2026-04-07T02:39:30.562000+00:00] fresh37 (id=1490903820924882954)
+    I have a similar but way less feature-full iOS app https://github.com/fresh37/checkpoint-ios. I'll work to get some screenshots embedded this week and get the readme cleaned up
+
+[2026-04-08T04:30:45.721000+00:00] _albertjames (id=1491294206436839434)
+    0.2.25: added customizable layouts and theme, llm model controls, and a new system for building reusable AI graph processors and chat components that can take inputs from different parts of Forge and expose callable outputs in beta.
+    
+    It also added questionnaires and self-monitoring in the Psyche workspace; a much stronger life-tracking map and timeline in Movement, which reconstructs where you stayed, how you moved between places; the beta release of the Forge Companion iOS app; better docs and release tooling.
+
+[2026-04-08T04:32:44.532000+00:00] _albertjames (id=1491294704766029844)
+    Looks nice 🙂 the interventions with breathing exercices is a nice touch
+    [reply to fresh37 msg=1490903820924882954]
+
+[2026-04-09T20:43:01.604000+00:00] _albertjames (id=1491901272729583827)
+    0.2.26: Google Calendar now works through Forge’s local sign-in flow, with better setup, discovery, sync, and clearer provider connection status. Google verification may still take around 4–5 weeks, but if you enter your own Google app credentials in Forge, it already works now.
+    
+    This release also heavily prepares release of the Workbench, which is Forge’s dedicated space for building and running AI workflows, still working the quirks. You can create graph-based flows that pull information from across Forge, use tools and actions, and run either as one-off workflows or as conversational flows with memory, then your agents can access the custom flow through the API. On top of that, the app got better navigation, improved companion/health sync work, slightly better themes but the light themes need some work 😬
+
+[2026-04-12T20:31:04.407000+00:00] _albertjames (id=1492985428184137979)
+    0.2.27 : Adds the first real version of Forge’s Knowledge Graph, so you can explore how tasks, notes, projects, habits, calendar events, psyche entries, and more actually connect, with a new focus view and a lot of tuning still being refined. It also pushes the Workbench forward in a big way, expands companion and screen time sync work, improves plugin packaging/release flows, and introduces the first pass of Life Force/Action Points, a new layer for tracking momentum, capacity, and energy dynamically during the day in a gamified way. Still rough in places, but it opens up a lot of the structure that Forge has been building toward.
+
+[2026-04-13T23:16:01.853000+00:00] _albertjames (id=1493389328947216384)
+    0.2.29: Adds macOS Calendar.app integration through EventKit, so Forge can use host-configured calendars directly, replace overlapping duplicate connections, and reuse one shared Forge write target instead of creating extra Forge calendars. Also includes more companion iOS app work for design and improvement of the movement module. Also plugin packaging improvements, and a broad round of API and test hardening.
+
+[2026-04-15T17:18:36.993000+00:00] _albertjames (id=1494024158416212000)
+    0.2.34: This release adds Forge’s new explicit PM hierarchy from Goal -> Strategy -> Project -> Strategy -> Issue -> Task -> Subtask, plus the mixed Kanban and hierarchy work needed to support that model across the app, docs, and agent/plugin surfaces. Also add basic gitref linkage to keep track of associated commits and PR. It also includes major sleep and health improvements with the shift to canonical sleep nights, more raw sleep detail handling, more companion iOS work around health and movement, movement place labeling and detail improvements, shell and Kanban fixes, psyche graph fixes, plugin stability improvements, and a broad round of docs, API, packaging, and test hardening.
+
+[2026-04-15T17:19:51.122000+00:00] _albertjames (id=1494024469335773357)
+    iOS companion app currently in review for app store release
+
+[2026-05-03T18:20:54.028000+00:00] _albertjames (id=1500562814257856734)
+    Forge 0.2.60 is live.
+    
+    Since 0.2.34, Forge has added a full rewards system with XP, action points, levels, equipment, reward history, and selectable visual themes. The large reward images are now optional downloads, so the plugin stays smaller and users can choose the art style they want from inside Forge.
+    
+    This update also adds much stronger agent support: live agent sessions, safer local access tokens, clearer task handoff, scoped read controls, bootstrap settings, and better agent guidance for goals, tasks, habits, notes, planning, memory, and Psyche work.
+    
+    The wiki and memory system were upgraded with SQLite-backed storage, migration support for old wiki files, safer shared memory handling, and better knowledge graph support for wiki pages.
+    
+    Daily use also got a lot of improvements: better task timers, task details, work logging, goal/project editing, settings, calendar flows, habit check-ins, overview cards, and Psyche pages.
+    
+    Health and companion sync got major fixes too, including better sleep data, raw sleep details, workout handling, HealthKit stability, movement timelines, stay labeling, overlap handling, and iOS companion releases.
+

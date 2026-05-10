@@ -1,0 +1,10 @@
+# Thread 'Hermes Security scan' in forum #plugins-skills-and-skins
+# thread_id=1492485739601068202 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:36.481654+00:00
+
+[2026-04-11T11:25:29.365000+00:00] nachtkr (id=1492485739601068202)
+    Security auditor for Hermes Agent configurations.
+    https://github.com/RichardHojunJang/hermes-security-scan
+    [attachment] Hermes-Security-Scan.png https://cdn.discordapp.com/attachments/1492485739601068202/1492485739919966350/Hermes-Security-Scan.png?ex=6a01bca9&is=6a006b29&hm=d4cdc9cab4b5f4fd3111d68294381f754ce31483d2df25a8c2ead138a72f2e6e&
+    [embed] GitHub - RichardHojunJang/hermes-security-scan: Security auditor fo... https://github.com/RichardHojunJang/hermes-security-scan
+

@@ -1,0 +1,150 @@
+# Thread 'Hermes Auto Plays Minecraft SKILL' in forum #community-projects-showcase
+# thread_id=1495582727217479720 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:55.494757+00:00
+
+[2026-04-20T00:31:48.752000+00:00] absolutegamer2337 (id=1495582727217479720)
+    So I figured I'd ask hermes to make a skill to auto play minecraft, it took some nudging in the direction I wanted, but it came up with this, I ran the skill and it has been thinking for 20 minutes, if someone has a more powerful system or llm etc or some knowledge of skills and could help improve this skill, it would be much appreciated.
+    
+    
+    
+    Skill tree:
+    skills
+    │
+    │-minecraft-player
+    │   ├───references-│bridge-mod-versions.md, mineflayer-setup.md, modpack-knowledge-base.md, quest-system-parsers.md, vision-control.md
+    │   │───scripts-│bot-launcher.js
+    │   └----SKILL.md
+    [attachment] SKILL.md https://cdn.discordapp.com/attachments/1495582727217479720/1495582727494172702/SKILL.md?ex=6a01cc34&is=6a007ab4&hm=bb4df27fd80cb083bc9cb91225843ea18860eecef7845472bd80fbeb57c3d54a&
+    [attachment] bot-launcher.js https://cdn.discordapp.com/attachments/1495582727217479720/1495582728295288922/bot-launcher.js?ex=6a01cc35&is=6a007ab5&hm=b26fdb92e0dd3e771d97e66186f5a74196d316de68c78aabc7cbf23a3c35290f&
+    [attachment] bridge-mod-versions.md https://cdn.discordapp.com/attachments/1495582727217479720/1495582728622571540/bridge-mod-versions.md?ex=6a01cc35&is=6a007ab5&hm=9e9a3ea05fea2423271c19bc476ecb8b7b0123a395261f366f3f6a29e40e9db8&
+    [attachment] mineflayer-setup.md https://cdn.discordapp.com/attachments/1495582727217479720/1495582728928624722/mineflayer-setup.md?ex=6a01cc35&is=6a007ab5&hm=abaa8fdcf94cb77de8c4a1977895dc880732a9f512dca6d90cebb08085948e80&
+    [attachment] modpack-knowledge-base.md https://cdn.discordapp.com/attachments/1495582727217479720/1495582729222230096/modpack-knowledge-base.md?ex=6a01cc35&is=6a007ab5&hm=615f826c5afeb742696f66fda5f6786f2bc20939c5562ffc485667f5e36f0dc5&
+    [attachment] quest-system-parsers.md https://cdn.discordapp.com/attachments/1495582727217479720/1495582729486598164/quest-system-parsers.md?ex=6a01cc35&is=6a007ab5&hm=15b2acf2b46f5fa5cf6aeeabee238452789f5843443d366e663959bbd7f3f506&
+    [attachment] vision-control.md https://cdn.discordapp.com/attachments/1495582727217479720/1495582729780068422/vision-control.md?ex=6a01cc35&is=6a007ab5&hm=d0af6b434eba9c4e3c9aafaf329bd7c5eb46c1e2ceba6a70b8d0c3cba0c71936&
+
+[2026-04-20T16:48:24.464000+00:00] absolutegamer2337 (id=1495828495446577315)
+    # Update 1: Sonnet 4.6 improved:
+    
+    Here's what's new in the improved SKILL.md (1,889 lines, ~66KB, zero external dependencies):
+    Self-Continuation Protocol — Hermes now writes a checkpoint every 5 minutes, catches all exceptions and continues instead of dying, and generates a resume_prompt.txt the user can paste to restart a session exactly where it left off.
+    All references inlined — mineflayer-setup.md, vision-control.md, bridge-mod-versions.md, quest-system-parsers.md, and modpack-knowledge-base.md are all gone as separate files. Everything is now directly in the skill including full Python/Node.js code.
+    Full Mineflayer setup — complete bot.js script with an HTTP control server so Python can send commands (goto, mine, craft, attack, equip, etc.) and read state. Includes the Python client wrapper with bot_send() / bot_state().
+    Full Vision Control — screen capture, OCR, template matching, virtual input (using pydirectinput for DirectInput compatibility with Minecraft), camera rotation, and GUI navigation all inline.
+    Project Infinity 0.1 progression guide — full tier-by-tier play guide with mod priorities, resource locations, and key milestones.
+    Crafting knowledge base — core vanilla recipes and smelting recipes built-in so Hermes doesn't need JEI for basics.
+    RL-style playstyle evolution — concrete update rules (death → increase threat level + decrease risk tolerance, fast completion → boost efficiency score, etc.).
+    Process management — launching, restarting, and focusing the Minecraft window programmatically, plus how to auto-open LAN and read the port from chat via OCR.
+    To install: replace the file at /mnt/skills/user/minecraft-player/SKILL.md with this one
+    [attachment] SKILL.md https://cdn.discordapp.com/attachments/1495582727217479720/1495828495035666553/SKILL.md?ex=6a020858&is=6a00b6d8&hm=2da1046a22ce82eb59a43a6a5a0240c348d1dea8d30876d01c0308fb79a89bbe&
+
+[2026-04-20T16:50:49.070000+00:00] absolutegamer2337 (id=1495829101968097321)
+    # Update 2: Sonnet 4.6 improved:
+    [attachment] README.md https://cdn.discordapp.com/attachments/1495582727217479720/1495829101125177464/README.md?ex=6a0208e8&is=6a00b768&hm=49783fc30d8d32155203254561fdd04d0dc65b17d1b28aacd327a6c77a416f14&
+    [attachment] SKILL.md https://cdn.discordapp.com/attachments/1495582727217479720/1495829101607653506/SKILL.md?ex=6a0208e8&is=6a00b768&hm=95f0b9d909a3267d126a74070c9be06e0a889764b3b7a67adb2366ae2d485f58&
+
+[2026-04-20T23:07:04.452000+00:00] tehcenperseesrepnechet (id=1495923789983252634)
+    Very cool project
+
+[2026-04-20T23:30:40.109000+00:00] absolutegamer2337 (id=1495929727678943294)
+    It's very slow on my system running Qwen3.5:9b... The following took 150 minutes to generate.
+    
+    ```I understand - let me provide you with a clear summary and next steps directly:
+    
+    ---
+    
+    ## 🎮 Minecraft Player — Ready to Start
+    
+    Hi David! Your Minecraft player skill is fully loaded and ready to go. Here's what I need to know:
+    
+    ### First Time Setup?
+    
+    I need you to confirm one of these scenarios:
+    
+    **Option A: Fresh Setup (No CurseForge or No Instances)**
+    1. Do you have **CurseForge** installed on your Windows PC?
+    2. Do you have any Minecraft modpacks installed?
+    
+    **Recommended Modpack to Install:**
+    - **Project Infinity 0.1** — Best for learning, balanced progression
+    - MC Version: 1.12.2
+    - Quest System: HQM (Hardcore Questing Mode)
+    
+    **Option B: You Have an Instance**
+    If you already have CurseForge with instances, tell me:
+    - The **name** of an installed modpack (e.g., "All the Mods 9", "SkyFactory 4", "Project Infinity")
+    - Or tell me to check for existing instances
+    
+    ---
+    
+    ### What I'll Do Once Started:
+    
+    1. ✅ Launch CurseForge → Open your install
+    2. ✅ Install or launch a modpack
+    3. ✅ Apply your preferred settings
+    4. ✅ Connect to Mineflayer bot for autonomous control
+    5. ✅ Complete quests / automate progression
+    6. ✅ Track progress and send Discord updates
+    
+    ---
+    
+    ### Quick Question:
+    
+    **What modpack would you like me to play?**
+    
+    Or if you want me to install one, I can install **Project Infinity 0.1** (recommended for first-time setup).
+    
+    Just let me know and I'll get started! 🚀```
+
+[2026-04-20T23:34:25.393000+00:00] absolutegamer2337 (id=1495930672588521522)
+    Will update on progress as I will keep messing around with it until it can easily play modded Minecraft from locating the files, installing Curseforge if necessary, installing instances, loading the modpack, changing settings to your configurable settings and completing the questbook if there is one, if not, it will ask the user for quests and if none are given, it will generate its own goals.
+    
+    I ran out of free tokens with Claude so I'll ask it to improve the skill again tomorrow
+
+[2026-04-21T00:10:11.079000+00:00] codename_11 (id=1495939672248025098)
+    This is awesome! I was working on a full app for this with the intent of claude, codex, hermes, whatever agent to be plugged in. I will be keeping up with your progress! Good work 🙂
+
+[2026-04-21T01:35:22.584000+00:00] absolutegamer2337 (id=1495961111453896755)
+    I really need to buy access to a cloud LLM 😭
+    It took 2 hours to find the folder, I'll check if it actually loaded and started playing tomorrow
+    [attachment] XRecorder_20260421_05.jpg https://cdn.discordapp.com/attachments/1495582727217479720/1495961111198175304/XRecorder_20260421_05.jpg?ex=6a01db1a&is=6a00899a&hm=14593cb292a3d146623c0ce418a3e6c49ac457d4e8cc026eaafc0da1f0d08526&
+
+[2026-04-21T12:19:57.107000+00:00] absolutegamer2337 (id=1496123324160409663)
+    Update 4:
+    [attachment] README.md https://cdn.discordapp.com/attachments/1495582727217479720/1496123323610828931/README.md?ex=6a01c96c&is=6a0077ec&hm=95febaeab4a3f9e12089ade4a5ff26485d6b341db8d3ad0d0ca07b58b7165c8c&
+    [attachment] mcplayerSKILL-Update4.md https://cdn.discordapp.com/attachments/1495582727217479720/1496123324064071801/mcplayerSKILL-Update4.md?ex=6a01c96d&is=6a0077ed&hm=ebda8f01fb4a8f1906c6f854b0ff22d62168d18612e7f7483ab55f7b1e58a21e&
+
+[2026-04-21T12:22:42.250000+00:00] absolutegamer2337 (id=1496124016820228227)
+    Update 5:
+    [attachment] README.md https://cdn.discordapp.com/attachments/1495582727217479720/1496124016006795325/README.md?ex=6a01ca12&is=6a007892&hm=dd78732d8f4eea7c9446e5052ae55e45bf096684e9c799160eca60d806477cd0&
+    [attachment] SKILL.md https://cdn.discordapp.com/attachments/1495582727217479720/1496124016325296199/SKILL.md?ex=6a01ca12&is=6a007892&hm=912ffebc65658444e1e41d59aed12e356ccbfd4f5b62ad5bb30756160d8bb14a&
+
+[2026-04-22T01:43:02.152000+00:00] codename_11 (id=1496325426887266334)
+    You should post this on github! 🙂
+
+[2026-04-22T02:26:37.395000+00:00] absolutegamer2337 (id=1496336396011442267)
+    I will do when I've confirmed everything works and it plays autonomously and learns etc
+    [reply to codename_11 msg=1496325426887266334]
+
+[2026-04-22T02:29:08.059000+00:00] phospheneoverdrive (id=1496337027942187018)
+    (Can it also program my computercraft turtles? 😛 )
+
+[2026-04-22T02:36:59.548000+00:00] absolutegamer2337 (id=1496339005510385874)
+    🤔 I'll tell it to learn lua for computercraft too, unfortunately on my main system web stuff isn't working (missing dependencies I think, idk, I've not been able to enable it) so I can't even just drop the CC page for it to scrape
+    [reply to phospheneoverdrive msg=1496337027942187018]
+
+[2026-04-22T02:37:52.684000+00:00] absolutegamer2337 (id=1496339228379054080)
+    But yes, I'll have it hardcode lua for computercraft but it should have NN-like features so it should learn over time 🤔
+
+[2026-04-22T02:39:17.560000+00:00] phospheneoverdrive (id=1496339584374542510)
+    That was meant to be  joke but I appreciate the enthusiasm 😄
+
+[2026-04-22T02:41:21.935000+00:00] absolutegamer2337 (id=1496340106041364480)
+    Tbf, even so, if there's a modpack that has cc quests or a cc dedicated modpack, it should in theory learn on its own...
+    [reply to phospheneoverdrive msg=1496339584374542510]
+
+[2026-04-22T02:43:50.242000+00:00] phospheneoverdrive (id=1496340728085876901)
+    "Hermes, write an efficient strip mine program"
+
+[2026-04-22T14:18:44.057000+00:00] absolutegamer2337 (id=1496515604620906608)
+    It's currently working on making the skill modular since it became too large for tool responses
+

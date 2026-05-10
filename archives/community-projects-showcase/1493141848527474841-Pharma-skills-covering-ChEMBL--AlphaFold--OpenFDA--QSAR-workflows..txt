@@ -1,0 +1,41 @@
+# Thread 'Pharma skills covering ChEMBL, AlphaFold, OpenFDA, QSAR workflows.' in forum #community-projects-showcase
+# thread_id=1493141848527474841 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:13.196168+00:00
+
+[2026-04-13T06:52:37.923000+00:00] bennytimz (id=1493141848527474841)
+    As a pharmacy undergrad  in Nigeria, I’ve been thinking about what it would take to bring AI-assisted drug discovery to Africa. 
+    
+    So I built it into @NousResearch’s Hermes agent — two pharma skills covering ChEMBL, AlphaFold, OpenFDA, QSAR workflows. All free APIs, no auth needed.
+    
+    Drug discovery: https://github.com/NousResearch/hermes-agent/pull/8695
+    
+    CADD/computational: https://github.com/NousResearch/hermes-agent/pull/8712
+    [embed] feat(skills): add drug-discovery skill — ChEMBL, PubChem, OpenFDA... https://github.com/NousResearch/hermes-agent/pull/8695
+    [embed] feat(skills): add computational-drug-discovery skill — AlphaFold,... https://github.com/NousResearch/hermes-agent/pull/8712
+
+[2026-04-17T12:30:18.952000+00:00] oabdulnaby (id=1494676380904984687)
+    Impressive work, may you excel in your studies 💯💯
+
+[2026-04-19T20:40:52.288000+00:00] bennytimz (id=1495524608995233992)
+    the third PR on molecular docking. one of my best work yet
+    
+    https://github.com/NousResearch/hermes-agent/pull/9771
+    [embed] feat(skills): add molecular-docking skill — AutoDock Vina/PyRx pi... https://github.com/NousResearch/hermes-agent/pull/9771
+
+[2026-04-19T20:43:02.544000+00:00] bennytimz (id=1495525155328495800)
+    I’m on fire 🔥 
+    
+    https://github.com/NousResearch/hermes-agent/pull/9885
+    [embed] feat(skills): add ntd-drug-discovery skill — WHO GHO NTD burden, ... https://github.com/NousResearch/hermes-agent/pull/9885
+
+[2026-04-19T20:50:31.375000+00:00] bennytimz (id=1495527037862023363)
+    Simple goal: make Hermes the biotech hub for all agents.
+
+[2026-04-19T20:57:55.104000+00:00] bennytimz (id=1495528898996342936)
+    <@387972437901312000>
+
+[2026-04-20T01:22:29.763000+00:00] bennytimz (id=1495595482142081198)
+    Opened #12756 — PubMed skill covering 35M+ biomedical citations via NCBI E-utilities. Keyword search with full abstracts, MeSH term search, publication trend analysis, PMC open-access full text, MEDLINE export for Zotero/Mendeley. Fills the gap left by the arxiv skill — arxiv covers CS/physics, PubMed covers medicine, pharmacology, and clinical research.
+    https://github.com/NousResearch/hermes-agent/pull/12756
+    [embed] feat(skills): add pubmed skill — NCBI E-utilities, abstract fetch... https://github.com/NousResearch/hermes-agent/pull/12756
+

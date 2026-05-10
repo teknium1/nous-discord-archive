@@ -1,0 +1,39 @@
+# Thread 'LLM-Logbook' in forum #community-projects-showcase
+# thread_id=1316777918004858970 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:53.309347+00:00
+
+[2024-12-12T14:45:20.203000+00:00] not_lain (id=1316777918004858970)
+    LLM-Logbook is an interface that allows people to inspect LLM chat examples
+    [attachment] image.png https://cdn.discordapp.com/attachments/1316777918004858970/1316777918302519316/image.png?ex=6a01eb80&is=6a009a00&hm=9e3150f383daf3a6cb314816e4ce1b6e1dc5e9abc5d73e865b0ced853f539faf&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1316777918004858970/1316777918680141854/image.png?ex=6a01eb80&is=6a009a00&hm=73ae4a1f0747b6f4ebe791eb145a3dc4e65febae3cdbd2e5753a1d98b2a6f2a8&
+
+[2024-12-12T14:50:50.636000+00:00] not_lain (id=1316779303941443634)
+    in my pr I added support for 3 types of interfaces : 
+    * HTML (using jinja2 to extract all chat-rounds and show them to the user) (using markdown section for better rendering of codes) 
+    * chat interface (basic gradio chat interface)
+    * basic json preview (original data is json structured) 
+    
+    I also noticed that sharegpt is not in a standard format so i took the liberty of adding a checkbox that cleans the chat.
+    
+    cc <@387972437901312000> if you can take a look 
+    pr can be found at https://github.com/teknium1/LLM-Logbook/pull/1
+    [attachment] 393693372-ce9dc52e-a1bd-4281-ad0f-f94c29c43ef7.png https://cdn.discordapp.com/attachments/1316777918004858970/1316779304205418517/393693372-ce9dc52e-a1bd-4281-ad0f-f94c29c43ef7.png?ex=6a01ecca&is=6a009b4a&hm=bfc6293a1a9576a3b4d41b96608c5c249f57a0073f3e936aa058ced1c58a91bc&
+    [attachment] 393693440-9dbb1201-7cde-4917-8b33-8971cd8f608b.png https://cdn.discordapp.com/attachments/1316777918004858970/1316779309909676082/393693440-9dbb1201-7cde-4917-8b33-8971cd8f608b.png?ex=6a01eccc&is=6a009b4c&hm=48b0a476e5d71af0b02eb502402cc9f7b5fc53802614fb61622ab3f72a1071d8&
+    [attachment] 393693484-13e0f0b0-9eb2-4e19-9a91-1b1834c5b57a.png https://cdn.discordapp.com/attachments/1316777918004858970/1316779310593474662/393693484-13e0f0b0-9eb2-4e19-9a91-1b1834c5b57a.png?ex=6a01eccc&is=6a009b4c&hm=08088cdf0254d63442bd9be66e99b2a935a430f0283a973f514be657920938ec&
+    [embed] add a gradio interface by not-lain · Pull Request #1 · teknium1/LLM... https://github.com/teknium1/LLM-Logbook/pull/1
+
+[2024-12-19T13:52:16.784000+00:00] teknium (id=1319301280837013564)
+    Oh sorry didn’t see this!
+    [reply to not_lain msg=1316779303941443634]
+
+[2024-12-19T13:52:38.277000+00:00] teknium (id=1319301370985316426)
+    Will be checking it out today
+
+[2025-01-03T02:13:50.430000+00:00] enyst_13 (id=1324561330832670721)
+    This looks great!
+
+[2025-01-04T01:15:35.125000+00:00] teknium (id=1324909058326663258)
+    merged ^_^ https://github.com/teknium1/LLM-Logbook/pull/1
+    [embed] add a gradio interface by not-lain · Pull Request #1 · teknium1/LLM... https://github.com/teknium1/LLM-Logbook/pull/1
+    [reply to not_lain msg=1316779303941443634]
+

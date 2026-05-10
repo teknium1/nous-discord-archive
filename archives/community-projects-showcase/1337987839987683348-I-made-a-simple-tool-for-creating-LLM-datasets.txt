@@ -1,0 +1,18 @@
+# Thread 'I made a simple tool for creating LLM datasets' in forum #community-projects-showcase
+# thread_id=1337987839987683348 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:50.763027+00:00
+
+[2025-02-09T03:25:59.665000+00:00] amir_s365 (id=1337987839987683348)
+    A while ago, I built Synthify, a no-code tool that makes dataset creation easy. No scripts, no hassle—just a simple UI to generate datasets for LLMs.
+    It’s not a finished project yet, so if you like it, feel free to contribute! 
+    Check it out here:
+    https://github.com/amirrezasalimi/synthify
+    [attachment] image.png https://cdn.discordapp.com/attachments/1337987839987683348/1337987840549847041/image.png?ex=6a01f507&is=6a00a387&hm=30495288ffe26db12a6addefb80b676fe17423217569ed2f796f2869061c95cf&
+
+[2025-02-09T19:22:31.195000+00:00] daisukearamaki (id=1338228557511659561)
+    cool, i need to start cooking some datatsets ill check it out
+
+[2025-02-10T02:25:18.676000+00:00] amir_s365 (id=1338334956438421504)
+    let me know if you need help.
+    [reply to daisukearamaki msg=1338228557511659561]
+

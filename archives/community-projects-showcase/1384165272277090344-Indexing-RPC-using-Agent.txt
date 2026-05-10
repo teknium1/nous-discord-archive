@@ -1,0 +1,33 @@
+# Thread 'Indexing RPC using Agent' in forum #community-projects-showcase
+# thread_id=1384165272277090344 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:54.176768+00:00
+
+[2025-06-16T13:38:37.458000+00:00] wanzzsol (id=1384165272277090344)
+    open to discuss for fetching custom indexing Solana RPC by AI agent
+
+[2025-06-16T13:51:20.042000+00:00] teknium (id=1384168470786084934)
+    cc <@212964551421853697>
+    [reply to wanzzsol msg=1384165272277090344]
+
+[2025-06-17T09:40:23.240000+00:00] wanzzsol (id=1384467705846960179)
+    thank you for the advice, as for now i m learning MCP also
+    
+    yes now i read at this https://solana.com/docs/rpc
+    
+    for now i try to index signature and tracing, maybe using helios can too or for labeling maybe try with metasleuth
+    
+    anyway how about using GraphQL for indexing?
+    [embed] Solana RPC Methods: HTTP & Websockets https://solana.com/docs/rpc
+
+[2025-06-17T09:48:19.381000+00:00] wanzzsol (id=1384469702926925864)
+    <@1271171453210853418>
+
+[2025-06-17T09:48:42.923000+00:00] 0xrade (id=1384469801669492776)
+    Sure
+
+[2025-06-17T09:49:20.669000+00:00] 0xrade (id=1384469959987429486)
+    So how to build custom MCP tools that fetch from RPC or blockchain raw data (e.g Solana)
+
+[2025-06-17T09:50:55.701000+00:00] 0xrade (id=1384470358580789330)
+    By using LangChain & LangGraph and the model we use Qwen
+

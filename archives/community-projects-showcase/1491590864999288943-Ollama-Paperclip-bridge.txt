@@ -1,0 +1,33 @@
+# Thread 'Ollama Paperclip bridge' in forum #community-projects-showcase
+# thread_id=1491590864999288943 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:32.480640+00:00
+
+[2026-04-09T00:09:34.634000+00:00] jt_flynn_38221 (id=1491590864999288943)
+    I created a work around for 
+    @ollama
+     cloud models to work in paperclip thru Hermes Agent.
+    
+    I'd love some feedback on my implementation until Ollama Cloud is officially supported by both.
+    
+    The hermes-paperclip-adapter has a hardcoded provider whitelist that silently drops custom providers. Your agents think they're hitting Ollama Cloud but they're falling through to OpenRouter → 404.
+    
+    The fix: a local Ollama proxy bridge. Three files per agent, zero patches.
+    
+    📄 Full PDF + 🎬 terminal demo:
+    https://github.com/Vivere-Vitalis-LLC/Ollama-Cloud-Hermes-Agent-Paperclip
+    
+    🎬 Watch the setup: https://asciinema.org/a/lyvSfoTpIQe1CamW
+    
+    Maybe I'll turn this into an article for if people want it. Maybe I'm by myself on this!
+    
+    This is just my reaction to getting Opensourcemaxxed thanks to Anthropic.
+    [embed] GitHub - Vivere-Vitalis-LLC/Ollama-Cloud-Hermes-Agent-Paperclip: Ro... https://github.com/Vivere-Vitalis-LLC/Ollama-Cloud-Hermes-Agent-Paperclip
+    [embed] Bridging Paperclip, Hermes Agent & Ollama Cloud on macOS https://asciinema.org/a/lyvSfoTpIQe1CamW
+
+[2026-04-09T01:15:49.825000+00:00] jeepsnducksnc (id=1491607538158796892)
+    No this is cool. I'm on Ollama cloud too and paperclip is on my horizon.  I've been thinking about doing a PR to make Ollama an official provider.  Here's the developer page describing how to add a new one: https://hermes-agent.nousresearch.com/docs/developer-guide/adding-providers
+    [embed] Adding Providers | Hermes Agent https://hermes-agent.nousresearch.com/docs/developer-guide/adding-providers
+
+[2026-04-09T01:48:24.549000+00:00] jt_flynn_38221 (id=1491615736865620029)
+    The real issue is with paperclip. I already added Ollama cloud as a customer provider. It's getting the Paperclip adaptertype to play nice with the custom provider. Especially if you want to set different models for your agents
+

@@ -1,0 +1,16 @@
+# Thread 'diff-review- Hermes plugin that audits your diffs before you commit' in forum #plugins-skills-and-skins
+# thread_id=1487444194191605932 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:53.865672+00:00
+
+[2026-03-28T13:32:11.272000+00:00] sprmn24 (id=1487444194191605932)
+    Wrote a small Hermes plugin that reviews git diffs before committing , flags debug prints, hardcoded secrets, bare except clauses, and unresolved TODOs.
+     Parses unified diff output, works with any git ref, zero new dependencies.
+    
+    Gives the agent a lightweight self-audit step: before pushng code it can catch common mistakes that would otherwise slip into a PR unnoticed. 
+    
+    https://github.com/sprmn24/hermes-plugin-diff-review
+    [embed] GitHub - sprmn24/hermes-plugin-diff-review: A Hermes Agent plugin t... https://github.com/sprmn24/hermes-plugin-diff-review
+
+[2026-03-28T13:42:32.477000+00:00] 23456780289 (id=1487446799714091078)
+    Ok
+

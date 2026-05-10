@@ -1,0 +1,8 @@
+# Thread 'Hermes for app builders.' in forum #community-projects-showcase
+# thread_id=1492721511658815539 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:20.936375+00:00
+
+[2026-04-12T03:02:21.804000+00:00] cyberfarmacist (id=1492721511658815539)
+    One of the apps I'm working on helps my friend who is owns a remodeling company find work. Specifically roofing work. It started after I saw a video of a guy using Chatgbt and Replit to vibe code some app.  I just wondered if I could do it. But the cost of Replit is killing me and the project isn't even a full on CRM lead gen product. It "should " pull county data for homeowner info, any permits pulled for an area and home age (to estimate roof age). This combines weather in recent months with a map to show homes as likely customers. I have to find a better way than Replit. I have all these ideas(vibe coding is like someone unlocked the Matrix for me), anyway most are just things like this to solve a problem I have, and most will probably fizzle out. Replit is a costly way to collect an app graveyard. One of my first thoughts was the repetitive tasks of pulling county data everyday, but I think this be like asking the Greek god Atlas to hold a pebble.
+    [attachment] Screenshot_2026-04-11_at_21-40-23_Roofing_Leads_Pro.png https://cdn.discordapp.com/attachments/1492721511658815539/1492721511969067201/Screenshot_2026-04-11_at_21-40-23_Roofing_Leads_Pro.png?ex=6a01ef7d&is=6a009dfd&hm=1756f5238dce8a057696d7ab80b76cbd7b087b91b54389584b120a44a6b87f8c&
+

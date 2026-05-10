@@ -1,0 +1,20 @@
+# Thread '**[Showcase] BitNet 1.58b + MoE + Liquid Systems: 3.7B Training-Ready Architecture**' in forum #community-projects-showcase
+# thread_id=1500629583744077874 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:25.590526+00:00
+
+[2026-05-03T22:46:13.114000+00:00] mert276 (id=1500629583744077874)
+    Hey everyone 👋
+    
+    I'm 17, self-taught ML engineer from Turkey. I built a transformer architecture combining BitNet 1.58-bit + MoE (top-2 routing) + LiquidRouter (temporal Conv1d routing) + CfC cells.
+    
+    Validated at mini scale on chess: 4.3× better top-1 accuracy vs dense baseline (9.03% vs 2.07%), no overfitting, same param budget (+8.8%).
+    
+    The full architecture is 3.7B params, training-ready (240 tests passing, one-command launch), but I have zero GPU budget.
+    
+    Looking for: any compute grant, community GPU time, or A100 access for ~3-5 days to run the full training.
+    
+    Details: https://gist.github.com/latentcore/dac0aa0c56b12177e4a0e8e8f684bccf
+    
+    Happy to share code or answer any questions. Thanks!
+    [embed] MertFormer Titan — BitNet 1.58-bit + MoE + Liquid Neural Network ... https://gist.github.com/latentcore/dac0aa0c56b12177e4a0e8e8f684bccf
+

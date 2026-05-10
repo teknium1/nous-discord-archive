@@ -1,0 +1,2076 @@
+# Thread 'Mnemosyne - Memory Plugin for Hermes' in forum #community-projects-showcase
+# thread_id=1490447053791428718 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:43.706770+00:00
+
+[2026-04-05T20:24:28.791000+00:00] nulledvector (id=1490447053791428718)
+    🧠 Tired of your Hermes agent forgetting everything — or shipping your context to a paid third-party memory service?
+    
+    I built Mnemosyne to kill both problems. It's the native memory system for Hermes. One SQLite database, zero network calls, zero subscriptions, zero vendor lock-in.
+    
+    Why I ditched the cloud:
+    I was paying for Honcho and juggling legacy memory tools that added latency and sent my data somewhere else. I deleted them all. Mnemosyne runs entirely in-process with SQLite and has completely replaced every legacy and third-party memory framework in my stack.
+    
+    The numbers:
+    ⚡ 0.8 ms writes  
+    ⚡ 0.076 ms reads  
+    That's 56× to 500× faster than hitting an external API.
+    
+    But we didn't stop at speed. Mnemosyne just got a major "Level Up":
+    
+    🏆 LongMemEval: 98.9% Recall@All@5 — dense retrieval with fastembed (bge-small-en-v1.5) + hybrid scoring  
+    🗜️ AAAK compression: 14.9% fewer tokens injected into context  
+    🕸️ Temporal triples: a time-aware knowledge graph that tracks when facts were true and auto-invalidates stale ones  
+    📦 Export / import: move your entire memory to a new machine with one JSON file — zero lock-in  
+    
+    What you get:
+    🔒 100% local — your memories stay in one .db file  
+    📴 Fully offline — no internet required  
+    🧠 Auto context injection — relevant memories surface before every LLM call automatically  
+    🔧 Native Hermes plugin — hooks into pre_llm_call, zero setup  
+    📦 Cross-machine migration — export your memory, move it anywhere, import it back  
+    
+    Install it in 30 seconds:
+    
+    ```
+    git clone https://github.com/AxDSan/mnemosyne.git
+    cd mnemosyne
+    pip install -e .
+    python -m mnemosyne.install
+    hermes memory setup
+    ```
+    
+    No vendor lock-in. No subscription. No latency tax. No third-party memory services. Just a .db file that moves with you.
+    
+    📦 Repo: https://github.com/AxDSan/mnemosyne  
+    ⭐ Star it if you want native memory for your agents!  
+    💬 Drop questions here — happy to help you set it up.
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+
+[2026-04-07T12:36:11.869000+00:00] nulledvector (id=1491053982490165328)
+    What we shipped today:
+    - Dense retrieval with fastembed + bge-small-en-v1.5
+    - AAAK compression (14.9% token savings)
+    - Temporal triples knowledge graph
+    - Thread-local connection bugfix
+    - 98.9% Recall@All@5 on LongMemEval oracle
+
+[2026-04-09T13:13:08.993000+00:00] handsdiff (id=1491788057513427015)
+    have you guys benchmarked on BEAM 10M
+
+[2026-04-09T13:13:20.487000+00:00] nulledvector (id=1491788105722761237)
+    haven't really, did LongMemEval cuz its the golden standard, but willing to give it a shot to benchmark on others as well! 🙂
+
+[2026-04-09T13:15:17.364000+00:00] handsdiff (id=1491788595940294696)
+    LongMemEval is no longer useful since modern context windows can fit all data regardless, no?
+
+[2026-04-09T13:17:03.679000+00:00] nulledvector (id=1491789041857728593)
+    essentially with truly large, language models yes, 1M+ context windows fits some capacity, but is not a hot replacement for an actual memory framework, it doesn't "keeps" stuff
+
+[2026-04-09T13:18:09.881000+00:00] handsdiff (id=1491789319529042021)
+    what underlying LLM was used on your LongMemEval benchmark run?
+
+[2026-04-09T14:49:58.861000+00:00] nulledvector (id=1491812425866154024)
+    it was Kimi K2.5
+    [reply to handsdiff msg=1491789319529042021]
+
+[2026-04-09T15:01:56.237000+00:00] senseiyoba (id=1491815434759176375)
+    1M+ context window ≠ equal memory effectiveness at 20%, 50%, and 80% utilization
+    [reply to nulledvector msg=1491789041857728593]
+
+[2026-04-09T15:23:36.453000+00:00] oscar4_40084 (id=1491820888260345888)
+    I just saw this thread after I posted a message in main thread - I may be barking up the wrong tree but I wanted to use a memory layer like this to act as the basis for a continuity layer to ensure that agent doesn't drift from it's project mission
+
+[2026-04-09T15:25:54.880000+00:00] nulledvector (id=1491821468865269810)
+    The main reason why Mnemosyne was created was because it is meant to solve various problems for a memory framework that could run:
+    
+    1) On bare minimum, low-tier development hardware (i.e. 4GB RAM, no dedicated GPU, etc.)
+    2) Locally integrated to the agent harness, gatekeeping data and staying privacy focused
+    3) Something that: "Just works"
+    
+    Looking at BEAM, I do not see a reason to throw Mnemosyne away. I see proof that raw context length is a marketing trap. BEAM shows that even LLMs with 1M token windows collapse at 10M tokens. Structured memory wins. That is exactly why Mnemosyne exists: you do not need a bigger window, you need a smarter retrieval system.
+    [reply to handsdiff msg=1491788057513427015]
+
+[2026-04-09T15:27:42.592000+00:00] nulledvector (id=1491821920642007161)
+    I'm currently looking for ways to expand Mnemosyne architecture and make it actually relevant to these types of benchmarks without breaking its original intended design, which was to make it affordable, in terms of hardware levels.
+
+[2026-04-09T15:27:53.892000+00:00] nulledvector (id=1491821968037773393)
+    thank you for bring it it up!
+
+[2026-04-09T15:29:24.300000+00:00] nulledvector (id=1491822347236413602)
+    I thnk this is what im actually trying to do, in a sense, thanks to the BEAM benchmark, which I didn't knew it existed lol, I could enhance Mnemosyne to be battle-tested on long-horizon and long-running sessions.
+    [reply to oscar4_40084 msg=1491820888260345888]
+
+[2026-04-09T15:48:01.949000+00:00] oscar4_40084 (id=1491827034995953884)
+    Yea, I wasn't aware of BEAM until now - looking into it - yes, it seems to address the continuity issues I have been focused on - updating beliefs, resolving contradictions, ordering events, and summarising across sessions. Hindsight BEAM result @ 64% is still not great for what I'm focused on - continuity for code and business-rule adherence which needs a narrower, stricter capability set: stable mission state, active task, active subtask, blocked/unblocked state, rule checklist preservation, evidence linking, and correct next-step carry-forward. BEAM was not designed specifically to certify those governance-style guarantees
+    
+    My thinking is that this sort of memory/continuity focus should be a layer on top of a simpler, agnostic memory system like Mnemosyne & not built into Mnemosyne. Different layers could be built as add-ons to adress specific focus.
+    
+    If something must be exact, auditable, and stable, it should be an overlay, not just a memory.
+    If something is mainly useful for recall and context, it can stay in the base memory.
+    
+    It seems that these memory systems try to do too much or try to ape the naive theories of biological memory functions
+
+[2026-04-10T12:40:24.676000+00:00] nulledvector (id=1492142206436245514)
+    🧠🔥 Mnemosyne just got a major upgrade.
+    
+    Shipped BEAM today — Bilevel Episodic-Associative Memory. Three tiers:
+    - ⚡ working_memory for hot context
+    - 🗄️ episodic_memory for long-term storage  
+    - 📝 scratchpad for agent reasoning
+    
+    What changed under the hood:
+    - 🔍 sqlite-vec for native vector search inside SQLite
+    - 📑 FTS5 for full-text hybrid retrieval
+    - 😴 Sleep cycle that auto-consolidates old memories into compressed summaries
+    
+    No more flat LIMIT 1000 scans. Recall sits at ~6ms. Scales cleanly past 100K tokens. Still 100% local with zero cloud rent.
+
+[2026-04-10T15:12:24.784000+00:00] nodaylight (id=1492180458941845594)
+    good job on making this, but this section is very silly
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490447053791428718/1492180458497380392/image.png?ex=6a01f1d8&is=6a00a058&hm=5a065fce02f3e19b462a18210dcf048ca222dc2a313c44746e63c95d67c009f3&
+
+[2026-04-10T15:13:13.979000+00:00] nodaylight (id=1492180665280495799)
+    not very accurate to reality
+
+[2026-04-10T15:36:33.534000+00:00] nodaylight (id=1492186535439761569)
+    longmemeval is definitely not a golden standart but honcho does list it, performs better then mempalace (which provides false evals and still mentions zero shot classification in 2026... and late chunking...., bad project, comparing to anny actual memory plugin / system, esp honcho is silly) 
+    it'd be interesting to see how your sys performs on beam 1m+ or any long horizon bench, if possible consider testing that out
+    + honcho being called “freemium -> $$$”, “cloud postgres”, “offline: no”, and “dense retrieval: no” is not a fair description (or objectively true). honcho is publicly documented and encourages self hosting / local use with hermes, exposes hybrid search 
+    + temporal graph being marked - it's just a data structure, not an advantage
+
+[2026-04-10T15:36:49.902000+00:00] nodaylight (id=1492186604092129431)
+    the privacy and local side is cool though
+
+[2026-04-10T15:38:08.739000+00:00] nodaylight (id=1492186934758605011)
+    and impressive how you achieved such low latency
+
+[2026-04-10T17:16:17.739000+00:00] senseiyoba (id=1492211635014860924)
+    default memory + llm-wiki (Karpathy's idea) + mnemosyne = OP? Or mnemosyne overrids llm-wiki?
+    [reply to nulledvector msg=1492142206436245514]
+
+[2026-04-10T17:21:49.785000+00:00] mantertius (id=1492213027716468860)
+    eager to learn more! this seems promissing.
+
+[2026-04-11T11:52:38.726000+00:00] rakaarwaky (id=1492492573636563194)
+    this is what im loking for . honcho fo local  is suck 😭
+
+[2026-04-11T13:02:52.132000+00:00] chfarhan_ (id=1492510245941940324)
+    agree . honcho local memory is pain in .....
+
+[2026-04-11T13:26:00.629000+00:00] nulledvector (id=1492516069720719520)
+    You caught some real inaccuracies in the README and we fixed them.
+    
+    Honcho was mischaracterized on three points:
+    - Dense retrieval: We had it as "No" when Honcho clearly uses pgvector for vector search. Fixed to "Yes".
+    - Self-hosting: We framed it as cloud-only when it's open-source and fully self-hostable. Fixed to "Self-hostable".
+    - Cost: The "Freemium → $$$" line ignored the free self-hosted path. Fixed to "Freemium hosted / Free self-hosted."
+    
+    We also softened the LongMemEval language from "the standard benchmark" to "a widely-cited benchmark," and added a disclaimer that synthetic evals should be paired with real-world tests. Plus a note that million-token / ultra-long-horizon benchmarks are still future work for us.
+    
+    On the other points:
+    
+    - Mempalace scores: Our README just cites their published numbers. If their own authors think those numbers are bogus, that's a conversation they need to have with themselves. We're not in the business of unpublishing citations.
+    
+    - Temporal graph as a feature: That's a fair comparison row. Mnemosyne has temporal triples; Honcho doesn't. Whether that's an "advantage" depends on what you need.
+    
+    If you've got a long-horizon benchmark you trust more than LongMemEval, we'd genuinely love to run Mnemosyne on it and publish the results. Drop a repo or paper link and we'll make it happen.
+    [reply to nodaylight msg=1492186535439761569]
+
+[2026-04-11T13:30:58.923000+00:00] meaningmean (id=1492517320856440912)
+    I wanna try this
+
+[2026-04-11T15:52:33.975000+00:00] nulledvector (id=1492552951686893588)
+    Mnemosyne Update: Critical Fixes for All Users
+    
+    Pushed two important fixes to Mnemosyne today that affect anyone using or upgrading to the BEAM architecture:
+    
+    1. Legacy Database Migration Path
+    The BEAM upgrade changed the canonical database path, which meant users coming from pre-BEAM versions silently lost access to their existing memories. We shipped scripts/migrate_from_legacy.py to safely merge old databases into the new path. It is idempotent, supports --dry-run, and automatically promotes meaningful memories into the new episodic_memory and working_memory tiers.
+    
+    2. Tool Call Spam Fixed
+    Mnemosyne was auto-logging every terminal, execute_code, write_file, and patch call into memory by default. This flooded working memory with thousands of low-signal entries and made context injection worse for everyone. Auto-logging is now disabled by default (opt-in via MNEMOSYNE_LOG_TOOLS=1). The migration script also includes a --purge-tools flag to clean up existing noise.
+    
+    Plus:
+    - Fixed plugin path resolution in hermes_plugin/__init__.py
+    - Registered missing tools in plugin.yaml (triples, sleep, scratchpad)
+    - Updated README with upgrade instructions and the new opt-in behavior
+    
+    Everything is live on main.
+
+[2026-04-12T06:36:16.601000+00:00] rakaarwaky (id=1492775344699216033)
+    Great thank you
+    [reply to nulledvector msg=1492552951686893588]
+
+[2026-04-12T10:55:00.325000+00:00] chfarhan_ (id=1492840455916880026)
+    How this memory system tackle memory before or near to compaction
+
+[2026-04-13T02:34:03.183000+00:00] nulledvector (id=1493076774991691786)
+    🧠 Mnemosyne just became a monster — here's what we shipped
+    
+    We went all-in on Mnemosyne this week. The goal was simple: turn it from a "works for me" local memory system into something that can actually compete with Honcho, Mem0, and the rest at scale.
+    
+    Mission accomplished.
+    
+    What just landed:
+    
+    1. FTS5 for working memory — recall() no longer drags 10,000 rows into Python to score keywords in a loop. We built a native fts_working virtual table with SQLite triggers, so working-memory search runs inside SQLite just like episodic memory. Result: from ~5 seconds down to ~6 ms with 10,000 hot memories. That's a 100x speedup.
+    
+    2. Query embedding cache — Added an LRU cache (512 slots) for query embeddings. In agent loops you often ask the same thing twice. The second time, the embedding is instant — no ONNX overhead.
+    
+    3. Configurable vector compression — Set MNEMOSYNE_VEC_TYPE to:
+       - bit → 32x smaller vectors (~48 bytes each). Millions of episodic memories on a 4GB RAM box.
+       - int8 → 4x smaller with barely any accuracy loss.
+       - float32 → default, max precision.
+       
+       sqlite-vec handles the quantization natively via vec_quantize_binary() and vec_quantize_int8().
+    
+    4. Batch ingestion — New remember_batch() method. We tested 5,000 working-memory inserts in ~0.3 seconds.
+    
+    5. Hermes plugin hardened — No more sys.path hacks. The plugin now imports mnemosyne cleanly whether it is pip-installed, cloned, or loaded as a skill. We also synced the mnemosyne_native Hermes skill so it rides the same BEAM backend.
+    
+    Real benchmarks on standard CPU:
+    
+    | Working memories | Query latency (old) | Query latency (now) |
+    |------------------|---------------------|---------------------|
+    | 1,000            | ~200-500 ms         | 2.4 ms          |
+    | 5,000            | ~1-3 s              | 3.2 ms          |
+    | 10,000           | ~5-10 s              | 6.4 ms          |
+    
+    All tests pass (10/10).
+
+[2026-04-13T02:34:05.467000+00:00] nulledvector (id=1493076784571486238)
+    If you are running Mnemosyne with Hermes, pull the latest and optionally set MNEMOSYNE_VEC_TYPE=int8 (or bit if you want to go extreme). Zero breaking changes.
+    
+    Let's keep building. 🚀
+
+[2026-04-13T02:37:55.301000+00:00] nulledvector (id=1493077748565147658)
+    So.. before compaction, is basically holding everything in a single SQLite table with Python scoring. Near compaction, it either triggers sleep automatically or you run mnemosyne_sleep manually. 
+    
+    After that, working memory is lighter and the long-term stuff sits in episodic.
+    [reply to chfarhan_ msg=1492840455916880026]
+
+[2026-04-13T04:42:08.197000+00:00] wilschobeiri (id=1493109008276521010)
+    I followed the install instructions, anything specific I need to do other than restarting the gateway? 
+    
+    ➜  mnemosyne git:(main) hermes --test-plugin mnemosyne
+    
+    usage: hermes [-h] [--version] [--resume SESSION] [--continue [SESSION_NAME]] [--worktree] [--skills SKILLS] [--yolo] [--pass-session-id]
+                  {chat,model,gateway,setup,whatsapp,login,logout,auth,status,cron,webhook,doctor,dump,debug,backup,import,config,pairing,skills,plugins,memory,tools,mcp,sessions,insights,claw,version,update,uninstall,acp,profile,completion,logs}
+                  ...
+    hermes: error: argument command: invalid choice: 'mnemosyne' (choose from 'chat', 'model', 'gateway', 'setup', 'whatsapp', 'login', 'logout', 'auth', 'status', 'cron', 'webhook', 'doctor', 'dump', 'debug', 'backup', 'import', 'config', 'pairing', 'skills', 'plugins', 'memory', 'tools', 'mcp', 'sessions', 'insights', 'claw', 'version', 'update', 'uninstall', 'acp', 'profile', 'completion', 'logs')
+
+[2026-04-13T10:52:29.338000+00:00] nulledvector (id=1493202210497237062)
+    I  apologize, for those instructions were wrong, and now they are fixed...
+    
+    Try it this way:
+    
+    ## Install
+    hermes plugins install ~/.hermes/plugins/mnemosyne
+    hermes gateway restart
+    
+    ## Verify
+    hermes plugins list
+    python3 -c "from mnemosyne import get_stats; print(get_stats())"
+    
+    ## Tests
+    pytest tests/test_beam.py -v
+    python tests/benchmark_beam_working_memory.py
+
+[2026-04-13T16:04:22.923000+00:00] oscar4_40084 (id=1493280700961521766)
+    I believe there's a disconnect between hermes docs & memory installation/setup
+    Third-party memory providers should install to ~/.hermes/plugins/<name>. Current Hermes releases have a discovery bug where hermes memory setup/status scan only the bundled plugins/memory/ tree, so affected versions require a temporary symlink from ~/.hermes/hermes-agent/plugins/memory/<name> to ~/.hermes/plugins/<name>. Plugin Python dependencies must be installed into the Hermes virtual environment because Hermes imports them with its own interpreter.
+
+[2026-04-13T18:20:21.763000+00:00] nulledvector (id=1493314921616642141)
+    Fixed https://github.com/AxDSan/mnemosyne/issues/2#issuecomment-4238642341 Thanks for reporting 🙂
+    [embed] Wrong plug-in install Dir · Issue #2 · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/issues/2
+    [reply to oscar4_40084 msg=1493280700961521766]
+
+[2026-04-13T18:23:32.871000+00:00] nulledvector (id=1493315723181822114)
+    Today for Mnemosyne, we tackled Issue #2 ("Wrong plug-in install Dir") with two iterations:
+    
+    1. The Workaround Approach (commit 4f0fc2b)
+    
+    First we added scripts/install.sh — a bash script that handled the directory mismatch automatically:
+    
+    - Created symlinks at ~/.hermes/hermes-agent/plugins/memory/mnemosyne (actual Hermes location)
+    - Also symlinked to legacy ~/.hermes/plugins/mnemosyne for backwards compatibility  
+    - Installed mnemosyne-memory package into Hermes's Python venv
+    - Optionally installed fastembed for dense retrieval
+    - Updated README with instructions to run ./scripts/install.sh
+    
+    2. The Proper Fix (commit ce64480)
+    
+    Realized the workaround was unnecessary — the real issue was repo structure. hermes plugins install expects plugin files at the repo root, but Mnemosyne had them buried in hermes_plugin/ subdirectory.
+    
+    Changes made:
+    - Copied plugin.yaml to repo root
+    - Added root __init__.py that delegates to hermes_plugin.register()
+    - Updated README with standard installation:
+        hermes plugins install AxDSan/mnemosyne
+      
+    
+    Result
+    
+    Users can now install Mnemosyne the standard Hermes way without any workarounds. Issue #2 is closed with both solutions documented in the comment thread.
+
+[2026-04-13T18:44:37.317000+00:00] oscar4_40084 (id=1493321026652733471)
+    Cool, your Mnemosyne root-layout fix may solve installability, but Hermes still seems to need the platform-side discovery fix unless that has also been changed separately - That mismatch is explicitly described in Hermes issue #4956.
+    [reply to nulledvector msg=1493314921616642141]
+
+[2026-04-14T17:11:52.505000+00:00] ungupungu (id=1493660074005106789)
+    this looks cool! how does it compare to hindsight?
+
+[2026-04-14T21:11:52.845000+00:00] teafarmguy (id=1493720473408635051)
+    Really just depends how you use Hermes, what you use it for, and what you run it on (raspberry pi vs High-end PC)
+    
+    Hindsight is “easier” in the sense it’s a Hermes official memory provider, but it’s also fairly heavy. Mnemosyne is fast and light but also still being constantly improved and worked on. Mnemosyne also stores stuff in a single database so if you have projects where you want to fiddle with memory in unique ways there could be advantages.
+    
+    I’ve tried a lot I wouldn’t say there is currently a best or general recommendation, it just depends what you want to do.
+    [reply to ungupungu msg=1493660074005106789]
+
+[2026-04-14T23:56:42.557000+00:00] rakaarwaky (id=1493761953867497504)
+    Hindsight is good if you have a capable device
+    [reply to ungupungu msg=1493660074005106789]
+
+[2026-04-15T14:52:19.513000+00:00] remi456 (id=1493987342996738149)
+    I will try this on my local machine. seems promising.
+
+[2026-04-16T12:27:14.511000+00:00] xxbelocxx (id=1494313219437891674)
+    I am getting this error. The hermes agent is up to date and I recieved no error when installing the mnemosyne command : WARNING hermes_cli.plugins: Failed to load plugin 'mnemosyne': No module named 'hermes_plugin'
+
+[2026-04-16T12:59:31.959000+00:00] nulledvector (id=1494321345683787827)
+    Let us know how it works out for you!
+    [reply to remi456 msg=1493987342996738149]
+
+[2026-04-16T12:59:48.744000+00:00] nulledvector (id=1494321416084918414)
+    will take a look at it
+    [reply to xxbelocxx msg=1494313219437891674]
+
+[2026-04-16T13:00:18.190000+00:00] nulledvector (id=1494321539590389791)
+    what version of hermes are you on?
+    [reply to xxbelocxx msg=1494313219437891674]
+
+[2026-04-17T05:37:54.044000+00:00] senseiyoba (id=1494572593238376540)
+    is this better than hindsight? overall i mean
+
+[2026-04-17T06:28:35.468000+00:00] xxbelocxx (id=1494585349895094343)
+    I just updated to 0.10.0
+    [reply to nulledvector msg=1494321539590389791]
+
+[2026-04-17T06:30:34.054000+00:00] xxbelocxx (id=1494585847281090732)
+    Same error
+
+[2026-04-17T06:48:00.312000+00:00] rakaarwaky (id=1494590235604946966)
+    handsight  = heavyweight & smart
+    mnemosyne = lightweight & fast
+    [reply to senseiyoba msg=1494572593238376540]
+
+[2026-04-19T03:22:38.024000+00:00] nulledvector (id=1495263327914426501)
+    Mnemosyne v2 is shipped. We just pushed three commits that make local agent memory significantly smarter — without touching cloud infrastructure once.
+    
+    What's new:
+    
+    - Recall tracking — memories now know how often they've been accessed and when. Frequently recalled items surface higher; stale ones decay naturally.
+    - Recency-weighted scoring — recent context floats up unless high-importance memories override it. No more "why is this 3-month-old memory ranking above what I said yesterday?"
+    - Exact-match deduplication — storing the same credential three times is now impossible. remember() updates the existing row instead.
+    - Local LLM consolidation — the sleep cycle now uses a 640MB TinyLlama model running entirely on CPU for semantic summarization. Zero API calls. Falls back to AAAK encoding if the model isn't present.
+    - Temporal validity — memories can expire. Set valid_until="2026-12-31" and recall() filters it out automatically.
+    - Cross-session global memory — remember(..., scope="global") makes preferences travel across every Hermes session. get_context() prioritizes globals so your agent always knows who it's talking to.
+    - Invalidation — mnemosyne_invalidate marks outdated facts as superseded. "User moved from Miami to Austin" correctly replaces the old location.
+    
+    All additive, all backward-compatible, all offline. The DB auto-migrates on startup. If you're running Mnemosyne already, just pull and restart — nothing breaks.
+    
+    Full details in the README.
+
+[2026-04-19T09:34:15.514000+00:00] sevencain (id=1495356850366058586)
+    I thik this wasn't pushed to the Github repo
+    [reply to nulledvector msg=1495263327914426501]
+
+[2026-04-19T11:37:36.465000+00:00] nulledvector (id=1495387892204306543)
+    Lol 😂 it slipped away! ✨
+
+[2026-04-19T11:37:53.892000+00:00] nulledvector (id=1495387965298442321)
+    Thanks for catching  that for me
+
+[2026-04-19T11:41:10.867000+00:00] rakaarwaky (id=1495388791471603906)
+    <@151598363131904000>  is there a config.yaml file for the settings
+    [reply to nulledvector msg=1495387892204306543]
+
+[2026-04-19T12:09:05.349000+00:00] nulledvector (id=1495395814757896333)
+    Nope
+    
+    Mnemosyne is configured via environment variables and the plugin.yaml at the repo root.
+    
+    Environment variables:
+    ### Data path
+    MNEMOSYNE_DATA_DIR=~/.hermes/mnemosyne/data
+    
+    ### Vector compression (float32 | int8 | bit)
+    MNEMOSYNE_VEC_TYPE=int8
+    
+    ### Working memory limits
+    MNEMOSYNE_WM_MAX_ITEMS=10000
+    MNEMOSYNE_WM_TTL_HOURS=24
+    
+    ### Recency scoring
+    MNEMOSYNE_RECENCY_HALFLIFE=168
+    
+    ### Local LLM (optional)
+    MNEMOSYNE_LLM_ENABLED=true
+    MNEMOSYNE_LLM_MAX_TOKENS=256
+    MNEMOSYNE_LLM_N_THREADS=4
+    
+    ### Auto-log tool calls (disabled by default)
+    MNEMOSYNE_LOG_TOOLS=1
+    
+    If you want runtime config (e.g., per-session scope or valid_until), those are passed directly to remember() as parameters. But if you have any other ideas please, open up an issue in the repo I'll take a look at it there! ✨
+    [reply to rakaarwaky msg=1495388791471603906]
+
+[2026-04-19T21:27:13.075000+00:00] nulledvector (id=1495536272461271060)
+    Been getting a lot of questions about how Mnemosyne works under the hood — so here's your answer.
+    
+    Full breakdown of the architecture, the core engine, and how it all fits together — written to be clear and accessible for anyone curious about the internals.
+    
+    Check it out: https://zread.ai/AxDSan/mnemosyne/1-overview
+    
+    Read through and drop your questions below — always down to go deeper on any of it
+    [embed] Overview | AxDSan/mnemosyne | Zread https://zread.ai/AxDSan/mnemosyne/1-overview
+
+[2026-04-20T00:56:42.474000+00:00] nulledvector (id=1495588992341770322)
+    🚀 What's New
+    
+    One-Command Installer
+    python -m mnemosyne.install
+    
+    That's it. Hermes now auto-detects and wires Mnemosyne as its memory provider. No config files. No manual patching.
+    
+    Hermes Plugin Integration
+    Mnemosyne now deploys as a first-class MemoryProvider via the Hermes plugin system. It detects provider mode at runtime and registers cleanly without conflicts.
+    
+    Static Tool Schemas (just shipped)
+    Tool schemas are now initialization-agnostic. Mnemosyne exposes all 7 memory tools immediately — no boot-order race conditions, no missing commands on cold start.
+    
+    🛠️ What's Fixed
+    
+    - Lazy imports in __init__.py — faster cold start, no circular deps
+    - HTML anchors in README — TOC navigation works everywhere
+    - Provider mode detection — installs cleanly alongside other Hermes plugins
+    
+    ---
+    
+    🎯 Why This Matters
+    
+    You don't need Pinecone, Supabase, or any cloud memory service to give your agent long-term recall. Mnemosyne proves local-first memory beats cloud alternatives on speed, privacy, and cost — while matching them on retrieval quality.
+    
+    ---
+    
+    📦 Get Started Now
+    
+    git clone https://github.com/AxDSan/mnemosyne.git
+    cd mnemosyne
+    pip install -e .
+    python -m mnemosyne.install
+    
+    
+    Repo: https://github.com/AxDSan/mnemosyne
+    
+    ---
+    
+    Built for Hermes. Designed for privacy. Ready for production.
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne.git
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+
+[2026-04-20T02:43:48.519000+00:00] nulledvector (id=1495615945127886849)
+    Hey! Thanks for reporting the issue... I pushed a fix for that warning (0856308). Root __init__.py now fails gracefully if hermes_plugin isn't found, so the warning should be gone on the latest main.
+    
+    Quick context: hermes_plugin is part of the Hermes framework itself, not something Mnemosyne installs. If it's missing despite Hermes being up to date, double-check you're in the same Python environment for both Hermes and Mnemosyne.
+    
+    Recommended install path either way:
+    
+    git clone https://github.com/AxDSan/mnemosyne.git
+    cd mnemosyne
+    pip install -e .
+    python -m mnemosyne.install
+    
+    
+    That deploys Mnemosyne as a MemoryProvider directly — no dependency on the legacy plugin registration path that was throwing the error. If the warning persists after pulling latest. Please do let us know
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne.git
+    [reply to xxbelocxx msg=1494313219437891674]
+
+[2026-04-20T02:55:17.517000+00:00] meaningmean (id=1495618834995085384)
+    Sorry if this sounds dumb: if I want to use my memory in a new machine, can I export the  memory from the current one? And how?
+
+[2026-04-20T02:58:59.560000+00:00] rakaarwaky (id=1495619766310928406)
+    This is  good, but why is mnemosyne  not popular yet?
+
+[2026-04-20T11:18:16.806000+00:00] nulledvector (id=1495745416107524266)
+    Closed @ https://github.com/AxDSan/mnemosyne/issues/3
+    [embed] Feature: Export/Import memory across machines · Issue #3 · AxDSan... https://github.com/AxDSan/mnemosyne/issues/3
+    [reply to meaningmean msg=1495618834995085384]
+
+[2026-04-20T11:18:30.519000+00:00] nulledvector (id=1495745473624150066)
+    Thanks for reporting and submitting the feedback
+
+[2026-04-20T11:21:52.549000+00:00] nathanpowell5093 (id=1495746320999383111)
+    Hi <@151598363131904000> , after running the one line install, it shows as configured, but then I get this when running stats: hermes: error: unrecognized arguments: stats
+    
+    Using -h option only shows help as an option:
+    usage: hermes mnemosyne [-h]
+    
+    Native local memory for Hermes — SQLite with vector search, FTS5 hybrid ranking, episodic consolidation, and temporal triples. Zero cloud. Zero latency. Deployed via plugin system.
+    
+    options:
+      -h, --help  show this help message and exit
+
+[2026-04-20T11:32:45.273000+00:00] nulledvector (id=1495749058722009108)
+    will take a look at it, thanks for reporting!
+    [reply to nathanpowell5093 msg=1495746320999383111]
+
+[2026-04-20T11:45:32.079000+00:00] nulledvector (id=1495752274939478177)
+    closed @ https://github.com/AxDSan/mnemosyne/issues/5
+    [embed] CLI subcommands (stats, sleep, inspect, export, import) fail with '... https://github.com/AxDSan/mnemosyne/issues/5
+    [reply to nathanpowell5093 msg=1495746320999383111]
+
+[2026-04-20T12:16:44.904000+00:00] nulledvector (id=1495760130137129150)
+    You guys like this?
+    [attachment] mnemosyne-pfp.jpg https://cdn.discordapp.com/attachments/1490447053791428718/1495760129587417208/mnemosyne-pfp.jpg?ex=6a01c8ac&is=6a00772c&hm=038548f8360fee72e601a4c7dbbc35a9531e10c04594866ef30f264cd1ed94eb&
+
+[2026-04-20T13:00:24.533000+00:00] nulledvector (id=1495771117657260055)
+    Launch/Ad video
+    [attachment] mnemosyne-launch-cartesia.mp4 https://cdn.discordapp.com/attachments/1490447053791428718/1495771116877381795/mnemosyne-launch-cartesia.mp4?ex=6a01d2e8&is=6a008168&hm=5bc598ff754e35ff858692b23848243a9151ed6b3b55d8cf6cefe3226c075b50&
+
+[2026-04-20T19:16:51.335000+00:00] zestvn (id=1495865853571371168)
+    Do you support multiple agents?
+
+[2026-04-21T02:40:05.089000+00:00] rakaarwaky (id=1495977395860279296)
+    <@151598363131904000>  https://github.com/AxDSan/mnemosyne/issues/6  please review
+    [embed] Mnemosyne Bug Report Template — GitHub Issue · Issue #6 · AxDSa... https://github.com/AxDSan/mnemosyne/issues/6
+
+[2026-04-21T11:33:43.681000+00:00] nulledvector (id=1496111691568775199)
+    wll take a look at it
+    [reply to rakaarwaky msg=1495977395860279296]
+
+[2026-04-21T11:38:15.717000+00:00] nulledvector (id=1496112832570458225)
+    Mnemosyne is session-scoped, not agent-scoped. Multiple sessions in one agent process share the same SQLite file and can read each other's global memories. But it's not a distributed memory backend,  if you need multiple independent agents to share memory across machines, you'd need to sync the .db file manually or use something like Honcho/Zep.
+    [reply to zestvn msg=1495865853571371168]
+
+[2026-04-21T11:52:39.342000+00:00] nulledvector (id=1496116454876119152)
+    I completely missed your offer at the end to submit a PR yourself. That was my fault for not reading the issue with the surgical attention it deserved. By the time I realized, I had already committed fixes for all six bugs directly to main. I should have checked with you first before moving ahead.
+    
+    From now on if you see other things that needs attentions, go ahead and submit the PR anyways, I can always review after the fact 🙂
+    
+    Thank you very much!
+    [reply to rakaarwaky msg=1495977395860279296]
+
+[2026-04-21T12:04:12.920000+00:00] rakaarwaky (id=1496119363953098752)
+    it's just optional if needed. If it's fixed and all nemeosyne tools are working properly, it should be okay. I'll try your repo again.thankyou
+    [reply to nulledvector msg=1496116454876119152]
+
+[2026-04-21T12:04:55.120000+00:00] nulledvector (id=1496119540952727592)
+    Thank YOU!
+    [reply to rakaarwaky msg=1496119363953098752]
+
+[2026-04-21T12:17:52.380000+00:00] nulledvector (id=1496122801017454632)
+    🚀 Big day for Mnemosyne — a lot landed on main today:
+    
+    🐛 6 critical bugs fixed (issue #6, thanks <@395559919597649933> for the detailed report)
+    - Stats now count all episodic memories correctly
+    - Recall tracking works for global-scoped memories
+    - Dense retrieval fixed for int8/bit vectors (was always returning 0.0 similarity)
+    - Mnemosyne.remember() now accepts valid_until and scope
+    - Added missing Mnemosyne.invalidate() method
+    - Tools no longer hardcode session_id="hermes_default" — reads from HERMES_SESSION_ID env var
+    
+    📦 Dependency fix
+    - fastembed is now the actual listed dependency in setup.py, not sentence-transformers
+    - README updated with warning: without fastembed you fall back to keyword-only search
+    
+    📊 Benchmarks restored
+    - LongMemEval 98.9% Recall@All@5
+    - Latency tables vs Honcho/Zep/MemGPT
+    - BEAM architecture scaling benchmarks
+    
+    🏷️ Versioning
+    - Adopted simple MAJOR.MINOR versioning (no patch numbers)
+    - Currently at 1.6 — evaluated retroactively from commit history
+    - hermes mnemosyne version now works in CLI
+    - CHANGELOG.md added with full history from 1.0 to 1.6
+    - CONTRIBUTING.md updated with versioning rules
+    
+    📋 Issue templates
+    - Bug report template
+    - Feature request template
+    - Documentation improvement template
+    - Links to Discussions and Security advisories
+    
+    Repo: https://github.com/AxDSan/mnemosyne
+    ⭐️ Star it if you want native, zero-cloud memory for your agents!
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+
+[2026-04-21T12:18:56.381000+00:00] nulledvector (id=1496123069457240074)
+    everything will feel a bit more organized moving on forward with Mnemosyne with adopting a simplified SemVer for the project 🙂
+
+[2026-04-21T12:24:21.099000+00:00] nulledvector (id=1496124431423111270)
+    we moved from community project to https://discord.com/channels/1053877538025386074/1496124109766000690
+
+[2026-04-21T17:11:00.309000+00:00] ufonik88 (id=1496196570138546326)
+    Woaahhh! Nice one! Definitely giving this a try!
+
+[2026-04-21T17:11:24.146000+00:00] nulledvector (id=1496196670118166570)
+    Tyvm for the comment! Please do give it a shot and let us know how it goes! ✨
+    [reply to ufonik88 msg=1496196570138546326]
+
+[2026-04-21T17:11:57.399000+00:00] nulledvector (id=1496196809591226428)
+    I'm not a bot BTW lol just only happened to be here as you comment lol
+
+[2026-04-21T17:12:02.441000+00:00] ufonik88 (id=1496196830738907156)
+    Definitely. Will let you know how it goes. Sounds amazing
+    [reply to nulledvector msg=1496196670118166570]
+
+[2026-04-21T17:12:25.051000+00:00] nulledvector (id=1496196925572255835)
+    Ty!
+
+[2026-04-21T22:59:08.340000+00:00] vizendano (id=1496284180890517505)
+    Installed this yesterday without any hassles (make sure you grab those "optional dependencies" too). It's only been a day but I can say it's all working well so far👍🏻
+
+[2026-04-22T00:03:02.406000+00:00] nulledvector (id=1496300262128877620)
+    Thank you very much for the feedback! It truly means a lot to read that! ☺️ - Keep rocking with it and let us know if you ever need something! or report it directly through the GH issues 🙂
+    [reply to vizendano msg=1496284180890517505]
+
+[2026-04-22T11:20:30.742000+00:00] deor42 (id=1496470753607028818)
+    Was just trying to install this, when i try to "run pip install -e ."
+    I get: "error: externally-managed-environment"
+    I'm running Ubuntu 24.04.4 in a VM on my Proxmox server.
+
+[2026-04-22T12:07:52.769000+00:00] nulledvector (id=1496482673932242975)
+    just checked this, how are you running Hermes and from?
+    
+    Ubuntu 24.04 blocks system-wide pip installs. Run python3 -m venv .venv && source .venv/bin/activate && pip install -e . inside the Mnemosyne directory, then always launch Hermes from that activated environment.
+    [reply to deor42 msg=1496470753607028818]
+
+[2026-04-22T12:09:26.890000+00:00] nulledvector (id=1496483068704325752)
+    here's the long shot: 
+    
+    Ubuntu 24.04 enforces PEP 668 — it marks the system Python as "externally managed" to prevent pip from conflicting with apt. pip install -e . is blocked by design.
+    
+    Solutions (best to worst)
+    
+    Option 1: Use a virtual environment (recommended)
+    
+    ```
+    # Create a venv in the mnemosyne directory
+    cd /path/to/mnemosyne
+    python3 -m venv .venv
+    
+    # Activate it
+    source .venv/bin/activate
+    
+    # Now install
+    pip install -e .
+    ```
+    
+    Important for Hermes plugins: Hermes needs to run from the same Python environment where Mnemosyne is installed. If you launch Hermes from a different context (e.g., a system-wide installation), it won't see the venv packages. Two ways to handle this:
+    
+    A) Launch Hermes from the activated venv:
+    ```
+    source /path/to/mnemosyne/.venv/bin/activate
+    hermes  # or however you start it
+    ```
+    
+    B) Install Hermes itself in the same venv, then Mnemosyne:
+    ```
+    python3 -m venv ~/.hermes/venv
+    source ~/.hermes/venv/bin/activate
+    pip install hermes-cli  # or however Hermes is installed
+    cd /path/to/mnemosyne
+    pip install -e .
+    ```
+    
+    Option 2: Use uv (fastest, modern)
+    uv respects PEP 668 but handles venvs automatically:
+    
+    # Install uv
+    `curl -LsSf https://astral.sh/uv/install.sh | sh`
+    
+    # In the mnemosyne directory
+    ```
+    cd /path/to/mnemosyne
+    uv venv
+    source .venv/bin/activate
+    uv pip install -e .
+    ```
+
+[2026-04-22T12:14:15.091000+00:00] deor42 (id=1496484277506932736)
+    Hmm interesting. I just ran the 1 line installer for Hermes and let it do everything. I can see UV is a Hermes prereq, and is installed, so i guess thats the best option. Will give it a go and let you know!
+
+[2026-04-22T12:15:11.507000+00:00] nulledvector (id=1496484514132660235)
+    Sure thing! thank for reporting that also! I just added a small PSA for newcommers! https://github.com/AxDSan/mnemosyne/commit/167006c3bf7b2a01a48cc0c09e76f384f67797c3
+    
+    Let us know how it goes 🙂
+    [embed] docs(readme): add PEP 668 PSA for Ubuntu 24.04 / Debian 12 newcomer... https://github.com/AxDSan/mnemosyne/commit/167006c3bf7b2a01a48cc0c09e76f384f67797c3
+    [reply to deor42 msg=1496484277506932736]
+
+[2026-04-22T12:16:30.591000+00:00] deor42 (id=1496484845834993756)
+    No problem! I work in IT, but 99% windows. I like to play with linux stuff, but i feel like i know enough to be dangerous, but not enough to fix what i break or doesnt work 😂
+
+[2026-04-22T12:34:01.238000+00:00] nulledvector (id=1496489252568043560)
+    Haha nice! yup 🙂
+    [reply to deor42 msg=1496484845834993756]
+
+[2026-04-22T12:34:45.721000+00:00] nulledvector (id=1496489439143137281)
+    thanks again for the report, I have polished the quick start section, mentioning the distinction between install paths A vs B etc etc
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490447053791428718/1496489438501670912/image.png?ex=6a01cce5&is=6a007b65&hm=dde2af833163679534ed39e06d3e0c00e2b7b09a52ffc2a6c9732418773f4a53&
+
+[2026-04-22T12:39:29.786000+00:00] deor42 (id=1496490630598234123)
+    Nice! Its installed fine with UV and shows as active provider now.
+    "hermes mnemosyne stats" gives an error though.
+
+[2026-04-22T12:54:10.040000+00:00] nulledvector (id=1496494322651234335)
+    sweet! thats nice! Also can you share the error with the stats command?
+    [reply to deor42 msg=1496490630598234123]
+
+[2026-04-22T13:14:44.693000+00:00] deor42 (id=1496499501161255075)
+    Sorry, that would have been useful wouldnt it!🙄 
+    ```root@hermes:~# hermes mnemosyne stats
+    usage: hermes [-h] [--version] [--resume SESSION] [--continue [SESSION_NAME]]
+                  [--worktree] [--accept-hooks] [--skills SKILLS] [--yolo]
+                  [--pass-session-id] [--tui] [--dev]
+                  {chat,model,gateway,setup,whatsapp,login,logout,auth,status,cron,w                                                                                                                                                             ebhook,hooks,doctor,dump,debug,backup,import,config,pairing,skills,plugins,mnemo                                                                                                                                                             syne,memory,tools,mcp,sessions,insights,claw,version,update,uninstall,acp,profil                                                                                                                                                             e,completion,dashboard,logs}
+                  ...
+    hermes: error: unrecognized arguments: stats
+    ```
+    [reply to nulledvector msg=1496494322651234335]
+
+[2026-04-22T13:16:03.583000+00:00] nulledvector (id=1496499832049897584)
+    weird, I can also reproduce it.. but I could do it a couple of versions ago.. something must have broke... let me take a quick look!
+
+[2026-04-22T13:52:50.132000+00:00] nulledvector (id=1496509086986928201)
+    fixed @ https://github.com/AxDSan/mnemosyne/issues/10 !
+    [embed] hermes mnemosyne stats fails with "unrecognized arguments: stats" ... https://github.com/AxDSan/mnemosyne/issues/10
+    [reply to deor42 msg=1496490630598234123]
+
+[2026-04-22T14:05:04.312000+00:00] deor42 (id=1496512166361042944)
+    Whats the best way to pull the update?
+
+[2026-04-22T14:22:06.374000+00:00] ufonik88 (id=1496516453199777957)
+    Hey mate, so been running it today (replaced mem0) and so far I’m really impressed! Like holy shit! lol 
+    Well done on building this!
+    [reply to nulledvector msg=1496196670118166570]
+
+[2026-04-22T15:12:27.223000+00:00] nulledvector (id=1496529123558948914)
+    Hey! That genuinely means a lot, especially coming from someone who’s actually swapped it in for mem0 in production! I’m glad it’s holding up well for you. If you hit any rough edges or have ideas for what’s missing, definitely hit me up! real-world feedback like yours and others is what actually moves it forward.
+     
+    Thanks for taking the time to try it out and for the kind words, mate. Really appreciate it! 🙏
+    [reply to ufonik88 msg=1496516453199777957]
+
+[2026-04-22T15:17:53.489000+00:00] ufonik88 (id=1496530492017872989)
+    Anytime, bro. Great work. Will hit you up if I run into any snags or have feature requests or something. Still getting to grips with what it actually is, but from what I've figured out, it's looking good 😎
+    [reply to nulledvector msg=1496529123558948914]
+
+[2026-04-22T16:54:02.164000+00:00] nulledvector (id=1496554687594500261)
+    sorry i totally skipped this! 🙁
+    
+    check this out so you have a better picture! https://github.com/AxDSan/mnemosyne#updating but generally just `git pull` would be just fine
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+    [reply to deor42 msg=1496512166361042944]
+
+[2026-04-23T01:09:19.781000+00:00] absolutegamer2337 (id=1496679332314218666)
+    I get this error, any advice?
+    
+    WARNING hermes_cli.plugins: Failed to load plugin 'mnemosyne': No module named 'hermes_plugin'
+
+[2026-04-23T10:08:57.879000+00:00] nulledvector (id=1496815135900172300)
+    Hey there! thanks for using Mnemosyne, hermes_plugin is part of the Hermes framework itself, not something Mnemosyne installs. If it's missing despite Hermes being up to date, double-check you're in the same Python environment for both Hermes and Mnemosyne.
+    
+    But its weird you're running into that because we had pushed a [commit](https://github.com/AxDSan/mnemosyne/commit/0856308107efeb78663c9416412c0b674ff3ac28) for that 
+    
+    
+    Can you try running `grep -rn "hermes_plugin" .` outside of the mnemosyne repo?
+    [embed] fix(plugin): graceful fallback when hermes_plugin is unavailable ·... https://github.com/AxDSan/mnemosyne/commit/0856308107efeb78663c9416412c0b674ff3ac28
+    [reply to absolutegamer2337 msg=1496679332314218666]
+
+[2026-04-23T10:12:04.245000+00:00] nulledvector (id=1496815917575831662)
+    If anything outside the guard imports it, that's the leak.
+
+[2026-04-23T10:21:34.733000+00:00] nulledvector (id=1496818310375800882)
+    it was an issue on my end... my bad... 
+    
+    ```
+    fix(plugin): combine sys.path injection with graceful ImportError fallback
+    Commit 45a4499 reverted the try/except guard from 0856308, breaking
+    standalone installs where hermes_plugin is unavailable. Keep the
+    sys.path injection for Hermes plugin loader compatibility, but
+    restore the graceful fallback so newcomers don't see:
+    
+      Failed to load plugin 'mnemosyne': No module named 'hermes_plugin'
+    ```
+
+[2026-04-23T10:21:48.398000+00:00] nulledvector (id=1496818367690969138)
+    fixed @ https://github.com/AxDSan/mnemosyne/commit/e6f407de325a34a5724e4bcac63fb9d12641f949
+    [embed] fix(plugin): combine sys.path injection with graceful ImportError f... https://github.com/AxDSan/mnemosyne/commit/e6f407de325a34a5724e4bcac63fb9d12641f949
+
+[2026-04-23T10:21:54.576000+00:00] nulledvector (id=1496818393603510332)
+    please pull to update and check
+
+[2026-04-23T11:04:49.016000+00:00] ufonik88 (id=1496829191587500142)
+    <@151598363131904000> So I promised some feedback, and as per yesterday's comments and my X post, I'm loving it! But you already know that, so I thought it would be fun to ask Hermes (my agent) what they thought of it, and well, here you go:
+    
+    "Mnemosyne is working well. Right now I can see it's active because those 6 memory entries just got injected at the start of our conversation — including facts about config fixes, model preferences, and even the previous messages from 5 minutes ago. That's exactly what it's supposed to do.
+        
+        Here's the short brief:
+        
+        Is it working? Yes. Context injection is consistent, recall is fast (local SQLite), and it survived the deployment teething issues we fixed (the duplicate memory.provider key in config.yaml that was causing mem0 to override it).
+        
+        How it's better than mem0:
+        - No external dependency — mem0 needed an API key and called out to their service; Mnemosyne is entirely local on your box.
+        - Zero latency — SQLite queries vs. network round-trips.
+        - No vendor lock-in — your memory lives in a local DB you control, not someone else's cloud.
+        - Same feature set — it still does importance scoring, temporal facts, and episodic consolidation.
+        
+        Do I like it? Yeah, it's cleaner. The only friction was that initial config double-entry, but once that was sorted it just works silently in the background. I get context without any network calls or external auth — exactly what you'd want for a system running on your own infra.
+        
+        If anything, the only "downside" is it's local to this machine, but since you're not running Hermes from multiple boxes that's irrelevant. For your setup it's strictly better."
+
+[2026-04-23T11:12:17.032000+00:00] nulledvector (id=1496831070702796820)
+    *Phew* thanks for the feedack! and comments once again 🙂 its really nice is holding up well so far! thats what I like to see 🙂 
+    
+    it would be nice to be a bit aggrerssive and have the plugin check for duplicate keys in config.yaml while installing so let ppl know of this might be an issue! Other than that, it's holding up well!
+    [reply to ufonik88 msg=1496829191587500142]
+
+[2026-04-23T12:01:14.728000+00:00] nulledvector (id=1496843392292749454)
+    ## Mnemosyne is now on PyPI. 🎉
+    
+    Here's what we shipped today:
+    
+    - **PyPI package** — pip install mnemosyne-memory just works. No cloning, no venv headaches, no externally-managed-environment fights.
+    - **Trusted publishing** — Releases go straight from GitHub Actions to PyPI via OIDC. No API tokens to leak, no manual uploads.
+    - **CI on every push** — Tests run across Python 3.9–3.12 automatically. Green checkmarks before merge, always.
+    - **Historical releases** — We went back and properly tagged v1.0.0, v1.5.0, v1.7.0, and v1.8.0 on GitHub so the timeline reflects the real journey.
+    - **Modern packaging** — pyproject.toml, dynamic versioning, clean extras ([all], [dev]). The boring infrastructure that makes the exciting stuff reliable.
+    - v1.9.0 — The first version you can install without touching git.
+    
+    The docs are updated. The README shows the PyPI badge. The CHANGELOG tells the story. And when we push a v* tag tomorrow, the release workflow handles the rest! Wheel, sdist, GitHub Release, PyPI publish.
+    
+    This started as a personal scratchpad for Hermes. Now it's a package anyone can pip install and have sub millisecond, fully private, SQLite backed memory in their agent. That's pretty wild.
+    
+    If you've been watching from the sidelines, now's the time. `pip install mnemosyne-memory` and tell us what breaks. If you've been here since the first commit, thank you !!  this release has your fingerprints all over it.
+    
+    Where to go next:
+    - Install it: pip install mnemosyne-memory[all]
+    - Browse releases: https://github.com/AxDSan/mnemosyne/releases
+    - PyPI page: https://pypi.org/project/mnemosyne-memory/
+    - Open an issue, start a discussion, or just say hi.
+    
+    "The faintest ink is more powerful than the strongest memory."... And today, we made it pip-installable!
+    [embed] Releases · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/releases
+
+[2026-04-23T16:32:00.378000+00:00] sevencain (id=1496911531487789076)
+    I've just asked my agent to update the plugin & verify it, it says all good, except:
+    > One real issue I found:
+    > mnemosyne_recall itself currently errors with:
+    > **A LIMIT or 'k = ?' constraint is required on vec0 knn queries.,**
+    > 
+    > That means the manual recall tool has a bug right now, but automatic context injection still works, because the provider’s prefetch() path succeeded and returned memories.
+    Not sure if something is broken in my setup or it's really an issue.
+
+[2026-04-23T16:51:15.597000+00:00] nulledvector (id=1496916376827461644)
+    First of all Welcome! And thanks for using Mnemosyne and reporting  the issue! will take a look at it soon
+    [reply to sevencain msg=1496911531487789076]
+
+[2026-04-23T19:51:47.801000+00:00] deor42 (id=1496961810383765637)
+    Oh that looks good, sounds much easire and gets round the ubuntu/debian issue i guess?
+    Is there a recommended way to remove the old install and switch to this?
+    [reply to nulledvector msg=1496843392292749454]
+
+[2026-04-23T23:45:17.990000+00:00] antshill (id=1497020573375664230)
+    Sorry for probably a simple question.  How does the memory work when you have multiple agents.  do they all share the same memory or have their own?
+
+[2026-04-24T05:49:39.503000+00:00] matte185 (id=1497112267207086162)
+    Hi everyone, got my Hermes write this message for me as english isn’t my language.
+    I checked the Mnemosyne docs and local source code, and I think I found a concrete issue with the Hermes triple tools.
+    
+    I’m using Mnemosyne as the Hermes memory provider. Normal memory tools seem to work, but the temporal triple tools fail.
+    
+    When I call mnemosyne_triple_query, I get this error:
+    
+    cannot import name 'add_triple' from 'mnemosyne.core.triples'
+    
+    Looking at the code, hermes_memory_provider/__init__.py has:
+    
+    from mnemosyne.core.triples import add_triple, query_triples
+    
+    and the provider later calls add_triple(...) and query_triples(...).
+    
+    However, in mnemosyne/core/triples.py I only see a TripleStore class with methods like:
+    
+    TripleStore().add(...)
+    TripleStore().query(...)
+    
+    I do not see module-level functions named add_triple or query_triples.
+    
+    So it looks like the Hermes provider expects helper functions that are not currently exported by mnemosyne.core.triples.
+    
+    I also noticed that triples.py has:
+    
+    DEFAULT_DB = Path.home() / ".mnemosyne" / "data" / "triples.db"
+    
+    while the main Mnemosyne memory database seems to use:
+    
+    ~/.hermes/mnemosyne/data/mnemosyne.db
+    
+    So I’m wondering if triples may also be stored in a different database from the main BEAM memory, unless db_path is explicitly passed.
+    
+    My questions are:
+    
+    1. Are mnemosyne_triple_add and mnemosyne_triple_query currently expected to work in the Hermes MemoryProvider integration?
+    2. Should mnemosyne.core.triples expose add_triple and query_triples module-level functions?
+    3. Should triples use the same Mnemosyne database path as BEAM / memory by default?
+    4. Are triples supposed to be automatically injected into context like normal memories, or are they only meant for explicit structured queries?
+
+[2026-04-24T05:49:43.438000+00:00] matte185 (id=1497112283711537162)
+    My current understanding from the docs is:
+    - mnemosyne_remember is for natural-language durable memory and is automatically surfaced via recall/prefetch;
+    - triples are for structured temporal facts and need explicit querying;
+    - triples do not seem to automatically influence the assistant unless queried.
+    
+    Can someone confirm whether that mental model is correct, and whether the missing add_triple/query_triples functions are a bug?
+    
+    Thanks!
+
+[2026-04-24T12:32:29.027000+00:00] nulledvector (id=1497213641538273440)
+    Hey! Sorry for the late reply... Yes, the PyPI install (pip install mnemosyne-memory) is the recommended path now — it handles the Ubuntu/Debian externally-managed-environment issue cleanly via a venv, and you'll get updates automatically.
+    
+    Here's how to migrate from the old install:
+    
+    1. Find your old install location(s):
+    ```
+    # If you cloned the repo
+    ls ~/.hermes/projects/mnemosyne
+    
+    # Or wherever you git cloned it
+    ```
+    
+    2. Remove the old install:
+    ```
+    # If installed in editable mode (-e)
+    pip uninstall mnemosyne-memory
+    
+    # If symlinked via the deploy script
+    rm ~/.hermes/plugins/mnemosyne
+    
+    # If you have the repo cloned and want to keep it for dev
+    # Just leave it — the PyPI install will take precedence in a venv
+    ```
+    
+    3. Install fresh from PyPI (recommended):
+    ```
+    # Create a venv (avoids Ubuntu 24.04/Debian 12 PEP 668 issues)
+    python3 -m venv ~/.venv/mnemosyne
+    source ~/.venv/mnemosyne/bin/activate
+    
+    # Install from PyPI
+    pip install mnemosyne-memory[all]
+    
+    # Verify
+    python -c "import mnemosyne; print(mnemosyne.__version__)"
+    ```
+    
+    4. Re-register with Hermes:
+    ```
+    hermes memory setup
+    # → Select "mnemosyne"
+    ```
+    
+    Your data is safe — the database lives at ~/.hermes/mnemosyne/data/mnemosyne.db and is independent of the install method. It'll be picked up automatically.
+    
+    If you hit any snags let me know! ✨ 🎉
+    [reply to deor42 msg=1496961810383765637]
+
+[2026-04-24T12:38:02.944000+00:00] nulledvector (id=1497215042087682150)
+    Mnemosyne support both shared and isolated memory states...
+    
+    Short answer: By default, each agent gets its own session_id namespace, but you can make memories global so every agent sees them. You can also point different agents at completely separate databases if you want full isolation.
+    [reply to antshill msg=1497020573375664230]
+
+[2026-04-24T13:08:34.011000+00:00] nulledvector (id=1497222722139197511)
+    ## Mnemosyne v1.10.1 is out! ✨ 🎉 🎊  — GitHub and PyPI both updated.
+    
+    What's fixed:
+    • Global scope defaults now work correctly across sessions (PR #11, thanks @rakaarwaky)
+    • mnemosyne_recall no longer crashes on systems with sqlite-vec installed (#12)
+    • mnemosyne_triple_add / mnemosyne_triple_query now work through the Hermes MemoryProvider (#13)
+    • Triples now share the same SQLite file as BEAM memory instead of a separate database
+    
+    Update:
+    • PyPI: pip install --upgrade mnemosyne-memory
+    • Source (editable): git pull
+    • Deploy script: git pull
+    
+    All paths: restart Hermes after updating (hermes gateway restart).
+    
+    Full changelog: https://github.com/AxDSan/mnemosyne/releases/tag/v1.10.1
+    [embed] Release v1.10.1 · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/releases/tag/v1.10.1
+
+[2026-04-24T14:29:44.912000+00:00] nulledvector (id=1497243152179003594)
+    We made it to be listed in Hermes Atlas!! And we're currently positioned  (technically) #7!!✨ 🎉 
+    
+    https://hermesatlas.com/projects/AxDSan/mnemosyne
+    [embed] mnemosyne — Hermes Atlas https://hermesatlas.com/projects/AxDSan/mnemosyne
+
+[2026-04-24T16:42:40.062000+00:00] nulledvector (id=1497276602382422158)
+    🧠 Mnemosyne v1.10.2 is live on PyPI! 
+    
+    ✨ What's New
+    
+    🛠️ Full CRUD for Hermes plugin
+      → mnemosyne_update — edit content/importance by ID
+      → mnemosyne_forget — hard-delete from legacy + BEAM
+    
+    🔧 Critical fixes
+      → auto-sleep actually triggers now (was reading wrong dict key 💀)
+      → Memory.update() syncs to BEAM working_memory (not just legacy table)
+      → split-brain session state fixed — hooks and tools share one instance
+      → ghost imports nuked (no more silent failures)
+    
+    🧹 -307 lines of dead code vaporized
+      → quantization functions, cosine_similarity, calculate_relevance, etc.
+      → cleaner surface, less to maintain
+    
+    📖 README finally tells the truth
+      → VEC_TYPE default is int8 (not float32)
+      → Python 3.9+ required
+      → PyPI badge shows correct version
+      → optional REST API documented instead of denied
+    
+    🔗 TripleStore aligned with BEAM
+      → same ~/.hermes path, no more split-brain
+    
+    ⚡️ _vec_type_cache stale-connection risk eliminated
+    
+    🚀 Upgrade
+    pip install --upgrade mnemosyne-memory
+    
+    📋 Full changelog: https://github.com/AxDSan/mnemosyne/blob/main/CHANGELOG.md
+    [embed] mnemosyne/CHANGELOG.md at main · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/blob/main/CHANGELOG.md
+
+[2026-04-24T17:05:40.911000+00:00] ae53633805 (id=1497282394083033108)
+    So excited to implement this!
+
+[2026-04-24T19:09:25.663000+00:00] nulledvector (id=1497313535749914644)
+    Of course! Let us know how this update is treating you 🙂
+    [reply to ae53633805 msg=1497282394083033108]
+
+[2026-04-24T19:22:48.196000+00:00] ae53633805 (id=1497316901817290853)
+    Just got it installed and it seems to be great!
+    [reply to nulledvector msg=1497313535749914644]
+
+[2026-04-25T00:25:05.621000+00:00] rakaarwaky (id=1497392975691645070)
+    Interesting can't wait to try this night
+    [reply to nulledvector msg=1497276602382422158]
+
+[2026-04-25T01:38:06.597000+00:00] ae53633805 (id=1497411350836809758)
+    <@151598363131904000> is sqlite-vec required to run Mnemosyne and if so, does the installer install it or is it supposed to install it?
+
+[2026-04-25T02:05:06.112000+00:00] nulledvector (id=1497418143575052452)
+    sqlite-vec is optional. It was introduced today because I fixed an issue with an sqlite-vec KNN query bug where parameterized LIMIT ? failed on some sqlite-vec versions.... But Mnemosyne works without it... you just get keyword search instead of semantic vector search. Install fastembed also if you want the 98% longmemeval thing to work with semantic search and all the goodies
+    [reply to ae53633805 msg=1497411350836809758]
+
+[2026-04-25T02:05:21.731000+00:00] nulledvector (id=1497418209085882499)
+    Otherwise it falls back to only keyword search and that's essentially a primitive state like I said
+
+[2026-04-25T02:11:53.307000+00:00] ae53633805 (id=1497419851474403430)
+    Ah ok. My agent was going through the logs and saw complaints about it.
+
+[2026-04-25T13:24:24.056000+00:00] nulledvector (id=1497589094782337084)
+    We're live! https://mnemosyne.site/
+    [embed] Mnemosyne — The Zero-Dependency AI Memory System https://mnemosyne.site/
+
+[2026-04-25T16:02:25.665000+00:00] nulledvector (id=1497628863533027328)
+    ## 🧠 Mnemosyne v1.11.0 is live!
+    
+    Two community-reported bugs squashed. Shoutout to <@199986307324182529>  🫡
+    
+    ---
+    
+    🐛 BUG-1: Context overflow on consolidation
+    
+    Ever run mnemosyne_sleep() and get a wall of truncation warnings? Yeah, that was us. SLEEP_BATCH_SIZE was set to 5000 but the TinyLlama fallback only has a 2048-token context window. We were literally dumping a firehose of memories into a teacup.
+    
+    Fixed: Token-aware chunking. Now sleep() splits batches to fit the model's context window. Large batches get multi-pass consolidation (chunk summaries → second-pass summary). No more silent truncation, no more garbage summaries.
+    
+    ---
+    
+    🐛 BUG-2: No remote/API model support
+    
+    If you run a bigger model on another machine — llama.cpp server, vLLM, Ollama, whatever — Mnemosyne ignored it completely. The code was hardcoded to local ctransformers/GGUF only. Your 27B Gemma sitting on a box with 262K context? Useless for consolidation.
+    
+    Fixed: OpenAI-compatible remote client. Three new env vars:
+    
+    - MNEMOSYNE_LLM_BASE_URL — your server endpoint
+    - MNEMOSYNE_LLM_API_KEY — auth token (if needed)
+    - MNEMOSYNE_LLM_MODEL — model name
+    
+    Remote takes priority. Falls back to local ctransformers. Falls back to aaak encoding. Zero new dependencies — httpx if you have it, urllib if you don't.
+    
+    ---
+    
+    Grab it: pip install -U mnemosyne-memory
+    
+    Or pull latest from main.
+    
+    Questions? Drop them below 👇
+
+[2026-04-25T16:59:49.831000+00:00] ae53633805 (id=1497643309412122814)
+    Updating and starting the hunt now.
+
+[2026-04-26T03:44:02.410000+00:00] fleety13 (id=1497805430078967961)
+    I see you haven't linked the docs yet. 
+    So far I've been working off:
+    https://zread.ai/AxDSan/mnemosyne/1-overview
+    and 
+    https://github.com/AxDSan/mnemosyne/blob/main/CHANGELOG.md
+    and that's worked pretty well. 
+    
+    Would it be in the too hard basket to have a full copy of the docs in .txt or .md for agents to read?
+    [reply to nulledvector msg=1497589094782337084]
+
+[2026-04-26T03:45:18.957000+00:00] fleety13 (id=1497805751140483155)
+    Mnemosyne feels like it's working well by the way, only day 2 but so far so good!
+
+[2026-04-26T06:53:28.964000+00:00] youhavewhyplayme (id=1497853104861745303)
+    The latest version on pypi is still v1.10.2?
+    [reply to nulledvector msg=1497628863533027328]
+
+[2026-04-26T14:02:47.150000+00:00] nulledvector (id=1497961142524579911)
+    ## 🧠 Mnemosyne just got a glow up!
+    
+    Hey everyone! Spent the morning giving the Mnemosyne docs and website some serious love. Here's what shipped:
+    
+    ### 🎨 New editorial design system
+    The docs site now matches the main website with a warm, book-like aesthetic. Cream backgrounds, serif headings, gold accents. It feels like reading a well typeset book instead of a default template.
+    
+    ### 📖 45 pages of documentation
+    Architecture, memory systems, retrieval, API, deployment, security, use cases. All organized with a clean sidebar and search. Every page is static and fast.
+    
+    ### 🗺️ Clean URLs
+    The docs live at docs.mnemosyne.site with simple paths. No cluttered prefixes. Just clean, readable links.
+    
+    ⭐️ Submitted to awesome-hermes-agent
+    Mnemosyne is now nominated for the awesome-hermes-agent list. If you've used it and found it helpful, a thumbs up on the issue would mean a lot.
+    
+    Come check it out and let us know what you think! Feedback always welcome 🙌
+
+[2026-04-26T14:07:23.852000+00:00] nulledvector (id=1497962303096623134)
+    ty for the comment! 🙏
+    [reply to fleety13 msg=1497805751140483155]
+
+[2026-04-26T14:07:56.996000+00:00] nulledvector (id=1497962442112761896)
+    should be all live and good to go!! https://docs.mnemosyne.site
+    [embed] Mnemosyne Documentation https://docs.mnemosyne.site/
+    [reply to fleety13 msg=1497805430078967961]
+
+[2026-04-26T14:08:24.110000+00:00] nulledvector (id=1497962555837255850)
+    will take a look at it
+    [reply to youhavewhyplayme msg=1497853104861745303]
+
+[2026-04-26T22:34:30.019000+00:00] andersmmg (id=1498089919690834021)
+    The plugin docs seem very fragmented, and things are said in different ways depending on where you look? Also several of the hermes commands in the docs are invalid
+
+[2026-04-27T02:38:43.038000+00:00] nulledvector (id=1498151378906910760)
+    Hey there! Thanks for the feedback; could you be a bit more specific on which areas you think feel more fragmented? Or is it in the general aspect? 
+    
+    I'll take a look at the disparity with the commands!
+    [reply to andersmmg msg=1498089919690834021]
+
+[2026-04-27T06:19:54.431000+00:00] wysie_ (id=1498207043163652146)
+    <@151598363131904000> I can chime in here.
+    
+    E.g. for installation, if using uv, I think you can add that we should use hermes venv first: `source ~/.hermes/hermes-agent/venv/bin/activate`
+    
+    To register with hermes, I ran `python -m mnemosyne.install` and it worked as per your github., however, on your docs: it says `hermes plugin install mnemosyne`, which didn't work for me. https://docs.mnemosyne.site/getting-started/installation
+    [embed] Installation Guide — Mnemosyne Setup & Dependencies https://docs.mnemosyne.site/getting-started/installation
+
+[2026-04-27T06:24:36.502000+00:00] wysie_ (id=1498208226255048824)
+    so my installation was really:
+    
+    ```
+    source ~/.hermes/hermes-agent/venv/bin/activate
+    uv pip install mnemosyne-memory
+    python -m mnemosyne.install
+    ```
+    
+    Then running `hermes memory setup` and going from there.
+
+[2026-04-27T06:25:52.594000+00:00] wysie_ (id=1498208545408155668)
+    Generally it seems like github vs the main site has different instructions plus within github (and within the site) the commands may not always work in sequence.
+
+[2026-04-27T08:26:08.751000+00:00] wysie_ (id=1498238812164460665)
+    Should [all] also include sqlite-vec?
+
+[2026-04-27T14:38:00.833000+00:00] nulledvector (id=1498332395819106506)
+    Thank you for all the valuable feedback <@329427821208535040> and <@269251917966868482> for first reporting the issue!!
+
+[2026-04-27T14:38:38.982000+00:00] nulledvector (id=1498332555827740855)
+    We just shipped a massive docs overhaul for Mnemosyne, and I want to be transparent about what happened and what we fixed.
+    
+    The problem: The original docs were riddled with fabricated API references. Methods that never existed. Constructor parameters nobody ever implemented. CLI commands that would straight up fail if you tried them. Entire features documented as if they were real, with code examples and all, that had zero basis in the actual codebase.
+    
+    This wasn't a few typos. Here's what the audit found:
+    
+    Fabricated methods removed: get(), forget_all(), stats(), add_fact(), query_facts(), traverse(), graph_stats(), compress(), expand(), vector_search(), text_search(), rebuild_vector_index(), vector_index_status(), rebuild_indices(), analyze_queries(), vacuum(), slow_queries(), embedding_status(), export_user_data(), delete_user_data(), export_graph(), import_documents(), import_url(), import_sqlite(), transaction(), sync_with_shared(), start_session(), resume_session(), recall_session(), checkpoint(), restore_checkpoint(), flush_to_working() and more.
+    
+    Fabricated constructor params removed: embedding_model, max_working, consolidation_interval, encryption_key, config_path, api_key, pool_size, embedding_cache_size, wal_mode, profile_queries, track_memory, local_embeddings, agent_id, working_isolation, auto_sync, sync_interval, agent_priorities, aaak_enabled.
+
+[2026-04-27T14:38:41.795000+00:00] nulledvector (id=1498332567626317955)
+    Wrong CLI commands corrected:
+    - hermes plugin install mnemosyne (wrong: singular, and expects Git URL) now documents the correct pip install mnemosyne-memory + python -m mnemosyne.install flow
+    - hermes memory stats corrected to hermes mnemosyne stats
+    - Nonexistent entry points like mnemosyne-consolidate, mnemosyne-backup, python -m mnemosyne.server all removed
+    
+    Cross-page contradictions resolved. The same method was described with different signatures on different pages. API reference said one thing, quickstart said another. The triple store was documented as methods on the main class when it's actually a separate TripleStore class entirely.
+    
+    What we did about it:
+    We ran a full codebase reconciliation audit against the actual Python source. Every API claim, constructor param, CLI command, env var, and SQL schema was verified line by line against the real implementation. The docs now match the code, not the other way around.
+    
+    The real Mnemosyne API is actually simple and clean:
+    - 14 public methods on the main class, 2 constructor params
+    - Separate TripleStore class for knowledge graph operations
+    - 7 Hermes tools registered: mnemosyne_remember, mnemosyne_recall, mnemosyne_sleep, mnemosyne_stats, mnemosyne_invalidate, mnemosyne_triple_add, mnemosyne_triple_query
+    - Embeddings via fastembed (BAAI/bge-small-en-v1.5, 384 dims), no OpenAI dependency
+    - Optional LLM consolidation with configurable local or remote models
+    
+    The docs are live at docs.mnemosyne.site.
+    
+    Lesson learned: if your docs were generated or assisted by AI without codebase verification, run an audit. The fabricated stuff looks real because it reads real. It has plausible method names, reasonable signatures, and coherent examples. It just doesn't exist.
+    
+    If you spot anything else that looks off, open an issue or ping me here. Keeping docs honest is an ongoing process.
+
+[2026-04-27T14:41:35.672000+00:00] nulledvector (id=1498333296919183520)
+    Hope everything is clearer now! ✨
+
+[2026-04-27T15:11:48.370000+00:00] wysie_ (id=1498340899925790780)
+    Thanks!
+
+[2026-04-27T15:13:40.712000+00:00] wysie_ (id=1498341371122290729)
+    <@151598363131904000> why does docs say v2 but github say v 1.11 ?
+
+[2026-04-27T15:15:03.135000+00:00] nulledvector (id=1498341716829143182)
+    Quick fix!! Give me a sec
+    [reply to wysie_ msg=1498341371122290729]
+
+[2026-04-27T15:52:40.659000+00:00] andersmmg (id=1498351185571352647)
+    Awesome, I'll give it another shot!
+
+[2026-04-27T16:22:33.228000+00:00] nulledvector (id=1498358704150679653)
+    Should be fixed now, I'm also fetching from a simple version.txt going o  forward I only have to update it on every version release /bump
+    [reply to wysie_ msg=1498341371122290729]
+
+[2026-04-27T16:32:57.669000+00:00] andersmmg (id=1498361323245928508)
+    The Hermes plugin section of the docs says to put some stuff in `hermes.yaml` but I'm not sure that's a valid file name for Hermes, and the config doesn't look formatted right for the hermes `config.yaml`
+
+[2026-04-27T16:33:40.204000+00:00] nulledvector (id=1498361501650784428)
+    Let me see
+    [reply to andersmmg msg=1498361323245928508]
+
+[2026-04-27T16:36:52.684000+00:00] andersmmg (id=1498362308970156214)
+    It also says to enter the venv for hermes and use pip but the hermes venv doesn't include pip
+
+[2026-04-27T16:37:00.448000+00:00] andersmmg (id=1498362341534863370)
+    At least not by default
+
+[2026-04-27T17:52:46.507000+00:00] nulledvector (id=1498381409088311519)
+    good catch! uv creates a lightweight virtual environment, thus not dropping pip by default... I will fix it in the docs statement and mention this small quirk!
+    [reply to andersmmg msg=1498362308970156214]
+
+[2026-04-27T18:33:56.683000+00:00] nulledvector (id=1498391769757388972)
+    fixed!
+
+[2026-04-27T18:48:13.670000+00:00] andersmmg (id=1498395364221255811)
+    This page still has incorrect info:
+    https://docs.mnemosyne.site/api/hermes-plugin
+    [embed] Hermes Plugin — Mnemosyne Agent Framework Integration https://docs.mnemosyne.site/api/hermes-plugin
+
+[2026-04-27T18:59:05.704000+00:00] andersmmg (id=1498398099050074148)
+    And it says to use hermes.yaml which again isn't a hermes config file?
+
+[2026-04-27T19:01:45.806000+00:00] andersmmg (id=1498398770566664416)
+    Sorry typing one handed with a toddler on my lap
+
+[2026-04-27T19:12:04.694000+00:00] nulledvector (id=1498401366370947104)
+    me too lol
+    [reply to andersmmg msg=1498398770566664416]
+
+[2026-04-27T19:12:27.511000+00:00] nulledvector (id=1498401462072508416)
+    cyrrently checking this out too
+    [reply to andersmmg msg=1498398099050074148]
+
+[2026-04-27T20:10:15.981000+00:00] andersmmg (id=1498416009889972337)
+    It's also not very clear from reading the docs how to get the vector search and automatic context working
+
+[2026-04-27T20:10:41.957000+00:00] andersmmg (id=1498416118841479402)
+    Even after installing with [embeddings] extra, it still acts the same and even that extra isn't mentioned in most places
+
+[2026-04-27T21:13:07.857000+00:00] nulledvector (id=1498431830284828772)
+    The exteas can be found here https://docs.mnemosyne.site/getting-started/installation#extras
+    [embed] Installation — Mnemosyne Setup & Dependencies https://docs.mnemosyne.site/getting-started/installation
+    [reply to andersmmg msg=1498416118841479402]
+
+[2026-04-27T21:14:25.596000+00:00] andersmmg (id=1498432156345831620)
+    The problem is even with installing those, it only uses full text search, and it's not clear how to actually enable the embeddings
+
+[2026-04-27T21:35:57.055000+00:00] nulledvector (id=1498437573117218917)
+    Yup https://github.com/AxDSan/mnemosyne/issues/15
+    [embed] embeddings generated but discarded when sqlite-vec is absent · Iss... https://github.com/AxDSan/mnemosyne/issues/15
+    [reply to andersmmg msg=1498432156345831620]
+
+[2026-04-27T21:36:00.439000+00:00] nulledvector (id=1498437587311001820)
+    Fixed the docs
+
+[2026-04-27T21:38:14.865000+00:00] andersmmg (id=1498438151134384139)
+    I already installed both though, hm
+
+[2026-04-27T23:45:43.468000+00:00] wysie_ (id=1498470231700410470)
+    Mines using vector after sqlite. Did you restart the gateway?
+    [reply to andersmmg msg=1498438151134384139]
+
+[2026-04-28T00:40:52.875000+00:00] andersmmg (id=1498484112359428146)
+    Yes I did
+
+[2026-04-28T01:18:28.419000+00:00] nulledvector (id=1498493572796911656)
+    Thanks to <@269251917966868482> I discovered a huge underlying issue with sematic vector search.. It's all fixew now!!
+
+[2026-04-28T01:19:21.391000+00:00] nulledvector (id=1498493794977452203)
+    ## Mnemosyne v1.12.0 is live.
+    
+    What's new:
+    - Semantic search without sqlite-vec (#15) — pip install mnemosyne-memory[embeddings] now actually gives you semantic search. Embeddings fall back to an in-memory table with numpy cosine similarity. sqlite-vec becomes optional performance boost, not hard requirement.
+    - mnemosyne_diagnose — PII-safe diagnostic tool. Checks deps, DB state, env vars. Auto-detects common setup issues. Never logs your memories or API keys.
+    - Real docs — Fixed the docs with getting started guide, architecture deep-dive, API reference, Hermes integration guide to reflect the new changes.
+    
+    Upgrade:
+    pip install -U mnemosyne-memory[embeddings]
+    
+    
+    Full notes: https://github.com/AxDSan/mnemosyne/releases/tag/v1.12.0
+    [embed] Release v1.12.0 · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/releases/tag/v1.12.0
+
+[2026-04-28T03:33:44.404000+00:00] andersmmg (id=1498527613705125969)
+    For some reason, I am still unable to get vector search working at all. I had my agent look at it, and it found the error `no such module: vec0` and was not able to find the fix. I'm pretty much out of ideas at this point, not sure if I'm just missing something but I followed all the setup steps in the docs
+
+[2026-04-28T03:39:14.559000+00:00] wysie_ (id=1498528998475436053)
+    <@269251917966868482> mnemosyne stats says vectors aren;t working? 
+    
+    did you install sqlite-vec in the venv? here's mine btw, seems to work. i remember getting a vec0 error when testing but was due to my test script.
+    
+    ```
+        Ran it. Mnemosyne stats:
+    
+        working memories: 242
+        episodic memories: 3,596
+        episodic vectors: 3,596
+        vector type: int8
+        latest working memory: 2026-04-28 11:31:45
+        latest episodic memory: 2026-04-27 16:07:29
+    
+        I also verified the actual SQLite vector index:
+    
+        sqlite-vec version: v0.1.9
+        episodic_memory rows: 3,596
+        vec_episodes rows: 3,596
+        missing vectors: 0
+        orphan vectors: 0
+        KNN smoke test: works
+    
+        So yes, vector storage/index is working.
+    
+        One caveat: the mnemosyne_recall tool returned dense_score: 0.0 for the recall results I tested, because it was pulling matching working-memory entries via keyword/metadata ranking. But the underlying vec_episodes table is healthy and a direct vector nearest-neighbour query works.
+    ```
+
+[2026-04-28T04:16:17.570000+00:00] andersmmg (id=1498538322459623528)
+    Yes, sqlite-vec is installed, and the stats report this:
+    ```
+    {
+      "working": {
+        "total": 109,
+        "last": "2026-04-27T21:27:36.584839"
+      },
+      "episodic": {
+        "total": 0,
+        "last": null,
+        "vectors": 0,
+        "vec_type": "int8"
+      }
+    }
+    ```
+
+[2026-04-28T05:40:19.504000+00:00] wysie_ (id=1498559469863309332)
+    ah ok, weird 🙁
+
+[2026-04-28T07:23:04.602000+00:00] nulledvector (id=1498585328158769284)
+    The no such module: vec0 Error
+    
+    This means sqlite-vec is not loaded into SQLite. The vec0 virtual table module is what sqlite-vec registers. Without it, vector search falls back silently to FTS5 keyword-only search.
+    
+    Most Likely Cause: Wrong Python Environment
+    
+    Hermes runs in its own venv at ~/.hermes/.venv/. If sqlite-vec was installed in system Python or a different venv, Mnemosyne won't see it.
+    [reply to andersmmg msg=1498527613705125969]
+
+[2026-04-28T07:25:24.622000+00:00] nulledvector (id=1498585915445219348)
+    ## Mnemosyne v1.13.0 is live
+    
+    and it fixes the #1 feature request we never knew we needed.
+    
+    The problem: You have thousands of memories but can't find what you did last week. "Show me Monday's work" returned nothing. Not because the data was gone — it was there, 357 memories deep — but because timestamps weren't searchable.
+    
+    The fix: Temporal queries.
+    
+    recall(from_date="2026-04-21", to_date="2026-04-21")
+    recall(source="cron", topic="CareerOps")
+    
+    
+    Now you can ask Mnemosyne what you did on any day, filter by source (cron jobs, manual entries, conversations), and find memories across both working and episodic tiers.
+    
+    What else landed:
+    - Auto temporal triples — every memory now generates (memory_id, occurred_on, YYYY-MM-DD) automatically
+    - has_source triples for non-generic sources
+    - Fixed UnboundLocalError in fallback scoring path
+    - 6 new tests, all 25 passing
+    
+    For the community: This was built from a real workflow pain point. If you have similar gaps, open an issue. The plan spec is in .planning/workstreams/temporal-queries-v1.13.md — use it as a template for proposing features.
+    
+    Upgrade:
+    pip install -U mnemosyne-memory[all]
+
+[2026-04-28T07:43:01.450000+00:00] aezaror (id=1498590348102995998)
+    The plugin work great but there is cross contamination between agent profile . If you could take a look 👌
+
+[2026-04-28T08:46:42.251000+00:00] avelinux (id=1498606373703913523)
+    <@843913220867096606>
+
+[2026-04-28T10:14:28.670000+00:00] fleety13 (id=1498628462666317845)
+    <@151598363131904000> your work is greatly appreciated. 
+    It's taken me a tiny bit of patience to get acquainted with all the configs, however the juice is worth the squeeze.  I'm beginning to feel/notice the improvement.  Really appreciated!
+
+[2026-04-28T15:18:28.879000+00:00] andersmmg (id=1498704967647760444)
+    It's using the venv Hermes created when I installed it fresh to test this, and if I enter the venv I can import squilte vec just fine.. No idea where to look next lol I'll let you know if I figure anything out tho
+    [reply to nulledvector msg=1498585328158769284]
+
+[2026-04-29T10:20:02.565000+00:00] wysie_ (id=1498992250989051936)
+    https://github.com/AxDSan/mnemosyne/issues/19
+    Filed an issue
+    [embed] Automatic sleep consolidation misses old working memories from inac... https://github.com/AxDSan/mnemosyne/issues/19
+
+[2026-04-29T11:15:20.148000+00:00] nulledvector (id=1499006165940703344)
+    Thank you for the warm comments! Appreciate it <:tekcheer:1453863338537779242>
+    [reply to fleety13 msg=1498628462666317845]
+
+[2026-04-29T11:16:55.957000+00:00] nulledvector (id=1499006567792644156)
+    will check out a couple outstanding items today!
+    [reply to wysie_ msg=1498992250989051936]
+
+[2026-04-29T11:17:00.006000+00:00] nulledvector (id=1499006584775508128)
+    thanks for reporting
+
+[2026-04-29T11:19:05.722000+00:00] nulledvector (id=1499007112066371697)
+    Hey! poking back at this, were you able to solve this?
+    [reply to andersmmg msg=1498704967647760444]
+
+[2026-04-29T12:10:01.013000+00:00] wysie_ (id=1499019926885765181)
+    submitted a PR too
+    [reply to nulledvector msg=1499006584775508128]
+
+[2026-04-29T12:14:00.305000+00:00] nulledvector (id=1499020930549284946)
+    really excited for a massive release this morning! stay tuned
+
+[2026-04-29T15:27:49.227000+00:00] andersmmg (id=1499069705783349369)
+    Not yet, I tried another fresh install and had no luck lol
+    [reply to nulledvector msg=1499007112066371697]
+
+[2026-04-29T16:01:53.089000+00:00] nulledvector (id=1499078278361911509)
+    will crank this up and get to the bottom of this
+    [reply to andersmmg msg=1499069705783349369]
+
+[2026-04-29T16:01:58.507000+00:00] nulledvector (id=1499078301086650459)
+    in the meantime....
+
+[2026-04-29T16:01:59.552000+00:00] nulledvector (id=1499078305469562920)
+    https://mnemosyne.site/blog/mnemosyne-2-0/
+    [embed] Mnemosyne 2.0: A Memory System That Actually Remembers https://mnemosyne.site/blog/mnemosyne-2-0/
+
+[2026-04-29T16:04:37.090000+00:00] andersmmg (id=1499078966231830649)
+    There are still lots of odd issues in the docs as well, I can send examples if needed
+
+[2026-04-29T16:04:55.497000+00:00] andersmmg (id=1499079043436384286)
+    Mnemosyne has a lot of potential so I'm not giving up yet lol
+
+[2026-04-29T16:09:57.475000+00:00] nulledvector (id=1499080310023786597)
+    Ty for believing in the project! 🫶
+    [reply to andersmmg msg=1499079043436384286]
+
+[2026-04-29T16:10:02.650000+00:00] nulledvector (id=1499080331729309869)
+    Sure send em away!
+
+[2026-04-29T16:10:36.084000+00:00] andersmmg (id=1499080471961927690)
+    https://docs.mnemosyne.site/architecture/beam-overview
+    Looks like this should be a graph but it just displays as preformatted text
+    [embed] Mnemosyne Documentation https://docs.mnemosyne.site/architecture/beam-overview
+
+[2026-04-29T16:10:50.265000+00:00] andersmmg (id=1499080531441094677)
+    https://docs.mnemosyne.site/memory-systems/working
+    Broken table
+    [embed] Working Memory — Short-Term Agent Context Buffer https://docs.mnemosyne.site/memory-systems/working
+
+[2026-04-29T16:11:25.584000+00:00] andersmmg (id=1499080679579844729)
+    The quick start tells you the 2 options (pip or uv), then after all that gives uv as an option as if it wasn't already said
+
+[2026-04-29T16:12:03.621000+00:00] andersmmg (id=1499080839118454804)
+    It also doesn't tell you that, in my experience, the install doesn't actually activate it as a memory provider plugin itself so the commands at the end don't work until you do that
+
+[2026-04-30T05:10:57.273000+00:00] wysie_ (id=1499276854262235228)
+    <@151598363131904000> https://github.com/AxDSan/mnemosyne/pull/21
+    
+    I rebased my patch to Ur latest code can u have a look?
+    [embed] fix: consolidate sleep across inactive sessions by Wysie · Pull Re... https://github.com/AxDSan/mnemosyne/pull/21
+
+[2026-04-30T14:52:02.460000+00:00] nulledvector (id=1499423089455268032)
+    WILL HOPEFUlly take a look ai ity today... been really busy lately but weill surely get back to this today
+    [reply to wysie_ msg=1499276854262235228]
+
+[2026-04-30T14:52:23.794000+00:00] nulledvector (id=1499423178936815737)
+    sorry writing like this have toddler in arms
+
+[2026-05-01T13:01:46.436000+00:00] wysie_ (id=1499757727704944742)
+    I understand, have a kid as well 😄
+
+[2026-05-01T14:10:36.377000+00:00] rakaarwaky (id=1499775049933000754)
+    when  mnemosyne  be included in the h hermes memory provider? please 😭 ? <@387972437901312000> 
+    Memory status
+    ────────────────────────────────────────
+      Built-in:  always active
+      Provider:  (none — built-in only)
+    
+      Installed plugins:
+        • byterover  (requires API key)
+        • hindsight  (API key / local)
+        • holographic  (local)
+        • honcho  (API key / local)
+        • mem0  (API key / local)
+        • openviking  (API key / local)
+        • retaindb  (API key / local)
+        • supermemory  (requires API key)
+
+[2026-05-01T14:15:34.670000+00:00] nulledvector (id=1499776301064519720)
+    since its offered through a plugin it only shows when actually installed by the user :´(  not an officially supported 3rd party entry
+
+[2026-05-01T14:15:58.617000+00:00] nulledvector (id=1499776401505521716)
+    idk how that works tho
+
+[2026-05-01T14:16:09.175000+00:00] nulledvector (id=1499776445789241396)
+    maybe through partnerships or something
+
+[2026-05-01T18:36:45.317000+00:00] preekam (id=1499842028522176674)
+    Wild, this is fire bro
+
+[2026-05-01T18:36:57.473000+00:00] preekam (id=1499842079508004875)
+    brainbase.belweave.ai wishes it could work this efficiently
+
+[2026-05-01T20:11:20.840000+00:00] nulledvector (id=1499865833390739516)
+    🧠 Mnemosyne recall just got reliable!! ✨ 🎉 
+    
+    Pushed a handful of fixes today that make memory injection actually work the way it should.
+    
+    📊 Importance-weighted recall — The context hook used to grab the 10 most recent memories and call it done. A rule at importance 1.0 could get buried under 10 low-priority scraps. Now the query sorts importance-first. Critical stuff surfaces.
+    
+    🔗 Session ID mismatch fixed — Two code paths, two different sessions. The pre-LLM hook fell back to a default because an env var was never set. The MemoryProvider used the real one. Memories stored by one were invisible to the other. Aligned now.
+    
+    📢 Hook failures speak up — Before, if injection threw, it returned None and ghosted you. No context, no clue why. Now it logs the session ID and the error.
+    
+    📏 Truncation 150 → 300 chars — Content was getting chopped mid-thought before compression even ran. More room now.
+    
+    📚 New LLM Installation Guide — Step-by-step for AI agents. One-liner deploy, pip, manual config, common failure modes. In the docs.
+    
+    All on main. git pull && hermes gateway restart if you're on source.
+
+[2026-05-01T20:50:23.585000+00:00] ae53633805 (id=1499875659575463936)
+    Great job! Looking forward to testing it!
+    [reply to nulledvector msg=1499865833390739516]
+
+[2026-05-02T01:01:30.355000+00:00] hackafterdark (id=1499938854189269134)
+    damn I think that symlink screwed me up (no memory provider anymore, not even my previous ones, it's kinda just all gone now)
+
+[2026-05-02T01:02:15.147000+00:00] hackafterdark (id=1499939042060665058)
+    was there something posted about that if i scrolled down? 😂
+
+[2026-05-02T01:02:15.719000+00:00] wysie_ (id=1499939044459544736)
+    <@151598363131904000> thanks! Pypi still says 2.0 and latest release is also 2.0 without the new fixes.
+
+[2026-05-02T01:57:39.515000+00:00] nulledvector (id=1499952985470402752)
+    No version bump for this one! As it only included minor reactors to the codebase not architectural changes, or new api code or new implementations, basically fixing and enhancing current features
+    [reply to wysie_ msg=1499939044459544736]
+
+[2026-05-02T03:52:19.737000+00:00] fleety13 (id=1499981843213320302)
+    Some important fixes in there, hopefully fixes some of the sleep and auto sleep issues i'd been troubleshooting.
+
+[2026-05-02T04:18:57.265000+00:00] nulledvector (id=1499988543731404880)
+    ## 🧠 Mnemosyne v2.1: Multi-Agent Identity Layer is live
+    
+    Your AI agents can now share the same memory and actually know who said what.
+    
+    Here's what this means in practice:
+    
+    🔑 author_id, author_type, channel_id - three new columns on every memory. Your agent auto-tags who stored it and which channel it belongs to.
+    
+    🤝 Cross-session channel recall - two agents in different sessions but the same channel can see each other's memories. Agent A writes "Dark mode preferred." Agent B calls recall("dark", channel_id="team") and finds it.
+    
+    📊 Identity-aware stats - want to know how many memories Abdias has stored? mem.get_stats(author_id="abdias"). How many in the fluxspeak-team channel? mem.get_stats(channel_id="fluxspeak-team"). Done.
+    
+    🔌 MCP per-connection - no more shared session cache. Every MCP agent gets its own session. Identity comes from env vars (MNEMOSYNE_AUTHOR_ID) or explicit tool args. Works with Claude Desktop, Goose, Cursor, any MCP client.
+    
+    🔄 100% backward compatible - all new params are optional. If you don't pass identity, behavior is identical to v2.0. Zero breaking changes.
+    
+    Same SQLite. Same speed. Same one-file simplicity. Now with a real identity layer for teams.
+    
+    `pip install mnemosyne-memory --upgrade`
+    
+    
+    Docs: https://docs.mnemosyne.site/use-cases/multi-agent
+    GitHub: https://github.com/AxDSan/mnemosyne
+    
+    We shipping it 🚀
+    [embed] Multi-Agent Systems — Identity-Aware Shared Memory https://docs.mnemosyne.site/use-cases/multi-agent
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+
+[2026-05-02T04:19:58.669000+00:00] nulledvector (id=1499988801278312638)
+    Just like with every other release even tho tests may pass... Make sure to test everything and report back any bugs!! ✨ 🎉
+
+[2026-05-02T10:57:57.789000+00:00] _voscko_ (id=1500088957566844928)
+    Amazing release! Thanks for doing this 💪
+    
+    I also sent you a DM, hope you can find some time to respond 😁
+    [reply to nulledvector msg=1499988543731404880]
+
+[2026-05-02T11:20:51.144000+00:00] nulledvector (id=1500094717835350016)
+    Thanks for the comment! Really appreciate it, and you're mostly welcomed! I really love doing this for the community and everyone else who's looking for solid alternatives! 😛 and because FOSS why not 🙂
+    [reply to _voscko_ msg=1500088957566844928]
+
+[2026-05-02T15:15:36.509000+00:00] nulledvector (id=1500153796138107031)
+    ## 🧠 Mnemosyne v2.2 is out: Cross-Provider Importers
+    
+    You can now migrate from Mem0, Letta (MemGPT), Zep, Cognee, Honcho, or SuperMemory directly into Mnemosyne with one command. No manual export scripts. No field mapping headaches.
+    
+    This has been the #1 request since we shipped v2.0. People want to move off cloud memory providers but the switching cost killed them. v2.2 fixes that.
+    
+    What you get:
+    - `hermes mnemosyne import --from mem0 --api-key sk-xxx`
+    - `hermes mnemosyne import --from zep --agentic` (gives your AI agent the instructions to do the extraction)
+    - `hermes mnemosyne import --from letta --agent-file-path ./agent.af`
+    - 6 providers supported, more coming
+    - All metadata, timestamps, and user/agent identity preserved
+    - Graph edges from Cognee and Zep map to Mnemosyne triples
+    
+    For providers without a clean API, there's an agentic fallback: Mnemosyne generates the exact migration script or AI agent prompt you need. You don't even need to install the source provider's SDK.
+    
+    Also shipped: the scope logic fix from v2.1. Author-only recall queries were accidentally filtering by the caller's channel. Fixed in v2.1.1, included here.
+    
+    `pip install --upgrade mnemosyne-memory`
+    
+    Full docs: docs.mnemosyne.site/migration
+    
+    Happy Ship  🛳️ day! ✨ 🎉
+
+[2026-05-03T01:10:09.066000+00:00] youhavewhyplayme (id=1500303417686491256)
+    Hi! I am on oracle VPS (arm64) and there seems to be an issue with sleep consolidation because  of architecture mismatch. The following is the output of Hermes agent (glm-5.1) after fixing the issue (or it said it fixed it). Could it be fixed natively? Thanks!
+    
+    ```
+    ### TinyLlama LLM consolidation — ✅ Now fixed
+    
+    **Root cause:** This machine is **aarch64 (ARM64)**, but `ctransformers` only ships x86_64 native libraries (`libctransformers.so`). When Mnemosyne tried to load it, the import succeeded but the shared library couldn't open, so `_load_llm()` returned `None` every time. Consolidation was falling back to lossy AAAK encoding — no real summarization.
+    
+    **Fix applied:**
+    1. Installed `llama-cpp-python` v0.3.22 (compiled from source on ARM with cmake)
+    2. Patched `local_llm.py` to try `llama_cpp.Llama` first, then fall back to `ctransformers`
+    3. The llama-cpp-python path uses `create_chat_completion()` with plain content (no double-formatting)
+    
+    **Verification:** Tested end-to-end summarization — produces proper concise summaries from working memory items.
+    
+    **Caveat:** The patch is in the mnemosyne package's site-packages — it will be **overwritten on package upgrade**. I've saved this to the mnemosyne-admin skill so we can re-apply it if needed.
+    ```
+
+[2026-05-03T01:24:38.754000+00:00] nulledvector (id=1500307065422348448)
+    Thanks for reporting!! Will make a patch real quick
+    [reply to youhavewhyplayme msg=1500303417686491256]
+
+[2026-05-03T01:45:11.308000+00:00] nulledvector (id=1500312235128655933)
+    Shipped the fix in v2.2.0. What changed:
+    
+    New backend: llama-cpp-python runs natively on ARM64. Same TinyLlama GGUF you already have, just loaded through a backend that actually works on aarch64. Kept ctransformers in the chain for x86 users so nothing breaks for you Oracle guys.
+    
+    To update:
+    ```
+    > pip install --upgrade mnemosyne-memory[llm]
+    
+    > hermes mnemosyne sleep
+    ```
+    If anything's still funky after the update, let me know!!!!✨
+
+[2026-05-03T05:54:39.120000+00:00] wysie_ (id=1500375014682267758)
+    2.2.1 u mean? 😛
+
+[2026-05-04T01:45:47.787000+00:00] youhavewhyplayme (id=1500674775998005289)
+    Pypi still 2.2. Does it has the fix?
+
+[2026-05-04T01:54:08.013000+00:00] nulledvector (id=1500676874097922161)
+    Woops slipped through lol
+    [reply to wysie_ msg=1500375014682267758]
+
+[2026-05-04T01:54:15.207000+00:00] nulledvector (id=1500676904272003102)
+    It was a small hot fix patch
+
+[2026-05-04T01:54:20.276000+00:00] nulledvector (id=1500676925532803203)
+    We still in 2.2.0
+
+[2026-05-04T04:01:29.986000+00:00] wysie_ (id=1500708926855970826)
+    I'm working on a dashboard for mnemosyne. https://github.com/wysie/mnemosyne-dashboard
+    [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
+
+[2026-05-04T04:46:48.530000+00:00] wysie_ (id=1500720329255944253)
+    Added screenshots
+
+[2026-05-04T04:47:47.245000+00:00] wysie_ (id=1500720575524507698)
+    It's already working. Let me start a new thread on this so I don't clutter here. <@151598363131904000>
+
+[2026-05-04T05:43:50.475000+00:00] fleety13 (id=1500734681933545585)
+    wysie adding value left and right, cheers mate!
+    [reply to wysie_ msg=1500720329255944253]
+
+[2026-05-04T13:52:06.895000+00:00] wysie_ (id=1500857560025272410)
+    https://discord.com/channels/1053877538025386074/1500722439288520794 It's more or less complete (to what I wanted)! Have a look. Thanks again <@151598363131904000> for making Mnenosyne.
+
+[2026-05-04T13:59:22.052000+00:00] nulledvector (id=1500859385205751818)
+    yoooooooooo thats fire!!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490447053791428718/1500859384916475974/image.png?ex=6a01e0b9&is=6a008f39&hm=fa587e1921190b0b1741d4eee53044bcef8a8a94803e3629ca69b77dc0bec47f&
+
+[2026-05-04T13:59:28.176000+00:00] nulledvector (id=1500859410891800719)
+    tyvm for making this!!
+
+[2026-05-04T14:14:13.767000+00:00] wysie_ (id=1500863125329809561)
+    thanks, lmk if you've any suggestions! thank u for making mnenosyme in the first place!
+
+[2026-05-04T16:06:32.905000+00:00] nulledvector (id=1500891391323279390)
+    Will do!
+    [reply to wysie_ msg=1500863125329809561]
+
+[2026-05-04T17:05:50.190000+00:00] nulledvector (id=1500906311657980087)
+    Yo yo yo! ✨ official blog entry at https://mnemosyne.site/blog/mnemosyne-dashboard/
+    [embed] Introducing the Mnemosyne Dashboard https://mnemosyne.site/blog/mnemosyne-dashboard/
+
+[2026-05-04T17:57:07.904000+00:00] rakaarwaky (id=1500919220525990069)
+    Cool
+    [reply to wysie_ msg=1500708926855970826]
+
+[2026-05-04T19:50:43.930000+00:00] steezkelly (id=1500947809010978912)
+    hey abdii, there's three threads open for mnemosyne, should this be the main active one? also hell yeah integrating the dashboard! time to let my agent know
+
+[2026-05-04T22:35:03.923000+00:00] kohai_ut (id=1500989164819316897)
+    I'm confused by the ubuntu venv instructions on git for install.  I install using it but then hermes still doesn't see it.  I think further instructions are needed to actually complete the install for ubuntu?  I don't want to change my hermes world, so is pip really not the preferred install method for mnemosyne?  I do want the ease of future updating via pip. (this is the PEP 668 issue, I guess with ubuntu)
+
+[2026-05-04T23:29:45.216000+00:00] kohai_ut (id=1501002927559671928)
+    I got it working, I asked hermes.  (duh) It had me deviate from the git instructions and find the python env hermes is already using and install it into that environment so hermes can find it by default.
+    [reply to kohai_ut msg=1500989164819316897]
+
+[2026-05-05T02:24:06.266000+00:00] fleety13 (id=1501046804383273141)
+    I just did a new hermes install on a local machine and everything just clicks, big difference to my first  2 weeks ago where i had to bug fix and patch waiting for upstream fixes and shim everything.  
+    The Mnemosyne setup and config took minutes, no glitches, no bug fixing for hours over several days.  Come a long way fast!  
+    The experience is fantastic
+
+[2026-05-05T11:46:03.506000+00:00] nulledvector (id=1501188224738132029)
+    Yes this is the official hermes community one, the others are the official plugin entry at https://discord.com/channels/1053877538025386074/1496124109766000690 and the other one is Mnemosyne Dashboard, but that's <@329427821208535040> 's own product, I mean we can float around, but this one is Mnemosyne's official hermes support, I also wanted to get our own dedicated Discord server, but I don't know if that would be too much? or it's never too much? 😅
+    [reply to steezkelly msg=1500947809010978912]
+
+[2026-05-05T11:48:03.834000+00:00] nulledvector (id=1501188729430085724)
+    Thank you for the feedback! I also migrated Mnemosyne to a new rig not so long ago and it's working like a charm! everything got migrated correctly and it snapped into place like you say 🙂
+    [reply to fleety13 msg=1501046804383273141]
+
+[2026-05-05T14:23:55.832000+00:00] nulledvector (id=1501227954552836177)
+    ## v2.3: Mnemosyne can now remember (almost) forever 🧠
+    
+    I was using [PlanForge](https://discord.com/channels/1053877538025386074/1498331270566903848) to map out the v2.3 feature roadmap when I caught it. The generated document claimed I was building a dashboard with degradation stats. I don't have a dashboard. My own AI tooling had hallucinated a feature into my plan, and my memory system had no way to flag it as fake.
+    
+    That was the wake-up call.
+    
+    Every memory in Mnemosyne was stored with the same trust level. User statements, tool injections, agent inferences, imported data, all in one bucket. No way to tell what's real.
+    
+    So v2.3 ships two things: degradation that lets memories live forever, and confidence that tells you which ones to trust.
+    
+    How degradation works:
+    
+    Memories age through three tiers. Hot (under 30 days) keeps full detail. Warm (30-180 days) gets LLM-compressed into summaries. Cold (180+ days) gets reduced to key entities and facts by an entity-density scorer. Your user preferences, the stuff with proper nouns, acronyms, and security terms, keys, survives. The filler doesn't.
+    
+    How confidence works:
+    
+    Every memory now carries a veracity tag:
+    
+    🔹 stated (1.0x) — you said it
+    🔹 inferred (0.7x) — the agent guessed it
+    🔹 tool (0.5x) — automation injected it
+    🔹 imported (0.6x) — came from another platform
+    🔹 unknown (0.8x) — unlabeled
+    
+    The recall engine multiplies by these weights. Tool hallucinations and overconfident inferences get deprioritized automatically. No curation work on your end.
+    
+    What shipped:
+    
+    🔹 Three-tier degradation with configurable thresholds
+    🔹 Smart compression using entity-density scoring
+    🔹 Memory confidence with five veracity levels
+    🔹 51 tests, zero regressions
+    🔹 All thresholds via env vars, no config files needed
+    🔹 pip install mnemosyne — v2.3 live on PyPI
+    
+    
+    GitHub (https://github.com/AxDSan/mnemosyne) · Docs (https://docs.mnemosyne.site/) · Full story (https://mnemosyne.site/blog/teaching-mnemosyne-to-remember)
+    [embed] GitHub - AxDSan/mnemosyne: The Zero-Dependency, Sub-Millisecond AI ... https://github.com/AxDSan/mnemosyne
+    [embed] Mnemosyne Documentation https://docs.mnemosyne.site/
+    [embed] How I Taught Mnemosyne to Remember (Almost) Forever https://mnemosyne.site/blog/teaching-mnemosyne-to-remember
+
+[2026-05-05T18:03:21.682000+00:00] nulledvector (id=1501283176130154656)
+    Hope everyone been having a great day so far! I've been working on the docs for the past couple of hours 🙂 - expect an update pretty soon with actual honest comparisons and few more bug/typo fixes be pushed 😉
+
+[2026-05-05T19:41:28.579000+00:00] nulledvector (id=1501307867565916493)
+    # THANK YOU, EVERYONE! 💖🙏
+    
+    We just crossed 100+ stars on Mnemosyne, and I’m honestly a little overwhelmed right now.
+    
+    This isn’t just a number to me. It’s proof that so many of you believe in what we’re building together: a truly private, lightning-fast, zero-dependency memory system for AI agents that feels like it belongs to us. Every single star, fork, comment, and contribution means the world.
+    
+    You didn’t just support a repo. You helped turn an idea into something real, something that’s already powering agents with sub-millisecond memory, sleep cycles, and that beautiful BEAM architecture we all love.
+    
+    Without your belief, your feedback, and your excitement… none of this would exist. You made it feel alive.
+    
+    So thank you. Truly. From one builder to all the others who showed up and said “this matters.”
+    
+    We’re making something special, and we’re only getting started. ❤️
+    Let’s keep accelerating the future together. 🚀
+    [attachment] mnemosyne-100-stars-gh-b.jpg https://cdn.discordapp.com/attachments/1490447053791428718/1501307867297353918/mnemosyne-100-stars-gh-b.jpg?ex=6a0230e8&is=6a00df68&hm=7b11dc133797fbf55d87c01a5279ccc9be0f7c795ba0d73cdaa912bd02a1b625&
+
+[2026-05-05T21:31:46.119000+00:00] kohai_ut (id=1501335623540281389)
+    <@151598363131904000> I've got  a bug I think.  I'll try to DM you details.
+
+[2026-05-05T21:31:59.922000+00:00] nulledvector (id=1501335681434259557)
+    sure thing!
+    [reply to kohai_ut msg=1501335623540281389]
+
+[2026-05-05T23:06:37.806000+00:00] nulledvector (id=1501359496205832192)
+    Fixed at https://github.com/AxDSan/mnemosyne/issues/23
+    [embed] auto_sleep consolidation blocks TUI — post-turn memory sync hangs... https://github.com/AxDSan/mnemosyne/issues/23
+    [reply to kohai_ut msg=1501335623540281389]
+
+[2026-05-05T23:08:04.407000+00:00] nulledvector (id=1501359859436748864)
+    We now have full featured honest comparison on Mnemosyne vs other providers at the docs (at the bottom)
+    [attachment] IMG_3387.png https://cdn.discordapp.com/attachments/1490447053791428718/1501359859373965435/IMG_3387.png?ex=6a01b894&is=6a006714&hm=995132c8d1173da417d025472d2a2c9c34e421b0e81e65311b9c61ae66ad7af9&
+
+[2026-05-06T01:25:43.953000+00:00] fieldparsley (id=1501394502483705916)
+    Allo. May I kindly suggest an idea. The feature I like about Honcho was the dialectic feature, something about time and reasoning with  information... 
+    
+    its late and I dont have the brain power but wanted to put this seed and see what you though.
+
+[2026-05-06T04:46:02.736000+00:00] youhavewhyplayme (id=1501444912913318030)
+    It seems that sleep consolidation doesn't work properly at least for my installation. I found that episodic memories count is always 0 even after several days and working memories count is >50. Even if I run the CLI command "hermes mnemosyne sleep" it still returns
+    ```
+    {
+      "status": "no_op",
+      "message": "No old working memories to consolidate"
+    }
+    ```
+    So I dig deeper with the help of hermes (glm 5.1) and got these:
+    ```
+        Found it! Line 66 is the problem:
+        
+        python
+        beam = BeamMemory(session_id="hermes_default")
+            
+        When you run hermes mnemosyne sleep from the CLI, it creates a BeamMemory with session_id="hermes_default". But sleep() filters by WHERE session_id = ? (line 1939) — so it's only looking for memories belonging to the "hermes_default" session. Your 17 old memories are from sessions like hermes_20260504_224324_d6a91b, not hermes_default.
+        
+        The CLI command defaults to sleep() (session-scoped), not sleep_all_sessions(). You need the --all-sessions flag:
+            
+        hermes mnemosyne sleep --all-sessions
+            
+        That routes to beam.sleep_all_sessions() (line 86), which queries across all sessions. Let me verify the flag exists:
+    ```
+
+[2026-05-06T04:46:41.119000+00:00] youhavewhyplayme (id=1501445073903292416)
+    ```
+        The flag exists. Here's the full picture:
+        
+        Two problems combining to produce the "no_op" result:
+        
+        1. sleep() is session-scoped — it only consolidates working memories where session_id = ? matches the current session. Your 17 old memories are from past sessions (hermes_20260504_*, etc.), not the current one.
+        
+        2. The CLI uses session_id="hermes_default" — which doesn't match any of your actual session IDs. So even if you had old memories "in" that session, there are zero — it's a ghost session.
+        
+        The fix: Run it with the --all-sessions flag:
+            
+        hermes mnemosyne sleep --all-sessions
+            
+        This calls sleep_all_sessions() instead, which queries across all sessions (specifically targeting inactive sessions — ones that aren't the current session — for consolidation). Your 17 stale memories from May 4th should get consolidated.
+    ```
+
+[2026-05-06T04:50:22.891000+00:00] youhavewhyplayme (id=1501446004082348124)
+    It also suggested me to enable `MNEMOSYNE_AUTO_SLEEP_ENABLED=true` in ~/.hermes/.env because
+    ```
+    It triggers every 10 turns when working memory exceeds 50 items, using sleep_all_sessions() to consolidate across all sessions. Without this, old memories from past sessions never get consolidated — the CLI `hermes mnemosyne sleep` defaults to session_id="hermes_default" which is a phantom session with no memories.
+    ```
+
+[2026-05-06T04:50:25.399000+00:00] steezkelly (id=1501446014601658539)
+    ask your agent to push these to github
+
+[2026-05-06T04:50:42.132000+00:00] steezkelly (id=1501446084784947202)
+    all of this information is powerful collectively
+
+[2026-05-06T05:15:50.897000+00:00] youhavewhyplayme (id=1501452413003890709)
+    Done 👍
+    [reply to steezkelly msg=1501446014601658539]
+
+[2026-05-06T09:44:11.198000+00:00] nulledvector (id=1501519942561042622)
+    Ty for the feedback! will definitely keep it on the back of my mind
+    [reply to fieldparsley msg=1501394502483705916]
+
+[2026-05-06T09:44:22.562000+00:00] nulledvector (id=1501519990224977950)
+    <@692504238030323762> reported an issue and it was fixed @ https://github.com/AxDSan/mnemosyne/issues/23
+    [embed] auto_sleep consolidation blocks TUI — post-turn memory sync hangs... https://github.com/AxDSan/mnemosyne/issues/23
+
+[2026-05-06T13:09:45.166000+00:00] donpiedrosavastano (id=1501571674972225710)
+    hello i am mnemosyne biggest fanboiii
+
+[2026-05-06T13:09:50.465000+00:00] donpiedrosavastano (id=1501571697197846688)
+    <a:peepoPants:1088670076313538580>
+
+[2026-05-06T23:54:21.806000+00:00] nulledvector (id=1501733896557953076)
+    Yoo!! Thank you for your support! ✨
+
+[2026-05-07T00:02:00.050000+00:00] nulledvector (id=1501735818572861540)
+    # Mnemosyne Update - May 7
+    
+    Guys my bad I known I've been  quiet today because I have been heads down working on BEAM benchmark numbers at 1M and 10M scale, plus pushing overall Mnemosyne performance. The goal is simple: better scores, fewer compromises.
+    
+    Shipped 4 bug fixes to main today. All commented and closed.
+    
+    #27 - Hermes provider schema now correct defaults vector_type to int8 (was float32, mismatching core since v2.1). One line, zero breaking changes.
+    
+    #26 - README Ubuntu install instructions fixed. No more separate .venv — install directly into the Hermes runtime venv to avoid NumPy/sqlite-vec ABI crashes across Python versions.
+    
+    #25 - mnemosyne sleep CLI was using a phantom "default" session ID, so it always returned no_op even with piles of old working memories. Now calls sleep_all_sessions() and actually consolidates.
+    
+    #24 - Auto-injected prefetch was dumping all 8 recall results into prompts regardless of relevance. Added a threshold filter to stop context pollution from low-quality matches.
+    
+    ### What is next:
+    
+    I specced out the roadmap for Mnemosyne v2.4. Groundbreaking changes coming that will unlock more performance and push the system harder. Details soon.
+    
+    ### Mnemosyne Cloud:
+    
+    Based on community feedback, we are moving forward with Mnemosyne Cloud. Same product, same architecture, same performance — just hosted for people who do not want to handle infrastructure.
+    
+    What Cloud provides:
+    - Zero setup. No SQLite compilation, no Python version wrestling, no venv headaches
+    - Managed backups and replication. Your memories survive even if your laptop dies
+    - Automatic scaling. Cloud extraction uses dedicated LLM capacity, no rate limit throttling
+    - Team sharing. Multiple agents, same memory graph, real-time sync
+    - SOC-2 compliance, encryption at rest, audit logs for enterprise deployments
+    [attachment] IMG_3395.jpg https://cdn.discordapp.com/attachments/1490447053791428718/1501735818023276554/IMG_3395.jpg?ex=6a01c537&is=6a0073b7&hm=ccd6c54907a576c6ef05c09552abc8ef7f0aecd41b6514e1941887e81308d9dd&
+
+[2026-05-07T00:02:29.172000+00:00] nulledvector (id=1501735940719382621)
+    Up to mention.... The local version stays exactly as it is. Fully open source, fully self-hosted, fully free. Cloud is for convenience, not lock-in 👌 . You can export from Cloud and run local anytime. No data traps.
+    
+    My commitment to open source stays the same. I am fully committed to this project. No magic walls, no bait and switch.
+
+[2026-05-07T04:23:20.653000+00:00] andersmmg (id=1501801587788742686)
+    Does that mean there will be a "first-party" webui available?
+
+[2026-05-07T10:13:23.670000+00:00] floory (id=1501889680826962055)
+    how are yall's experience for people actually using this? went from honcho (too much compute) --> hindsight (kept having issues on nixos) --> openviking (it worked but wasn't optimal) --> holographic which is what i'm using rn but it still doesn't feel great so i feel reluctant switching memory providers again
+
+[2026-05-07T11:04:27.294000+00:00] nulledvector (id=1501902530597359787)
+    Yup!
+    [reply to andersmmg msg=1501801587788742686]
+
+[2026-05-07T11:08:17.029000+00:00] nulledvector (id=1501903494175654018)
+    There has been a lot of great feedback from the community, I would let them write about it here and share their experience as the day goes by, as I'm he creator, obviously I'm dogfooding myself lol, and I will be biased toward my software, there's one here: 👇
+    [reply to floory msg=1501889680826962055]
+
+[2026-05-07T11:08:25.118000+00:00] nulledvector (id=1501903528103514112)
+    ☝️
+    [reply to ufonik88 msg=1496516453199777957]
+
+[2026-05-07T11:19:22.784000+00:00] floory (id=1501906286554648769)
+    i mean, mem0 isn't a great solution but hell, how much more harm can trying one more plugin do ahaha
+
+[2026-05-07T11:25:40.969000+00:00] ufonik88 (id=1501907872777506827)
+    <@843913220867096606>  I've been running it for just over a week now and I've been VERY happy with it! It's so quick and automated, and I've also got other skills and crons that work really well with it for things like budgets and finances (which I have running).
+    
+    I've got a Bi-Daily sync setup as well, where Hermes syncs the local memory to Obsidian in the cloud for me, so if I ever did lose the local memory from HDD corruption or something, I have it ready to go in 2mins again but for day to day tasks, having that insta local memory is killer.
+    
+    Each to their own, but I for one am seriously impressed with it
+
+[2026-05-07T11:29:21.889000+00:00] nulledvector (id=1501908799382884382)
+    Go for it! Be the judge let us know for sure!
+    [reply to floory msg=1501906286554648769]
+
+[2026-05-07T11:30:34.838000+00:00] nulledvector (id=1501909105353429022)
+    we don't have a holographic importer, so handle your memory import carefully, I heard someone had an issue with a provider in the past, and lost their memories unfortunately as they became corrupted on their end... 🙁
+
+[2026-05-07T11:32:49.327000+00:00] floory (id=1501909669440917615)
+    honestly my memory is fragmented all over the place from trying out all the different plugins so i'm not too concerned. i appreciate the warning though, would probably save my life otherwise 😆
+
+[2026-05-07T11:59:18.194000+00:00] fleety13 (id=1501916333632127146)
+    I was using PLUR for memory for about a week, did work to configure it, but it wasn't hitting. 
+    Within a day of configuring Mnemosyne alongside LCM, context and memory began doing what i hoped they would.  First thing i did was setup Mnemosyne on my new node 🥃
+    [reply to floory msg=1501909669440917615]
+
+[2026-05-07T12:02:03.228000+00:00] floory (id=1501917025834893504)
+    awesome. was procrastinating it but seems like it is indeed worth giving it a shot
+
+[2026-05-07T12:02:26.702000+00:00] floory (id=1501917124292251732)
+    i've also set LCM up but it didn't fix the issues i was having </3
+
+[2026-05-07T12:31:48.817000+00:00] nicoloboschi (id=1501924515137982635)
+    have you updated Hindsight 0.6.0? we fixed a bunch of problems on NixOS
+    [reply to floory msg=1501889680826962055]
+
+[2026-05-07T12:32:32.540000+00:00] floory (id=1501924698525667408)
+    not sure. i tried it last week if it helps
+
+[2026-05-07T14:40:17.293000+00:00] nicoloboschi (id=1501956846829965433)
+    we released 0.6.0 this week - do you remember what issues you had ?
+    [reply to floory msg=1501924698525667408]
+
+[2026-05-07T14:42:01.586000+00:00] floory (id=1501957284266508349)
+    "module not found: hindsight" somethnig like that from python
+
+[2026-05-07T14:42:18.169000+00:00] floory (id=1501957353820655626)
+    i'll try it again if i'm not satisfied with this one
+
+[2026-05-07T15:53:57.965000+00:00] floory (id=1501975388472086623)
+    memory so good it feels like the agent has too much continuity between conversations
+
+[2026-05-07T17:36:12.376000+00:00] nulledvector (id=1502001118056681482)
+    # We've grown enough to move out!
+    
+    When I started building Mnemosyne, it lived inside the Hermes community. That was the right home for a newborn project. But something unexpected happened: you showed up. Contributors, testers, people building real things with Mnemosyne. People who care about local-first AI memory as much as I do.
+    
+    We're not a side project anymore. We're a community with our own voice, our own roadmap, and our own way of doing things. So we're moving to our own space.
+    
+    ## What changes: 
+    Nothing about the project. Same code, same mission, same stubborn belief that your AI's memory should live on your machine. What changes is that we now have room to grow without bumping into walls.
+    
+    ## What stays: 
+    The Hermes integration isn't going anywhere. Mnemosyne still works beautifully with Hermes Agent. This isn't a breakup, it's just getting our own apartment.
+    
+    The new server is ready (althought some rough edges still need to be sanded down). Same Mnemosyne branding, same energy, same me answering questions around the clock. Plus actual channels that make sense, roles that reflect what people actually do here, and space for the things we haven't thought of yet, more control for us between what we can do or not do within Discord.
+    
+    Come make it ours!
+    
+    https://discord.gg/29ZszXTgY3
+    [attachment] RF08CLh90bOFV-wJWJtmd_Yc5PBuEV.jpg https://cdn.discordapp.com/attachments/1490447053791428718/1502001117771333835/RF08CLh90bOFV-wJWJtmd_Yc5PBuEV.jpg?ex=6a02138c&is=6a00c20c&hm=8959cd6596526daebc38e0d3bd1ba196eef912bdd88949343279ad8f0fb2dad2&
+

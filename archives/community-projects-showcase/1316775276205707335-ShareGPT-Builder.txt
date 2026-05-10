@@ -1,0 +1,121 @@
+# Thread 'ShareGPT-Builder' in forum #community-projects-showcase
+# thread_id=1316775276205707335 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:52.866385+00:00
+
+[2024-12-12T14:34:50.349000+00:00] not_lain (id=1316775276205707335)
+    sharegpt is an app interface that helps with manually adding chat based data
+    ShareGPT supports 2 chat format (sft and dpo)
+    [attachment] 393539268-5dc8ce97-93e5-4b95-88fd-abf1699c31f7.png https://cdn.discordapp.com/attachments/1316775276205707335/1316777103936454706/393539268-5dc8ce97-93e5-4b95-88fd-abf1699c31f7.png?ex=6a01eabe&is=6a00993e&hm=8ce8796c0bd7652c8a44acc398c3750684dd3221e933a6210bfba1e99582ee34&
+    [attachment] 393539483-bee93450-cb97-4c60-be2c-6e88f06ad93b.png https://cdn.discordapp.com/attachments/1316775276205707335/1316777104246968361/393539483-bee93450-cb97-4c60-be2c-6e88f06ad93b.png?ex=6a01eabe&is=6a00993e&hm=519f64d8819a12b640d2a6d5f7ce7b4c127bb86ebbf5b92bf44f4018ce8f239a&
+
+[2024-12-12T14:42:11.063000+00:00] not_lain (id=1316777124694200481)
+    cc <@387972437901312000>  
+    pr can be found at https://github.com/teknium1/ShareGPT-Builder/pull/7 
+    currently i have included the following in my implementation : 
+    * automatically push data to huggingface in a standard format (might need to switch from user assistant but would love your input on this) (also this implementation allows people to push data asynchronously meaning multiple people can upload their annotated data at the same time safely) 
+    * allow multi-round dpo chat (something i came up with that looks promising) 
+    * static system prompt (you can clear all other fields and keep the system prompt static or you can manually give it a default value in the gradio script) 
+    * some minor checks that will tell the user if he is trying to push a wrong data (example sft chat does end with a user prompt)
+    [embed] switch to gradio implementation and push data automatically to the ... https://github.com/teknium1/ShareGPT-Builder/pull/7
+
+[2024-12-13T00:28:51.180000+00:00] teknium (id=1316924764685733930)
+    merged! ❤️
+    [reply to not_lain msg=1316777124694200481]
+
+[2024-12-13T00:28:57.377000+00:00] teknium (id=1316924790677962803)
+    You mentioned hosting on HF
+
+[2024-12-13T00:29:06.665000+00:00] teknium (id=1316924829634527355)
+    What do I need to do to set it up?
+
+[2024-12-13T06:36:57.332000+00:00] teknium (id=1317017400721543228)
+    also what do you mean when you say `(might need to switch from user assistant but would love your input on this) `
+
+[2024-12-13T06:42:25.340000+00:00] teknium (id=1317018776486674463)
+    https://x.com/Teknium1/status/1867459577471807999
+    [embed] Teknium (e/λ) (@Teknium1) on X https://twitter.com/Teknium1/status/1867459577471807999
+
+[2024-12-13T08:27:50.995000+00:00] teknium (id=1317045308206612480)
+    Oh also - do you know if this PR will mess with your updates? https://github.com/teknium1/ShareGPT-Builder/pull/6
+    [embed] Added some form submission visual validation and reset on SFT turns... https://github.com/teknium1/ShareGPT-Builder/pull/6
+
+[2024-12-13T12:53:55.687000+00:00] not_lain (id=1317112268978131005)
+    you only need to 
+    * setup your HF token 
+    * change these 2 lines
+    ```py
+    sft_scheduler = ParquetScheduler(repo_id="not-lain/sft", every=every)
+    dpo_scheduler = ParquetScheduler(repo_id="not-lain/dpo", every=every)
+    ```
+    * and for this line 
+    ```py
+    contributor_username = whoami()["name"]
+    ```
+    you can either use gradio's LoginButton or let the user manually type their username, or get rid of that field entirely
+    
+    I can help by setting an example huggingface space for you and i'll share it later
+    [reply to teknium msg=1316924790677962803]
+
+[2024-12-13T12:54:14.489000+00:00] not_lain (id=1317112347839696906)
+    None at all you can proceed to merging that one
+    [reply to teknium msg=1317045308206612480]
+
+[2024-12-13T12:58:12.385000+00:00] not_lain (id=1317113345647706172)
+    > also what do you mean when you say `(might need to switch from user assistant but would love your input on this) `
+    I noticed that sharegpt uses this format : 
+    `[{"user": ..., "content":...} ,{"gpt"...,"content":... } ]`
+    but mine uses 
+    `[{"user": ..., "content":...} ,{"assistant"...,"content":... } ]`
+    which can easily changed if you want to
+
+[2024-12-13T13:12:05.844000+00:00] teknium (id=1317116841428258876)
+    ah sharegpt actually uses the format from: human and from: gpt
+    and value instead of content
+
+[2024-12-13T13:12:11.632000+00:00] teknium (id=1317116865704890440)
+    is it possible to support both?
+
+[2024-12-13T14:18:31.790000+00:00] not_lain (id=1317133559697506345)
+    yess, 100% i'll make a pr later tonight to fix this 🫡
+
+[2024-12-16T17:21:36.201000+00:00] not_lain (id=1318266795253039257)
+    done in <https://github.com/teknium1/ShareGPT-Builder/pull/8> , feel free to review it whenever you are free.
+    [reply to teknium msg=1317116865704890440]
+
+[2024-12-16T17:28:41.811000+00:00] not_lain (id=1318268580391030887)
+    **up next** : 
+    * huggingface space : to host the application and allow for contributions.
+    * considering support for vqa compatible dataset (example https://huggingface.co/datasets/HuggingFaceM4/Docmatix) still think their dataset not structured good enough, also this is an optional feature
+    
+    let me know what you think
+
+[2024-12-18T22:33:40.254000+00:00] teknium (id=1319070105354899518)
+    Thanks looking now!
+    [reply to not_lain msg=1318266795253039257]
+
+[2024-12-18T22:34:12.330000+00:00] teknium (id=1319070239891132556)
+    merged ❤️
+
+[2024-12-26T15:27:33.542000+00:00] not_lain (id=1321861973717028955)
+    hi <@387972437901312000> 
+    I have created a sample dataset creator at https://huggingface.co/spaces/phxia/dataset-builder 
+    I think this would be a perfect fit for what we have discussed, 
+    feel free to fiddle with the space (give it 1 minute till it synchronizes the data) and let me know if you have any feedback 
+    
+    feel free to create an empty space in your name or under any of your oganizations and share the url with me and i'll create a pr for it shortly.
+    [embed] Dataset Builder - a Hugging Face Space by phxia https://huggingface.co/spaces/phxia/dataset-builder
+
+[2025-01-03T18:53:41.508000+00:00] not_lain (id=1324812951651094559)
+    friendly tagging <@387972437901312000>
+    try to inspect the demo app above and let me know if this works well with what you have in mind
+
+[2025-01-03T21:03:41.696000+00:00] teknium (id=1324845668010823721)
+    One thing I'd add is clear label on the chat messages which is user and which is assistant
+    [reply to not_lain msg=1318268580391030887]
+
+[2025-01-03T21:03:52.333000+00:00] teknium (id=1324845712625893381)
+    not completely clear to me
+
+[2025-01-04T08:48:31.576000+00:00] not_lain (id=1325023044623929404)
+    thanks for the feedback, i'll get to it 🫡
+

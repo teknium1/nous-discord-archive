@@ -1,0 +1,10 @@
+# Thread 'CONVOY PROTOCOL v3.1' in forum #community-projects-showcase
+# thread_id=1500033557064847411 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:30.951369+00:00
+
+[2026-05-02T07:17:49.280000+00:00] mrtrenchtrucker (id=1500033557064847411)
+    https://github.com/MrTrenchTrucker/CONVOY-PROTOCOL-v3.1
+    Architectural Specification for Multi-Agent LLM Communication
+    [attachment] CONVOY_Protochol.png https://cdn.discordapp.com/attachments/1500033557064847411/1500033558192848916/CONVOY_Protochol.png?ex=6a022b5d&is=6a00d9dd&hm=37e3f6be53714ca8750ca60ce470a40d1259b2c5a52713199f4304eff45deae6&
+    [embed] GitHub - MrTrenchTrucker/CONVOY-PROTOCOL-v3.1: Architectural Specif... https://github.com/MrTrenchTrucker/CONVOY-PROTOCOL-v3.1
+

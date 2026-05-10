@@ -1,0 +1,14 @@
+# Thread 'Custom Fonts and Colors for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1501311220404326471 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:04.110998+00:00
+
+[2026-05-05T19:54:47.958000+00:00] rubengarciajr (id=1501311220404326471)
+    Hello friends, I'm visually impaired and the fonts on hermes dashboard are too small for me to see correctly. So i created this plugin to help anyone struggling with the same issue. 
+    
+    https://github.com/rubengarciajr/hermes-fonts-colors
+    [attachment] fontscolors.png https://cdn.discordapp.com/attachments/1501311220404326471/1501311220626489524/fontscolors.png?ex=6a018b48&is=6a0039c8&hm=eff81cd5bf979b7c80959e852dc60eefd37091c484016e9d9b802f8344a1efc5&
+    [embed] GitHub - rubengarciajr/hermes-fonts-colors: Hermes dashboard plugin... https://github.com/rubengarciajr/hermes-fonts-colors
+
+[2026-05-06T07:42:57.082000+00:00] andersmmg (id=1501489432707076127)
+    Ooh yes, this has been my biggest issue with the dashboard
+

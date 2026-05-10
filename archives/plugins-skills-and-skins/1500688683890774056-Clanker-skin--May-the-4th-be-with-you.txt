@@ -1,0 +1,36 @@
+# Thread 'Clanker skin: May the 4th be with you!' in forum #plugins-skills-and-skins
+# thread_id=1500688683890774056 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:05.665958+00:00
+
+[2026-05-04T02:41:03.687000+00:00] tzep123 (id=1500688683890774056)
+    I created this Confederacy of Independent Systems / B1 battle droid themed skin to celebrate May the 4th.
+    
+    Install with:
+    ```
+    curl -fsSL https://raw.githubusercontent.com/pzet123/hermes-cli-skin-clanker/main/clanker.yaml \
+      -o ~/.hermes/skins/clanker.yaml
+    ```
+    
+    Enjoy!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500688683890774056/1500688684079382619/image.png?ex=6a01ea7f&is=6a0098ff&hm=f2c50b7f9a43c7616fb07cb6504d980f3599e81a9f162a582fbd8e871e807c77&
+
+[2026-05-04T02:41:37.715000+00:00] tzep123 (id=1500688826614681673)
+    Repo here: https://github.com/pzet123/hermes-cli-skin-clanker/tree/main
+    [embed] GitHub - pzet123/hermes-cli-skin-clanker https://github.com/pzet123/hermes-cli-skin-clanker/tree/main
+
+[2026-05-04T02:42:07.110000+00:00] tzep123 (id=1500688949906243755)
+    [attachment] screenshot.png https://cdn.discordapp.com/attachments/1500688683890774056/1500688949289684992/screenshot.png?ex=6a01eabe&is=6a00993e&hm=16b3a8b17a1c1c334c190a7ce883c54d6aa275c5bd0d72ee078f4f8fea7f2278&
+
+[2026-05-04T04:00:14.940000+00:00] steezkelly (id=1500708612090368091)
+    roger roger, may the fourth be with you from EDT timezone!
+
+[2026-05-04T12:43:20.701000+00:00] tzep123 (id=1500840253513142336)
+    <:Prayge:1151275585000185968>
+
+[2026-05-08T16:43:32.923000+00:00] knox6969 (id=1502350254215921744)
+    Gonna use this, pretty cool! Thanks
+
+[2026-05-10T18:36:01.596000+00:00] tzep123 (id=1503103335933284637)
+    My pleasure 😃
+    [reply to knox6969 msg=1502350254215921744]
+

@@ -1,0 +1,21 @@
+# Thread 'AVP Trust Enforcement Skill for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1490674037293060116 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:46.671213+00:00
+
+[2026-04-06T11:26:25.875000+00:00] avpsdk1 (id=1490674037293060116)
+    Hey everyone, just shipped an AVP trust enforcement skill for Hermes.
+    
+    Hermes agents are great at running autonomously. But when your agent starts delegating to other agents, hiring from marketplaces, or calling third-party tools, how does it know which ones to trust?
+    
+    This skill gives your Hermes agent a trust layer. Before delegating a task, it checks the agent's reputation score. Low score, task blocked. High score, proceeds and logs an attestation.
+    
+    Built on AgentVeil Protocol: EigenTrust over peer attestations, sybil detection, real-time enforcement.
+    
+    Install:
+    cp -r skills/avp-trust-enforcement ~/.hermes/skills/
+    
+    Skill: github.com/creatorrmode-lead/avp-sdk/blob/main/skills/avp-trust-enforcement/SKILL.md
+    
+    Full docs and live demo: agentveil.dev
+    [attachment] 1.png https://cdn.discordapp.com/attachments/1490674037293060116/1490674037498712134/1.png?ex=6a01bce1&is=6a006b61&hm=74fe731e3016b64ebe5e04d02b6d57ee139d5fc68a1a1cbe2ae911ef085f74c3&
+

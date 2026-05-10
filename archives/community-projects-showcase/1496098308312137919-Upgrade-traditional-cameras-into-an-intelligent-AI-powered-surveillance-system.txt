@@ -1,0 +1,14 @@
+# Thread 'Upgrade traditional cameras into an intelligent AI-powered surveillance system' in forum #community-projects-showcase
+# thread_id=1496098308312137919 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:52.170145+00:00
+
+[2026-04-21T10:40:32.864000+00:00] autumnn5389 (id=1496098308312137919)
+    https://github.com/NousResearch/hermes-agent/pull/13441
+    [embed] feat: add ai-camera skill — turn any camera into AI-powered visio... https://github.com/NousResearch/hermes-agent/pull/13441
+
+[2026-04-21T10:41:20.766000+00:00] ee.dd (id=1496098509227556896)
+    Please do not tag mods unless it is urgent
+
+[2026-04-21T10:41:45.551000+00:00] autumnn5389 (id=1496098613183647794)
+    thanks bro
+

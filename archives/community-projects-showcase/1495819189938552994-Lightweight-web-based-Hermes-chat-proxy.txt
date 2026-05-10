@@ -1,0 +1,164 @@
+# Thread 'Lightweight web-based Hermes chat proxy' in forum #community-projects-showcase
+# thread_id=1495819189938552994 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:54.649361+00:00
+
+[2026-04-20T16:11:25.858000+00:00] lsof (id=1495819189938552994)
+    I wanted a way to have smooth handoffs of sessions from computer to mobile, so I built a quick web-based proxy that does streaming chat via the Hermes API server.
+    
+    Still doing some dogfooding, but it's been working pretty well for me. Take a look, let me know what you think.
+    
+    GitHub https://github.com/XVVH/hermes-proxy
+    [attachment] screenshot.png https://cdn.discordapp.com/attachments/1495819189938552994/1495819190186148072/screenshot.png?ex=6a01ffad&is=6a00ae2d&hm=87b1ba0154f49b61e59ad784a195ea08fba5c0351b4841247c4fb38bc64edec7&
+    [embed] GitHub - XVVH/hermes-proxy: Lightweight streaming chat proxy for he... https://github.com/XVVH/hermes-proxy
+
+[2026-04-20T16:23:10.979000+00:00] amazon1148 (id=1495822147430518926)
+    Thank-you so much. I asked Kimi-K2.5 for a code review. 
+    
+    ---
+    🔴 Important (Security/Reliability)
+    1. Fixed PBKDF2 Salt ⚠️  
+    The salt is hardcoded (b'hermes-proxy-signing-key'). Same password = same key across all deployments.  
+    Fix: Generate random salt at first startup, store alongside .env.
+    2. No Per-User Session Isolation ⚠️  
+    Single-user by design, but authenticated users can access any session ID in the DB.  
+    Fix: Scope session lookups to a user identifier if going multi-user.
+    3. Unbounded Memory Growth ⚠️  
+    browser_sessions dict grows forever (no TTL/LRU). Long-running servers may OOM.  
+    Fix: Add functools.lru_cache or TTL eviction.
+    4. Broad Exception Handling ⚠️  
+    except Exception masks real errors as "Invalid JSON".  
+    Fix: Catch specific exceptions (json.JSONDecodeError, ValidationError).
+    5. CSRF on Logout (Low risk)  
+    POST /auth/logout has no CSRF token. Mitigated by SameSite=Strict, but worth adding.
+    ---
+    🟡 Nice-to-Have (Enhancements)
+    6. SQLite WAL Mode  
+    PRAGMA journal_mode=WAL for better concurrent reads (if Hermes enables it).
+    7. ETag for Static Files  
+    Improve caching with Starlette's ETag middleware.
+    8. Granular HTTP Timeouts  
+    Use httpx.Timeout(connect=10, read=300) instead of single 300s timeout.
+    9. Native EventSource  
+    Replace manual SSE parsing with EventSource API for cleaner reconnection logic.
+    10. HTTPS Enforcement  
+    Fail fast if secure=True cookie flag is set but running HTTP (dev mode detection).
+    ---
+    ✅ What's Done Well
+    - ✅ HMAC-signed stateless cookies (PBKDF2, 100k iterations)
+    - ✅ Rate limiting (5 attempts / 60s)
+    - ✅ Security headers (CSP, X-Frame-Options, etc.)
+    - ✅ SRI hashes on CDN deps
+    - ✅ DOMPurify XSS protection
+    - ✅ Session-lost detection UX
+
+[2026-04-20T16:25:04.092000+00:00] lsof (id=1495822621860823171)
+    Note that some of these are specifically called out in the readme (HTTPS, not intended for multi-user)
+    [reply to amazon1148 msg=1495822147430518926]
+
+[2026-04-20T16:25:44.323000+00:00] lsof (id=1495822790602002563)
+    The salt was supposed to have been fixed, will review
+
+[2026-04-20T16:26:02.747000+00:00] lsof (id=1495822867877855263)
+    Thanks for taking a look
+
+[2026-04-20T16:26:46.172000+00:00] amazon1148 (id=1495823050015375511)
+    I can't tell you how excited I am to use this. Sorry about the miss in the README.md.
+
+[2026-04-20T16:45:54.590000+00:00] gluedmosquito (id=1495827866829721631)
+    thank you <@585455964854026240>
+
+[2026-04-20T17:32:15.032000+00:00] lsof (id=1495839528848593099)
+    <@1070940876374806548> working on some fixes now, will have it pushed this afternoon. Some of these are a bit of a bridge too far for the scope of the project tho lol.
+
+[2026-04-20T17:48:03.577000+00:00] lsof (id=1495843507334549705)
+    Fixes pushed for PBKDF fixed salt, added 30-day TTL to session list, fixed `Invalid JSON` error handling. Also made a quick change to the 'session lost' banner to not show on first login.
+
+[2026-04-21T04:47:13.299000+00:00] amazon1148 (id=1496009390891864085)
+    A beautiful thing
+    [attachment] IMG_5287.png https://cdn.discordapp.com/attachments/1495819189938552994/1496009390929608715/IMG_5287.png?ex=6a020811&is=6a00b691&hm=c3e2839f2baea03bd4598a3b8f9636c1ce4606487fc88378314d5e77a0604846&
+
+[2026-04-21T15:39:16.867000+00:00] lsof (id=1496173487029620888)
+    New updates pushed:
+    
+    - Session search (FTS5, snippets, scroll-to-anchor)
+    - Session rename (proxy_meta.db, double-click inline edit)
+    - Copy button on code blocks
+    - Three desktop bugs fixed (new session delay, search results dismissed by stream, textarea jitter)
+    - Four mobile bugs fixed (search input type, horizontal scroll blowout, code block layout, iOS zoom retention on search result tap)
+
+[2026-04-22T04:55:19.650000+00:00] gluedmosquito (id=1496373818661539921)
+    sorry my agent made a PR before finishing everything, i'm adding a mini plugin engine to keep your philosophy but add features if needed like upload media, the pr should be removed soon then when everything works correctly i'll do it again <@585455964854026240>
+
+[2026-04-22T07:05:39.513000+00:00] gluedmosquito (id=1496406617544065164)
+    fully tested i'm pushing rn and you'll receive a PR i added a light theme plugin (helpful with projectors)
+
+[2026-04-22T12:45:02.828000+00:00] lsof (id=1496492027477491844)
+    Thanks, will take a look when I get a chance
+    [reply to gluedmosquito msg=1496406617544065164]
+
+[2026-04-23T22:50:51.707000+00:00] gluedmosquito (id=1497006873591681188)
+    this is my version, i don't want to spam you with PRs 
+    
+    https://github.com/slapash/hermes-proxy
+    [embed] GitHub - slapash/hermes-proxy: Lightweight streaming chat proxy for... https://github.com/slapash/hermes-proxy
+
+[2026-04-24T00:34:12.587000+00:00] lsof (id=1497032881967464511)
+    I saw it. Sorry I’ve been grinding on work stuff.
+    [reply to gluedmosquito msg=1497006873591681188]
+
+[2026-04-24T00:35:46.774000+00:00] gluedmosquito (id=1497033277016375366)
+    don't be sorry it's normal i just wanted to share it with you so you could go at your own pace
+
+[2026-04-24T00:36:55.087000+00:00] gluedmosquito (id=1497033563541864578)
+    currently i'm satisfied with it so i'm going to stop for a while too to focus on work i've been using work time to play with hermes but now i'm too much behind T_T
+    [reply to lsof msg=1497032881967464511]
+
+[2026-04-24T00:37:13.883000+00:00] lsof (id=1497033642378268824)
+    I feel that 100% lol
+
+[2026-04-24T00:37:18.457000+00:00] gluedmosquito (id=1497033661563015248)
+    hope that it helps and if you need help let me know
+
+[2026-04-24T00:37:29.790000+00:00] gluedmosquito (id=1497033709096800416)
+    ah i might add loin with usr etc later
+
+[2026-04-24T00:37:45.598000+00:00] gluedmosquito (id=1497033775400488992)
+    but i need to figure out how to manage memory for multiple users without hindsight or honcho
+
+[2026-04-24T00:38:00.620000+00:00] lsof (id=1497033838407454951)
+    I did a first pass through your changes, just haven’t had the brain space for a proper review
+
+[2026-04-24T00:38:54.460000+00:00] gluedmosquito (id=1497034064228651229)
+    it's ok take your time and if you prefer the current version on my repo gives more plugin hooks
+
+[2026-04-24T00:39:31.093000+00:00] gluedmosquito (id=1497034217878589521)
+    and a attach image etc
+
+[2026-04-24T00:40:26.984000+00:00] gluedmosquito (id=1497034452302303353)
+    there are i think 9 plugins i'm not using all of them
+
+[2026-04-24T00:41:35.084000+00:00] gluedmosquito (id=1497034737934532681)
+    file drop, image paste, light theme, slash commands (that i'm currently using and fully tested)
+
+[2026-04-24T00:44:47.378000+00:00] lsof (id=1497035544474161285)
+    The images one is something I need to dig into. I opted to not implement it myself as starting to get into MIME handling was getting messy.
+
+[2026-04-24T00:47:23.139000+00:00] gluedmosquito (id=1497036197783015524)
+    i didn't code it myself but it works
+
+[2026-04-24T00:47:37.814000+00:00] gluedmosquito (id=1497036259334426675)
+    the preview doesn't though
+
+[2026-04-28T18:16:46.739000+00:00] gluedmosquito (id=1498749837724880966)
+    did a little tauri wrapper, it still relies on the webapp for now, but with desktop plugins it can give access to certain things on your laptop for hermes remotely
+    [attachment] image.png https://cdn.discordapp.com/attachments/1495819189938552994/1498749837217108090/image.png?ex=6a021d0e&is=6a00cb8e&hm=4681a40942018cbbb5e6a981b71aa56847ba64cfd2c883b6f7aa27e5b29def78&
+
+[2026-04-28T18:25:48.668000+00:00] gluedmosquito (id=1498752110739853343)
+    <@585455964854026240> i'll release it soon but idk if it will be helpful to you
+
+[2026-04-28T18:27:11.366000+00:00] lsof (id=1498752457600401439)
+    I’m gonna stick to web based to be platform agnostic, appreciate it tho. Was actually working through your light mode PR earlier.
+
+[2026-04-28T18:37:10.518000+00:00] gluedmosquito (id=1498754970625904763)
+    should i send another PR with current version ? it has more plugins ?
+

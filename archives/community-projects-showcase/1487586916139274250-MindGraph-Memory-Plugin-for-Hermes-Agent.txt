@@ -1,0 +1,52 @@
+# Thread 'MindGraph Memory Plugin for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1487586916139274250 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:57.372737+00:00
+
+[2026-03-28T22:59:18.836000+00:00] shan.rizvi (id=1487586916139274250)
+    Built a plugin that gives Hermes agents persistent semantic graph memory across sessions, using the new lifecycle hooks from v0.5.0.
+    
+    **What it does:**
+    When you install this plugin, your agent automatically gets:
+    - Session context at conversation start — active goals, open decisions, governance policies, weak claims from your knowledge graph
+    - Per-turn semantic retrieval — score-gated, so it only injects context when it's actually relevant to what you're talking about
+    - All injected ephemerally (no prompt cache breakage)
+    
+    **Install:**
+    pip install hermes-mindgraph-plugin
+    or
+    hermes plugins install shuruheel/hermes-mindgraph-plugin
+    
+    Then set MINDGRAPH_API_KEY in ~/.hermes/.env and you're done. The plugin is auto-discovered, no config needed. You can get it for free at https://mindgraph.cloud/
+    
+    **How it works under the hood:**
+    Three hooks — on_session_start (opens a MindGraph session, pre-fetches goals/decisions), pre_llm_call (returns context dict for ephemeral injection), on_session_end (closes session). Every API call is wrapped in try/except so a MindGraph failure never breaks your conversation.
+    
+    This is also a reference for anyone wanting to build memory plugins on the new hook system — the whole thing is ~140 lines.
+    
+    GitHub: https://github.com/shuruheel/hermes-mindgraph-plugin
+    PyPI: https://pypi.org/project/hermes-mindgraph-plugin/
+    MindGraph: https://mindgraph.cloud
+
+[2026-03-28T23:22:56.626000+00:00] teknium (id=1487592862781542570)
+    Welcome, thanks for sharing!
+
+[2026-03-31T05:19:20.930000+00:00] shan.rizvi (id=1488407330784678071)
+    Major improvements and fixes to the plugin, SDK, and server today. 
+    
+    - The plugin has hooks, tools, instructions all-in-one now (sorry the first version was a bit rushed and didn't have everything from my local ad-hoc integration)
+    
+    - Expanded the graph schema for Entities to include node and edge types for Person, Organization, Event, Place, and Nation - it builds a social graph now! 
+    
+    - Optimized query performance (ongoing work)
+    
+    Would appreciate any feedback or help in testing and finding issues.
+
+[2026-04-04T00:36:44.592000+00:00] shan.rizvi (id=1489785762210648257)
+    Updated as a Memory Provider plugin. Optimized for BM25 FTS now for fast retrieval. Does anyone want to work on this with me?!
+
+[2026-04-04T02:11:28.874000+00:00] shan.rizvi (id=1489809603817377815)
+    Simplified tool surface, and other optimizations.
+
+[2026-04-04T20:16:52.196000+00:00] shan.rizvi (id=1490082750827335871)
+    Entity resolution and node deduplication live. During ingestion and periodically.
+

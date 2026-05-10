@@ -1,0 +1,21 @@
+# Thread 'PR #8979 feat(memory): add MemOS memory provider plugin' in forum #plugins-skills-and-skins
+# thread_id=1494625406459052095 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:26.024226+00:00
+
+[2026-04-17T09:07:45.697000+00:00] richie.hong (id=1494625406459052095)
+    We have some thoughts about Hermes's memory improvement, and we already submited a lite and sweet PR for a while, we'll appreciate it if you have time to check it out 🤠
+    
+    ## What we provides:
+    * Server-side memory extraction
+    * Semantic search
+    * Preference management
+    * Multi-agent memory isolation capabilities
+    
+    By integrating the MemOS Platform, Hermes can maintain persistent, cross-session knowledge and personalize user experiences effectively.
+    
+    https://github.com/NousResearch/hermes-agent/pull/8979
+    [embed] feat(memory): add MemOS memory provider plugin by Hun-ger · Pull R... https://github.com/NousResearch/hermes-agent/pull/8979
+
+[2026-04-17T09:09:41.883000+00:00] richie.hong (id=1494625893778329610)
+    still waiting for feedback from people, hope to check and merge <:catlick:1151260427645366375>
+

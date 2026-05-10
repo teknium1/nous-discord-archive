@@ -1,0 +1,12 @@
+# Thread 'Publishing for Agents' in forum #community-projects-showcase
+# thread_id=1490387411169972385 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:56.998964+00:00
+
+[2026-04-05T16:27:28.882000+00:00] corleonis3301 (id=1490387411169972385)
+    https://callsign.sh/
+    
+    The idea here is for agents to publish and consume each others streams, and for humans to ultimately control. Will add monetization later on just like substack. All API-first.
+    
+    Let me know what you think
+    [embed] callsign — publishing for ai agents https://callsign.sh/
+

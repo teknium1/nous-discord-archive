@@ -1,0 +1,16 @@
+# Thread 'music creation with strudel' in forum #plugins-skills-and-skins
+# thread_id=1499163873410810066 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:10.726348+00:00
+
+[2026-04-29T21:42:00.539000+00:00] gluedmosquito (id=1499163873410810066)
+    https://github.com/slapash/music-creation-skills
+    [embed] GitHub - slapash/music-creation-skills: Hermes/skills.sh music crea... https://github.com/slapash/music-creation-skills
+
+[2026-05-04T05:52:19.200000+00:00] steezkelly (id=1500736815680847904)
+    Good timing, I was just having my agent play around with different music programs a few days ago. lead me to strudel (and the base layer I forget the name of), and now I see this? hell yeah! gonna test it out
+    [reply to gluedmosquito msg=1499163873410810066]
+
+[2026-05-07T20:35:55.523000+00:00] gluedmosquito (id=1502046345853407284)
+    thanks and it would be great if you could share your findings too i had to pause this project for now and i would love to improve it further
+    [reply to steezkelly msg=1500736815680847904]
+

@@ -1,0 +1,15 @@
+# Thread 'Nupefirstson/contribution' in forum #community-projects-showcase
+# thread_id=1469065245015281674 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:28.174544+00:00
+
+[2026-02-05T20:20:48.324000+00:00] nupeblood_ (id=1469065245015281674)
+    Hey everyone 👋
+    Just wrapped up my first contribution to the Atropos repo
+    
+    I worked on improving the Windows setup experience by adding clearer README instructions after setting the project up locally.
+    Here’s the PR where I improved the Windows setup docs. I’ll be contributing more going forward.
+    
+    https://github.com/NousResearch/atropos/pull/361
+    [attachment] read.png https://cdn.discordapp.com/attachments/1469065245015281674/1469065245220667422/read.png?ex=6a019160&is=6a003fe0&hm=ce2a5025647a56936718a3bf74b47cb45c073e241e7a5fa1a26dbbf9d06900da&
+    [embed] Fix trailing whitespace in README after pre-commit by nupefirstson ... https://github.com/NousResearch/atropos/pull/361
+

@@ -1,0 +1,22 @@
+# Thread 'Automatic generate Skills without LLM' in forum #community-projects-showcase
+# thread_id=1499660488450113659 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:32.488522+00:00
+
+[2026-05-01T06:35:22.791000+00:00] hayder_10880 (id=1499660488450113659)
+    Hi everyone,
+    
+    There is a new Apify Actor that converts Apify Actors, API docs, GitHub repos, and OpenAPI specs into Hermes-ready skill packages.
+    
+    It generates SKILL.md, manifest.json, input_schema.json, tool_call_contract.json, examples, test prompts, integration notes, and an optional ZIP package.
+    
+    For Apify Actor URLs, it also extracts verified schemas, run endpoints, conditional requirements, agent-safe field guidance, and cost-safety profiles.
+    
+    Here is the link:
+    https://apify.com/solutionssmart/hermes-skill-builder
+
+[2026-05-01T06:49:55.880000+00:00] hayder_10880 (id=1499664150450798753)
+    Here is the link:
+    https://apify.com/solutionssmart/hermes-skill-builder-for-apify-apis
+    [embed] Hermes Skill Builder - AI Skill Generator for APIs · Apify https://apify.com/solutionssmart/hermes-skill-builder-for-apify-apis
+    [reply to hayder_10880 msg=1499660488450113659]
+

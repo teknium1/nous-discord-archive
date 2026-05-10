@@ -1,0 +1,10 @@
+# Thread 'Hermes Multi-Agent with Ollama cloud models' in forum #plugins-skills-and-skins
+# thread_id=1496175277120950332 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:20.149735+00:00
+
+[2026-04-21T15:46:23.658000+00:00] anibal3608 (id=1496175277120950332)
+    I made this repo to can use Hermes (or opencode) with multiple Agents. But using ollama that is cheaper than other providers.
+    
+    https://github.com/anibalardid/hermes-multiagent
+    [embed] GitHub - anibalardid/hermes-multiagent https://github.com/anibalardid/hermes-multiagent
+

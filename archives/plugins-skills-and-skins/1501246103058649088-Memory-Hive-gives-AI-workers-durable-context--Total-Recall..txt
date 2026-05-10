@@ -1,0 +1,174 @@
+# Thread 'Memory Hive gives AI workers durable context, Total Recall.' in forum #plugins-skills-and-skins
+# thread_id=1501246103058649088 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:04.493292+00:00
+
+[2026-05-05T15:36:02.773000+00:00] tourettesgaming (id=1501246103058649088)
+    https://github.com/TJCurnutte/memory-hive
+    
+    Agents shouldn’t wake up blank every run, or run blindly into the next prompt.
+    
+    Memory Hive gives AI workers durable context:
+    
+    - private agent memory
+    - shared lessons
+    - curated truth
+    - cleaner handoffs
+    - fewer repeated mistakes
+    
+    Read. Work. Write back.
+    
+    That simple loop turns scattered agent runs into a compounding operating system.
+    
+    https://github.com/TJCurnutte/memory-hive
+    
+    The old HiveOptimizer safety rules are part of this loop now: snapshot/checkpoint before apply-mode changes, inventory hot spots before pruning, archive noisy artifacts before deleting, and keep model-spend/routing audits as optimization inputs rather than a separate product surface.
+    [attachment] Screenshot_2026-05-05_at_11.33.58_AM.png https://cdn.discordapp.com/attachments/1501246103058649088/1501246103398514880/Screenshot_2026-05-05_at_11.33.58_AM.png?ex=6a01f762&is=6a00a5e2&hm=bd2f12745db55ddfce9e7ab0729aa3a11c684a6b073865d9cde3a5987296de84&
+    [embed] GitHub - TJCurnutte/memory-hive: Persistent memory for AI agent tea... https://github.com/TJCurnutte/memory-hive
+
+[2026-05-05T22:05:13.558000+00:00] tourettesgaming (id=1501344043349835807)
+    [attachment] memory-hive-neural-forge-carousel-01.png https://cdn.discordapp.com/attachments/1501246103058649088/1501344041735033005/memory-hive-neural-forge-carousel-01.png?ex=6a01a9d9&is=6a005859&hm=14e1a2e39e3d3e144928101da54aebab7c2390284b657e2d17eca291ba4e6848&
+    [attachment] memory-hive-neural-forge-carousel-02.png https://cdn.discordapp.com/attachments/1501246103058649088/1501344042170974268/memory-hive-neural-forge-carousel-02.png?ex=6a01a9d9&is=6a005859&hm=2dd330e24393da0c067bf215d040641f929c0b745dc8b2dc17b2f220b78340e9&
+    [attachment] memory-hive-neural-forge-carousel-03.png https://cdn.discordapp.com/attachments/1501246103058649088/1501344042611642500/memory-hive-neural-forge-carousel-03.png?ex=6a01a9d9&is=6a005859&hm=713f7f700c2f7e80fe8e5aead6509181c8f0a36b51c88d3a609f6f307ecda3dc&
+    [attachment] memory-hive-neural-forge-carousel-04.png https://cdn.discordapp.com/attachments/1501246103058649088/1501344042984800347/memory-hive-neural-forge-carousel-04.png?ex=6a01a9d9&is=6a005859&hm=91fd76f7b55434c9d67f0514b1432de6262519cfd212876a781e34a106d39d10&
+    [attachment] memory-hive-neural-forge-carousel-05.png https://cdn.discordapp.com/attachments/1501246103058649088/1501344043446309146/memory-hive-neural-forge-carousel-05.png?ex=6a01a9d9&is=6a005859&hm=d3f4e366d34da6e1e01b0e48a547ae0c7047dd70fa52a6b0c3cafcb0c30de823&
+
+[2026-05-05T22:07:06.333000+00:00] tourettesgaming (id=1501344516362211480)
+    Memory Hive gives AI workers durable context, hive learning
+
+[2026-05-05T22:14:46.603000+00:00] tourettesgaming (id=1501346446874509412)
+    Future updates:
+    
+    Working on a faster file system via tokens to speed up read/write
+    for swarm because it will keep growing.
+    
+    Adding auto clean up too, too condense memories that are alike to merge.
+
+[2026-05-06T12:54:09.226000+00:00] tourettesgaming (id=1501567749355212810)
+    This release adds HyperRecall / TokenFS directly into Memory Hive.
+    
+    Not a separate product. Not a sidecar brand.
+    Just faster recall inside the same local hive.
+        
+    **What changed:**
+    
+    - memory-hive recall / memory-hive hyper
+    - local SQLite + FTS5 recall index
+    - stable HiveCodes for compact handoffs
+    - cited bundles with source path + line spans
+    - stale-file detection
+    - incremental update + GC
+    - bundle cache with source fingerprint invalidation
+    - skill index routing
+    - install support through the normal memory-hive command
+    
+        
+    The important part: source markdown stays truth.
+    The index is just a speed layer.
+    Every retrieved memory can expand back to the original file and line span.
+    
+        
+    Proof:
+    
+    - **PR merged**: https://github.com/TJCurnutte/memory-hive/pull/24
+    - **Release**: https://github.com/TJCurnutte/memory-hive/releases/tag/v1.1.0
+    - **CI passed on Ubuntu + macOS**
+    - ** Live local hive**: 1,089 files indexed, 20,652 chunks, 20,652 codes, FTS5 on, stale files clean
+        
+        This is the direction I wanted for swarm memory:
+        less broad context dumping, more cited recall packets.
+        
+    Silos remember. 
+    Hive compounds.
+    [attachment] hero-memory-hive-v1-1-hyperrecall.png https://cdn.discordapp.com/attachments/1501246103058649088/1501567749908856872/hero-memory-hive-v1-1-hyperrecall.png?ex=6a01d171&is=6a007ff1&hm=9776e4adc0579677fdcb1929db8631f8271f1083125f9d9aa8fdece9809c9853&
+    [embed] feat: ship HyperRecall v1.1 recall engine by TJCurnutte · Pull Req... https://github.com/TJCurnutte/memory-hive/pull/24
+    [embed] Release v1.1.0 · TJCurnutte/memory-hive https://github.com/TJCurnutte/memory-hive/releases/tag/v1.1.0
+
+[2026-05-06T13:01:39.848000+00:00] tourettesgaming (id=1501569639400869948)
+    Memory Hive gives AI workers durable context, Total Recall.
+
+[2026-05-06T15:47:22.119000+00:00] sirouk (id=1501611340308025508)
+    holy moly that's awesome
+
+[2026-05-06T19:58:31.081000+00:00] zzaaiinnzen (id=1501674544115613696)
+    I’ve been using honcho for memory. No real issues except the fact that 50% of creds were gone in 9 days!
+
+[2026-05-06T20:12:26.275000+00:00] tourettesgaming (id=1501678047173279904)
+    <@1085920428029124678>  you are gonna love the most recent update!
+    [attachment] Screenshot_2026-05-06_at_4.11.58_PM.png https://cdn.discordapp.com/attachments/1501246103058649088/1501678046950854796/Screenshot_2026-05-06_at_4.11.58_PM.png?ex=6a018f6a&is=6a003dea&hm=79329649b553c6d12d0965adb853882df7a7671bc9d65870a436fb93e07bab91&
+
+[2026-05-06T20:15:49.864000+00:00] tourettesgaming (id=1501678901087174797)
+    The amount of usage I burned on literally creating my own token and recall system today has been absurd
+
+[2026-05-07T08:18:16.047000+00:00] zzaaiinnzen (id=1501860708155920454)
+    I would love to have a system where the md files can be saved locally in my hard disc/pen drive - connected for context and removed when unnecessary.
+
+[2026-05-07T11:19:38.722000+00:00] tourettesgaming (id=1501906353403334817)
+    So when you aren’t at your main Hermes?
+    
+    Shoot me over a more detailed use case!
+    [reply to zzaaiinnzen msg=1501860708155920454]
+
+[2026-05-07T11:45:55.115000+00:00] dre108 (id=1501912965274931230)
+    you can do that with ClawMem by just adding or removing specific .md's to collection
+    [reply to zzaaiinnzen msg=1501860708155920454]
+
+[2026-05-07T11:53:07.349000+00:00] zzaaiinnzen (id=1501914778195595344)
+    Seems like ClawMem is 3 weeks old .
+    [reply to dre108 msg=1501912965274931230]
+
+[2026-05-07T11:54:49.986000+00:00] zzaaiinnzen (id=1501915208686371008)
+    I’m using a mini CPUs, so Hermes is usually with me- from home to travel to work.
+    
+    The usecase is memory is offered, based on need.
+    
+    Ex - sometimes I am just extracting information from the interest - no need for memory 
+    
+    Ex- sometimes I am building a social post on X- memory can be plugged in and used.
+    [reply to tourettesgaming msg=1501906353403334817]
+
+[2026-05-07T11:57:28.012000+00:00] tourettesgaming (id=1501915871495323659)
+    Thinking way too hard over this, this is just a prompt fix.
+    
+    Also, with the optimization I built into it it uses smart flows to make sure it accesses the correct memory silo.
+    
+    I’m adding a tweak today that optimize the prompt when you first put it in to make sure it doesn’t pull unnecessary skills.
+    
+    That update should fix your issue
+
+[2026-05-07T11:57:36.531000+00:00] dre108 (id=1501915907226599434)
+    i mean ClawMem by yoloshii
+    [reply to zzaaiinnzen msg=1501914778195595344]
+
+[2026-05-07T11:57:44.561000+00:00] dre108 (id=1501915940907122778)
+    its close to 2 months by now
+
+[2026-05-07T11:58:21.138000+00:00] dre108 (id=1501916094321917973)
+    i basically ripped all the most useful stuff from a bunch of memory approaches
+
+[2026-05-07T21:10:03.884000+00:00] zzaaiinnzen (id=1502054937302138952)
+    Superb <@217213209831145474> - how do you use ClawMem by Yoloshii in your workflow to ensure persistent memory?
+    [reply to dre108 msg=1501916094321917973]
+
+[2026-05-08T06:35:26.219000+00:00] dre108 (id=1502197217887518822)
+    u just install it and get your agent to read all the docs
+    [reply to zzaaiinnzen msg=1502054937302138952]
+
+[2026-05-08T06:35:39.487000+00:00] dre108 (id=1502197273537548288)
+    then it will know what to do wrt the collections etc
+
+[2026-05-08T06:36:02.201000+00:00] dre108 (id=1502197368806965349)
+    u have options about how to deploy the models
+
+[2026-05-08T11:32:00.442000+00:00] tourettesgaming (id=1502271852267966565)
+    https://x.com/teknium/status/2052351650279645590?s=46
+    [embed]  https://twitter.com/teknium/status/2052351650279645590?s=46
+    [reply to zzaaiinnzen msg=1502054937302138952]
+
+[2026-05-08T22:22:02.434000+00:00] andersmmg (id=1502435438479151174)
+    https://github.com/TJCurnutte/memory-hive/issues/25
+    Not sure if this is just not implemented or what?
+    [embed] [Bug] Recall command just gives error · Issue #25 · TJCurnutte/me... https://github.com/TJCurnutte/memory-hive/issues/25
+
+[2026-05-08T22:22:24.693000+00:00] andersmmg (id=1502435531840163990)
+    Or maybe just using the wrong path, since it's looking in bin where the executable is
+

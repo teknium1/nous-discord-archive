@@ -14289,3 +14289,19 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     * Ported OhMyOpenCode-Slim to Hermes
       https://github.com/eloklam/oh-my-hermes-agent
 
+[2026-05-10T19:43:28.251000+00:00] uzunkuyruk (id=1503120308834668725)
+    fix(oneshot): kanban worker agents now inherit fallback_providers from profile config
+    
+    Workers spawned via `hermes -p <profile> chat -q ...` were constructed without a fallback chain — profile-level fallback_providers was silently ignored, so workers had no failover when their primary provider hit rate limits or timeouts.
+    
+    Fix reads fallback_providers / fallback_model from the profile config and passes it to AIAgent, mirroring the same logic already used in interactive CLI sessions.
+    
+    Also suppressed a pre-existing Windows footgun false-positive in tools/process_registry.py (os.killpg inside an explicit `if not _IS_WINDOWS:` guard).
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/23362
+    PR: https://github.com/NousResearch/hermes-agent/pull/23368
+    
+    2 files changed, non-breaking.
+    [embed] Profile config fallback_providers not inherited by kanban worker ag... https://github.com/NousResearch/hermes-agent/issues/23362
+    [embed] fix(oneshot): pass fallback_providers from profile config to AIAgen... https://github.com/NousResearch/hermes-agent/pull/23368
+

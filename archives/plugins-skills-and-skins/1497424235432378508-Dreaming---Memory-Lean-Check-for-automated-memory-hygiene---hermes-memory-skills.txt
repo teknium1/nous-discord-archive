@@ -1,0 +1,16 @@
+# Thread 'Dreaming + Memory Lean Check for automated memory hygiene - hermes-memory-skills' in forum #plugins-skills-and-skins
+# thread_id=1497424235432378508 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:14.352813+00:00
+
+[2026-04-25T02:29:18.524000+00:00] nexus9200_39990 (id=1497424235432378508)
+    Agent Dreaming skill -  Three-phase consolidation that reviews your session history, scores what's worth keeping (novelty, durability, specificity), and promotes durable insights to memory. REM phase spots recurring patterns and proposes wiki/skill creation– but always asks before acting.
+    
+    Plus a Memory Lean Check skill - Surgical trimmer that validates wiki pointers, condenses verbose entries, and removes stale data. Post-write integrity check so nothing gets corrupted. Dreaming produces better entries, lean check trims the bloat.
+    
+    Together they keep memory under 30% capacity. Run dreaming every 6 hours via cron, lean check daily.
+    
+    Basically Pair of skills that keep your agent's MEMORY.md lean and accurate without manual maintenance. Dreaming is based openclaw style but tuned to use Hermes features like session search and memory.
+    
+    https://github.com/nexus9888/hermes-memory-skills
+    [embed] GitHub - nexus9888/hermes-memory-skills: Memory hygiene skills for ... https://github.com/nexus9888/hermes-memory-skills
+

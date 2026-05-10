@@ -1,0 +1,71 @@
+# Thread 'Hermes-Web-Search-Plus' in forum #community-projects-showcase
+# thread_id=1502671185371201680 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:15.966480+00:00
+
+[2026-05-09T13:58:48.873000+00:00] aicami (id=1502671185371201680)
+    📣 **hermes-web-search-plus v1.8.1 is out**
+    
+    A Hermes Agent plugin that adds multi-provider web search, clean URL extraction, and optional cited answers.
+    
+    The idea: give Hermes agents one solid set of web tools instead of hand-wiring every provider or betting everything on a single “magic” search API.
+    
+    🔧 **The tools**
+    
+    • `web_search_plus` — multi-provider search with routing, fallback, dedup, research mode, and optional quality diagnostics.
+    
+    • `web_extract_plus` — clean markdown/HTML extraction from URLs.
+    
+    • `web_answer_plus` — optional beta. Cited answer synthesis for when you explicitly want a written answer instead of search results.
+    
+    🚀 **Onboarding is much easier now**
+    
+    There’s a standalone setup helper, so you don’t need unreleased Hermes core bits to get going.
+    
+    Check provider status:
+    `python ~/.hermes/plugins/web-search-plus/setup.py status`
+    
+    Guided setup:
+    `python ~/.hermes/plugins/web-search-plus/setup.py setup`
+    
+    Or jump in with the recommended preset:
+    `python ~/.hermes/plugins/web-search-plus/setup.py setup --preset starter`
+    
+    Starter preset = **Tavily + Linkup + Brave**.
+    
+    That’s a practical baseline for search, extraction, and cited-answer experiments without wiring up every provider on day one.
+    
+    🌐 **Search providers**
+    
+    Serper, Brave, Tavily, Exa, Querit, Linkup, Firecrawl, Perplexity, You.com, SearXNG.
+    
+    📄 **Extraction providers**
+    
+    Linkup, Firecrawl, Tavily, Exa, You.com.
+    
+    🧠 **A note on `web_answer_plus`**
+    
+    It’s intentionally optional beta. `web_search_plus` stays the recommended default for source discovery, current events, prices, weather, schedules.
+    
+    Reach for `web_answer_plus` when you specifically want a short cited synthesis.
+    
+    🔗 **Links**
+    
+    
+    
+    Repo:  https://github.com/robbyczgw-cla/hermes-web-search-plus/
+    
+    Homepage: https://websearchplus.xyz
+    
+    Feedback very welcome — especially on onboarding, provider routing, and which providers should be easiest to set up first.
+    [embed] GitHub - robbyczgw-cla/hermes-web-search-plus: Hermes Agent flagshi... https://github.com/robbyczgw-cla/hermes-web-search-plus/
+    [embed] Web Search Plus — Intelligent Multi-Provider Search for AI Agents https://websearchplus.xyz/
+
+[2026-05-09T14:23:46.466000+00:00] colmeio_66868 (id=1502677466731511899)
+    hello, can you dump a quick demo/draft video for us to understand?
+
+[2026-05-10T12:12:25.645000+00:00] wysie_ (id=1503006800037937204)
+    Great plugin!
+
+[2026-05-10T12:12:58.282000+00:00] wysie_ (id=1503006936927441146)
+    <@1228037612338679961> It basically allows you to add multiple search providers and web-search-plus will rotate among them based on some priority setting.
+

@@ -1,0 +1,58 @@
+# Thread 'Skill Runtime Defaults' in forum #community-projects-showcase
+# thread_id=1494719130945720431 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:00.109614+00:00
+
+[2026-04-17T15:20:11.356000+00:00] leonardsellem (id=1494719130945720431)
+    Hi folks,
+    
+    I’m working on a PR for per-skill runtime defaults on explicitly invoked skills.
+    
+    The reason is pretty simple: a lot of the skills I’m using are overthinking by default because they inherit the profile’s default model and reasoning effort, even when that’s the wrong fit for the job.
+    
+    In practice, model choice and reasoning effort are often tied to the skill itself. A lightweight skill shouldn’t have to run with the same defaults as a deep debugging or planning skill. Right now that means unnecessary latency and extra token burn.
+    
+    The goal is to let a skill declare sensible defaults for that invocation, starting with:
+    
+    ```yaml
+    metadata:
+      hermes:
+        runtime_defaults:
+          reasoning_effort: low
+    ```
+    
+    and then adding model once the plumbing is proven stable.
+    
+    Key constraints I’m aiming for:
+    - turn-scoped only: applies to that one skill invocation, then reverts
+    - explicit user/job overrides still win — /model, cron job.model, etc.
+    - no prompt hacks: runtime defaults travel as structured state, not hidden in prompt text
+    - preloaded skills stay prompt-only
+    - model-triggered skill_view() calls don’t auto-change runtime
+    
+    Planned rollout:
+    reasoning_effort end-to-end for CLI / gateway / cron
+    model after the reasoning path is stable
+    
+    If someone is already working on this, or if maintainers would prefer it start as an issue/discussion before the PR gets too far, happy to align.
+
+[2026-04-17T15:55:00.981000+00:00] leonardsellem (id=1494727895468478525)
+    I just opened the first of two PRs for it:
+    
+    **#11671 — feat(skills): per-skill runtime defaults with turn-scoped reasoning**
+    https://github.com/NousResearch/hermes-agent/pull/11671
+    
+    **What lands in PR 1 (v1):**
+    - New `metadata.hermes.runtime_defaults.reasoning_effort` in SKILL.md frontmatter
+    - Skills can only *reduce* reasoning below the session default (escalations are clamped)
+    - Optional `required: [reasoning_effort]` hard-fails the turn instead of silently falling back
+    - End-to-end plumbing in CLI (interactive + `-q`), gateway (Telegram / Discord / Slack / WhatsApp, including photo-burst + correction merge rules), and cron
+    - Opt-in behind `agent.skill_runtime_defaults_enabled` (default off, re-read per call)
+    - 260 new/touched tests passing
+    
+    **What comes in PR 2 (v2):**
+    - `metadata.hermes.runtime_defaults.model` — per-skill model nomination with an operator-side allowlist
+    - The merge helper and route plumbing are already in place from v1 (`model_locked`, `routing_reason=skill_fixed`, glob allowlist); v2 is mostly the allowlist read + docs
+    
+    Splitting it keeps PR 1 reviewable and lets us ship the reasoning win without waiting on the model-routing policy discussion. Flagging in case anyone wants to weigh in on the v2 design before I start on it.
+    [embed] feat(skills): per-skill runtime defaults with turn-scoped reasoning... https://github.com/NousResearch/hermes-agent/pull/11671
+

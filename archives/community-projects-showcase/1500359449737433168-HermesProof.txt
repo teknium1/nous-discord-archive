@@ -1,0 +1,15 @@
+# Thread 'HermesProof' in forum #community-projects-showcase
+# thread_id=1500359449737433168 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:25.986083+00:00
+
+[2026-05-03T04:52:48.148000+00:00] ghenghis_ (id=1500359449737433168)
+    https://github.com/Ghenghis/HermesProof
+    Website
+    https://ghenghis.github.io/HermesProof/
+    This is Wicked 
+    Verifiable
+    multi-agent coordination
+    over MCP
+    [embed] GitHub - Ghenghis/HermesProof https://github.com/Ghenghis/HermesProof
+    [embed] HermesProof — verifiable multi-agent coordination over MCP https://ghenghis.github.io/HermesProof/
+

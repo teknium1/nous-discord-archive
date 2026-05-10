@@ -1,0 +1,10 @@
+# Thread '2D PPO RL environments via MCP for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1499110296588124201 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:34.770400+00:00
+
+[2026-04-29T18:09:06.829000+00:00] adavya (id=1499110296588124201)
+    Through a hackathon we made a few simple RL environments that can all be setup and managed by your Hermes Agent! 
+    
+    More details: https://x.com/adavya_sharma/status/2049549311659389110?s=20
+    [embed]  https://twitter.com/adavya_sharma/status/2049549311659389110?s=20
+

@@ -1,0 +1,9 @@
+# Thread 'Task Management Board For Agents' in forum #community-projects-showcase
+# thread_id=1493403107596697670 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:09.597029+00:00
+
+[2026-04-14T00:10:46.939000+00:00] matthewvryan (id=1493403107596697670)
+    https://github.com/Chimedeck/chimedeck CLI and MCP.  Hermes can download the repo and install it no problems. Hermes can use the CLI and MCP to create boards and manage tasks. Be great to get feedback from the community on ways to improve it for agent first task management.  We only released it to the wild yesterday so please be gentle. Website still coming today.
+    [attachment] Screenshot_2026-04-14_at_07.10.00.png https://cdn.discordapp.com/attachments/1493403107596697670/1493403107730784346/Screenshot_2026-04-14_at_07.10.00.png?ex=6a01c746&is=6a0075c6&hm=24f379850546b509baa87da841eee12b953588afa0ad39ccadfbccfbb0ba03c3&
+    [embed] GitHub - Chimedeck/chimedeck: A full-stack workspace and card manag... https://github.com/Chimedeck/chimedeck
+

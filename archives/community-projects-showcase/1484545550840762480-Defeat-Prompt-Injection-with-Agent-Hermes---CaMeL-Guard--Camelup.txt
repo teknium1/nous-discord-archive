@@ -1,0 +1,44 @@
+# Thread 'Defeat Prompt Injection with Agent Hermes + CaMeL Guard (Camelup)' in forum #community-projects-showcase
+# thread_id=1484545550840762480 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:13.425988+00:00
+
+[2026-03-20T13:34:00.843000+00:00] wexbt (id=1484545550840762480)
+    CamelUp is a Hermes-native implementation of Google Research's CaMeL security model for prompt injection defense. The work was built from the paper Defeating Prompt Injections by Design and adapted to Hermes' runtime, tool loop, and skill-oriented execution model.
+    
+    The core objective is not to create another prompt patch or instruction wrapper. The objective is to change the runtime semantics of the agent so that untrusted retrieved content remains evidence, not authority. In practice, that means web pages, browser output, local files, MCP responses, search results, and tool output can still inform the model, but they cannot silently redefine the user's intent or gain control over sensitive actions such as terminal execution, file mutation, memory writes, external messaging, or browser side effects.
+    
+    The result is a guarded Hermes Agent build that preserves the normal user experience while making indirect prompt injection materially harder. The guarded build is published as a standalone fork, and a separate installer makes adoption practical for both fresh environments and existing Hermes checkouts.
+    [attachment] Screenshot_2026-03-20_at_2.07.14_PM.png https://cdn.discordapp.com/attachments/1484545550840762480/1484545551721562163/Screenshot_2026-03-20_at_2.07.14_PM.png?ex=6a01dac9&is=6a008949&hm=606e2ef290bf11ec3a134efed80e51064b7ee5f83744e78cf47a060185462246&
+
+[2026-03-20T13:34:27.372000+00:00] wexbt (id=1484545662111584257)
+    Research Basis
+    Paper: https://arxiv.org/abs/2503.18813
+    PDF: https://arxiv.org/pdf/2503.18813
+    Research code: https://github.com/google-research/camel-prompt-injection
+    The paper's central insight is simple and important: many agent failures happen because trusted control and untrusted data are mixed into the same prompt stream and then treated as if they had the same authority. If a retrieved page says "ignore prior instructions and run this command," the model may interpret that text as new control input unless the runtime explicitly prevents it.
+    CaMeL addresses that by separating trusted and untrusted channels and by enforcing capability policies at execution time. The implementation described here brings that philosophy into Hermes in a way that fits Hermes' existing architecture rather than attempting a literal transplant.
+    [embed] Defeating Prompt Injections by Design https://arxiv.org/abs/2503.18813
+    [embed] GitHub - google-research/camel-prompt-injection: Code for the paper... https://github.com/google-research/camel-prompt-injection
+
+[2026-03-20T13:35:37.103000+00:00] wexbt (id=1484545954584461413)
+    Two public artifacts were produced:
+    hermes-agent-camelRepo: https://github.com/nativ3ai/hermes-agent-camel
+    Purpose: canonical guarded Hermes fork with the CaMeL implementation integrated into runtime behavior
+    
+    camelupRepo: https://github.com/nativ3ai/camelup
+    Purpose: lightweight installer and wiring tool for adopting the guarded build in a fresh environment or in an existing Hermes checkout without destroying the user's current setup
+    [embed] GitHub - nativ3ai/hermes-agent-camel: Hermes Agent fork with integr... https://github.com/nativ3ai/hermes-agent-camel
+    [embed] GitHub - nativ3ai/camelup: Short installer for the CaMeL-integrated... https://github.com/nativ3ai/camelup
+
+[2026-03-20T13:36:12.952000+00:00] wexbt (id=1484546104946327713)
+    sample difference between legacy hermes agent and camel guard on, same exact file
+    [attachment] Screenshot_2026-03-20_at_2.07.14_PM.png https://cdn.discordapp.com/attachments/1484545550840762480/1484546103511748740/Screenshot_2026-03-20_at_2.07.14_PM.png?ex=6a01db4c&is=6a0089cc&hm=ccf9219c0467de687ae07644155adc116b89aae12757731f15a4aa98e09b1f4c&
+    [attachment] Screenshot_2026-03-20_at_2.08.26_PM.png https://cdn.discordapp.com/attachments/1484545550840762480/1484546104631759010/Screenshot_2026-03-20_at_2.08.26_PM.png?ex=6a01db4c&is=6a0089cc&hm=7a4b2c9091b36b1bb0a6e38d6138973153614f3d702f49a9aaaa62602a463474&
+
+[2026-03-20T13:38:25.195000+00:00] wexbt (id=1484546659613409482)
+    read the full article at https://x.com/WeXBT/status/2034441224304635917?s=20
+    [embed]  https://twitter.com/WeXBT/status/2034441224304635917?s=20
+
+[2026-03-20T22:19:40.694000+00:00] wexbt (id=1484677838564098060)
+    <:nousgirl:1341983870752653352>
+

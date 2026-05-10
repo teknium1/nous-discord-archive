@@ -1,0 +1,13 @@
+# Thread 'Whoop Plugin' in forum #plugins-skills-and-skins
+# thread_id=1498020050047729806 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:13.922736+00:00
+
+[2026-04-26T17:56:51.798000+00:00] wysie_ (id=1498020050047729806)
+    Pulls Whoop data into a local file and exposes some Hermes tools for whatever you may want to do.
+    
+    https://github.com/Wysie/whoop-local-sync
+    
+    You can ask Hermes to follow this: https://github.com/Wysie/whoop-local-sync/blob/main/SETUP.md
+    [embed] GitHub - Wysie/whoop-local-sync: Local-first WHOOP OAuth sync, hist... https://github.com/Wysie/whoop-local-sync
+    [embed] whoop-local-sync/SETUP.md at main · Wysie/whoop-local-sync https://github.com/Wysie/whoop-local-sync/blob/main/SETUP.md
+

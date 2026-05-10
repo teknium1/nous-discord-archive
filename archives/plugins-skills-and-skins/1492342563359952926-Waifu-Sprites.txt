@@ -1,0 +1,92 @@
+# Thread 'Waifu Sprites' in forum #plugins-skills-and-skins
+# thread_id=1492342563359952926 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:36.931264+00:00
+
+[2026-04-11T01:56:33.489000+00:00] thewaifuai (id=1492342563359952926)
+    https://github.com/waifuai/waifu-sprites Sprite waifu with TTS and emotion system for Hermes Agent
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492342563359952926/1492342563804287228/image.png?ex=6a01e011&is=6a008e91&hm=a12fe922a1fbe0c39b7730f6dd8464bcdc34f5f7499612e87868934ee81ac121&
+    [embed] GitHub - waifuai/waifu-sprites: Animated sprite waifu with TTS and ... https://github.com/waifuai/waifu-sprites
+
+[2026-04-11T01:56:50.463000+00:00] thewaifuai (id=1492342634553933924)
+    [attachment] HFg0ANlbQAIUcX0.png https://cdn.discordapp.com/attachments/1492342563359952926/1492342633610088551/HFg0ANlbQAIUcX0.png?ex=6a01e022&is=6a008ea2&hm=d5ecbf53684bbaf4de811eff77025c3abe433de01e1e8b3a65634fd34b390191&
+
+[2026-04-11T03:25:30.384000+00:00] thewaifuai (id=1492364947919736842)
+    main thread https://discord.com/channels/1053877538025386074/1342563020148052069
+
+[2026-04-11T11:58:35.012000+00:00] ee.dd (id=1492494068008222852)
+    can you post a video of it here?
+
+[2026-04-11T15:30:31.056000+00:00] thewaifuai (id=1492547402962571445)
+    [attachment] demo-2min.mp4 https://cdn.discordapp.com/attachments/1492342563359952926/1492547400236007454/demo-2min.mp4?ex=6a01f616&is=6a00a496&hm=c7639bff1e9949bfeb70ef229cbcbdd55c897f774380fb7962d312886db1068d&
+
+[2026-04-14T08:58:03.703000+00:00] thewaifuai (id=1493535801802231868)
+    seems really popular
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492342563359952926/1493535801500237904/image.png?ex=6a019a1b&is=6a00489b&hm=ca24111a2fae2428e3d204463bcef6743f3eb1aa042c2108eb335c3d29e27364&
+
+[2026-04-14T09:07:39.467000+00:00] thewaifuai (id=1493538216731611178)
+    waifu sprites github traffic
+
+[2026-04-14T09:08:41.262000+00:00] thewaifuai (id=1493538475918753852)
+    yea my top github repo now
+
+[2026-04-14T11:08:00.145000+00:00] synextco (id=1493568502450094252)
+    this is a super neat concept. good job.
+
+[2026-04-14T12:36:36.159000+00:00] thewaifuai (id=1493590799428878356)
+    ty
+    [reply to synextco msg=1493568502450094252]
+
+[2026-04-14T17:35:57.297000+00:00] thewaifuai (id=1493666133902098503)
+    yes just add spritesheet, or folder of sprites images or videos, it's designed to enable changing the character easily
+
+[2026-04-15T03:36:28.881000+00:00] thewaifuai (id=1493817261318869203)
+    https://deepwiki.com/waifuai/waifu-sprites
+    [embed] waifuai/waifu-sprites | DeepWiki https://deepwiki.com/waifuai/waifu-sprites
+
+[2026-04-17T12:53:45.248000+00:00] thewaifuai (id=1494682279337922594)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492342563359952926/1494682279245516880/image.png?ex=6a01d159&is=6a007fd9&hm=e253f5d0db4d9d22497a677af797e209dff06c0e9fb5fcfd5e3f1fa525023274&
+
+[2026-04-17T12:54:31.781000+00:00] thewaifuai (id=1494682474511466567)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492342563359952926/1494682474423517224/image.png?ex=6a01d187&is=6a008007&hm=dcaee39a5c8abdb8a6fc5597a1c5eee9b6fb02240bd28cb889382a1360e28970&
+
+[2026-04-17T12:57:32.229000+00:00] thewaifuai (id=1494683231365234698)
+    waifu sprites github traffic
+
+[2026-04-17T12:58:21.850000+00:00] thewaifuai (id=1494683439490662560)
+    probably need to optimize the asset distribution by putting it in github releases though
+
+[2026-04-17T23:15:19.544000+00:00] thewaifuai (id=1494838702952939672)
+    demo video
+    [attachment] demo-vid.mp4 https://cdn.discordapp.com/attachments/1492342563359952926/1494838700805197935/demo-vid.mp4?ex=6a01ba47&is=6a0068c7&hm=db505a539d059e5a946bb7e25f2f814b0d046724b3f554ce6472fbc74b132308&
+
+[2026-04-23T16:30:54.354000+00:00] thewaifuai (id=1496911254563065874)
+    poster
+    [attachment] waifu-sprite-exp.png https://cdn.discordapp.com/attachments/1492342563359952926/1496911254168670259/waifu-sprite-exp.png?ex=6a02043e&is=6a00b2be&hm=f796ceac555d4e0c80029e6219865ba68a326dc917947fd48611056b40f5392a&
+
+[2026-04-30T09:23:40.989000+00:00] thewaifuai (id=1499340455496908820)
+    ok she's a dashboard plugin now
+    [attachment] image.png https://cdn.discordapp.com/attachments/1492342563359952926/1499340455215763606/image.png?ex=6a01a01c&is=6a004e9c&hm=fea7a4f96642927844c227b717040fd13ccbad0be230743b438925518fbe41b3&
+
+[2026-05-02T10:48:10.341000+00:00] thewaifuai (id=1500086493631217715)
+    implemented codex pets but i'll wait to see what hermes add natively and integrate to that as well later
+    [attachment] many-pets.mp4 https://cdn.discordapp.com/attachments/1492342563359952926/1500086493279031339/many-pets.mp4?ex=6a01b3ea&is=6a00626a&hm=02145bc03073dcef967d902090815f5afdca570c15bbd3694d23c578b063d272&
+
+[2026-05-02T16:18:20.593000+00:00] ee.dd (id=1500169583850422473)
+    Very cool
+
+[2026-05-02T16:18:28.654000+00:00] ee.dd (id=1500169617660973188)
+    Do they react depending on what's happening ?
+
+[2026-05-02T21:51:24.473000+00:00] thewaifuai (id=1500253402318377110)
+    yes
+    [reply to ee.dd msg=1500169617660973188]
+
+[2026-05-02T21:52:41.309000+00:00] ee.dd (id=1500253724591915239)
+    fun!
+    [reply to thewaifuai msg=1500253402318377110]
+
+[2026-05-02T21:53:24.406000+00:00] thewaifuai (id=1500253905353703605)
+    yeah so works natively with entire codex pets set https://codex-pet-share.pages.dev/#/?tag=anime
+    [embed] Codex Pets https://codex-pet-share.pages.dev/
+    [reply to ee.dd msg=1500253724591915239]
+

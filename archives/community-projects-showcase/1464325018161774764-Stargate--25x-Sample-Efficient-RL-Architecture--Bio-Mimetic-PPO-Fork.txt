@@ -1,0 +1,22 @@
+# Thread 'Stargate: 25x Sample Efficient RL Architecture (Bio-Mimetic PPO Fork)' in forum #community-projects-showcase
+# thread_id=1464325018161774764 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:26.859309+00:00
+
+[2026-01-23T18:24:50.173000+00:00] mubasher_ikram (id=1464325018161774764)
+    Just finished benchmarking a custom PPO fork on MuJoCo (Ant-v5/HalfCheetah).
+    
+    I'm seeing ~25x better sample efficiency compared to standard baselines. I used a homeostatic regulator to modulate learning rates based on entropy.
+    
+    Hitting 2000+ reward on Ant in <40k steps.
+    
+    I'm hardware limited (local machine) so I can't scale it myself, but looking to hand off the architecture/codebase to someone running a Subnet or Cluster who needs the efficiency boost.
+    
+    Thread with graphs/visuals here:[https://x.com/Cognitesor/status/2014727277410722189?s=20]
+    [https://x.com/Cognitesor/status/2014727433115861252?s=20]
+    [https://x.com/Cognitesor/status/2014727629971267604?s=20]
+    
+    DM if interested
+    [embed]  https://twitter.com/Cognitesor/status/2014727277410722189?s=20]
+    [embed]  https://twitter.com/Cognitesor/status/2014727433115861252?s=20]
+    [embed]  https://twitter.com/Cognitesor/status/2014727629971267604?s=20]
+

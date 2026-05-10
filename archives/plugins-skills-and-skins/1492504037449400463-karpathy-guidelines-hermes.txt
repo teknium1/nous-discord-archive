@@ -1,0 +1,14 @@
+# Thread 'karpathy-guidelines-hermes' in forum #plugins-skills-and-skins
+# thread_id=1492504037449400463 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:35.336474+00:00
+
+[2026-04-11T12:38:11.912000+00:00] .interfluve (id=1492504037449400463)
+    Karpathy Guidelines Hermes Skill
+    
+    This repository  is a port of  a claude -formatted skill adapted from andrej-karpathy-skills (MIT): behavioral guidelines derived from Andrej Karpathy’s observations on common LLM coding pitfalls.
+    
+    https://github.com/interfluve-wav/karpathy-guidelines-hermes
+    [attachment] carousel13_slide2.jpg https://cdn.discordapp.com/attachments/1492504037449400463/1492504037684285691/carousel13_slide2.jpg?ex=6a01cdb3&is=6a007c33&hm=8010e2e1e7c20ab507d0ef547372a3128188d83674ee5bd3970df7197823ef87&
+    [embed] GitHub - interfluve-wav/karpathy-guidelines-hermes: Hermes port of ... https://github.com/interfluve-wav/karpathy-guidelines-hermes
+    [sticker] nousturk
+

@@ -1,0 +1,10 @@
+# Thread 'hermes-whisper-cpp-addon' in forum #community-projects-showcase
+# thread_id=1492490328979144754 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:23.023033+00:00
+
+[2026-04-11T11:47:53.237000+00:00] timmmie. (id=1492491376208773150)
+    if some thing like this could be improved and implemented into hermes as its of feature that would be great. i cant type to well so being able to use voice from terminal window is huge for me. would be a great accsesabilty feature to add in.
+
+[2026-04-12T15:35:01.272000+00:00] lucasew (id=1492910924196090047)
+    I am sometimes vibecoding by sending audios to it on Telegram. I have no idea how it's transcribing but it's working and I am happy with that.
+

@@ -1,0 +1,55 @@
+# Thread 'MindBank -  MCP relationship memories' in forum #plugins-skills-and-skins
+# thread_id=1494747832802873487 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:25.245550+00:00
+
+[2026-04-17T17:14:14.412000+00:00] .omgg (id=1494747832802873487)
+    https://github.com/spfcraze/MindBank
+    
+    MindBank gives your AI assistant a permanent, searchable, relationship-aware memory that persists across conversations. Instead of forgetting everything between sessions, your agent remembers decisions, configs, preferences, and project knowledge — organized as a graph, not a flat text blob.
+    ┌─────────────────────────────────────────┐
+    │            Your AI Agent                │
+    │    (Hermes, Claude, custom, any)        │
+    └──────────┬──────────────────────────────┘
+               │ HTTP REST API / MCP Protocol
+    ┌──────────▼──────────────────────────────┐
+    │           MindBank API (Go)             │
+    │  ┌────────────┐  ┌──────────────────┐   │
+    │  │  Handlers  │  │  Search Engine   │   │
+    │  │  CRUD,     │  │  FTS + Vector    │   │
+    │  │  Graph,    │  │  Hybrid RRF      │   │
+    │  │  Snapshot  │  │  Graph Expansion │   │
+    │  └────────────┘  └──────────────────┘   │
+    │  ┌────────────┐  ┌──────────────────┐   │
+    │  │  Temporal  │  │  Embeddings      │   │
+    │  │  Version-  │  │  via Ollama      │   │
+    │  │  ing       │  │  (local, free)   │   │
+    │  └────────────┘  └──────────────────┘   │
+    └──────────┬──────────────────────────────┘
+               │ pgx
+    ┌──────────▼──────────────────────────────┐
+    │      PostgreSQL 16 + pgvector           │
+    │  nodes │ edges │ embeddings │ sessions  │
+    └─────────────────────────────────────────┘
+    
+    | Problem | Without MindBank | With MindBank |
+    |---------|-----------------|---------------|
+    | **Capacity** | 2,200 char MEMORY.md limit | Unlimited graph storage |
+    | **Search** | Full-text grep | Hybrid search (full-text + AI semantic) |
+    | **Structure** | Flat text blob | Typed nodes + 11 edge types |
+    | **Isolation** | Everything mixed | Per-project namespaces |
+    | **History** | Overwrites data | Temporal versioning (full audit trail) |
+    | **Relationships** | None | Graph traversal (neighbors, paths) |
+
+[2026-04-17T17:19:47.927000+00:00] .omgg (id=1494749231666167938)
+    Search Strategy
+    
+    MindBank uses a 3-tier fallback with hybrid search:
+    
+    1. **websearch_to_tsquery** — strict, best ranking
+    2. **plainto_tsquery** — more lenient
+    3. **Trigram similarity** — catches everything
+    4. **Hybrid RRF** — combines full-text + vector search via Reciprocal Rank Fusion
+    5. **Graph expansion** — finds nodes connected via edges even if text doesn't match
+    
+    Result: 97%+ recall across exact, partial, conceptual, and paraphrase queries.
+

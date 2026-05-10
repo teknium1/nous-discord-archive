@@ -1,0 +1,13 @@
+# Thread 'AANA Continuous Self-Improvement Skill' in forum #plugins-skills-and-skins
+# thread_id=1500888173943722034 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:05.245601+00:00
+
+[2026-05-04T15:53:45.822000+00:00] simulateai_research_team_00263 (id=1500888173943722034)
+    Use this skill when the user wants an Hermes-style agent to improve its work over time without drifting away from the user's goals, constraints, or safety boundaries.
+    https://clawhub.ai/mindbomber/aana-continuous-improvement
+    [embed] AANA Continuous Self-Improvement Skill — ClawHub https://clawhub.ai/mindbomber/aana-continuous-improvement
+
+[2026-05-04T16:07:39.456000+00:00] epad1051 (id=1500891670458273813)
+    https://clawhub.ai/mindbomber/aana-continuous-improvement
+    [embed] AANA Continuous Self-Improvement Skill — ClawHub https://clawhub.ai/mindbomber/aana-continuous-improvement
+

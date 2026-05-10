@@ -1,0 +1,11 @@
+# Thread 'GrokCodePen' in forum #community-projects-showcase
+# thread_id=1346839298413957140 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:47.947523+00:00
+
+[2025-03-05T13:38:31.806000+00:00] sendao (id=1346839298413957140)
+    Make your coding journey a breeze with iterative development using Grok 3.
+    https://youtu.be/1DzcgZT1VQs
+    https://spiritshare.org/grok_codepen.zip
+    [attachment] chrome_s2VmtEKYOU.png https://cdn.discordapp.com/attachments/1346839298413957140/1346839298644774933/chrome_s2VmtEKYOU.png?ex=6a01dbd7&is=6a008a57&hm=950c3d33cb952f2b7631cbf3dccd8c1d9fe88d711950e53e2f4777c6dee59761&
+    [embed] GrokCodePen https://www.youtube.com/watch?v=1DzcgZT1VQs
+

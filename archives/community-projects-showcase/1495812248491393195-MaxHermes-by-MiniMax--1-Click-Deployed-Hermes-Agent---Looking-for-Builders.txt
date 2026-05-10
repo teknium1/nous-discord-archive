@@ -1,0 +1,28 @@
+# Thread 'MaxHermes by MiniMax: 1 Click Deployed Hermes Agent - Looking for Builders!' in forum #community-projects-showcase
+# thread_id=1495812248491393195 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:55.054065+00:00
+
+[2026-04-20T15:43:50.888000+00:00] ti.guo (id=1495812248491393195)
+    Hi everyone, MiniMax Team is here, 
+    
+    We just launched MaxHermes, a cloud-hosted and managed version of Hermes in MiniMaxAgent (No terminal setup, no config)
+    
+    If you’re already running Hermes locally, you can now give you agent a partner in the cloud with MaxHermes.
+    
+    https://agent.minimax.io/max-hermes
+    
+    👉 **Opportunity**: We are looking for use cases! If you have projects that can be built into Minimax, feel free to message here or private message me! If it is good, love to help spotlight your projects and potentially give you usage credit!
+    
+    Lastly, we've been and will continue working with NousResearch team to ensure that M2.7 x Hermes Agent provides a top-tier experience -- give us a try and love to hear your experience!
+    [attachment] CleanShot_2026-04-20_at_11.38.032x.png https://cdn.discordapp.com/attachments/1495812248491393195/1495812248852234453/CleanShot_2026-04-20_at_11.38.032x.png?ex=6a01f936&is=6a00a7b6&hm=6a34d8c175052840ecd89b5a9d5e10fd8d53774af07dcd8928280b1bc28cecb7&
+
+[2026-04-23T11:09:03.899000+00:00] aultramen. (id=1496830260644286566)
+    Hi <@965361537814503564> I can't DM you, I've a personal project to build a system youtube faceless video with auto pipeline from idea to ready image and video prompt creation with consistent character & environment, SFX, lighting, etc.
+    
+    Currently I'm lack of AI model API so I built a web wrapper to Gemini web and took manually upload the image generate from my apps to create a frame-to-video. Looking for sponsor of any AI model to support the pipeline from text, image, voice, video generation (Minimax have all of it). It would be nice if Minimax can support me, here's the sneekpeek https://www.threads.com/@aultramen/post/DTZJAMwk-v2?xmt=AQF0dv-xGxGydaEhhrNCO8xOg_H7QpmIQh3W7ljynWf7mJ696SxYUlby4_vykF0dJVMMtvY&slof=1 
+    
+    I wonder if hermes agent can operate my apps from anywhere with autonomous and self improve to get better quality and result, then can post to any video platform by schedule, Thank you !
+
+[2026-04-23T13:57:07.420000+00:00] lonelyspliff (id=1496872553996619938)
+    Ah you need a paid plan as well as a token plan? Can I try this with just the token plan? It's kinda going unused right now
+

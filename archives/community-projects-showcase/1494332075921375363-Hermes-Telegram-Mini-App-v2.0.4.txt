@@ -1,0 +1,13 @@
+# Thread 'Hermes Telegram Mini App v2.0.4' in forum #community-projects-showcase
+# thread_id=1494332075921375363 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:03.809153+00:00
+
+[2026-04-16T13:42:10.247000+00:00] mr.r0b0t.eth (id=1494332075921375363)
+    Here’s the gist explaining how everything works!
+    
+    https://clawvader-tech.github.io/hermes-telegram-miniapp/
+    [attachment] trim_87EB84BC-97DE-48F4-AC73-05D469777484.mov https://cdn.discordapp.com/attachments/1494332075921375363/1494332076290216027/trim_87EB84BC-97DE-48F4-AC73-05D469777484.mov?ex=6a01dcb2&is=6a008b32&hm=e9bf3b743cc98a5d5f9420f7751a3b5e23c3372cb58b65f855a073a0ff8caaa6&
+
+[2026-04-17T04:53:44.094000+00:00] zaharenok (id=1494561478542360677)
+    Wow looks cool
+

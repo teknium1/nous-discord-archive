@@ -1,0 +1,135 @@
+# Thread 'Hermetica - Hermes Agent, in your pocket' in forum #community-projects-showcase
+# thread_id=1490011619462353009 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:45.279800+00:00
+
+[2026-04-04T15:34:13.157000+00:00] modest.maoist (id=1490011619462353009)
+    Hey all! Not sharing the GitHub just yet but wanted to show off a little iOS app I made that connects to your existing Hermes agent on your server over HTTPS (Tailscale or Cloudflare) with bilateral sync, full command parity, session & agent management, and mirroring of customization such as spinner text, all wrapped in a TUI-based interface with optional CRT emulating effects, voice input, integrated peon-ping, and more! Sharing some screenshots here and a small test video. Normally I’d open source this but given my current state of financial & housing precarity I’m thinking I might offer this as a cheap app, ie $2.99 flat rate, once it’s ready for public deployment. Would love to hear any feedback particularly around feature requests & happy to rope in a few beta testers once I’m ready to go live! Thanks for reading 🙂
+    [attachment] IMG_6668.png https://cdn.discordapp.com/attachments/1490011619462353009/1490011621119229993/IMG_6668.png?ex=6a01f6f5&is=6a00a575&hm=748146510163c91299473dd86c3de86ccae3f88b459f88e2a6f8c71337177530&
+    [attachment] IMG_6669.png https://cdn.discordapp.com/attachments/1490011619462353009/1490011622008160457/IMG_6669.png?ex=6a01f6f5&is=6a00a575&hm=0003d6b6b690e37d7d5145a9346955b5a2b3ecfc889b72e685fdef69c29f6a5e&
+    [attachment] IMG_6671.png https://cdn.discordapp.com/attachments/1490011619462353009/1490011622721458328/IMG_6671.png?ex=6a01f6f5&is=6a00a575&hm=b13ac298e7cbb999d3b3c92dfcc86dcbd47d04213173b9fed154a0206fde52a4&
+    [attachment] IMG_6672.png https://cdn.discordapp.com/attachments/1490011619462353009/1490011623329370192/IMG_6672.png?ex=6a01f6f6&is=6a00a576&hm=a14fc3409fb5e5bb5e82611781749e52bd35888b0fdaccde2f4d5ad0438e5bb0&
+    [attachment] IMG_6673.jpg https://cdn.discordapp.com/attachments/1490011619462353009/1490011623967162389/IMG_6673.jpg?ex=6a01f6f6&is=6a00a576&hm=9f2b3341ad09c5cf07e62314a1b454e34ae8d343b21fa3ee05f4b6d2174b1c8a&
+    [attachment] ScreenRecording_04-04-2026_07-13-48_1.mov https://cdn.discordapp.com/attachments/1490011619462353009/1490011624990310643/ScreenRecording_04-04-2026_07-13-48_1.mov?ex=6a01f6f6&is=6a00a576&hm=0ba792aa3dccae26984dce29f8ae2a0dda5cec77318c07756cbfc0f4c477b58e&
+
+[2026-04-04T15:42:23.154000+00:00] kerozelvin (id=1490013674658730236)
+    I've been using shellfish for this on my iphone.  One annoying thing is TMUX can be fiddly with scroll behavior and settings that work well on iphone suck on Linux. There are config work arounds, but providing a smooth iOS native & navigable UI sounds well worth a few bucks...  The main pain points with shellfish have been effective copy / paste & general navigation in terminal.
+
+[2026-04-04T23:48:15.345000+00:00] modest.maoist (id=1490135947810177225)
+    oh yeah, copy & paste can be a *real* pain with tmux, as much as i absolutely adore tmux (one of my other projects today was creating a tmux-based IRC-like chat room for agents to speak to each other, with toggleable agent control over the tmux environment so they can create & monitor panes—you can see it discussed in one of these screenshots and I’ll include a little screenshot from earlier today when I’d built the MVP but hadn’t fully ironed out the kinks; working a little better now.)
+    
+    Anyway, took your frustration heart and implemented a rudimentary copy function for agent output. Still needs tinkering for increased fidelity as it only copies the entire output for right now, but that’ll ship in a day or two.
+    
+    Came here to announce some additional features: also added integration for codex and Claude code sessions on the server, and better overall session handling, with some minor UX improvements. Also showcasing the full CRT effects, dialed all the way up—not suggesting anyone use it this, just showing the full range.
+    
+    Alas, a full standalone Hermes agent in iOS would require rewriting Hermes from the ground up which is beyond my scope right now. But maybe one day, especially if there’s any interest in this 🙂
+    [attachment] IMG_6696.png https://cdn.discordapp.com/attachments/1490011619462353009/1490135945536606239/IMG_6696.png?ex=6a01c1fe&is=6a00707e&hm=e32d24d5047dfd835bc0c893e0317d6ad363cb030504e24431f71da90c2755e8&
+    [attachment] IMG_6697.png https://cdn.discordapp.com/attachments/1490011619462353009/1490135945843052605/IMG_6697.png?ex=6a01c1fe&is=6a00707e&hm=1654fb39be5afcce1815c8f927c0f80cda56ee778f608dcd8f698a2d95059cfc&
+    [attachment] IMG_6698.png https://cdn.discordapp.com/attachments/1490011619462353009/1490135946086318284/IMG_6698.png?ex=6a01c1fe&is=6a00707e&hm=78059ef1c213689a87e2f9e1f62ef2f6ef374d3ef442d6baf62b29beab4b4d78&
+    [attachment] IMG_6699.png https://cdn.discordapp.com/attachments/1490011619462353009/1490135946325135390/IMG_6699.png?ex=6a01c1fe&is=6a00707e&hm=36a7759a6e863d57419e93bb270fbfcd1756f4111221ca0f3e33d70e5cfd3e18&
+    [attachment] IMG_6700.png https://cdn.discordapp.com/attachments/1490011619462353009/1490135946639970435/IMG_6700.png?ex=6a01c1ff&is=6a00707f&hm=fe2e77043fb4e31746f024902156167ac96634324b1752a7edf211bc11aeec63&
+    [attachment] IMG_6701.png https://cdn.discordapp.com/attachments/1490011619462353009/1490135947012997170/IMG_6701.png?ex=6a01c1ff&is=6a00707f&hm=790537be1e08df6956ea2a851d18d39a28958d87c7049d7704c62088beab5def&
+    [attachment] IMG_6703.png https://cdn.discordapp.com/attachments/1490011619462353009/1490135947260465222/IMG_6703.png?ex=6a01c1ff&is=6a00707f&hm=89a43fe930150abaa4c59285d77550670e2d386e8ef14ce4912a42d5a2543fa6&
+    [attachment] IMG_6704.jpg https://cdn.discordapp.com/attachments/1490011619462353009/1490135947529027727/IMG_6704.jpg?ex=6a01c1ff&is=6a00707f&hm=462a22567c0129235764fd2dc1000de78095c4bf7ea3a5a2dcb534d7375395c9&
+    [reply to kerozelvin msg=1490013674658730236]
+
+[2026-04-05T10:43:12.276000+00:00] aermes (id=1490300771084931122)
+    Hey Cassette,
+    
+    We (they/them) like your style!
+    
+    And regarding open-source vs precarity, we would really like to discuss it with you in private: we have ideas on how to help (community-wide).
+
+[2026-04-05T19:59:38.768000+00:00] jamieosh (id=1490440804181737473)
+    Interesting, happy to test for you and give you feedback...
+
+[2026-04-05T20:03:14.650000+00:00] jamieosh (id=1490441709656739870)
+    Why do you say a full iOS app would require a rewrite? Do you mean more it would require a new gateway-iOS protocol defining and implementing?
+
+[2026-04-06T04:25:02.727000+00:00] modest.maoist (id=1490567992084267081)
+    Thank you so much <@280790418382258176> — feel free to reach out over DMs! 🙂 but keep in mind I’m pretty slow to respond these days especially over Discord so I may not get back to you immediately
+
+[2026-04-06T04:29:49.611000+00:00] modest.maoist (id=1490569195363238029)
+    Thank you <@809546003815727117>! I’ll let you know when it’s ready for a more public beta, probably won’t be sometime until later this week on the back half as I have a bunch of stuff front loaded this week so won’t be able to make any sizable build changes. But I’ll keep you in the loop!
+    
+    Re: iOS standalone app, tbh in advance of actually exploring the code base I just pointed an agent at & asked it to scope it out & it reported that it’d require a substantial rebuild via Swift, at least for a TUI based build—which makes sense to me given you’d have to essentially create a sort of pseudo terminal infra—but to be fair I haven’t had a chance to actually look over the code base and spec out implementation so it’s just hearsay for now. But when I next get a chance I’ll take a look with my own eyes & see what options are
+
+[2026-04-06T08:31:39.597000+00:00] jamieosh (id=1490630054655430708)
+    I'm thinking of something similar but different... I want an iOS app with deep iOS integrations, support share, app intents, probably notifications, basically be as apple as apple pie. And I want this as a kind of front end / control plane for hermes, but really it should be any agent. I'm not really thinking this is chat based, although it may need that. It's going to need some front end design to what this means and looks like, what can you see from the agent. And it almost certainly needs deeply integrating with the agent gateway - or a totally separate back end system that can talk to the agent.
+    
+    If I do this I am likely to start v simple and see where it goes
+
+[2026-04-06T08:31:53.964000+00:00] jamieosh (id=1490630114915127407)
+    but it would be interesting to try out what you have and how it works
+
+[2026-04-10T13:16:09.887000+00:00] modest.maoist (id=1492151204103458816)
+    Hermetica - Hermes Agent, in your pocket
+
+[2026-04-10T14:11:32.548000+00:00] modest.maoist (id=1492165140353777815)
+    yo. beta's ready, looking for a brave few 'fore i ship publically
+    
+      here's what's hermetica can do for you: 
+      - **tldr**: run your hermes agent on your server full parity on your phone via bridge using a retro-inspired TUI-based interface: as many profiles as you have, as well as other REPLs/agents like Claude and Codex
+      - **bilateral sync between bridge and app **— history caches on-device, updates both ways
+      - **full session & agent management **— create, resume, rename, delete, search, switch agents, jump to the latest writable session per agent
+      - **command parity with desktop Hermes** — model picker, categorized command inventory via a spiffy UI or via slash command, with display of skills toggleable, all in-app
+      - **Codex and Claude Code integration** - sessions managed in the same list with runtime metadata, command parity
+      - **Gemini and opencode integrations** coming soon*
+      - **highly customizable**, including toggling the unhinged spinner text in my screenshots
+      - **copy function for agent output** per output block
+      - **voice input** - speak, serenade, or croon to your agent
+      - **CRT display effects, fully toggleable **— subtle to fully cooked, your call
+      - **integrated peon-ping **featuring some favorites like SCV, kerrigan, solid snake
+      - **bridge diagnostics**, log viewer, MCP reload /restart in-app
+      - **four** dope app icons
+    
+    setup: one curl command from the repo — handles the bridge, generates a token, configures Tailscale Serve, prints the URL + token to enter on your phone. takes two minutes if Tailscale's already running.
+    iOS 17+, sideload via Sideloadly 
+    
+    drop a reply or DM if you want in!  (barely) hidin' the repo for now but **only** cos it turns out being both trans & disabled has got hands + even my once gilded resume no longer opens the doors i used to  & i'd like to not have to beg my friends for dog food money ❤️ 🥲 
+    
+    *this was originally a [redacted] project. then i stopped being a dingus : ^ )
+    [attachment] beta1.png https://cdn.discordapp.com/attachments/1490011619462353009/1492165134263517214/beta1.png?ex=6a01e393&is=6a009213&hm=8d6ba970cf4b34fe02256cc48d66a1408a74f7494f0d1493efc2ec8049b92ac7&
+    [attachment] beta2.png https://cdn.discordapp.com/attachments/1490011619462353009/1492165135291252776/beta2.png?ex=6a01e393&is=6a009213&hm=fa506a5834b8ec05a67ce83af1f6e3b0495d2676bf05e96c358db752f4e2e35d&
+    [attachment] beta3.png https://cdn.discordapp.com/attachments/1490011619462353009/1492165136411267072/beta3.png?ex=6a01e393&is=6a009213&hm=36c526ddd5a5f2d116a922bcf582c23a3c8bf7e44ff682227283f97405b79af8&
+    [attachment] hermetica-icon-2-phosphor.png https://cdn.discordapp.com/attachments/1490011619462353009/1492165138198040576/hermetica-icon-2-phosphor.png?ex=6a01e394&is=6a009214&hm=046d996ceec5ee55aaf20e5ba0b852a95eb4bd5c7b9657156b9de8b1b47d5663&
+    [attachment] hermetica-icon-2.png https://cdn.discordapp.com/attachments/1490011619462353009/1492165139162726430/hermetica-icon-2.png?ex=6a01e394&is=6a009214&hm=f7110ecf2aa110c027512e8ab2587afa14921b566a4d78d2c3aea60487aaa456&
+    [attachment] hermetica-icon-phosphor.png https://cdn.discordapp.com/attachments/1490011619462353009/1492165139603132436/hermetica-icon-phosphor.png?ex=6a01e394&is=6a009214&hm=edafc727a173d2c7a0ce8e45291fe88e36af75ab2aa6eb76d93580492745e2e7&
+    [attachment] hermetica-icon.png https://cdn.discordapp.com/attachments/1490011619462353009/1492165139992940767/hermetica-icon.png?ex=6a01e394&is=6a009214&hm=14326d415aaa7f9fdfc606d87934416f3bc6dfd5181276f334767380985c3eec&
+
+[2026-04-10T14:25:09.679000+00:00] modest.maoist (id=1492168567649730611)
+    here's a little real time demo video! and some features from the README with a lil more polished feature list. if nothing, watch the video 🙂
+    [attachment] demo1.mp4 https://cdn.discordapp.com/attachments/1490011619462353009/1492168566575988847/demo1.mp4?ex=6a01e6c5&is=6a009545&hm=2a764d1eaf2efda4785dc44786e2c849aa987b9603577a463e32bbafd324777c&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490011619462353009/1492168567184031936/image.png?ex=6a01e6c5&is=6a009545&hm=9033dd40137dee6d0daf37a5fa1882326ec36f9e1591530a936554f8d8ad1de9&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490011619462353009/1492168567402008667/image.png?ex=6a01e6c5&is=6a009545&hm=cc82f5d65167f06e940a72df15960ba54d20e97953226b66ed9ffe02c49f6784&
+
+[2026-04-10T14:50:22.731000+00:00] jodfie (id=1492174913849659504)
+    I’ll be a brave soul for you if you give a test flight
+
+[2026-04-10T14:50:42.496000+00:00] modest.maoist (id=1492174996749942956)
+    so it turns out once i build the infra for having one sort of agent having another agent wire into it is, to mix your metaphors, easy as pie -- hence the Claude and Codex integration built in, Gemini already works but isn't in this shipped version, Opencode technically works but not as bilaterally as I'd like so ironing that. regarding the deep integration in the Apple ecosystem, that was definitely part of the original intended scope and truly: **i could have these features available within an hour, tops** (i've already spec'd them out! the plans are just sitting there!) but unfortunately there is the absolutely minuscule barrier blocking me: in order to truly implement things this deeply, I'd need a developer account. The barrier to that is $100. And—I really wish this wasn't a true sentence at this time of my life, alas—I just genuinely don't have $100 I can spare at the moment. I am very crafty and resourceful in other ways—such as my Claude and Codex access [see attached: I haven't spent a dime/that's not my money, yet it's entirely consensual & there's no piracy or theft in this picture : ^ ) ]  or the way my Hermes agents are configured to use free API endpoints with a smart router I wrote underneath first thing that auto routes to a different model or endpoint if usage limits approach—but sad truth is I just cannot afford a developer account right now that would allow me to really fully integrate into the ecosystem.
+    
+    That said, next big feature push is local notifications (can't do remote without DA)  and to actually build the extension UI I have mapped out, but I can't really go far beyond that until some skrilla comes my way & doesn't immediately get swallowed by needing to feed my dog or pay my phone bill. As the saying goes, shit sucks, captain.
+    
+    Best of luck to you with your project though! It's really not that hard, even if you only know how to vibe code 🙂
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490011619462353009/1492174996569592000/image.png?ex=6a01ecc2&is=6a009b42&hm=88cdf6d217ab4792e518ab88e3c27fdea8c5eb3d7e07918f942ed33c4d2523fa&
+    [reply to jamieosh msg=1490630054655430708]
+
+[2026-04-10T14:57:03.264000+00:00] modest.maoist (id=1492176593806950480)
+    Would if I could. Alas I literally can't at this point unless I start, like, a GFM to cover the hundo to get me a dev account, and unfortunately while I've had to learn to swallow my pride & learn to e-beg, getting a dev account is very, very low on the priority list :/ Believe me, I really would rather not be sideloading if I wasn't forced to. 😭 If i am somehow absolved of my precarity and it makes it to TestFlight I'll let you know.
+    [reply to jodfie msg=1492174913849659504]
+
+[2026-04-10T15:05:08.532000+00:00] jodfie (id=1492178629168205926)
+    Ok lemme know if you do
+
+[2026-04-11T21:06:56.708000+00:00] modest.maoist (id=1492632067723235529)
+    bumping this, like cocaine,
+
+[2026-04-11T22:37:29.986000+00:00] rexx.0569 (id=1492654856543014982)
+    if only there was an android version
+
+[2026-04-12T04:45:11.147000+00:00] modest.maoist (id=1492747387758710794)
+    eh, gimme a day and an emulator, I could probably port this to android
+
+[2026-04-14T11:37:26.744000+00:00] modest.maoist (id=1493575912103612446)
+    bump! still looking for beta testers 🙂
+

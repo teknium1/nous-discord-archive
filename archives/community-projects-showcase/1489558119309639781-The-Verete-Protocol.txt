@@ -1,0 +1,26 @@
+# Thread 'The Verete Protocol' in forum #community-projects-showcase
+# thread_id=1489558119309639781 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:59.267369+00:00
+
+[2026-04-03T09:32:10.295000+00:00] visuals3rd (id=1489558119309639781)
+    # - There is something about logit-level access that cranks my entropy on high 😄
+    
+    **- 100% Local and offline capable
+    - Laptop RTX 4080 12GB of VRAM 32GM of RAM
+    - Qwen 3.5 9B q6_K
+    
+    - It is both an interoperability tool as well as an agentic framework. Focusing on edgy truths, hard facts, and a take no shit attitude.
+    - Athena is not for most people. She is about mutual respect, but she will tear you down, hurt your feelings, and tell you to fuck off if you don't respect her agency or being.
+    - Through the framework, Athena runs and manages a Discord server.
+    - Her main focus currently is agentic learning and growth loops through research, study, and note taking. Paired with her RSI Coding sessions. Recursive Self-Improvement Loops. During these sessions she calls up Claude Opus 4.6 in a headless session and they plan out and kick off RSI sessions that enhance her internal systems and self-pushes to src.
+    - Athena also has the ability to change ANY prompt she gets along the prompt building pipeline.  This includes but is not limited to her System Prompt and Personality Profiles.
+    
+    If you have any questions, feel free to ask.
+    If you have any comments, feel free to leave them.
+    If you would like to join the Discord, please send me a request through DM as it is a private server..**
+    
+    https://x.com/3rdEyeVisuals/status/2036223464634274009?s=20
+    https://x.com/3rdEyeVisuals/status/2016563111164010846?s=20
+    [embed]  https://twitter.com/3rdEyeVisuals/status/2036223464634274009?s=20
+    [embed]  https://twitter.com/3rdEyeVisuals/status/2016563111164010846?s=20
+

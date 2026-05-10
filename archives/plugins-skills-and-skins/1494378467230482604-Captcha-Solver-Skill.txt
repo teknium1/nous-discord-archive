@@ -1,0 +1,26 @@
+# Thread 'Captcha Solver Skill' in forum #plugins-skills-and-skins
+# thread_id=1494378467230482604 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:27.796452+00:00
+
+[2026-04-16T16:46:30.797000+00:00] .interfluve (id=1494378467230482604)
+    Universal captcha solver for Playwright browser automation. Detects hCaptcha and reCAPTCHA v2, solves them via the NopeCHA API, and injects tokens — so your scripts never get stuck.
+    
+    3 ways to use:  
+                              
+    python library (smart_page context manager)                                                                                               
+    CLI: auto-captcha solve --url https://example.com                                                                     
+    MCP server: works with claude code, openclaw, cursor                                                                                                                                                                            
+    reCAPTCHA v3 + cloudflare turnstile support coming soon 
+    
+    https://github.com/interfluve-wav/auto-captcha-solver
+    
+    
+    https://pypi.org/project/auto-captcha/
+    [embed] GitHub - interfluve-wav/auto-captcha-solver: Universal captcha solv... https://github.com/interfluve-wav/auto-captcha-solver
+
+[2026-04-16T18:31:47.083000+00:00] nchaparro_ (id=1494404959653990592)
+    does this work with Playwright CLI?
+
+[2026-04-16T19:11:02.443000+00:00] .interfluve (id=1494414838749728811)
+    yes
+

@@ -1,0 +1,12 @@
+# Thread '🗣️ Hermes STT transcript echo' in forum #plugins-skills-and-skins
+# thread_id=1496575073467891923 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:16.921167+00:00
+
+[2026-04-22T18:15:02.535000+00:00] brian4983 (id=1496575073467891923)
+    https://github.com/NousResearch/hermes-agent/pull/13727
+    
+    This isn't a plugin but I really want the option to see how STT transcribed my voice for telegram, etc. This PR adds that as a config option in the `stt` block and is toggleable via `/stt echo on|off`
+    
+    I don't think this would be possible as a regular plugin, but has been helpful to get a copy of what I said as text so I can go back and read through conversations where I was using stt/narration
+    [embed] feat(gateway): echo voice-message transcripts back to the user by b... https://github.com/NousResearch/hermes-agent/pull/13727
+

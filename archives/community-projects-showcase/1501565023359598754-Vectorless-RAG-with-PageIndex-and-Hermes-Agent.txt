@@ -1,0 +1,39 @@
+# Thread 'Vectorless RAG with PageIndex and Hermes Agent' in forum #community-projects-showcase
+# thread_id=1501565023359598754 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:20.506426+00:00
+
+[2026-05-06T12:43:19.298000+00:00] lemoussel (id=1501565023359598754)
+    In this project, I built a simple vectorless RAG workflow using **PageIndex** and **Hermes Agent**. Instead of splitting documents into chunks and retrieving them through vector similarity, the system relies on a **hierarchical document structure** and **tool-based reasoning**. The agent first understands how the document is organized, then decides which pages to inspect before answering.
+    
+    If you want to see the full implementation, go to the Gist: https://gist.github.com/LeMoussel/d18bad13857b12031d10b5959669ebdf
+    
+    ### Why this approach?
+    
+    Traditional RAG pipelines usually follow the same pattern:
+    - chunk the document
+    - embed the chunks
+    - store them in a vector database
+    - retrieve the nearest chunks for a question
+    
+    That works well in many cases, but it also has trade-offs. Chunking can break context, retrieval may surface passages that are locally similar but globally irrelevant, and the full pipeline adds complexity.
+    
+    This demo explores a different path:
+    - keep the document structure intact
+    - expose the document through tools
+    - let the agent navigate the structure step by step
+    
+    The result feels closer to how a human would work: first scan the table of contents, then open the relevant sections, then read the right pages.
+    
+    ### What the demo does
+    
+    The script indexes a PDF with PageIndex (https://github.com/VectifyAI/PageIndex), waits until retrieval is ready, and then creates a Hermes Agent with a custom toolset dedicated to that document.
+    
+    The most interesting part of this demo is not just that it answers questions from a PDF. It is that the agent does so by **navigating the document intentionally**, rather than by blindly retrieving similar chunks.
+    [embed] Vectorless RAG demo with PageIndex and Hermes Agent: registers cust... https://gist.github.com/LeMoussel/d18bad13857b12031d10b5959669ebdf
+
+[2026-05-06T20:03:45.922000+00:00] zzaaiinnzen (id=1501675864654483568)
+    Nice - I’ve been using page index. What are the expected updates?
+
+[2026-05-07T06:47:06.993000+00:00] lemoussel (id=1501837769281110187)
+    I don't know. I have no connection with the PageIndex team.
+

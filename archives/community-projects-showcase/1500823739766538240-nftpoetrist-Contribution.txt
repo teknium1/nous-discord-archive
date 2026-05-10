@@ -1,0 +1,32 @@
+# Thread 'nftpoetrist Contribution' in forum #community-projects-showcase
+# thread_id=1500823739766538240 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:23.971981+00:00
+
+[2026-05-04T11:37:43.517000+00:00] nftpoetrist (id=1500823739766538240)
+    https://github.com/NousResearch/hermes-agent/commit/6c1322b9972ce61419df7df6ad7ae5a261fef9d2
+    [embed] fix(slack): close previous handler in connect() to prevent zombie S... https://github.com/NousResearch/hermes-agent/commit/6c1322b9972ce61419df7df6ad7ae5a261fef9d2
+
+[2026-05-04T11:38:21.926000+00:00] nftpoetrist (id=1500823900865560586)
+    https://github.com/NousResearch/hermes-agent/commit/808fee151d42b77a763ea4a8ec711d7b501cece6
+    [embed] fix(auxiliary): propagate explicit_api_key to _try_anthropic() · N... https://github.com/NousResearch/hermes-agent/commit/808fee151d42b77a763ea4a8ec711d7b501cece6
+
+[2026-05-04T11:38:39.090000+00:00] nftpoetrist (id=1500823972856463452)
+    https://github.com/NousResearch/hermes-agent/commit/e89376d66ff2f72caf069cdddd65c161bb4f7540
+    [embed] fix(setup): add missing SLACK_HOME_CHANNEL prompt to _setup_slack()... https://github.com/NousResearch/hermes-agent/commit/e89376d66ff2f72caf069cdddd65c161bb4f7540
+
+[2026-05-04T11:39:28.975000+00:00] nftpoetrist (id=1500824182089318481)
+    https://github.com/NousResearch/hermes-agent/commit/9faaa292b460ad8d8f46e79f907b972edeca9e50
+    [embed] fix(delegate): inherit parent fallback_chain in _build_child_agent ... https://github.com/NousResearch/hermes-agent/commit/9faaa292b460ad8d8f46e79f907b972edeca9e50
+
+[2026-05-04T11:39:56.792000+00:00] nftpoetrist (id=1500824298762403954)
+    https://github.com/NousResearch/hermes-agent/commit/e2211b2683d0dacbdb39af9bc5a2b712a742597d
+    [embed] fix(compressor): reset _summary_failure_cooldown_until in on_sessio... https://github.com/NousResearch/hermes-agent/commit/e2211b2683d0dacbdb39af9bc5a2b712a742597d
+
+[2026-05-04T11:40:50.806000+00:00] nftpoetrist (id=1500824525313409105)
+    https://github.com/NousResearch/hermes-agent/commit/4e2b20b7053b4712362a107f16f56443472bedf2
+    [embed] fix(cli): sync use_gateway in _reconfigure_provider for tts, browse... https://github.com/NousResearch/hermes-agent/commit/4e2b20b7053b4712362a107f16f56443472bedf2
+
+[2026-05-04T22:07:46.708000+00:00] nftpoetrist (id=1500982297841897653)
+    https://github.com/NousResearch/hermes-agent/pull/19895
+    [embed] fix(cli): guard c-S-c key binding with try/except to prevent startu... https://github.com/NousResearch/hermes-agent/pull/19895
+

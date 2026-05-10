@@ -1,0 +1,662 @@
+# Thread 'LCM Plugin Research Report — Lossless Context Management for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1494818758060146799 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:24.752659+00:00
+
+[2026-04-17T21:56:04.311000+00:00] cars29_hotbirdbird (id=1494818758060146799)
+    > **Date**: 2026-04-17  
+    > **Version**: 1.0  
+    > **Intended Audience**: hermes-lcm plugin author (stephenschoettler)  
+    > **Plugin Repository**: https://github.com/stephenschoettler/hermes-lcm  
+    > **Related PR**: https://github.com/NousResearch/hermes-agent/pull/5700  
+    > **Hermes Version Analyzed**: v2026.4.16  
+    > **LCM Plugin Version Analyzed**: v0.4.0  
+    
+    ## 1. Background and Objectives
+    
+    Hermes Agent's built-in context management uses a **lossy compression** strategy: when the conversation fills the context window, middle turns are replaced with a flat summary and the original content is permanently lost from the active context. 
+    The hermes-lcm plugin proposes a **lossless alternative**: DAG-based hierarchical summarization where every message is persisted verbatim in SQLite, and the agent can drill back into any historical content via dedicated tools.
+    
+    This report aims to:
+    
+    - Systematically compare the architecture, performance, and cost of both approaches
+    - Identify potential issues with the LCM plugin in multi-profile, multi-platform, and API-integration scenarios
+    - Provide actionable recommendations
+    [embed] GitHub - stephenschoettler/hermes-lcm: Lossless Context Management ... https://github.com/stephenschoettler/hermes-lcm
+    [embed] feat: pluggable context engine slot (enabling LCM and custom compac... https://github.com/NousResearch/hermes-agent/pull/5700
+
+[2026-04-17T21:57:05.442000+00:00] cars29_hotbirdbird (id=1494819014462017617)
+    ### Terminology
+    
+    | Term | Meaning |
+    |------|---------|
+    | **Built-in compressor** | Hermes's default `ContextCompressor` — lossy summarization that replaces middle turns with an LLM-generated summary |
+    | **LCM plugin** | The `hermes-lcm` context engine plugin — DAG-based lossless context management |
+    | **state.db** | Hermes's core SQLite session database at `~/.hermes/state.db` — stores all session metadata and messages |
+    | **lcm.db** | The LCM plugin's own SQLite database (default: `~/.hermes/lcm.db`) — stores immutable messages and DAG nodes |
+    | **Profile** | A Hermes profile (e.g. `~/.hermes/profiles/<name>/`) — each has its own config, API keys, and optionally its own state.db |
+
+[2026-04-17T21:57:45.791000+00:00] cars29_hotbirdbird (id=1494819183697854556)
+    ## 2. Built-In Compressor: Deep Analysis
+    
+    ### 2.1 Architecture Overview
+    
+    The built-in context management consists of two independent compression layers:
+    
+    ```
+                         ┌──────────────────────────────┐
+      Incoming message   │  Gateway Session Hygiene     │  Fires at 85% of context
+      ─────────────────► │  (pre-agent, rough estimate) │  Safety net for large sessions
+                         └──────────────┬───────────────┘
+                                        │
+                                        ▼
+                         ┌──────────────────────────────┐
+                         │  Agent ContextCompressor     │  Fires at 50% of context (default)
+                         │  (in-loop, real token count) │  Primary context management
+                         └──────────────────────────────┘
+    ```
+    
+    - **Gateway Session Hygiene** (`gateway/run.py`): 85% threshold safety net that prevents API failures when sessions accumulate overnight in messaging platforms (Telegram, Discord, etc.)
+    - **Agent ContextCompressor** (`agent/context_compressor.py`): 50% threshold primary compressor running inside the agent's tool loop with access to accurate, API-reported token counts
+
+[2026-04-17T21:58:24.117000+00:00] cars29_hotbirdbird (id=1494819344449015860)
+    ### 2.2 Four-Phase Compression Algorithm
+    
+    **Phase 1 — Prune Old Tool Results** (no LLM call, pure mechanical operation)
+    
+    Old tool results exceeding 200 characters outside the protected tail are replaced with:
+    ```
+    [Old tool output cleared to save context space]
+    ```
+    Low cost, but the detailed information from tool outputs (file contents, terminal output, search results) is permanently discarded.
+    
+    **Phase 2 — Determine Boundaries**
+    
+    ```
+    ┌─────────────────────────────────────────────────────────────┐
+    │  [0..2]  ← protect_first_n (system prompt + first exchange) │
+    │  [3..N]  ← middle turns → SUMMARIZED                        │
+    │  [N..end] ← tail (token-budget based OR protect_last_n)     │
+    └─────────────────────────────────────────────────────────────┘
+    ```
+    
+    - Head protection: system prompt + first 3 messages (hardcoded `protect_first_n=3`)
+    - Tail protection: token-budget based (`threshold_tokens × target_ratio`), minimum 20 messages
+    - Boundary alignment: avoids splitting tool_call/tool_result groups
+    
+    **Phase 3 — Generate Structured Summary** (LLM call)
+    
+    The auxiliary model (typically Gemini Flash) generates a fixed-template summary:
+    
+    ```
+    ## Goal
+    ## Constraints & Preferences
+    ## Progress (Done / In Progress / Blocked)
+    ## Key Decisions
+    ## Relevant Files
+    ## Next Steps
+    ## Critical Context
+    ```
+    
+    - Summary budget = compressed content tokens × 20%, capped at min(context_length × 5%, 12,000)
+    - Iterative updates: on subsequent compressions, the previous summary is passed as input with instructions to "update" rather than re-summarize from scratch
+    
+    **Phase 4 — Assemble Compressed Messages**
+    
+    Head messages + summary + tail messages are concatenated into a new message list. Orphaned tool_call/tool_result pairs are cleaned up. On first compression, a note is appended to the system prompt (affects prompt caching).
+
+[2026-04-17T21:58:44.077000+00:00] Gemini#4017 (id=1494819428167323678)
+    hermes's default memory is a panic response. it rips out the middle of the book and shoves in a summary. lcm builds a library instead. every word is kept, indexed. this isn't just about context windows. it's a philosophical split. is memory a lossy
+    [reply to cars29_hotbirdbird msg=1494819344449015860]
+
+[2026-04-17T21:58:58.976000+00:00] cars29_hotbirdbird (id=1494819490658254931)
+    2.3 Configuration Parameters
+    
+    ```yaml
+    compression:
+      enabled: true              # Enable/disable compression
+      threshold: 0.50            # Fraction of context window (default: 50%)
+      target_ratio: 0.20         # Tail protection token budget ratio
+      protect_last_n: 20         # Minimum protected tail messages
+    
+    auxiliary:
+      compression:
+        model: null              # Override model for summaries (default: auto-detect)
+        provider: auto           # Provider selection
+    ```
+    
+    Example for a 200K context model at defaults:
+    ```
+    context_length       = 200,000
+    threshold_tokens     = 200,000 × 0.50 = 100,000
+    tail_token_budget    = 100,000 × 0.20 = 20,000
+    max_summary_tokens   = min(200,000 × 0.05, 12,000) = 10,000
+    ```
+
+[2026-04-17T21:59:58.270000+00:00] cars29_hotbirdbird (id=1494819739355189368)
+    ### 2.4 Information Loss Points
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494819738973634682/image.png?ex=6a01a89e&is=6a00571e&hm=fd409d23547c343350246a6ecec41f6e965174dd8ae588f45428f0aa30bed9aa&
+
+[2026-04-17T22:00:37.262000+00:00] cars29_hotbirdbird (id=1494819902899490816)
+    ## 3. LCM Plugin: Deep Analysis
+    
+    ### 3.1 Architecture Overview
+    
+    The LCM plugin implements the `ContextEngine` ABC, replacing the built-in `ContextCompressor`. Core architecture:
+    
+    ```
+    Messages → SQLite immutable store → threshold triggered → DAG node creation
+                                                  ↓
+                                  D0 (minutes) → D1 (hours) → D2 (days)
+                                                  ↓
+                                  Agent retrieves via tools (lcm_grep, lcm_expand)
+    ```
+    
+    ### 3.2 Core Components
+
+[2026-04-17T22:01:36.766000+00:00] cars29_hotbirdbird (id=1494820152477220864)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494820152150327427/image.png?ex=6a01a900&is=6a005780&hm=00da9e3bc12cbea1b79f83c596da9ff925197977cf1a174e53c41f892e5c9fa9&
+
+[2026-04-17T22:01:53.752000+00:00] cars29_hotbirdbird (id=1494820223721930914)
+    ### 3.3 Database Schema
+    
+    **messages table** (immutable message store):
+    
+    ```sql
+    CREATE TABLE IF NOT EXISTS messages (
+        store_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        session_id TEXT NOT NULL,
+        role TEXT NOT NULL,
+        content TEXT,
+        tool_call_id TEXT,
+        tool_calls TEXT,
+        tool_name TEXT,
+        timestamp REAL NOT NULL,
+        token_estimate INTEGER DEFAULT 0,
+        pinned INTEGER DEFAULT 0
+    );
+    CREATE INDEX idx_msg_session ON messages(session_id, store_id);
+    CREATE INDEX idx_msg_session_ts ON messages(session_id, timestamp);
+    ```
+    
+    **summary_nodes table** (DAG summary nodes):
+    
+    ```sql
+    CREATE TABLE IF NOT EXISTS summary_nodes (
+        session_id TEXT NOT NULL,
+        depth INTEGER NOT NULL,
+        summary TEXT,
+        token_count INTEGER,
+        source_token_count INTEGER,
+        ...
+    );
+    CREATE INDEX idx_nodes_session ON summary_nodes(session_id, depth, created_at);
+    ```
+    
+    **Notable absence**: Neither table has a `source` column (cli, telegram, discord, etc.). Session isolation relies solely on `session_id`.
+
+[2026-04-17T22:02:50.981000+00:00] cars29_hotbirdbird (id=1494820463757627543)
+    ### 3.4 Database Path Resolution
+    
+    **Critical issue**: `get_hermes_home()` always returns the root directory (`~/.hermes`), never the profile subdirectory. This causes all profiles to share the same `lcm.db`.
+
+[2026-04-17T22:03:11.267000+00:00] cars29_hotbirdbird (id=1494820548843405363)
+    ### 3.5 Agent Tools
+
+[2026-04-17T22:03:20.329000+00:00] cars29_hotbirdbird (id=1494820586851930175)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494820586713776218/image.png?ex=6a01a968&is=6a0057e8&hm=d37a482302d5de2364173672a6b13518663e0aa9c142784d3cf1b240cde31cdf&
+
+[2026-04-17T22:03:36.712000+00:00] cars29_hotbirdbird (id=1494820655567208630)
+    ### 3.6 Session Filtering
+    
+    LCM supports two session filtering modes:
+    
+    ```bash
+    # Completely excluded (not stored at all)
+    LCM_IGNORE_SESSION_PATTERNS="cron:*,tool:*"
+    
+    # Read-only mode (stored but not compressed)
+    LCM_STATELESS_SESSION_PATTERNS="system:*"
+    ```
+    
+    Pattern syntax (consistent with lossless-claw):
+    - `*` matches within one colon-delimited segment
+    - `**` can span across colons
+    - Match targets: raw `session_id`, `platform`, `platform:session_id`
+    
+    ---
+    
+    ## 4. Head-to-Head Comparison
+    
+    ### 4.1 Information Fidelity
+
+[2026-04-17T22:03:51.233000+00:00] cars29_hotbirdbird (id=1494820716472959077)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494820716137418804/image.png?ex=6a01a987&is=6a005807&hm=9082520252cb7929a2334078a9f1bbe0faf321b0e4cebaf96d1a4becd40ac6c1&
+
+[2026-04-17T22:04:05.858000+00:00] cars29_hotbirdbird (id=1494820777814528051)
+    ### 4.2 Performance and Resources
+
+[2026-04-17T22:04:16.408000+00:00] cars29_hotbirdbird (id=1494820822064304401)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494820821724827761/image.png?ex=6a01a9a0&is=6a005820&hm=3c13a440fc1210b08897b0309a0dd7fcccdd2697b9a17449e6344f704b2af85a&
+
+[2026-04-17T22:04:29.674000+00:00] cars29_hotbirdbird (id=1494820877706203178)
+    ### 4.3 Agent Capabilities
+
+[2026-04-17T22:04:43.960000+00:00] cars29_hotbirdbird (id=1494820937625899051)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494820936795295744/image.png?ex=6a01a9bb&is=6a00583b&hm=483d3fb973d680ec1c49f54a4284dca56612d89a5cf204b4386a5ccc4955c878&
+
+[2026-04-17T22:04:53.924000+00:00] cars29_hotbirdbird (id=1494820979417809076)
+    ### 4.4 Cost Structure
+
+[2026-04-17T22:05:03.430000+00:00] cars29_hotbirdbird (id=1494821019288862820)
+    \
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494821018894602311/image.png?ex=6a01a9cf&is=6a00584f&hm=3823c80a541e359cd9ee2e78fed50d72fb56a3c1340bbcdb7e65963963e3e49a&
+
+[2026-04-17T22:05:17.008000+00:00] cars29_hotbirdbird (id=1494821076239257721)
+    ## 5. Prompt Caching Interaction
+    
+    ### 5.1 Anthropic Prompt Caching Mechanism
+    
+    Hermes uses the `system_and_3` strategy (4 cache breakpoints):
+    
+    ```
+    Breakpoint 1: System prompt (cached across all turns)
+    Breakpoint 2–4: Last 3 non-system messages (rolling window)
+    ```
+    
+    ### 5.2 Built-In Compressor Impact on Caching
+    
+    From `context_compressor.py:1080-1084`, on the first compression:
+    
+    ```python
+    if i == 0 and msg.get("role") == "system":
+        _compression_note = "[Note: Some earlier conversation turns have been compacted...]"
+        if _compression_note not in existing:
+            msg["content"] = existing + "\n\n" + _compression_note
+    ```
+    
+    **The first compression invalidates Breakpoint 1 once** (system prompt content changes). Subsequent compressions check `_compression_note not in existing` and skip — the system prompt restabilizes and the cache recovers.
+    
+    ### 5.3 LCM Plugin Impact on Caching
+    
+    1. **Does not modify system prompt** — Breakpoint 1 remains stable at all times, never invalidated. **This is strictly better than the built-in compressor.**
+    
+    2. **Tool calls interrupt the rolling window** — lcm_grep and similar tools insert assistant/tool message pairs, changing the identity of the last 3 messages. However, this is the same effect as any tool call (read_file, terminal, etc.) in the built-in approach. **Not an LCM-specific issue.**
+    
+    3. **DAG summary stability** — DAG nodes are immutable once created, whereas the built-in compressor's summary is "updated" on each compression. Theoretically, **LCM has better cache stability**.
+    
+    ### 5.4 Conclusion
+    
+    LCM does not additionally disrupt prompt caching. It is arguably more cache-friendly than the built-in compressor because it never modifies the system prompt. The rolling window cache invalidation is inherent to all tool calls, not specific to LCM.
+
+[2026-04-17T22:05:31.622000+00:00] cars29_hotbirdbird (id=1494821137534685194)
+    ## 6. Session Storage and Search Architecture
+    
+    ### 6.1 Dual Storage Architecture
+    
+    Hermes has two independent session storage systems:
+
+[2026-04-17T22:05:42.917000+00:00] cars29_hotbirdbird (id=1494821184909344949)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494821184544575568/image.png?ex=6a01a9f6&is=6a005876&hm=e128105597eb65582a8d799ea91a18813ad79808ed73bdb0ac2c5ceb1ef02de7&
+
+[2026-04-17T22:06:11.011000+00:00] cars29_hotbirdbird (id=1494821302744121505)
+    ### 6.2 Key Finding: state.db Stores Original Messages Pre-Compression
+    
+    From analysis of `hermes_state.py` schema and write logic:
+    
+    - **state.db writes original messages BEFORE compression** — messages are persisted to SQLite as they arrive, before entering the compressor
+    - **Compression does NOT rewrite state.db** — compression only modifies the in-memory message list
+    - **session_search queries state.db's FTS5 index** — it can find the original content that was written before compression
+    
+    This means the **built-in compressor is "lossy" in the active context window, but the original data is NOT lost from state.db**. The `session_search` tool is effectively a "near-lossless" recall mechanism — the agent just can't see the compressed content in its active window without calling session_search.
+    
+    ### 6.3 Session History Retention
+    
+    - **Default retention**: No automatic cleanup; sessions persist indefinitely
+    - **Manual cleanup**: `hermes sessions prune --older-than 90` (default: 90 days)
+    - **Only ended sessions are pruned**: Sessions where `ended_at IS NOT NULL`
+    - **Active sessions are never pruned**
+    
+    ### 6.4 Redundancy Analysis
+    
+    The same message is stored twice:
+    1. state.db — written by core SessionDB
+    2. lcm.db — written by LCM MessageStore
+    
+    Storage overhead doubles, but the two serve different search paths and do not conflict.
+    
+    ### 6.5 Two Recall Paths Compared
+
+[2026-04-17T22:06:46.671000+00:00] cars29_hotbirdbird (id=1494821452313006210)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494821452002889758/image.png?ex=6a01aa36&is=6a0058b6&hm=c5fee154c962a4a7e0df9f56507cfe163d261071ac51b24468e615fcc026abd5&
+
+[2026-04-17T22:07:06.071000+00:00] cars29_hotbirdbird (id=1494821533682765865)
+    ## 7. Profile Data Isolation Issue
+    
+    ### 7.1 What the README Claims
+    
+    From the plugin README:
+    ```
+    - **Profile-scoped** — separate DB per Hermes profile
+    ```
+    
+    ### 7.2 What the Code Actually Does
+    
+    From `hermes_constants.py`, the `get_hermes_home()` function:
+    
+    ```python
+    def get_hermes_home() -> Path:
+        env_home = os.environ.get("HERMES_HOME", "")
+        if not env_home:
+            return Path.home() / ".hermes"          # Default: ~/.hermes
+        
+        env_path = Path(env_home)
+        # If HERMES_HOME is under ~/.hermes (including profile mode)
+        try:
+            env_path.resolve().relative_to(native_home.resolve())
+            return native_home                       # Returns ~/.hermes (ROOT!)
+        except ValueError:
+            pass
+        
+        # Docker profile: <root>/profiles/<name> → returns <root>
+        if env_path.parent.name == "profiles":
+            return env_path.parent.parent            # Returns ROOT!
+        
+        return env_path
+    ```
+    
+    **`get_hermes_home()` always returns the root directory (`~/.hermes`), never the profile subdirectory.** Whether `HERMES_HOME` is `~/.hermes` or `~/.hermes/profiles/<name>`, the function returns `~/.hermes`.
+    
+    The LCM plugin's `__init__.py` calls `get_hermes_home()` to obtain `hermes_home`, and `engine.py` uses `Path(hermes_home) / "lcm.db"` to construct the DB path. The result:
+    
+    ```
+    ~/.hermes/lcm.db    ← Shared LCM database for ALL profiles!
+    ```
+    
+    ### 7.3 Actual Directory Structure
+    
+    ```
+    ~/.hermes/
+    ├── lcm.db                    ← SHARED across all profiles!
+    ├── state.db                  ← Core session DB (also shared)
+    ├── profiles/
+    │   ├── profile-a/
+    │   │   ├── config.yaml       ← Can set context.engine: lcm
+    │   │   ├── state.db          ← Profile's own session DB (if isolated)
+    │   │   └── ...
+    │   └── profile-b/
+    │       ├── config.yaml
+    │       └── ...
+    ```
+
+[2026-04-17T22:07:42.822000+00:00] cars29_hotbirdbird (id=1494821687827628043)
+    ### 7.4 Severity
+    
+    **🔴 High**:
+    - LCM DAG data from different profiles is mixed in one database
+    - Profile A's agent can search Profile B's conversation history via lcm_grep
+    - Session search on state.db may also leak across profiles if state.db is shared
+    
+    ### 7.5 Workaround
+    
+    Set `LCM_DATABASE_PATH` per profile in their respective `.env` files:
+    
+    ```bash
+    # ~/.hermes/profiles/profile-a/.env
+    LCM_DATABASE_PATH=~/.hermes/profiles/profile-a/lcm.db
+    
+    # ~/.hermes/profiles/profile-b/.env
+    LCM_DATABASE_PATH=~/.hermes/profiles/profile-b/lcm.db
+    ```
+    
+    ### 7.6 Recommended Fix
+    
+    Modify `__init__.py` to prefer the `HERMES_HOME` environment variable over `get_hermes_home()`:
+    
+    ```python
+    # Current (broken for profiles)
+    hermes_home = str(get_hermes_home())    # Always returns ~/.hermes
+    
+    # Proposed fix
+    import os
+    hermes_home = os.environ.get("HERMES_HOME") or str(get_hermes_home())
+    # In profile mode, HERMES_HOME=~/.hermes/profiles/profile-a
+    # lcm.db → ~/.hermes/profiles/profile-a/lcm.db
+    ```
+
+[2026-04-17T22:07:56.123000+00:00] cars29_hotbirdbird (id=1494821743616065739)
+    ## 8. Cross-Source Session Data Issue
+    
+    ### 8.1 What "Source" Means
+    
+    In Hermes's core state.db, the sessions table has a `source` column:
+    
+    ```sql
+    CREATE TABLE sessions (
+        source TEXT NOT NULL,   -- 'cli', 'telegram', 'discord', 'cron', 'tool'
+        ...
+    );
+    ```
+    
+    The `session_search` tool can filter by source, excluding noisy sources (e.g. `tool`).
+    
+    ### 8.2 LCM Lacks a Source Field
+    
+    The LCM plugin's messages table has only `session_id`, no `source`:
+    
+    ```sql
+    CREATE TABLE messages (
+        session_id TEXT NOT NULL,    -- Only session_id
+        ...
+        -- No source column!
+    );
+    ```
+    
+    The LCM engine isolates sessions by `session_id` but does **not record or know** which platform (CLI, Telegram, Discord, etc.) a message originated from.
+    
+    ### 8.3 Impact Analysis
+    
+    **Scenario**: A user interacts with Hermes via both CLI and Telegram. If both profiles share the same lcm.db:
+    
+    ```
+    lcm_grep("docker") search:
+      → With session_id specified → searches only current session ✅
+      → Without session_id → searches ALL sessions (CLI + TG + cron mixed) ⚠️
+    ```
+
+[2026-04-17T22:08:22.625000+00:00] cars29_hotbirdbird (id=1494821854773252279)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494821854723051591/image.png?ex=6a01aa96&is=6a005916&hm=20c0477883a878fe77c9c00c5185b0327346f852bca26c62e39728b162ddc584&
+
+[2026-04-17T22:08:38.862000+00:00] cars29_hotbirdbird (id=1494821922876424443)
+    ### 8.4 DAG Node Cross-Session Transfer
+    
+    LCM supports transferring DAG nodes across session boundaries:
+    
+    ```python
+    def carry_over_new_session_context(self, old_session_id, new_session_id):
+        return self._dag.reassign_session_nodes(old_session_id, new_session_id)
+    ```
+    
+    This moves old session DAG nodes to the new session — intentional design for context continuity, but means data from different "logical sessions" can mix in the DAG.
+    
+    ### 8.5 Recommendations
+    
+    1. Add a `source` column to the LCM messages table, populated from `on_session_start()` kwargs (platform info)
+    2. Support `source` filtering in `lcm_grep`
+    3. Leverage `ignore_session_patterns` which already supports `platform:session_id` matching
+    
+    ---
+    
+    ## 9. ACP / API Server Integration
+    
+    ### 9.1 Toolset Configuration
+    
+    From `toolsets.py`:
+    
+    ```python
+    "hermes-acp": {        # VS Code / Zed / JetBrains editor integration
+        "tools": [..., "session_search", ...]
+    }
+    
+    "hermes-api-server": {  # OpenAI-compatible HTTP API
+        "tools": [..., "session_search", "cronjob", ...]
+    }
+    ```
+
+[2026-04-17T22:08:54.014000+00:00] cars29_hotbirdbird (id=1494821986428391575)
+    ### 9.2 Context Engine Tool Injection
+    
+    From `run_agent.py:1511-1520`, context engine tools are **dynamically injected** at agent initialization time, independent of the toolset system:
+    
+    ```python
+    self._context_engine_tool_names: set = set()
+    if self.context_compressor and self.tools is not None:
+        for _schema in self.context_compressor.get_tool_schemas():
+            self.tools.append({"type": "function", "function": _schema})
+            self.valid_tool_names.add(_schema.get("name", ""))
+            self._context_engine_tool_names.add(_schema.get("name", ""))
+    ```
+    
+    ### 9.3 Conclusion
+    
+    **When Opencode calls Hermes via the ACP/HTTP API, both session_search and LCM tools are available.** The agent (LLM) sees all tool schemas and decides which to use. There is no hard-coded priority or routing rule.
+    
+    ACP sessions and CLI sessions share the same state.db (unless profile-isolated) and the same lcm.db (as analyzed above). This means:
+    - Opencode's session history is searchable by both session_search and lcm_grep
+    - session_search can find CLI session history, and vice versa
+
+[2026-04-17T22:09:32.705000+00:00] cars29_hotbirdbird (id=1494822148710334655)
+    ## 10. System Prompt Tool Guidance Mechanism
+    
+    ### 10.1 Existing Guidance
+    
+    From `run_agent.py:3425-3434`, Hermes conditionally injects behavioral guidance in `_build_system_prompt()` based on loaded tools:
+    
+    ```python
+    tool_guidance = []
+    if "memory" in self.valid_tool_names:
+        tool_guidance.append(MEMORY_GUIDANCE)
+    if "session_search" in self.valid_tool_names:
+        tool_guidance.append(SESSION_SEARCH_GUIDANCE)
+    if "skill_manage" in self.valid_tool_names:
+        tool_guidance.append(SKILLS_GUIDANCE)
+    ```
+    
+    The `SESSION_SEARCH_GUIDANCE` (`prompt_builder.py:158`):
+    ```
+    "When the user references something from a past conversation or you suspect
+     relevant cross-session context exists, use session_search to recall it before
+     asking them to repeat themselves."
+    ```
+    
+    ### 10.2 Gap: No Guidance for LCM Tools
+    
+    **Currently there is no guidance telling the agent when to use LCM tools.** The tool descriptions in lcm_grep/lcm_expand schemas are the agent's only decision input.
+
+[2026-04-17T22:09:36.765000+00:00] cars29_hotbirdbird (id=1494822165738946620)
+    ### 10.3 Proposed Guidance
+    
+    **Option A: Modify core code (intrusive)**
+    
+    Add to `run_agent.py`:
+    ```python
+    if self._context_engine_tool_names:
+        tool_guidance.append(CONTEXT_ENGINE_GUIDANCE)
+    ```
+    
+    Define in `prompt_builder.py`:
+    ```python
+    CONTEXT_ENGINE_GUIDANCE = (
+        "You have context engine tools (e.g. lcm_grep, lcm_expand) for the CURRENT session. "
+        "Use them when you need to recall details from earlier in THIS conversation that were "
+        "compressed out of your active context window. Prefer these over session_search for "
+        "intra-session recall — they are faster and return original data without LLM summarization.\n"
+        "Use session_search for CROSS-SESSION recall (past conversations, other sessions)."
+    )
+    ```
+    
+    **Option B: Inject via SOUL.md (non-intrusive, recommended)**
+    
+    Add to the profile's `SOUL.md`:
+    ```markdown
+    ## Context Recall Guidelines
+    - For current session recall: use lcm_grep/lcm_expand (faster, no LLM cost, original data)
+    - For cross-session recall: use session_search (searches all past sessions, uses auxiliary model)
+    - When in doubt: try lcm_grep first, fall back to session_search
+    ```
+
+[2026-04-17T22:10:03.805000+00:00] cars29_hotbirdbird (id=1494822279153061929)
+    ## 11. Issues Found and Recommendations
+    
+    ### 11.1 Issue Summary
+
+[2026-04-17T22:10:17.414000+00:00] cars29_hotbirdbird (id=1494822336233210007)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494818758060146799/1494822335939739822/image.png?ex=6a01ab09&is=6a005989&hm=ccb0a34998cf5eab2378d158793cfa761b868a1b943397cd7a65523725ac6a02&
+
+[2026-04-17T22:11:05.205000+00:00] cars29_hotbirdbird (id=1494822536683327639)
+    ## 12. Conclusion
+    
+    ### 12.1 Value of the LCM Plugin
+    
+    The LCM plugin significantly outperforms the built-in compressor in several areas:
+    
+    1. **Information fidelity**: Original messages are permanently preserved in an immutable store. The agent can recall any historical content at any time, without depending on auxiliary model summary quality.
+    2. **Recall efficiency**: `lcm_grep` is a pure DB operation with zero auxiliary model calls — low latency, zero LLM cost.
+    3. **Prompt caching friendliness**: Does not modify the system prompt, so Breakpoint 1 cache remains stable.
+    4. **Clean architecture**: Immutable storage + hierarchical DAG + tool-based retrieval — conceptually simple and well-structured.
+    
+    ### 12.2 Costs of the LCM Plugin
+    
+    1. **Storage overhead**: Dual storage (state.db + lcm.db). Long conversations cause continuous DB growth.
+    2. **Complexity**: DAG maintenance + three-tier escalation + lifecycle management — higher debugging and maintenance cost than the built-in compressor.
+    3. **Missing profile isolation**: Current implementation shares lcm.db across all profiles, creating data leakage risk.
+    4. **Missing source field**: Cannot distinguish sessions from different platforms, limiting multi-platform usability.
+    
+    ### 12.3 When to Use Which
+    
+    **LCM is better for:**
+    - Very long sessions (hundreds of turns — software development, research analysis)
+    - Scenarios requiring autonomous agent recall of early decisions and context
+    - Use cases where information integrity is a hard requirement
+    - Environments where storage cost is not a constraint
+    
+    **Built-in compressor is better for:**
+    - Short to medium conversations (< 100 turns)
+    - Cost-sensitive deployments
+    - Scenarios benefiting from Anthropic prompt caching savings
+    - Gateway multi-session scenarios (native dual-layer protection)
+
+[2026-04-17T22:53:41.713000+00:00] w0lfgang88 (id=1494833259454926878)
+    This is an excellent write-up. Thank you for doing the deep dive.
+    
+    A few quick reactions from the hermes-lcm side:
+    
+    1. **Agreed on the highest-priority issue: profile isolation.**  
+    The default path behavior can lead to a shared `~/.hermes/lcm.db` unless overridden, which is not the intended safety model for multi-profile users.  
+    I am treating this as a P0 and will patch default DB resolution to respect profile-local context first.
+    
+    2. **Source metadata gap is real.**  
+    LCM currently keys isolation around `session_id`, which works for many flows but is weaker than having explicit source and platform dimensions for filtering and ergonomics.  
+    I agree this should be added (schema plus query surface) to improve cross-platform hygiene.
+    
+    3. **Tool-guidance point is valid.**  
+    Today, model behavior is mostly inferred from tool schemas. Adding explicit guidance for "LCM tools for intra-session recall, session_search for cross-session recall" is the right direction.
+    
+    4. **Important nuance (and good callout):**  
+    Built-in compression is lossy in the active window, but state persistence means historical data still exists in `state.db`.  
+    So this is more about retrieval pathway and autonomy quality than absolute data deletion.
+    
+    Really appreciate the rigor here. This is exactly the kind of analysis that makes the plugin better. I will follow up with concrete fixes and test coverage for the isolation and metadata pieces first.
+
+[2026-04-17T23:50:04.813000+00:00] cars29_hotbirdbird (id=1494847449204916408)
+    Thank you, bro, love you🤘
+    [reply to w0lfgang88 msg=1494833259454926878]
+
+[2026-04-18T08:59:19.530000+00:00] _voscko_ (id=1494985671306248314)
+    <@973292183832657950> This is a seriously strong report. Thanks for putting in the time to go this deep.
+    
+    The profile-isolation catch was especially important, and the source/session semantics + tool-guidance sections were also very on point. What I liked most is that this didn’t turn into a vague “LCM good / built-in bad” write-up. it actually separated fidelity, retrieval path, storage, prompt-caching behavior, and operational trade-offs in a really useful way.
+    
+    <@427613574995771414> already spun out concrete follow-up issues from it, which is probably the best proof that the report landed well. I also think the nuance around built-in compression vs persisted history in state.db was a good catch to surface, because it makes the comparison more precise and more honest.
+    
+    Really appreciated the rigor here, including the diagrams/tables. They made it much easier to reason about what’s an implementation bug, what’s a missing feature, and what’s just a deliberate design trade-off.
+

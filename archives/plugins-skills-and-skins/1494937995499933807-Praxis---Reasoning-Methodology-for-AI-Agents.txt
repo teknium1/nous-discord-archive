@@ -1,0 +1,35 @@
+# Thread 'Praxis - Reasoning Methodology for AI Agents' in forum #plugins-skills-and-skins
+# thread_id=1494937995499933807 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:23.808992+00:00
+
+[2026-04-18T05:49:52.732000+00:00] .0xd40 (id=1494937995499933807)
+    Hey everyone 👋
+    
+    Just released **Praxis** — an open-source reasoning methodology plugin for Claude Code that works standalone or alongside Superpowers. GitHub: https://github.com/xD4O/praxis
+    
+    **What it does:** 
+    Forces your agent to think before it acts. Problem classification, STRIDE threat modeling, architecture analysis, diagnostic reasoning, and cognitive debiasing — all as mandatory protocols with gates the agent can't skip.
+    
+    **Why it exists:**
+    Superpowers handles execution brilliantly (TDD, subagents, plans). But nobody was handling the reasoning layer — *which* approach to take, *whether* the architecture is right, *what* threats exist. Praxis fills that gap.
+    
+    **How they work together:**
+    Praxis classifies + reasons → hands off to Superpowers for brainstorming + execution → Praxis validates with gap analysis → Superpowers writes the plan + TDD
+    
+    **Quick example:**
+    You say: "Add OAuth to our API"
+    Without Praxis: agent starts asking generic questions
+    With Praxis: classifies as EXTEND, selects Separation of Concerns + STRIDE, identifies trust boundaries, runs threat model, *then* hands off to Superpowers brainstorming with all that context
+    
+    **The Contents:**
+    - 8 enforcement skills with HARD-GATEs
+    - 45 reasoning frameworks
+    - Holds under adversarial "skip analysis, just code" pressure
+    - Tested across multiple models (Opus 4.7, Kimi K2.5)
+    
+    Built this as a complement to Superpowers, but works as standalone. Feedback welcome — especially if you find cases where the gates don't hold, or if Praxis does not pass off to Superpowers. Those failure cases are how the enforcement gets better.
+    
+    Installation for Hermes Agent is simply prompting Hermes to install this as a Hermes skill.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494937995499933807/1494937995747524748/image.png?ex=6a0216c0&is=6a00c540&hm=fbd16ae59dd71eeb31a6ff6de86d1f9d1e50265c9529057dddf5e13c10f81e27&
+    [embed] GitHub - xD4O/praxis https://github.com/xD4O/praxis
+

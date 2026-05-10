@@ -1,0 +1,32 @@
+# Thread 'Hermes Oprations' in forum #plugins-skills-and-skins
+# thread_id=1500463136182898709 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:06.145089+00:00
+
+[2026-05-03T11:44:48.923000+00:00] roach_jeong (id=1500463136182898709)
+    Been building H-OPS, an operator dashboard for Hermes Kanban.
+    The goal is to make multi-agent work observable.
+    You can:
+    
+    • create and assign tasks
+    • route work to agent profiles
+    • track ready/running/blocked/done lanes
+    • inspect progress, output, and logs
+    • see stale workers
+    • create parent/child task dependencies
+    • view connected work as a DAG-style workflow graph
+    • monitor each agent profile, model, env, skills, and last seen state
+    
+    The workflow graph is the part I really wanted.
+    Kanban is great for status.
+    But once agent work starts branching, you also need structure.
+    What depends on what?
+    Which task is blocking the next one?
+    What unlocks after this finishes?
+    H-OPS lets you see that chain instead of guessing from a flat list of tickets.
+    It’s starting to feel less like a todo board, and more like a control room for autonomous agents.
+    
+    https://github.com/tmdgusya/h-ops
+    [attachment] hermes_kanban.mp4 https://cdn.discordapp.com/attachments/1500463136182898709/1500463137743175810/hermes_kanban.mp4?ex=6a01c131&is=6a006fb1&hm=b1be4da53485bd708ce3b25650554d9a373ebf85d086bae2481b910973dcf793&
+    [attachment] Screenshot_2026-05-03_at_8.42.29_PM.png https://cdn.discordapp.com/attachments/1500463136182898709/1500463139131756564/Screenshot_2026-05-03_at_8.42.29_PM.png?ex=6a01c131&is=6a006fb1&hm=f1a29aaeb7557b00f8983fdbe3ceb2a665f77f1334382193225cdd318fdc3cc4&
+    [embed] GitHub - tmdgusya/h-ops: Hermes Agent operations cockpit for Kanban... https://github.com/tmdgusya/h-ops
+

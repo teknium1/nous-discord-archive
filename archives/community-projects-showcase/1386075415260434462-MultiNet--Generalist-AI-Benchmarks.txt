@@ -1,0 +1,17 @@
+# Thread 'MultiNet: Generalist AI Benchmarks' in forum #community-projects-showcase
+# thread_id=1386075415260434462 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:34.509160+00:00
+
+[2025-06-21T20:08:51.034000+00:00] thebigbigbuddha (id=1386075415260434462)
+    Folks, we're looking for 2-3 collaborators to join the MultiNet project at Manifold. MultiNet is an open-source ecosystem for building and evaluating generalist AI models using unified benchmarks across vision, language, and action. More information available here:
+    
+    https://x.com/ManifoldRG/status/1936112987661873350
+    
+    And here is the posting on our site:
+    
+    https://www.manifoldrg.com/os-research-fellow-multinet/
+
+[2025-06-23T00:54:13.054000+00:00] thebigbigbuddha (id=1386509618083004457)
+    Following up on that, we’re also recruiting for our **VLM Calibration** project, which focuses on developing robust confidence calibration methods for vision language models. If you're interested in improving how models reason and express uncertainty, learn more here:
+    https://www.manifoldrg.com/os-research-fellow-vlm-calibration/
+

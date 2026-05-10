@@ -1,0 +1,34 @@
+# Thread 'Caveman Mode' in forum #plugins-skills-and-skins
+# thread_id=1490941930845245522 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:46.258977+00:00
+
+[2026-04-07T05:10:56.675000+00:00] zksnarky (id=1490941930845245522)
+    Saw this on x a few days ago - skill for claude code that reduced token output by 50-75% in longer sessions. Turned it into a native command for hermes. Not only amusing but also works great for token reduction.  Original skill https://github.com/JuliusBrussee/caveman and the hermes command https://github.com/NousResearch/hermes-agent/pull/5723
+    [attachment] HFCE734WEAAxwW9.png https://cdn.discordapp.com/attachments/1490941930845245522/1490941931314872330/HFCE734WEAAxwW9.png?ex=6a020da0&is=6a00bc20&hm=f34f709b3780efb90f0426c1b44a4cfa949bb62f167bf77f38154fdca8845329&
+    [embed] GitHub - JuliusBrussee/caveman: 🪨 why use many token when few to... https://github.com/JuliusBrussee/caveman
+    [embed] feat(cli): add /caveman toggle command — compressed responses, ~7... https://github.com/NousResearch/hermes-agent/pull/5723
+
+[2026-04-07T05:23:56.928000+00:00] excessivelysalty (id=1490945203463393351)
+    Nice that looks super useful. I saw this the other day on X.
+
+[2026-04-07T14:59:37.681000+00:00] w0lfgang88 (id=1491090077881860317)
+    [attachment] kevin.gif https://cdn.discordapp.com/attachments/1490941930845245522/1491090077625880788/kevin.gif?ex=6a01eed9&is=6a009d59&hm=ddf8c78ff222901cbd60a8fe33da5a9d210fea7eba24374d5d7d9bf7aa59c332&
+
+[2026-04-07T16:01:21.958000+00:00] excessivelysalty (id=1491105614745698536)
+    https://tenor.com/view/huh-geicos-caveman-3doors-down-let-me-be-myself-song-wait-what-gif-3405221510871366051
+    [embed]  https://tenor.com/view/huh-geicos-caveman-3doors-down-let-me-be-myself-song-wait-what-gif-3405221510871366051
+
+[2026-04-08T00:17:03.535000+00:00] nadpobudliwosc (id=1491230359961211042)
+    i vote for `/caveman` to become a built in command
+
+[2026-04-08T00:17:05.737000+00:00] nadpobudliwosc (id=1491230369197068368)
+    🗿
+
+[2026-04-09T04:17:43.940000+00:00] lordasado. (id=1491653315275001907)
+    This was actually how we reduced the costs in our LLM game. The main character was a monkey so he'd speak in that caveman talk. Lets the LLM run locally in browser
+
+[2026-04-10T00:01:58.255000+00:00] neopabo (id=1491951338672623736)
+    Would it be possible to use this as a lossy compression trick?
+    
+    LLM speaks in caveman, then local software (maybe a BERT model or something?) turns it back into plain English
+

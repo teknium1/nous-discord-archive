@@ -1,0 +1,16 @@
+# Thread 'Hermes Security Rule Skill' in forum #plugins-skills-and-skins
+# thread_id=1488447168280006745 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:50.999479+00:00
+
+[2026-03-31T07:57:38.929000+00:00] harrison07525 (id=1488447168280006745)
+    I've put together a skill to protect against some of the common LLM / AI threats and some of my recommended security policies that are being used to good effect on other AI agent tools. 
+    
+    https://github.com/PericuloLimited/raigo/tree/main/integrations/hermes/skill
+    [embed] raigo/integrations/hermes/skill at main · PericuloLimited/raigo https://github.com/PericuloLimited/raigo/tree/main/integrations/hermes/skill
+
+[2026-03-31T13:14:21.266000+00:00] anibal3608 (id=1488526869857832962)
+    this will be as default on hermes installation, cc <@387972437901312000>
+
+[2026-04-05T09:43:56.754000+00:00] skylinx79 (id=1490285858144784464)
+    This looks super useful. <@502499010033221636> When is it going to be default? I am wondering if I should use it now or wait for it to be default i Hermes
+

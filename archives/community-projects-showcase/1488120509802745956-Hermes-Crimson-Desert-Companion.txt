@@ -1,0 +1,14 @@
+# Thread 'Hermes Crimson Desert Companion' in forum #community-projects-showcase
+# thread_id=1488120509802745956 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:58.581385+00:00
+
+[2026-03-30T10:19:37.479000+00:00] aezaror (id=1488120509802745956)
+    A complete game database and AI companion skill for hermes, work with a sql database. tested with qwen 3.5 9b and it work great https://github.com/b7216309-jpg/crimson-desert-companion
+    [embed] GitHub - b7216309-jpg/crimson-desert-companion: Complete Crimson De... https://github.com/b7216309-jpg/crimson-desert-companion
+
+[2026-03-30T18:24:40.424000+00:00] teknium (id=1488242576401371222)
+    interesting!
+
+[2026-03-30T19:03:42.540000+00:00] aezaror (id=1488252399947874448)
+    you could eventually build a full library of game data and use it for anything. its simple, but not the fastest. at least 9b handle it
+

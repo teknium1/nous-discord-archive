@@ -1,0 +1,17 @@
+# Thread 'RELIGN - open source rl framework' in forum #community-projects-showcase
+# thread_id=1336371638240809051 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:51.782396+00:00
+
+[2025-02-04T16:23:47.141000+00:00] adamcreates_ (id=1336371638240809051)
+    we're building a framework that allows ai researchers/devs post train language models on multi-step reasoning with reinforcement learning. 
+    
+    looking for ML / software engineers and mathematicians. skills necessary in reinforcement learning, deep learning, statistical learning.
+    
+    https://github.com/relign-ai/relign
+    
+    - get rewarded in $RELIGN tokens for completing bounties
+    - contribute to the roadmap of the product by suggesting new developments in our discord 
+    - drop me a dm if you have any questions
+    [attachment] GITHUB_BANNER.png https://cdn.discordapp.com/attachments/1336371638240809051/1336371737956323421/GITHUB_BANNER.png?ex=6a0202aa&is=6a00b12a&hm=56a9df81cc97360a44b7c0e75c972b4f60d9b7c8e25b20edd6ccf9b42a81bb89&
+    [embed] GitHub - relign-ai/relign: post train language models on multi-step... https://github.com/relign-ai/relign
+

@@ -1,0 +1,12 @@
+# Thread 'Plugin for Hermes Agent — The Fridge Inventory System for People Who Hate Logging Ingredients' in forum #plugins-skills-and-skins
+# thread_id=1493336259874000926 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:33.130975+00:00
+
+[2026-04-13T19:45:09.200000+00:00] sergiparpal (id=1493336259874000926)
+    Meet the zero-dependency meal planner powered by AI inference. 🤖   ➜ https://github.com/sergiparpal/meal-manager
+    I just released _**Meal Manager**_, a Hermes plugin designed to solve inventory friction via natural language. It uses a weighted scoring algorithm (60% availability / 40% recency) to tell you what's for dinner and identifies the single ingredients that unlock the most new recipes.
+    
+    Features: Dynamic Ingredient Interface (DII) and proactive action chaining.
+    [attachment] vpqzv3vpqzv3vpqz.png https://cdn.discordapp.com/attachments/1493336259874000926/1493336260306276444/vpqzv3vpqzv3vpqz.png?ex=6a0231c5&is=6a00e045&hm=25139d77b52b533c9c82b075b738cb8cead51ad19cba7215a616cfbc99f1b7d8&
+    [embed] GitHub - sergiparpal/meal-manager: Smart Hermes Agent plugin for in... https://github.com/sergiparpal/meal-manager
+

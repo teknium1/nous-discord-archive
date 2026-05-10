@@ -1,0 +1,29 @@
+# Thread 'Sanskrit-qwen-7B-Translate-v2' in forum #community-projects-showcase
+# thread_id=1417471751821983765 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:33.651475+00:00
+
+[2025-09-16T11:26:40.986000+00:00] diabolic6045 (id=1417471751821983765)
+    Sanskrit-qwen-7B-Translate-v2 is here! 
+     What's Updated:
+     • Chat-optimized format for better accuracy
+     • Sanskrit to English Transliteration 
+     • Sanskrit to English and vice-versa translation
+    Please share the feedback.
+
+[2025-09-16T11:27:19.921000+00:00] diabolic6045 (id=1417471915127214131)
+    https://huggingface.co/diabolic6045/Sanskrit-qwen-7B-Translate-v2
+    [embed] diabolic6045/Sanskrit-qwen-7B-Translate-v2 · Hugging Face https://huggingface.co/diabolic6045/Sanskrit-qwen-7B-Translate-v2
+
+[2025-09-16T11:27:36.418000+00:00] diabolic6045 (id=1417471984320643193)
+    https://huggingface.co/spaces/diabolic6045/Sanskrit-qwen-7B-Translate-v2
+    [embed] Sanskrit Qwen 7B Translate v2 - a Hugging Face Space by diabolic6045 https://huggingface.co/spaces/diabolic6045/Sanskrit-qwen-7B-Translate-v2
+
+[2025-09-16T13:15:38.219000+00:00] ee.dd (id=1417499170964766730)
+    <@265269014148808716> u are a sanskrit fan right?
+
+[2025-09-16T17:53:38.564000+00:00] proprietary (id=1417569133402263644)
+    that i am
+
+[2025-09-16T17:53:42.073000+00:00] proprietary (id=1417569148120203274)
+    ill give it a whirl
+

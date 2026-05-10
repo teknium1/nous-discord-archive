@@ -1,0 +1,29 @@
+# Thread 'Oasis v0.1.0 - speak to your Hermes Agent + vibecode in 3D' in forum #community-projects-showcase
+# thread_id=1494841101993902162 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:58.470894+00:00
+
+[2026-04-17T23:24:51.520000+00:00] parzival078022 (id=1494841101993902162)
+    3D UI for Hermes Agents
+    multimodal 3D Claude Code windows
+    native productivity agent: Anorak + subagents
+    Merlin, the world builder agent
+    600 native 3D assets
+    text-to-3D, pic-to-3D
+    3D browser + movie theater
+    5 custom Claude Code agents: Coder, Reviewer, Tester, Gamer, Curator
+    
+    https://github.com/Parzival-Moksha/oasis/releases/tag/v0.1.0
+    [attachment] hermes_vid_screenshot.JPG https://cdn.discordapp.com/attachments/1494841101993902162/1494841105852793032/hermes_vid_screenshot.JPG?ex=6a01bc84&is=6a006b04&hm=511cfe0cd4c6933d6fd18bbf6d4820134173a1afea8563b0ae3de2dece9db700&
+    [attachment] hermes2-compressed.mp4 https://cdn.discordapp.com/attachments/1494841101993902162/1494841111376826510/hermes2-compressed.mp4?ex=6a01bc85&is=6a006b05&hm=5399fdb724cb6aab0d1766fa6f54aa8e422851454dc749733b85bdb363f13b5a&
+    [embed] Release v0.1.0 — Hermes agent × Oasis · Parzival-Moksha/oasis https://github.com/Parzival-Moksha/oasis/releases/tag/v0.1.0
+
+[2026-04-20T03:13:58.257000+00:00] rakaarwaky (id=1495623535719092224)
+    People are developing in the wrong direction, busy with the digital world, why not bring Hermes to the real world, touch the grass, solve the problems that exist in the real world😂 😭 😂 😂 😭
+
+[2026-04-20T04:11:07.534000+00:00] jaychas (id=1495637919149330555)
+    this is pretty trippy. good work
+
+[2026-04-21T19:29:23.648000+00:00] parzival078022 (id=1496231396866396292)
+    is anyone building the unitree robot control skill.md?
+    [reply to rakaarwaky msg=1495623535719092224]
+

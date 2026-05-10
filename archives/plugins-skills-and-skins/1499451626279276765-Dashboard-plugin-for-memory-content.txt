@@ -1,0 +1,48 @@
+# Thread 'Dashboard plugin for memory content' in forum #plugins-skills-and-skins
+# thread_id=1499451626279276765 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:09.097950+00:00
+
+[2026-04-30T16:45:26.169000+00:00] eventhorizonbreaker (id=1499451626279276765)
+    I made a small dashboard plugin for Hermes Agent <:nousgirl:1341983870752653352> memory:
+    👉 https://github.com/xraysight/hermes-memory-ui
+    
+    It provides a simple UI to view and work with Hermes memory data more comfortably. I built it mainly for my own use, but maybe it will be useful for others too. It displays built-in memory and active external memory provider (currently Holographic, Mem0, Honcho and Hindsight). The plugin can be possible extended to other external memory providers.
+    
+    In case of built-in it nicely shows limits of USER and MEMORY files. For holographic I like to see categories and trust level.
+    
+    I am not a professional developer, so this work is from Hermes for Hermes 😄. If you use a different memory providers such as honcho  or hindsight feel free to contribute.
+    
+    EDIT: Added Mem0 support.
+    EDIT2: Added Honcho support.
+    EDIT3: Added Hindsight support.
+    [attachment] hermes-memory-dashboard1.png https://cdn.discordapp.com/attachments/1499451626279276765/1499451626774069370/hermes-memory-dashboard1.png?ex=6a0207a6&is=6a00b626&hm=336533f31dd4782790594f5cce395974ed4b54e3c75f01cb5f5ad231851557c4&
+    [attachment] hermes-memory-dashboard2.png https://cdn.discordapp.com/attachments/1499451626279276765/1499451627298361528/hermes-memory-dashboard2.png?ex=6a0207a6&is=6a00b626&hm=58a4c20159d356135565d47458f1f6aef5eab2bd8bd40dc097f459411833e8fd&
+    [embed] GitHub - xraysight/hermes-memory-ui: Dashboard plugin for inspectin... https://github.com/xraysight/hermes-memory-ui
+
+[2026-05-01T02:55:02.750000+00:00] hackafterdark (id=1499605039579402280)
+    This looks great, thanks for sharing! I might see if I can contribute and add support for my memory plugin/framework. I think some sort of information/inspection on memory is a great idea.
+
+[2026-05-01T13:39:06.684000+00:00] mehalter (id=1499767123986088029)
+    This is super great! Another cool feature would be adding support for browsing and visualizing llm-wiki stores as well! My current setup uses the build-in memory, holographic, and then stores long term structured data in an llm-wiki with the built in llm-wiki skill!
+
+[2026-05-03T21:28:06.336000+00:00] owl_dv (id=1500609925972496477)
+    This looks great !!! But it doesn't work with Honcho <:nousgirl:1341983870752653352>
+
+[2026-05-04T19:39:21.664000+00:00] eventhorizonbreaker (id=1500944947380224184)
+    It does... since today 😀
+    [reply to owl_dv msg=1500609925972496477]
+
+[2026-05-06T03:34:34.548000+00:00] biost0rm (id=1501426926948978799)
+    Any plans to add hindsight support?
+
+[2026-05-06T05:35:21.870000+00:00] eventhorizonbreaker (id=1501457324420890685)
+    I see a fork done by someone else with this intention, so it's pretty likely. I will also see during the weekend maybe. These more advanced memory plugins are not that straightforward to display the content.
+    [reply to biost0rm msg=1501426926948978799]
+
+[2026-05-07T18:54:02.830000+00:00] eventhorizonbreaker (id=1502020707360571534)
+    I have added support for hindsight. I only had local test instance of it because I use holographic on daily basis. I didn't have a chance to test it out too much hoping it work with cloud service too. It should be fine but you never know 😀
+    [reply to biost0rm msg=1501426926948978799]
+
+[2026-05-09T12:08:15.550000+00:00] biost0rm (id=1502643363197747330)
+    oh nice. Will give it a shot!
+

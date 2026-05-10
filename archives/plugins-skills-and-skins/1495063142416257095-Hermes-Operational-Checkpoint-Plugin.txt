@@ -1,0 +1,62 @@
+# Thread 'Hermes Operational Checkpoint Plugin' in forum #plugins-skills-and-skins
+# thread_id=1495063142416257095 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:23.001766+00:00
+
+[2026-04-18T14:07:10.082000+00:00] reyartage (id=1495063142416257095)
+    I just open-sourced Hermes Operational Checkpoint Plugin.
+    
+      It’s a plugin for Hermes built for the kind of sessions that go on long enough
+      that normal compression can start softening the thread of the work a little
+      too much.
+    
+      The goal here was pretty simple: after manual compression or auto-compression,
+      the session should still feel like it remembers what it was actually doing.
+    
+      That means keeping continuity around things like:
+    
+      - what was already decided
+      - what was discovered along the way
+      - what constraints now matter
+      - what failed and should not be retried
+      - what the next move should be
+    
+      So instead of leaning toward a broader recap, this plugin pushes compression
+      toward a denser operational checkpoint that is better at carrying long-running
+      work forward.
+    
+      A few things it does differently:
+    
+      - stronger continuity across compression
+      - same-session continuation
+      - support for both manual compression and auto-compression
+      - checkpointed continuity over retained raw history
+      - simpler token-threshold-based compression behavior
+    
+      Repo:
+      https://github.com/ReyJ94/Hermes-Operational-Checkpoint-Plugin
+    
+      If you try it, I’d especially be curious how it feels on longer debugging,
+      implementation, or research sessions.
+    [embed] GitHub - ReyJ94/Hermes-Operational-Checkpoint-Plugin: Continuation-... https://github.com/ReyJ94/Hermes-Operational-Checkpoint-Plugin
+
+[2026-04-19T01:23:15.441000+00:00] markopolo8817 (id=1495233285863903375)
+    Looks interesting, were you able to use this to accomplish long running projects that you had difficulty before?
+
+[2026-04-19T01:23:54.059000+00:00] markopolo8817 (id=1495233447839535225)
+    If so, can you provide an example?
+
+[2026-04-19T22:14:08.020000+00:00] reyartage (id=1495548079196082347)
+    I always use the same session going millions of tokens there, and I don't feel the need to explain everything each time it compacts. That's the goal. Of you see the prompt and the output the model does it's pretty dense. Also the summary itself it's not long , so it's efficient in tokens and deep in information.
+
+[2026-04-19T22:16:36.545000+00:00] reyartage (id=1495548702155079782)
+    Byiu can try to give the prompt to a model and see what it responds mid session. The rest of the code it's making sure the auto-compression and manual compression behaves correctly. With a cheap model, and simplified a bit the logic there. Because the prompt it's efficient and we can have full session summary, which is fast also because I use gpt 5.4 mini medium I think the default is
+
+[2026-04-19T22:18:17.470000+00:00] reyartage (id=1495549125465341992)
+    I think it depends if you want compression to be small in tokens and rich in information that are needed. It's all about efficiency
+
+[2026-05-05T17:57:06.123000+00:00] austrian_guy (id=1501281600921669846)
+    Intriguing.
+
+[2026-05-10T19:49:10.835000+00:00] reyartage (id=1503121745735844045)
+    i don't know if anyone tested it, but i updated it alot. should be more stable and more efficient, changed hte base structure from 11 section to 9.. if i still missed some edge case please tell me.
+

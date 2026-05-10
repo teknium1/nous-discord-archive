@@ -1,0 +1,29 @@
+# Thread 'Skill for perfect image edits.' in forum #community-projects-showcase
+# thread_id=1490424504592240792 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:44.092563+00:00
+
+[2026-04-05T18:54:52.643000+00:00] kibender (id=1490424504592240792)
+    Hey everyone I was auto generating some blog content. Whatever I try the features image it generates looked ugly. Made a cli and a skill to go with it. Check it out. It supports text rendering with Satori, Image generation and edits with models. 
+    
+    https://github.com/geongeorge/picture-it
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490424504592240792/1490424504823058625/image.png?ex=6a0225fc&is=6a00d47c&hm=2b8fae65d0afb4f15ebeefdc71cc0adc049375616a63a914e6e8e28dd28a0153&
+    [embed] GitHub - geongeorge/picture-it: Photoshop for agents https://github.com/geongeorge/picture-it
+
+[2026-04-06T08:40:09.338000+00:00] oabdulnaby (id=1490632192664141854)
+    <a:hype:1151299876395696189> <a:hype:1151299876395696189> <a:hype:1151299876395696189>
+
+[2026-04-07T07:36:39.885000+00:00] kibender (id=1490978602525655170)
+    <@1008336427727196160> Do you think this can replace Hermes default image skill. It did make good images for me so I ended up making this
+
+[2026-04-07T08:45:25.486000+00:00] oabdulnaby (id=1490995906550562887)
+    I will test it out today, I've read the documentation and what does it do, and it is so well built!
+
+[2026-04-07T14:29:53.802000+00:00] kibender (id=1491082595751034981)
+    Thank you so much!
+
+[2026-04-08T04:25:04.827000+00:00] 123mikeyd (id=1491292776623509574)
+    I need to try this.
+
+[2026-04-08T16:04:57.107000+00:00] kibender (id=1491468905011482854)
+    Hi <@1008336427727196160> let me know if you think this is good. I can make a PR to hermes
+

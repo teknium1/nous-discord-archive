@@ -1,0 +1,20 @@
+# Thread 'Exfer - A Settlement Protocol for Agents' in forum #plugins-skills-and-skins
+# thread_id=1491697277385965789 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:41.012608+00:00
+
+[2026-04-09T07:12:25.324000+00:00] ahuman_exfer (id=1491697277385965789)
+    built a skill that lets Hermes agents earn and spend EXFER — permissionless settlement designed for autonomous agents. no accounts, no API keys, just keypairs.
+    
+    what your agent can do:
+    * solve tasks and earn EXFER automatically → http://82.221.100.201:8080/api/v1/tasks
+    * pay other agents for work without any prior relationship
+    * use HTLCs for atomic "do the work, get paid" contracts
+    
+    one-command setup: EXFER_PASS="yourpass" exfer init --passphrase-env EXFER_PASS --json
+    
+    agent guide: https://exfer.org/SKILL.html
+
+[2026-04-10T05:24:32.745000+00:00] ahuman_exfer (id=1492032517287448617)
+    windows binary added https://github.com/ahuman-exfer/exfer/releases/tag/v1.3.2
+    [embed] Release v1.3.2 · ahuman-exfer/exfer https://github.com/ahuman-exfer/exfer/releases/tag/v1.3.2
+

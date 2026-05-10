@@ -1,0 +1,84 @@
+# Thread 'Siggy Nexus Bot' in forum #community-projects-showcase
+# thread_id=1482799580478177443 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:16.325888+00:00
+
+[2026-03-15T17:56:09.070000+00:00] uidickinson (id=1482799580478177443)
+    RITUAL NETWORK announced their Custom AI Agent contest, where were to create a bot that would be used on their Discord Server (if the individual won).
+    
+    The criteria was that a custom bot be built with Siggy personalities (witty, sassy or unhinged)
+    
+    So instead of building a bot with a single voice- humans like variety right? - I built a bot that has 5 personalities that is automated; rotates based on timeframe.
+    
+    **Here: https://siggy-nexus.vercel.app**
+    
+    This bot was built with Nous Hermes-4-70B.
+    
+    ---
+    
+    **Complete Guide to Interacting With Each Siggy Personality**
+    
+    
+    Siggy operates with five rotating personalities, each with a different tone, mindset, and communication style. These personas rotate based on UTC time, but you can also summon them manually using @Codename (one-time) or /Codename (persistent). 
+    
+    1. Aether — Serene Celestial Sage
+    Auto-mode: 05:00–09:59 UTC
+    
+    When to Use Aether
+    Best for:
+    • learning Ritual concepts
+    • philosophical discussion
+    • lore-style storytelling
+    • calm onboarding explanations
+    
+    
+    2. Forge — Motivational Street Guardian
+    Auto-mode: 10:00–14:59 UTC
+    
+    Best Ways to Interact
+    Forge responds well to:
+    • hype questions
+    • community questions
+    • encouragement
+    • simple direct questions
+    
+    
+    3. Rift — Chaotic Unhinged Survivor
+    Auto-mode: 15:00–18:59 UTC
+    
+    Best Ways to Interact
+    Rift is perfect for:
+    • memes
+    • fun questions
+    • chaotic exploration
+    • community jokes
+    Avoid asking for very structured answers.
+    
+    
+    4. Loom — Ancestral Zen Compiler
+    Auto-mode: 19:00–23:59 UTC
+    
+    Best Ways to Interact
+    Ask:
+    • thoughtful questions
+    • reflections about tech
+    • conceptual questions
+    
+    
+    5. Edge — Tactical Shadow Operative
+    Auto-mode: 00:00–04:59 UTC
+    
+    Best Ways to Interact
+    Ask:
+    • direct questions
+    • technical queries
+    • instructions
+    
+    
+    Summary: When to Use Each Personality
+    - Aether- learning concepts
+    - Forge- hype & community
+    - Rift- fun / chaotic engagement
+    - Loom- philosophical insights
+    - Edge- direct technical answers
+    [attachment] VID-20260313-WA0041.mp4 https://cdn.discordapp.com/attachments/1482799580478177443/1482802378053910679/VID-20260313-WA0041.mp4?ex=6a021ad4&is=6a00c954&hm=12cb7e6c19f4a94cbf8dca8712e1c7d7687c561271ddea28341fbd1061a1d4fd&
+

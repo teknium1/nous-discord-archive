@@ -1,0 +1,7 @@
+# Thread 'Bundled API endpoints for agents' in forum #plugins-skills-and-skins
+# thread_id=1502170319215923240 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:00.268603+00:00
+
+[2026-05-08T04:48:33.076000+00:00] jeyjay1245 (id=1502170319215923240)
+    So i got fed up with managing a million API keys in my hermes agent and started bundling related ones into single endpoints. like all finance data through one call instead of five separate keys. it actually works really well for longer sessions where context gets messy. thinking of building more bundles, what categories would be useful for you guys? dms open i wanna hear what everyone's dealing with 💕
+

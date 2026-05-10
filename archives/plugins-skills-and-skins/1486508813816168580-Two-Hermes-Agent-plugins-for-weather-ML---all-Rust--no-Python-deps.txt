@@ -1,0 +1,78 @@
+# Thread 'Two Hermes Agent plugins for weather/ML — all Rust, no Python deps' in forum #plugins-skills-and-skins
+# thread_id=1486508813816168580 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:49.659884+00:00
+
+[2026-03-25T23:35:19.212000+00:00] drewsni (id=1486508813816168580)
+    I've been porting the entire Python weather stack to Rust — MetPy, Herbie, cfgrib, WRF-Python, all of it. When you cut out Python/eccodes/Fortran from the loop, weather data processing gets absurdly fast. Built two hermes-agent plugins on top of it.
+    
+    hermes-weather-plugin gives your agent eyes on the atmosphere. 12 tools covering current obs, forecasts, alerts, METAR, SPC severe outlook, NEXRAD radar, and NWP model imagery. The rendering is pure Rust so you get a full 22-field mesoanalysis suite (CAPE, shear, STP, helicity, etc.) in about 18 seconds, individual renders around 177ms. Also exposes 205 met calc functions and full 40-level atmospheric soundings. You don't need a paid model map subscription anymore, your agent just pulls and renders whatever it needs on demand.
+    
+    https://github.com/FahrenheitResearch/hermes-weather-plugin
+    
+    hermes-wxtrain-plugin is for the ML side. Tell Hermes what you want to train and it plans the dataset and picks channels, export format, and loss function based on your architecture (swin, diffusion, classical, graph nets). It fetches GRIB via byte-range subsetting (pulling ~325KB per field instead of 80MB files), decodes natively, computes derived fields, and exports training-ready arrays. Supports HRRR, GFS, NAM, RAP, ECMWF, and ERA5.
+    
+    https://github.com/FahrenheitResearch/hermes-wxtrain-plugin
+    
+    The speed actually matters in practice. I tested training a weather model doing real-time fetch/decode/compute during training instead of preprocessing a massive dataset ahead of time, and still kept the GPU reasonably busy. Fast enough to skip the "spend 3 days downloading and preprocessing before you start" phase and just iterate. Both plugins are single static binaries with zero Python or Fortran dependencies.
+    [attachment] model_refl_hrrr_f7_169408.png https://cdn.discordapp.com/attachments/1486508813816168580/1486508814177144893/model_refl_hrrr_f7_169408.png?ex=6a01bef7&is=6a006d77&hm=b278c9ce9ad6d793d648fc753f47a12209de6d28b7ffb360399e8fb0d35e3a3b&
+    [attachment] 001_2t_2_m_above_ground.png https://cdn.discordapp.com/attachments/1486508813816168580/1486508814923595946/001_2t_2_m_above_ground.png?ex=6a01bef7&is=6a006d77&hm=c27348644de96dceb0b9140d8edf6b214009b72256ec120ef99760f153b11203&
+
+[2026-03-26T22:54:25.646000+00:00] 0xjitsu (id=1486860910680346684)
+    this is awesome thx for this
+
+[2026-03-27T06:14:10.850000+00:00] excessivelysalty (id=1486971578246889516)
+    As a weather nerd I absolutely love this, thanks for this.
+
+[2026-03-28T11:36:47.514000+00:00] progged (id=1487415153845604434)
+    <@88481490228228096> Is ECAPE likely to get added to wx_calc?  What about Bunkers mean/left, DTM?   This is pretty awesome.
+
+[2026-03-28T13:43:47.421000+00:00] 23456780289 (id=1487447114052141067)
+    Hello
+
+[2026-03-28T21:54:11.902000+00:00] drewsni (id=1487570529270628465)
+    Yeah I can absolutely do that
+    [reply to progged msg=1487415153845604434]
+
+[2026-04-04T16:00:04.286000+00:00] drewsni (id=1490018125368787054)
+    just got the js ecape library done so it takes 50msand not 13s per ecape sounding calc, but its gonna use imo the very best/most accurate ecape from here https://github.com/a-urq/ecape-parcel-py
+    [reply to progged msg=1487415153845604434]
+
+[2026-04-04T16:12:19.580000+00:00] bakerhdx25 (id=1490021209415483403)
+    This is amazing? How can I bribe you to add RRFS, Euro, and GFS to the supported models of the weather plugin? 😎
+
+[2026-04-04T16:26:22.795000+00:00] drewsni (id=1490024746115534868)
+    Gfs is already added I believe, I’ll add rrfs but they have been breaking the s3 endpoint quite a bit lately, and euro I’ll figure something out. I know they have open data now so shouldn’t be too hard
+    [reply to bakerhdx25 msg=1490021209415483403]
+
+[2026-04-21T10:10:14.189000+00:00] rikllo (id=1496090680236314624)
+    I tried this command but it runs indefinitely: bash`r`npip install git+https://github.com/FahrenheitResearch/hermes-weather-plugin.git`r`n
+    
+    running on wsl
+    [embed] GitHub - FahrenheitResearch/hermes-weather-plugin: Hermes Agent wea... https://github.com/FahrenheitResearch/hermes-weather-plugin.git
+
+[2026-04-21T10:58:30.745000+00:00] rikllo (id=1496102829272862790)
+    And apparently there's no plugin to be imported from second repo
+    
+    Could you maybe help me on any of these issues ?
+    
+    "cannot stat 'wxtrain-plugin': No such file or directory"
+
+[2026-04-26T16:00:14.563000+00:00] drewsni (id=1497990701516849394)
+    sorry for the delay in getting back, didn't have notifications on this but i'm currently doing a total redo of the plugin and attempting to make it capable of doing automatic meteorology research, starting with a total validation of my 5,600-13,000x speedup of the ecape-parcel library to allow people to actually make weather maps using ECAPE. And because of that you'll get to do cool things like replace the CAPE component of EHI to make an experimental ECAPE-EHI, or do ECAPE/Derived CAPE ratios.
+    
+    Oh on top of that, i have a completely custom rust plotting/cross-section/contour library that i think make some pretty looking plots. I will also be adding all of my newer custom tools in quick updates after my codex limits reset (currently busy with another project that takes priority for the next day or two). In the very near future, if you want to dedicate 10gb of ssd space, you can generate every plot that pivotalweather has (focused mainly on HRRR) and do it faster than pivotal can.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1486508813816168580/1497990698568388708/image.png?ex=6a01fd0d&is=6a00ab8d&hm=0e09ec1d13e21957436fd5974291a49db006af012bdbe8767392bef6f09a47c1&
+    [attachment] rustwx_hrrr_20260424_22z_f000_southern_plains_ecape_ecape_ehi_0_3km.png https://cdn.discordapp.com/attachments/1486508813816168580/1497990699029889144/rustwx_hrrr_20260424_22z_f000_southern_plains_ecape_ecape_ehi_0_3km.png?ex=6a01fd0d&is=6a00ab8d&hm=e5ba5077b6c0f16f5294b4035287b7b647a972cc69961ffd52f2a1e70d3e06b4&
+    [attachment] rustwx_hrrr_20260424_22z_f000_southern_plains_ecape_ml_ecape_derived_cape_ratio.png https://cdn.discordapp.com/attachments/1486508813816168580/1497990699407245372/rustwx_hrrr_20260424_22z_f000_southern_plains_ecape_ml_ecape_derived_cape_ratio.png?ex=6a01fd0e&is=6a00ab8e&hm=fc01f517737def23f216b77c486df4ff0c39c3d76ef5ce9ca4deec72838a5f7c&
+    [attachment] rustwx_hrrr_20260424_22z_f000_southern_plains_2m_dewpoint_10m_winds.png https://cdn.discordapp.com/attachments/1486508813816168580/1497990699877142759/rustwx_hrrr_20260424_22z_f000_southern_plains_2m_dewpoint_10m_winds.png?ex=6a01fd0e&is=6a00ab8e&hm=dba1d9610eb045f5963de63eecb00ccf0650ebe2fce692df8366e6023251a440&
+    [attachment] rustwx_hrrr_20260424_22z_f000_amarillo_chicago_wind_speed_cross_section.png https://cdn.discordapp.com/attachments/1486508813816168580/1497990700279664660/rustwx_hrrr_20260424_22z_f000_amarillo_chicago_wind_speed_cross_section.png?ex=6a01fd0e&is=6a00ab8e&hm=c00b3a64d1e775852abb42c228a4dd3082344cc172cd9206525b9769171cba3d&
+    [attachment] rustwx_hrrr_20260424_22z_f000_custom_rh_cross_section.png https://cdn.discordapp.com/attachments/1486508813816168580/1497990700833181869/rustwx_hrrr_20260424_22z_f000_custom_rh_cross_section.png?ex=6a01fd0e&is=6a00ab8e&hm=66305d637535abe6ba39aa4ccc9524e26ed073a73e2ad62ab85a1952d382a688&
+    [attachment] rustwx_hrrr_20260424_22z_f000_amarillo_chicago_fire_wx_cross_section.png https://cdn.discordapp.com/attachments/1486508813816168580/1497990701206736997/rustwx_hrrr_20260424_22z_f000_amarillo_chicago_fire_wx_cross_section.png?ex=6a01fd0e&is=6a00ab8e&hm=c6a371f145f37f3414f0123e614a2aae5de4bf636c88f9ad40ffef10ad8c07ed&
+
+[2026-04-27T15:36:00.543000+00:00] excessivelysalty (id=1498346990780813485)
+    Can't wait  to try out the total redo.  I've been using the weather plugin lately to analyze radar images with all the severe weather that's been going on lately and it's been working well.
+
+[2026-04-29T22:48:19.770000+00:00] drewsni (id=1499180563515310222)
+    https://discord.com/channels/1053877538025386074/1499180382598201454/1499180382598201454 it was a big enough release that i just made it a whole different plugin
+    [reply to excessivelysalty msg=1498346990780813485]
+

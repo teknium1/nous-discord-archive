@@ -1,0 +1,29 @@
+# Thread 'Theme creation skills + scripts' in forum #community-projects-showcase
+# thread_id=1495480461961723935 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:55.866367+00:00
+
+[2026-04-19T17:45:26.815000+00:00] neopabo (id=1495480461961723935)
+    Hey everyone, been working on something that might be useful for people who want to customize how their Hermes agent looks in the terminal.
+    
+    hermes-theme-workshop — A repo with everything you need to set up a custom CLI skin, including a step-by-step recipe, updated skills, and tools for generating banner art.
+    
+    What's included:
+    - hermes-cli-skin skill with all the pitfalls documented (trimEnd() drift fix, saturated color masking, YAML surgery rules, hard banner dimensions from banner.ts)
+    - img_to_braille.py — Converts any image to Braille art with per-cell color classification and a --validate-colors flag that catches invisible features (e.g. crimson red going silent under grayscale thresholding)
+    - image_to_hero.py — Classic ASCII ramp converter if you prefer that look
+    - A full working skin example
+    - 7-phase README with the exact prompt chain to feed your agent
+    
+    Tested end to end with a subagent — it installed the skills, generated a silhouette in Braille, wrote the skin YAML, and verified it parsed cleanly.
+    
+    https://github.com/H-Ali13381/hermes-theme-workshop
+    
+    MIT licensed, PRs welcome — If you build a skin or hit new pitfalls drop them in examples/ or update the SKILL.md
+    [embed] GitHub - H-Ali13381/hermes-theme-workshop: Braille-first ASCII art ... https://github.com/H-Ali13381/hermes-theme-workshop
+
+[2026-04-19T17:50:54.285000+00:00] neopabo (id=1495481835470454874)
+    Theme creation skills + scripts
+
+[2026-04-19T17:51:18.700000+00:00] neopabo (id=1495481937874259999)
+    <@575461682151686145>
+

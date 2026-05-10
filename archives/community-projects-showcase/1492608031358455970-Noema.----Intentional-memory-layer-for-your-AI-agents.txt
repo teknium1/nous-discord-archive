@@ -1,0 +1,30 @@
+# Thread 'Noema. -- Intentional memory layer for your AI agents' in forum #community-projects-showcase
+# thread_id=1492608031358455970 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:22.213316+00:00
+
+[2026-04-11T19:31:25.992000+00:00] _fail.safe (id=1492608031358455970)
+    Hey Folks,
+    
+    TL;DR: I'm sharing this today: https://noemacortex.com
+    
+    I started writing a little tool for myself to quickly record daily events — something lightweight I could use at work to keep track of small wins so I'm not blanking when review time comes around. Anybody else been there too?
+    
+    As AI agents became more of a daily thing in my world, I realized the same tool worked well to give agents persistent memory across sessions. That became the basis for Noema: structured knowledge stored as plain markdown files, indexed by SQLite, no cloud dependency. Everything lives on your machine.
+    
+    Where it got interesting: I run agents across multiple machines, and they kept rediscovering the same things independently. So I added federation — cortexes (Noema's term for a memory collection) can peer together and sync knowledge automatically.
+    
+    Publishers can broadcast read-only knowledge; subscribers consume it. A research agent's findings become available to a coding agent without anyone re-teaching it. **Agents teaching agents**.
+    
+    It's written in Go, ships as a single binary, and works with any MCP-compatible agent (Hermes, Claude Code, Copilot, Zed, etc.).
+    
+    `brew install Fail-Safe/noema/noema`
+    
+    GitHub: https://github.com/Fail-Safe/Noema
+    
+    Thanks for looking — happy to answer questions about the architecture or federation design. Cheers!
+    [embed] Noema — The intentional memory layer for your AI agents. https://noemacortex.com/
+    [embed] GitHub - Fail-Safe/Noema: The intentional memory layer for your AI ... https://github.com/Fail-Safe/Noema
+
+[2026-04-18T02:32:58.488000+00:00] _fail.safe (id=1494888442969198775)
+    I've put a lot of updates into this since first posting about it. Hoping others will find it useful as well! 🙂
+

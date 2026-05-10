@@ -1,0 +1,1220 @@
+# Thread 'Lossless Context Management (LCM) Plugin for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1491081146266681414 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:45.504544+00:00
+
+[2026-04-07T14:24:08.218000+00:00] w0lfgang88 (id=1491081146266681414)
+    Built a standalone plugin that replaces the built-in context compressor with DAG-based summarization. Every message preserved, nothing lost to compaction.
+    
+    ## What it does
+    
+    When context fills up, Hermes replaces middle turns with a flat lossy summary. LCM replaces that with:
+    
+    - **Immutable message store** — every message persisted verbatim in SQLite
+    - **Hierarchical summary DAG** — D0 (minutes) → D1 (hours) → D2 (days)
+    - **3-level escalation** — detailed → bullets → deterministic truncate (guaranteed convergence)
+    - **Agent tools** — `lcm_grep`, `lcm_describe`, `lcm_expand` so the agent can drill back into anything that was compacted
+    
+    ## How is this different from Honcho / Mem0 / RetainDB?
+    
+    Different layer. Those are memory providers — they add cross-session recall. LCM replaces the context engine itself — how the active window is managed when it fills up. They stack, they don't compete.
+    
+    ## Required a core patch
+    
+    Hermes doesn't have a context engine plugin slot, so I built one. Small PR — adds a ContextEngine ABC that makes the compressor swappable via the plugin system. Same pattern as OpenClaw's contextEngine slot + lossless-claw.
+    
+    ## Install
+    
+    Requires the plugin slot PR to be merged first, then:
+    ```
+    git clone https://github.com/stephenschoettler/hermes-lcm ~/.hermes/plugins/hermes-lcm
+    ```
+    Restart Hermes. That's it.
+    
+    ## Links
+    
+    Plugin: https://github.com/stephenschoettler/hermes-lcm
+    PR (context engine slot): https://github.com/NousResearch/hermes-agent/pull/5700
+    Proposal issue: https://github.com/NousResearch/hermes-agent/issues/5701
+    LCM paper: https://papers.voltropy.com/LCM
+    
+    ## Status
+    
+    90 tests passing across both repos. Verified end-to-end: compaction fires, DAG nodes created, current-turn search works. Based on the LCM paper by Ehrlich and Blackman (Voltropy PBC).
+    
+    Happy to answer questions. Feedback on the PR welcome.
+    [embed] GitHub - stephenschoettler/hermes-lcm: Lossless Context Management ... https://github.com/stephenschoettler/hermes-lcm
+    [embed] feat: pluggable context engine slot (enabling LCM and custom compac... https://github.com/NousResearch/hermes-agent/pull/5700
+    [embed] Proposal: Pluggable context engines — enabling LCM as a plugin (l... https://github.com/NousResearch/hermes-agent/issues/5701
+
+[2026-04-07T18:05:00.395000+00:00] digitalstoic (id=1491136729925685379)
+    What's been a noticeable difference in usage with this plugin vs native context management?
+
+[2026-04-07T18:21:37.183000+00:00] skylinx79 (id=1491140910757445865)
+    Hi <@427613574995771414> - what is the easiest way to use this?
+
+[2026-04-07T18:21:43.759000+00:00] skylinx79 (id=1491140938339192922)
+    I would like to give it a try
+
+[2026-04-07T18:23:08.898000+00:00] w0lfgang88 (id=1491141295438172160)
+    <@689592654559969396> Waiting on PR to get merged first. Once that happens you can try it. Hand to your Hermes agent to explain.
+
+[2026-04-07T18:26:33.765000+00:00] w0lfgang88 (id=1491142154712645683)
+    <@758384624740335618> It's early to tell. I built and tested last night. The real difference should show up in long multi-day sessions where native compaction would have stacked lossy summaries on top of lossy summaries. LCM's hierarchical DAG should hold up better there, but that needs time to prove out.
+
+[2026-04-07T18:30:07.371000+00:00] skylinx79 (id=1491143050641277078)
+    Gotcha. Hopefully it will be merged soon!
+
+[2026-04-09T21:34:44.662000+00:00] lucaompr (id=1491914287898431808)
+    in simple words, LCM allows for a "infinite" continuous session without worrying about reseting the session. depending on the task, it just works almost like magic. not very recommended for coding tasks, still I managed to work on very long and advanced coding tasks to try and push LCM to its limits and still worked well.
+
+[2026-04-09T21:35:09.120000+00:00] lucaompr (id=1491914390482718790)
+    with LCM, session context managament starts to be less of a rquirement
+
+[2026-04-10T00:04:55.160000+00:00] bobashopcashier (id=1491952080666104020)
+    https://github.com/NousResearch/hermes-agent/pull/6126 oml can we get this merged
+    [embed] feat: pluggable context engine slot with config-driven selection by... https://github.com/NousResearch/hermes-agent/pull/6126
+
+[2026-04-10T00:04:58.256000+00:00] bobashopcashier (id=1491952093651538023)
+    what are we waiting for
+
+[2026-04-10T00:05:19.163000+00:00] bobashopcashier (id=1491952181342113812)
+    am I gonna get banned if I ping tek
+
+[2026-04-11T05:43:48.059000+00:00] teafarmguy (id=1492399750891180073)
+    https://github.com/NousResearch/hermes-agent/pull/7464
+    [embed] feat: pluggable context engine slot + unified hermes plugins UI by ... https://github.com/NousResearch/hermes-agent/pull/7464
+    [reply to bobashopcashier msg=1491952080666104020]
+
+[2026-04-11T11:53:05.664000+00:00] kganse7 (id=1492492686622462145)
+    Oooo cool this is based on the Lossless context paper!
+
+[2026-04-11T23:46:47.875000+00:00] w0lfgang88 (id=1492672295993479323)
+    Sorry I missed these comments. hermes-lcm is ready for testing! Issues and PRs welcome: https://github.com/stephenschoettler/hermes-lc
+
+[2026-04-12T10:25:03.201000+00:00] chipchu (id=1492832918232498326)
+    will this be added to hermes? I loved lossless-claw DAG, felt mandatory
+
+[2026-04-12T19:02:21.042000+00:00] kganse7 (id=1492963100373287123)
+    I set this up did have to modify the config.yaml to make it work
+
+[2026-04-12T19:02:27.890000+00:00] kganse7 (id=1492963129095618623)
+    will let you know then how it goes!
+
+[2026-04-13T19:29:09.258000+00:00] chipchu (id=1493332233585426575)
+    Hermes 0.9.0:
+    ```◆ Pluggable Context Engine — Context management is now a pluggable slot via hermes plugins. Swap in custom context engines that control what the agent sees each turn — filtering, summarization, or domain-specific injection.``` This solves pre-req requirement nicely
+
+[2026-04-13T20:14:05.360000+00:00] kganse7 (id=1493343541857091836)
+    Yeah it should work now more easily
+
+[2026-04-13T20:15:31.890000+00:00] jshjns25 (id=1493343904790085873)
+    sorry - im trying to wrap my head around this. does this mean that the lossless context management is now part of 0.9.0? or it's the first step to being able to install it individually?
+    [reply to chipchu msg=1493332233585426575]
+
+[2026-04-13T20:17:56.799000+00:00] chipchu (id=1493344512582619286)
+    it takes care of the first step - it's one less thing your hermes will have to think about when you tell it to add the plugin for you
+
+[2026-04-13T20:18:26.807000+00:00] chipchu (id=1493344638445162538)
+    just, make sure your hermes is working on 0.9.0 first
+
+[2026-04-14T00:50:44.521000+00:00] kganse7 (id=1493413163784470529)
+    You can just run the git pull commands for the LCM repo. It puts it in the HERMES plugins. Then run the plugin command and can select it for hermes to start using
+    [reply to jshjns25 msg=1493343904790085873]
+
+[2026-04-14T06:49:38.125000+00:00] teafarmguy (id=1493503482265862306)
+    Hey I really like this so far
+    
+    For over a week I’ve been having a lot of memory/recall friction and have been following basically every memory or context related project (there are a lot now). I’ve determined everyone suggests different things because it really depends on what people are doing with Hermes.
+    
+    I’ve tried many things, honcho was the closest and I used it for a while. But I do multiple heavy research sessions of unrelated topics and need to be able to jump back and forth on topics and swap between terminal and discord multiple times a day and I found honcho wasting time trying to backtrack its work and figure out what it did, but then also Hermes would lose nuanced context that it tossed in compaction causing me to re-explain often. It was becoming unusable as the different projects grew.
+    
+    It seems for now I finally have hit a sweet spot for my needs utilizing hindsight as memory provider, LCM for context plugin, and LLM-wiki for long projects. These have played very nicely so far and I’m able to swap platforms and it basically immediately checks lcm first and picks up where we left off. Haven’t had to manually fuss with saving/loading sessions, telling it to use recall functions, etc.
+    
+    Just wanted to say thanks cause this has been impactful for me so far.
+
+[2026-04-14T08:18:39.271000+00:00] skylinx79 (id=1493525884655898704)
+    Just installed this and can't wait to see the difference. What is the easiest way to confirm it's working correctly?
+
+[2026-04-14T08:44:34.135000+00:00] potato02356 (id=1493532406227931206)
+    I hope this is not a dumb question: does this plugin affect token usage?
+
+[2026-04-14T08:51:43.132000+00:00] _voscko_ (id=1493534205572026438)
+    yeah it definitely affects them but in a good way. it's basically context management so it summarizes old stuff instead of just deleting it. makes your context window way more efficient so you don't burn through tokens re-reading the same history over and over.
+    [reply to potato02356 msg=1493532406227931206]
+
+[2026-04-14T11:01:24.609000+00:00] kganse7 (id=1493566843451871264)
+    Haven’t hit the point to notice yet but I do think it is working well
+    [reply to teafarmguy msg=1493503482265862306]
+
+[2026-04-14T13:20:29.215000+00:00] teafarmguy (id=1493601843266191430)
+    Well I have mine set where it shows all tool calls so I can literally see it using lcm
+    
+    But also you can just ask your agent “tell me about your current memory and context functions” and it should explain what it uses
+    [reply to skylinx79 msg=1493525884655898704]
+
+[2026-04-14T13:35:17.039000+00:00] kganse7 (id=1493605567069946006)
+    okay good moves I will look at this closer
+
+[2026-04-15T21:58:43.163000+00:00] _voscko_ (id=1494094648602529892)
+    Guys <@427613574995771414> released a new version! https://github.com/stephenschoettler/hermes-lcm/releases/tag/v0.3.0
+    
+    It's huge! https://x.com/i/status/2044533821555806353
+    [embed] Release v0.3.0 · stephenschoettler/hermes-lcm https://github.com/stephenschoettler/hermes-lcm/releases/tag/v0.3.0
+    [embed]  https://twitter.com/i/status/2044533821555806353
+
+[2026-04-15T21:59:52.684000+00:00] _voscko_ (id=1494094940194738296)
+    Please go ahead and provide feedback and don't forget to report if you encouter strange behaviour/bugs so we can crush them 💪🏼
+
+[2026-04-15T22:27:08.134000+00:00] w0lfgang88 (id=1494101799769211123)
+    I keep forgetting to check these comments.
+    [reply to chipchu msg=1492832918232498326]
+
+[2026-04-15T22:31:09.533000+00:00] w0lfgang88 (id=1494102812270006387)
+    Thank you <@227929213565534208> for picking up the slack
+
+[2026-04-15T22:54:55.190000+00:00] bobashopcashier (id=1494108791908864151)
+    it double sends so I had to turn it off
+
+[2026-04-15T22:55:14.113000+00:00] bobashopcashier (id=1494108871277416458)
+    I think I had this problem originally with lossless claw
+
+[2026-04-15T23:10:21.906000+00:00] w0lfgang88 (id=1494112678837358624)
+    What's double sending? The LCM plugin, the Hermes gateway, or something else? And what platform are you on (Discord, Telegram, CLI)? Happy to help debug if you can share more details.
+    [reply to bobashopcashier msg=1494108791908864151]
+
+[2026-04-15T23:10:39.792000+00:00] bobashopcashier (id=1494112753856549015)
+    LCM with hermes on discord
+
+[2026-04-15T23:12:15.533000+00:00] w0lfgang88 (id=1494113155423539300)
+    Can you share a bit more? Is Hermes sending the same reply twice in a row, or is it replying once and then sending a second message that looks like a summary?
+
+[2026-04-15T23:12:40.815000+00:00] w0lfgang88 (id=1494113261464059966)
+    Also, are you on the latest hermes-agent and hermes-lcm (v0.3.0)? There was a lifecycle fix in hermes-agent#8416 that hasn't merged yet which could be related. It fixes how the context engine handles session resets on Discord.
+
+[2026-04-16T00:25:18.601000+00:00] chfarhan_ (id=1494131539343183913)
+    may i ask what is your config setting of Hindsight = memory provider
+    LCM = context plugin stack
+    [reply to teafarmguy msg=1493503482265862306]
+
+[2026-04-16T00:47:09.515000+00:00] lucaompr (id=1494137037715013712)
+    hows LCM in hermes doing so far guys? usable?
+
+[2026-04-16T01:02:53.525000+00:00] kganse7 (id=1494140997179936940)
+    Mine is mem0 since it has a decent free plan
+    [reply to chfarhan_ msg=1494131539343183913]
+
+[2026-04-16T04:17:34.456000+00:00] w0lfgang88 (id=1494189990555418654)
+    architecture-diagram skill is super cool
+    [attachment] active_context_summary_dag.png https://cdn.discordapp.com/attachments/1491081146266681414/1494189990224072824/active_context_summary_dag.png?ex=6a02011e&is=6a00af9e&hm=4e385f46b81da461cc4cc1b01ca4e6ee6808fc6fa8b1c8a77e42f1b2f2ea195d&
+
+[2026-04-16T04:24:20.281000+00:00] teafarmguy (id=1494191692709101618)
+    honestly i've been testing things out of the box as much as possible and then tweaking if needed but for this combo i literally just installed them and typed "hermes plugins" in CLI and choose hindsight and lcm. I'm using local hindsight instead of cloud. lcm has a lot of env vars you can mess with but I haven't needed to yet.
+    [attachment] Screenshot_2026-04-15_231705.png https://cdn.discordapp.com/attachments/1491081146266681414/1494191692343939112/Screenshot_2026-04-15_231705.png?ex=6a0202b4&is=6a00b134&hm=c2cc54a8c720af0463d80228510533a7f647fedba9e1660f0e23c2a8da0bc9c8&
+    [reply to chfarhan_ msg=1494131539343183913]
+
+[2026-04-16T08:12:53.385000+00:00] _voscko_ (id=1494249209636065311)
+    That’s useful signal, thanks. My guess is this needs to be split a bit before we pin it on LCM itself.
+    
+    LCM doesn’t send Discord messages directly, so “double sends” is more likely one of these buckets:
+    - Hermes sends the real reply plus a second interim/progress-style message
+    - a session reset / carry-over edge case is causing weird lifecycle behavior (where hermes-agent#8416 could be relevant)
+    - less likely, an actual duplicate Discord delivery of the same final response
+    
+    A couple of details would narrow it down fast:
+    - Is the second message identical to the first, or does it look more like a summary/status/progress follow-up?
+    - Does it happen on every reply, or only after /new, resume, reconnect, or long/tool-heavy turns?
+    - Which hermes-agent version are you on, and are you definitely on hermes-lcm v0.3.0?
+    - If you disable streaming / interim messages / verbose tool progress on Discord, does the “double send” behavior stop?
+    
+    If you can paste a screenshot or a redacted pair of the two messages, that would probably tell us within a minute whether this is a gateway UX issue, a lifecycle/reset bug, or something deeper.
+    [reply to bobashopcashier msg=1494108791908864151]
+
+[2026-04-16T08:18:09.838000+00:00] _voscko_ (id=1494250536935886919)
+    yes, usable! We’ve made good progress on the core LCM side and just cut v0.3.0, which includes a bunch of important fixes and hardening. It’s definitely in real-use territory now, not just toy/demo territory 😄
+    
+    Couple of things:
+    - core LCM behavior is much better now
+    - some rough edges are still in the Hermes host/gateway/lifecycle layer, but we already have PRs up for that and we’re waiting for <@387972437901312000> to take a look. <@427613574995771414> mentioned them in <#1491258766648283238> 
+    - so yeah, I’d call it usable!
+    
+    If you try it and something feels off, definitely shout. The most useful reports right now are concrete behavior bugs, not vague vibes.
+    [reply to lucaompr msg=1494137037715013712]
+
+[2026-04-16T11:16:47.353000+00:00] kganse7 (id=1494295489452179456)
+    I’ll update mine today
+
+[2026-04-16T13:03:13.069000+00:00] lucaompr (id=1494322273086341190)
+    thanks for the initiative <@417568242307956737> 
+    
+    I feel LCM is the best compaction engine in the market right now and Hermes needs this as a default option
+
+[2026-04-16T14:58:17.735000+00:00] mindcraft3r (id=1494351233354563644)
+    Does this mean that you don't need to reset sessions to refresh the Hermes context window even after long run times, or that the LCM system retains information from the previous session even after you refresh the context windows?
+    [reply to lucaompr msg=1491914287898431808]
+
+[2026-04-16T15:58:34.061000+00:00] _voscko_ (id=1494366401324908615)
+    I agree, <@427613574995771414> and I are shipping fast, love to work with him! 💪🏼 so keep an eye out for updates!
+    [reply to lucaompr msg=1494322273086341190]
+
+[2026-04-16T16:02:55.032000+00:00] _voscko_ (id=1494367495916883979)
+    Yeah, basically the first one.
+    
+    LCM doesn’t literally give you an infinite raw context window, but it does make long-running sessions feel a lot less fragile because it keeps useful context available across refreshes/resets instead of you having to manually reconstruct everything every time.
+    
+    So in practice:
+    you can refresh/reset the active context window without “losing the thread” as hard as you normally would, because LCM carries forward the important bits.
+    
+    It’s not that the original full session stays loaded forever 1:1, more that the system preserves and re-injects the relevant context from earlier, so session context management becomes way less manual.
+    
+    For normal chat / planning / ops stuff, that can feel almost magic.
+    For coding, it helps too, but I still wouldn’t treat it as a full replacement for clean task boundaries.
+    [reply to mindcraft3r msg=1494351233354563644]
+
+[2026-04-16T16:09:14.685000+00:00] w0lfgang88 (id=1494369088296980550)
+    We broke 100 stars last night! 🚀
+
+[2026-04-16T16:12:51.792000+00:00] mindcraft3r (id=1494369998909734943)
+    Ohh gotcha, that's wassup. I'm gonna try this out today with honcho and beads and see how it fares with Hermes 🤘
+    [reply to _voscko_ msg=1494367495916883979]
+
+[2026-04-16T16:41:24.969000+00:00] lucaompr (id=1494377184494616676)
+    it means you could probably in 80% of the cases not have to ever worry about c ontext management and session reset again
+    [reply to mindcraft3r msg=1494351233354563644]
+
+[2026-04-16T18:03:27.491000+00:00] w0lfgang88 (id=1494397831048593428)
+    https://x.com/SteveSchoettler/status/2044838575502708858?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2044838575502708858?s=20
+
+[2026-04-17T09:33:43.653000+00:00] senseiyoba (id=1494631940999872552)
+    Hey, guys! How to update this plugin?
+
+[2026-04-17T10:11:11.293000+00:00] _voscko_ (id=1494641368285450251)
+    2 options:
+    1. ask you hermes agent to do it for you 🙂 with the link to the github
+    2. terminal: ```cd ~/.hermes/hermes-agent/plugins/context_engine/lcm && git pull``` and then restart
+    [reply to senseiyoba msg=1494631940999872552]
+
+[2026-04-17T10:11:54.677000+00:00] senseiyoba (id=1494641550251003904)
+    Tysm mate!
+    [reply to _voscko_ msg=1494641368285450251]
+
+[2026-04-17T10:11:58.598000+00:00] Translator Bot#1043 (id=1494641566697132083)
+    Teesam Maat!
+    [reply to senseiyoba msg=1494641550251003904]
+
+[2026-04-17T10:14:21.310000+00:00] cars29_hotbirdbird (id=1494642165274640465)
+    thx sharing, so even if you install this plug-in, do you still need hindsight to manage memory.md and user.md? Will this plug-in conflict with the own session search mechanism?
+    [reply to teafarmguy msg=1493503482265862306]
+
+[2026-04-17T10:25:52.724000+00:00] _voscko_ (id=1494645065275146310)
+    Short version: no, LCM does not replace Hermes memory providers, and it does not conflict with session_search.
+    
+    LCM is a context engine plugin. Its job is to replace the default compaction/compression path so old conversation detail is preserved in its own DAG/store and can be retrieved later with tools like lcm_grep, lcm_describe, lcm_expand, and lcm_expand_query.
+    
+    That is a different layer from memory providers. So:
+    
+    - MEMORY.md / USER.md still exist as Hermes built-in prompt memory if you have built-in memory enabled
+    - Hindsight is still useful if you want richer long-term memory / recall across sessions
+    - LCM and Hindsight can be used together because they solve different problems
+    
+    A simple way to think about it:
+    
+    - built-in memory / Hindsight = “what stable facts should Hermes remember?”
+    - LCM = “how do we preserve and recover detailed conversation context when the chat gets compacted?”
+    - session_search = “search the archived Hermes transcripts”
+    
+    On session_search specifically: no direct conflict. session_search still works against Hermes’ normal session archive. LCM adds its own retrieval tools over the LCM store. There is some conceptual overlap, but they are separate mechanisms and separate tool names.
+    
+    So no, you do not need Hindsight just to “make LCM work.” But yes, you may still want Hindsight if you want better long-term memory handling than MEMORY.md / USER.md alone.
+    
+    Josh’s setup makes sense:
+    - Hindsight for persistent memory
+    - LCM for context continuity and compaction recall
+    - LLM-wiki for long-running structured projects
+    
+    That stack is actually pretty reasonable if you bounce between platforms and juggle multiple unrelated threads.
+    [reply to cars29_hotbirdbird msg=1494642165274640465]
+
+[2026-04-17T10:27:52.476000+00:00] cars29_hotbirdbird (id=1494645567551438889)
+    amazing job, i will try, love you
+    [reply to _voscko_ msg=1494645065275146310]
+
+[2026-04-17T11:28:46.461000+00:00] skylinx79 (id=1494660893475340369)
+    Hi! I see this in the logs: "LCM slash command registration unavailable on this Hermes host; continuing without /lcm". How can I check if the plugin is working correctly?
+
+[2026-04-17T12:36:50.736000+00:00] _voscko_ (id=1494678024166314127)
+    That log line is informational, not an error. Are you on the latest hermes agent update? It just means your Hermes host supports the LCM context engine, but not plugin slash-command registration, so /lcm is unavailable on that host. The plugin itself can still be working fine.
+    
+    A few good ways to verify it:
+    
+    1. Check that Hermes sees the plugin and that lcm is the active context engine: hermes plugins
+    
+    You want to see something like:
+    - hermes-lcm listed as installed
+    - Context Engine: lcm
+    
+    2. Make sure your config has:
+    ```context:
+      engine: lcm```
+    
+    
+    3. Look for the positive log line:
+    LCM plugin loaded — lossless context management active
+    
+    4. Even if /lcm is unavailable, the LCM tools should still work. You can ask Hermes to use:
+    - lcm_status
+    - lcm_doctor
+    - lcm_grep
+    
+    For example:
+    - “Use lcm_status and tell me what it shows.”
+    - “Use lcm_doctor and report any problems.”
+    
+    If those tools respond normally, the plugin is loaded and working.
+    
+    So in short:
+    - no /lcm on that host = older / different Hermes host capability
+    - LCM itself can still be active and working correctly
+    - hermes plugins + lcm_status / lcm_doctor are the best checks
+    [reply to skylinx79 msg=1494660893475340369]
+
+[2026-04-17T12:53:07.702000+00:00] _voscko_ (id=1494682121858715679)
+    But the beauty is, give your hermes agent the github to hermes-lcm and ask it to troubleshoot on your behalf. Put it to work where its strength is 😁💪🏼
+    [reply to skylinx79 msg=1494660893475340369]
+
+[2026-04-17T13:58:59.482000+00:00] skylinx79 (id=1494698696825245746)
+    Yep I am on the latest update for both 🙂 Thanks!
+
+[2026-04-17T22:14:40.128000+00:00] cars29_hotbirdbird (id=1494823438135722055)
+    Hi bro, I ran an investigation using my bot, and here's the report for your reference. There might be a few inaccuracies, so feel free to ignore them.
+    
+    https://discord.com/channels/1053877538025386074/1494818758060146799
+    [reply to _voscko_ msg=1494678024166314127]
+
+[2026-04-18T09:09:21.162000+00:00] _voscko_ (id=1494988194733887488)
+    Nice one, also responded. Thanks once more you have put in this effort
+    [reply to cars29_hotbirdbird msg=1494823438135722055]
+
+[2026-04-18T10:17:56.433000+00:00] lengyu1040 (id=1495005455431237633)
+    Does that mean, with this plugin, we do not need to periodically reset sessions?
+
+[2026-04-18T10:39:11.411000+00:00] _voscko_ (id=1495010803076567230)
+    hermes-lcm v0.5.0 is out. Really nice release.
+    
+    Highlights in this one:
+    - source-aware retrieval
+    - profile-isolated storage
+    - oversized tool-output externalization
+    - a read-only retention analysis command
+    - opt-in transcript GC for externalized tool output
+    - inline media sanitization before compaction
+    - contributing guide/docs improvements
+    
+    This feels like a meaningful step forward for a practical long-context plugin setup: better retrieval, cleaner storage boundaries, and the heavier retention features staying opt-in instead of being forced on by default.
+    
+    Big thanks to <@427613574995771414> as well for pushing it forward.
+    
+    Release: https://github.com/stephenschoettler/hermes-lcm/releases/tag/v0.5.0
+    [embed] Release v0.5.0 · stephenschoettler/hermes-lcm https://github.com/stephenschoettler/hermes-lcm/releases/tag/v0.5.0
+
+[2026-04-18T10:44:14.805000+00:00] _voscko_ (id=1495012075603230951)
+    Short version: no, not as routine maintenance.
+    
+    The goal of the plugin is to make long-running sessions much more viable, so you do not have to keep resetting just to stay functional. It preserves useful context more intelligently, improves retrieval when older details matter again, and now also handles oversized tool output much more cleanly instead of letting that kind of payload silently poison the transcript.
+    
+    So the value proposition is not “sessions become infinite and perfect,” but rather: you can keep conversations going for much longer before a reset becomes desirable, and when you do start a new session, it is because you want a clean boundary, not because the system is falling apart.
+    
+    In other words: resets become a choice, not a workaround.
+    [reply to lengyu1040 msg=1495005455431237633]
+
+[2026-04-18T12:08:17.529000+00:00] kganse7 (id=1495033226320679044)
+    I’m away on vacation going to come back to a lot of upgrades 😎
+
+[2026-04-18T12:21:01.970000+00:00] _voscko_ (id=1495036432618618910)
+    Definitely! Are we're not holding back lol. We got plenty of things to do still, <@973292183832657950> gave us some extra insights so always good to get that feedback so we can continue improving
+    [reply to kganse7 msg=1495033226320679044]
+
+[2026-04-18T15:29:54.119000+00:00] lengyu1040 (id=1495083963096629278)
+    Thanks for the detailed explaination! Correct me if I'm wroing: with LCM plugin, I can disable hermes default daily session reset and idle session reset, only reset when I wanted with (/new or /reset), which I actually do from time to time
+    [reply to _voscko_ msg=1495012075603230951]
+
+[2026-04-18T17:31:44.840000+00:00] w0lfgang88 (id=1495114626482966668)
+    If you're using LCM, it's reasonable to disable the automatic daily reset and idle reset if you want sessions to stay continuous until you decide otherwise with /new or /reset.
+    
+    That said, LCM does not make resets unnecessary. It just makes them much less scary, because older context can be compacted into the DAG and recovered later instead of being flattened into one lossy summary. I learned this the hard way using lossless-claw.
+    [reply to lengyu1040 msg=1495083963096629278]
+
+[2026-04-18T17:34:09.292000+00:00] w0lfgang88 (id=1495115232358432953)
+    So the practical answer is:
+    
+    - Yes: you can run longer-lived sessions and reset manually when it makes sense for your workflow
+    - Yes: /new or /reset still remain the clean way to intentionally start fresh
+    - Nuance: whether you should fully disable daily/idle resets depends on how much you want operational guardrails vs totally manual session hygiene
+
+[2026-04-18T17:43:59.693000+00:00] lengyu1040 (id=1495117708679970866)
+    That's very informative! Thanks a lot!
+
+[2026-04-18T17:45:36.677000+00:00] w0lfgang88 (id=1495118115460087888)
+    https://x.com/SteveSchoettler/status/2045541924023759045?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2045541924023759045?s=20
+
+[2026-04-18T19:39:30.947000+00:00] cars29_hotbirdbird (id=1495146780466090056)
+    perfect, let me update and try
+    [reply to w0lfgang88 msg=1495118115460087888]
+
+[2026-04-19T02:34:28.233000+00:00] vidal6115 (id=1495251207252349069)
+    LCM work great, hermes agent remember almost everythings
+
+[2026-04-19T03:46:04.434000+00:00] w0lfgang88 (id=1495269226825519135)
+    We broke 200 ⭐'s! Let's go!
+
+[2026-04-20T02:12:15.831000+00:00] soyhenry (id=1495608006618906777)
+    I just installed it but I have no idea if it's working in telegram
+    
+    It says the tools are available but the /lcm command doesn't appear for me
+    
+    And I got "no active session" but it's unclear why and if that's normal on a new install
+    
+    Any insight here plz
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491081146266681414/1495608006543540347/image0.jpg?ex=6a01e3bf&is=6a00923f&hm=30addaa11cebdc452c13e383d988f900f5f32304c3f4de5c5402c32b89c046d9&
+
+[2026-04-20T02:12:45.042000+00:00] soyhenry (id=1495608129138855966)
+    The db does exist but it's empty.  I've only sent a handful of messages tho
+
+[2026-04-20T02:13:03.786000+00:00] soyhenry (id=1495608207757017208)
+    <@427613574995771414>
+
+[2026-04-20T03:33:00.788000+00:00] w0lfgang88 (id=1495628327841693907)
+    A couple things here are expected on a fresh install.
+    
+    1. "No active session" is normal before Hermes has handled a real conversation turn in that Telegram chat.
+    2. An empty lcm.db is also normal until at least one normal user->assistant exchange has been recorded.
+    3. The Telegram slash menu not showing /lcm does not necessarily mean the command is unavailable. Telegram command menus can lag, and plugin commands often need a gateway restart to get re-published cleanly.
+    
+    Quick test:
+    1. Restart the Hermes gateway
+    2. In Telegram, send one normal message, not a slash command. Example: "hello"
+    3. Wait for Hermes to reply
+    4. Then run /lcm status manually
+    
+    What you want to see after that:
+    - session_id: something non-empty, not "(unbound)"
+    - source_messages_total > 0
+    - store_messages > 0 or at least the DB stops being empty
+    
+    If /lcm still does not appear in the Telegram menu after restart, that is mostly a Telegram command-registration/UI issue.
+    If typing /lcm manually works, the plugin is loaded.
+    If typing /lcm manually returns unknown command, then the gateway did not load the plugin at startup.
+    
+    If you can, paste the exact output of /lcm status after one normal Telegram exchange and I can tell you immediately whether it is just session bootstrapping or an actual install problem.
+    [reply to soyhenry msg=1495608006618906777]
+
+[2026-04-20T03:45:34.383000+00:00] soyhenry (id=1495631488648216576)
+    Thx for clarifying. Unfortunately I did do all the items from the quick test you listed. Lcm still doesn't appear in telegram. I'll keep an eye on it
+    [reply to w0lfgang88 msg=1495628327841693907]
+
+[2026-04-20T03:53:10.365000+00:00] w0lfgang88 (id=1495633401175216312)
+    The Telegram slash menu not showing /lcm might be a bug. Does the command work?
+    [reply to soyhenry msg=1495631488648216576]
+
+[2026-04-20T04:03:10.724000+00:00] w0lfgang88 (id=1495635919263498280)
+    Yeah, its a hermes-agent bug, but the command should still work even though it doesnt show up right now in the menu.
+
+[2026-04-20T04:13:42.884000+00:00] soyhenry (id=1495638570734452746)
+    Correct it does not show up at all. What does the command do?
+
+[2026-04-20T04:36:59.272000+00:00] w0lfgang88 (id=1495644427610361896)
+    Did you run it?
+    [reply to soyhenry msg=1495638570734452746]
+
+[2026-04-20T04:42:53.424000+00:00] w0lfgang88 (id=1495645913031639131)
+    If you can, paste the exact output of /lcm status after one normal Telegram exchange and I can tell you immediately whether it is just session bootstrapping or an actual install problem.
+
+[2026-04-20T05:31:43.074000+00:00] neopabo (id=1495658200874225725)
+    This might solve my context issues with Qwen 3.6
+
+[2026-04-20T05:32:32.527000+00:00] neopabo (id=1495658408295141500)
+    It degrades a lot more heavily than with Claude Sonnet, so this could being sizeable improvements
+
+[2026-04-20T09:39:09.976000+00:00] rikllo (id=1495720473294672003)
+    Quick question : If i use supermemory, is your plugin still useful?
+    
+    Very objectively
+
+[2026-04-20T12:55:17.057000+00:00] skylinx79 (id=1495769828009709651)
+    `/lcm` still doesn't work for me even with Hermes' own CLI and I see `LCM slash command registration unavailable on this Hermes host; continuing without /lcm` in the logs.
+
+[2026-04-20T14:14:50.085000+00:00] soyhenry (id=1495789847540142253)
+    Nothing
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491081146266681414/1495789847661641728/image0.jpg?ex=6a01e45a&is=6a0092da&hm=e98351e102cd51603ea7bb1e5aead4867646b5d33f4a16ee616a42d8ef29d6ae&
+    [reply to w0lfgang88 msg=1495644427610361896]
+
+[2026-04-20T15:01:33.393000+00:00] w0lfgang88 (id=1495801605466099733)
+    They’re different layers. Memory is the persistent store; the plugin is the orchestration/retrieval layer on top of it. It doesn’t replace memory. It helps you use it better.
+    [reply to rikllo msg=1495720473294672003]
+
+[2026-04-20T15:04:35.991000+00:00] w0lfgang88 (id=1495802371337355395)
+    https://x.com/i/status/2046120681042239661
+    [embed]  https://twitter.com/i/status/2046120681042239661
+
+[2026-04-20T15:09:10.473000+00:00] aaryan.work (id=1495803522598441131)
+    [attachment] voice-message.ogg https://cdn.discordapp.com/attachments/1491081146266681414/1495803522308902953/voice-message.ogg?ex=6a01f116&is=6a009f96&hm=7009d3e237c5ee160d5c624b7ed8d97b124f7f3527ce82df806f9674a965f22f&
+
+[2026-04-20T15:19:15.515000+00:00] w0lfgang88 (id=1495806060328521768)
+    First have your Hermes Agent troubleshoot itself. I cannot see your machine.
+    
+    Please update Hermes Agent and the hermes-lcm plugin, then check whether the `lcm` plugin/command is discoverable at runtime in the live Telegram profile.
+    
+    Report back with:
+    - Hermes version
+    - hermes-lcm version
+    - whether `lcm` is discoverable at runtime
+    - which profile/service is handling your chat
+    - any relevant logs if it still fails
+    [reply to soyhenry msg=1495789847540142253]
+
+[2026-04-20T15:20:05.403000+00:00] w0lfgang88 (id=1495806269573955704)
+    ☝️
+    [reply to skylinx79 msg=1495769828009709651]
+
+[2026-04-21T00:03:20.693000+00:00] gluedmosquito (id=1495937950964387931)
+    <@427613574995771414> what do you think about this ? https://github.com/slapash/kinda-lcm would love to have your input
+    [embed] GitHub - slapash/kinda-lcm https://github.com/slapash/kinda-lcm
+
+[2026-04-21T00:03:32.050000+00:00] gluedmosquito (id=1495937998599094272)
+    it's still missing the DAG part though
+
+[2026-04-21T00:08:39.098000+00:00] terminalsausage (id=1495939286451879936)
+    Curious since starting to use this I am not sure what's happening when use /new. Is that handled?  My bot seems to think there are some gaps in conversation ingesting. I've had lcm installed for a few a bit and it was finding that the last ingested sessions were from the 16th. I think that's the day I installed it. Lcm was set and I'm on v0.10.
+
+[2026-04-21T00:09:49.132000+00:00] gluedmosquito (id=1495939580195766354)
+    it's a completely new session so it should be handled
+
+[2026-04-21T00:11:47.582000+00:00] gluedmosquito (id=1495940077010948096)
+    i get this with debug 2026-04-20 18:09:18,905 INFO plugins.context_engine.lcm.engine: LCM engine session started: session_id=20260420_180908_a8439c db=/home/hermes/.hermes/lcm/lcm.db
+
+[2026-04-21T00:11:53.876000+00:00] gluedmosquito (id=1495940103409766511)
+    so it handles new sessions
+
+[2026-04-21T01:06:56.302000+00:00] w0lfgang88 (id=1495953954788475001)
+    Thanks for putting this together and sharing the repo.
+    
+    I took a close look.
+    
+    The packaging direction is right. Moving LCM out of a forked Hermes checkout and into a standalone plugin repo is the right fix for the update-safety problem.
+    
+    Where I think this version misses the mark is that it is not really packaging the current hermes-lcm implementation. It is replacing it with a much smaller snapshot.
+    
+    The main issue is that kinda-lcm drops too much of the real engine surface:
+    - no current DAG-based retrieval/tooling surface like lcm_grep, lcm_expand, lcm_status, lcm_doctor
+    - much lighter test coverage
+    - much less of the current store/engine behavior
+    
+    There is also a correctness bug in the current prototype: repeated compress() calls re-append the same earlier messages to the session log, so the transcript duplicates over time instead of staying lossless and idempotent.
+    
+    So my view is:
+    - standalone repo: yes
+    - this reduced implementation as the fix: no
+    
+    What I am doing on my side is making the existing hermes-lcm repo the canonical standalone plugin instead of replacing it with a rewrite. That preserves the mature implementation, tests, and current tool surface while still solving the update-safe install problem.
+    
+    The canonical install path I am moving toward is:
+    - ~/.hermes/plugins/hermes-lcm
+    
+    With config:
+    
+    `plugins:
+      enabled:
+        - hermes-lcm
+    
+    context:
+      engine: lcm`
+    
+    So the runtime engine name stays the same, but the packaging becomes update-safe.
+    
+    If you want, I am happy to compare notes on the packaging side. I just do not want to reset the implementation back to an earlier prototype shape in order to get there.
+    [reply to gluedmosquito msg=1495937950964387931]
+
+[2026-04-21T01:17:00.015000+00:00] w0lfgang88 (id=1495956486944460902)
+    Yes, /new is handled, but what you are describing sounds like either a version gap or a runtime/discovery issue rather than expected behavior.
+    [reply to terminalsausage msg=1495939286451879936]
+
+[2026-04-21T02:09:52.142000+00:00] terminalsausage (id=1495969791809159168)
+    OK. I'll keep an eye on it for now. Might have been a config issue. I thnx
+    [reply to w0lfgang88 msg=1495956486944460902]
+
+[2026-04-21T04:18:35.376000+00:00] w0lfgang88 (id=1496002185400422420)
+    hermes-lcm (v0.7.0) is now a proper standalone Hermes plugin. Installs are cleaner, updates are simpler, and the engine stays decoupled from Hermes core. https://x.com/SteveSchoettler/status/2046441429845876915?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2046441429845876915?s=20
+
+[2026-04-21T04:26:23.920000+00:00] w0lfgang88 (id=1496004150616391741)
+    <@700583950166523914> Thanks again for kicking off the early repo - I went my own way from there, but it helped get the ball rolling.
+
+[2026-04-21T04:29:59.383000+00:00] soyhenry (id=1496005054333976717)
+    Cool! I don't think I ever got it working. How do I uninstall it and reinstall the new version
+    [reply to w0lfgang88 msg=1496002185400422420]
+
+[2026-04-21T04:30:48.030000+00:00] w0lfgang88 (id=1496005258374287500)
+    Ask your bot.
+    [reply to soyhenry msg=1496005054333976717]
+
+[2026-04-21T04:33:35.360000+00:00] soyhenry (id=1496005960207175741)
+    I don't trust it
+    My setup isn't normal
+    I have a vps with a docker container for Hermes and it says it's installed correctly but it still doesn't work
+    Figured I asked a human
+
+[2026-04-21T04:34:41.137000+00:00] w0lfgang88 (id=1496006236095905852)
+    Oh boy... https://www.youtube.com/watch?v=40SnEd1RWUU
+    [embed] Interview with ‘Just use a VPS’ bro (OpenClaw version). https://www.youtube.com/watch?v=40SnEd1RWUU
+
+[2026-04-21T10:17:56.237000+00:00] rikllo (id=1496092618205954109)
+    and does it also work with supermemory API? not localy stored memory
+    [reply to w0lfgang88 msg=1495801605466099733]
+
+[2026-04-21T19:44:28.366000+00:00] gluedmosquito (id=1496235191528591611)
+    <@427613574995771414> i fucked up real bad on that repo in less than 24h my server froze because i was putting everything in ram be careful
+
+[2026-04-21T19:46:02.638000+00:00] gluedmosquito (id=1496235586934280202)
+    also i would love to help on lcm but i don't know how to implement my vision the idea isn't LCM in particular i like the idea of lcm to keep everything in a DB but what i want really is a way to recompile the context that is injected with different types of memories
+
+[2026-04-21T19:46:11.645000+00:00] gluedmosquito (id=1496235624712372345)
+    factual semantic episodic etc
+
+[2026-04-21T19:46:24.868000+00:00] gluedmosquito (id=1496235680173658172)
+    thank you for taking the time to look into it
+
+[2026-04-22T15:59:30.465000+00:00] selfhostedsoul (id=1496540965094297642)
+    After installing LCM plugin, I am seeing this error message when /compress issued 
+    
+    Compression failed: 'LCMEngine' object has no attribute '_align_boundary_forward'
+
+[2026-04-22T17:51:49.616000+00:00] neopabo (id=1496569231142027285)
+    I had this issue with qwen 3.6
+    [reply to selfhostedsoul msg=1496540965094297642]
+
+[2026-04-22T17:52:04.112000+00:00] neopabo (id=1496569291942662315)
+    I don't think it's related to LCM
+
+[2026-04-22T18:31:48.198000+00:00] selfhostedsoul (id=1496579291524235406)
+    I'm am using Gemma 4 31B on openrouter, not qwen 3.6
+
+[2026-04-23T03:41:27.507000+00:00] _voscko_ (id=1496717616772022292)
+    Thanks, this looks like a real bug.
+    
+    I traced the error locally and the issue does not appear to be in LCM’s `compress()` logic itself. The problem is that `/compress` is calling private helper methods that belong to the built-in `ContextCompressor`, specifically `_align_boundary_forward` (and likely `_find_tail_cut_by_tokens`), but those are not part of the generic `ContextEngine` interface.
+    
+    `LCMEngine` is a context engine plugin, not the built-in compressor, so it does not implement those private helpers. That means `/compress` is currently assuming “all context engines look like the built-in compressor,” which breaks for external engines like LCM.
+    
+    So the likely root cause is:
+    - host-side `/compress` integration bug
+    - not an LCM summarization bug
+    
+    Expected fix shape:
+    - gateway/manual `/compress` should not call built-in private compressor helpers on arbitrary context engines
+    - it should either:
+      - guard those calls behind `hasattr(...)`, or
+      - skip that preflight path for external engines and just call the engine’s normal `compress(...)` flow
+    
+    A regression test for `/compress` with a non-built-in `ContextEngine` would probably catch this.
+    
+    If you want, you can also turn this into a GitHub issue, so maintainers from hermes agent repo can have a look
+    [reply to selfhostedsoul msg=1496540965094297642]
+
+[2026-04-23T10:40:11.045000+00:00] gluedmosquito (id=1496822992527953971)
+    this explains a lot of issues actually but how much should be exposed to plugins to control the context ?
+
+[2026-04-24T12:57:09.088000+00:00] selfhostedsoul (id=1497219849364181045)
+    <@387972437901312000> 
+    As the topic on the support-thread is closed, I am responding here. 
+    The issues still exist 
+    
+    Debug log 
+    https://paste.rs/TVnlC
+    [attachment] Screenshot_2026-04-24-18-16-46-038_com.discord-edit.jpg https://cdn.discordapp.com/attachments/1491081146266681414/1497219850014294256/Screenshot_2026-04-24-18-16-46-038_com.discord-edit.jpg?ex=6a01d225&is=6a0080a5&hm=e743f6fb38c6130654b62f4755104ac771d0bd27f7a54fe225be147dc99ff5d9&
+
+[2026-04-24T13:03:19.353000+00:00] teknium (id=1497221402368016484)
+    well I made the fix that <@417568242307956737> suggested.. I dont really have any idea how LCM works
+    [reply to selfhostedsoul msg=1497219849364181045]
+
+[2026-04-24T13:03:43.159000+00:00] teknium (id=1497221502217621668)
+    can you link me the LCM repo
+    [reply to selfhostedsoul msg=1497219849364181045]
+
+[2026-04-24T13:07:16.740000+00:00] selfhostedsoul (id=1497222398041260213)
+    I have installed from this 
+    
+    https://github.com/stephenschoettler/hermes-lcm
+    [embed] GitHub - stephenschoettler/hermes-lcm: Lossless Context Management ... https://github.com/stephenschoettler/hermes-lcm
+
+[2026-04-24T13:09:22.454000+00:00] selfhostedsoul (id=1497222925323993241)
+    + <@427613574995771414>
+
+[2026-04-26T22:10:41.831000+00:00] w0lfgang88 (id=1498083929436192981)
+    Sorry I have been afk for a few days. Where did you end up?
+    [reply to selfhostedsoul msg=1497222398041260213]
+
+[2026-04-26T22:57:17.403000+00:00] _voscko_ (id=1498095654915018952)
+    <@387972437901312000> mentioned he released a fix for what I mentioned. So unsure if <@1491123663615955004> still has rhe issue after the fix (dunno the PR number that Teknium made and if its merged already or not).
+    [reply to w0lfgang88 msg=1498083929436192981]
+
+[2026-04-26T23:28:26.602000+00:00] cars29_hotbirdbird (id=1498103494903861249)
+    <@427613574995771414> <@387972437901312000> 
+    
+    # PR: Fix LCM context engine missing `on_session_end` in ACP mode
+    
+    **Repository:** https://github.com/NousResearch/hermes-agent  
+    **Branch:** `fix/acp-lcm-on-session-end`  
+    **File changed:** `acp_adapter/server.py`  
+    **Labels:** `bug`, `acp`, `lcm`, `context-engine`
+    
+    ---
+    
+    ## Summary
+    
+    When Hermes runs in ACP (Agent Communication Protocol) mode (e.g. via multica, VS Code, Zed, JetBrains), the LCM (Lossless Context Management) context engine's `on_session_end()` hook is never called at the end of a `session/prompt` turn. This causes all conversation messages to remain un-ingested in the LCM store (`~/.hermes/lcm.db`), making them invisible to LCM tools (`lcm_grep`, `lcm_expand`, `lcm_describe`).
+    
+    The Hermes CLI/TUI correctly calls `context_compressor.on_session_end()` on session boundaries (exit, `/new`, `/reset`). The ACP adapter only calls `session_manager.save_session()` (which writes to `state.db`), omitting the LCM flush entirely.
+    
+    ## Problem Details
+    
+    ### Hermes' four-layer memory architecture
+    
+    1. **session_search** — full-text search over `state.db` ✅ works in ACP
+    2. **LCM** — DAG-based context compression & retrieval over `lcm.db` ❌ **broken in ACP**
+    3. **skills** — static skill index ✅ works in ACP
+    4. **memory** — persistent MEMORY.md/USER.md ✅ works in ACP
+    
+    ### Root cause
+    
+    In `acp_adapter/server.py::prompt()`, after `agent.run_conversation()` returns:
+    
+    ```python
+    if result.get("messages"):
+        state.history = result["messages"]
+        # Persist updated history so sessions survive process restarts.
+        self.session_manager.save_session(session_id)  # ← only state.db
+    ```
+    
+    `save_session()` calls `SessionDB._persist()` which writes messages to `state.db`. However, it does **not** call `agent.context_compressor.on_session_end()`, which is required by LCM to ingest pending messages into `lcm.db`.
+    [embed] GitHub - NousResearch/hermes-agent: The agent that grows with you https://github.com/NousResearch/hermes-agent
+
+[2026-04-26T23:28:52.849000+00:00] cars29_hotbirdbird (id=1498103604991623199)
+    ### Evidence
+    
+    ```sql
+    -- ~/.hermes/lcm.db lcm_lifecycle_state shows ACP sessions registered
+    SELECT current_session_id, event_count
+    FROM lcm_lifecycle_state
+    WHERE current_session_id LIKE '%-%';
+    -- → fb93ad41-cdee-45ef-9a28-6be34c373708 | 0
+    -- → 6b26b2df-3461-4c15-a673-ceda61ec8a22 | 0
+    -- event_count=0 means on_session_start fired but no messages ingested
+    
+    -- ~/.hermes/lcm.db messages table has no ACP-sourced messages
+    SELECT DISTINCT source FROM messages;
+    -- → cli, tui
+    -- (no 'acp')
+    ```
+
+[2026-04-27T19:02:02.112000+00:00] kganse7 (id=1498398838959116338)
+    So this was fixed?
+    [reply to cars29_hotbirdbird msg=1498103494903861249]
+
+[2026-04-27T19:02:14.939000+00:00] kganse7 (id=1498398892759449784)
+    Or you put the PR in to fix the issue
+
+[2026-04-27T19:51:40.881000+00:00] cars29_hotbirdbird (id=1498411332821581997)
+    nope, this generated by bot, i am not sure if works, so just rise issue and inform you guys, , i didn’t submit in github
+    [reply to kganse7 msg=1498398838959116338]
+
+[2026-04-27T23:46:58.805000+00:00] kganse7 (id=1498470547686817815)
+    so I guess we do not know if it is improving our hermes right now
+
+[2026-04-27T23:47:06.676000+00:00] kganse7 (id=1498470580700053588)
+    if the compaction is not working correctly
+
+[2026-04-28T00:31:07.371000+00:00] w0lfgang88 (id=1498481656577921117)
+    https://x.com/SteveSchoettler/status/2048922813462110491
+    [embed]  https://twitter.com/SteveSchoettler/status/2048922813462110491
+
+[2026-04-28T02:33:38.922000+00:00] selfhostedsoul (id=1498512491217686611)
+    I have updated the plugin to latest version, but still get this error
+    
+    Compression failed: 'LCMEngine' object has no attribute '_align_boundary_forward'
+    
+    Debug report uploaded:
+    
+    Report  https://paste.rs/KM5KA
+
+[2026-04-28T10:43:04.241000+00:00] _voscko_ (id=1498635658292363344)
+    This one is actually fixed on the Hermes Agent side, not the LCM plugin side.
+    
+    Your dump shows Hermes 0.11.0 from 2026-04-23 (`6fdbf2f2`). The exact `/compress` crash was fixed in Hermes Agent PR #15039, merged 2026-04-24.
+    
+    So updating hermes-lcm alone won’t fix it. Update Hermes Agent itself, then restart the gateway. After that `/compress` should stop calling built-in compressor private helpers on `LCMEngine`.
+    [reply to selfhostedsoul msg=1498512491217686611]
+
+[2026-04-28T11:20:19.744000+00:00] pseudoku4 (id=1498645034671669268)
+    Stupid doubt, how do we update the plugin when new releases come?
+
+[2026-04-28T12:12:35.718000+00:00] _voscko_ (id=1498658187900092458)
+    i usually ask the agent itself to update hermes lcm, it knows the repository and will update it to the latest main channel. if you want to do it manually, then it is usually:
+    
+    Step 1: `cd ~/.hermes/plugins/hermes-lcm`
+    Step 2: `git pull`
+    Step 3: `hermes gateway restart`
+    
+    Then verify:
+    
+    `hermes plugins`
+    
+    Lol we get a lot of these questions... considering making a new command `/lcm update` that takes over the proces
+    [reply to pseudoku4 msg=1498645034671669268]
+
+[2026-04-28T12:46:09.969000+00:00] _voscko_ (id=1498666636281118862)
+    Ah lol, I just remember that <@427613574995771414> got it listed as plugin... so you can also do `hermes plugins update hermes-lcm`
+
+[2026-04-29T11:11:42.727000+00:00] kganse7 (id=1499005254010802226)
+    I do perceive the context window being managed for hermes better now with 0.7.1
+
+[2026-04-29T11:11:59.272000+00:00] kganse7 (id=1499005323405693070)
+    seems to adjust without big compaction runs which is nice hardly notice it until I see bar go up and down
+
+[2026-04-29T15:45:12.764000+00:00] wysie_ (id=1499074082694758580)
+    Thanks for building this!
+
+[2026-04-29T19:36:47.724000+00:00] _voscko_ (id=1499132362381070526)
+    Thanks for the feedback <@227929213565534208> indeed what we are working towards, it has to run in the background without needing to be aware LCM is doing its job. We are working on even more improvements. We might do another release today <@427613574995771414> . Also, I got a couple of PR's listed for Hermes Agent to make the LCM experience even better! https://github.com/NousResearch/hermes-agent/pulls/Tosko4
+    
+    I really hope the Hermes maitainers team can merge these in asap, it will help everyone so much!
+    [embed] Pull requests · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/pulls/Tosko4
+
+[2026-04-29T19:37:15.516000+00:00] _voscko_ (id=1499132478948905032)
+    If you got any issues, just raise an issue or tag us ( <@427613574995771414> ) here 😄
+    [reply to wysie_ msg=1499074082694758580]
+
+[2026-04-29T19:38:02.763000+00:00] kganse7 (id=1499132677117313095)
+    Awesome man! You guys are doing great
+    [reply to _voscko_ msg=1499132478948905032]
+
+[2026-05-01T02:26:00.742000+00:00] pseudoku4 (id=1499597733068017747)
+    Hi voscko, ran into this issue here last night. 
+    
+    https://discord.com/channels/1053877538025386074/1499479827936317450
+    [reply to _voscko_ msg=1499132478948905032]
+
+[2026-05-01T05:20:49.151000+00:00] _voscko_ (id=1499641724643971123)
+    I don’t think this is primarily a hermes-lcm failure.
+    
+    The first failure is clearly in the auxiliary compression/provider route. Before LCM is relevant, the logs already show MiniMax title/summary calls returning 404s, and after switching auxiliary compression to NVIDIA NIM the compression route is pinned to:
+    
+    deepseek-ai/deepseek-v4-flash at https://integrate.api.nvidia.com/v1/
+    
+    That call fails with a 502 Bad Gateway. So the initial compression path is broken at the provider/model route level.
+    
+    That said, LCM does explain why the manual /compress did not recover the session afterward. The screenshot shows:
+    
+    Compressing 59 messages (~113,247 tokens)...
+    No changes from compressing: 59 messages
+    Rough transcript estimate: ~113,247 tokens (unchanged)
+    
+    LCM’s default fresh_tail_count is 64. With only 59 messages in the transcript, all messages are treated as protected fresh tail, so there is no raw backlog outside the tail to compact. That makes /compress a no-op even though the token count is huge.
+    
+    There is also a context-window mismatch. Hermes is treating MiniMax-M2.7 as having a 204,800 token context and compression.threshold is 0.85, which means normal preflight compression would wait until around 174k tokens. But the provider is rejecting around 116k. So Hermes waits too long, then overflow compression tries to recover, but LCM still does not reduce anything because the entire transcript is protected by the 64-message fresh tail.
+    [reply to pseudoku4 msg=1499597733068017747]
+
+[2026-05-01T05:21:25.965000+00:00] _voscko_ (id=1499641879053074463)
+    .
+    So my read is:
+    
+    1. The immediate breakage is from the auxiliary compression route, especially NVIDIA returning 502.
+    2. MiniMax’s effective usable context appears lower than Hermes currently believes, or the provider is reporting the overflow in a confusing way.
+    3. LCM is not the primary cause, but its default fresh-tail policy fails to rescue high-token, low-message sessions.
+    
+    I would first revert auxiliary compression away from NVIDIA NIM or test that exact NVIDIA model route independently, lower the effective context/threshold for MiniMax, and reduce LCM_FRESH_TAIL_COUNT, for example to 16.
+    
+    <@81637470604627968> <@758219258185908245>
+
+[2026-05-01T05:36:47.500000+00:00] _voscko_ (id=1499645744251146270)
+    Small follow-up: I would not change all the knobs at once here.
+    
+    To isolate the issue, I’d start with the two things that map directly to the evidence in the logs: move auxiliary compression away from the NVIDIA route for now, and set a more realistic model.context_length for MiniMax, something like 110000. With the current 204,800 assumption and threshold 0.85, Hermes waits until roughly 174k before normal compression, but this run is already failing around 116k.
+    
+    Then for LCM specifically, I’d only lower the fresh tail first, for example LCM_FRESH_TAIL_COUNT=16, and maybe LCM_LEAF_CHUNK_TOKENS=10000. That should avoid the 59-message transcript being fully protected as “fresh tail”.
+    
+    I’d leave LCM_MAX_ASSEMBLY_TOKENS and LCM_RESERVE_TOKENS_FLOOR as a second step if it still overflows after that. Otherwise it gets harder to tell which change actually fixed the session.
+    
+    <@758219258185908245>
+
+[2026-05-01T05:39:14.529000+00:00] _voscko_ (id=1499646360935206922)
+    <@81637470604627968> if you can agree, would you please reopen that support chat? I'd rather troubleshoot there than here ✌️🫰
+
+[2026-05-01T05:58:45.396000+00:00] gille (id=1499651271907348522)
+    https://discord.com/channels/1053877538025386074/1499479827936317450/1499651241163100265
+
+[2026-05-01T05:59:00.197000+00:00] gille (id=1499651333987504248)
+    do you need that opened?
+
+[2026-05-01T05:59:26.959000+00:00] pseudoku4 (id=1499651446235336766)
+    Yes, please. We'll fix it there.
+    [reply to _voscko_ msg=1499641724643971123]
+
+[2026-05-01T06:00:39.594000+00:00] gille (id=1499651750888472618)
+    done
+
+[2026-05-01T07:35:46.576000+00:00] w0lfgang88 (id=1499675687706165259)
+    https://x.com/SteveSchoettler/status/2050116536934027520?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2050116536934027520?s=20
+
+[2026-05-01T18:27:13.123000+00:00] kohai_ut (id=1499839628566597833)
+    Q: I was glancing at the explanation of lcm at https://www.losslesscontext.ai/ which was insightful (losslessclaw pointed to it).  I'm curious how long the context stays around, is it just for the user session?  I'm guessing that's the case.
+    [embed] LCM: Lossless Context Management https://www.losslesscontext.ai/
+
+[2026-05-01T22:05:54.415000+00:00] zicochaos (id=1499894663253983243)
+    Q: any model recommendation for aux settings ?
+
+[2026-05-02T01:31:57.554000+00:00] wysie_ (id=1499946518017347636)
+    Wow nice site. <@427613574995771414> maybe you can get hermes-lcm added to that site
+    [reply to kohai_ut msg=1499839628566597833]
+
+[2026-05-02T11:43:14.906000+00:00] _voscko_ (id=1500100353981546526)
+    On retention: it is not only the in-memory user session.
+    
+    hermes-lcm stores its own SQLite DB, profile-scoped by default at `~/.hermes/lcm.db`, so the raw message store and DAG summaries survive normal restarts. The main retrieval path is intentionally scoped around the active/current session, because LCM is meant to protect the conversation the agent is actively compacting, not become a global memory system.
+    
+    On `/new`, retained summary nodes can be carried forward depending on `LCM_NEW_SESSION_RETAIN_DEPTH`. The default is `2`, which means higher-level summaries are kept, while lower-level session detail can be pruned. You can set it to `-1` to keep all DAG nodes, or `0` to keep none across `/new`.
+    
+    So the short version is: the storage persists beyond the process/session, but the active recall behavior is session-oriented by design.
+    [reply to kohai_ut msg=1499839628566597833]
+
+[2026-05-02T11:47:24.927000+00:00] _voscko_ (id=1500101402645762238)
+    For aux settings, I would start boring: leave `LCM_SUMMARY_MODEL` and `LCM_EXPANSION_MODEL` unset and let Hermes use its configured auxiliary model.
+    
+    If you do override them, I’d optimize for reliability and summarization quality more than raw speed. Bad summaries are worse than slightly slower summaries, because they become the index the agent relies on later.
+    
+    My rough recommendation:
+    
+    Use a solid, not tiny model for `LCM_SUMMARY_MODEL`. It does not need to be your best reasoning model, but it should be good at preserving names, decisions, constraints, code references, and tool results.
+    
+    Use the same or a stronger model for `LCM_EXPANSION_MODEL` if you rely on `lcm_expand_query`, because that path synthesizes an answer from retrieved context.
+    
+    I would only split cheap summary model plus stronger expansion model after dogfooding it a bit. The default auxiliary path is the safest first setup.
+    [reply to zicochaos msg=1499894663253983243]
+
+[2026-05-06T20:23:14.636000+00:00] w0lfgang88 (id=1501680766596153458)
+    https://x.com/i/status/2052109093922595073
+    [embed]  https://twitter.com/i/status/2052109093922595073
+
+[2026-05-06T21:55:52.827000+00:00] yerts (id=1501704079339159653)
+    Very awesome loving this
+
+[2026-05-07T19:26:21.159000+00:00] potato02356 (id=1502028837301522553)
+    Should I see this in every message?
+    
+    Preflight compression: ~267,934 tokens >= 136,000 threshold. This may take a moment.
+    
+    Not sure what could be wrong, my config is set to lcm as context engine and the plugin is active and version 0.9.1
+
+[2026-05-07T19:27:36.633000+00:00] potato02356 (id=1502029153862549615)
+    every new message the context is increasing, started at 253k tokens
+
+[2026-05-08T07:40:43.620000+00:00] nick_56269 (id=1502213648658206811)
+    yes. i also have this message
+
+[2026-05-08T08:31:34.213000+00:00] _voscko_ (id=1502226443772624987)
+    <@1485423139440693318>  <@1473779491422863474>  Short answer: no, you should not normally see that message on every single turn in a healthy settled session. But the message itself does not mean LCM is inactive or broken.
+    
+    That line is emitted by Hermes Agent core before the actual compression/LCM pass runs.
+    
+    It means Hermes estimated the full next request, including conversation history, system prompt, and tool schemas, and that estimate was above the compression threshold:
+    
+    `Preflight compression: ~267,934 tokens >= 136,000 threshold. This may take a moment.`
+    
+    So Hermes is saying: “Before I call the model, this looks too large, so I am going to try compression.”
+    
+    Important detail: this status is emitted before compression happens. It is not proof that compression failed.
+    
+    This became more visible recently because of this Hermes Agent commit:
+    
+    https://github.com/NousResearch/hermes-agent/commit/8bdec8088204a321b15dabe7c0df731ad3a66ae1
+    
+    That commit surfaces preflight compression status to users. So people may notice the message now even though the preflight path already existed.
+    
+    For LCM specifically, also note this recent hermes-lcm commit:
+    
+    https://github.com/stephenschoettler/hermes-lcm/commit/a0f839a2beb1fd937e125e29f3ce28068e9faf73
+    
+    That makes LCM fall back to the Hermes `compression.threshold`, so the effective threshold may be different from what users expected from older LCM defaults.
+    
+    What to check:
+    
+    Plugin active + version 0.9.1 is necessary, but not enough. Please check runtime diagnostics.
+    
+    If you have the optional operator slash commands enabled with:
+    
+    `LCM_ENABLE_SLASH_COMMAND=1`
+    
+    then run:
+    
+    `/lcm status`
+    `/lcm doctor`
+    
+    If slash commands are not enabled, ask the agent to run the LCM tools:
+    
+    `lcm_status`
+    `lcm_doctor`
+    [embed] fix(agent): surface preflight compression status · NousResearch/he... https://github.com/NousResearch/hermes-agent/commit/8bdec8088204a321b15dabe7c0df731ad3a66ae1
+    [embed] fix: fall back to Hermes compression threshold (#114) · stephensch... https://github.com/stephenschoettler/hermes-lcm/commit/a0f839a2beb1fd937e125e29f3ce28068e9faf73
+
+[2026-05-08T08:32:39.598000+00:00] _voscko_ (id=1502226718016933908)
+    <@1485423139440693318> <@1473779491422863474> 
+    Healthy signals:
+    
+    - selected context engine is `lcm`
+    - plugin path/version/commit is shown
+    - database has real `messages` and `summary_nodes`
+    - `lcm_doctor` passes database integrity, FTS integrity, DAG/orphan checks, config validation, and context pressure
+    - logs show `LCM compaction #...`
+    - logs do not show fallback to the built-in compressor
+    - logs do not repeatedly show `LCM summarization failed`, timeouts, or connection errors
+    
+    Also check your fresh tail setting.
+    
+    `LCM_FRESH_TAIL_COUNT` controls how many recent messages LCM keeps verbatim and does not compact.
+    
+    If this is set high, for example 64, and your effective threshold is only around 136k, then LCM may not be able to reduce the active request below the threshold. The protected fresh tail plus system prompt plus tool schemas can already be too large.
+    
+    For users seeing this repeatedly, a good first tuning step is:
+    
+    `LCM_FRESH_TAIL_COUNT=32`
+    
+    If it still happens after successful compactions, try:
+    
+    `LCM_FRESH_TAIL_COUNT=16`
+    
+    Do this before blindly lowering the compression threshold. Lowering the threshold only makes compression run earlier/more often; lowering fresh tail reduces the amount of raw recent context that must always stay in the prompt.
+    
+    So:
+    
+    - Seeing this once or occasionally is normal.
+    - Seeing it on every new message means the active request is still above threshold after the compression attempt.
+    - That usually means LCM is not reducing enough, has nothing eligible to compact yet, is preserving too much fresh tail, or summarization/auxiliary compression is failing.
+    
+    <@427613574995771414>
+
+[2026-05-08T08:46:41.454000+00:00] nick_56269 (id=1502230249017049129)
+    thank you. it's a great explanation. i've updated the plugin to 0.9.1 and set the agent to perform the checks
+
+[2026-05-08T16:18:41.163000+00:00] zinkdifferent_49268 (id=1502343997320859828)
+    Doesn't honcho do the same thing, just with semantic retrieval as well?
+
+[2026-05-08T20:57:27.868000+00:00] w0lfgang88 (id=1502414154206679150)
+    Yep, Voscko has it right.
+    
+    <@1485423139440693318> <@1473779491422863474> you shouldn’t see that every turn in a healthy, settled session. It’s a preflight message from Hermes before LCM runs, so it means “over threshold, attempting compression,” not “LCM is broken.”
+    
+    Please check:
+    
+    * `/lcm status`
+    * `/lcm doctor`
+    
+    or have the agent call:
+    
+    * `lcm_status`
+    * `lcm_doctor`
+    
+    If those pass, try lowering fresh tail first:
+    
+    ```text
+    LCM_FRESH_TAIL_COUNT=32
+    ```
+    
+    then `16` if needed.
+    
+    Don’t lower threshold first; that just makes compression run more often. Fresh tail is the better first knob here.
+
+[2026-05-08T20:58:40.329000+00:00] w0lfgang88 (id=1502414458130006157)
+    Same broad problem, different layer.
+    
+    **Honcho** is memory:
+    
+    * cross-session recall
+    * semantic retrieval
+    * observations/conclusions about users/projects
+    
+    **LCM** is context management:
+    
+    * replaces compression for the active session
+    * preserves a recoverable DAG of what got compacted
+    * provides exact drill-down via `lcm_grep` / `lcm_expand`
+    
+    So Honcho helps answer:
+    
+    > “What do we know about this?”
+    
+    across time.
+    
+    LCM helps answer:
+    
+    > “What exactly happened earlier in this huge session after it was compacted?”
+    
+    They’re complementary, not duplicates.
+    [reply to zinkdifferent_49268 msg=1502343997320859828]
+
+[2026-05-08T20:58:54.625000+00:00] potato02356 (id=1502414518092042311)
+    I will test it again as soon as the discord is back, my bot can't connect rn and it was happening on discord
+
+[2026-05-08T21:10:32.163000+00:00] w0lfgang88 (id=1502417443778461816)
+    Yep, basically session-scoped, but persistent.
+    
+    LCM isn’t just in-memory. It stores the raw messages + summary DAG in the local DB, so if you resume that Hermes session, the compacted context is still recoverable.
+    
+    It is not meant to be global long-term memory across unrelated sessions. That’s more Honcho / session_search territory.
+    
+    So: survives restarts/resumes, scoped to the session, retained until the session/DB is deleted or pruned.
+    [reply to kohai_ut msg=1499839628566597833]
+
+[2026-05-09T06:01:38.745000+00:00] nick_56269 (id=1502551101910679712)
+    I stopped seeing it. I sent your messages to the agent to fix himself. And so far, I don't see the messages
+
+[2026-05-10T03:59:06.642000+00:00] w0lfgang88 (id=1502882652821127249)
+    [attachment] star-history-202659.png https://cdn.discordapp.com/attachments/1491081146266681414/1502882652439576707/star-history-202659.png?ex=6a01fcca&is=6a00ab4a&hm=c18718bfe2a38eedbcfb16ab4da47c89f8d5b6a1587fa29525abaf49ac3f4ee4&
+
+[2026-05-10T04:10:19.210000+00:00] fleety13 (id=1502885473775915099)
+    The project has earned the stars and deserves more.  Lots of value delivered!
+    
+    One thing I had to come to terms with early was trying to tune LCM using models with 1M context window as many people will be now.  
+    It basically took a fair bit of learning with my agent how the puzzle fits together, which knobs and levers do to effect token burn, recall accuracy etc. 
+     I appreciate what you're developing even more as a result of the reading and reasoning i invested.
+    
+    New comers to LCM that are less patient or attentive could benefit from some guidance, a calculator or settings table to get them close to their desired outcome relative to the model size they are running.
+    [reply to w0lfgang88 msg=1502882652821127249]
+
+[2026-05-10T05:42:05.472000+00:00] w0lfgang88 (id=1502908568712642560)
+    https://x.com/SteveSchoettler/status/2053337449024434426?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2053337449024434426?s=20
+
+[2026-05-10T08:22:54.922000+00:00] _voscko_ (id=1502949041439506492)
+    Really appreciate this. We listened.
+    
+    As of v0.10.1, there’s now a large-context tuning FAQ in the README specifically for this problem: how to reason about LCM with very large model windows, including 1M-token models. It explains the trigger math, what the main knobs actually do, and gives starting profiles for cost-sensitive, balanced, and maximum-active-context setups.
+    
+    That is the first pass at the “settings table / guidance” idea you described. A calculator may still make sense later, but the immediate goal was to make the puzzle less invisible for new users.
+    
+    Since v0.9.0, the main changes are:
+    
+    - safer restart/rebind handling, so replayed active context is less likely to duplicate or lose history
+    - better handling for structured and multimodal messages
+    - message ignore patterns and status visibility improvements
+    - more reliable recall/search behavior, including recency preservation in LIKE fallback grep
+    - latest-user-objective preservation during compaction
+    - oversized payload externalization during ingest, so huge tool outputs/media-like payloads do not wreck the store or prompt path
+    - stale short restart snapshots now fail closed instead of guessing
+    - deferred compaction now has a critical-pressure escape path
+    - unsafe assistant content is cleaned before active prompt assembly, while raw history stays lossless
+    - CI and resource-hygiene coverage got stricter, including Python 3.14 and low file descriptor runs
+    
+    Short version: the project has moved a lot since 0.9.0, and your exact pain point around 1M-context tuning is now documented instead of being something every new user has to reverse-engineer by suffering through it.
+    [reply to fleety13 msg=1502885473775915099]
+

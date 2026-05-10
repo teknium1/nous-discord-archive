@@ -1,0 +1,9 @@
+# Thread 'CONTAK Browser Skills for AI Agents' in forum #community-projects-showcase
+# thread_id=1501724291824222248 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:18.436330+00:00
+
+[2026-05-06T23:16:11.859000+00:00] mrtrenchtrucker (id=1501724291824222248)
+    https://github.com/MrTrenchTrucker/contak-browser-skills
+    [attachment] CONTAK_Web_Browsing_SOP..png https://cdn.discordapp.com/attachments/1501724291824222248/1501724292163965039/CONTAK_Web_Browsing_SOP..png?ex=6a01ba7b&is=6a0068fb&hm=01020029c0fb09e4cd1a9d3104cce1b0861d56e2e056a52b6a96a5ea052e09ea&
+    [embed] GitHub - MrTrenchTrucker/contak-browser-skills: Drop-in browser ski... https://github.com/MrTrenchTrucker/contak-browser-skills
+

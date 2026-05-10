@@ -1,0 +1,74 @@
+# Thread 'Frank.eth Contribution' in forum #community-projects-showcase
+# thread_id=1490701382406377532 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:39.787991+00:00
+
+[2026-04-06T13:15:05.458000+00:00] mc35729 (id=1490701382406377532)
+    hey, just opened a PR for a new optional skill 
+    Thesis-engine 🧠
+    
+    it turns Hermes into a self-correcting market research analyst. pulls live CoinGecko data, generates institutional-style reports, and learns from its mistakes  you tell it which calls were right or wrong and it adjusts confidence dynamically. even runs bias self-diagnosis
+    
+    adaptive confidence scoring (6-factor, adjusts per category)
+    pre-flight risk checks (CLEAR → DANGER scale)
+    self-critique in every report
+    zero dependencies, stdlib-only python
+    PR: https://github.com/NousResearch/hermes-agent/pull/5523
+    
+    feedback welcome.
+    [embed] feat(skills): add crypto-thesis-engine research skill by 0xFrank-et... https://github.com/NousResearch/hermes-agent/pull/5523
+
+[2026-04-08T21:44:14.228000+00:00] mc35729 (id=1491554288965521600)
+    Bug Fix PR #6213:
+    
+    Problem: When the user says "switch to GPT-5.4" in native language, Hermes edits the config.yaml and says "all set!" but the active session remains in the old model. This is because the config file edit doesn't trigger a runtime model swap; only the /model command does.
+    
+    Solution: I added MODEL_SWITCH_GUIDANCE to the system prompt. The agent now:
+    
+    Redirects the user to the /model command
+    Instead of saying "all set" after config editing, it explicitly states that the change will only affect future sessions
+    Clarifies the distinction between the active session and the default config
+    PR: https://github.com/NousResearch/hermes-agent/pull/6297                                                                                 Issue: 
+    https://github.com/NousResearch/hermes-agent/issues/6213
+    [embed] fix: prevent false-success reporting on model switch via config edi... https://github.com/NousResearch/hermes-agent/pull/6297
+    [embed] [Bug]: model-switch requests can be reported as complete before the... https://github.com/NousResearch/hermes-agent/issues/6213
+
+[2026-04-10T21:25:27.622000+00:00] mc35729 (id=1492274339368796331)
+    Bug Fix PR #7358: 
+    
+    Problem:When two messages hit the gateway at the same time, `os.environ` values like `HERMES_SESSION_THREAD_ID` get overwritten by each other. Result: notifications go to the wrong thread because `os.environ` is process-global and shared across all async tasks.
+    
+    Solution: Replaced `os.environ` with Python's `contextvars.ContextVar`. Each async task now gets its own isolated copy — no more cross-task contamination. Added `gateway/session_context.py` for context var definitions and updated all tools that were reading from `os.environ`.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/7391
+    Issue: https://github.com/NousResearch/hermes-agent/issues/7358
+    [embed] fix(gateway): replace os.environ session state with contextvars to ... https://github.com/NousResearch/hermes-agent/pull/7391
+    [embed] Bug: Concurrent gateway messages cause cross-thread misrouting of b... https://github.com/NousResearch/hermes-agent/issues/7358
+
+[2026-04-10T21:33:36.117000+00:00] mc35729 (id=1492276388265463808)
+    Bug Fix PR #7390: SKILL.md files silently truncated at 2000 chars**
+    
+    Problem: Skills with frontmatter longer than 2000 characters were silently broken. The `[:2000]` slice in `agent/prompt_builder.py` was cutting off the `---` closing delimiter, causing metadata to return empty. The agent would then never select that skill with no error message whatsoever.
+    
+    Solution: Removed the `[:2000]` slice from two places in `prompt_builder.py`. One file, 4 lines changed clean and minimal.
+    
+    PR:https://github.com/NousResearch/hermes-agent/pull/7394
+    Issue: https://github.com/NousResearch/hermes-agent/issues/7390
+    [embed] fix(prompt_builder): remove 2000-char slice that silently truncated... https://github.com/NousResearch/hermes-agent/pull/7394
+    [embed] [Bug]: `prompt_builder.py` silently truncates `SKILL.md` to first 2... https://github.com/NousResearch/hermes-agent/issues/7390
+
+[2026-04-10T21:34:45.102000+00:00] mc35729 (id=1492276677609525452)
+    Frank.eth Contribution( Hermes Agent Issue Bug Fixes)
+
+[2026-04-10T21:35:57.778000+00:00] mc35729 (id=1492276982434496653)
+    Frank.eth Contribution
+
+[2026-04-11T20:04:31.126000+00:00] mc35729 (id=1492616357613666574)
+    Bug Fix PR #7916:
+    
+    Problem: Even if a specific model field was defined in `custom_providers`, this value was not being passed to the runtime. When the user ran the `hermes chat --model my-provider` command via the CLI, the provider name was sent to the API instead of the actual model name (e.g., "qwen3.6-plus"), resulting in a "400 Model Not Exist" error.
+    
+    Solution: Logic was added to `runtime_provider.py` to capture the model information of custom providers and include it in the runtime dictionary. Then, `cli.py` was updated to ensure that this model information from the runtime is correctly propagated to the current session.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/7916
+    [embed] fix(custom-providers): propagate model field from config so API rec... https://github.com/NousResearch/hermes-agent/pull/7916
+

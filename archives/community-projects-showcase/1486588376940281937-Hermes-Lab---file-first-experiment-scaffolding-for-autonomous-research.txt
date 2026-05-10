@@ -1,0 +1,56 @@
+# Thread 'Hermes Lab - file-first experiment scaffolding for autonomous research' in forum #community-projects-showcase
+# thread_id=1486588376940281937 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:09.789902+00:00
+
+[2026-03-26T04:51:28.539000+00:00] ereid7 (id=1486588376940281937)
+    Finally cleaned this up for public release. hermes-lab is the bookkeeper for running experiments autonomously. you give it a search space and a way to evaluate results, it handles scheduling, tracking, and suggesting what to try next. inspired by the autoresearch wave (karpathy, sakana ai scientist, AIDE) but generic -- works for ml training, hyperparameter sweeps, code mutation, whatever.
+    
+    how i use it: hermes-agent runs experiments all day in the background. i check in from telegram to see progress, what improved, and queue up draft ideas. come back later to a summary of everything tried.
+    
+    4 execution modes:
+    - cron -- autonomous background runs on a schedule
+    - burst -- rapid back-to-back iterations
+    - guided -- pauses for approval each step
+    - swarm -- multiple strategies rotate sharing a blackboard
+    
+    other highlights:
+    - file-first, no database or server
+    - 6 search strategies: random, perturb, bayesian, evolution, tree search (AIDE-inspired), llm
+    - multi-fidelity: cheap proxy runs first, promote winners to expensive validation
+    - dispatch protocol for remote workers/cloud GPUs
+    - agent-agnostic: best with hermes-agent, works with any agent harness
+    
+    working example you can run in 2 minutes with zero api keys - clone and try labctl burst.
+    
+    https://github.com/amenti-labs/hermes-lab
+    
+    happy to answer questions.
+    [embed] GitHub - amenti-labs/hermes-lab: File-first autonomous experiment s... https://github.com/amenti-labs/hermes-lab
+
+[2026-03-26T05:12:44.607000+00:00] willard0117 (id=1486593729157398669)
+    What kinds of experiments has it been put to work on so far?
+    
+    I am considering using it for content idea generation for marketing. Maybe have it research redit forums to see what's trending relevent to our customers and use that to create ideas for content.
+    
+    Or is the kind of experiments this is intended for.... not really going to work for something like that?
+
+[2026-03-26T05:29:48.068000+00:00] ereid7 (id=1486598021864095864)
+    I've been using to run really small ml experiments locally, like small model grokking, logit sampling methods, trying to write super small models to do very small tasks. I do think it could be extended to content marketing, but I think it may need to be designed a bit differently
+    
+    It works best with experiments that you can evaluate a result within a small enough time window. I think marketing often takes a long time to get feedback or a/b test, but it's worth a shot!
+
+[2026-03-26T05:31:19.453000+00:00] ereid7 (id=1486598405160439828)
+    Or, it could be used for generic resarch tasks where you want it to continue iterating on a specific question or niche
+
+[2026-03-26T05:31:56.613000+00:00] ereid7 (id=1486598561020776608)
+    I wanted it to be as flexible as possible. It's sort of like a configurable iteration pipeline. 'experiments' could just be any task that you want the agent to work on in the background and have it's progress be tracked
+
+[2026-03-26T06:03:29.649000+00:00] willard0117 (id=1486606500989501482)
+    So would it be good for tasks like auto researching the names and companies for anyone I am meeting with that day to ensure I am prepared before calls?
+
+[2026-03-26T12:54:58.414000+00:00] ereid7 (id=1486710053175038072)
+    For that, I don't think you would need this repo - you could probably setup hermes with a cron job that does this every day manually ' set me up a cron that researches names and companies of everyone I am meeting with today'
+
+[2026-03-26T13:12:29.240000+00:00] ereid7 (id=1486714460658864289)
+    Now, it could be used for a longer run 'mission' related to this. ex: 'I need you to setup a research task to continously iterate on different forums and see what is trending. Here is a list of 50 topics. iterate every 30 minutes and document all findings'
+

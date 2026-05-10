@@ -1,0 +1,148 @@
+# Thread 'Hermes-Aegis' in forum #community-projects-showcase
+# thread_id=1483367766848176219 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:53.217137+00:00
+
+[2026-03-17T07:33:55.257000+00:00] tranquilflow (id=1483367766848176219)
+    Security hardening layer for Hermes Agent — Uses a transparent MITM proxy that prevents secret leakage, dangerous command execution, unauthorized data exfiltration and more.  
+    
+    Originally built for the hackathon, but I will be continuing to use Hermes so I'll be keeping it updated and working on fixes as they pop up for me. Would also love to see anything the team thinks is useful integrated into the main hermes-agent project 🙂
+    
+    This project aims to address the one thing really holding me back from using Hermes - the security consideration. While it might be fine to run it on a proper hosted setup somewhere, I just wanted to keep using my personal laptop as its the most powerful device I have right now, I'm comfy on it, all my stuff is here etc etc. Buuuut all my stuff being on there is also a concern. And I can't even really think about getting this onto my work device - even though I'm Hermes-pilling my dev team day by day. So I asked myself what it would take to make someone fully comfortable to install Hermes on a work device. This project is at least a step in that direction, although I will be the first to admit that this probably still has gaps that are missed. Any feedback is appreciated!
+    
+    https://github.com/Tranquil-Flow/hermes-aegis
+    https://x.com/FlowTranquil/status/2032897035779842425
+    
+    --*Security Features*--
+    **Blocks secret exfiltration** — scans all outbound HTTP for API keys, tokens, credentials
+    **Injects API keys** — secrets stay in your encrypted vault, never in agent memory
+    **Detects dangerous commands** — 35 risky patterns (shell injection, destructive ops, privesc, SSH exfiltration)
+    **Blocks dangerous commands in gateway mode** — Patch 5 enforces blocking when AEGIS_ACTIVE=1
+    **Blocks SSH/non-HTTP exfiltration** — Docker network isolation + SSH/SCP/netcat command detection
+    **Reactive audit agents** — automated investigation and circuit breaker response to security events
+    **Scheduled reports** — periodic audit digest generation via hermes cron system
+    **Graceful session resume **— shows session ID and resume command on exit
+    **Rate-limits bursts** — detects suspicious data tunneling patterns; escalates to blocking on repeated anomalies
+    **Restricts domains **— optional allowlist for outbound connections
+    **Audit trail **— tamper-proof hash-chained log of all security events
+    **Tirith content scanning **— proxy-level inspection of LLM responses for homograph URLs, code injection, terminal escapes
+    **Approval system** — pluggable backends (block/log_only/webhook) with persistent pattern cache and TTL rules
+    **Container isolation **— Docker mode with AEGIS_CONTAINER_ISOLATED=1 and container handshake protocol
+    
+    --*v0.1.6*--
+    Want to look at seeing if there is a way to make the whole automated audit report/reactive agent system tap into the self learning aspecto f Hermes. Some kind of system in which agents would be able to suggest tweaks to what classification each different tool/request triggers. Maybe even just tweaks it self? Also will be looking into the default settings for the audit system.
+    
+    Will also include all the bug fixes made since the v0.1.5 release that are on main currently.
+    
+    --*Notes for anyone trying this*--
+    For me right now it works great, but this is after debugging a bit. I've tried to ensure that wherever possible all existing integrations should work, but there is a lot that is untested. For running with backend:docker, and just needing the Discord integration you're fine - outside of that... uncharted territory.
+    
+    If you want to easily be able to fall back to using the normal hermes-agent, don't delete your credentials file when prompted in the install process (this is normally fine to do as this happens after they have been encrypted into your vault, and you can unencrypt them afterwards as needed).
+    
+    If you do try this out and get any issues just @ me! Ask Hermes for an incident report, or try provide as much info as possible so I can effectively debug and I'll try get it fixed as soon as possible.
+    [attachment] Screenshot_2026-03-14_at_10.26.56_PM.png https://cdn.discordapp.com/attachments/1483367766848176219/1483367767171272724/Screenshot_2026-03-14_at_10.26.56_PM.png?ex=6a022f23&is=6a00dda3&hm=0628d19f07c25b138ed673ff8f9883a0ffb74faabd5c276d5675f5ef81fe8f7c&
+    [embed] GitHub - Tranquil-Flow/hermes-aegis: Security extension for Hermes-... https://github.com/Tranquil-Flow/hermes-aegis
+    [embed]  https://twitter.com/FlowTranquil/status/2032897035779842425
+
+[2026-03-17T11:17:47.706000+00:00] evangineer (id=1483424106623008879)
+    Funny, I've just deployed Pipelock for use with a couple of hardened OpenClaw containers I've deployed recently.
+    
+    It follows exactly the same basic architecture of transparent MITM proxy to protect against prompt injection and data exfiltration.
+    
+    So I'm interested as I will be deploying Hermes Agent in the near future.
+    
+    Look forward to delving into Hermes-Aegis.
+
+[2026-03-17T11:43:50.262000+00:00] tranquilflow (id=1483430660457627782)
+    Oh awesome! I'd love to likewise take a look at your code, perhaps there is something that can be integrated into Hermes-Aegis? Also working on a patch rn for the hermes-agent v0.3.0 update
+    [reply to evangineer msg=1483424106623008879]
+
+[2026-03-17T11:46:08.521000+00:00] evangineer (id=1483431240357904558)
+    Not my code and the codebase is in Go.  
+    
+    That's said, I'm sure there's a lot to be gained from reviewing it:
+    https://github.com/luckyPipewrench/pipelock
+    [embed] GitHub - luckyPipewrench/pipelock: Firewall for AI agents. DLP scan... https://github.com/luckyPipewrench/pipelock
+    [reply to tranquilflow msg=1483430660457627782]
+
+[2026-03-17T11:47:53.080000+00:00] tranquilflow (id=1483431678910136445)
+    Appreciate it a lot! Will look into this, I'm sure there is something valuable in it for sure.
+    [reply to evangineer msg=1483431240357904558]
+
+[2026-03-17T12:55:47.740000+00:00] tranquilflow (id=1483448769273135165)
+    https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.1.6
+    now compatible with v0.3.0
+    [embed] Release v0.1.6 — Hermes v0.3.0 Compatibility · Tranquil-Flow/her... https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.1.6
+
+[2026-03-26T08:59:07.444000+00:00] tranquilflow (id=1486650699705090118)
+    https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.1.7
+     
+    **hermes-aegis v0.1.7** is out — fixes HTTPS everywhere through the aegis proxy.
+    
+    **New Stuff:**
+    - Browser HTTPS now works (Chromium ignores system CAs — fixed via `AGENT_BROWSER_IGNORE_HTTPS_ERRORS` env var for MCP servers + macOS Keychain trust on install)
+    - Docker container HTTPS — mitmproxy CA auto-mounted and trusted at container startup
+    - Honcho self-hosted sidecar with graceful fallback
+    - OAuth token bridging from hermes auth.json into proxy
+    - Proxy binds 0.0.0.0 for Docker reachability
+    - Ctrl+C no longer tracebacks during memory flush
+    
+    **Upgrade:** `pip install -e .` then `hermes-aegis install`
+    [embed] Release v0.1.7 — Browser HTTPS, Docker certs, Honcho sidecar · T... https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.1.7
+
+[2026-04-10T06:28:19.330000+00:00] tranquilflow (id=1492048567148220509)
+    Still working on this, ensuring it stays up to date with Hermes-Agent. 
+    
+    https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.1.8
+    
+    https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.1.9
+    
+    Planning to do a full audit when I have spare tokens to flesh out and hopefully catch situations that Aegis may have issues that I haven't personally tested (such as different providers, MCPs etc.). Also looking to make it simpler to update both Hermes Agent + Hermes Aegis cleanly in one go.
+    [embed] Release hermes-aegis v0.1.8 · Tranquil-Flow/hermes-aegis https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.1.8
+    [embed] Release hermes-aegis v0.1.9 · Tranquil-Flow/hermes-aegis https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.1.9
+
+[2026-04-30T03:04:56.802000+00:00] tranquilflow (id=1499245143348478064)
+    **Hermes-Aegis v0.2.0 is out** 
+    
+    https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.2.0
+    
+    This release rolls up everything added since **v0.1.9** and brings Aegis up to date with the latest Hermes Agent line.
+    
+    **Headline changes**
+    - **Hermes v0.11 compatibility:** updated patch targets and runtime glue for the current Hermes provider routing, Docker, command approval, gateway, and sandbox behavior.
+    - **Simpler launch:** `hermes-aegis` now starts protected Hermes directly. `hermes-aegis run` still works, but is no longer required.
+    - **One-command updates:** `hermes update` now calls `hermes-aegis update`, so Hermes and Aegis can update together and Aegis patches are re-applied automatically.
+    - **Hybrid plugin package:** added `plugins/hermes-aegis/` with plugin metadata, hook entrypoints, state helpers, dashboard API scaffolding, and plugin-focused tests for the newer Hermes plugin architecture.
+    - **macOS gateway sandbox support:** added sandbox profile generation, `hermes-aegis test-sandbox`, and patches for safer local gateway sessions while preserving the local gateway backend.
+    - **Hybrid migration helpers:** added migration utilities and tests for moving existing installs toward the hybrid plugin layout.
+    
+    **Proxy/provider fixes**
+    - Fixed OAuth/provider auth refresh propagation when starting the proxy through `hermes-aegis`, so Hermes-minted credentials can refresh correctly.
+    - Refreshed provider allowlists for current Hermes endpoints, including Nous/Z.AI related hosts.
+    - Added TCP passthrough / proxy-bypass fixes for local or streaming services that should not be MITM-wrapped.
+    - Unblocked web tools behind the Aegis proxy by fixing TLS/allowlist coverage.
+    
+    **Security and audit improvements**
+    - Docker operations are now logged as dangerous-command activity in the audit trail, making container-risk behavior visible to reports and reactive rules.
+    - Updated Docker/network isolation tests so they do not collide with live Aegis networks.
+    - Added more regression coverage around sandboxing, migration, provider injection, redaction, and update integration.
+    
+    **Docs/release cleanup**
+    - Version metadata is now aligned at `0.2.0` across the package and plugin.
+    - README compatibility guidance was refreshed from old Hermes v0.3-era wording to current Hermes v0.11 guidance.
+    - Patch documentation now reflects the new update integration and current patch count.
+    
+    **Verified release state**
+    - Full test suite: `919+ passed, 8 skipped` during release prep.
+    - Release tag: `v0.2.0`
+    
+    **Update / run**
+    ```bash
+    hermes-aegis update
+    hermes-aegis
+    ```
+    
+    This release is mainly about making Aegis feel seamless again: update once, launch simply, keep the shield wrapped around Hermes, and stay compatible with the fast-moving upstream codebase.
+    
+    v0.3.0 is being planned out and will focus on improving the security further.
+    [embed] Release Hermes-Aegis v0.2.0 · Tranquil-Flow/hermes-aegis https://github.com/Tranquil-Flow/hermes-aegis/releases/tag/v0.2.0
+

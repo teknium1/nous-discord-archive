@@ -1,0 +1,88 @@
+# Thread 'This is what a native Hermes app on Mac should look like' in forum #community-projects-showcase
+# thread_id=1491873594404241408 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:20.372374+00:00
+
+[2026-04-09T18:53:02.577000+00:00] itsdodo21 (id=1491873594404241408)
+    And now you can have it
+    [attachment] Screenshot_20260409_202730_GitHub.jpg https://cdn.discordapp.com/attachments/1491873594404241408/1491873594614218952/Screenshot_20260409_202730_GitHub.jpg?ex=6a02258e&is=6a00d40e&hm=036479b75af4970ac9b9625386d760644275929b74507471f22f0f74adbdbc68&
+
+[2026-04-09T18:54:08.743000+00:00] itsdodo21 (id=1491873871924826383)
+    Built this because I wanted Hermes on Mac without any extra layer in between.
+    
+    It connects to your host over plain /usr/bin/ssh — same binary as Terminal. No gateway API, no local file mirror, no custom messaging layer. Your host stays the only source of truth. If ssh your-host already works without prompts, the app works too.
+    
+    You get a native SwiftUI window with a real embedded terminal, session browsing straight from ~/.hermes/state.db, and in-app editing for USER.md, MEMORY.md, SOUL.md. Works with any host — VPS, Pi, another Mac, localhost.
+    
+    Is it safe to install? Source is open and buildable with one script. The release zip has a SHA-256 you can verify. The only outbound connection is the SSH host you configure — nettop or Little Snitch will confirm that. Not notarized yet, so macOS will complain on first launch: right-click → Open gets past it.
+    
+    A lot of Hermes UIs have shown up lately and most of them want to rebuild the session logic client-side or wrap the agent in their own messaging layer. That's a lot of moving parts for something that already works great at the CLI. This doesn't do any of that — the terminal is the interface, the app just makes it feel native on macOS.
+    
+    Not an official release, just a side project. Though I'll admit it looks suspiciously first-party. Purely coincidental.
+    
+    → https://github.com/dodo-reach/hermes-desktop
+    Apple Silicon · macOS 14+ · v0.2.0
+    [embed] GitHub - dodo-reach/hermes-desktop https://github.com/dodo-reach/hermes-desktop
+
+[2026-04-09T21:46:29.415000+00:00] mayuronx (id=1491917243846627418)
+    Nice! I tried to use Hermes Desktop here but it didn't work remote 
+    
+    https://discord.com/channels/1053877538025386074/1489459150235893863/1491301970600788099
+    
+    will give this a go
+
+[2026-04-09T22:55:16.356000+00:00] itsdodo21 (id=1491934553491902586)
+    Let me know how it goes! I'm already adding more features so might be worth to take another look in the next days!
+    [reply to mayuronx msg=1491917243846627418]
+
+[2026-04-09T23:03:36.487000+00:00] mayuronx (id=1491936651193356408)
+    I'm looking at a different approach to file access - see https://discord.com/channels/1053877538025386074/1491933536423510117
+    
+    Yours is superior, but I think looking at GH can be an option too.. maybe we can merge or work together.. or maybe u can add support to read config from gh instead of current method?
+
+[2026-04-09T23:09:24.960000+00:00] mayuronx (id=1491938112794918914)
+    Oh, btw.. yours is Mac native.. but i'm on my linux machine atm.. so i'm seeing about building a linux compatible version
+    
+    i will try yours later when im back on my mac later
+    
+    https://github.com/mayurjobanputra/Hermes-Desktop-Linux
+    
+    I would love if yours could be linux compatible then I wouldn't have to build
+
+[2026-04-09T23:12:31.068000+00:00] itsdodo21 (id=1491938893388320881)
+    Will definitely work to make this as accessible as i can!
+    [reply to mayuronx msg=1491938112794918914]
+
+[2026-04-09T23:17:18.059000+00:00] mayuronx (id=1491940097115816056)
+    Would it work on linux with some mods? or its simply not possible?
+    [reply to itsdodo21 msg=1491938893388320881]
+
+[2026-04-09T23:23:13.682000+00:00] itsdodo21 (id=1491941588706918531)
+    Of course! It's not a night and day thing that i can ship tomorrow, but if i see some appreciation I will definitely put some work into it. I would probably put that in a new repo anyway
+    [reply to mayuronx msg=1491940097115816056]
+
+[2026-04-09T23:26:18.881000+00:00] mayuronx (id=1491942365487828993)
+    OK. noted. I started a repo. Want me to add you? I'm using kiro.dev for pair programming it
+    
+    https://github.com/mayurjobanputra/Hermes-Desktop-Linux
+    [embed] mayurjobanputra/Hermes-Desktop-Linux https://github.com/mayurjobanputra/Hermes-Desktop-Linux
+
+[2026-04-10T08:38:32.708000+00:00] itsdodo21 (id=1492081338830950422)
+    Hermes Desktop v0.3.0 is live.
+    
+    The goal is still the same: make Hermes feel natural on Mac without drifting away from how it already works.
+    
+    So the app continues to stay pretty close to the metal:
+    
+    plain /usr/bin/ssh
+    no gateway API
+    no local mirror
+    no extra protocol layer
+    New in this release:
+    
+    Usage view from ~/.hermes/state.db
+    Skills browser for remote SKILL.md files
+    much better terminal text selection/copying
+    https://github.com/dodo-reach/hermes-desktop/releases/tag/v0.3.0
+    [attachment] IMG-20260410-WA0004.jpg https://cdn.discordapp.com/attachments/1491873594404241408/1492081338990198834/IMG-20260410-WA0004.jpg?ex=6a019588&is=6a004408&hm=9989d9b9365ad8f45994ba338a8df00f3dbb5eba4ace41b4e0ce31be4a0e9a0b&
+    [embed] Release Hermes Desktop v0.3.0 · dodo-reach/hermes-desktop https://github.com/dodo-reach/hermes-desktop/releases/tag/v0.3.0
+

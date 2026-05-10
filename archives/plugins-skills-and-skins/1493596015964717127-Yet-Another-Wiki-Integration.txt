@@ -1,0 +1,342 @@
+# Thread 'Yet Another Wiki Integration' in forum #plugins-skills-and-skins
+# thread_id=1493596015964717127 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:31.883156+00:00
+
+[2026-04-14T12:57:19.878000+00:00] labhund (id=1493596015964717127)
+    Comprehensive skill package and MCP server for dedicated research workflows! https://github.com/Labhund/lacuna-wiki
+    
+    Turn your hermes agent into a dedicated research assistant and grow your personal knowledge base!
+    [embed] GitHub - Labhund/lacuna-wiki: Give your agent a knowledge graph tha... https://github.com/Labhund/lacuna-wiki
+
+[2026-04-14T13:01:23.698000+00:00] labhund (id=1493597038619656282)
+    The structured multi step skills take out the guess work for your hermes agent and keep it on track through dense research papers!
+
+[2026-04-14T13:01:54.034000+00:00] labhund (id=1493597165858062427)
+    Then query your knowledge garden via hermes with the mcp tool to get some real insights into your artefacts!
+
+[2026-04-14T13:02:10.158000+00:00] labhund (id=1493597233487024232)
+    Youtube videos, Scientific papers, All handled.
+
+[2026-04-14T15:29:27.494000+00:00] undifined. (id=1493634299960889535)
+    this is the big update already ? or do you have a forward plan
+
+[2026-04-14T22:24:06.939000+00:00] labhund (id=1493738651916439564)
+    This is it! I might add more skills like an active synthesis section, but this package full-fills the dream I had when starting on the wiki project. The real magic is in the skills not the code!
+    
+    I reduced the code to be as minimal and unobtrusive as possible. No hidden LLM calls, just an ephemeral watcher that  helps your agent out when it comes to write by storing all the metadata.
+    [reply to undifined. msg=1493634299960889535]
+
+[2026-04-14T22:24:24.789000+00:00] labhund (id=1493738726784892988)
+    Markdown is the new python!
+
+[2026-04-15T06:15:31.977000+00:00] nasumone (id=1493857287964459080)
+    Pdf extraction?
+
+[2026-04-15T08:48:49.609000+00:00] chfarhan_ (id=1493895865629282456)
+    how this repo compare to graphify
+
+[2026-04-15T23:23:44.291000+00:00] labhund (id=1494116044283969656)
+    PDF extraction handled on source registration step, same as youtube video, web url etc.
+    [reply to nasumone msg=1493857287964459080]
+
+[2026-04-15T23:35:57.469000+00:00] labhund (id=1494119119455391925)
+    Purpose
+    
+    lacuna-wiki is a compounding research knowledge substrate — a personal wiki that accumulates structured claims from academic papers, YouTube videos and Podcasts. grounds LLM agents in your specific compiled knowledge, and resists regression toward consensus synthesis.
+    
+    graphify is a codebase/collection explorer — it transforms a folder of files into a queryable, interactive knowledge graph for one-shot exploration and discovery, producing graph.html, graph.json, and GRAPH_REPORT.md.
+    [reply to chfarhan_ msg=1493895865629282456]
+
+[2026-04-15T23:44:23.418000+00:00] labhund (id=1494121241559306431)
+    Where They Overlap
+    
+    Both address the "too much content, not enough structure" problem. Both use embeddings, both track relationships between concepts. If you were building a tool to explore an unfamiliar codebase quickly, graphify is the right shape. If you're building a research instrument that should get smarter every time you read a paper, lacuna is the right shape.
+    The adversary skill (claims verification, supersession, fidelity checking) and the synthesis tool (stitching together ideas to build up a comprehensive understadning and review of a topic) is unique to lacuna and has no equivalent in graphify. That's the core of what makes lacuna a research tool rather than an exploration tool.
+    [reply to chfarhan_ msg=1493895865629282456]
+
+[2026-04-15T23:45:50.382000+00:00] labhund (id=1494121606312755252)
+    Graphify is agent-first. Lacuna is researcher-first with an agent interface.
+    [reply to chfarhan_ msg=1493895865629282456]
+
+[2026-04-16T05:16:04.753000+00:00] nasumone (id=1494204713808298084)
+    how does it extract?
+    [reply to labhund msg=1494116044283969656]
+
+[2026-04-16T05:19:11.857000+00:00] labhund (id=1494205498579484744)
+    Via a highly structured skill package with constant cross referencing of the existing wiki via the in-built MCP tool. If you are interested I reccomend you read the skill at: https://github.com/Labhund/lacuna-wiki/blob/master/src/lacuna_wiki/skills/ingest.md
+    
+    In brief: It has several phases and forces your agent to commit on a direction before writing anything. This solidifies the context window and enables your agent to leverage their CoT and Atttention computations strategically for each idea. This prevents the failure mode I have seen of 'bland' summary documents that can so easily come from AI generated text.
+    [embed] lacuna-wiki/src/lacuna_wiki/skills/ingest.md at master · Labhund/l... https://github.com/Labhund/lacuna-wiki/blob/master/src/lacuna_wiki/skills/ingest.md
+    [reply to nasumone msg=1494204713808298084]
+
+[2026-04-16T05:21:01.089000+00:00] labhund (id=1494205956731699200)
+    My obsidian after ingesting 250/600 of my backlog of scientific papers for my PhD project. The extraction can run fully automated in a python/bash loop and each additional document contributes to the prior ones. The goal is a synthesis across sources not one page per source.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493596015964717127/1494205956488171600/image.png?ex=6a020ffd&is=6a00be7d&hm=2ae15c0c0699e40c3fbfe8591d24d367683479ebd98320a2154ed1dc446e5034&
+
+[2026-04-16T05:22:06.205000+00:00] labhund (id=1494206229847871660)
+    The MCP service allows your agent to intelligently query such a dense corpus via graph traversal pre-seeded by vector cosine similarity generated during the ingestion and syncing phases of the workflow
+
+[2026-04-16T05:22:38.008000+00:00] nasumone (id=1494206363239317656)
+    i mean does it use VLM or ghostscript , qpdf or how does it extract from pdf?
+
+[2026-04-16T05:22:42.849000+00:00] nasumone (id=1494206383543816263)
+    i want to run a wiki from pdf books
+
+[2026-04-16T05:22:59.925000+00:00] labhund (id=1494206455165882458)
+    I ahve it set up with lite parse https://github.com/run-llama/liteparse
+    [embed] GitHub - run-llama/liteparse: A fast, helpful, and open-source docu... https://github.com/run-llama/liteparse
+
+[2026-04-16T05:23:31.523000+00:00] nasumone (id=1494206587697365104)
+    sick
+
+[2026-04-16T05:23:36.773000+00:00] nasumone (id=1494206609717596240)
+    might be the ticket i nede
+
+[2026-04-16T05:23:50.014000+00:00] nasumone (id=1494206665254506536)
+    i havent had luck with gpt5.4 or normal linux tools
+
+[2026-04-16T05:24:18.455000+00:00] nasumone (id=1494206784544444486)
+    i wrote my own pdfwiki which writes pug
+
+[2026-04-16T05:24:33.517000+00:00] labhund (id=1494206847719309444)
+    I found the skill even allows smaller local models (35B-A3B) to actually do a decent job, I'd still reccomend atleast Haiku intelligence tho
+
+[2026-04-16T05:24:34.529000+00:00] nasumone (id=1494206851963686913)
+    i think im just going to start using yours
+
+[2026-04-16T05:24:50.564000+00:00] nasumone (id=1494206919219347488)
+    im on a laptop, does liteparse need to run on a gpu?
+
+[2026-04-16T05:25:20.345000+00:00] labhund (id=1494207044130181180)
+    No I dont believe it does. Its a small CPU model I believe
+
+[2026-04-16T05:26:37.052000+00:00] nasumone (id=1494207365862658148)
+    for article writing does it use llm?
+
+[2026-04-16T05:26:59.923000+00:00] labhund (id=1494207461790584962)
+    It uses Hermes / Claude Code -- its a skill and mcp package
+
+[2026-04-16T05:27:06.255000+00:00] labhund (id=1494207488348786748)
+    Uses whatever LLM you set it to use there
+
+[2026-04-16T05:27:12.114000+00:00] nasumone (id=1494207512923082813)
+    alright
+
+[2026-04-16T05:27:20.720000+00:00] nasumone (id=1494207549019390042)
+    ok let me try it
+
+[2026-04-16T05:27:27.001000+00:00] nasumone (id=1494207575363813386)
+    i have 10k pdf books
+
+[2026-04-16T05:27:34.021000+00:00] labhund (id=1494207604807696385)
+    Hopefully it impresses!
+
+[2026-04-16T05:27:37.082000+00:00] nasumone (id=1494207617646727198)
+    im in the field of surgery
+
+[2026-04-16T05:27:53.894000+00:00] labhund (id=1494207688161103993)
+    Nice, my partner is almost a doctor
+
+[2026-04-16T05:28:03.333000+00:00] nasumone (id=1494207727751401553)
+    me and my wife are neurosurgeons
+
+[2026-04-16T05:28:03.337000+00:00] labhund (id=1494207727768047616)
+    I'm biochem (as you can probably tell from above)
+
+[2026-04-16T05:28:14.444000+00:00] nasumone (id=1494207774354313328)
+    i saw lab and i remembered my lab days
+
+[2026-04-16T05:28:33.421000+00:00] nasumone (id=1494207853949354006)
+    one of the problems we have in our field is its very visual
+
+[2026-04-16T05:28:42.239000+00:00] nasumone (id=1494207890934730772)
+    cadavers are limited for training
+
+[2026-04-16T05:28:48.535000+00:00] nasumone (id=1494207917342331063)
+    text is hard to understand
+
+[2026-04-16T05:29:38.542000+00:00] nasumone (id=1494208127086756022)
+    what i expect from it is to write article where the appropriate anatomical image can be linked to the matching statement
+
+[2026-04-16T05:30:08.356000+00:00] nasumone (id=1494208252135866428)
+    do you wanna push an update before i install?
+
+[2026-04-16T05:31:05.424000+00:00] nasumone (id=1494208491496149164)
+    i have 10x gpt5.4 accounts
+
+[2026-04-16T05:31:15.151000+00:00] labhund (id=1494208532294144090)
+    Hmm right, yes. It might not do that exactly yet. You could try asking hermes to edit the skill to save the page numbers as it ingests... I'll look into adding that as a feature, that will take some work and I'm unable to work more on it today.
+    [reply to nasumone msg=1494208127086756022]
+
+[2026-04-16T05:31:33.073000+00:00] labhund (id=1494208607464587365)
+    Like actually inserting the pictures in the right spot is a hard technical job
+
+[2026-04-16T05:31:33.743000+00:00] nasumone (id=1494208610274775070)
+    in the books, the images appear close to the statements
+
+[2026-04-16T05:31:41.757000+00:00] nasumone (id=1494208643887927417)
+    sometimes a picture is 2-3 pages away
+
+[2026-04-16T05:31:56.326000+00:00] nasumone (id=1494208704994869348)
+    where it says "blah blah blah Figure 45"
+
+[2026-04-16T05:32:26.855000+00:00] labhund (id=1494208833042518036)
+    Right that would make it easier with the figure refernce, thanks for that insight.
+
+[2026-04-16T05:32:29.796000+00:00] nasumone (id=1494208845377962046)
+    but if it says 'cerebellopontine angle' it should still find the image related to that word
+
+[2026-04-16T05:33:28.829000+00:00] nasumone (id=1494209092980445244)
+    or in chemistry if it says HER2 receptor , can it link to the appropriate wiki page?
+
+[2026-04-16T05:34:11.930000+00:00] labhund (id=1494209273759268926)
+    Yes it links to the pages onn ingest, and then there is a second skill called sweep which adds things it missed
+
+[2026-04-16T05:34:32.547000+00:00] nasumone (id=1494209360232972418)
+    ah ok, i have mine doing all that stuff, but pdf extraction sucks
+
+[2026-04-16T05:34:51.961000+00:00] nasumone (id=1494209441661452390)
+    you'd probably be better running such a project than me since my time is ultra limited becuase of surgeries
+
+[2026-04-16T05:35:12.398000+00:00] nasumone (id=1494209527380185098)
+    i only made my own implementation because there was nothing else at the time
+
+[2026-04-16T05:35:26.546000+00:00] nasumone (id=1494209586721456240)
+    doubt my work has any value
+
+[2026-04-16T05:35:36.425000+00:00] nasumone (id=1494209628156723361)
+    only 1 hour a day max can spend maintaining it
+
+[2026-04-16T05:36:04.723000+00:00] labhund (id=1494209746847137845)
+    That is so fair! I'll look into the best way of getting figures into the right spots. Maybe that is better served on the 'synthesis' skill.
+
+[2026-04-16T05:36:15.848000+00:00] labhund (id=1494209793508773909)
+    I'd say give it a go on one book, see if you like the output
+
+[2026-04-16T05:36:25.090000+00:00] labhund (id=1494209832272793673)
+    Takes no time at all to set up
+
+[2026-04-16T05:36:40.573000+00:00] nasumone (id=1494209897213067314)
+    i can use my gpt subs to make the changes but idk how to pass the gains to your project
+
+[2026-04-16T05:36:56.940000+00:00] nasumone (id=1494209965861113886)
+    you might be many versions ahead by the time i have something
+
+[2026-04-16T05:37:07.295000+00:00] labhund (id=1494210009293127772)
+    You can get hermes to make a PR, or issue request. It has the skill for that!
+
+[2026-04-16T05:37:23.550000+00:00] labhund (id=1494210077471539220)
+    Just give it the github link and it knows the technical details that you did!
+
+[2026-04-16T05:37:47.394000+00:00] nasumone (id=1494210177480654988)
+    is your wiki based on natural language like the original llm-wiki?
+
+[2026-04-16T05:37:53.837000+00:00] nasumone (id=1494210204504424509)
+    it should be easy in that case
+
+[2026-04-16T05:37:57.415000+00:00] labhund (id=1494210219511644310)
+    Natural language
+
+[2026-04-16T05:38:16.293000+00:00] nasumone (id=1494210298691846205)
+    ok i will also want to modularize it, i have my own being generated in pug
+
+[2026-04-16T05:38:24.129000+00:00] nasumone (id=1494210331558285424)
+    so i want to have a pug module, since maybe not everyone wants that
+
+[2026-04-16T05:39:10.958000+00:00] labhund (id=1494210527973478410)
+    It is very light weight, the philosophy is your files are just your files! The code just sits there to keep everything organised
+
+[2026-04-16T05:39:28.315000+00:00] nasumone (id=1494210600774013018)
+    did you look at surrealDB?
+
+[2026-04-16T05:40:10.808000+00:00] nasumone (id=1494210779002704085)
+    surrealdb is sick
+
+[2026-04-16T05:40:39.955000+00:00] nasumone (id=1494210901254082571)
+    i worked with hdf5 20 years ago when i was doing a bioinformatics project on high throghput protein crystallography
+
+[2026-04-16T05:41:14.235000+00:00] nasumone (id=1494211045034557551)
+    as much as i love the simplicify of text, i think these multi-format db's are necessary for large scale projects
+
+[2026-04-16T05:41:14.716000+00:00] labhund (id=1494211047052152945)
+    I'll look into it 🙂
+
+[2026-04-16T05:42:09.163000+00:00] nasumone (id=1494211275419553792)
+    its free and can run locally
+
+[2026-04-16T05:43:19.365000+00:00] nasumone (id=1494211569868083260)
+    heres a little demo with openclaw https://www.youtube.com/watch?v=hKMznua6Ed0
+    [embed] Building a SurrealDB Solution with OpenClaw for SurrealDB on OpenCl... https://www.youtube.com/watch?v=hKMznua6Ed0
+
+[2026-04-16T05:43:42.051000+00:00] nasumone (id=1494211665019797615)
+    when i search yt with just 'surrealdb' i dont see any agentic usage so thats why i posted this link
+
+[2026-04-16T05:44:17.889000+00:00] nasumone (id=1494211815335399435)
+    this guy is using it for stock trading, he has it read books on trading strategy
+
+[2026-04-16T05:51:17.036000+00:00] nasumone (id=1494213573365338142)
+    have you tried any vlm for pdf extraction?
+
+[2026-04-16T05:54:06.865000+00:00] nasumone (id=1494214285679919204)
+    i installed smol VLM just before i took a flight a day ago
+
+[2026-04-16T05:54:16.353000+00:00] nasumone (id=1494214325475479603)
+    will test today
+
+[2026-04-16T05:54:24.236000+00:00] nasumone (id=1494214358538911764)
+    it runs on like 2gb vram
+
+[2026-04-16T05:54:31.768000+00:00] nasumone (id=1494214390130409504)
+    gpt said its the best
+
+[2026-04-16T05:54:51.025000+00:00] nasumone (id=1494214470900121683)
+    i tried gpt5.4 for vlm ... constant API limits on the 20$ premium plan
+
+[2026-04-16T05:55:08.768000+00:00] nasumone (id=1494214545319919737)
+    gpt doesnt seem the way to go
+
+[2026-04-16T05:55:20.768000+00:00] nasumone (id=1494214595651309739)
+    herme's mimo cant do image text ->text
+
+[2026-04-16T05:56:18.061000+00:00] labhund (id=1494214835955695616)
+    I have not yet, It might be a good idea? Currently my objective was to solidify concepts across the corpus instead of reading each page individually, to see the discussion of each idea, not what each paper claims. I have to think more about how to incorporate images!
+    [reply to nasumone msg=1494213573365338142]
+
+[2026-04-16T05:59:06.364000+00:00] nasumone (id=1494215541869776927)
+    a couple of guys in the channel told me to try vlm and that its the future .. previously i was using ocr
+
+[2026-04-16T05:59:51.075000+00:00] nasumone (id=1494215729401303051)
+    i want to convert the pdf to json or pug and tokenize it so that knowledge integration is more reliable
+
+[2026-04-16T06:00:46.190000+00:00] nasumone (id=1494215960570237008)
+    with ocr it sucks ,, i imagine this is confusing the shit out of it
+    [attachment] s.png https://cdn.discordapp.com/attachments/1493596015964717127/1494215960041750568/s.png?ex=6a02194e&is=6a00c7ce&hm=7755122ed19f47a6cd0bafc6b3d71599f0aa31530c4925821c822ab423dc6746&
+
+[2026-04-16T06:02:31.611000+00:00] nasumone (id=1494216402737959042)
+    i can also have it improve itself if it can take screenshots of before/after and compare , so that i know that internal it understands that a title it a title,  that it understand the meaning of the position of things
+
+[2026-04-16T06:03:18.823000+00:00] nasumone (id=1494216600759308298)
+    when i read articles it generates it sort of gives the impression that it understand something, but the internal representation is so fucked up that i doubt it really did
+
+[2026-04-16T06:04:17.535000+00:00] nasumone (id=1494216847015542944)
+    i was hoping vlm was not necessary because this is new to me but normal tools are struggling with the pdf format
+
+[2026-04-16T06:04:42.550000+00:00] nasumone (id=1494216951936057525)
+    so today im going to try this, liteparse, and see which is best
+
+[2026-04-16T06:05:01.903000+00:00] nasumone (id=1494217033108426753)
+    to make things easier all pdfs are electronic format (no scanned)
+
+[2026-04-16T06:10:05.203000+00:00] labhund (id=1494218305240825976)
+    Yes you need to be very strict with LLM's they like to fib!
+    [reply to nasumone msg=1494216600759308298]
+
+[2026-04-16T06:24:36.301000+00:00] nasumone (id=1494221958890651658)
+    if it can process 1 page a second thats a lot of books per night
+
+[2026-04-16T06:25:05.004000+00:00] nasumone (id=1494222079279759421)
+    i heard kimi 2.6 is pretty good at it, maybe the next llm to give a free subscription i'll let it rip on textbooks
+
+[2026-04-16T07:12:30.621000+00:00] nasumone (id=1494234014662524940)
+    does it work with mimo? GPT is capped and it wants to install llama-server
+

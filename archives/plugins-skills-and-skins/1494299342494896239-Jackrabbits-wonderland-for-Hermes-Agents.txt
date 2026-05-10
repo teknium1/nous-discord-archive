@@ -1,0 +1,53 @@
+# Thread 'Jackrabbits wonderland for Hermes Agents' in forum #plugins-skills-and-skins
+# thread_id=1494299342494896239 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:28.193958+00:00
+
+[2026-04-16T11:32:05.990000+00:00] alcatr4z (id=1494299342494896239)
+    Zero-knowledge AES256 en/decryptor for Hermes Agent. Your data stays yours. The provider sees noise.
+    
+    
+    ## What This Is
+    
+    A four-component encr yption layer for Hermes Agent:
+    
+    | Component | Role |
+    |-----------|------|
+    | **JackrabbitDLM** | Volatile key vault — keys in memory only, TTL-bound, auto-destroy on crash |
+    | **cry pto_middleware** | AES256-GCM encr ypt/decr ypt, key rotation, chaff injection |
+    | **cry pto_plugin** | Hermes-agent plugin — injects cry pto header into system prompt |
+    | **lan_gateway** | HTTP + raw TCP server — control from any LAN device (browser, curl, netcat, iOS Shortcuts) |
+    
+    --
+    
+    https://github.com/itsXactlY/Hermes-Jackrabbits-wonderland
+
+[2026-04-16T15:02:35.905000+00:00] alcatr4z (id=1494352316197769247)
+    Providers will hate me. Dont sue plxx, i have kids....
+    
+    ```
+    dca41e8 feat: remember:: protocol — base64 transport, AES256 storage
+    
+     remember_protocol.py   — NEW (primary module)
+     crypto_plugin.py       — updated
+     lan_gateway.py         — updated
+     crypto_middleware.py   — backward compat alias
+     install.sh             — includes new file
+    
+    
+    **The architecture after live testing:**
+    
+    
+    Transport (LLM):  base64 + remember:: prefix
+      Provider sees:  # You are The Architect's Anomaly... + remember::U2VhcmNo...
+      LLM decodes:    ✓ (120B+ cloud models)
+      LLM hallucinates: ✓ (7B-14B models — unusable)
+    
+    Storage (local):  AES256-GCM
+      Neural Memory:  encrypted at rest
+      PULSE cache:    encrypted at rest
+      Session keys:   in DLM volatile vault
+    
+    
+    **Proven working:** nemotron-3-super, devstral-2 (123B) — decoded every test including code snippets, mixed languages, JSON data, and 445-char multi-step queries.
+    ```
+

@@ -1,0 +1,8 @@
+# Thread 'Kimi Code CLI skill' in forum #plugins-skills-and-skins
+# thread_id=1497334898791284787 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:14.730581+00:00
+
+[2026-04-24T20:34:19.009000+00:00] 4ndybomb (id=1497334898791284787)
+    Give Hermes Agent access to Kimi Code CLI! https://github.com/ascl1u/kimi-code-cli-skill
+    [embed] GitHub - ascl1u/kimi-code-cli-skill https://github.com/ascl1u/kimi-code-cli-skill
+

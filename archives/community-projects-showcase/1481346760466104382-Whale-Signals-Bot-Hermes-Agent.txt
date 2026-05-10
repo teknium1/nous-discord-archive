@@ -1,0 +1,17 @@
+# Thread 'Whale Signals Bot Hermes Agent' in forum #community-projects-showcase
+# thread_id=1481346760466104382 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:17.450249+00:00
+
+[2026-03-11T17:43:09.787000+00:00] demirel1907x (id=1481346760466104382)
+    https://x.com/i/status/2031762215464825269
+    
+    Bot features:
+    - Whale alerts: Detects large transfers (1000+ BTC / $1M+), bullish/bearish comments, deduplicated
+    - Real-time prices & 24h change from CoinGecko (fallback to simulated when limits hit)
+    - BIST stock tracking (THYAO, SISE etc.)
+    - Basic TA (RSI + MA crossover signals)
+    - Button UI + inline buttons (Subscribe, Prices, Test, TA)
+    - Commands: /start, /test_whale, /subscribe/   unsubscribe, /status, /help
+    - Push notifications + daily report potential
+    [embed]  https://twitter.com/i/status/2031762215464825269
+

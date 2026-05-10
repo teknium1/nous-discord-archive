@@ -1,0 +1,18 @@
+# Thread 'Ai Daily Digest' in forum #community-projects-showcase
+# thread_id=1409359780199530556 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:35.686926+00:00
+
+[2025-08-25T02:12:36.238000+00:00] 0xethll (id=1409359780199530556)
+    The rapid development of AI brings a constant stream of innovations and hot news. So, I fetched the top AI posts from Reddit. Using an LLM, I summarized the key points and categorized the posts. Through a Telegram bot, I curated the 5 hottest posts and published a daily digest. Additionally, I share the latest news from time to time. This way, you no longer need to manually search for updates.
+    
+    At the same time, you can chat with this bot just like other AI chat functions. However, this bot integrates all AI-related posts, making the information in the AI field more timely, accurate, and effective.
+    
+    It is completely free to use:
+    https://t.me/aidaily_digest_bot
+    [attachment] image.png https://cdn.discordapp.com/attachments/1409359780199530556/1409359780841128097/image.png?ex=6a01e3d4&is=6a009254&hm=1d92803b3bcb13567b809e55354ca0122e73ba33f9f52bcc6bc65f171d9636dd&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1409359780199530556/1409359781331996742/image.png?ex=6a01e3d4&is=6a009254&hm=ec64e64714d013d23f2a72c7c84798dcdc2f0308c06607577532a08c9167fb52&
+    [embed] AI Daily Digest https://t.me/aidaily_digest_bot
+
+[2025-08-25T04:00:09.486000+00:00] ethan.tec (id=1409386847083167784)
+    Oh man! It's very useful
+

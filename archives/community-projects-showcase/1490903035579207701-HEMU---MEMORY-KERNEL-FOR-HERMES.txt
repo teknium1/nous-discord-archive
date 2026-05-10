@@ -1,0 +1,50 @@
+# Thread 'HEMU - MEMORY KERNEL FOR HERMES' in forum #community-projects-showcase
+# thread_id=1490903035579207701 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:37.199488+00:00
+
+[2026-04-07T02:36:23.321000+00:00] lauratom (id=1490903035579207701)
+    I've been building a long-term memory kernel for Hermes called Hemu, sharing it here for feedback, not as an MVP.
+    
+    Quick context: I'm not a developer, I'm designing the architecture and instructing LLMs to implement it (vibe-coding).
+    The previous version hit ~30k lines across 70+ modules and became unmaintainable, so I rebuilt it from scratch, down to ~6,800 lines across 13 focused modules.
+    
+    The core idea is a second-brain style memory system: engram-like knowledge graph, temporal decay, structured truth planes, and hard token budgets. 60-92%
+    Synthesized from Mem0, PLUR, CatRAG, Graphiti and a few others. Built primarily for Hermes but designed to be modular.
+    
+    Repo: https://github.com/yepyhun/Hemu
+    
+    I'd love it if someone with actual backend/AI experience could glance at the architecture and tell me honestly:
+    
+    Is the direction sound?
+    Am I missing something fundamental?
+    Any tips on keeping LLMs on track in a project like this long-term?
+    The README has the full breakdown.
+    
+    Thanks in advance
+    [embed] GitHub - yepyhun/Hemu: Hermes memory kernel https://github.com/yepyhun/Hemu
+
+[2026-04-07T02:39:10.302000+00:00] 7.48 (id=1490903735948542113)
+    Worth looking into
+    
+    https://x.com/i/status/2041236952998171118
+    [embed]  https://twitter.com/i/status/2041236952998171118
+
+[2026-04-07T02:40:06.572000+00:00] lauratom (id=1490903971961901096)
+    thankya i'll !
+    [reply to 7.48 msg=1490903735948542113]
+
+[2026-04-07T02:47:03.808000+00:00] hugh1979 (id=1490905721976655883)
+    I like to vibe-check a new repo by asking my agent to check it out with: "Review this repository thoroughly.  Strengths, weaknesses, overall assessment."  On your repo it's still running... I guess the models are slow today!
+
+[2026-04-07T02:50:18.424000+00:00] 7.48 (id=1490906538255188032)
+    Who is reviewing? Opus or gpt👀
+    [reply to hugh1979 msg=1490905721976655883]
+
+[2026-04-07T02:54:42.517000+00:00] hugh1979 (id=1490907645941518426)
+    that depends how the token plans are burning 😉
+    [reply to 7.48 msg=1490906538255188032]
+
+[2026-04-07T02:55:42.271000+00:00] hugh1979 (id=1490907896568086649)
+    opus 4.6 right now is... sluggish.  I do think it writes better prose than gpt though.
+    [reply to 7.48 msg=1490906538255188032]
+

@@ -1,0 +1,13 @@
+# Thread 'FactQA : A factual question-answering environment for Atropos' in forum #community-projects-showcase
+# thread_id=1373395128378458173 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:31.597345+00:00
+
+[2025-05-17T20:21:55.053000+00:00] sukrucildirr (id=1373395128378458173)
+    FactQA Atropos is a factual question-answering environment designed to work both standalone and with the Atropos reinforcement learning framework. This project demonstrates how to create a custom environment that rewards language models for providing accurate and concise answers to factual questions.
+    
+    https://github.com/sukrucildirr/factqa-atropos
+    
+    <@387972437901312000> <@283284606902468609>
+    [attachment] FactQA.png https://cdn.discordapp.com/attachments/1373395128378458173/1373395129242751087/FactQA.png?ex=6a0191a3&is=6a004023&hm=8583a04cf1c31cd747a40c7a89a7d37a0efd1a73650aebe468f8c6024ccc8ddc&
+    [embed] GitHub - sukrucildirr/factqa-atropos: A factual question-answering ... https://github.com/sukrucildirr/factqa-atropos
+

@@ -1,0 +1,11 @@
+# Thread 'Brainbase x Knowledge Graph Database' in forum #community-projects-showcase
+# thread_id=1499841857046446160 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:31.322201+00:00
+
+[2026-05-01T18:36:04.434000+00:00] preekam (id=1499841857046446160)
+    I built a brain of sorts for AI agents. Inspired by Garry Tan’s GBrain
+    
+    Try it for free @
+    
+    https://brainbase.belweave.ai
+

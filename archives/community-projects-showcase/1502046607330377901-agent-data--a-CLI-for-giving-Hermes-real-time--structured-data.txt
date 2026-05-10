@@ -1,0 +1,31 @@
+# Thread 'agent-data: a CLI for giving Hermes real-time, structured data' in forum #community-projects-showcase
+# thread_id=1502046607330377901 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:17.662346+00:00
+
+[2026-05-07T20:36:57.864000+00:00] deepparser (id=1502046607330377901)
+    agent-data is a CLI tool that gives Hermes access to real-time, structured data without relying on browser automation.
+    
+    **The goal** is to enable Hermes to handle tasks requiring live data like “find me a roundtrip flight from NY to SF next month” without wasting tokens parsing HTML or interpreting browser screenshots. 
+    
+    **The current version supports:**
+    - Real-time data for categories like flights, restaurants, RSS/blog feeds, and social media feeds
+    - Structured JSON outputs by default
+    - Endpoint discovery so Hermes can find relevant capabilities at runtime instead of loading tool schemas into context at every turn
+    - A CLI interface designed for agent workflows
+    
+    **We built this because alternatives fell short in a few ways:**
+    - browser automation is generally slow, expensive and flaky
+    - Ad-hoc scraping works well in narrow cases, but can become quite expensive at scale
+    - MCP servers can inflate context when loading schemas on every turn, and are often either too granular or too coarse in their design
+    
+    It’s still early and some parts are a bit rough, but we’re adding new endpoints and expanding the scope of existing ones every week.
+    
+    **I’d love to know**: 
+    - Are there any live data sources you wish Hermes could access (e.g., aggregated job postings, hotel listings, firmographics, etc.)? 
+    - How has browser automation, scraping, generic web search, or MCP tools failed when using Hermes?
+    
+    **I’m also looking for early users to test agent-data with real Hermes workflows! Please DM or comment if you're interested!**
+    
+    agent-data: https://agent-data.dev
+    [attachment] agent-data-logo.jpg https://cdn.discordapp.com/attachments/1502046607330377901/1502046607825174739/agent-data-logo.jpg?ex=6a019529&is=6a0043a9&hm=2d2727319d83dfebd0e96b7cf3050bba7d40fe206d94ae8eb8eb17fa2d098c3b&
+

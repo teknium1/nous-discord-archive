@@ -1,0 +1,51 @@
+# Thread 'earlyman project' in forum #community-projects-showcase
+# thread_id=1477620972071813203 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:22.746805+00:00
+
+[2026-03-01T10:58:12.612000+00:00] buray (id=1477620972071813203)
+    https://x.com/Buray1071130/status/2028061722033172826          Just shipped a native Pomodoro timer toolset. Here's what it does:
+    > start a 1 min focus session for testing, 2 rounds
+    🍅 Pomodoro started! Focus on: testing
+    Phase: work | Ends at: 00:35
+    
+    > pomodoro_status
+    😌 ☕ Break — 0m 13s remaining (Round 1/2)
+    Progress: 1/2 rounds completed
+    ✅ 4 tools:
+    
+    pomodoro_start — start work/break session (configurable duration & rounds)
+    pomodoro_status — check current phase and time remaining
+    pomodoro_stop — cancel session
+    pomodoro_history — view all sessions and total focused time
+    
+    ✅ Zero new dependencies (stdlib only)
+    ✅ Runs in background threads  non-blocking
+    ✅ Integrates with notification_tool for desktop alerts on phase transitions
+    💻 Works on Linux, macOS, Windows
+    This is my 3rd contribution to hermes-agent this week alongside:
+    
+    notification_tool (PR #170 — under review by teknium1 👀)
+    /stats slash command (PR #154)
+    [embed]  https://twitter.com/Buray1071130/status/2028061722033172826
+
+[2026-03-01T10:59:12.949000+00:00] buray (id=1477621225143406754)
+    https://github.com/NousResearch/hermes-agent/pull/170 You were going to look at it last. I haven't opened the new PR yet. I'll open it after you look at it. <@387972437901312000>
+    [embed] feat(tools): add notification_tool for desktop/system notifications... https://github.com/NousResearch/hermes-agent/pull/170
+
+[2026-03-02T10:59:46.172000+00:00] buray (id=1477983752356495433)
+    <@283284606902468609>
+    [reply to buray msg=1477620972071813203]
+
+[2026-03-02T11:01:47.651000+00:00] buray (id=1477984261876224151)
+    Can you take a look at how?
+
+[2026-03-02T11:04:08.769000+00:00] ee.dd (id=1477984853768147097)
+    Seems like a lot of lines changed for a notification?
+
+[2026-03-02T11:13:35.278000+00:00] buray (id=1477987229878976553)
+    I'm sure it's correct
+    [reply to ee.dd msg=1477984853768147097]
+
+[2026-03-02T11:18:06.941000+00:00] buray (id=1477988369316184265)
+    The files conflicted, I fixed them.
+

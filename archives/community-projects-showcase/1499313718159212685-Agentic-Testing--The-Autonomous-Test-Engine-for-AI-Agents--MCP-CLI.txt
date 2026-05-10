@@ -1,0 +1,38 @@
+# Thread 'Agentic Testing: The Autonomous Test Engine for AI Agents (MCP+CLI)' in forum #community-projects-showcase
+# thread_id=1499313718159212685 forum_id=1316137596535177246
+# Started 2026-05-10T19:49:34.403813+00:00
+
+[2026-04-30T07:37:26.311000+00:00] rakaarwaky (id=1499313718159212685)
+    Stop baby-sitting your test suites. **Agentic Testing** is the first test engine designed specifically for AI agents that write and maintain code 24/7.
+    
+    ### Why you need it:
+    *   **Self-Healing Tests:** Automatically detects and fixes broken imports, attribute typos, and assertion mismatches.
+    *   **AST-Powered Generation:** Generates smart boilerplate tests by understanding your code's structure.
+    *   **Synthetic Data Generation:** Instantly creates robust test data for edge cases and boundary conditions.
+    *   **Coverage Auditing:** Quality gates that ensure your coverage never drops below your standards.
+    
+    ### Hybrid Interface Support:
+    *   💻 **Professional CLI:** Powerful command-line tool for developers to run tests, find slow tests, and migrate from unittest to pytest.
+    *   🔌 **MCP Server Ready:** Built-in Model Context Protocol support. Connect it to Claude Desktop, VS Code, or Hermes to give your AI agents autonomous testing capabilities.
+    
+    ### Quick Start:
+    ```bash
+    # Install with one line
+    pip install agentic-testing-mcp
+    
+    # Run tests with self-healing enabled
+    agentic-test run tests/ --heal --max-retries 3
+    
+    # Generate boilerplate tests from source
+    agentic-test generate src/my_module.py
+    ```
+    
+    Perfect for **AI Agents**, **DevOps**, and **Automated Quality Pipelines**.
+    
+    🔗 **GitHub:** https://github.com/rakaarwaky/agentic-testing
+    📦 **PyPI:** https://pypi.org/project/agentic-testing-mcp/
+    
+    #MCP #AIAgents #Testing #Python #Automation #CLI
+    [attachment] agentic_testing_campaign_poster_1777533556185.png https://cdn.discordapp.com/attachments/1499313718159212685/1499313718511538228/agentic_testing_campaign_poster_1777533556185.png?ex=6a022ff6&is=6a00de76&hm=ec78a17d0b5cde276fa57c05a2045119372803c49ad2b813bad64fa403bae346&
+    [embed] GitHub - rakaarwaky/agentic-testing: MCP server for autonomous unit... https://github.com/rakaarwaky/agentic-testing
+

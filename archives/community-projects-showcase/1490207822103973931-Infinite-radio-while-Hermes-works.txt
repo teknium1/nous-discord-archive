@@ -1,0 +1,40 @@
+# Thread 'Infinite radio while Hermes works' in forum #community-projects-showcase
+# thread_id=1490207822103973931 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:20.849307+00:00
+
+[2026-04-05T04:33:51.512000+00:00] .s0uthpaw (id=1490207822103973931)
+    https://github.com/SouthpawIN/jammit
+    [embed] GitHub - SouthpawIN/jammit: infinite ai generated radio in your ter... https://github.com/SouthpawIN/jammit
+
+[2026-04-06T22:24:57.236000+00:00] nasumone (id=1490839759952547870)
+    excellent
+
+[2026-04-06T22:25:26.008000+00:00] nasumone (id=1490839880631193822)
+    is this using icecast?
+
+[2026-04-06T22:26:19.252000+00:00] nasumone (id=1490840103952715917)
+    ive been looking for a way to generate looping song bits for a game i was making, and i also wanted to  start a web radio statio since back in the day i used to listen to irc radio
+
+[2026-04-06T22:28:25.807000+00:00] nasumone (id=1490840634762854482)
+    if we could have a web radio station with a comfy ui maybe people can use voting to help the song generator update song parameters on the fly to produce music which is more acceptable to humans
+
+[2026-04-08T17:31:38.335000+00:00] .s0uthpaw (id=1491490720543015023)
+    It uses ACE-Step
+
+[2026-04-08T17:32:48.307000+00:00] .s0uthpaw (id=1491491014026723349)
+    I do like making my loop more sophisticated. Right now, it just generates on the same prompt, so the prompt becomes a playlist
+    [reply to nasumone msg=1490840634762854482]
+
+[2026-04-08T17:34:18.727000+00:00] .s0uthpaw (id=1491491393275822130)
+    <@648742401703149612>
+
+[2026-04-08T18:03:40.905000+00:00] petersteele111 (id=1491498784385925243)
+    Im here, you can delete the other lol
+
+[2026-04-08T18:52:03.040000+00:00] petersteele111 (id=1491510956822499348)
+    Holy mother of god, just tried Ace with the same prompt and lyrics as one of my suno songs, and ummmmmm this aint it lmao
+    [attachment] output_20260408144944_0.wav https://cdn.discordapp.com/attachments/1490207822103973931/1491510956222582906/output_20260408144944_0.wav?ex=6a022552&is=6a00d3d2&hm=ce5b07033a1fe57bfaa5d126e79b6ad526ff3507775f057e4546de02066fea2f&
+
+[2026-04-08T19:01:49.398000+00:00] petersteele111 (id=1491513416186204222)
+    Ill keep playing with it though and see what I can squeeze out of it.
+

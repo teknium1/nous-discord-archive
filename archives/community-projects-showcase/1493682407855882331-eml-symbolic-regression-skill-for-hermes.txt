@@ -1,0 +1,13 @@
+# Thread 'eml symbolic regression skill for hermes' in forum #community-projects-showcase
+# thread_id=1493682407855882331 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:06.762400+00:00
+
+[2026-04-14T18:40:37.310000+00:00] aezaror (id=1493682407855882331)
+    This tool was designed to give small local LLMs mathematical capabilities they can't have natively. A 7B model that can call this tool outperforms a 70B model doing math from memory.
+    
+    https://arxiv.org/abs/2603.21852 based in this paper
+    https://github.com/b7216309-jpg/eml-symbolic-regression
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493682407855882331/1493682408401277098/image.png?ex=6a0222a5&is=6a00d125&hm=32b25fccc7f04abb0cd12d8f0dfd157dd5267f226d0670632efc5cdde1157406&
+    [embed] All elementary functions from a single binary operator https://arxiv.org/abs/2603.21852
+    [embed] GitHub - b7216309-jpg/eml-symbolic-regression: Discover exact mathe... https://github.com/b7216309-jpg/eml-symbolic-regression
+

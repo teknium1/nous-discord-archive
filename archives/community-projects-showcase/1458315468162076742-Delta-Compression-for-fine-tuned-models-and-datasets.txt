@@ -1,0 +1,10 @@
+# Thread 'Delta Compression for fine-tuned models and datasets' in forum #community-projects-showcase
+# thread_id=1458315468162076742 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:27.781346+00:00
+
+[2026-01-07T04:25:01.801000+00:00] gagansuie (id=1458315468162076742)
+    Yo, I built a free cli tool for devs that want to distribute or create multiple fine-tunes from the same base model. Basically it's a derivative of Lora adapters. But lossless and compression happens AFTER training.
+    
+    https://github.com/gagansuie/sparse
+    [embed] GitHub - gagansuie/sparse: Delta Compression for Fine-tuned Models ... https://github.com/gagansuie/sparse
+

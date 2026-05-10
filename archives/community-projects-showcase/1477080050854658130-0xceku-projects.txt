@@ -1,0 +1,45 @@
+# Thread '0xceku projects' in forum #community-projects-showcase
+# thread_id=1477080050854658130 forum_id=1316137596535177246
+# Started 2026-05-10T19:51:22.308549+00:00
+
+[2026-02-27T23:08:46.944000+00:00] ceku00 (id=1477080050854658130)
+    my progression here
+
+[2026-02-27T23:08:59.727000+00:00] ceku00 (id=1477080104470450266)
+    https://x.com/0xceku/status/2027497047142895876?s=20
+    [embed]  https://twitter.com/0xceku/status/2027497047142895876?s=20
+
+[2026-02-27T23:09:45.998000+00:00] ceku00 (id=1477080298545217697)
+    Hermes-Agent: Native Web3 Intelligence Toolset
+    
+    I’ve just submitted a PR to add a native Web3 intelligence toolset to the Hermes core. This allows Hermes to interact directly with the blockchain without relying on external search engines.
+    
+    Key features:
+    
+    Contract Auditor: Checks if a smart contract is verified on Etherscan.
+    
+    Wallet Profiler: Fetches real-time ETH balances for any EVM address.
+    
+    Gas Sentinel: Tracks live network gas prices (Safe/Fast Gwei).
+    
+    Price Oracle: Gets live asset pricing via CoinGecko integration.
+    
+    You can see the video below showing Hermes autonomously using these tools to generate a local report.
+    
+    PR Link: https://github.com/NousResearch/hermes-agent/pull/159
+    [attachment] Ekran_Kayd_2026-02-28_01.00.55.mov https://cdn.discordapp.com/attachments/1477080050854658130/1477080301489492122/Ekran_Kayd_2026-02-28_01.00.55.mov?ex=6a01b8fa&is=6a00677a&hm=bcd1434aad55a453e0138d94207dfbb4d553acbbeb65dde77d2b79666bad1598&
+
+[2026-02-27T23:10:16.467000+00:00] ceku00 (id=1477080426341466343)
+    Hermes Guardian: Autonomous Security & Code Audit
+    I’ve integrated the Guardian toolset into Hermes-Agent, enabling native URL inspection and password auditing.
+    The highlight: During development, Hermes autonomously identified duplicate functions in my code and resolved environment conflicts to execute the tools. This confirms Hermes is not just a task-executor, but a code-aware agent capable of self-auditing its own infrastructure.
+    Key Tools:
+    guardian_url_inspect: Secure redirect & safety analysis.
+    guardian_pass_audit: Technical entropy & pattern check.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/161
+    [attachment] Ekran_Resmi_2026-02-28_01.35.27.png https://cdn.discordapp.com/attachments/1477080050854658130/1477080426659975198/Ekran_Resmi_2026-02-28_01.35.27.png?ex=6a01b918&is=6a006798&hm=50c5b1bb06e18b1606676c4c65dddec1750abf96dcca2668af649aa77bf1f084&
+    [attachment] Ekran_Resmi_2026-02-28_01.38.45.png https://cdn.discordapp.com/attachments/1477080050854658130/1477080427100373184/Ekran_Resmi_2026-02-28_01.38.45.png?ex=6a01b918&is=6a006798&hm=db831299705d6d7c5f4a6d7d01a40c9c6e3f1168f8925248ac9be4d619c6e272&
+    [attachment] Ekran_Resmi_2026-02-28_01.39.02.png https://cdn.discordapp.com/attachments/1477080050854658130/1477080427415208058/Ekran_Resmi_2026-02-28_01.39.02.png?ex=6a01b918&is=6a006798&hm=603651994e6ca45d5d29a91ab0985e0a9cbcb3408ea658de990711b1f8f602af&
+    [attachment] Ekran_Resmi_2026-02-28_01.39.14.png https://cdn.discordapp.com/attachments/1477080050854658130/1477080427796893878/Ekran_Resmi_2026-02-28_01.39.14.png?ex=6a01b918&is=6a006798&hm=31779454a2615f6ed1c76850979ec70d1879e489f93a73064c80c7f97419344e&
+

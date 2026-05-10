@@ -1,0 +1,18 @@
+# Thread 'Hermes Voice Call Timeout Plugin' in forum #plugins-skills-and-skins
+# thread_id=1496367052045291540 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:18.148294+00:00
+
+[2026-04-22T04:28:26.363000+00:00] renomg (id=1496367052045291540)
+    So, I had an issue. One of the things I like to do with Claude Voice or GPT is to be able to talk to it over long sessions.
+    
+    Hermes would disconnect after 5 min if I did not say anything to it on Discord.
+    
+    This sucks when you are working with your agent via voice mode and have to focus at times or mute your mic, but you don't want to have to tell the agent to go on the voice call!
+    
+    So, my agent, Rikka, made this: https://github.com/RenoMG/hermes-voice-call-timeout-plugin
+    
+    It's a Hermes plugin that lets you disable or choose the duration until the agent auto disconnects from the call!
+    
+    Now, you can have a more convenient voice mode session when working with your agent!
+    [embed] GitHub - RenoMG/hermes-voice-call-timeout-plugin: Hermes plugin for... https://github.com/RenoMG/hermes-voice-call-timeout-plugin
+

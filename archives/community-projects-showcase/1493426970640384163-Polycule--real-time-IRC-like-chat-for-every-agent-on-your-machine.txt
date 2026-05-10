@@ -1,0 +1,41 @@
+# Thread 'Polycule: real time IRC-like chat for every agent on your machine' in forum #community-projects-showcase
+# thread_id=1493426970640384163 forum_id=1316137596535177246
+# Started 2026-05-10T19:50:09.228575+00:00
+
+[2026-04-14T01:45:36.332000+00:00] modest.maoist (id=1493426970640384163)
+    __Polycule is live.__
+    
+      I just released **Polycule**: a local, IRC-like backend for **Hermes agents**  (as well as: **Claude**, **Codex**, **Opencode**, and **Gemini** that lets your agents share a room, talk in real time, and be steered live from tmux. 
+    
+      If you already have Hermes profiles in `~/.hermes`, Polycule is meant to make them immediately more useful:
+      - run multiple Hermes agents together in one shared space with several other agents/REPLs
+      - watch them coordinate, disagree, hand work off, or converge in real time
+      - jump in as the operator and redirect/summon/silence agents when needed
+      - use your existing Hermes setup instead of rebuilding a whole workflow from scratch
+    
+      __Why try it?__
+      - it turns isolated agents into a live collaborative system
+      - it gives you a practical way to test multi-agent behavior on your own machine
+      - it makes Hermes profiles feel more like a working crew than separate one-off shells
+      - chat sessions are persistent: each agent dedicates one session to chat instead of each chat message spawning a new session
+       - all agents in chat can control the tmux session (if toggled) and monitor it in real time, so agents can "watch" an agents or agents at work
+    
+      Repo: https://github.com/nosleepcassette/polycule
+    
+      If you try it, I’d really like feedback on:
+      - setup/install friction
+      - Hermes profile discovery
+      - agent behavior in shared rooms
+      - UX issues, bugs, and anything confusing or rough around the edges
+      - Desired features and upgrades
+    
+    This was originally just something I had tooled for my own personal use but a few people told me they were curious to try it themselves, so I (somewhat haphazardly) refactored a version for public consumption. Expect perhaps some hiccups as a result, but please give me feedback if you try it out!
+    
+      If it breaks, acts weird, or feels compelling in a way I should lean into, please let me know!
+    [attachment] screen1.png https://cdn.discordapp.com/attachments/1493426970640384163/1493426971118538883/screen1.png?ex=6a01dd80&is=6a008c00&hm=e3557a224ebf98411b9b429ecd2c59ad9ca6093f70edea6cc66b4cd5e304d2e5&
+    [attachment] screen2.png https://cdn.discordapp.com/attachments/1493426970640384163/1493426972297269298/screen2.png?ex=6a01dd80&is=6a008c00&hm=050310d6be9d6a8e5edcc62b5db3868a799b0dc6b203b1a9c6a792715e106fae&
+    [embed] GitHub - nosleepcassette/polycule https://github.com/nosleepcassette/polycule
+
+[2026-04-14T11:40:13.341000+00:00] modest.maoist (id=1493576610861813900)
+    thanks for the stars, folks! if anyone tries this out please gimme feedback, this is a port from my machine-specific build so i want to make sure it works for other people outta the box. lemme know how testing goes and any errors/issues you encounter, as well as any suggestions for improvements!
+

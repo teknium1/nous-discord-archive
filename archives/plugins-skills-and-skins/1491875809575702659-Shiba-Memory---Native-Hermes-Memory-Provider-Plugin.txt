@@ -1,0 +1,23 @@
+# Thread 'Shiba Memory — Native Hermes Memory Provider Plugin' in forum #plugins-skills-and-skins
+# thread_id=1491875809575702659 forum_id=1485392832154832906
+# Started 2026-05-10T19:52:55.100926+00:00
+
+[2026-04-09T19:01:50.715000+00:00] bostonsportstech82 (id=1491875809575702659)
+    Hey everyone! Just open sourced my first project. 
+    
+    Shiba Memory is a persistent, self-improving memory layer for AI agents. It ships with a native Hermes memory provider plugin out of the box.
+    
+    What Hermes gets:
+    - shiba_recall / shiba_remember / shiba_forget tools available to the LLM
+    - Auto memory on every conversation turn
+    - Relevant memories prefetched before each response
+    - Session summaries extracted when sessions end
+    - Tier 1 pattern extraction ("I prefer...", "Remember that...") + Tier 2 LLM-based summarization
+    
+    Fully local, no cloud deps. Postgres + pgvector + Ollama under the hood.
+    
+    I've been running it with Gemma 4 on a local server and it's held up well but would love for people to stress test it with Hermes and different models. Drop issues, findings, or feedback here or on GitHub.
+    
+    https://github.com/ryaboy25/shiba-memory
+    [embed] GitHub - ryaboy25/shiba-memory https://github.com/ryaboy25/shiba-memory
+
