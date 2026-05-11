@@ -23,3 +23,7 @@
     
     Biggest challenge from here will be certain voice accents & false activations from partial phrases or similar phrases
 
+[2026-05-11T10:28:40.032000+00:00] artale39 (id=1503343075790032976)
+    Will try it out
+    [reply to neopabo msg=1503163661634768976]
+

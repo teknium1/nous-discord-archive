@@ -52,3 +52,55 @@
     The skill have access to your conversations and is able to read them, response and more 🙂
     [reply to ifreet_00706 msg=1503031650588557352]
 
+[2026-05-11T12:31:51.978000+00:00] vayaperson (id=1503374079858839583)
+    Hey I just repaired the major bugs which were making the installer to fail. Need test but it should work now. Just tell me if there's any error or installation fail 🙂
+    [reply to ifreet_00706 msg=1503031650588557352]
+
+[2026-05-11T13:07:12.560000+00:00] ifreet_00706 (id=1503382974224400384)
+    The installation happened successfully
+
+[2026-05-11T13:09:26.130000+00:00] ifreet_00706 (id=1503383534457585738)
+    But it didn't seem to actually install the thing
+    [reply to vayaperson msg=1503374079858839583]
+
+[2026-05-11T13:09:51.531000+00:00] ifreet_00706 (id=1503383640996839686)
+    İ assumed that I'd have to scan a qr code or something but there was none of that
+    [reply to vayaperson msg=1503374079858839583]
+
+[2026-05-11T13:10:22.560000+00:00] vayaperson (id=1503383771142164520)
+    Ok the Qr didn't appear? Let me check and I'll update in a couple hours!!
+
+[2026-05-11T13:11:27.547000+00:00] ifreet_00706 (id=1503384043717136394)
+    For context I'm using omarchy which is a port of arch Linux and i ran bash install.sh from the zsh shell
+    [reply to vayaperson msg=1503383771142164520]
+
+[2026-05-11T13:12:04.990000+00:00] vayaperson (id=1503384200764592158)
+    We are now in testing proccess because I couldn't test the installer in my machine cause is the enviroment where I code, so I need someone to test it out of the coding enviroment 🙂 Thank you for your feedback.
+
+[2026-05-11T13:12:52.409000+00:00] vayaperson (id=1503384399654162471)
+    I fixed the non-gnome terminal issue in the last update, shouldn't be a problem right now. Let me check the QR issue and I'll text you when it's done for testing 🙂
+
+[2026-05-11T13:13:00.581000+00:00] vayaperson (id=1503384433930145844)
+    THANK YOU A TON ❤️
+
+[2026-05-11T13:13:14.983000+00:00] vayaperson (id=1503384494336512090)
+    🙂
+    [reply to ifreet_00706 msg=1503384043717136394]
+
+[2026-05-11T13:13:50.986000+00:00] vayaperson (id=1503384645344169984)
+    We re close to making it work!! Thank you for your patience.
+    [reply to ifreet_00706 msg=1503384043717136394]
+
+[2026-05-11T13:14:46.305000+00:00] ifreet_00706 (id=1503384877368606750)
+    İt's really no problem. İt's always pained me that i could never automate WhatsApp which in my business is a main driver so if there's a way I'm in. You lot are doing me a favour
+    [reply to vayaperson msg=1503384433930145844]
+
+[2026-05-11T13:17:49.290000+00:00] vayaperson (id=1503385644863586365)
+    Really glad to have you on board! 🙏
+    Just a heads up before you start... we recommend using a secondary number if you can. We've built in human simulation (typing indicators, message pacing, etc.) to minimize any risk, but unusual or repetitive activity patterns could still flag Meta's systems. We haven't had bans in testing, but we can't fully predict how Meta will react in every case.
+    So just to be safe: secondary number, avoid spammy patterns, and you should be fine. Use it as the personal assistant it's meant to be and it'll fly under the radar 👌
+    [reply to ifreet_00706 msg=1503384877368606750]
+
+[2026-05-11T13:17:57.925000+00:00] vayaperson (id=1503385681081143448)
+    Very happy it will help you 🙂
+

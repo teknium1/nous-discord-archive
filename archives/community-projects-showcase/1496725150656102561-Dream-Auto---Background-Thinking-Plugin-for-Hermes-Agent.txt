@@ -224,3 +224,29 @@
     Module shadowing is a technique where you clone a especific module, patch it, benchmark it, against current module in a loop. Once that module wins in the benchmark you replace de old module. So you create a shadow and try to improve by patching it, if works shadow becomes main, otherwise you just destruct it. So you can take the most inefficient steps of the day and reflect on that while dreaming so once wakeup the agent turned more efficient and you can know by how much and where the improvement were made
     [reply to stefan171 msg=1502861070337835048]
 
+[2026-05-11T10:24:38.007000+00:00] stefan171 (id=1503342060663734312)
+    this sounds similar to what minimax thought you might be talking about, it suggested about developing skills and seeing which one is best tackles the problem the best. it sounds good but like isn't this a bit like what hermes already does and won't we just end up with hundreds of skills.
+    [reply to colmeio_66868 msg=1503007634322886706]
+
+[2026-05-11T10:26:01.305000+00:00] stefan171 (id=1503342410040741928)
+    maybe the post dream optimization was a good idea, but it was obvious i was making it overly complex.
+
+[2026-05-11T10:26:33.135000+00:00] stefan171 (id=1503342543545569280)
+    i mean like these other systems could be wonderful  and you end up needing to a/b test which one gives the best benchmark boost
+
+[2026-05-11T10:28:15.464000+00:00] stefan171 (id=1503342972744368209)
+    i think i need to stick to making the existing system work, its interesting enough.
+
+[2026-05-11T11:21:09.156000+00:00] colmeio_66868 (id=1503356284173291711)
+    what about this 😉
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496725150656102561/1503356283900657766/image.png?ex=6a030d25&is=6a01bba5&hm=0a27dca07827897f4c99cb22cbb99f31c92a90b3239308d3e0d8c44c9ba66adc&
+
+[2026-05-11T11:21:27.103000+00:00] colmeio_66868 (id=1503356359448727814)
+    fail -> nice artifact for reflecting
+
+[2026-05-11T12:00:03.650000+00:00] stefan171 (id=1503366075751075850)
+    but it already does extraction of knowledge and insights from completed dreams to prompt inject into relevant prompts?
+
+[2026-05-11T12:00:16.447000+00:00] stefan171 (id=1503366129425580074)
+    as far as i know, this part is solid
+

@@ -1,0 +1,14 @@
+# Thread 'Reversal the  data normalization layer' in forum #plugins-skills-and-skins
+# thread_id=1503371941938200828 forum_id=1485392832154832906
+# Started 2026-05-11T14:49:11.106588+00:00
+
+[2026-05-11T12:23:22.258000+00:00] inkxus (id=1503371941938200828)
+    Hey 👋 Just opened a PR adding a Reversal integration example to hermes-example-plugins.
+    
+    Reversal is a data normalization layer — it converts raw sources (URLs, PDFs, Excel, images) into clean structured JSON before passing input to Hermes. Eliminates hallucinations from bad data, parsing errors on complex PDFs, and context overflow on large docs.
+    
+    PR: https://github.com/NousResearch/hermes-example-plugins/pull/2
+    
+    Would love feedback from the community!
+    [embed] feat: add Reversal integration example for Hermes input normalizati... https://github.com/NousResearch/hermes-example-plugins/pull/2
+

@@ -14538,3 +14538,65 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/23479
     [embed] feat(runtime): add stable context prefix builder by wesleysimplicio... https://github.com/NousResearch/hermes-agent/pull/23479
 
+[2026-05-11T10:30:54.595000+00:00] wesleysimplicio (id=1503343640188162068)
+    [attachment] E6B104E0-60C1-459D-A44E-DF4DC110C5F9.png https://cdn.discordapp.com/attachments/1491258766648283238/1503343639932436550/E6B104E0-60C1-459D-A44E-DF4DC110C5F9.png?ex=6a03015e&is=6a01afde&hm=03bc5fac1e11296d476dc023a1ce4c8547ed8c04a31713297ddcdd0c73d3f3fd&
+
+[2026-05-11T12:29:23.182000+00:00] Sapphire#8184 (id=1503373455763177563)
+
+[2026-05-11T12:35:43.219000+00:00] zeke3299 (id=1503375049753755669)
+    struggling to find an API client for testing, documentation and such, like postman, that's agent friendly, self hostable and open source with git sync
+
+[2026-05-11T12:42:29.526000+00:00] costi0974 (id=1503376753928966317)
+    Hey, I’m using an RTX 5080 with 128 GB RAM. Would you recommend running a local AI model for Hermes, or should I just connect my Codex 20x plan?
+
+[2026-05-11T13:03:35.615000+00:00] vayaperson (id=1503382064291123241)
+    Hey! 👋 I built a WhatsApp skill for Hermes and I need people to test if the installer works outside my machine.
+    It's a one-command install. If it works on your end, the whole thing is basically plug and play. If it breaks, that's exactly what I need to know 😄
+    Takes 10-15 min to set up. Linux only for now.
+    Would really appreciate any feedback, even just "it worked" or "it failed at step X" 🙏
+    https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+    [embed] Andoriña | Autonomous WhatsApp Manager for Hermes https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+
+[2026-05-11T13:29:44.945000+00:00] dlkakbs (id=1503388646538084422)
+    After seeing #23443 and #23447, I added Save to Spotify to my own Hermes setup and built a small follow-up workflow on top of it.
+    
+    It currently supports taking either text or a local audio file_path, generating speech when needed, publishing to an existing or newly created show, attaching cover art when provided, and optionally waiting for readiness before writing chapter timelines.
+    
+    I tested it locally end to end, including real uploads. In local testing, Hermes wrote two episode scripts, generated audio with my ElevenLabs voice, created a Hermes Agent show with cover art, and uploaded the episodes to Spotify.
+    
+    If #23443 and #23447 are accepted, I can open a follow-up PR for this workflow. <@387972437901312000>
+    [attachment] Ekran_Resmi_2026-05-11_16.22.46.png https://cdn.discordapp.com/attachments/1491258766648283238/1503388646299144403/Ekran_Resmi_2026-05-11_16.22.46.png?ex=6a032b48&is=6a01d9c8&hm=61fa2facbe0c26e834f9e3958bb683ca0bb838a62c903158cbac2c485057addb&
+    [reply to heathley msg=1503167876029481050]
+
+[2026-05-11T14:06:18.002000+00:00] dlkakbs (id=1503397844885962874)
+    One use case for this is turning Hermes Agent sessions into Spotify episodes
+    
+    Instead of just a basic summary, the agent could reflect on:
+    
+    - important things learned during the session
+    - where it got stuck
+    - how problems were resolved
+    - notable outputs or decisions
+    - what changed between iterations
+    
+    Then turn that into speech, save it to Spotify, and optionally attach chapter timelines
+    
+    A natural fit for persistent agents and long-running workflows
+    [reply to dlkakbs msg=1503388646538084422]
+
+[2026-05-11T14:21:40.841000+00:00] noxerz. (id=1503401715553013932)
+    O
+
+[2026-05-11T14:22:39.820000+00:00] minddragon (id=1503401962929131571)
+    Any NOUS: I don't want to publish this to open unless ya'll approve but this is a fun thing that I have developed for coding using Hermes. Could I get an email address to send a demo video of some kind to demonstrate what I have built and how well it works using Hermes. 
+    
+    This is really a 'no joke' type of thing. 
+    
+    Next: Fixes to Providers | Models coming real soon. 
+    
+    Done: Zellij Picker, Hermes Profile Picker almost done. 
+    
+    Follow: My Mind-Dragon repo - go find it. 
+    
+    Also I have a few PR's there for next release (0.14) if ya'll want it.
+

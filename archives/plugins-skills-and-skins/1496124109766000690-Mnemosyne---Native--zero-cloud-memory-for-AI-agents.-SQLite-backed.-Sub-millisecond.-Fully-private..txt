@@ -863,3 +863,27 @@
     Since i ask, it located in `.hermes/mnemosyne/data` now it in in their own `profiles/agent1/mnemosyne/data` and calling there.
     [attachment] profile-isolation-patch.md https://cdn.discordapp.com/attachments/1496124109766000690/1503264513804472350/profile-isolation-patch.md?ex=6a02b7ad&is=6a01662d&hm=fb26c9bd44b3f5a89fbc08580d395ccb4910cb4fb6e8f73986d4f051fe6f470c&
 
+[2026-05-11T10:42:01.879000+00:00] nulledvector (id=1503346438980112385)
+    Hey there Welcome in! Will review! Thanks!
+    [reply to machrllrogin msg=1503264514089554022]
+
+[2026-05-11T11:19:54.240000+00:00] nulledvector (id=1503355969952813157)
+    Ty for this! it was fixed on https://github.com/AxDSan/mnemosyne/commit/6417a7a02174813f61039a4fc719f2cd9f11e73f, test failed but later addressed right behind with a fix
+    [reply to rossascends msg=1503059762781098084]
+
+[2026-05-11T12:11:24.307000+00:00] nulledvector (id=1503368930633449472)
+    Did you submitted the issue for this?
+    [reply to machrllrogin msg=1503264514089554022]
+
+[2026-05-11T12:16:05.338000+00:00] machrllrogin (id=1503370109362765844)
+    done!
+    [reply to nulledvector msg=1503368930633449472]
+
+[2026-05-11T12:17:26.427000+00:00] nulledvector (id=1503370449474686986)
+    ty!
+    [reply to machrllrogin msg=1503370109362765844]
+
+[2026-05-11T14:17:46.078000+00:00] kyklooppi (id=1503400730885750824)
+    I have done similar patch by adding DATA_DIR variables to all new profiles.
+    [reply to nulledvector msg=1503346438980112385]
+

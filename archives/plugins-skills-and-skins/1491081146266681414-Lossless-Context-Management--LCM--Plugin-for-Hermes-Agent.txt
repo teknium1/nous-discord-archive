@@ -1218,3 +1218,71 @@
     Short version: the project has moved a lot since 0.9.0, and your exact pain point around 1M-context tuning is now documented instead of being something every new user has to reverse-engineer by suffering through it.
     [reply to fleety13 msg=1502885473775915099]
 
+[2026-05-11T13:41:28.773000+00:00] rossascends (id=1503391598606549012)
+    I'm having trouble with this plugin. I've got my hermes running on a locally hosted llama.cpp server that swaps models depending on the task. main model for normal stuff, and a smaller aux model for background tasks like compression, summarization, title creation, etc. Both models run off the same server instance, so lcpp just hot swaps them when needed via providing a 'model' flag in the API Call. I have it setup to work perfectly with the default hermes compressor system, but LCM fails to do the model swap when compression is triggered (pre-flight compression, manual /compress commands, and normal mid-call compressions are all affected). 
+    
+    Instead of correctly making the API Call with the correct model, it just uses whatever model is currently loaded. I've set the bashrc env vars correctly, and even tried hardcoding the values in config.py, but nothing is working. 
+    
+    What is the specific format LCM expect the model value to come in?
+    
+    Here are values form my hermes config.yaml
+    
+    ```
+    model:
+      api_key: llamacpp-local
+      base_url: http://172.19.0.1:8081/v1
+      context_length: 101120
+      default: 26B-Gemma-4-main
+      extra_body: {}
+      provider: custom:LCPP
+    compression:
+      enabled: true
+      threshold: 0.5
+      target_ratio: 0.2
+      protect_last_n: 5
+      hygiene_hard_message_limit: 200
+    auxiliary:
+      compression:
+        provider: custom:LCPP
+        model: 4B-Qwen3-2507-Compressor
+        base_url: http://172.19.0.1:8081/v1
+        api_key: llamacpp-local
+        timeout: 120
+        extra_body: {}
+    context:
+      engine: lcm
+    plugins: 
+      enabled:
+        - hermes-lcm
+    custom_providers:
+    - name: LCPP
+      base_url: http://172.19.0.1:8081/v1
+      api_key: llamacpp-local
+      model: 26B-Gemma-4-main
+      models:
+        26B-Gemma-4-main:
+          context_length: 101120
+        4B-Qwen3-2507-Compressor:
+          context_length: 131072
+    ```
+    
+    bashrc contains
+    ```
+    export LCM_ENABLE_SLASH_COMMAND=1
+    export LCM_SUMMARY_MODEL="custom:LCPP/4B-Qwen3-2507-compressor"
+    export LCM_EXTRACTION_MODEL="custom:LCPP/4B-Qwen3-2507-compressor"
+    export LCM_EXPANSION_MODEL="custom:LCPP/4B-Qwen3-2507-compressor"
+    ```
+    
+    and just to be safe i hardcoded config.py with
+    ```
+    summary_model: str = "custom:LCPP/4B-Qwen3-2507-compressor"
+        expansion_model: str = "custom:LCPP/4B-Qwen3-2507-compressor"
+    ```
+    
+    Currently with this setup, when compression is triggered, the call goes out to the main model. when it's done the context is not reduced. And after that if I do a manual /compress I get back an immediate (no intermittent API call) response saying nothing was changed.
+    
+    What am I doing wrong here? 
+    
+    For context I do have mnemosyne installed and working as well. Could that be interfering somehow?
+
