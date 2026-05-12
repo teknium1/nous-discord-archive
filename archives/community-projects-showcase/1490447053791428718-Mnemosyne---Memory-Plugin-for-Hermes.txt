@@ -2104,3 +2104,10 @@
     https://github.com/AxDSan/mnemosyne/issues/81
     [embed] `_call_remote_llm`: support reasoning models via `reasoning_content... https://github.com/AxDSan/mnemosyne/issues/81
 
+[2026-05-12T13:45:39.803000+00:00] walterwego (id=1503755039368282172)
+    <@151598363131904000> Updated v2.5.0. Are openrouter text embeddings a new feature? I've set "MNEMOSYNE_EMBEDDING_MODEL=openai/text-embedding-3-small" and it works 👍  Couldn't find any documentation about it besides code.
+
+[2026-05-12T14:07:30.909000+00:00] fleety13 (id=1503760538545426634)
+    <@843913220867096606>, did you manage to backfill old memories into sqliteveconce it was installed in the correct path?  It's works like a charm. hit me up if you hesitated, i'll share the cookbook
+    [reply to floory msg=1503371398079451227]
+

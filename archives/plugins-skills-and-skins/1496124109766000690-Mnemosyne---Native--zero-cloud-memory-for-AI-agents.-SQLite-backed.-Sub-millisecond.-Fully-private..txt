@@ -894,3 +894,29 @@
 [2026-05-12T08:31:10.012000+00:00] beserk_topg (id=1503675893728411730)
     I’ve installed it, going to try it out as well.
 
+[2026-05-12T11:16:13.391000+00:00] skylinx79 (id=1503717431510696077)
+    <@151598363131904000> what is the correct way to update from 2.3 to 2.6?
+
+[2026-05-12T11:16:34.687000+00:00] nulledvector (id=1503717520832725002)
+    sorry that was a misfire in the CI pipeline 🙁
+
+[2026-05-12T11:16:40.408000+00:00] nulledvector (id=1503717544828342352)
+    we're still actually 2.5
+
+[2026-05-12T11:16:50.715000+00:00] skylinx79 (id=1503717588058902559)
+    ah. same question anyway 😄
+
+[2026-05-12T11:18:05.154000+00:00] nulledvector (id=1503717900278829209)
+    `pip install -U mnemosyne-memory` should be suffice 🙂
+    [reply to skylinx79 msg=1503717588058902559]
+
+[2026-05-12T11:19:57.774000+00:00] skylinx79 (id=1503718372641345686)
+    Done, thanks!
+
+[2026-05-12T12:31:27.625000+00:00] machrllrogin (id=1503736365580550365)
+    https://github.com/WXBR/mnemosyne/commit/7b3a80e37230c29f06facc06289310b111c5cbcd
+    
+    <@151598363131904000> did commits new banks system instead going into `/profiles//mnemosyne` it goes to `mnemosyne/data/banks/<profile_name>/mnemosyne.db`
+    [embed] feat: per-profile memory isolation via Mnemosyne banks (issue #72) ... https://github.com/WXBR/mnemosyne/commit/7b3a80e37230c29f06facc06289310b111c5cbcd
+    [reply to excessivelysalty msg=1503489148944908418]
+

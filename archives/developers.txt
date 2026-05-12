@@ -14983,3 +14983,56 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-12T08:27:05.116000+00:00] ryan_rocket (id=1503674866560139405)
     hi <@387972437901312000> and Hermes Agent maintainers et al. I was wondering if there was anything on the roadmap to package the agent in pypi?
 
+[2026-05-12T09:20:44.988000+00:00] vayaperson (id=1503688371682283651)
+    someone can help me and test my installer? 🙂 It's a skill for whatsapp, you can send and receive messages to contacts or groups, google contact sync&search, schedule message and much more!!
+    https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+    [embed] Andoriña | Autonomous WhatsApp Manager for Hermes https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+
+[2026-05-12T09:33:42.991000+00:00] scottermonkey (id=1503691634863247431)
+    Anyone interested in helping push this along? 
+    
+    Hermes currently ships a large set of bundled skills directly into each profile's skills directory via bundled-skill sync. That makes updates heavier, expands the default install footprint, and creates an ongoing maintenance burden for content that many users will never use.
+    
+    A concrete example is the Apple/macOS skill set (apple-notes, apple-reminders, findmy, imessage). These are valid skills, but on non-macOS systems they still exist as bundled content and can resurface through sync/update behavior even though they are platform-specific and irrelevant for most installs.
+    https://github.com/NousResearch/hermes-agent/issues/19986
+    [embed] Make non-core bundled skills optional and keep the default install ... https://github.com/NousResearch/hermes-agent/issues/19986
+
+[2026-05-12T11:53:32.073000+00:00] nadeemamdev (id=1503726821223694427)
+    Did you see the Link announcement by Stripe? Why not use that
+    [reply to thatswhatshesaid2183 msg=1503530163890032750]
+
+[2026-05-12T12:18:08.748000+00:00] heathley (id=1503733014847295638)
+    I opened a fix for the WebUI model switch path resetting named custom providers to custom/main
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/24341
+    [embed] fix(webui): preserve named custom provider identity on model switch... https://github.com/NousResearch/hermes-agent/pull/24341
+
+[2026-05-12T12:37:42.054000+00:00] minddragon (id=1503737936049475757)
+    Soon 🙂
+    [reply to tiny_th_dev msg=1503556611250323516]
+
+[2026-05-12T12:56:45.097000+00:00] minddragon (id=1503742730319429752)
+    Also not sure where to post but an <#1145143867818119272> might be a good idea. Hermes is NOT affected by Tanstack (https://github.com/TanStack/router/issues/7383)
+    [embed] Several npm latest releases are compromised · Issue #7383 · TanSt... https://github.com/TanStack/router/issues/7383
+
+[2026-05-12T13:16:28.234000+00:00] quenviix (id=1503747692755685487)
+    https://github.com/NousResearch/hermes-agent/pull/24368
+    [embed] fix(gateway): pass the real session id into skill template substitu... https://github.com/NousResearch/hermes-agent/pull/24368
+
+[2026-05-12T13:43:42.721000+00:00] surya6276 (id=1503754548290781354)
+    https://github.com/SuryaXyz-art/NarrativeOS I have built NarrativeOS <:MONKAS:1151260450835681281>
+    [embed] GitHub - SuryaXyz-art/NarrativeOS https://github.com/SuryaXyz-art/NarrativeOS
+
+[2026-05-12T13:49:03.450000+00:00] yunofoot (id=1503755893525839963)
+    anyone know why /sessions doesn't work?
+
+[2026-05-12T14:05:41.758000+00:00] surya6276 (id=1503760080732946442)
+    can you elaborate more sr ?
+    [reply to yunofoot msg=1503755893525839963]
+
+[2026-05-12T14:16:25.310000+00:00] minddragon (id=1503762779985805444)
+    <@594553241006505996> It just says command not found
+
+[2026-05-12T14:16:50.498000+00:00] minddragon (id=1503762885631938610)
+    [attachment] CleanShot_2026-05-12_at_09.16.442x.png https://cdn.discordapp.com/attachments/1491258766648283238/1503762885417898105/CleanShot_2026-05-12_at_09.16.442x.png?ex=6a0487d2&is=6a033652&hm=b0599324bd4e0414f25fce30f8ed59748c0556b6f29d1e0a047c18fe2d80653a&
+

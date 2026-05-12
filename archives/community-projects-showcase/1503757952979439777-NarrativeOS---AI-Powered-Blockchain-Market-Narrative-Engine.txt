@@ -1,0 +1,14 @@
+# Thread 'NarrativeOS > AI-Powered Blockchain Market Narrative Engine' in forum #community-projects-showcase
+# thread_id=1503757952979439777 forum_id=1316137596535177246
+# Started 2026-05-12T14:24:24.219556+00:00
+
+[2026-05-12T13:57:14.462000+00:00] surya6276 (id=1503757952979439777)
+    NarrativeOS is an AI-powered market intelligence platform built around the powerful Hermes-4-70B model from Nous Research. It analyzes real-time blockchain market data, trending news, and macro events to detect emerging narratives before they become mainstream. The platform then generates trading insights, simplifies complex on-chain concepts, and creates Twitter-ready content automatically — helping traders and creators stay ahead of fast-moving digital asset markets in real time.
+    
+    Repo: https://github.com/SuryaXyz-art/NarrativeOS
+    [attachment] NarrativeOs.png https://cdn.discordapp.com/attachments/1503757952979439777/1503757953679757322/NarrativeOs.png?ex=6a04833a&is=6a0331ba&hm=7e9497aab61a5abe7b7dd591e9b07436d390ee1e8a68fb4b1b5bfcfdf590a942&
+    [embed] GitHub - SuryaXyz-art/NarrativeOS https://github.com/SuryaXyz-art/NarrativeOS
+
+[2026-05-12T14:09:58.577000+00:00] colmeio_66868 (id=1503761157910040716)
+    lets check where this habit hole ends
+

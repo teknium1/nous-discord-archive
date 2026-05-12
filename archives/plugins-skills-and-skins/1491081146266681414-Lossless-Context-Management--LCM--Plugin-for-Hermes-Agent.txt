@@ -1430,3 +1430,9 @@
     does LCM fill that niche?
     [embed] Karpathy's LLM Wiki - Full Beginner Setup Guide https://www.youtube.com/watch?v=iXd0t60YmMw
 
+[2026-05-12T12:53:18.745000+00:00] fleety13 (id=1503741864816152747)
+    i might be awkward as i explain the different roles, but LCM will keep your agent from holding too much information in the context window that makes it forget what and why you're doing. 
+    Writing a fiction book as a convenient example, that might mean forgetting some of the chracters or their relationships.  LCM helps with that aspect. 
+    LLM wiki can store knowledge or information in a durable way.   Keep structure of the book in there, save tha actual pages, your notes and planning all the content level and ideation information.
+    [reply to confusedxx msg=1503638351142584340]
+

@@ -128,3 +128,10 @@
 [2026-05-12T05:13:15.765000+00:00] ifreet_00706 (id=1503626089526722580)
     But I'll set up the WhatsApp gateway and try again then let you know
 
+[2026-05-12T09:02:39.851000+00:00] vayaperson (id=1503683820287692840)
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/V1.0.3-Beta
+    [embed] Release v1.0.3: The Stable Installer & Bridge Update 🚀 · Andori... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/V1.0.3-Beta
+
+[2026-05-12T09:03:01.161000+00:00] vayaperson (id=1503683909668311182)
+    Give it a try. Let me know if there's any error
+
