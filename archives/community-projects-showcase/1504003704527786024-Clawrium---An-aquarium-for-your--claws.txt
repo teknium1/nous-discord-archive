@@ -1,0 +1,15 @@
+# Thread 'Clawrium - An aquarium for your *claws' in forum #community-projects-showcase
+# thread_id=1504003704527786024 forum_id=1316137596535177246
+# Started 2026-05-13T08:42:14.039538+00:00
+
+[2026-05-13T06:13:46.197000+00:00] ric03uec (id=1504003704527786024)
+    Clawrium is a (kubectl styled) CLI to setup and manage a fleet of personal agents(Hermes, OC etc) on local network. I'm using this to personally manage 5 agents. https://ric03uec.github.io/clawrium/
+    
+    Features:
+    1. Standardized configuration management for multiple agents
+    2. Single CLI from a control box to manage all agents seamlessly 
+    3. Transport layer built on time-tested Ansible
+    4. Supports only basic functionality right now, PRs welcome!
+    [attachment] Screenshot_From_2026-05-12_23-13-33.png https://cdn.discordapp.com/attachments/1504003704527786024/1504003704792289470/Screenshot_From_2026-05-12_23-13-33.png?ex=6a05681a&is=6a04169a&hm=7dd145d84bb313120ccc5ca7cbe2908a053f21c76a2237ef81ad12a9b23bc345&
+    [embed] Manage Your AI Claw Fleet | Clawrium https://ric03uec.github.io/clawrium/
+

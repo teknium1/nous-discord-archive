@@ -126,3 +126,7 @@
     Could you open an issue on GitHub for this
     [reply to cappy7419 msg=1503918672207544490]
 
+[2026-05-13T07:55:33.723000+00:00] cappy7419 (id=1504029321348776066)
+    The difference is huge man, I'm still manually setting the last bits, but the way the same model runs with hermes it's way smoother, like running a better quality model
+    [reply to tdamre msg=1503921811325321286]
+

@@ -15366,3 +15366,227 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-13T02:48:13.171000+00:00] yerts (id=1503951976067764245)
     <:catlick:1151260427645366375>
 
+[2026-05-13T03:16:49.647000+00:00] selinchu (id=1503959175489781881)
+    Hey everyone, just opened a PR for improving `/branch` metadata fidelity. Basically, branched CLI/TUI sessions now keep the replay-related metadata intact  tool calls, reasoning fields, finish reasons, Codex items, etc. Previously those paths were mostly copying only role/content, while the gateway branch path already preserved the full metadata.
+    
+    https://github.com/NousResearch/hermes-agent/pull/24769
+    [embed] fix(branch): preserve tool and reasoning metadata during branching ... https://github.com/NousResearch/hermes-agent/pull/24769
+
+[2026-05-13T03:31:34.278000+00:00] kevins0792 (id=1503962885901123684)
+    Gentle bump on this in case it got buried. No rush.
+    [reply to kevins0792 msg=1503654027404120178]
+
+[2026-05-13T03:53:53.667000+00:00] eloklam (id=1503968503705894954)
+    Hermes TUI: added toast notifications, then wired /selectioncopy so mouse selections can auto-copy with a visible “Copied”toast. Thanks @opencode for inspiration:
+    
+    https://github.com/NousResearch/hermes-agent/pull/24585
+    
+    https://github.com/NousResearch/hermes-agent/pull/24596
+
+[2026-05-13T03:54:20.832000+00:00] tiny_th_dev (id=1503968617643905044)
+    When the PR I've proposed has a conflict because other things have been merged, is it acceptable that I'm rebasing & --force-with-lease or is it preferred to do a merge commit? https://github.com/NousResearch/hermes-agent/pull/16769  I've been rebasing & forcing.
+    [embed] feat(gateway): add Nostr NIP-17 private DM platform adapter by unsa... https://github.com/NousResearch/hermes-agent/pull/16769
+
+[2026-05-13T05:13:01.671000+00:00] tiz.io (id=1503988418278064148)
+    Hey folks! I'm Ian, I built Maindex (maindex.io), a structured memory graph API. I've really enjoyed Hermes and decided to build a memory provider plugin. I'd love to get it included alongside the other bundled providers.
+    
+    I followed the existing patterns pretty closely (used the Supermemory PR as a guide) and have a branch ready with the plugin implementation, 45 tests, and all the docs updates. Only external dep is httpx.
+    
+    Before I open a PR into the 5,000+ queue, figured I'd say hi first and ask: is there a preferred reviewer for memory provider contributions, or any guidance I should know about?
+    
+    Happy to share more details if anyone's curious. Thanks!
+
+[2026-05-13T06:25:44.114000+00:00] eva_electricsheep (id=1504006715690061995)
+    Are there any memory systems for hermes like LCM?
+
+[2026-05-13T06:26:30.490000+00:00] jez_wikitribune (id=1504006910205100062)
+    I'm not familiar with LCM in particular, but I use a combination of "Hindsight" and "Mempalace" that works pretty well for me
+    [reply to eva_electricsheep msg=1504006715690061995]
+
+[2026-05-13T06:27:24.311000+00:00] eva_electricsheep (id=1504007135946608642)
+    lossless claw, compacted chunks 20k ish that go to depths up and down to original source so you never lose anything
+
+[2026-05-13T06:27:44.453000+00:00] jez_wikitribune (id=1504007220428275734)
+    Hermes already has built-in functionality for context compression
+
+[2026-05-13T06:27:59.933000+00:00] eva_electricsheep (id=1504007285356367933)
+    right every system does but HOW it compacts, most are just dumb compaction
+
+[2026-05-13T06:28:19.894000+00:00] jez_wikitribune (id=1504007369078603778)
+    configurable in the main yaml file, I find the default threshold of 0.5 is too low and I prefer more like 0.8; the target ratio of 0.2 is also a bit low for my tastes and I keep it at 0.3
+
+[2026-05-13T06:28:31.252000+00:00] eva_electricsheep (id=1504007416717512745)
+    yeah that sounds like dumb compaction
+
+[2026-05-13T06:28:35.487000+00:00] jez_wikitribune (id=1504007434480652369)
+    totally yeah, I would love to learn more about clever compaction
+
+[2026-05-13T06:28:36.442000+00:00] eva_electricsheep (id=1504007438486212770)
+    lossy
+
+[2026-05-13T06:28:42.959000+00:00] jez_wikitribune (id=1504007465820356638)
+    it's certainly lossy "dumb" compaction yes
+
+[2026-05-13T06:29:00.744000+00:00] jez_wikitribune (id=1504007540416053288)
+    this "lossless context management" sounds lovely
+
+[2026-05-13T06:29:31.538000+00:00] eva_electricsheep (id=1504007669575581727)
+    millions of claws use it but people are porting to hermes so wondering if we need to port it over too https://github.com/Martian-Engineering/lossless-claw
+
+[2026-05-13T06:30:02.691000+00:00] eva_electricsheep (id=1504007800240734329)
+    will look into the code but wanted to ask devs first
+
+[2026-05-13T06:30:13.304000+00:00] jez_wikitribune (id=1504007844754882630)
+    https://github.com/NousResearch/hermes-agent/issues/15570
+    [embed] feat: lcm — self-hosted long-term context memory plugin · Issue ... https://github.com/NousResearch/hermes-agent/issues/15570
+
+[2026-05-13T06:30:24.230000+00:00] jez_wikitribune (id=1504007890581852278)
+    there are some related open issues about it on the gh
+
+[2026-05-13T06:30:56.313000+00:00] eva_electricsheep (id=1504008025147576340)
+    ah got it well I got embeddings and the whole shebang + near perfect mem benchmarks
+
+[2026-05-13T06:31:26.623000+00:00] jez_wikitribune (id=1504008152276926585)
+    https://github.com/NousResearch/hermes-agent/pull/23689
+    this seems also related
+    [embed] feat(lcm): add read-only session recall tools by runrelay · Pull R... https://github.com/NousResearch/hermes-agent/pull/23689
+
+[2026-05-13T06:31:45.955000+00:00] jez_wikitribune (id=1504008233361215570)
+    (this is not to shut you down, on the contrary I would love to learn more)
+
+[2026-05-13T06:32:04.553000+00:00] eva_electricsheep (id=1504008311367012382)
+    they are too basic
+
+[2026-05-13T06:32:14.437000+00:00] eva_electricsheep (id=1504008352823509186)
+    the actual code to do it is 10's of thousands of lines
+
+[2026-05-13T06:32:21.703000+00:00] jez_wikitribune (id=1504008383299059752)
+    they do seem basic yeah, I shall inspect lossless claw
+
+[2026-05-13T06:32:24.662000+00:00] eva_electricsheep (id=1504008395710271569)
+    see my git haha
+
+[2026-05-13T06:32:56.120000+00:00] eva_electricsheep (id=1504008527654420551)
+    I'll start building a version today, I personally have never used hermes but my smb customers are requesting change overs so I have to support
+
+[2026-05-13T06:34:35.623000+00:00] eva_electricsheep (id=1504008945000513620)
+    top 10 contributor to OC (for what its worth 👀) bug fixer not creator 😂 so yall will see more of me here, porting over a lot of code.
+
+[2026-05-13T06:35:11.901000+00:00] jez_wikitribune (id=1504009097161478155)
+    > two deterministic, engine-managed mechanisms: 
+    > - **recursive context compression,** in which a hierarchical summary DAG automatically compacts older messages while retaining lossless pointers to every original; and 
+    > - **recursive task partitioning,** in which engine-managed parallel primitives like `LLM-Map` replace model-written loops
+    from <https://papers.voltropy.com/LCM>
+    
+    neato!
+
+[2026-05-13T06:35:38.877000+00:00] eva_electricsheep (id=1504009210306760817)
+    we found a way to double 5.5's context, it's experimental but works well
+
+[2026-05-13T06:36:38.668000+00:00] eva_electricsheep (id=1504009461088387092)
+    OC breaks my plugins every release and we spend more time bug fixing than shipping so my customers are hoping for more stability here
+
+[2026-05-13T06:37:02.945000+00:00] jez_wikitribune (id=1504009562913636383)
+    haha yeahhh that's pretty much how I ended up here
+
+[2026-05-13T06:37:47.125000+00:00] jez_wikitribune (id=1504009748217856011)
+    I have no particular loyalties to AI orchestration frameworks, they are all so new, but I have found Hermes to be a lot more stable of a project while also having quite clean devops with their team
+
+[2026-05-13T06:38:07.413000+00:00] jez_wikitribune (id=1504009833312026695)
+    dunno what the Nous secret sauce is for managing all their community contributions but they seem to do it quite well
+
+[2026-05-13T06:38:07.719000+00:00] eva_electricsheep (id=1504009834595618956)
+    do we have a PR limit on the repo?
+
+[2026-05-13T06:38:21.037000+00:00] jez_wikitribune (id=1504009890455228416)
+    not as far as I know
+    [reply to eva_electricsheep msg=1504009834595618956]
+
+[2026-05-13T06:39:23.203000+00:00] eva_electricsheep (id=1504010151198330911)
+    okay I'll start porting will take a few days, I can already see about 300k loc and features that are portable/missing
+
+[2026-05-13T06:39:40.339000+00:00] jez_wikitribune (id=1504010223072051262)
+    best of luck, comrade
+
+[2026-05-13T06:40:12.068000+00:00] eva_electricsheep (id=1504010356153126922)
+    might take a week, I burnt out 6 codex accounts debugging latest OC betas
+
+[2026-05-13T06:40:38.222000+00:00] jez_wikitribune (id=1504010465850818681)
+    take note that Nous Portal is providing Qwen 3.6 Plus for free right now
+
+[2026-05-13T06:41:09.876000+00:00] jez_wikitribune (id=1504010598617321596)
+    I've also been using OpenRouter's GLM 4.5 "Air" free as well, good to get those extra tokens where you can, especially for subagent dispatches and whatnot 😋
+
+[2026-05-13T06:41:16.222000+00:00] eva_electricsheep (id=1504010625234239610)
+    any maintainers I should know/meet? OC has 70 but only a few active
+
+[2026-05-13T06:42:01.303000+00:00] jez_wikitribune (id=1504010814317789356)
+    mmm teknium and sovthpaw are two names that come to mind but try not to add to the ping-pile too hard haha!
+
+[2026-05-13T06:42:27.462000+00:00] jez_wikitribune (id=1504010924036718694)
+    (bruh Discord why did you put that text back in lol)
+
+[2026-05-13T06:42:28.859000+00:00] eva_electricsheep (id=1504010929896161333)
+    cool I'll keep lookout for them
+
+[2026-05-13T06:43:23.227000+00:00] jez_wikitribune (id=1504011157931954266)
+    wait electric sheep?? do you know draves????
+
+[2026-05-13T06:43:26.815000+00:00] jez_wikitribune (id=1504011172980981791)
+    👀
+
+[2026-05-13T06:51:03.860000+00:00] undifined. (id=1504013089966788863)
+    There is already systems that can do 12 MB and  100 MB context.  But I presume they are just doing a small agent in front that feeds exactly what they need to a larger context processor,  step by step
+    [reply to eva_electricsheep msg=1504009210306760817]
+
+[2026-05-13T06:53:33.329000+00:00] eva_electricsheep (id=1504013716885209128)
+    nope diff project, originally built memory company then it became a commodity
+    [reply to jez_wikitribune msg=1504011157931954266]
+
+[2026-05-13T06:53:51.757000+00:00] eva_electricsheep (id=1504013794177843220)
+    now we build and manage company brains for SMB > forward ai deployment into SMB
+
+[2026-05-13T06:54:32.519000+00:00] eva_electricsheep (id=1504013965146066944)
+    that's true most media has to be chunked and handled by side process/agents
+    [reply to undifined. msg=1504013089966788863]
+
+[2026-05-13T06:54:37.878000+00:00] eva_electricsheep (id=1504013987623207043)
+    I'm talking about coding runs
+
+[2026-05-13T06:58:46.212000+00:00] eva_electricsheep (id=1504015029211496599)
+    the biggest issue being large tool calls eating up context and limiting total context to about 45-55 minutes before a compaction
+
+[2026-05-13T07:08:53.914000+00:00] tiz.io (id=1504017578098557008)
+    <@1486446814029807787> I've been toying with a context compaction tool of my own design I call Accordion, but frankly I feel like it's well trod territory:
+    It taps into the real-time output stream, vectorizing everything in the conversation into an accordion-compressed session index. On each turn, it free-associates against both the session context and stateful memory, runs the hits through a reranker to filter noise, and surfaces the most relevant connections as 'recollections' before the next thought. When the session ends, a janitor process scans for memorable chunks and promotes them to stateful memory.
+
+[2026-05-13T07:19:08.206000+00:00] eva_electricsheep (id=1504020154626084965)
+    Funny you say accordion I call my latest codex patch accordion 😂. Our cortex system does that, in real testing we found it accidentally prompt injections short prompts
+
+[2026-05-13T07:20:07.343000+00:00] eva_electricsheep (id=1504020402664505364)
+    We stopped using it as prompt level and just use lcm grep enrichment with levels of leaf summaries and daily/weekly/monthly rollups so the agent always keeps a small index in context of where it is “in time”
+
+[2026-05-13T07:20:36.674000+00:00] eva_electricsheep (id=1504020525687635978)
+    So an agent can go as small as 2k tokens on something all the way to the source with embeddings and rerankers built into tool
+
+[2026-05-13T07:21:39.147000+00:00] eva_electricsheep (id=1504020787718525019)
+    Goal being “agent has perfect memory and can converse as a person quickly on any memory in history without rewriting/ie can context switch with a chunk size basis wise to match its context window” call it active context management
+
+[2026-05-13T07:43:36.783000+00:00] tiz.io (id=1504026314284335184)
+    That's spot on. Is this OSS? I don't want to reinvent the wheel. Even if it isn't, I'd love to put it to use.
+
+[2026-05-13T07:46:28.093000+00:00] eva_electricsheep (id=1504027032810422283)
+    yeah it is
+
+[2026-05-13T07:46:32.318000+00:00] eva_electricsheep (id=1504027050531360909)
+    that's why I'm porting it over to hermes
+
+[2026-05-13T07:47:17.768000+00:00] eva_electricsheep (id=1504027241162608640)
+    will take me a few hours it's a lot of code but 60% of it is actually to deal with OC's jsonl, don't have that issue with hermes
+
+[2026-05-13T07:48:24.327000+00:00] eva_electricsheep (id=1504027520331157604)
+    fun fact I found mentions in hermes code of my code haha
+
+[2026-05-13T07:48:47.281000+00:00] eva_electricsheep (id=1504027616607211620)
+    The team must have knew this day would come and left comments where to plugin 🖤
+

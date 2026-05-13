@@ -135,3 +135,25 @@
 [2026-05-12T09:03:01.161000+00:00] vayaperson (id=1503683909668311182)
     Give it a try. Let me know if there's any error
 
+[2026-05-13T04:14:00.199000+00:00] ifreet_00706 (id=1503973564267761674)
+    Hey
+    [reply to vayaperson msg=1503683909668311182]
+
+[2026-05-13T04:14:26.145000+00:00] ifreet_00706 (id=1503973673093169203)
+    Tried it again after setting up the WhatsApp Hermes gateway and everything seems to be working fine.
+
+[2026-05-13T05:03:00.950000+00:00] ifreet_00706 (id=1503985898671308853)
+    That said I'm just getting started haven't added it to any groups or anything yet just getting going.
+
+[2026-05-13T06:48:01.707000+00:00] vayaperson (id=1504012325961732156)
+    Yes os the endpoint
+
+[2026-05-13T06:48:16.812000+00:00] vayaperson (id=1504012389316694026)
+    I'm solving ir right now 🙂
+
+[2026-05-13T06:49:00.333000+00:00] vayaperson (id=1504012571857129472)
+    I've just format my pc to be able to test anys It seems to be working now, let me a free hours to verify
+
+[2026-05-13T06:49:13.335000+00:00] vayaperson (id=1504012626391203900)
+    And i'll upload
+

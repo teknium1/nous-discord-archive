@@ -11,3 +11,6 @@
       https://github.com/eloklam/oh-my-hermes-agent
     [embed] GitHub - eloklam/oh-my-hermes-agent: OMH repo - private review https://github.com/eloklam/oh-my-hermes-agent
 
+[2026-05-13T07:42:48.265000+00:00] charanis (id=1504026110785228891)
+    Hey there. Any case studies? I'm considering giving it a try
+

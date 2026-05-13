@@ -32,3 +32,13 @@
     - Use the `hermes tools` command to disable unused tools.
     - Exclude irrelevant tools (apparently even stripping `browser_ tools` for messaging platforms can save over 1,200 tokens per request)
 
+[2026-05-13T07:44:26.157000+00:00] charanis (id=1504026521373769768)
+    I likle that your avatar is a goose
+
+[2026-05-13T08:19:34.563000+00:00] wysie_ (id=1504035364669624441)
+    Stuff like Omni and RTK  should help also.
+
+[2026-05-13T08:22:52.583000+00:00] charanis (id=1504036195225833583)
+    are they complimentary?
+    [reply to wysie_ msg=1504035364669624441]
+

@@ -846,3 +846,8 @@
 [2026-05-13T02:20:38.399000+00:00] flocka (id=1503945035450941510)
     Is there support for SSH Tunnel from Windows into hermes in a docker container on a separate ubuntu server in my network?
 
+[2026-05-13T08:25:39.800000+00:00] fathah. (id=1504036896584765530)
+    Please check downloads https://github.com/fathah/hermes-desktop/releases/tag/v0.3.6
+    [embed] Release Hermes Desktop v0.3.6 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.3.6
+    [reply to grah4na msg=1503831648976765164]
+
