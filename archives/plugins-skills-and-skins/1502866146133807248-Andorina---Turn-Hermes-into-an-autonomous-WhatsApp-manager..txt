@@ -157,3 +157,22 @@
 [2026-05-13T06:49:13.335000+00:00] vayaperson (id=1504012626391203900)
     And i'll upload
 
+[2026-05-13T14:35:05.706000+00:00] vayaperson (id=1504129867132960849)
+    <@1439557795627270265> hey I just added you as friend, I have a new functional version to test. If you are interested I can send you by private to test 🙂
+
+[2026-05-13T14:39:58.981000+00:00] vayaperson (id=1504131097217466508)
+    📣 **Looking for testers for my new skill version!**
+    
+    Hey everyone! 👋
+    
+    I've just finished a new version of my skill and tested it with an external team — and it worked perfectly! 🎉 Now I want to expand the testing before the official release.
+    
+    🔗 If you want to see what it's about, check it out here:
+    👉 https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+    
+    **Want to be a tester?**
+    The new version isn't publicly available yet — just DM me and I'll send it over directly.
+    
+    Honest feedback welcome, all experience levels appreciated. The more eyes the better! 🙌
+    [embed] Andoriña | Autonomous WhatsApp Manager for Hermes https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
+

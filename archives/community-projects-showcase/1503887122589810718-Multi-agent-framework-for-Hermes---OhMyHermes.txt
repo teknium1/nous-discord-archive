@@ -14,3 +14,13 @@
 [2026-05-13T07:42:48.265000+00:00] charanis (id=1504026110785228891)
     Hey there. Any case studies? I'm considering giving it a try
 
+[2026-05-13T17:33:36.261000+00:00] eloklam (id=1504174790456639568)
+    Its just a simple routing for cost.
+    [reply to charanis msg=1504026110785228891]
+
+[2026-05-13T17:34:00.817000+00:00] eloklam (id=1504174893451841596)
+    Orchestrator uses GPT, workers uses OSS models.
+
+[2026-05-13T17:35:27.358000+00:00] eloklam (id=1504175256430973148)
+    What make my repo different is custom SOUL/ system prompts, eg so the orchestrator won’t do the work itself.
+

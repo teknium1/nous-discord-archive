@@ -185,3 +185,7 @@
     Threads crater even while usage expands and skill usage expands.
     [attachment] Screenshot_2026-05-12_at_10.44.57_AM.png https://cdn.discordapp.com/attachments/1501246103058649088/1503770165387460738/Screenshot_2026-05-12_at_10.44.57_AM.png?ex=6a048e9a&is=6a033d1a&hm=d03fbf0117ef6b2a89e1c199c6909024dc0b157bd7d433091c885e270a649f76&
 
+[2026-05-13T16:09:16.615000+00:00] tourettesgaming (id=1504153568763187231)
+    The Hive is Live
+    [attachment] Hive_Final_Promo.mp4 https://cdn.discordapp.com/attachments/1501246103058649088/1504153570298298488/Hive_Final_Promo.mp4?ex=6a05f3ac&is=6a04a22c&hm=904f4a584fdc4a829790fc8f54abffd5c0f75af2017545609baa35ef7a5a2ceb&
+

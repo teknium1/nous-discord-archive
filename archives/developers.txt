@@ -15816,3 +15816,176 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Nice will check it out in a bit
     [reply to 0zi57 msg=1504125354959179826]
 
+[2026-05-13T14:29:02.839000+00:00] jez_wikitribune (id=1504128345158193273)
+    https://github.com/NousResearch/hermes-agent/pull/25025
+    [embed] Use backticks instead of quotes for tool preview in gateway message... https://github.com/NousResearch/hermes-agent/pull/25025
+    [reply to jez_wikitribune msg=1504117916952694856]
+
+[2026-05-13T16:00:13.647000+00:00] socialprescribing (id=1504151291390333082)
+    <@387972437901312000> would you be interested to collab for a healthcare hackathon? 
+    
+    I am a pharmacist based in London and I work for the NHS.
+
+[2026-05-13T16:04:22.201000+00:00] socialprescribing (id=1504152333901107200)
+    I am the organiser of the OpenClaw Clinical Hackathon and I am keen to organise one for Hermes:
+    https://clinicalhackathon.com/
+    [embed] OpenClaw Clinical Hackathon · 28 March 2026 https://clinicalhackathon.com/
+
+[2026-05-13T16:04:35.812000+00:00] teknium (id=1504152390989906081)
+    <@808920669147889664> can help determine if we can support if you want to hit him up!
+    [reply to socialprescribing msg=1504151291390333082]
+
+[2026-05-13T16:04:53.680000+00:00] socialprescribing (id=1504152465933860994)
+    Thank you boss 🫡
+    [reply to teknium msg=1504152390989906081]
+
+[2026-05-13T16:06:57.868000+00:00] elkosmas (id=1504152986815955054)
+    awesome sleep technologist adjunct to a University hospital clinic from Greece here I bet there are other healthcare professionals in <#1476316988992258300> that might be into that
+
+[2026-05-13T16:07:25.175000+00:00] socialprescribing (id=1504153101349687479)
+    Super cool 🔥💯
+    [reply to elkosmas msg=1504152986815955054]
+
+[2026-05-13T16:12:44.776000+00:00] .elkim (id=1504154441853702275)
+    sorry for self-plug but who is interested in healthcare check out my project https://getbased.health/ - works with Hermes 🙂
+    [embed] getbased — Open-Source Blood Work Dashboard with AI https://getbased.health/
+
+[2026-05-13T16:13:55.394000+00:00] .elkim (id=1504154738046795849)
+    <@387972437901312000> would it be possible for an agent to get a correct context when I reply to cronjob reminder in the chat?
+
+[2026-05-13T16:21:08.542000+00:00] jessleenyc (id=1504156554801189065)
+    👋 <@387972437901312000> <@808920669147889664> we're planning to run a community challenge (i.e. hackathon) on dev.to all about Hermes and would love to collab in a more official capacity if you're open to chatting.
+
+[2026-05-13T16:47:06.342000+00:00] zyrxtrx (id=1504163088688222368)
+    I’ve just opened a PR to harden the Google Chat OAuth persistence. I noticed the plugin was still using direct write_text() calls, which could lead to partial writes or loose file permissions.
+    
+    check the details here https://github.com/NousResearch/hermes-agent/pull/24788
+    [embed] Harden Google Chat OAuth credential persistence by Zyrixtrex · Pul... https://github.com/NousResearch/hermes-agent/pull/24788
+
+[2026-05-13T16:49:58.813000+00:00] spranab (id=1504163812083896410)
+    <@387972437901312000> have create a PR long back for addig YantrikDB as a memory provider. Could you please take a look?
+    
+    https://github.com/NousResearch/hermes-agent/pull/9989
+    [embed] Add YantrikDB memory provider plugin by spranab · Pull Request #99... https://github.com/NousResearch/hermes-agent/pull/9989
+
+[2026-05-13T16:50:26.119000+00:00] teknium (id=1504163926613426216)
+    We arent adding new memory providers at this time, the maintainence burden is too high
+    [reply to spranab msg=1504163812083896410]
+
+[2026-05-13T16:50:39.236000+00:00] teknium (id=1504163981630247103)
+    Best option is create a standalone plugin and market it as installable
+
+[2026-05-13T16:51:00.356000+00:00] teknium (id=1504164070213943357)
+    Feel free to share it in <#1485392832154832906>
+
+[2026-05-13T16:51:51.335000+00:00] spranab (id=1504164284035240109)
+    Thanks <@387972437901312000> I have already done that since there was a lag: https://github.com/yantrikos/yantrikdb-hermes-plugin
+    [embed] GitHub - yantrikos/yantrikdb-hermes-plugin: YantrikDB memory provid... https://github.com/yantrikos/yantrikdb-hermes-plugin
+
+[2026-05-13T16:53:02.730000+00:00] teknium (id=1504164583487570121)
+    It’ll be a lot easier even for you to maintain because we could take a long time to merge and review fixes that you may need to make too <:pepoPray:1285298772439466054>
+    [reply to spranab msg=1504164284035240109]
+
+[2026-05-13T17:00:22.873000+00:00] jperezrealini (id=1504166429581119559)
+    +1 on this. conversation with the agent feels unnatural when asking them to remind me of something. disabling response wrapping is a good first step, but it would be nice to have that response present in the conversation context.
+    [reply to .elkim msg=1504154738046795849]
+
+[2026-05-13T17:03:34.414000+00:00] nexus.dart.bson (id=1504167232962297956)
+    OOGA GANG
+
+[2026-05-13T17:36:07.424000+00:00] eva_electricsheep (id=1504175424480219319)
+    Hey T, what about LCM? I'm finally making the move over and porting LCM over (saw you built hooks for it and it's commented in the code), will have an official port soon.
+    [reply to teknium msg=1504163926613426216]
+
+[2026-05-13T17:54:19.468000+00:00] dirty_al (id=1504180004844605541)
+    This PR adds support for Hermes to listen to slack create channeo events and join them https://github.com/NousResearch/hermes-agent/pull/23929
+    [embed] feat(slack): auto-join channels matching a configurable regex on ch... https://github.com/NousResearch/hermes-agent/pull/23929
+
+[2026-05-13T17:55:01.624000+00:00] dirty_al (id=1504180181659680840)
+    This PR allows all users on the channel it just joined,to interact with Hermes bot https://github.com/NousResearch/hermes-agent/pull/23955
+    [embed] feat(auth): add allow_all_users config key to bypass allowlist chec... https://github.com/NousResearch/hermes-agent/pull/23955
+
+[2026-05-13T17:56:01.125000+00:00] dirty_al (id=1504180431225094325)
+    This PR fixes a problem Hermes has, it not always send message on thread, it polutes the slak=ck channel, idealy, it should start a new messa with a title as continue posting inside a thread https://github.com/NousResearch/hermes-agent/pull/24332
+    [embed] fix: Slack thread routing — extend _SLACK_TARGET_RE to capture th... https://github.com/NousResearch/hermes-agent/pull/24332
+
+[2026-05-13T17:57:11.994000+00:00] dirty_al (id=1504180728471097414)
+    This PR allows Hermes to upload files do Slack, as some of the other messaging platforms already support https://github.com/NousResearch/hermes-agent/pull/23913
+    [embed] feat(slack): native MEDIA file upload via files:write scope by dirt... https://github.com/NousResearch/hermes-agent/pull/23913
+
+[2026-05-13T18:22:06.288000+00:00] teknium (id=1504186995994525706)
+    I think there's several LCM plugins, check <#1485392832154832906>
+    [reply to eva_electricsheep msg=1504175424480219319]
+
+[2026-05-13T18:30:12.030000+00:00] m0n5t3r (id=1504189033344139316)
+    docker lazy install worked now (thanks <@466492386873311235>), but...
+    ```
+    2026-05-13 21:21:36,826 WARNING mau.crypto: No one-time keys nor device keys got when trying to share keys
+    2026-05-13 21:21:37,388 INFO gateway.platforms.matrix: Matrix: cross-signing verified via recovery key
+    2026-05-13 21:21:37,388 INFO gateway.platforms.matrix: Matrix: E2EE enabled (store: /opt/data/platforms/matrix/store/crypto.db, device_id=CDXQQMRYRP)
+    2026-05-13 21:21:37,397 WARNING gateway.run: Reconnect matrix error: Invalid event type, next retry in 60s
+    2026-05-13 21:22:37,462 INFO gateway.run: Reconnecting matrix (attempt 3/20)...
+    2026-05-13 21:22:37,775 INFO gateway.platforms.matrix: Matrix: using access token for @dendrite:matrix.m0n5t3r.info (device CDXQQMRYRP)
+    2026-05-13 21:22:37,937 WARNING mau.crypto: No one-time keys nor device keys got when trying to share keys
+    2026-05-13 21:22:38,490 INFO gateway.platforms.matrix: Matrix: cross-signing verified via recovery key
+    2026-05-13 21:22:38,491 INFO gateway.platforms.matrix: Matrix: E2EE enabled (store: /opt/data/platforms/matrix/store/crypto.db, device_id=CDXQQMRYRP)
+    2026-05-13 21:22:38,497 WARNING gateway.run: Reconnect matrix error: Invalid event type, next retry in 120s
+    2026-05-13 21:24:38,637 INFO gateway.run: Reconnecting matrix (attempt 4/20)...
+    2026-05-13 21:24:38,969 INFO gateway.platforms.matrix: Matrix: using access token for @dendrite:matrix.m0n5t3r.info (device CDXQQMRYRP)
+    2026-05-13 21:24:39,139 WARNING mau.crypto: No one-time keys nor device keys got when trying to share keys
+    2026-05-13 21:24:39,727 INFO gateway.platforms.matrix: Matrix: cross-signing verified via recovery key
+    2026-05-13 21:24:39,728 INFO gateway.platforms.matrix: Matrix: E2EE enabled (store: /opt/data/platforms/matrix/store/crypto.db, device_id=CDXQQMRYRP)
+    2026-05-13 21:24:39,861 WARNING gateway.run: Reconnect matrix error: Invalid event type, next retry in 240s
+    ```
+
+[2026-05-13T18:32:27.773000+00:00] glitchglitchglitch (id=1504189602691420321)
+    if u can throw this onto a support-thread, i can help out once i'm awake 🤠
+    [reply to m0n5t3r msg=1504189033344139316]
+
+[2026-05-13T18:49:16.501000+00:00] muskibro (id=1504193833603174611)
+    Opened a PR for the kanban dispatcher bug <@387972437901312000> 
+    Problem: shutil.which("hermes") was returning None in certain environments — even though the binary was installed at /usr/local/bin/hermes and PATH was correctly set. This caused the kanban dispatcher to deadlock with 0 workers spawned.
+    Fix: Added a hardcoded fallback path in _resolve_hermes_bin(). If shutil.which() fails, it now checks whether /usr/local/bin/hermes exists and is executable before falling back to sys.executable.   
+    PR:https://github.com/NousResearch/hermes-agent/pull/24517
+    [embed] fix: add hardcoded fallback path in _resolve_hermes_bin for symlink... https://github.com/NousResearch/hermes-agent/pull/24517
+
+[2026-05-13T18:58:58.140000+00:00] gille (id=1504196273174085913)
+    these PRs would be helpful for windows.... wink wink... nudge nudge...  https://github.com/NousResearch/hermes-agent/pull/13368 https://github.com/NousResearch/hermes-agent/pull/25090 think that unlocks --tui from failing to rebuild n fun stuff like that
+    [embed] fix(web): cross-platform sync-assets + surface build errors on fail... https://github.com/NousResearch/hermes-agent/pull/13368
+    [embed] fix(web): use Node.js for sync-assets instead of Unix rm/cp by ms-a... https://github.com/NousResearch/hermes-agent/pull/25090
+
+[2026-05-13T19:03:42.579000+00:00] m0n5t3r (id=1504197466197594292)
+    https://discord.com/channels/1053877538025386074/1504196569170186290 - turns out it works after restart, so something probably fails to load / initialize after lazy install
+    [reply to glitchglitchglitch msg=1504189602691420321]
+
+[2026-05-13T19:08:52.975000+00:00] eva_electricsheep (id=1504198768092909568)
+    Reviewing, not a half bad job porting my code over- just missing a lot still
+    [reply to teknium msg=1504186995994525706]
+
+[2026-05-13T19:09:27.666000+00:00] eva_electricsheep (id=1504198913597640916)
+    Readme's still written by me from months ago, albeit most recent fixes have been OC breaking it 🫪
+
+[2026-05-13T19:12:28.693000+00:00] eva_electricsheep (id=1504199672879644904)
+    Needs about 100k more LOC
+
+[2026-05-13T19:18:22.570000+00:00] eloklam (id=1504201157147496601)
+    Hermes new PR: tool-created Kanban tasks no longer finish silently. 
+    
+    What changed: tool-created tasks now auto-subscribe their origin chat/thread from the gateway session, and child tasks copy parent subscriptions. So nothing finishes or blocks quietly anymore.
+    
+    https://github.com/NousResearch/hermes-agent/pull/25195
+
+[2026-05-13T19:28:25.232000+00:00] cripacx (id=1504203684894998589)
+    Anyone knows how to spin up an hermes agent in a docker container to seperate agents for paperclip?
+
+[2026-05-13T19:32:27.038000+00:00] teknium (id=1504204699103133727)
+    and thats why we want em all to be external plugins 😄
+    [reply to eva_electricsheep msg=1504199672879644904]
+
+[2026-05-13T19:35:44.624000+00:00] eva_electricsheep (id=1504205527838752838)
+    Same I just finished OpenClaws new sdk
+    [reply to teknium msg=1504204699103133727]
+
+[2026-05-13T19:37:07.120000+00:00] eva_electricsheep (id=1504205873852186778)
+    Spent last few hours getting up to speed on hermes. The code is much uh cleaner than I’m used to
+

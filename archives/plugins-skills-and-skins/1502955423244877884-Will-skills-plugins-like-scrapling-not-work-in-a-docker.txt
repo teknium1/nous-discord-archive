@@ -5,3 +5,6 @@
 [2026-05-10T08:48:16.463000+00:00] hydraxiann (id=1502955423244877884)
     As hermes apparently stated it uses debian trixie, which ships python 3.13 with no pip, so it can't pip install dependencies for that plugin apparently.
 
+[2026-05-13T17:24:46.969000+00:00] bert_71849 (id=1504172570445091037)
+    You can use `uv pip install`
+

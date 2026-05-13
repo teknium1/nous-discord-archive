@@ -45,3 +45,26 @@
 [2026-05-13T12:28:51.632000+00:00] wysie_ (id=1504098099163828305)
     Technically I think u can use both but I'm only using Omni for now.
 
+[2026-05-13T16:58:49.773000+00:00] tomrevo.x (id=1504166039091417108)
+    I'm using Headroom where the LLM can judge when to use it and RTK now supports Hermes but only in the RC versions right now.
+    
+    https://github.com/chopratejas/headroom
+    https://github.com/rtk-ai/rtk#quick-start
+    [embed] GitHub - chopratejas/headroom: The Context Optimization Layer for L... https://github.com/chopratejas/headroom
+    [embed] GitHub - rtk-ai/rtk: CLI proxy that reduces LLM token consumption b... https://github.com/rtk-ai/rtk
+    [reply to wysie_ msg=1504035364669624441]
+
+[2026-05-13T17:05:03.770000+00:00] wysie_ (id=1504167607748792420)
+    there's a few RTK plugins for hermes that works as well (but u need rtk installed also)
+
+[2026-05-13T17:05:58.325000+00:00] wysie_ (id=1504167836568784949)
+    does headroom already use RTK (somewhat):
+    
+    Attribution. Headroom ships with the excellent RTK binary for shell-output rewriting — git show --short, scoped ls, summarized installers. Huge thanks to the RTK team; their tool is a first-class part of our stack, and Headroom compresses everything downstream of it. Headroom can also use lean-ctx as the selected CLI context tool; set HEADROOM_CONTEXT_TOOL=lean-ctx before running headroom wrap ....
+
+[2026-05-13T17:08:51.440000+00:00] tomrevo.x (id=1504168562665853158)
+    Cool, I didn't know that, but I'm using headroom for sub-agents to reduce their context window while RTK is for results of bash calls.
+
+[2026-05-13T17:15:47.649000+00:00] tomrevo.x (id=1504170308372795434)
+    The reversibility I thought to be useful for that usecase
+

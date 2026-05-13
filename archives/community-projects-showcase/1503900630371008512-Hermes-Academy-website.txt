@@ -9,3 +9,9 @@
     [attachment] brave_screenshot_hermez-academy.pgs.sh.png https://cdn.discordapp.com/attachments/1503900630371008512/1503900630631317664/brave_screenshot_hermez-academy.pgs.sh.png?ex=6a05081b&is=6a03b69b&hm=72fb2017fe70d346a70e7027e3c4aa4789f89001a3934f4240a20d298409ca61&
     [embed] GitHub - jcrabapple/hermes-academy: Structured self-paced learning ... https://github.com/jcrabapple/hermes-academy
 
+[2026-05-13T18:46:03.923000+00:00] marcul1x (id=1504193025872494633)
+    <@460986566022660097> Fantastic Hermes mastery! Thanks mate!
+
+[2026-05-13T19:43:03.945000+00:00] jcrabapple (id=1504207370484584508)
+    Feel free to fork it and submit a PR if you have ideas or improvements
+

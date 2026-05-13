@@ -1,0 +1,34 @@
+# Thread 'Cognitive Memory For Hermes' in forum #plugins-skills-and-skins
+# thread_id=1504168688759078952 forum_id=1485392832154832906
+# Started 2026-05-13T19:54:59.144940+00:00
+
+[2026-05-13T17:09:21.503000+00:00] spranab (id=1504168688759078952)
+    https://github.com/yantrikos/yantrikdb-hermes-plugin
+    
+    I have created the plugin some times back. Now thought to share here since <@387972437901312000> suggested to post here.
+    
+    yantrikdb-hermes-plugin is based on YantrikDB which is a cognitive persistent memory for AI.
+    
+    **For memory it supports:**
+    
+    **remember **- store with importance + domain metadata
+    **recall **- semantic search ranked by relevance × recency × importance
+    **forget **- tombstone (soft-delete) by memory ID
+    **think **- bounded maintenance pass: canonicalise, conflict-scan
+    **conflicts **- list open contradictions for the agent to resolve
+    **resolve_conflict **- close via keep_winner / merge / keep_both / dismiss
+    **relate **- record knowledge-graph edge between two entities
+    **stats** - operational snapshot per namespace
+    
+    **Skills / procedural memory (opt-in, v0.3.0+)**
+    skill_define / skill_search / skill_outcome for agent-authored procedural patterns
+    Disabled by default - tool schema unchanged unless YANTRIKDB_SKILLS_ENABLED=true
+    Stored in shared skill_substrate namespace, server-side schema validation reproduced client
+    
+    **Install + integration**
+    
+    pip install yantrikdb-hermes-plugin then yantrikdb-hermes install <hermes_root> — one-shot setup
+    Namespace = {base}:{agent_workspace}:{agent_identity} for per-identity isolation
+    hermes memory status reports plugin available + ready
+    [embed] GitHub - yantrikos/yantrikdb-hermes-plugin: YantrikDB memory provid... https://github.com/yantrikos/yantrikdb-hermes-plugin
+

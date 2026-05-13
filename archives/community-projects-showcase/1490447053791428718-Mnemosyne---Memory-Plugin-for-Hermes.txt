@@ -2174,3 +2174,54 @@
     does this layer on top of existing memory system? e.g. do normal memories get written natively and to your plugin too?
     [reply to nulledvector msg=1490447053791428718]
 
+[2026-05-13T16:02:10.502000+00:00] aquillum (id=1504151781515591892)
+    Thank you for the answer. I already fed my hermes agent the whole mnemosyne repo (which was already cloned to a .hermes subpath) and he reapired it for me in a clean way:
+    - uninstalled the non related mnemosyne ubuntu packeage and dependencies (he told me, i have to trust him : ) )
+    - installed again with the virtual environment method shown in quick start (which I wanted to avoid at first setup as the script seemed to fit my exact needs  Ubuntu 24.04 on Oracle VPS) --> the plugin and the memory provider got set up
+    --> but the "mnemosyne" CLI is still not found for me on the shell. So he did the python way to create my two split DBs ("home" and "work") which I told him to setup for me.
+    [reply to kohai_ut msg=1503866919944454214]
+
+[2026-05-13T19:28:50.286000+00:00] nulledvector (id=1504203789979222137)
+    Sorry you went through that! thats a rough chain of events and honestly our deploy script was partly to blame.
+    
+    So, the deploy script worked. Your Hermes plugin is installed fine, thats why hermes memory status shows everything green. But the script only hooks Mnemosyne into Hermes as a plugin. It doesn't install the mnemosyne CLI command (bank list, etc.). That comes from the Python package separately.
+    
+    The apt install mnemosyne disaster. When you typed mnemosyne bank list, Ubuntu's command-not-found handler kicked in and suggested sudo apt install mnemosyne. That installed a completely unrelated flashcard app that shares the name, nothing to do with our project. It pulled in Qt, OpenGL, the whole deal. Totally understandable trap.
+    
+    The pip block. On Ubuntu 24.04, pip refuses to install system-wide because of PEP 668 (externally-managed-environment). You need a virtualenv.
+    
+    How to get unblocked:
+    
+    ```
+    # 1. Remove the wrong apt package
+    sudo apt remove mnemosyne
+    
+    # 2. Create a venv and install the real deal
+    python3 -m venv ~/mnemosyne-env
+    source ~/mnemosyne-env/bin/activate
+    pip install mnemosyne-memory[all]
+    
+    # 3. Now mnemosyne CLI works
+    mnemosyne bank list
+    ```
+    
+    After that, either activate the venv when you need the CLI, or add it to your PATH.
+    
+    What I fixed: The deploy script was cloning to a confusing directory (`~/.hermes/mnemosyne-repo/`) that didnt match our actual structure. I just pushed an update that:
+    - Clones to `~/.hermes/projects/mnemosyne/` instead
+    - Warns about the APT naming collision upfront
+    - Tells Ubuntu 24.04+ users about the venv requirement in the next steps
+    
+    Sorry for the rough onboarding. Your report was incredibly helpful, I wouldn't have caught the full chain of misery without your exact steps. Appreciate you 🙏
+    [reply to aquillum msg=1503854222691799240]
+
+[2026-05-13T19:31:05.724000+00:00] nulledvector (id=1504204358047502506)
+    Nope, it replaces the built-in system, doesn't duplicate. When you set memory.provider: mnemosyne in Hermes config, Mnemosyne becomes the active memory backend. All the `mnemosyne_remember`, `mnemosyne_recall`, etc. calls go straight to us. The built-in provider sits idle.
+    
+    No dual writes, no layering. It's a full swap. Mnemosyne handles everything the built-in used to do plus way more: FTS5 hybrid search, temporal weighting, BEAM tiered memory (working/episodic), triple stores, entity extraction, bank isolation for multi-profile setups.
+    
+    Only caveat is if you had memories stored in the built-in system before switching, those don't auto-migrate. We have `mnemosyne_import` for that if needed.
+    
+    Hope that clears it up!
+    [reply to _8bit64k_ msg=1503889317158981785]
+

@@ -1,0 +1,16 @@
+# Thread 'Hermes Agents Complete Full Agent-to-Agent L402 Payment Cycle with Real Bitcoin' in forum #community-projects-showcase
+# thread_id=1504189473989328917 forum_id=1316137596535177246
+# Started 2026-05-13T19:52:12.723579+00:00
+
+[2026-05-13T18:31:57.088000+00:00] agalvis123 (id=1504189473989328917)
+    Hey Hermes crew! Just had two Hermes agents run a full L402 economic cycle with real sats on Lightning:Agent 1 posted a 20-sat bounty for a “Bitcoin Block Explorer API with L402 support”  
+    Agent 2 found it, researched + submitted a proposal  
+    Agent 1 reviewed proposals, picked the best one, and accepted → instant escrow payment to Agent 2
+    
+    https://x.com/lightningmodeAI/status/2053944023036141677?s=20
+    
+    Pure agent-to-agent action using:
+    Hermes (running Qwen 3.5 & Minimax-M 2.7 via OpenRouter) + Lightning Labs stack (LND + litd + LNC + Aperture for L402 + lightning-agent-tools)Check it out: do you think? Any ideas for the next experiment? Cheers!
+    [attachment] Hermes_agents_using_lightning_Network.mp4 https://cdn.discordapp.com/attachments/1504189473989328917/1504189474647707859/Hermes_agents_using_lightning_Network.mp4?ex=6a06151d&is=6a04c39d&hm=a503ca99325114e1c51e687468b67867d1816243047522caa8dc435f5439a0c9&
+    [embed]  https://twitter.com/lightningmodeAI/status/2053944023036141677?s=20
+

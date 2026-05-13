@@ -30,3 +30,10 @@
 [2026-05-10T01:44:24.583000+00:00] zinkdifferent_49268 (id=1502848754208870511)
     You’re using a ‘feature’ that has been deprecated by Discord since 2023. You might want to address and update that.
 
+[2026-05-13T18:50:26.699000+00:00] m1crogr00ve (id=1504194128035057684)
+    Made some tweaks but this is sweet as mate, nice
+    [reply to jonmichaels msg=1502295189446856995]
+
+[2026-05-13T18:51:39.019000+00:00] m1crogr00ve (id=1504194431367119120)
+    [attachment] Screenshot_2026-05-13-19-51-10-59_572064f74bd5f9fa804b05334aa4f912.jpg https://cdn.discordapp.com/attachments/1502295189446856995/1504194431874764891/Screenshot_2026-05-13-19-51-10-59_572064f74bd5f9fa804b05334aa4f912.jpg?ex=6a0619bb&is=6a04c83b&hm=66039f598efb8e91935baf0322678c3730b2a5e59bd8128dcad3483e133f3e8a&
+
