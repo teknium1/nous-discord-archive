@@ -15590,3 +15590,229 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-13T07:48:47.281000+00:00] eva_electricsheep (id=1504027616607211620)
     The team must have knew this day would come and left comments where to plugin 🖤
 
+[2026-05-13T09:24:15.135000+00:00] undifined. (id=1504051640968151190)
+    <@387972437901312000> as I have been training to learn new skills and verify with kanban examples,  I notice that it would be helpful for skills to have their own little memory on preference and configuration
+
+[2026-05-13T09:34:51.189000+00:00] libo1106 (id=1504054308771987558)
+    <@387972437901312000> just adding a bit more context here —
+    
+    looks like quoted file/image messages in Yuanbao group chats don’t carry the original resourceId, so when the bot is @mentioned it can’t resolve the media.
+    
+    this PR just handles that case in the Yuanbao adapter so quoted media works properly again. scoped to Yuanbao only, no impact on other platforms.
+    
+    tested in group chats and seems to work as expected 🙏
+    [reply to libo1106 msg=1503589638814830692]
+
+[2026-05-13T09:44:55.088000+00:00] markelphoenix (id=1504056841708240939)
+    Ran Hermes with Qwen 3.6 over night. I interrupted a request with one of it's Tool calls for a previously set development Goal....now he seems stuck in processing even simplest of prompts. No tasks running. No Background Jobs running. No Goals shown anymore, just....waiting:
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1504056842056110180/image.png?ex=6a059997&is=6a044817&hm=f960ed4e7188b40ebc96e5599c5be97caa9378821f792fb88d0ba0a0c9ecffb7&
+
+[2026-05-13T09:48:02.029000+00:00] undifined. (id=1504057625795498087)
+    /new to clear context?
+    [reply to markelphoenix msg=1504056841708240939]
+
+[2026-05-13T09:48:30.762000+00:00] markelphoenix (id=1504057746310299778)
+    Was hoping to avoid.
+
+[2026-05-13T09:53:41.106000+00:00] eva_electricsheep (id=1504059047987646574)
+    could be 1k things, just ask codex or claude code to debug logs
+
+[2026-05-13T09:53:59.946000+00:00] eva_electricsheep (id=1504059127008333824)
+    or try a forced restart
+
+[2026-05-13T09:56:08.287000+00:00] godsboy7777 (id=1504059665309368390)
+    Hey <@387972437901312000>, could you review this bug fix when you get a chance?
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/24927
+    PR: https://github.com/NousResearch/hermes-agent/pull/24929
+    
+    It fixes a file mutation verifier false positive where successful write_file or patch results could be treated as failed if nested lint or LSP diagnostics contained error text. The PR centralises landed mutation classification so verifier footers, CLI tool status, and tool guardrails agree on the same success contract.
+    
+    Targeted tests, ruff, and diff checks pass. CI is green except for the full test job, which I triaged and commented on because the failures are in unrelated areas outside this PR.
+    [embed] Fix file mutation verifier false positive for diagnostic-bearing wr... https://github.com/NousResearch/hermes-agent/issues/24927
+    [embed] fix: classify landed file mutations with diagnostics by GodsBoy · ... https://github.com/NousResearch/hermes-agent/pull/24929
+
+[2026-05-13T10:02:45.880000+00:00] markelphoenix (id=1504061332935278622)
+    I am running full local, Qwen 3.6 for coding on a 5090 RTX. I am trying to do a 100% local challenge.
+    [reply to eva_electricsheep msg=1504059047987646574]
+
+[2026-05-13T10:04:16.288000+00:00] eva_electricsheep (id=1504061712134045696)
+    well even if you /new the session file is just swapped in db no? You can manualy change key back to session file after repair session
+
+[2026-05-13T10:04:23.474000+00:00] eva_electricsheep (id=1504061742274318417)
+    either that or run manual compact
+
+[2026-05-13T11:28:34.896000+00:00] fhsduifisdfbsdifisdfysdfj (id=1504082929473818795)
+    is hermes designed to use conncurent connections correctly? I set LM Studio to 3 and have been watching logs and behavior. some requests seem to be dupes. it will SOMETIMES answer a question more than once before moving on. Should I have this set to 1. Am I asking for trouble going over 1 concurrent conn?
+
+[2026-05-13T11:29:31.248000+00:00] ahmetarif0x (id=1504083165830975659)
+    fix(gateway): add chat_id to session:start / session:end / session:reset hooks
+    
+    PR #24982
+    
+    #24710 (merged today) added chat_id to agent:start but missed
+    3 sibling hooks. Hook authors subscribed to session lifecycle
+    events had no way to know which chat they were in routing
+    was impossible.
+    
+    3-line fix + 2 tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/24982
+    [embed] fix(gateway): add chat_id to session:start, session:end, and sessio... https://github.com/NousResearch/hermes-agent/pull/24982
+
+[2026-05-13T11:58:12.235000+00:00] ahmetarif0x (id=1504090384173633602)
+    fix(cron): add yuanbao to _HOME_TARGET_ENV_VARS
+    
+    PR #24987
+    
+    d8c4460 (merged today) added WhatsApp to the cron home-channel
+    registry but missed Yuanbao — which is already in
+    _KNOWN_DELIVERY_PLATFORMS and has YUANBAO_HOME_CHANNEL wired
+    across gateway/config.py and yuanbao.py.
+    
+    Without this entry, _get_home_target_chat_id("yuanbao") always
+    returned "" and cron jobs silently failed to deliver.
+    
+    https://github.com/NousResearch/hermes-agent/pull/24987
+    [embed] fix(cron): include yuanbao in _HOME_TARGET_ENV_VARS by AhmetArif0 ... https://github.com/NousResearch/hermes-agent/pull/24987
+
+[2026-05-13T12:48:47.875000+00:00] m0n5t3r (id=1504103116570886234)
+    ```
+    2026-05-13 15:47:10,810 WARNING gateway.run: Slack: slack-bolt not installed. Run: pip install 'hermes-agent[slack]'
+    2026-05-13 15:47:10,811 WARNING gateway.run: No adapter available for slack
+    2026-05-13 15:47:10,819 WARNING gateway.platforms.matrix: Matrix: mautrix not installed. Run: pip install 'mautrix[encryption]'
+    2026-05-13 15:47:10,819 WARNING gateway.run: Matrix: mautrix not installed or credentials not set. Run: pip install 'mautrix[encryption]'
+    2026-05-13 15:47:10,819 WARNING gateway.run: No adapter available for matrix
+    2026-05-13 15:47:10,819 WARNING gateway.run: No adapter could be created for any of the 2 configured platform(s). Check that required dependencies are installed and credentials are set. Gateway will continue for cron job execution.
+    ```
+    someone broke the dockers
+
+[2026-05-13T12:51:33.424000+00:00] kxee (id=1504103810933719161)
+    what version are you on?
+    [reply to m0n5t3r msg=1504103116570886234]
+
+[2026-05-13T12:52:29.661000+00:00] quangle43792 (id=1504104046808662077)
+    Greeting, I want to help from expert AI trainer based on Python, java, c.
+    If you are, ping me atm.
+    thanks.
+
+[2026-05-13T12:52:41.199000+00:00] m0n5t3r (id=1504104095202414633)
+    I just pulled `nousresearch/hermes-agent:latest`; luckily I made a habit of doing a `docker tag nousresearch/hermes-agent:latest nousresearch/hermes-agent:good` before pulling, it was easy to revert
+
+[2026-05-13T12:54:17.005000+00:00] m0n5t3r (id=1504104497042034929)
+    this one is broken: `nousresearch/hermes-agent@sha256:9d7ff239a5006773891bf300f9840b8faa5ac7898ac2b05f18d71c1df44566b2`
+
+[2026-05-13T12:57:24.257000+00:00] m0n5t3r (id=1504105282433716287)
+    maybe I should have a look at the workflow that builds the images next time I'm in the mood for such things, some metadata would be useful (git hash at least), and most layers change on every build for some reason..
+
+[2026-05-13T13:02:30.532000+00:00] m0n5t3r (id=1504106567044431923)
+    this one from 2 days ago is what I had before / reverted to: `nousresearch/hermes-agent@sha256:4fdc2775e114c210097fa58e1dcbaaeb74589595f196b1cdeb153b4b0cc95919` - I was playing with kanban and the web ui for it is broken in this one, so I thought I'd update just in case it's been fixed
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1504106567136710706/image.png?ex=6a05c7e6&is=6a047666&hm=59c10149e21496ad9c198b25d87cdf2977d60f53fcc339996ec0147f4eb1e04e&
+
+[2026-05-13T13:09:04.598000+00:00] kxee (id=1504108219877036147)
+    reviewing
+    [reply to godsboy7777 msg=1504059665309368390]
+
+[2026-05-13T13:14:10.474000+00:00] owl_dv (id=1504109502813962260)
+    fix(dashboard): hide example plugin from navigation
+    
+    https://github.com/NousResearch/hermes-agent/pull/25009
+    [embed] fix(dashboard): hide example plugin from navigation by smwbev · Pu... https://github.com/NousResearch/hermes-agent/pull/25009
+
+[2026-05-13T13:15:26.400000+00:00] kxee (id=1504109821270429737)
+    The fix is already merged into main : https://github.com/NousResearch/hermes-agent/pull/24841 your broken :latest digest was almost certainly built before that. Re-pulling once Docker Hub has the next build (or building from main locally) should unbreak it
+    [embed] fix(docker): chown .venv to hermes so lazy_deps can install platfor... https://github.com/NousResearch/hermes-agent/pull/24841
+    [reply to m0n5t3r msg=1504104497042034929]
+
+[2026-05-13T13:15:56.372000+00:00] m0n5t3r (id=1504109946982240296)
+    found the PR that broke things https://github.com/NousResearch/hermes-agent/pull/24220/changes#diff-50c86b7ed8ac2cf95bd48334961bf0530cdc77b5a56f852c5c61b89d735fd711L63
+    [embed] feat(security): supply-chain advisory checker + lazy-install framew... https://github.com/NousResearch/hermes-agent/pull/24220/changes
+
+[2026-05-13T13:16:27.714000+00:00] kxee (id=1504110078440112238)
+    fixed now ser
+    [reply to kxee msg=1504109821270429737]
+
+[2026-05-13T13:18:48.522000+00:00] m0n5t3r (id=1504110669031674026)
+    ```
+            "Created": "2026-05-13T06:28:00.82506683Z",
+    ```
+    looks like this is the `:latest` tag right now, lemme check the actions
+
+[2026-05-13T13:23:47.213000+00:00] m0n5t3r (id=1504111921832530052)
+    actually it _is_ that hash, I checked... still no worky
+
+[2026-05-13T13:23:52.687000+00:00] glitchglitchglitch (id=1504111944792014909)
+    <@797554706233688094> im digging into this!
+
+[2026-05-13T13:24:02.146000+00:00] m0n5t3r (id=1504111984466198670)
+    why break things that were working...
+
+[2026-05-13T13:25:08.485000+00:00] glitchglitchglitch (id=1504112262712131616)
+    it says it right there <:doggokek:1169724584354922576>  -- there was a huge supply chain attack and we had to harden things asap.
+
+[2026-05-13T13:26:58.156000+00:00] m0n5t3r (id=1504112722705518674)
+    lazy install doesn't sound like hardening to me - I think versions were already being pinned; at least for container images your best bet is to do the scanning / hash validation during build
+
+[2026-05-13T13:42:58.964000+00:00] gokhe (id=1504116752626221116)
+    so i have been using the windows mcp from cursor touch in my hermes for past 3 months actually in my workflow, since you guys added mac mcp using cua (i thought of added cua myself lol) but windows mcp was needed urgently, cant it be added natively now, can i open a pr for the same?
+
+[2026-05-13T13:47:11.179000+00:00] jez_wikitribune (id=1504117810492604609)
+    with regard to Discord connector putting commands in doublequotes instead of backticks
+
+[2026-05-13T13:47:12.517000+00:00] jez_wikitribune (id=1504117816104714332)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1504117816532537404/image.png?ex=6a05d260&is=6a0480e0&hm=dccdaa22a6da32ea4ffc55b0c4f051349a448342c6945ef689569f750927e349&
+
+[2026-05-13T13:47:36.561000+00:00] jez_wikitribune (id=1504117916952694856)
+    I am drafting a PR about it now because I'm tired of seeing `__init__.py` display as "__init__.py" haha
+
+[2026-05-13T13:47:57.701000+00:00] jez_wikitribune (id=1504118005620019492)
+    the pipes making spoiler blocks, also kind of annoying, but this is a 2-line PR so hopefully it will be an easy one
+
+[2026-05-13T13:50:25.874000+00:00] jez_wikitribune (id=1504118627102621867)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1504118627169734736/image.png?ex=6a05d321&is=6a0481a1&hm=e3ddc48877cecfc3c3a694d52105abfc9c1562405ea666885ece9da9fc9601ab&
+
+[2026-05-13T13:50:39.570000+00:00] jez_wikitribune (id=1504118684548075660)
+    this looks a lot cleaner to me personally, hopefully most Discord users will agree on this change
+
+[2026-05-13T13:55:49.738000+00:00] kxee (id=1504119985486696489)
+    go ahead please, we’d love that
+    [reply to gokhe msg=1504116752626221116]
+
+[2026-05-13T13:55:57.094000+00:00] kxee (id=1504120016340254832)
+    tag/dm me when you do
+
+[2026-05-13T14:07:39.584000+00:00] teknium (id=1504122962796744887)
+    They werent already pinned and lazy install prevents surface area of people who get bad deps and also debloats a ton
+    [reply to m0n5t3r msg=1504112722705518674]
+
+[2026-05-13T14:08:25.911000+00:00] teknium (id=1504123157106393210)
+    No <@690519146701783042> cua driver is supporting windows in 1-2 weeks so we will be waiting for them
+    [reply to gokhe msg=1504116752626221116]
+
+[2026-05-13T14:08:38.644000+00:00] teknium (id=1504123210512339074)
+    Then no weird pathing for different os’
+
+[2026-05-13T14:08:47.659000+00:00] kxee (id=1504123248323858472)
+    ooo
+    [reply to teknium msg=1504123157106393210]
+
+[2026-05-13T14:09:02.144000+00:00] teknium (id=1504123309078483075)
+    Also linux too fwiw
+
+[2026-05-13T14:17:09.920000+00:00] 0zi57 (id=1504125354959179826)
+    I've created the video generation PR
+    Added text-to-video support with Seedance 2.0 + Kling v3 4K.
+    Managed gateway support is included (no API key needed for Nous subscribers).
+    Tested with 14 unit tests.  https://github.com/NousResearch/hermes-agent/pull/25035  <@387972437901312000>
+    [embed] feat(tools): add video_generate tool with managed gateway support b... https://github.com/NousResearch/hermes-agent/pull/25035
+
+[2026-05-13T14:17:30.425000+00:00] owl_dv (id=1504125440963641405)
+    test(gateway): isolate DingTalk SDK mocks
+    
+    https://github.com/NousResearch/hermes-agent/pull/25039
+    [embed] test(gateway): isolate DingTalk SDK mocks by smwbev · Pull Request... https://github.com/NousResearch/hermes-agent/pull/25039
+
+[2026-05-13T14:21:04.878000+00:00] teknium (id=1504126340444717127)
+    Nice will check it out in a bit
+    [reply to 0zi57 msg=1504125354959179826]
+

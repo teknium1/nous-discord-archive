@@ -1,0 +1,38 @@
+# Thread 'Custom skin: hide Available Tools / Skills in startup banner/hero?' in forum #plugins-skills-and-skins
+# thread_id=1504078435365163048 forum_id=1485392832154832906
+# Started 2026-05-13T14:32:09.144025+00:00
+
+[2026-05-13T11:10:43.417000+00:00] furkannaxoziwus (id=1504078435365163048)
+    Hello,
+    
+    I’m working on a custom skin/theme for Hermes Agent. I’ve been able to customize fields like banner_logo, banner_hero, colors, spinner, welcome, response_label, and prompt_symbol through:
+    
+    ~/.hermes/skins/dragon.yaml
+    
+    The theme works overall.
+    
+    However, I’d like to clarify whether some parts of the startup screen can be controlled through the skin YAML or config:
+    
+    1. The title at the top of the frame:
+        Hermes Agent v0.13.0 (...) · upstream ...
+    2. The section inside the banner:
+        Available Tools
+    3. The section inside the banner:
+        Available Skills
+    4. The bottom line showing the tool/skill count and /help for commands
+    
+    I don’t see these fields in the skin file. My understanding is that banner_logo and banner_hero only control the ASCII/logo parts, while the tools/skills list and frame title are dynamically rendered at runtime by the Hermes banner renderer.
+    
+    My questions are:
+    
+    * Is there an official way to hide or customize these sections through config or skin YAML?
+    * Are there settings such as display.banner_layout: minimal, display.show_startup_tools: false, or display.show_startup_skills: false?
+    * Or would this require patching the Hermes CLI banner renderer code?
+    * If patching is required, is there an update-safe recommended approach? For example, is there a layout hook or plugin mechanism that can be overridden from a custom skin?
+    * Has anyone in the community done something similar before?
+    
+    My goal is to make the startup screen more minimal and theme-focused. Right now, custom skins let me customize the logo/hero/welcome areas nicely, but the Available Tools, Available Skills, and Hermes Agent v... title still remain visible.
+    
+    Thanks.
+    [attachment] Screenshot_2026-05-13_at_12.58.13_PM.png https://cdn.discordapp.com/attachments/1504078435365163048/1504078436396957848/Screenshot_2026-05-13_at_12.58.13_PM.png?ex=6a05adb3&is=6a045c33&hm=a1fe02c48079b8290f6515781fa8a1139b6b22f80f25dc054ad7215d5a3b0041&
+

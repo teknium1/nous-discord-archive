@@ -851,3 +851,7 @@
     [embed] Release Hermes Desktop v0.3.6 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.3.6
     [reply to grah4na msg=1503831648976765164]
 
+[2026-05-13T13:05:28.774000+00:00] grah4na (id=1504107314645569717)
+    i checked but there is no perticular one for windows ARM64 architecture
+    [reply to fathah. msg=1504036896584765530]
+

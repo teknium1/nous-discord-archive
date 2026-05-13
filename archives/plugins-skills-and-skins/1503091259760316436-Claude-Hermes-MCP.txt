@@ -16,3 +16,20 @@
     Anyone else splitting their stack like this? Curious what setups people are running.
     [embed] GitHub - mlennie/claude-hermes-mcp: MCP server that lets Claude Des... https://github.com/mlennie/claude-hermes-mcp
 
+[2026-05-13T10:01:54.111000+00:00] samuel.gudi (id=1504061115800485889)
+    Yess, I was about to build this, then found your post! Thank you
+
+[2026-05-13T10:46:09.431000+00:00] oninsuka (id=1504072253019783268)
+    goated, would this work with codex? and hermes?
+
+[2026-05-13T11:24:08.149000+00:00] charanis (id=1504081810655678565)
+    to route from hermes to hermes?
+    [reply to oninsuka msg=1504072253019783268]
+
+[2026-05-13T11:36:44.750000+00:00] oninsuka (id=1504084984070275082)
+    codex to hermes
+    [reply to charanis msg=1504081810655678565]
+
+[2026-05-13T12:18:41.439000+00:00] tourettesgaming (id=1504095539828883579)
+    This is nice, shot you a star on github, big dog
+
