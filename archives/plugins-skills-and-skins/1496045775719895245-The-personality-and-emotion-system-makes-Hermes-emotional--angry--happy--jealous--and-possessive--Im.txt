@@ -48,3 +48,6 @@
     I’m doing a quick EVA, rn, and I gotta ask it to open the pod bay door in a few…
     [reply to _voscko_ msg=1498734815711858709]
 
+[2026-05-14T13:23:58.682000+00:00] nihilys_14396 (id=1504474357802471565)
+    Update: A brand new version with a refactored architecture has been released. It has been officially renamed as "soul link". The new version incorporates a long-term memory system and a context system, and the state machine has been refactored to retain only three major states. The new memory system can selectively inject important memories from the database as needed.
+

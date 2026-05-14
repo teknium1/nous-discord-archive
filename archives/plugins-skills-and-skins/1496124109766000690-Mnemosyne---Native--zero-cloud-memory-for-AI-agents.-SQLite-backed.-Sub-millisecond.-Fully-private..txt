@@ -945,3 +945,16 @@
     
     Would you consider adding a config/env knob for this?  Maybe something like `MNEMOSYNE_PREFETCH_CONTENT_CHARS=800`, with `0` meaning “no truncation”? Sentence/word-boundary truncation would also be better than raw character slicing.
 
+[2026-05-14T11:51:39.778000+00:00] steezkelly (id=1504451125955264684)
+    Could you have your agent bring that to the mnemosyne github repo? I'll point my agent to it with gpt 5.5 and see if it can re-verify and give extra validation to your fix/request
+    [reply to rossascends msg=1504374742776283208]
+
+[2026-05-14T12:00:42.212000+00:00] nulledvector (id=1504453401088495720)
+    thanks for reporting that, like <@359510424703467520> suggested, please have your agent bring it up as an issue so we can fix this in the next cycle
+    [reply to rossascends msg=1504374742776283208]
+
+[2026-05-14T12:13:02.976000+00:00] rossascends (id=1504456508077903943)
+    https://github.com/AxDSan/mnemosyne/issues/132 done (cc: <@359510424703467520> )
+    [embed] [FIX] fix inserted memory truncation · Issue #132 · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/issues/132
+    [reply to nulledvector msg=1504453401088495720]
+

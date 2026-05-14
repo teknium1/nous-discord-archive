@@ -858,3 +858,18 @@
 [2026-05-13T19:59:33.501000+00:00] dreadcor (id=1504211520983142591)
     Hi, I installed Hermes Agent on my Ubuntu machine, and it is using Qwen3.5 running locally in Ollama. I just installed this Desktop App. I added a model, set its Provider to Local/Custom, Model ID to qwen3.5, Base URL to "http://127.0.0.1:8642/v1", and set API Key to the value specified in ~/.hermes/.env as API_SERVER_KEY. But when I try to use chat in the Desktop App I just get a "Error: Invalid API key" response. Anybody have any luck setting up this desktop app to use an existing Hermes Agent installation using a local model?
 
+[2026-05-14T11:48:30.129000+00:00] fathah. (id=1504450330509705357)
+    V0.4.1 is out
+    
+    🔥 Performance boost
+    
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.4.1
+    [embed] Release Hermes Desktop v0.4.1 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.4.1
+
+[2026-05-14T11:49:01.446000+00:00] fathah. (id=1504450461862727860)
+    Please try this version.Fixed the laggy behavior in chat screen.
+
+[2026-05-14T11:49:30.008000+00:00] fathah. (id=1504450581660434525)
+    Discussions and issues: https://t.me/hermes_agent_desktop
+    [embed] Hermes Agent Desktop https://t.me/hermes_agent_desktop
+

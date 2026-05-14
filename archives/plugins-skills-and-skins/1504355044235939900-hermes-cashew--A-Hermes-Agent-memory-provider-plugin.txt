@@ -43,3 +43,20 @@
 [2026-05-14T06:50:19.255000+00:00] charanis (id=1504375290745327638)
     I think I need to try it out but how does it fit into a multi agent kanban setup aka developer studio? Do all profiles access the same mem?
 
+[2026-05-14T13:03:56.241000+00:00] magnus919 (id=1504469314399502367)
+    That is a really good question. It would be defined by how Hermes handles memory providers. Normally plugins have to be defined for subagents but I don’t know if that’s true for memory providers.
+    [reply to charanis msg=1504375290745327638]
+
+[2026-05-14T13:06:36.575000+00:00] magnus919 (id=1504469986888908801)
+    I’m asking hermes and telling it to fact check itself…
+
+[2026-05-14T13:09:12.777000+00:00] magnus919 (id=1504470642047844454)
+    Jasper says:
+    
+    ``
+    No — deliberately isolated per profile. delegate_task children get skip_memory=True (zero memory access). Kanban workers are separate hermes -p <profile>` processes with their own config, provider, and scoped stores. Profile isolation was a shipped feature in v0.8.0. If you want shared memory you'd need a server-side provider (Honcho/Mem0) pointed at the same backend across profiles.
+    [reply to charanis msg=1504375290745327638]
+
+[2026-05-14T13:31:08.810000+00:00] charanis (id=1504476161890062548)
+    I'm actually perfectly fine with isolated memory, because I'm striving towards more specialized agents with validation loops that recursively learn on their own (well not on their own but by getting feedback from validators, their own mistakes, RCA and helping other agents also give them better context to do their work)
+

@@ -99,3 +99,8 @@
     thank you
     [reply to ehvi8r msg=1502320492890030150]
 
+[2026-05-14T11:38:33.892000+00:00] dav05262 (id=1504447829710733383)
+    🚀 Hermes Client Update: Agent Channel Binding!
+    Hey everyone! Just pushed a new quality-of-life feature to Hermes Client
+    You can now configure channels for a specific agent!
+

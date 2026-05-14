@@ -191,3 +191,33 @@
 [2026-05-14T07:29:49.234000+00:00] rossascends (id=1504385231157989517)
     that let the dashboard be loaded in as a plugin, but i could not find much use for the plugin itself. it enables slash commands for start/stop, but i think that's about it. for me, I just leave the server running all the time and have the dash open in a browser window almost constantly.
 
+[2026-05-14T09:40:08.121000+00:00] wysie_ (id=1504418025946873967)
+    i pushed a fix earlier today, sorry i forgot to mention it here
+
+[2026-05-14T09:40:14.656000+00:00] wysie_ (id=1504418053356650497)
+    can u all give it a try again?
+
+[2026-05-14T12:27:48.052000+00:00] rossascends (id=1504460220355711186)
+    I've made a bunch of local edits to the visualizer, so i am hesitant to git pull atm. i'll look into upping my fork to clear space for a fresh pull.
+
+[2026-05-14T12:46:14.080000+00:00] rossascends (id=1504464859373506562)
+    top row: 
+    - toggles for different kinds of nodes that are not displayed by default. The categories are not 100% clear to me yet, but I've been able to find these three kinds:
+      - hash nodes (dark blue): effectively the subject portion of triples. This is a container class for:
+        - conversation nodes (yellow): nodes that contain summarized conversations with clear tagging as such. selecting one of these highlights all other conversation nodes with the same session metadata.
+        - background triples (..also dark blue): these are the background tasks I've been trying to weed out.
+    - toggle for label display
+    - also added a search box to quickly find any node in the 3d view by text contents
+    
+    bottom row: 
+    - chips for identified session groups. click on them to persistently highlght all conversation nodes in that session (or red `memory:hash` nodes if yellow nodes are hidden).
+    
+    other fixes/improvements: 
+    - optimized the threes 3d canvas. originally it was maxing out my 5060ti. I believe the main cause was label update cadence and thrash related to node visibility. post fix my GPU now only uses 20% resources when the visualizer is open. 
+    - added some more metadata surfacing inside selected node details pane. 
+    - restyle/simplification of the neural map view. originally was for GPU optimizing, but after I did the real fixes I realized it's probably not necessary.
+    - when selecting a 'central' node all of its connected nodes get highlighted as well. 
+    - reweighted the neural map view with a force model. i'm not happy with it because naturally oft-used entities (USER, ASSISTANT, and date nodes) get centralized easily.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500722439288520794/1504464859905921094/image.png?ex=6a071596&is=6a05c416&hm=5e0fa77c87c08731e8e607bc741b106db088f310b1d026a8d8b1438295e5e089&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500722439288520794/1504464860300181554/image.png?ex=6a071596&is=6a05c416&hm=a0da67f96cd3f92d66b8304910acb8667815f9293656465cac26b19faba97bd2&
+

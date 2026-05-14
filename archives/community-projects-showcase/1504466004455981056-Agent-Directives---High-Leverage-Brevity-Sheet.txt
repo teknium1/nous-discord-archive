@@ -1,0 +1,25 @@
+# Thread 'Agent Directives — High-Leverage Brevity Sheet' in forum #community-projects-showcase
+# thread_id=1504466004455981056 forum_id=1316137596535177246
+# Started 2026-05-14T14:06:40.862156+00:00
+
+[2026-05-14T12:50:47.089000+00:00] mdthr (id=1504466004455981056)
+    just a quick list of some stuff to throw at projects with your agent. e.g. "audit, DRY ACID SSOT." 
+    no skill installs required
+    
+    https://theislampill.github.io/adhlbs
+
+[2026-05-14T12:52:55.037000+00:00] mdthr (id=1504466541109055598)
+    probably gonna make this compile from atomics so PRs or forks are easier
+
+[2026-05-14T13:00:00.299000+00:00] mdthr (id=1504468324787163337)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504466004455981056/1504468324828975257/image.png?ex=6a0718d0&is=6a05c750&hm=6a6a852f635ed5da51f0c22dc7635f8b45a3f161837772fc9a33e8aa25b74166&
+
+[2026-05-14T13:00:00.903000+00:00] mdthr (id=1504468327320387745)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504466004455981056/1504468327370588260/image.png?ex=6a0718d0&is=6a05c750&hm=e42afc78542b99e6a281f99a4a72a8e2657c502c933ee081b1fd77b970cd6681&
+
+[2026-05-14T13:00:58.175000+00:00] mdthr (id=1504468567536701541)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504466004455981056/1504468568044081242/image.png?ex=6a07190a&is=6a05c78a&hm=ac3634f6833c74b1b6e8b367692cbd92c91a90403a02845607751d9c597f57cb&
+
+[2026-05-14T13:01:44.708000+00:00] mdthr (id=1504468762709983243)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504466004455981056/1504468763238600814/image.png?ex=6a071938&is=6a05c7b8&hm=ae0eb869e676e0cabbe3edccd4ec602ff485530d295d6feab218b99e89b0ed1b&
+

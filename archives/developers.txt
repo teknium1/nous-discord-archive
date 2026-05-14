@@ -16167,3 +16167,81 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-14T08:32:14.779000+00:00] undifined. (id=1504400941112102942)
     ~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu 1.4G
 
+[2026-05-14T09:32:13.909000+00:00] maverick02906 (id=1504416036957589524)
+    Sound interesting 🤔, I have built an AI model, currently looking for collaboration....
+    [reply to preekam msg=1504386536706408509]
+
+[2026-05-14T09:35:45.944000+00:00] preekam (id=1504416926296838194)
+    If you can deploy it to an inference provider, I’d be happy to test it out!
+
+[2026-05-14T09:35:57.609000+00:00] preekam (id=1504416975223259209)
+    and/or integrate it with one of the agents / models
+
+[2026-05-14T09:36:13.401000+00:00] preekam (id=1504417041459707997)
+    I’m working slowly to integrate HF inference providers and the whole range of models from HuggingFace
+
+[2026-05-14T09:51:47.974000+00:00] gokhe (id=1504420961343111238)
+    Btw why doesn’t the discord thread memory reinitiate if we send a message back to the original thread. Was thinking of fixing this? As there is memory loss to which session it’s supposed to be, so it usually starts a new session in the old thread.
+
+[2026-05-14T11:18:56.770000+00:00] gokhe (id=1504442892503093328)
+    Added cloakbrowser as a optional skill for stealth browsing,
+    
+    https://github.com/NousResearch/hermes-agent/pull/25654
+    [embed] feat(skills): add CloakBrowser optional skill for stealth Chromium ... https://github.com/NousResearch/hermes-agent/pull/25654
+
+[2026-05-14T11:21:10.612000+00:00] godsboy7777 (id=1504443453877125211)
+    <@387972437901312000> Looks like this Telegram reasoning leak is already covered by PR #25268:
+    
+    https://github.com/NousResearch/hermes-agent/pull/25268
+    
+    I verified it against latest main in a clean worktree. The fix prevents commentary and analysis phase text from being promoted into visible assistant content, and suppresses matching streamed deltas before gateway delivery.
+    
+    Verification passed:
+    - tests/run_agent/test_run_agent_codex_responses.py, 63 passing tests
+    - ruff check on changed files
+    - compileall on changed Python files
+    - git diff --check
+    
+    I left the verification note here:
+    https://github.com/NousResearch/hermes-agent/pull/25268#issuecomment-4450193212
+    
+    This looks like the right fix for #24933.
+    
+    Concerning x post https://x.com/Teknium/status/2054795910962618795
+    [embed] fix(agent): hide codex commentary messages by davetist · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/25268
+    [embed]  https://twitter.com/Teknium/status/2054795910962618795
+
+[2026-05-14T11:23:53.663000+00:00] meher9844 (id=1504444137762459698)
+    I want to contribute on implementing computer-use for linux (ubuntu wayland), Where do i go and what do i do ?
+
+[2026-05-14T11:24:24.893000+00:00] ee.dd (id=1504444268750573698)
+    Make a pr to the GitHub repo when you have progress on computer use
+    [reply to meher9844 msg=1504444137762459698]
+
+[2026-05-14T11:25:51.394000+00:00] meher9844 (id=1504444631562063963)
+    Found this PR, Should i contact someone to coordinate ?
+    https://github.com/NousResearch/hermes-agent/pull/20660
+    [embed] feat(tools/computer_use): native per-OS desktop control (macOS / Li... https://github.com/NousResearch/hermes-agent/pull/20660
+
+[2026-05-14T12:31:47.504000+00:00] daniel_62414 (id=1504461224690319481)
+    Could anyone help review this small PR?
+    [reply to libo1106 msg=1503589638814830692]
+
+[2026-05-14T12:41:16.184000+00:00] maverick02906 (id=1504463609907122177)
+    <@166262385701683200>  Can I DM you?
+
+[2026-05-14T12:41:58.186000+00:00] maverick02906 (id=1504463786076012698)
+    I can't send a friend request
+
+[2026-05-14T12:53:35.118000+00:00] tdamre (id=1504466709220688093)
+    hermes native app for android is officially in f-droid https://gitlab.com/fdroid/fdroiddata/-/merge_requests/37674
+    [embed] New App: Hermes Agent (!37674) · Merge requests · F-Droid / Data ... https://gitlab.com/fdroid/fdroiddata/-/merge_requests/37674
+
+[2026-05-14T12:54:01.529000+00:00] tdamre (id=1504466819996451039)
+    if you have fdroid on your phone you need to wait a day for the marketplace to refresh
+
+[2026-05-14T13:45:20.374000+00:00] z1gon (id=1504479733608353912)
+    https://github.com/NousResearch/hermes-agent/pull/24202
+    hi <@387972437901312000>, I have reviewed this OpenViking fix for directory uploads. please review and merge it when you have the time. much appreciate it, thanks
+    [embed] fix(memory): skip symlinked files in OpenViking directory uploads b... https://github.com/NousResearch/hermes-agent/pull/24202
+

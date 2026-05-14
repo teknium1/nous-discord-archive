@@ -2480,3 +2480,9 @@
 [2026-05-08T14:27:57.474000+00:00] floory (id=1502316131669512416)
     there are a lot of commits since last update but no tagged releases
 
+[2026-05-14T11:26:43.362000+00:00] joeydiaz69 (id=1504444849531650058)
+    i was having "thinking" issues using qwopus with hipfire so reverted to llama.cpp
+
+[2026-05-14T11:27:50.020000+00:00] joeydiaz69 (id=1504445129115701412)
+    was this issue identified by anyone else and patched? i might have been isolated with this issue, id like to try and swap back as this was very promising
+
