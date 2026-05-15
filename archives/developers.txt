@@ -16660,3 +16660,133 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     #AI #LLMs #Agents #OpenSource #RAG #GraphDB
     [embed] GitHub - Z-Sigma/neuron: Cognitive memory layer for AI applications https://github.com/Z-Sigma/neuron
 
+[2026-05-15T09:37:00.809000+00:00] godsboy7777 (id=1504779628168872066)
+    Hey maintainers 👋
+    
+    Could someone please review this PR when you get a chance?
+    
+    https://github.com/NousResearch/hermes-agent/pull/26073
+    
+    Context: we hit this exact issue while dogfooding Hermes in a live Telegram gateway session.
+    
+    What happened:
+    - The agent attempted to edit `/root/.ssh/config` with `patch`
+    - Hermes correctly blocked it because it is a protected system/credential file
+    - The agent then recovered through another route and the SSH alias was actually present/usable afterwards
+    - But the final response still appended the old file-mutation verifier footer saying the file was “NOT modified”, which was stale/misleading
+    
+    This PR improves that behaviour by:
+    - Reporting “file-edit attempt failed” instead of claiming the file was not modified
+    - Detecting when the file changed later in the same turn
+    - Adding “file changed later; verify the final diff” so the user gets the right audit signal
+    
+    I mirrored the PR locally and verified:
+    
+    `python -m pytest -o addopts="-m 'not integration'" tests/run_agent/test_file_mutation_verifier.py tests/agent/test_tool_result_classification.py -q`
+    → 41 passed
+    
+    `python -m py_compile run_agent.py`
+    → passed
+    
+    This preserves the safety guardrail while removing a noisy/misleading footer in real use.
+    [embed] fix: refine file mutation verifier recovery reporting by KShad10 ·... https://github.com/NousResearch/hermes-agent/pull/26073
+
+[2026-05-15T10:23:43.345000+00:00] markelphoenix (id=1504791382857089034)
+    So, maybe I can leverage Deepseek V4 Flash locally when my M5 comes in? It will have 128 GB Unified RAM.
+    [reply to k_sze msg=1504640758173532229]
+
+[2026-05-15T11:30:03.686000+00:00] godsboy7777 (id=1504808077617266738)
+    Hey <@387972437901312000> , quick context on the Brave Search work:
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/26276
+    PR: https://github.com/NousResearch/hermes-agent/pull/26286
+    
+    alt-glitch noted this is related to:
+    
+    - #10644, the original Brave Search tracking issue
+    - #21337, the already-merged `brave-free` provider
+    - #21726, an open docs PR for Brave/Parallel env vars
+    
+    I added an issue comment clarifying the lineage after alt-glitch’s note: this should be seen as the paid/rich-mode continuation of the Brave work, not a duplicate of the free provider or the docs-only env-var PR.
+    
+    Small personal note: I have been using this kind of Brave workflow from the beginning as a custom Hermes tool, and even before that as a shell-based tool when I was using OpenClaw. I disabled the default open web search path for my own setup because Brave’s richer search plus grounding flow was just that useful in day-to-day research. This PR is basically turning that proven local workflow into a clean upstream Hermes feature.
+    
+    Why this is needed:
+    
+    Hermes currently has `brave-free`, but it is intentionally basic search only. Brave’s Search API has richer research surfaces that are very useful for Hermes: web search with extra snippets, images, news, videos, discussions, suggestions, and grounding context. This PR gives users who have Brave API credits a native way to use those capabilities without local scripts or custom one-off tools.
+    
+    What this PR adds:
+    
+    - New explicit `brave-search` provider, separate from `brave-free`
+    - New `brave_search` tool
+    - Default `both` mode: web results plus grounding context
+    - Modes: `web`, `llm`, `images`, `news`, `videos`, `discussions`, `suggest`, and bounded `raw`
+    - Generic `web_search` compatibility still returns the standard Hermes `{ data: { web: [...] } }` shape
+    - Existing `brave-free` users stay backward-compatible and are not silently moved
+    - Supports `BRAVE_SEARCH_API_KEY`, with `BRAVE_API_KEY` as a legacy fallback
+    - Clean errors for plan or endpoint access issues, with no secret leakage
+    
+    Why it is better than the current state:
+    
+    `brave-free` is great as a basic search backend, but this unlocks the richer Brave Search API product for real research workflows. It means Hermes can search the web, pull news/videos/images/discussions, get suggestions, and return source-grounded context through one native tool. It also keeps the provider split clean: free/basic stays simple, paid/richer capabilities are opt-in.
+    
+    Validation:
+    
+    - Focused local tests: 191 passed
+    - Ruff passed
+    - Code review gate was run before publishing, and actionable findings were fixed
+    - CI is mostly green: lint, attribution, docs, builds, Nix, and supply-chain checks pass
+    - Remaining CI failures are documented on the PR and appear unrelated to this diff:
+      - Discord e2e fixture failures
+      - Nous provider parity context-window tests
+    
+    I think this is a strong merge because it closes the gap between the already-merged basic Brave provider and the original broader Brave Search vision in #10644, while avoiding scope creep into Brave Answers. It gives Hermes a much stronger native research backend without breaking existing users or adding heavy dependencies.
+    [embed] Feature: add Brave Search API paid provider with rich search modes ... https://github.com/NousResearch/hermes-agent/issues/26276
+    [embed] feat(web): add Brave Search API rich modes by GodsBoy · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/26286
+
+[2026-05-15T11:42:45.248000+00:00] eloquentbrush0x (id=1504811271839813784)
+    Inspired by the ancient philosophers who helped shape our humanity, I designed a website that showcases Hermes agent data. I’ve been working on it for quite some time, and I’ve finally developed it enough to present it to you.
+    
+    It was really enjoyable to develop this site. The Hermes style is honestly one of the coolest things I’ve seen recently. I tried to align the website with that aesthetic as much as possible, and I hope you like it. I didn’t build it just to leave it as it is; I will continue improving it based on feedback from the community. My goal is to turn this site into a home for our community a place that feels like home. Please don’t hesitate to share your feedback with me. Thank you. ( I’m not sure whether sharing a web link is allowed, so I’ve placed the website link in my profile. You can access the site from there.)
+    
+    Another goal of mine is to create a page that even someone who is not familiar with the terminal can easily understand and experience Hermes. Users will be able to complete basic setup training here and find guidelines on how to properly manage skills suited to their own sites. In the coming days, I will refine this idea and update the site accordingly.
+
+[2026-05-15T11:45:55.818000+00:00] eloquentbrush0x (id=1504812071148195984)
+    [attachment] Hermes_Agent_Showcase.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1504812074784788531/Hermes_Agent_Showcase.mp4?ex=6a0858f4&is=6a070774&hm=7eb4688f4ccdb4841065cc26a05b71f69949c2f992ee7571516a5c18053d51e9&
+
+[2026-05-15T12:04:38.718000+00:00] .elkim (id=1504816780932157682)
+    did Analytics disappeared from hermes dashboard for anyone?
+
+[2026-05-15T12:12:15.619000+00:00] tdamre (id=1504818697313849534)
+    who wants to test the play store version for hermes app https://play.google.com/apps/internaltest/4701621189355275797
+    [embed] Sign in - Google Accounts https://play.google.com/apps/internaltest/4701621189355275797
+
+[2026-05-15T12:34:16.085000+00:00] badstyles (id=1504824235749539940)
+    its safe?
+    [reply to tdamre msg=1504818697313849534]
+
+[2026-05-15T12:36:10.245000+00:00] tdamre (id=1504824714571419769)
+    https://github.com/adybag14-cyber/hermes-agent/tree/feat/termux-install-path
+    [embed] GitHub - adybag14-cyber/hermes-agent at feat/termux-install-path https://github.com/adybag14-cyber/hermes-agent/tree/feat/termux-install-path
+    [reply to badstyles msg=1504824235749539940]
+
+[2026-05-15T12:38:01.154000+00:00] tdamre (id=1504825179757477988)
+    full source code
+
+[2026-05-15T13:04:52.936000+00:00] neuralink (id=1504831940061298848)
+    dope
+    [reply to eloquentbrush0x msg=1504812071148195984]
+
+[2026-05-15T13:17:18.942000+00:00] magnus919 (id=1504835069037117601)
+    RFC before I start working on a PR.
+    
+    https://github.com/NousResearch/hermes-agent/issues/26352
+    [embed] Feature Request: /plan and /build mode toggles with tool-level enfo... https://github.com/NousResearch/hermes-agent/issues/26352
+
+[2026-05-15T13:21:24.725000+00:00] muhammaddawoodkhan_32399 (id=1504836099925741760)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1504836100026269798/image.png?ex=6a086f54&is=6a071dd4&hm=3c6cd58381b273ade5d57277fd29f8573e780c5eaf76bce08fd2057342d1c442&
+
+[2026-05-15T13:40:35.301000+00:00] kylekaster (id=1504840925791391754)
+    following this little PR to help out with unblocking kanban usage with the new codex app server, would love to see it get in! https://github.com/NousResearch/hermes-agent/pull/26212
+    [embed] fix(codex): allow sandboxed Kanban worker handoffs by hehehe0803 ·... https://github.com/NousResearch/hermes-agent/pull/26212
+

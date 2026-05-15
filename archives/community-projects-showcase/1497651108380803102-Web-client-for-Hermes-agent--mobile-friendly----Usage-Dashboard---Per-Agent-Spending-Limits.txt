@@ -107,3 +107,6 @@
 [2026-05-14T18:39:55.500000+00:00] dve874 (id=1504553868460036326)
     i was waiting for this feature, thank you
 
+[2026-05-15T11:40:52.547000+00:00] dav05262 (id=1504810799137427536)
+    We just hit 150 stars on github 🥳 thank you all for using Hermes Client
+

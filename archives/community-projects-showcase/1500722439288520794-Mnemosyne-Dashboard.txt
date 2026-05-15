@@ -229,3 +229,13 @@
     Submit a PR!
     [reply to rossascends msg=1504464859373506562]
 
+[2026-05-15T10:29:36.920000+00:00] rossascends (id=1504792865857998968)
+    I'm working on it today, but in my work to make my local changes PR friendly, I realized that I also needed to update my mnemosyne repo. 
+    
+    When I did that I discovered that mnemosyne has moved the primary database from the 'triples' table to a new 'annotations' table. 'triples' are kept as legacy after DB migration, and upstream mnemo now treats it as a temporal/current-truth knowledge graph store. 
+    
+    Current upstream Mnemosyne writes for `mentions`, `fact`, `occurred_on`, and `has_source` now target `annotations`, so the dashboard may not see future memory annotation updates unless it is updated to read the new table.
+    
+    I can try to work that into my PR as well, along with the new style for the visualizer  (which I'll be adding as a 3rd display type called 'Neural Focus', so as to not disrupt the current Neural Map in the dashboard upstream).
+    [reply to wysie_ msg=1504660574548791447]
+

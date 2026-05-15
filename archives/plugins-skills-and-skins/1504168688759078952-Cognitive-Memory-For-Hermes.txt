@@ -113,3 +113,9 @@
     Had to make some changes to accommodate this. It’s merged now
     [reply to wysie_ msg=1504702023378014329]
 
+[2026-05-15T10:29:09.068000+00:00] hydraxiann (id=1504792749038108732)
+    Can the "soft-delete" be disabled to always keep memory? Or is the soft-delete more for correcting memory for instance?
+
+[2026-05-15T12:13:26.056000+00:00] spranab (id=1504818992748036136)
+    <@613392707015933981> Soft delete is not a automatic thing. Incase a correction is needed or stale memory is there forget can be invoked by llm
+

@@ -1,0 +1,9 @@
+# Thread 'Open-stack for Physical AI' in forum #community-projects-showcase
+# thread_id=1504829076823740547 forum_id=1316137596535177246
+# Started 2026-05-15T14:03:12.165630+00:00
+
+[2026-05-15T12:53:30.287000+00:00] reavatar (id=1504829076823740547)
+    Research paper, app, data, sdk, platform everything out there in open to collect data and train robots
+    https://x.com/fpv_labs/status/2055262652033908832
+    [embed]  https://twitter.com/fpv_labs/status/2055262652033908832
+
