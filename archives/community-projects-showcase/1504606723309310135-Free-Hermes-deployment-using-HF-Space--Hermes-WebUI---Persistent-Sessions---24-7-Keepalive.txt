@@ -29,3 +29,10 @@
     Feedback and PRs welcome.****
     [embed] GitHub - F4bC0d3/huggingmes-hermes-webui: Merged HuggingMes + Herme... https://github.com/F4bC0d3/huggingmes-hermes-webui
 
+[2026-05-15T19:14:22.566000+00:00] gruen23 (id=1504924926229090506)
+    Sounds amazing!
+    Sorry I am a total noob so help me understand please. here I get a free cloud space to use Hermes Agent plus your web UI?
+    Why is not everybody using a free huggingspace? Why are people even paying? 
+    
+    Like I said, no offense or something, I'm just a total noob and wonder about that 😆
+

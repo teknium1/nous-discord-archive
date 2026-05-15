@@ -471,3 +471,21 @@
 [2026-05-12T17:52:30.256000+00:00] floory (id=1503817158910804129)
     maybe even | but that's pushing it
 
+[2026-05-15T14:19:12.198000+00:00] nour_h (id=1504850643561480403)
+    even better todos? <@387972437901312000> comming in next PR
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1504850644585156720/image.png?ex=6a087ce0&is=6a072b60&hm=d8ee505b3b057cd50c0565f699f89e5c4d016ffc7e3a5ec796697aa6b2fa45ac&
+    [reply to floory msg=1503817021312339998]
+
+[2026-05-15T14:28:05.299000+00:00] floory (id=1504852879549141102)
+    HELL YEAH
+
+[2026-05-15T14:28:55.912000+00:00] floory (id=1504853091835576330)
+    beautiful
+
+[2026-05-15T14:32:31.417000+00:00] nour_h (id=1504853995729195170)
+    <@387972437901312000> CHeck this out https://github.com/NousResearch/hermes-agent/pull/26393
+    [embed] fix(acp): emit native plan updates for todo by HenkDz · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/26393
+
+[2026-05-15T14:50:12.170000+00:00] nour_h (id=1504858444849610913)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1504858444891558112/image.png?ex=6a088424&is=6a0732a4&hm=42eb2e859f061c1f106c8779ec452386555c03ffb0feece89eb1c89977ff9ff0&
+

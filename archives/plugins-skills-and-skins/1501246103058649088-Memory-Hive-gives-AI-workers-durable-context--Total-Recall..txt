@@ -189,3 +189,6 @@
     The Hive is Live
     [attachment] Hive_Final_Promo.mp4 https://cdn.discordapp.com/attachments/1501246103058649088/1504153570298298488/Hive_Final_Promo.mp4?ex=6a05f3ac&is=6a04a22c&hm=904f4a584fdc4a829790fc8f54abffd5c0f75af2017545609baa35ef7a5a2ceb&
 
+[2026-05-15T15:41:33.488000+00:00] tourettesgaming (id=1504871368833892382)
+    Minor update on security and speed coming by EOD
+

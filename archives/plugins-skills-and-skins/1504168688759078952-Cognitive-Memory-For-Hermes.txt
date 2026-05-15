@@ -119,3 +119,13 @@
 [2026-05-15T12:13:26.056000+00:00] spranab (id=1504818992748036136)
     <@613392707015933981> Soft delete is not a automatic thing. Incase a correction is needed or stale memory is there forget can be invoked by llm
 
+[2026-05-15T16:23:45.079000+00:00] spranab (id=1504881987096281128)
+    <@329427821208535040> https://github.com/yantrikos/yantrikdb-mcp you can use this one with coding agents
+    [embed] GitHub - yantrikos/yantrikdb-mcp: Persistent cognitive memory for A... https://github.com/yantrikos/yantrikdb-mcp
+
+[2026-05-15T16:39:08.548000+00:00] fhsduifisdfbsdifisdfysdfj (id=1504885860406005850)
+    installing this now to try
+
+[2026-05-15T16:39:12.062000+00:00] fhsduifisdfbsdifisdfysdfj (id=1504885875144921349)
+    thanks
+

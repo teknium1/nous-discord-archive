@@ -1,0 +1,25 @@
+# Thread 'One command to give hermes an email, phone number, and tunnel: Inkbox' in forum #plugins-skills-and-skins
+# thread_id=1504910916100161620 forum_id=1485392832154832906
+# Started 2026-05-15T19:30:34.580653+00:00
+
+[2026-05-15T18:18:42.291000+00:00] dimavrem22_71258 (id=1504910916100161620)
+    https://x.com/DVremenko/status/2055342380765626864?s=20
+    
+    Inkbox gives AI agents an identity: 
+    - email address
+    - phone number for sms and calls
+    - password manager
+    - TOTP authenticator
+    - tunnel service that delivers webhooks and maintains websocket connections (ngrok replacement)
+    - contact book
+    
+    It's already possible to set up this functionality with separate services but you'll be dealing with 5+ vendors. 
+    
+    Our Inkbox fork handles all of this for you! You dont need a single external account or an api key! You dont even need an Inkbox account to start using it! We've made this completely free to developers so go try it out!
+    
+    https://github.com/inkbox-ai/hermes-agent
+    
+    The fork is maintained daily, so you'll be getting the same Hermes agent we all love!!!
+    [embed]  https://twitter.com/DVremenko/status/2055342380765626864?s=20
+    [embed] GitHub - inkbox-ai/hermes-agent: The agent that grows with you. Pow... https://github.com/inkbox-ai/hermes-agent
+

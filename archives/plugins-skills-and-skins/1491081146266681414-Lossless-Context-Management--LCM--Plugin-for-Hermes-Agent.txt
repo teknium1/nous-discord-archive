@@ -1461,3 +1461,7 @@
 [2026-05-14T14:52:55.948000+00:00] confusedxx (id=1504496743918735534)
     I have them both working together now and need to test it out on a project
 
+[2026-05-15T14:08:46.945000+00:00] iam_rxpii (id=1504848021060583675)
+    im also using mnemosyne and icarus on top of it but man its nice
+    [reply to w0lfgang88 msg=1504274272485380187]
+

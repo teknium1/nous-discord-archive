@@ -16790,3 +16790,88 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     following this little PR to help out with unblocking kanban usage with the new codex app server, would love to see it get in! https://github.com/NousResearch/hermes-agent/pull/26212
     [embed] fix(codex): allow sandboxed Kanban worker handoffs by hehehe0803 ·... https://github.com/NousResearch/hermes-agent/pull/26212
 
+[2026-05-15T14:30:13.762000+00:00] srinivas__vaddi. (id=1504853418362273944)
+    Can I get 👀 on this P1 PR? tiny change though
+    https://github.com/NousResearch/hermes-agent/pull/26394
+    [embed] fix(docker): preload messaging gateway deps by vaddisrinivas · Pul... https://github.com/NousResearch/hermes-agent/pull/26394
+
+[2026-05-15T14:37:25.527000+00:00] mr.isotonic (id=1504855229315940382)
+    Support the full GPT 5.4 Context Window instead of just 272k via codex cli
+    https://github.com/NousResearch/hermes-agent/pull/26396
+    [embed] feat(auth): support OpenCode-style OpenAI OAuth routing by briankee... https://github.com/NousResearch/hermes-agent/pull/26396
+
+[2026-05-15T14:42:38.847000+00:00] aculnaj_ (id=1504856543475142698)
+    Add AetherAPI as provider for Hermes
+    https://github.com/NousResearch/hermes-agent/pull/26343
+    [embed] feat(providers): add Aether API support by Aculnaj · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/26343
+
+[2026-05-15T16:03:28.016000+00:00] sprmn24 (id=1504876882363940974)
+    <@387972437901312000>  I opened 2 more PRs today focused on concurrency safety and resource leak prevention:
+    
+    **fix(memory):** TOCTOU race in Windows _file_lock() — write_text() then open('r+') has a window where another process can delete the lock file, causing uncaught FileNotFoundError and memory writes proceeding without the lock. Replaced with single open('a+') call.
+    
+    https://github.com/NousResearch/hermes-agent/pull/26423
+    
+    **fix(delegate)**: heartbeat thread orphan in _run_single_child() — _heartbeat_thread.start() was called before the try/finally block. If _register_subagent() raised, _heartbeat_stop.set() never ran and the thread kept resetting parent gateway timeouts. Moved .start() inside the try block.
+    
+    https://github.com/NousResearch/hermes-agent/pull/26435
+    [embed] fix(memory): eliminate TOCTOU race in Windows file lock creation by... https://github.com/NousResearch/hermes-agent/pull/26423
+    [embed] fix(delegate): move heartbeat thread start inside try block to prev... https://github.com/NousResearch/hermes-agent/pull/26435
+
+[2026-05-15T16:12:47.786000+00:00] minddragon (id=1504879230209626252)
+    A more atomic and web browser and correct model handling for x.ai coding oauth ... includes credit to ams432 for browser part.     https://github.com/NousResearch/hermes-agent/pull/26445
+    [embed] feat(providers): xAI Coding Plan OAuth provider by avirweb · Pull ... https://github.com/NousResearch/hermes-agent/pull/26445
+
+[2026-05-15T16:16:04.314000+00:00] eva_electricsheep (id=1504880054507933866)
+    quick question does openclaw to hermes migration also migrate the oauth
+
+[2026-05-15T16:16:15.693000+00:00] eva_electricsheep (id=1504880102234656871)
+    is there a way to set it to do so in migration to carry env etc
+
+[2026-05-15T16:16:29.624000+00:00] w0lfgang88 (id=1504880160665632792)
+    Hey <@100390510744584192>, quick queue-order clarification now that #26039 has your approval, thank you.
+    
+    Could you merge/review #26048 first when you get a minute?
+    
+    https://github.com/NousResearch/hermes-agent/pull/26048
+    
+    That one is the narrow post-#25957 CI unblocker. It is green, `mergeState CLEAN`, and I rechecked the body against the live diff.
+    
+    #26039 is approved but still has inherited e2e red from the shared main fallout, so once #26048 lands I can refresh/rerun #26039 cleanly instead of making more noise in the queue.
+    [embed] test: unblock post-25957 shared CI by stephenschoettler · Pull Req... https://github.com/NousResearch/hermes-agent/pull/26048
+
+[2026-05-15T16:33:33.353000+00:00] cryptoworlldz (id=1504884454496145553)
+    I found a bug in hermes doctor around active provider validation. 
+    
+    If model.provider is set to 'openrouter' but neither 'OPENROUTER_API_KEY' nor 'OPENAI_API_KEY' is configured, Hermes runtime fails with 'No LLM provider configured'.
+    
+    But 'hermes doctor' was not surfacing that as a real blocking issue in the final summary, even though the active provider was unusable.
+    
+    I opened both the issue and the fix here:
+    Issue: https://github.com/NousResearch/hermes-agent/issues/26436
+    PR: https://github.com/NousResearch/hermes-agent/pull/26453
+    
+    <@387972437901312000>  Lately I have been focusing on the builder side of web3. I would like to know if I am doing it right or wrong. Even though I have been using Hermes for a very long time, this is the first time I am trying to make a contribution like this.
+    [embed] [Bug]: hermes doctor does not flag missing credentials for an activ... https://github.com/NousResearch/hermes-agent/issues/26436
+    [embed] Fix doctor summary for active OpenRouter without credentials by wor... https://github.com/NousResearch/hermes-agent/pull/26453
+
+[2026-05-15T16:49:00.883000+00:00] colmeio_66868 (id=1504888344838930567)
+    <@808920669147889664> 
+    https://magaav.github.io/simulation-hermes-agent-expectation-trace/
+    Hermes already has regression tests for correctness. Lab v1 explores a different layer: recovery diagnostics. When behavior fails, can the agent produce a useful trace, classify the failure, and suggest the next repair path?
+    
+    For v1, the inputs were curated from Hermes issue/PR-linked failure cases and frozen into 12 fixed fixtures. The dataset is still small and hand-selected, so I’m not claiming statistical significance or production reliability gains.
+    
+    The goal is to evolve this into a real community-backed recovery-eval harness: every useful failure dump can potentially become a reusable fixture for testing future Hermes recovery behavior.
+
+[2026-05-15T16:50:40.737000+00:00] colmeio_66868 (id=1504888763657228350)
+    used LeWorldModel (https://arxiv.org/abs/2603.19312) as inspiration
+    [embed] LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architec... https://arxiv.org/abs/2603.19312
+
+[2026-05-15T16:54:10.658000+00:00] kylekaster (id=1504889644129456179)
+    I realize that the throughput on this open source repo is probably some of the craziest that's ever existed, do you guys have any advice or experience for what makes contributions more successful and advice on where to start contributing to earn some rep 😅
+
+[2026-05-15T19:11:26.228000+00:00] colmeio_66868 (id=1504924186613907476)
+    Future direction: as the fixture set grows, I also want to explore Hilbert-curve-style locality-preserving mappings for recovery space — so related failure traces, categories, and repair paths can be clustered/traversed without treating every failure as an isolated case.
+    [reply to colmeio_66868 msg=1504888344838930567]
+
