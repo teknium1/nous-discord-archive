@@ -6198,3 +6198,10 @@
     Looks nice, very cool, thanks for working on that!
     [reply to tonytran9899 msg=1529660124829057085]
 
+[2026-07-23T14:33:04.309000+00:00] ultraxdevs (id=1529858896414511215)
+    can this popup/summary be implemented like in hermes desktop?
+    
+    The current one is just redirecting me to github...
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1529858895571583096/image.png?ex=6a6377a0&is=6a622620&hm=31384042f85fe5215b21e48122a4c4201fe6412ed1cf02dfb992caa3652a6ad1&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1529858896108458185/image.png?ex=6a6377a0&is=6a622620&hm=277315b771c31835ffc22633f53ef9e0676c20599369f027fb598dd3e4e4a229&
+

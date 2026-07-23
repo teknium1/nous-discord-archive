@@ -1,0 +1,11 @@
+# Thread 'Made an open-source security layer for Hermes' tool calls' in forum #community-projects-showcase
+# thread_id=1529862425971789885 forum_id=1316137596535177246
+# Started 2026-07-23T19:12:47.868368+00:00
+
+[2026-07-23T14:47:05.821000+00:00] aldiking (id=1529862425971789885)
+    Hey Hermes folks 👋 Built Belay — an open-source guardrail that plugs into Hermes' pre_tool_call hooks and checks every tool call before it runs: 🛑 blocks the dangerous ones (secret exfil, rm -rf, reverse shells, prompt injection), 🤔 asks you (one-tap Allow/Deny) on the gray areas. Deterministic (no LLM judging the LLM), sub-100ms, local-first, AGPL. So you can run Hermes unattended with a seatbelt.
+    → https://github.com/SECBLOK/belay
+    Anyone running Hermes unattended — what tool calls make you nervous? 🙏
+    [attachment] Main_Overview.jpg https://cdn.discordapp.com/attachments/1529862425971789885/1529862426370117796/Main_Overview.jpg?ex=6a637ae9&is=6a622969&hm=b3e3dc9840b3c82f0eaadfc2ef57dc3d609aa258f809209e91e146b4cfa12e7f&
+    [embed] GitHub - SECBLOK/belay: AIDefender is a local security layer that s... https://github.com/SECBLOK/belay
+

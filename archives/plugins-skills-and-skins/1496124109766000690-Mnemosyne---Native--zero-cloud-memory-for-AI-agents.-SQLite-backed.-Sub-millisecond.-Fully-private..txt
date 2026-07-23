@@ -2333,3 +2333,7 @@
 [2026-07-23T00:44:15.486000+00:00] jcrabapple (id=1529650318613286932)
     The built in hindsight import is already a great feature
 
+[2026-07-23T17:52:44.191000+00:00] krypton1trous (id=1529909143681368125)
+    i saw mnemosyne has a memory layer thats shared across all profiles. how did you intend to have agents/profiles use this part? its a really interesting concept but so far none of my agents put anything in there. how did you intend for them to decide what information should be shared?
+    [reply to nulledvector msg=1496124109766000690]
+

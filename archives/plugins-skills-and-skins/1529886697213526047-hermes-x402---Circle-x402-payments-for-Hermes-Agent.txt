@@ -1,0 +1,59 @@
+# Thread 'hermes-x402 — Circle x402 payments for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1529886697213526047 forum_id=1485392832154832906
+# Started 2026-07-23T19:18:50.189911+00:00
+
+[2026-07-23T16:23:32.536000+00:00] riyan1388 (id=1529886697213526047)
+    Hey everyone,  I’ve been building hermes x402, a standalone community plugin that adds Circle x402 payment capabilities to Hermes Agent.
+    
+    It integrates directly through the `hermes_agent.plugins` entry point and currently provides 14 tools plus a `/x402` command for status, wallet readiness, supported networks, service inspection, configuration, Gateway balances, deposits, and paid-resource access.
+    
+    Current capabilities include:
+    
+    • discovering and inspecting x402-enabled services
+    • checking payment requirements without paying
+    • paying for protected HTTP resources with USDC
+    • Circle Agent Wallet CLI and Developer-Controlled Wallet support
+    • Circle Gateway balance and deposit preview/execute flows
+    • seller middleware for protecting aiohttp endpoints
+    • buyer, seller, and dual-role agent workflows
+    
+    I completed a live Arc Testnet validation through the Hermes Telegram gateway:
+    
+    ✅ all 14 tools exercised
+    ✅ real 0.003 USDC x402 payment completed
+    ✅ protected resource returned after settlement
+    ✅ exact Gateway balance delta verified
+    ✅ native Hermes approval required before financial execution
+    ✅ strict host allowlist and payment cap enforced
+    ✅ unsafe payment attempts rejected before settlement
+    ✅ Gateway deposit preview created without moving funds
+    ✅ invalid deposit execution rejected safely
+    ✅ wallet and sensitive payment data remain masked
+    
+    The screenshots show the active `/x402` command, runtime configuration, live payment evidence, and negative financial tests.
+    
+    Repository:
+    https://github.com/riyannode/hermes-x402
+    
+    Feedback on the Hermes integration, approval flow, installation process, and tool UX would be appreciated.
+    [attachment] Screenshot_2026-07-23_231914.png https://cdn.discordapp.com/attachments/1529886697213526047/1529886697519583332/Screenshot_2026-07-23_231914.png?ex=6a639184&is=6a624004&hm=e533840f3121172c63702a392ba9015f4982fd6af7c248d225ab49d705d73f06&
+    [attachment] Screenshot_2026-07-23_231343.png https://cdn.discordapp.com/attachments/1529886697213526047/1529886698165764128/Screenshot_2026-07-23_231343.png?ex=6a639184&is=6a624004&hm=975c6cdf8472c871eee40cff02812514edded11dd239a67f2d88d6f0205bdb5f&
+    [attachment] Screenshot_2026-07-23_231359.png https://cdn.discordapp.com/attachments/1529886697213526047/1529886698589261994/Screenshot_2026-07-23_231359.png?ex=6a639184&is=6a624004&hm=87523c93bd7ebb0ae180a9044aa2efc4b1d141bf2d2fabbb28286d457d6c9573&
+    [attachment] Screenshot_2026-07-23_231609.png https://cdn.discordapp.com/attachments/1529886697213526047/1529886699231121491/Screenshot_2026-07-23_231609.png?ex=6a639185&is=6a624005&hm=5ca642979e2677f2ae6e798eabb01773e9c4549c337b0f247f35f70ceb05ff4f&
+    [embed] GitHub - riyannode/hermes-x402: Circle x402 nanopayment integration... https://github.com/riyannode/hermes-x402
+
+[2026-07-23T16:56:42.119000+00:00] riyan1388 (id=1529895042129465344)
+    Update: hermes-x402 v0.2.1 is now available.
+    
+    The release constrains cryptography to >=42,<47 for compatibility with Hermes Agent’s cryptography==46.0.7 pin.
+    
+    Validation completed:
+    ✅ 803 tests passed
+    ✅ no broken requirements
+    ✅ 14 tools, 1 approval hook, and 1 command registered
+    ✅ native Hermes approval verified
+    ✅ live 0.003 USDC payment completed on Arc Testnet
+    ✅ protected resource returned successfully
+    ✅ exact -0.003 USDC balance delta
+    ✅ exactly one payment call, with no automatic retry
+

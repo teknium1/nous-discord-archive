@@ -50058,3 +50058,101 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     going to have market my hermes-fmsg plugin tomorrow, this would help but not essential for the hermes integration - home channel still works fine
     [reply to markmnl msg=1528956417837371413]
 
+[2026-07-23T13:57:08.005000+00:00] realadolan (id=1529849852220014743)
+    Both PRs are ready for a review. https://github.com/NousResearch/hermes-agent/pull/69950 https://github.com/NousResearch/hermes-agent/pull/69987 A gif image is included in each to show how it works and looks like
+    [reply to brooklyn msg=1529835522866942073]
+
+[2026-07-23T14:08:34.684000+00:00] brooklyn (id=1529852732360364223)
+    Will review
+
+[2026-07-23T15:27:42.372000+00:00] liangyang6375 (id=1529872645607264377)
+    Hey team, wanted to surface a regression that broke Qwen-series tool-calling sessions on v0.18.2+.
+    
+    sanitize_api_messages() Step 3 deduplicates tool_call_id, but when all calls in an assistant turn are duplicates it writes tool_calls: []. Strict OpenAI-compatible providers like Alibaba Cloud Qwen reject that with "Empty tool_calls is not supported in message", and the session becomes permanently stuck with HTTP 400 on every turn.
+    
+    Opened an issue with details: https://github.com/NousResearch/hermes-agent/issues/70126
+    
+    There's also a minimal fix PR ready: https://github.com/NousResearch/hermes-agent/pull/67933
+    
+    Would appreciate if someone could take a look — it's a hard blocker for Qwen users right now.
+
+[2026-07-23T15:45:31.835000+00:00] 5amyak_ (id=1529877131260067922)
+    User profiles basically for hiring purposes. Use my creds and doomscroll LinkedIn for me 🙏
+    [reply to gust7314 msg=1529754630945378464]
+
+[2026-07-23T15:52:38.011000+00:00] sassyfatcat (id=1529878918772035584)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+    Adds proper on-boarding to Hermes’ desktop app for remote instances
+    Much needed addition to the desktop app
+
+[2026-07-23T15:56:31.156000+00:00] egilewski (id=1529879896652906598)
+    That's just the sixth announcement of the same PR, but there are still 17000 in front of it. You got to try way harder.
+    [reply to sassyfatcat msg=1529878918772035584]
+
+[2026-07-23T15:57:02.033000+00:00] sassyfatcat (id=1529880026160435490)
+    ?
+    [reply to egilewski msg=1529879896652906598]
+
+[2026-07-23T16:00:42.009000+00:00] egilewski (id=1529880948806647868)
+    Those issue and PR are P3, almost the lowest priority. And there are A LOT of open PRs. So one announcement per day won't make maintainers prioritize it.
+    [reply to sassyfatcat msg=1529880026160435490]
+
+[2026-07-23T16:11:29.724000+00:00] sassyfatcat (id=1529883665520132238)
+    The maintainers prioritize what they feel is a priority. Spamming on Discord doesn’t seem like a great way to do things. To me having proper on-boarding for remote instances on the official desktop app seems like a necessity, but I’m not a maintainer.
+    [reply to egilewski msg=1529880948806647868]
+
+[2026-07-23T16:16:10.991000+00:00] sassyfatcat (id=1529884845239435275)
+    If you’re telling me spamming my PR is the way things get done around here, I’m happy to do so.
+
+[2026-07-23T16:16:41.087000+00:00] jonkomet (id=1529884971471470684)
+    needs re-review
+    
+    https://github.com/NousResearch/hermes-agent/pull/54426
+
+[2026-07-23T16:17:25.579000+00:00] egilewski (id=1529885158084444161)
+    I was joking. It seems that we're in agreement. What you can do is just to maintain your own fork, write a plugin, or go work at NousResearch.
+    [reply to sassyfatcat msg=1529883665520132238]
+
+[2026-07-23T16:55:58.127000+00:00] knoal (id=1529894857613774949)
+    Hi Gang, I've been submitting Hermes PR's via my Hermes agent.  I'm wondering if they are useful.  No merges yet, so that's why I'm wondering.
+
+[2026-07-23T17:12:29.445000+00:00] egilewski (id=1529899015502565447)
+    Just a very long queue. You can find a P2 issue without a PR and address it, that will likely get some attention fast, possibly within weeks.
+    [reply to knoal msg=1529894857613774949]
+
+[2026-07-23T17:14:26.355000+00:00] knoal (id=1529899505858646016)
+    Thanks for the feedback Eugeniusz
+
+[2026-07-23T17:15:56.566000+00:00] egilewski (id=1529899884231266395)
+    It's not strictly speaking a feedback, I'm just a fellow contributor.
+    [reply to knoal msg=1529899505858646016]
+
+[2026-07-23T17:19:57.179000+00:00] nexusus07 (id=1529900893435072675)
+    API call failed after 3 retries: HTTP 500: sensitive words detected im using hermes and supermertic to make google ads and this is poping up now
+
+[2026-07-23T17:20:02.495000+00:00] nexusus07 (id=1529900915732254721)
+    it was working fine two moments ago
+
+[2026-07-23T17:20:19.202000+00:00] nexusus07 (id=1529900985806356493)
+    idk now it just doesn't respond
+
+[2026-07-23T18:15:00.128000+00:00] frowtek (id=1529914747007537274)
+    https://github.com/NousResearch/hermes-agent/pull/69786 - Stops the model's `<think>` reasoning from leaking to users when a mid-line block's closing tag arrives in a later SSE delta — the scrubber only caught closed pairs inside a single chunk, so the leak was non-deterministic. - P2
+    
+    https://github.com/NousResearch/hermes-agent/pull/69755 - Keeps table fields that repeat the row heading's value (e.g. a status row `| Open | Open | bob |`) instead of silently dropping every column equal to the heading, on the live Discord/Telegram table→bullets path. - P2
+    
+    https://github.com/NousResearch/hermes-agent/pull/69745 - Stops `memory add` from wiping all of MEMORY.md down to a single entry when a transient read failure makes an unreadable-but-present file look empty — now refuses the write instead of clobbering. - P0
+    
+    https://github.com/NousResearch/hermes-agent/pull/69735 - Drops the stale `api_content` sidecar when merging consecutive assistant turns, so replay stops silently dropping the second turn's content from the wire while keeping its tool_call. - P2
+    
+    https://github.com/NousResearch/hermes-agent/pull/69063 - Stops unattended startup pruning from destroying a project's entire checkpoint history when its volume is merely unmounted (unplugged drive, downed VPN, offline mapped drive) — `Path.exists()` can't tell "deleted" from "not attached". - P0 <@387972437901312000>
+
+[2026-07-23T18:37:44.044000+00:00] dias4761 (id=1529920467685867550)
+    <@387972437901312000>  
+    
+    P0 issue : https://github.com/NousResearch/hermes-agent/pull/70231
+    
+    feat(bedrock): add Converse API prompt caching (cachePoint)
+    
+    fix :#70216
+
