@@ -8,3 +8,10 @@
 [2026-07-12T17:43:48.927000+00:00] viletonvaine (id=1525920632100098170)
     is the repo private?
 
+[2026-07-24T18:22:11.277000+00:00] .thebakery303 (id=1530278943243108453)
+    yup i privated it long ago, and its been advanced very much into an agent kernel os soon
+    
+    however i will provide the lean 0 dependency
+    
+     deterministic local rag pipeline cortex provides very soon
+

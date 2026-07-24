@@ -10,3 +10,9 @@
     
     but might be a skill issue, i see folks say they are on X
 
+[2026-07-24T18:29:25.177000+00:00] marcelohildebrand (id=1530280763151618108)
+    is this a project?
+
+[2026-07-24T19:21:07.523000+00:00] henrymascot_18739 (id=1530293775333720146)
+    Laguna? it a new AI model
+

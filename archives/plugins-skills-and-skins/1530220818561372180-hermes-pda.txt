@@ -1,0 +1,8 @@
+# Thread 'hermes pda' in forum #plugins-skills-and-skins
+# thread_id=1530220818561372180 forum_id=1485392832154832906
+# Started 2026-07-24T19:28:25.215526+00:00
+
+[2026-07-24T14:31:13.273000+00:00] flash_speed3412 (id=1530220818561372180)
+    https://github.com/carbongotfound/hermes-pda
+    [embed] GitHub - carbongotfound/hermes-pda: Makes your Hermes agent less bl... https://github.com/carbongotfound/hermes-pda
+

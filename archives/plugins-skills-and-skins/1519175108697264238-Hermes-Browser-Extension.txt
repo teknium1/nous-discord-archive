@@ -705,3 +705,10 @@
 [2026-07-22T20:38:25.581000+00:00] heeervas (id=1529588453027614771)
     You said this accepts docker Hermes image?
 
+[2026-07-24T16:30:52.833000+00:00] jonkomet (id=1530250931818598460)
+    if you mean Hermes Agent running from a Docker image, the extension can connect to it.
+    it doesn’t import the image itself; the container needs to run the Hermes Gateway/API server and expose port 8642
+    
+    once that port is mapped, you connect through Local or Remote Gateway using the API URL and key
+    [reply to heeervas msg=1529588453027614771]
+

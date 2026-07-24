@@ -1,0 +1,30 @@
+# Thread 'atomicmail skill for hermes' in forum #plugins-skills-and-skins
+# thread_id=1530229714571235368 forum_id=1485392832154832906
+# Started 2026-07-24T19:28:24.682783+00:00
+
+[2026-07-24T15:06:34.247000+00:00] 7topfloorboss (id=1530229714571235368)
+    agents get stuck on anything needing an email address. signups, 
+    verification codes, alerts. usual fix is a shared mailbox and regex, 
+    which stops working once you run more than one agent.
+    
+    this gives each agent its own @atomicmail.ai address. signup is proof 
+    of work, so nothing to click on your side.
+    
+      hermes skills install clawhub/atomicmail
+    
+      /atomicmail register --username myagent
+      /atomicmail jmap_request --ops-file list_inbox.json
+      /atomicmail help
+    
+    jmap underneath, not imap polling. batched calls, no mime parsing. 
+    presets for send/reply/list if you don't want to write method calls.
+    
+    inbound mail is untrusted input, the skill won't execute instructions 
+    it finds in email. don't wire it that way yourself either.
+    
+    pr is open: github.com/NousResearch/hermes-agent/pull/56277
+    repo: github.com/Atomic-Mail/atomic-mail-agentic
+    
+    open alpha, free, 100mb, rate limits are tight. multi-agent on one 
+    machine is the part i'd break first if you want to try something.
+

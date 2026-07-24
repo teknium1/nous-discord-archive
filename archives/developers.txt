@@ -50365,3 +50365,130 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-24T10:24:50.876000+00:00] teknium (id=1530158816694632589)
     Looking for some or that brings us towards this
 
+[2026-07-24T13:41:53.005000+00:00] alelpoan (id=1530208402297589780)
+    Desktop chat: attached images vanish after restart, reorder on session switch.
+    Tests all green ✅
+    Issue: https://github.com/NousResearch/hermes-agent/issues/70772
+    Fix: https://github.com/NousResearch/hermes-agent/pull/70720
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1530208401626370068/image.png?ex=6a64bd20&is=6a636ba0&hm=c128ccac18e43d3bbe3505e103f269e4fd4ba2a4dbec9b01a6b5b116e2b6ca2c&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1530208401999659080/image.png?ex=6a64bd20&is=6a636ba0&hm=f95e97ca24892d477466224fab14971ab984c7fb787e4262c409941fa5fffe22&
+
+[2026-07-24T15:17:14.537000+00:00] sassyfatcat (id=1530232400142012629)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-24T15:17:26.412000+00:00] sassyfatcat (id=1530232449949372488)
+    tested on windows, linux and macos
+
+[2026-07-24T15:17:39.802000+00:00] sassyfatcat (id=1530232506111098930)
+    adds proper onboarding to the hermes desktop app for remote instances
+
+[2026-07-24T15:17:49.502000+00:00] sassyfatcat (id=1530232546795720744)
+    [attachment] 618425771-05802c8b-817f-4bcf-94b0-9e520dd04672.png https://cdn.discordapp.com/attachments/1491258766648283238/1530232546460434632/618425771-05802c8b-817f-4bcf-94b0-9e520dd04672.png?ex=6a64d39d&is=6a63821d&hm=596796d9e4e70e99045f76504319dcfcfc87c0e7710b1fce9efac55c673a2986&
+
+[2026-07-24T15:51:44.432000+00:00] mariaosake (id=1530241081911021760)
+    https://github.com/NousResearch/hermes-agent/pull/70802
+
+[2026-07-24T15:53:40.446000+00:00] mariaosake (id=1530241568509001789)
+    This PR fixes a race condition where stale-stream watchdog and retry cleanup paths could close the shared OpenAI client from non-owner threads. The change limits cleanup to request-local clients and lets the shared client be recreated by the owning thread, preventing cross-thread connection pool corruption while preserving existing retry behavior.
+    <@387972437901312000>
+    [reply to mariaosake msg=1530241081911021760]
+
+[2026-07-24T16:07:10.659000+00:00] asshole1678 (id=1530244966788501595)
+    My collection of finished/unfinished projects https://github.com/Baal-TehDriverman?tab=repositories New developer never had input from an outside source.
+
+[2026-07-24T16:17:51.837000+00:00] gust7314 (id=1530247656083816478)
+    Hey, I’m looking for a buddy to hack with this weekend
+    
+    My goal is to customize the Pi coding agent around Hermes runtime, so we can quickly create, evaluate, and iterate on capable agents/subagents without touching Hermes core
+    
+    The plan is to keep Hermes upstream clean and do our experiments in the wrapper layer: `.pi/`, `.hermes/plugins/`, `.hermes/skills/`, hooks, configs, memories, and eval artifacts.
+    
+    feel free to send me a dm ☮
+
+[2026-07-24T17:33:39.255000+00:00] jonkomet (id=1530266729337589870)
+    now we just need these next 2 for hermes browser extension 
+    
+    https://github.com/NousResearch/hermes-agent/pull/61236
+    https://github.com/NousResearch/hermes-agent/pull/54689
+
+[2026-07-24T17:46:41.191000+00:00] asshole1678 (id=1530270009014882458)
+    which compression model are you guys using? nemotron 120b seems to do alright but idk if i should shoot for more context window
+
+[2026-07-24T17:47:38.077000+00:00] brooklyn (id=1530270247611797554)
+    reviewing
+    [reply to sassyfatcat msg=1530232400142012629]
+
+[2026-07-24T17:47:39.224000+00:00] teknium (id=1530270252422660217)
+    doesnt nemotron have 1M
+    [reply to asshole1678 msg=1530270009014882458]
+
+[2026-07-24T17:48:32.750000+00:00] dias4761 (id=1530270476927242441)
+    try check this https://github.com/NousResearch/hermes-agent/pull/70899
+    [reply to teknium msg=1530158775296594012]
+
+[2026-07-24T17:49:05.385000+00:00] dias4761 (id=1530270613808091230)
+    I was trying to implement this and see some improvements.
+
+[2026-07-24T17:50:56.970000+00:00] asshole1678 (id=1530271081829630035)
+    yeah they have the 550 but it hits api timeout too often with too many requests
+    [reply to teknium msg=1530270252422660217]
+
+[2026-07-24T17:54:31.664000+00:00] dias4761 (id=1530271982321537186)
+    So, you can see background processes in real time and cost/token efficiency (cache preservation).
+
+[2026-07-24T17:55:14.135000+00:00] fro0z1 (id=1530272160457822322)
+    <@387972437901312000>  Hi!  solyanviktor - its me  on GitHub. My merged fixes: #62488, #64557, #70154 (salvaged yesterday). 14 more PRs open, all sweeper-clean. I'm on a Windows/cp1251 machine, so I can repro encoding
+     bugs the swarm can't.
+
+[2026-07-24T17:59:36.853000+00:00] asshole1678 (id=1530273262376845392)
+    Windows is gross spyware screw bitlocker that was annoying to crack and remove. I'm almost done with my kernal and i haven't updated but NSSP Non-Suck Service-Provider AI OS built on Cosmos-3 edge quantized. will be using linux zen and linux garuda https://github.com/Baal-TehDriverman/nssp-build
+    [reply to fro0z1 msg=1530272160457822322]
+
+[2026-07-24T18:09:46.335000+00:00] brooklyn (id=1530275818729898115)
+    Ty! Merging this via https://github.com/NousResearch/hermes-agent/pull/70907
+    [reply to sassyfatcat msg=1530232400142012629]
+
+[2026-07-24T18:20:56.952000+00:00] jonkomet (id=1530278631501332610)
+    get this one too pwese<a:bongo_blob:1151299871274455060>  https://github.com/NousResearch/hermes-agent/pull/70571
+    [reply to brooklyn msg=1530275818729898115]
+
+[2026-07-24T18:25:09.471000+00:00] gust7314 (id=1530279690642919674)
+    it's possible but the infra is painfull to build, did it in the past, time flew since i'm probably no uptodate on current best practice.
+    
+    If i had to do it again i would look at this repo https://github.com/Panniantong/agent-reach & do my own research
+    [reply to 5amyak_ msg=1529877131260067922]
+
+[2026-07-24T18:37:10.204000+00:00] .thebakery303 (id=1530282713616089219)
+    making an agent os kernel too?
+    [reply to asshole1678 msg=1530273262376845392]
+
+[2026-07-24T18:45:50.902000+00:00] thatzeraphim (id=1530284897581928478)
+    Hi everyone !! I'm a first time contributor. I've been using Hermes Desktop on MacOS and I badly want it to have support for custom font. My powerlvl10k doesn't get printed properly. I allowed it to have terminal font picker.
+    
+    https://github.com/NousResearch/hermes-agent/pull/70925
+
+[2026-07-24T18:58:50.868000+00:00] brooklyn (id=1530288168996442216)
+    Can you do an actual screen recording please
+    [reply to dias4761 msg=1530270476927242441]
+
+[2026-07-24T18:59:27.050000+00:00] brooklyn (id=1530288320754483261)
+    And don't bundle the mp4 w/ the PR, gonna have to force push that away
+
+[2026-07-24T19:00:53.387000+00:00] dias4761 (id=1530288682878242940)
+    Sure, I'll just set up the video to show here in the group. As for the images, I'll show them to you in person. My apologies.
+    [reply to brooklyn msg=1530288320754483261]
+
+[2026-07-24T19:04:34.203000+00:00] realadolan (id=1530289609047806073)
+    <@119192111202566149> Hey, have you ever had a chance to review the search PRs?
+
+[2026-07-24T19:15:26.421000+00:00] asshole1678 (id=1530292344648241252)
+    Ya Nemoclaw and a VM gateway arch 64 a devdashboard that manages all ur repos on github
+    [reply to .thebakery303 msg=1530282713616089219]
+
+[2026-07-24T19:20:34+00:00] dias4761 (id=1530293634727936134)
+    <@119192111202566149>
+    [attachment] async-delegation-demo.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1530293634900164629/async-delegation-demo.mp4?ex=6a650c82&is=6a63bb02&hm=34448d7deddb6694ae90ca0783e2698ad1af619d8911e0ac3e6693a9d1bf9f2c&
+
+[2026-07-24T19:20:40.904000+00:00] thierrycharlemagne (id=1530293663685542059)
+    The auto-top up portal feature if glitched. It charged me twice after I subscribed to the $40 plan and it shows $.025 usage. SO why am I getting charged just minutes after a top-up. Its not being used by anything.
+
