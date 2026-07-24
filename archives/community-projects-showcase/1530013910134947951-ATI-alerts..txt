@@ -1,0 +1,43 @@
+# Thread 'ATI alerts.' in forum #community-projects-showcase
+# thread_id=1530013910134947951 forum_id=1316137596535177246
+# Started 2026-07-24T02:28:32.938461+00:00
+
+[2026-07-24T00:49:02.460000+00:00] arctradz (id=1530013910134947951)
+    Most people make an AI trading bot. I just made ati alerts. It takes my exact trades and copies them to people’s accounts. In over two weeks already everyone is up over 3100 and I track every single trade I take fully public. https://atialerts.com/performance
+    [attachment] IMG_6488.png https://cdn.discordapp.com/attachments/1530013910134947951/1530013994520150117/IMG_6488.png?ex=6a640812&is=6a62b692&hm=1ca6c4646bf176ecb6f27f16414da9eb453023ec8702a9e4f9246f05509a4948&
+    [embed] Arc's Track Record — ATI https://atialerts.com/performance
+
+[2026-07-24T00:49:24.578000+00:00] arctradz (id=1530014002904698892)
+    [attachment] card.png https://cdn.discordapp.com/attachments/1530013910134947951/1530014002774544454/card.png?ex=6a640814&is=6a62b694&hm=a7d1b0019d819edcc8033200af30e1c0a69209b4cbdf2196a0604a9bf41533fc&
+
+[2026-07-24T00:51:59.009000+00:00] ssspectral (id=1530014650635391016)
+    nice
+    [reply to arctradz msg=1530014002904698892]
+
+[2026-07-24T00:53:10.941000+00:00] arctradz (id=1530014952340066425)
+    Thanks! It’s fully connected to personal or prop firms. I do this full time and it’s been nice to find a way to let everyone get my actual trades
+
+[2026-07-24T01:26:55.521000+00:00] ssspectral (id=1530023444044054680)
+    you trade full time???
+    [reply to arctradz msg=1530014952340066425]
+
+[2026-07-24T01:28:23.083000+00:00] arctradz (id=1530023811305439342)
+    I do yes. I was only able to get the last 3 weeks on the dashboard but I share every trade I take in real time. It’s connected to my broker so I can’t pick and choose my plays
+
+[2026-07-24T01:28:45.386000+00:00] arctradz (id=1530023904851136572)
+    [attachment] IMG_6489.png https://cdn.discordapp.com/attachments/1530013910134947951/1530023904628834354/IMG_6489.png?ex=6a64114d&is=6a62bfcd&hm=9a3310a3e88767abf8c9f2f3c5bced38acb09442000ad2e142f0a154e45c920e&
+
+[2026-07-24T01:29:07.650000+00:00] arctradz (id=1530023998232985630)
+    That $62 went to every account connected.
+
+[2026-07-24T01:29:42.045000+00:00] arctradz (id=1530024142496337951)
+    This was today’s totals
+    [attachment] IMG_6490.png https://cdn.discordapp.com/attachments/1530013910134947951/1530024142068252803/IMG_6490.png?ex=6a641185&is=6a62c005&hm=2eb4e746bd262bbfddd0e9d91277581febdc321c65ffe83eba10f12fbd111080&
+
+[2026-07-24T01:36:04.181000+00:00] ssspectral (id=1530025745290760192)
+    wow nice, I've been trading part time for like 4-5 years and I only turn positive when I started trading on Ai stocks this year lol. Not riding the big Ai stocks waves, just trading on establish companies that turned into Ai infrastructure like blackberry who switched to Ai in 2026.
+    [reply to arctradz msg=1530023811305439342]
+
+[2026-07-24T01:38:51.938000+00:00] arctradz (id=1530026448914481272)
+    Very nice! I don’t do any long term holdings myself. Just focus on day trading futures
+

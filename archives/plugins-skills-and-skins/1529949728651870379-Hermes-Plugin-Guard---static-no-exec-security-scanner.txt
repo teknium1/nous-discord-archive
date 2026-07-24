@@ -1,0 +1,24 @@
+# Thread 'Hermes Plugin Guard — static no-exec security scanner' in forum #plugins-skills-and-skins
+# thread_id=1529949728651870379 forum_id=1485392832154832906
+# Started 2026-07-24T02:34:23.406335+00:00
+
+[2026-07-23T20:34:00.402000+00:00] moze88. (id=1529949728651870379)
+    I built Hermes Plugin Guard (`hpg`), a local static scanner for Hermes Agent plugins.
+    
+    It reads target code as data — never imports or executes the plugin — and checks manifests, Python source, dependencies, likely secrets, risky tool/hook behavior, and basic project hygiene before installation.
+    
+    A community suggestion today led to a new outbound-egress rule (HPG112). It detects common Python HTTP, WebSocket, socket, FTP, SMTP, and gRPC calls, reports only redacted scheme/host/port evidence, and still performs no DNS lookups or scanner network requests.
+    
+    Five-minute beta test (Python 3.11+):
+    ```bash
+    pipx install "git+https://github.com/mauricemohr88-debug/hermes-plugin-guard.git@v0.1.1"
+    hpg scan /path/to/your/plugin --fail-on none
+    ```
+    
+    GitHub: https://github.com/mauricemohr88-debug/hermes-plugin-guard
+    HPG112 PR: https://github.com/mauricemohr88-debug/hermes-plugin-guard/pull/3
+    
+    I’m looking for a few plugin authors to try it on real projects and tell me which findings are useful, noisy, or missing. Findings are review signals, not claims that a plugin is malicious. The project is unofficial and not affiliated with Nous Research.
+    [embed] GitHub - mauricemohr88-debug/hermes-plugin-guard: Static, no-execut... https://github.com/mauricemohr88-debug/hermes-plugin-guard
+    [embed] Add outbound network egress detection by mauricemohr88-debug · Pul... https://github.com/mauricemohr88-debug/hermes-plugin-guard/pull/3
+

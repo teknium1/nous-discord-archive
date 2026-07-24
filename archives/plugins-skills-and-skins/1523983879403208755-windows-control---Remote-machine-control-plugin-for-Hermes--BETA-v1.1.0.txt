@@ -30,3 +30,29 @@
     🙏 **Contributions welcome:** 🍎 macOS · 🐧 Linux · 🧪 Win11 testing · 🐛 encoding fixes · 🔑 Ed25519 auth · 📦 .deb/.rpm · 🌐 multi-agent dashboard
     [embed] GitHub - scwall/hermes-client-agent https://github.com/scwall/hermes-client-agent
 
+[2026-07-24T01:32:30.967000+00:00] scwallito (id=1530024851006423050)
+    **Hermes Client Agent v1.1.0-beta — Your machine, controlled by Hermes**
+    
+    After several weeks of intense refactoring, here's the current state of **hermes-client-agent**, a lightweight Python agent (~100 MB RAM) that lets Hermes control remote machines — Windows, Linux, and soon macOS.
+    
+    **What's available today:**
+    - **25 tools** in the native Hermes plugin: shell, files, mouse, keyboard, windows, screenshot, processes, and **code delegation via ACP** (OpenCode)
+    - **Web dashboard** with structured audit logging
+    - **186 tests** pytest + CI/CD via GitHub Actions
+    - **Standalone .exe** (23.5 MiB) for Windows + install scripts
+    - **Tailscale** for remote access with zero open ports
+    
+    **The ACP feature (brand new):**
+    Hermes can now delegate coding tasks to OpenCode on a remote machine — the plugin handles spawn, session reuse, provider detection, and async polling automatically. Zero config for the user. Fully transparent.
+    
+    **Architecture:**
+    ```
+    Hermes (NAS Docker) → windows_control plugin → FastAPI Agent (remote machine) → OpenCode
+    ```
+    
+    **Repo:** https://github.com/scwall/hermes-client-agent
+    **License:** MIT
+    
+    Contributions, issues, and feedback welcome!
+    [embed] GitHub - scwall/hermes-client-agent https://github.com/scwall/hermes-client-agent
+

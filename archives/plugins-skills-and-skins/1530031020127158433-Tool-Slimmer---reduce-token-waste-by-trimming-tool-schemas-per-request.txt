@@ -1,0 +1,29 @@
+# Thread 'Tool Slimmer — reduce token waste by trimming tool schemas per request' in forum #plugins-skills-and-skins
+# thread_id=1530031020127158433 forum_id=1485392832154832906
+# Started 2026-07-24T02:34:23.003167+00:00
+
+[2026-07-24T01:57:01.800000+00:00] manate (id=1530031020127158433)
+    Just wanted to share a plugin I've been using for a while: **Tool Slimmer** (by alias8818). It hooks into Hermes' conversation loop and filters the full tool schema list down to what's actually relevant for each request.
+    
+    **What it does:**
+    - Cuts tokens sent per API call by selecting only the schemas needed for the current turn
+    - Three modes: keyword (deterministic), hybrid (BM25 + vector), two-pass (experimental)
+    - Fail-open — if something goes wrong, it falls back to the full tool list
+    - **Works on ALL tools, including Hermes core tools** — unlike Hermes' native Tool Search which only defers MCP/plugin tools
+    
+    **Real-world numbers (my setup):**
+    - 132 tools → 15 selected per turn
+    - ~80-85% reduction in tool schema tokens
+    - No noticeable accuracy regression
+    
+    **⚠️ Heads up if you're on Hermes v0.19.0+**
+    
+    The current release (v0.6.5) needs a small manual patch for compatibility — the `_known_valid_hooks` check doesn't work with v0.19.0's updated PluginContext. There's an open issue about it, and a one-liner `sed` workaround is available in the issue thread.
+    https://github.com/alias8818/hermes-tool-slimmer/issues
+    
+    **Repo:** https://github.com/alias8818/hermes-tool-slimmer
+    
+    If you're running long-lived Hermes sessions and watching token usage, this is worth a look. 🔧
+    [embed] Issues · alias8818/hermes-tool-slimmer https://github.com/alias8818/hermes-tool-slimmer/issues
+    [embed] GitHub - alias8818/hermes-tool-slimmer: Reduce Hermes Agent tool-sc... https://github.com/alias8818/hermes-tool-slimmer
+

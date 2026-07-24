@@ -488,3 +488,9 @@
 [2026-07-21T01:07:55.162000+00:00] 2gigadestroyer2 (id=1528931497434677360)
     Thanks
 
+[2026-07-23T23:43:22.946000+00:00] 2gigadestroyer2 (id=1529997386615881748)
+    I'm getting really high CPU usage on a 9950x3d with only around 6 agents running concurrently? I asked AI to examine the python process' memory dump and it's saying that YantrikDB creates a separate engine for each agent?
+
+[2026-07-23T23:44:23.728000+00:00] 2gigadestroyer2 (id=1529997641554067526)
+    I try disabling YantrikDB as memory provider and check to see if CPU usage is still high
+

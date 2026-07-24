@@ -1,0 +1,15 @@
+# Thread 'Hermes-Mobile for Android' in forum #community-projects-showcase
+# thread_id=1529989167268888696 forum_id=1316137596535177246
+# Started 2026-07-24T02:28:33.341287+00:00
+
+[2026-07-23T23:10:43.301000+00:00] las (id=1529989167268888696)
+    Sharing this in case it’s useful: https://github.com/saralilyb/hermes-mobile
+    
+    It’s an unofficial native Android client for Hermes Agent, forked from Hy4ri/hermes-mobile. My fork stays close to upstream, but adds hardened remote access, complete session-history loading, and signed releases that work with Obtainium.
+    
+    Still evolving, so feedback, issues, and PRs are welcome.
+    [embed] GitHub - saralilyb/hermes-mobile: Hermes Agent mobile client — re... https://github.com/saralilyb/hermes-mobile
+
+[2026-07-24T00:03:07.277000+00:00] lyons8812 (id=1530002354060001382)
+    iOS
+

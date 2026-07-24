@@ -50156,3 +50156,82 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     fix :#70216
 
+[2026-07-23T19:25:56.736000+00:00] realadolan (id=1529932600515362956)
+    <@1387527976224297133> Your clanker is on fire
+
+[2026-07-23T19:26:08.501000+00:00] realadolan (id=1529932649861349557)
+    I think at this point we're going to have to rewrite Hermes Agent from scratch lmao
+
+[2026-07-23T19:50:27.461000+00:00] egilewski (id=1529938769183244318)
+    It is. In multiple ways. I started refactoring its skills recently and broke everything, so I a) burned a ton of tokens to fix at least the core reviewer, b) it now more efficiently sometimes works, and c) it tries to burn my CPU.
+    [reply to realadolan msg=1529932600515362956]
+
+[2026-07-23T19:51:06.411000+00:00] realadolan (id=1529938932551254118)
+    CPU how
+
+[2026-07-23T19:51:17.665000+00:00] egilewski (id=1529938979753824296)
+    Doesn't it happen weekly?
+    [reply to realadolan msg=1529932649861349557]
+
+[2026-07-23T19:51:45.115000+00:00] realadolan (id=1529939094887600399)
+    True eh
+
+[2026-07-23T19:53:44.273000+00:00] egilewski (id=1529939594672472094)
+    Codex + the skills now have a lot of deterministic code. And tests. Many tests.
+    [reply to realadolan msg=1529938932551254118]
+
+[2026-07-23T19:54:15.649000+00:00] realadolan (id=1529939726273085490)
+    😮
+
+[2026-07-23T21:10:21.781000+00:00] robertforge (id=1529958878018801835)
+    hello world
+
+[2026-07-23T21:29:04.682000+00:00] lerouxx (id=1529963587806822543)
+    the world says hello
+    [reply to robertforge msg=1529958878018801835]
+
+[2026-07-23T21:29:24.927000+00:00] robertforge (id=1529963672720510996)
+    awesome !! how are you ? how is everyone ?
+
+[2026-07-24T00:34:44.341000+00:00] nanxingncb612d (id=1530010310923128933)
+    https://github.com/NousResearch/hermes-agent/pull/70392
+
+[2026-07-24T01:41:09.715000+00:00] mariaosake (id=1530027026793369631)
+    https://github.com/NousResearch/hermes-agent/pull/70412
+
+[2026-07-24T01:58:37.515000+00:00] scwallito (id=1530031421584965712)
+    **Hermes Client Agent v0.2.0-beta — Your machine, controlled by Hermes**
+    
+    After several weeks of intense refactoring, here's the current state of **hermes-client-agent**, a lightweight Python agent (~100 MB RAM) that lets Hermes control remote machines — Windows, Linux, and soon macOS.
+    
+    **What's available today:**
+    - **25 tools** in the native Hermes plugin: shell, files, mouse, keyboard, windows, screenshot, processes, and **code delegation via ACP** (OpenCode)
+    - **Web dashboard** with structured audit logging
+    - **186 tests** pytest + CI/CD via GitHub Actions
+    - **Standalone .exe** (23.5 MiB) for Windows + install scripts
+    - **Tailscale** for remote access with zero open ports
+    
+    **The ACP feature (brand new):**
+    Hermes can now delegate coding tasks to OpenCode on a remote machine — the plugin handles spawn, session reuse, provider detection, and async polling automatically. Zero config for the user. Fully transparent.
+    
+    **Architecture:**
+    ```
+    Hermes (NAS Docker) → windows_control plugin → FastAPI Agent (remote machine) → OpenCode
+    ```
+    
+    **Repo:** https://github.com/scwall/hermes-client-agent
+    **License:** MIT
+    
+    Contributions, issues, and feedback welcome!
+    [reply to scwallito msg=1523985160259768351]
+
+[2026-07-24T02:06:17.988000+00:00] jw_mushroom_man (id=1530033352948711584)
+    This could be useful at my office
+    [reply to scwallito msg=1530031421584965712]
+
+[2026-07-24T02:06:37.472000+00:00] jw_mushroom_man (id=1530033434670399579)
+    Could make pushing updates easier
+
+[2026-07-24T02:19:24.127000+00:00] wittgenstein9840 (id=1530036650254663882)
+    Keep building fam!
+

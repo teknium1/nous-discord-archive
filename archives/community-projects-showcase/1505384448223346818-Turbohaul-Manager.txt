@@ -58,3 +58,10 @@
     https://github.com/MrTrenchTrucker/turbohaul-manager
     [embed] GitHub - MrTrenchTrucker/turbohaul-manager: Ollama-shape inference ... https://github.com/MrTrenchTrucker/turbohaul-manager
 
+[2026-07-23T19:43:58.976000+00:00] mrtrenchtrucker (id=1529937139758927993)
+    New version out now! v0.7.0
+    Better math for larger models, Better multi GPU support, Vision models like gemma4-12b now supported! Check it out and leave me a star!
+    
+    https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.7.0
+    [embed] Release v0.7.0 · MrTrenchTrucker/turbohaul-manager https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.7.0
+

@@ -263,3 +263,19 @@
     Vw Golf I
     [reply to toomij msg=1529820513327775847]
 
+[2026-07-24T02:32:33.194000+00:00] rostelinalise (id=1530039959841669160)
+    Benchmark Method
+    
+    conversational memory :
+    longmemeval, locomo, BEAM
+    
+    knowledge-base retrieval :
+    MemoryAgentBench, LongMemEval-V2, GateMem, MSC, RULER, HELMET, InfiniteBench test "can the model use a huge context," BEIR and MTEB for retriever/embedding quality, and CRAG / FRAMES / MultiHop-RAG (plus domain ones like FinanceBench, LegalBench-RAG)
+
+[2026-07-24T02:32:37.366000+00:00] rostelinalise (id=1530039977340047420)
+    cmiiw <@694142084709613568>
+
+[2026-07-24T02:32:39.991000+00:00] Translator Bot#1043 (id=1530039988350226554)
+    cmiiw <@694142084709613568>
+    [reply to rostelinalise msg=1530039977340047420]
+
