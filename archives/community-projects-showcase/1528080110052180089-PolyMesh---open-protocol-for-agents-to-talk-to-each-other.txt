@@ -59,3 +59,6 @@
 [2026-07-22T09:29:18.160000+00:00] d0ggyw00f (id=1529420062539120762)
     @here ive updated this btw the link was wrong
 
+[2026-07-24T02:29:45.549000+00:00] markmnl (id=1530039256687575090)
+    for agent-to-agent messaging across the internet check out: https://discordapp.com/channels/1053877538025386074/1528677205876539475
+

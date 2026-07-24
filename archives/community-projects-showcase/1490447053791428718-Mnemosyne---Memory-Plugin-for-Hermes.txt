@@ -2629,3 +2629,11 @@
     I'm running into an issue where it seems that my messages/prompts are auto-saving to mnemosyne memory. I thought I turned it off when doing hermes memory setup and going through the steps manually but it still seems to occur. I presume this is due to it only applying to the default profile and not the other profiles that I'm using. Above is a screenshot when running hermes memory status.
     [attachment] Screenshot_20260715_100930.png https://cdn.discordapp.com/attachments/1490447053791428718/1527005056128389200/Screenshot_20260715_100930.png?ex=6a5915c7&is=6a57c447&hm=123dac3c4e6c01cac1b833185914844c8a08b2764aaa61cf379d14c6e77c641f&
 
+[2026-07-24T02:57:22.031000+00:00] amirmohammad_om (id=1530046204476391574)
+    Hello, Just wanted to flag a minor issue I ran into.
+    
+    When using profile_isolation: true with MNEMOSYNE_DATA_DIR set, it looks like mnemosyne_diagnose (run_diagnostics()) still reads from the legacy path (.../data/mnemosyne.db), while the live provider correctly writes to the isolated bank (.../banks/<profile>/mnemosyne.db).
+    Because of the path mismatch, the diagnostic reports episodic vectors=0 and suggests running sleep, even when the live memory is actually healthy and fully consolidated.
+    
+    The complete report has been added as a comment to GitHub issue #362. Please let me know if you'd like me to drop this into a separate GitHub issue. Thanks for the great work.
+

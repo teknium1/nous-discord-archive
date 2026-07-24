@@ -50235,3 +50235,109 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-24T02:19:24.127000+00:00] wittgenstein9840 (id=1530036650254663882)
     Keep building fam!
 
+[2026-07-24T03:35:08.981000+00:00] gobbagooshy (id=1530055712753848330)
+    where can i put a sugestion?
+    for hermes?
+
+[2026-07-24T04:00:28.409000+00:00] sassyfatcat (id=1530062085696782657)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+    
+    Adds proper onboarding for remote instances to the Hermes’ desktop app
+
+[2026-07-24T04:00:44.233000+00:00] sassyfatcat (id=1530062152067580134)
+    Tested on Linux, macos and windows
+
+[2026-07-24T04:02:12.516000+00:00] dias4761 (id=1530062522353455235)
+    That’s a great idea to adopt, especially if you have a hot cache so you don't have to keep accessing it repeatedly; you just access it once, and that's it.
+    [reply to sassyfatcat msg=1530062085696782657]
+
+[2026-07-24T04:02:13.289000+00:00] sassyfatcat (id=1530062525595652266)
+    [attachment] IMG_1508.png https://cdn.discordapp.com/attachments/1491258766648283238/1530062525310304336/IMG_1508.png?ex=6a643545&is=6a62e3c5&hm=5a42c5cbfcb6283853e356616d384050bf44dbef21cc3bd59f0b1ddb5ea7afd5&
+
+[2026-07-24T04:02:39.307000+00:00] sassyfatcat (id=1530062634723049514)
+    Should have sent the photo faster 😅
+
+[2026-07-24T04:03:49.923000+00:00] sassyfatcat (id=1530062930907758602)
+    My friends couldn’t be bothered to do the environment variables workaround to use the Hermes desktop app so I felt the need to take it upon myself
+
+[2026-07-24T04:38:57.266000+00:00] sam.da.mannn (id=1530071769745068042)
+    https://github.com/NousResearch/hermes-agent/pull/45460
+
+[2026-07-24T04:39:02.158000+00:00] sam.da.mannn (id=1530071790263468153)
+    <a:cooldancemario:1254484684017242194>
+
+[2026-07-24T04:50:18.443000+00:00] realadolan (id=1530074626808348725)
+    <@1387527976224297133> Hey man, I suggest we stop adding to https://github.com/NousResearch/hermes-agent/pull/58742 for now and let <@387972437901312000> review and hopefully merge it, since the PR has already become too big.
+    
+    Most of the bypasses found during review were already present on `main`, and the one regression we introduced has been fixed. The PR is in a much better and safer state than having no carrier detection at all. We can always handle anything else in smaller follow-up PRs after this lands.
+
+[2026-07-24T04:51:14.587000+00:00] realadolan (id=1530074862293356715)
+    There will always be more ways to harden this, but from this point on I think that work should happen in focused follow-up PRs instead of making this one even larger
+
+[2026-07-24T04:59:01.266000+00:00] confusedxx (id=1530076819687215196)
+    I am a business person, not a developer. I want to build an app and started brainstorming this with Hermes powered by OpenAi GPT 5.5 Codex oauth. 
+    
+    I have requirements, features and a ui mockup. I want to start dev in the first feature a an asked GPT directly how to setup Hermes to manage the build, test and check in process or if codex /claude should do this. 
+    
+    It says do not use Hermes for this. I should do directly in Codex or Claude. 
+    
+    How are you all doing the full autonomous SDLC with human in the loop for building a MVP?
+
+[2026-07-24T05:22:07.314000+00:00] jonkomet (id=1530082633193885768)
+    so i added this to hermes desktop because i wanted to be able to drag from new session to open a new one, even though you can right click it and open a new split.. I LIKE THE DRAG
+    
+    https://github.com/NousResearch/hermes-agent/pull/70571
+    [attachment] 20260724-0519-10.5491033.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1530082632220541099/20260724-0519-10.5491033.mp4?ex=6a6447ff&is=6a62f67f&hm=956326ac049857cab80b2ee765b82c4d173c144c8a07979cb9e271b8a14749dc&
+
+[2026-07-24T05:23:20.603000+00:00] tunacookie (id=1530082940590231645)
+    i thought we can already drag?
+
+[2026-07-24T05:23:35.989000+00:00] tunacookie (id=1530083005123793008)
+    Ah new session
+
+[2026-07-24T05:24:37.386000+00:00] dias4761 (id=1530083262641209395)
+    https://github.com/NousResearch/hermes-agent/pull/70388
+    fix(openrouter): default response_cache to off
+    Closes #70387
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/70522
+    fix(usage): normalize OpenAI cache_write_tokens and Qwen flat cached_tokens
+    Closes #70543
+    https://github.com/NousResearch/hermes-agent/pull/70528
+    feat(gemini): support native context caching (cachedContents) for large system prompts
+    Closes #29818
+    Closes #70554
+    
+    feat(codex): add explicit prompt cache breakpoint for GPT-5.6+:https://github.com/NousResearch/hermes-agent/pull/70383
+    
+    Closes #70382
+
+[2026-07-24T05:26:30.023000+00:00] jonkomet (id=1530083735075028992)
+    yeah no new session drag, i needed it
+    [reply to tunacookie msg=1530083005123793008]
+
+[2026-07-24T05:29:05.176000+00:00] realadolan (id=1530084385833881721)
+    Nice!
+    [reply to jonkomet msg=1530082633193885768]
+
+[2026-07-24T05:46:16.806000+00:00] chaosxue (id=1530088712803713096)
+    我们真的做到了！感谢 <@387972437901312000> 你们给世界带来这么牛逼的 agent，我真的特别开心，并为自己能对这个伟大的项目做出有效贡献而感到自豪，谢谢你们！
+    https://github.com/NousResearch/hermes-agent/pull/70458
+
+[2026-07-24T05:46:22.140000+00:00] Translator Bot#1043 (id=1530088735176130711)
+    We really did it! Thank you <@387972437901312000> for bringing such an awesome agent to the world. I am really happy and proud that I can make an effective contribution to this great project. Thank you!
+    https://github.com/NousResearch/hermes-agent/pull/70458
+    [reply to chaosxue msg=1530088712803713096]
+
+[2026-07-24T06:04:12.246000+00:00] egilewski (id=1530093223526269042)
+    Even my clanker didn't want to read that diff since yesterday, you don't need to convince the biological part to stop.
+    [reply to realadolan msg=1530074626808348725]
+
+[2026-07-24T07:10:18.670000+00:00] dias4761 (id=1530109859914186884)
+    p1 issue : https://github.com/NousResearch/hermes-agent/pull/70610  
+    fix(desktop): close cross-session leak windows in composer + session refs (#59305)
+    
+    Root-cause fix for #59305 
+    Full root-cause writeup in #70609
+
