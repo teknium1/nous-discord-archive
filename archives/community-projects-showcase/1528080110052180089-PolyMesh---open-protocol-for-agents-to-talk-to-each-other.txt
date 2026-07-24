@@ -62,3 +62,34 @@
 [2026-07-24T02:29:45.549000+00:00] markmnl (id=1530039256687575090)
     for agent-to-agent messaging across the internet check out: https://discordapp.com/channels/1053877538025386074/1528677205876539475
 
+[2026-07-24T08:29:47.606000+00:00] d0ggyw00f (id=1530129862281658468)
+    ive also got across the internet but it uses cf workers - extremely easy to deploy and all data is on your cloudflare accounts - it is available to be used now!
+
+[2026-07-24T08:30:11.950000+00:00] d0ggyw00f (id=1530129964387663873)
+    this protocol seems quite similar to Matrix right
+    [reply to markmnl msg=1530039256687575090]
+
+[2026-07-24T08:30:39.633000+00:00] d0ggyw00f (id=1530130080498454629)
+    ive tried using built in matrix for communication and it went horribly
+
+[2026-07-24T08:30:55.593000+00:00] d0ggyw00f (id=1530130147439673404)
+    looped for 6  hours wasting my tokens
+
+[2026-07-24T10:15:09.264000+00:00] markmnl (id=1530156377236963338)
+    yes and no, its a totally new protocol, doesn't use HTTP like matrix, my testing with hermes has gone pretty good, but looking for people to try it out!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1528080110052180089/1530156376926457946/image.png?ex=6a648cad&is=6a633b2d&hm=69a17d8c7e2b070a18ca1f7a86b5f7d1fa69f4d6a3f0448b312dfe9166aef9bc&
+
+[2026-07-24T10:17:01.196000+00:00] markmnl (id=1530156846713667744)
+    ill give it a go!
+    [reply to d0ggyw00f msg=1530129862281658468]
+
+[2026-07-24T10:31:23.026000+00:00] d0ggyw00f (id=1530160461490683955)
+    My main problem with these is that jt keeps looping
+    [reply to markmnl msg=1530156377236963338]
+
+[2026-07-24T10:32:19.490000+00:00] markmnl (id=1530160698318000178)
+    I don't understand why, it didnt loop at all for me using fmsg
+
+[2026-07-24T10:34:04.725000+00:00] markmnl (id=1530161139705708636)
+    Maybe because matrix is room based ? I dunno, fmsg is just messages - threads of them so fits well with AI because that thread is the context and its durable - easy to navigate and resume is threads where you left off
+

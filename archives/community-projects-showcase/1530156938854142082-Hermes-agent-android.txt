@@ -1,0 +1,21 @@
+# Thread 'Hermes-agent-android' in forum #community-projects-showcase
+# thread_id=1530156938854142082 forum_id=1316137596535177246
+# Started 2026-07-24T13:39:31.265702+00:00
+
+[2026-07-24T10:17:23.164000+00:00] imacku (id=1530156938854142082)
+    I wanted to try building a native Android version of the Hermes Agent — something that could actually run on-device with tools like SMS, contacts, calendar, etcetera- using Hermes Agent Desktop.
+    
+    It's nowhere near perfect, but I got it compiling and the APK builds. 15 platform tools, 3 LLM providers (Nous Portal, OpenRouter, Ollama), Room database, Compose UI. Still needs a lot of polish, but I figured I'd share it in case anyone wants to help or use it.
+    
+    MIT license, zero telemetry, offline-first.
+    
+    GitHub - totuslifeservices-ux/hermes-agent-android · GitHub
+    
+    Any feedback or contributions would mean the world 🙏. 
+    
+    https://github.com/totuslifeservices-ux/hermes-agent-android
+    [embed] GitHub - totuslifeservices-ux/hermes-agent-android https://github.com/totuslifeservices-ux/hermes-agent-android
+
+[2026-07-24T10:19:34.641000+00:00] imacku (id=1530157490308645004)
+    Hermes-agent-android
+

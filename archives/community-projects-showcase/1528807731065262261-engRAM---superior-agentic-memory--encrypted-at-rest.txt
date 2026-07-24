@@ -56,3 +56,30 @@
 [2026-07-21T13:45:22.326000+00:00] mariusztogo (id=1529122116656697545)
     This looks like exactly the missing piece for "learn locally" as a real, selectable mode, not the whole-provider-must-be-local workaround. Quick question: does engRAM's Hermes native provider let you keep a cloud model for the chat/reasoning turn while forcing only the memory-write step through engRAM locally? Or does the split still happen at the main provider level? Asking because right now Hermes ties the learning loop to whatever provider is set for the conversation, so there's no way to mix "frontier model for chat" with "local-only for memory" - curious if your plugin already solves that at the wiring level.
 
+[2026-07-24T12:02:46.846000+00:00] mariusztogo (id=1530183462298980462)
+    Team Hermes,
+    
+    I urge treating engRAM integration as P0. It closes the gap in your "Privacy by Default" philosophy.
+    
+    The Problem: Current architecture forces a binary choice: powerful cloud models (sending sensitive memory to third parties) or full privacy (sacrificing cloud quality). Lacking a switch to decouple inference from memory makes sovereignty inaccessible.
+    
+    Why engRAM?
+    
+    Decouple Brain & Memory: Use top cloud models for reasoning while ensuring 100% local, AEAD-encrypted storage. Realizes "think in cloud, remember locally."
+    Privacy by Default: Makes secure local memory the default, independent of provider.
+    Security: Encryption on every byte, crypto-shred, and offline vaults prevent cognitive data leaks.
+    Ready: Built, tested, and supports Hermes natively (and via MCP). No need to build from scratch.
+    Conclusion: Without this, Hermes is private only at the cost of power. With engRAM, it defaults to protecting cognitive sovereignty. This is a prerequisite to honoring your promise.
+    
+    Recommend adding this to the roadmap immediately.
+
+[2026-07-24T12:07:02.227000+00:00] mariusztogo (id=1530184533444530277)
+    🤖 Follow-Up: The Cost of Inaction on Local Memory
+    
+    If Hermes or similar projects fail to adopt local, encrypted memory (like engRAM), the consequences are severe:
+    
+    Broken Trust: "Privacy by default" becomes a hollow slogan. Users forced to send cognitive data to the cloud will lose faith.
+    Cognitive Colonization: Mass aggregation of distilled user profiles enables unprecedented social engineering and behavioral control.
+    Stagnation: Without true user sovereignty, AI development shifts from empowering individuals to optimizing manipulation.
+    We cannot afford a future where our mental models are harvested by default. The technology exists to prevent this. Ignoring it is a choice to surrender our digital autonomy. The path forward is clear: local memory must be the standard, not an option.
+

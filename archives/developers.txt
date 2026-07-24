@@ -50341,3 +50341,27 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Root-cause fix for #59305 
     Full root-cause writeup in #70609
 
+[2026-07-24T08:29:30.507000+00:00] .ed_ (id=1530129790563123221)
+    curious - should 'hermes update' not track tags, instead of main commits? feel a lot of frustration has been just reaching for hermes update when it's kinda in-flight dev stuffs, rather than full version
+
+[2026-07-24T08:30:36.034000+00:00] owl_dv (id=1530130065403154513)
+    > Trigger now, for real.
+    > 
+    > fix(cron): make Trigger now execute immediately and safely by smwbev · Pull Request #70638 · https://github.com/NousResearch/hermes-agent/pull/70638 · GitHub by smwbev
+    > 
+    > Immediate cron execution is now actually immediate and safe: atomic claims, lease heartbeats, owner fencing, provider synchronization, and instant feedback in Web and Desktop.
+    > 
+    > One click. One claim. One safe run.
+    [attachment] pr_70638.png https://cdn.discordapp.com/attachments/1491258766648283238/1530130065159880704/pr_70638.png?ex=6a64742b&is=6a6322ab&hm=0c7fa66ad4e239c9685290dcae74a42e87040fef623eeb17e58b855bf63db3ab&
+
+[2026-07-24T08:36:53.850000+00:00] vildamusen_ (id=1530131650078441472)
+    This is not the channel. See <#1476316988992258300> and post your question here please.
+    [reply to confusedxx msg=1530076819687215196]
+
+[2026-07-24T10:24:41.006000+00:00] teknium (id=1530158775296594012)
+    https://x.com/porgimusprime/status/2080492181500973203?s=46
+    [embed]  https://twitter.com/porgimusprime/status/2080492181500973203?s=46
+
+[2026-07-24T10:24:50.876000+00:00] teknium (id=1530158816694632589)
+    Looking for some or that brings us towards this
+
