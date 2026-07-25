@@ -525,3 +525,8 @@
     Maybe this is helpful for you
     [attachment] image.png https://cdn.discordapp.com/attachments/1504168688759078952/1530411502140526682/image.png?ex=6a657a47&is=6a6428c7&hm=a9c291a147e85b3dbb06ac58a9e93d43daf2479686d93165cf6ec3f66a604d53&
 
+[2026-07-25T10:19:06.848000+00:00] spranab (id=1530519761602089080)
+    You were right, the index was missing. It was only in a migration, never the base schema, so any DB created after that never got it and every poll walked the whole oplog (that's your 55%).
+    
+    Fixed: engine 0.10.1 + plugin v0.9.3 (pip install -U yantrikdb-hermes-plugin) - 246× less idle CPU and the backpressure errors are gone. Good catch, thanks for chasing it.
+

@@ -1,0 +1,29 @@
+# Thread 'I built an OpenTelemetry plugin for Hermes Agent — now open source' in forum #plugins-skills-and-skins
+# thread_id=1530516732500771016 forum_id=1485392832154832906
+# Started 2026-07-25T13:25:20.444225+00:00
+
+[2026-07-25T10:07:04.654000+00:00] mandark1475 (id=1530516732500771016)
+    I built an OpenTelemetry plugin for Hermes Agent — now open source
+    
+    hermes-otel-plugin gives every Hermes turn a proper end-to-end trace:
+    
+    one invoke_agent span per turn
+    one chat span per LLM call
+    one execute_tool span per tool call
+    real durations, token usage, finish reasons, time-to-first-token, and cost
+    OpenTelemetry GenAI semantic conventions, compatible with Jaeger, Grafana Tempo, Honeycomb, and any OTLP backend
+    Prompt, response, and tool content are privacy-gated and only exported when explicitly enabled. The plugin is fail-open, requires no Hermes core changes, and includes 44 unit tests using in-memory exporters.
+    
+    Install it with:
+    
+    hermes plugins install Mandark-droid/hermes-otel-plugin
+    hermes plugins enable otel
+    Repo (MIT, v1.1.1): https://github.com/Mandark-droid/hermes-otel-plugin
+    
+    The attached screenshot is a live Hermes turn in stock Jaeger: an LLM call, two parallel file reads, and the final answer, all with their real measured durations. Feedback and ideas for useful agent telemetry are very welcome.
+    [attachment] genai-otel-hermes.png https://cdn.discordapp.com/attachments/1530516732500771016/1530516732886777906/genai-otel-hermes.png?ex=6a65dc48&is=6a648ac8&hm=ed8a1f780daa2e1a7bd6489627a62e16db1ceaf8c225dcf9c81c5c116f6fc89b&
+    [attachment] hermes-grafana-trace.png https://cdn.discordapp.com/attachments/1530516732500771016/1530516733536768150/hermes-grafana-trace.png?ex=6a65dc48&is=6a648ac8&hm=b4ebf8134ed39fae6ae3b0be89c3d09811bb3232856e73c1aa853ac93e1e6b72&
+    [attachment] hermes-jaeger-waterfall.png https://cdn.discordapp.com/attachments/1530516732500771016/1530516733893279804/hermes-jaeger-waterfall.png?ex=6a65dc48&is=6a648ac8&hm=88193c086a7d03980f055b27483a31795db6cdd91e7cf6ada230022eb7e0c225&
+    [attachment] brand-banner.png https://cdn.discordapp.com/attachments/1530516732500771016/1530516734417698826/brand-banner.png?ex=6a65dc49&is=6a648ac9&hm=220933aeecc4e2e1614de1491161f7b6b8f64cb8654ade56e176f31bd208bf67&
+    [embed] GitHub - Mandark-droid/hermes-otel-plugin: OpenTelemetry (OTLP) obs... https://github.com/Mandark-droid/hermes-otel-plugin
+

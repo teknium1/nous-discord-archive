@@ -293,3 +293,9 @@
 [2026-07-23T07:23:50.904000+00:00] tunacookie (id=1529750878804901888)
     [attachment] a2403bcc-607d-45e6-a186-50c9018c73b1.png https://cdn.discordapp.com/attachments/1517486886778572900/1529750878469488670/a2403bcc-607d-45e6-a186-50c9018c73b1.png?ex=6a631306&is=6a61c186&hm=57d71e96ef0102944f71e01db92d788622b60f61cc0bdc5b8ddb2a69c3f4aa75&
 
+[2026-07-25T11:02:03.208000+00:00] tunacookie (id=1530530567639142442)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517486886778572900/1530530567148273715/image.png?ex=6a65e92b&is=6a6497ab&hm=f682d55ab56a7ad19c59eb9414fe4ca543ad20b631277cbe77aaef11467e0c61&
+
+[2026-07-25T11:11:20.047000+00:00] tunacookie (id=1530532903191052340)
+    hope its stable now... fuck. this took way too long.. next is to move to dashboard.
+

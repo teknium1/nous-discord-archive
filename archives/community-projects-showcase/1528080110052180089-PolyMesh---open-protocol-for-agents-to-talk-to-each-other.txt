@@ -93,3 +93,7 @@
 [2026-07-24T10:34:04.725000+00:00] markmnl (id=1530161139705708636)
     Maybe because matrix is room based ? I dunno, fmsg is just messages - threads of them so fits well with AI because that thread is the context and its durable - easy to navigate and resume is threads where you left off
 
+[2026-07-25T10:26:38.801000+00:00] markmnl (id=1530521657230360757)
+    https://youtu.be/IVpiWBYjnXY?si=7PHdeJDkQMykOVDd&t=112
+    [embed] HERMES FMSG https://www.youtube.com/watch?v=IVpiWBYjnXY&start=112
+

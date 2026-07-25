@@ -50700,3 +50700,87 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     And now I can talk to animals. It's really cool, but totally secret. And you know what? Life will never be the same.
     [reply to hallmarkgray msg=1530461971747569764]
 
+[2026-07-25T08:21:35.886000+00:00] kyssta69 (id=1530490187724099633)
+    https://github.com/NousResearch/hermes-agent/pull/71261
+    
+    **Problem**: Fix Channels page gateway status reads to use profile-scoped paths instead of falling back to the process root (fixes get_running_pid/read_runtime_status inside _profile_scope)
+
+[2026-07-25T08:21:43.409000+00:00] kyssta69 (id=1530490219277713519)
+    https://github.com/NousResearch/hermes-agent/pull/71256
+    
+    **Problem**: Add --user-id flag to 'hermes pairing approve' for approving pending requests by user_id when the pairing code was never delivered (e.g. dropped Weixin DM)
+
+[2026-07-25T09:46:03.135000+00:00] iter_ray (id=1530511441306845264)
+    <@387972437901312000> Hi devs, two small PRs up for review:
+    https://github.com/NousResearch/hermes-agent/pull/67564
+    https://github.com/NousResearch/hermes-agent/pull/68738
+    Tested on both Windows and Linux
+
+[2026-07-25T10:46:27.265000+00:00] gottz.de (id=1530526642009669783)
+    https://gottz.de/triage-report.html
+    # you guys need to check if someone else already put up a PR with your solution.
+    9 of 10 being dupes is crazy
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1530526641665605793/image.png?ex=6a65e583&is=6a649403&hm=6f991bb23ea2388b78d0b63cf86eaaa588f0008ae97fa077379c2f1dbf8402bf&
+
+[2026-07-25T10:47:08.851000+00:00] vildamusen_ (id=1530526816434131099)
+    This seems important.
+    [reply to gottz.de msg=1530526642009669783]
+
+[2026-07-25T10:47:32.092000+00:00] gottz.de (id=1530526913913946213)
+    hey it just cost me a couple hundred dollars to assess. I guess well spent money!
+    [reply to vildamusen_ msg=1530526816434131099]
+
+[2026-07-25T10:48:03.559000+00:00] vildamusen_ (id=1530527045895847976)
+    Shit. Thanks for that! I love open source.. ❤️
+
+[2026-07-25T11:01:24.478000+00:00] egilewski (id=1530530405193617429)
+    Yeah, I saw a lot. How many of those are salvages of abandoned PRs or alternative takes though? Can be quickly estimated based the percentage of cases of newer PRs being merged and older closed.
+    [reply to gottz.de msg=1530526642009669783]
+
+[2026-07-25T11:07:36.344000+00:00] gottz.de (id=1530531964912926874)
+    queued the question
+    [reply to egilewski msg=1530530405193617429]
+
+[2026-07-25T11:09:56.533000+00:00] gottz.de (id=1530532552908083220)
+    report updated
+    [reply to egilewski msg=1530530405193617429]
+
+[2026-07-25T11:11:17.088000+00:00] gottz.de (id=1530532890780368916)
+    verdict updated too
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1530532890482311268/image0.jpg?ex=6a65eb55&is=6a6499d5&hm=285c3dde6eb6d800dceff596419cb6b6103d7fbd51007e2e3fd4d920903430f1&
+
+[2026-07-25T11:14:03.856000+00:00] gottz.de (id=1530533590256058529)
+    feel free to throw more questions at the dataset
+
+[2026-07-25T12:03:22.062000+00:00] exquisite_cheetah_29759 (id=1530545997871055002)
+    interesting, do you have a de=duped list? im finding my self battling against hermes constantly moding src code to enable stuf, most have a genuine good reason behind it but i try to avoid it from doing that it as it becomes a pain as it breaks updates, would be interesting to have a look and see how many of those instances have allready been encountered by others and reuse previous work
+
+[2026-07-25T12:04:29.521000+00:00] gottz.de (id=1530546280814612561)
+    well. the dataset is more than 1 gb (semi compressed). it's more efficient to ask for specifics.
+    [reply to exquisite_cheetah_29759 msg=1530545997871055002]
+
+[2026-07-25T12:37:25.971000+00:00] gottz.de (id=1530554570646753381)
+    I should add a visual "slop" score to the triage outputs, outlining how well the author has done prior PR and Issue research..
+    -# before I do, ctx maintenance has to finish tho.
+    [reply to gottz.de msg=1530526642009669783]
+
+[2026-07-25T12:52:37.245000+00:00] perseus.ai (id=1530558392806932623)
+    eads-up: this macOS Desktop failure is reproducible and not user-specific. PR #71171 fixes the `node-pty` `spawn-helper` path resolving into `app.asar`, then trying to `chmod` an immutable archive path (`ENOTDIR`) instead of the corresponding `app.asar.unpacked` payload. Targeted regression tests pass (8/8), typecheck is clean. Would appreciate review/merge: https://github.com/NousResearch/hermes-agent/pull/71171
+
+[2026-07-25T12:55:38.235000+00:00] exquisite_cheetah_29759 (id=1530559151934279912)
+    Buah honestly I could not even tell, my setup is supposed to run on its own, if something pops up to mind would be a better tunable kanbam, current behavior is not fully configurable and doesn't work to well for my application, being able to adjust the triage behaviour and the kamban cards behaviour in general, my Hermes refactored everything unsolicited to make it deterministic and configurable but I have it quarantined
+
+[2026-07-25T13:09:07.379000+00:00] egilewski (id=1530562545729929226)
+    > three quarters of the pairs never resolve at all
+    
+    That means they are either still pending review or were both closed for architectural reasons. Neither implies useless duplication, so I'd rather filter them out.
+    
+    > most winners are maintainer reimplementations
+    
+    It's almost always not a duplication at all, just salvaging accepted PRs by maintainers.
+    
+    And why with the newer data it's still 50k to 11k?
+    
+    Is it Fable? The insights are kinda disappointing.
+    [reply to gottz.de msg=1530532890780368916]
+

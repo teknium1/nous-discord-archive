@@ -27,3 +27,7 @@
     [embed] GitHub - markmnl/hermes-fmsg: Hermes fmsg integration https://github.com/markmnl/hermes-fmsg
     [embed] fmsg/FMSG_WHITE_PAPER.pdf at main · markmnl/fmsg https://github.com/markmnl/fmsg/blob/main/FMSG_WHITE_PAPER.pdf
 
+[2026-07-25T10:17:13.320000+00:00] markmnl (id=1530519285431009280)
+    https://youtu.be/IVpiWBYjnXY?si=7PHdeJDkQMykOVDd&t=112
+    [embed] HERMES FMSG https://www.youtube.com/watch?v=IVpiWBYjnXY&start=112
+

@@ -14,3 +14,6 @@
     [attachment] Screenshot_from_2026-07-14_07-47-25.png https://cdn.discordapp.com/attachments/1529382818537279638/1529382818973483048/Screenshot_from_2026-07-14_07-47-25.png?ex=6a61bc3e&is=6a606abe&hm=e1556eac2d9dd45b980736191c482fcc7f852318d7408422d3b1b82caeeb6758&
     [embed] AI Learning Companions — Free agent skills · Warmer Sun https://warmersun.com/ailc/
 
+[2026-07-25T12:37:59.852000+00:00] johnwrightai (id=1530554712754229290)
+    would this be easy to mod to make it .... learning for AI?
+
