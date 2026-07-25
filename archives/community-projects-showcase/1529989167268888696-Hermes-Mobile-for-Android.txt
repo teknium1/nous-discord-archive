@@ -13,3 +13,9 @@
 [2026-07-24T00:03:07.277000+00:00] lyons8812 (id=1530002354060001382)
     iOS
 
+[2026-07-25T01:49:43.813000+00:00] .notsherlockholmes (id=1530391570942263386)
+    I tried using this but couldn't get it to connect to my server. It's locally hosted, so I don't need HTTPS, but I take it the security focus makes it an understandable requirement.
+    
+    So I got Hermes to set it up for me which it did by configuring a self signed certificate. Even that didn't help though. Any way we can bypass this requirement entirely?
+    [reply to las msg=1529989167268888696]
+

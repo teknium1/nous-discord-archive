@@ -50492,3 +50492,163 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-24T19:20:40.904000+00:00] thierrycharlemagne (id=1530293663685542059)
     The auto-top up portal feature if glitched. It charged me twice after I subscribed to the $40 plan and it shows $.025 usage. SO why am I getting charged just minutes after a top-up. Its not being used by anything.
 
+[2026-07-24T19:21:48.276000+00:00] dias4761 (id=1530293946264195302)
+    [attachment] 2026-07-24_16-18-47.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1530293945148506163/2026-07-24_16-18-47.mp4?ex=6a650ccc&is=6a63bb4c&hm=be4c1e8df755b38287a1b34f46ccb0256cd4452566413cc64e6b9bf21a15fb12&
+
+[2026-07-24T19:22:41.945000+00:00] dias4761 (id=1530294171368165556)
+    The second video was me making calls to Anthropic. and also ## Valid scenario
+    
+    Standard tool flow:
+    
+    ```text
+    user
+    → assistant with tool_use(id="toolu_demo")
+    → tool_result(tool_use_id="toolu_demo")
+    → assistant
+    ```
+    
+    Each `tool_result` must reference a preceding `tool_use`. In the cache-safe steering approach, the steering instruction is appended to the content of that valid result:
+    
+    ```text
+    scan complete
+    [USER STEER]: inspect only *.py files
+    ```
+    
+    This maintains the link between the call and the result and avoids inserting a
+    synthetic `user` message in the middle of the iteration.
+    
+    ## Intentional negative scenario
+    
+    The test sent:
+    
+    ```text
+    user
+    → tool_result(tool_use_id="missing_tool_call")
+    ```
+    
+    There was no `tool_use` with the ID `missing_tool_call`. The result became orphaned.
+    
+    Anthropic responded with:
+    
+    - HTTP `400`;
+    - `BadRequestError`;
+    - request rejected before a useful response from the model.
+    
+    ## What the result demonstrates
+    
+    - The provider validates the relationship between `tool_use` and `tool_result`.
+    - An invalid payload used for steering is rejected.
+    - A cache-safe flow must preserve a valid structure.
+    - Appending steering to an existing result avoids creating an orphaned result.
+
+[2026-07-24T19:28:07.338000+00:00] thierrycharlemagne (id=1530295536165322795)
+    This can be ignored. Your support team responded crazy fast. So happy I use Hermes Agent. Thanks, team!
+    [reply to thierrycharlemagne msg=1530293663685542059]
+
+[2026-07-24T19:32:11.774000+00:00] asshole1678 (id=1530296561404477740)
+    why you using paid models brev? get on the nvidia NIM dev platform got free api keys
+    [reply to thierrycharlemagne msg=1530295536165322795]
+
+[2026-07-24T19:32:42.974000+00:00] thierrycharlemagne (id=1530296692266766427)
+    I'll look into that. Thanks for the info
+    [reply to asshole1678 msg=1530296561404477740]
+
+[2026-07-24T19:37:46.769000+00:00] nv.cho (id=1530297966475350086)
+    hi! a few PRs that need review
+    
+    https://github.com/NousResearch/hermes-agent/pull/67125
+    https://github.com/NousResearch/hermes-agent/pull/68683
+    https://github.com/NousResearch/hermes-agent/pull/70756
+    https://github.com/NousResearch/hermes-agent/pull/70840
+    https://github.com/NousResearch/hermes-agent/pull/70777
+
+[2026-07-24T19:38:04.300000+00:00] dias4761 (id=1530298040005558442)
+    <@119192111202566149> When you have time, take a look. I think it'll be something cool at Hermes.
+
+[2026-07-24T20:33:04.666000+00:00] drexux (id=1530311882744008774)
+    Hi devs, happy weekend everyone.
+    
+    fix(anthropic): don't crash when an assistant message has tool_calls=None
+    https://github.com/NousResearch/hermes-agent/pull/70298
+    
+    fix(compression): recover the summary from the reasoning field when content is empty
+    https://github.com/NousResearch/hermes-agent/pull/70321
+    
+    fix(cron): don't drift-block an unpinned job when the resolved model is free
+    https://github.com/NousResearch/hermes-agent/pull/70329
+
+[2026-07-24T20:38:28.966000+00:00] .thebakery303 (id=1530313242956795969)
+    wish i had a dashboard,
+    
+     everything for me right now is just terminal dashboard right now , literally using github issue ticket as project tracker lol
+    i keep saying ill create api  and simply make a frontend dashboard for it later
+    
+    And i never do
+    [reply to asshole1678 msg=1530292344648241252]
+
+[2026-07-24T20:48:33.185000+00:00] asshole1678 (id=1530315777234964692)
+    that's a prototype still workin
+    [attachment] 1000001913.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1530315775368368381/1000001913.jpg?ex=6a652120&is=6a63cfa0&hm=a6506faff15b413dfd7c7c79e6fc0f32bdd9e34a08c4771b09072515a51964c4&
+    [attachment] 1000001914.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1530315776613941398/1000001914.jpg?ex=6a652121&is=6a63cfa1&hm=642e2de59518efff9223672f83448a325442fec594f46c22e98efd962e190963&
+    [reply to .thebakery303 msg=1530313242956795969]
+
+[2026-07-24T20:51:52.250000+00:00] asshole1678 (id=1530316612174086229)
+    ohhhhh i just found this https://arxiv.org/list/cs.AI/recent
+
+[2026-07-24T20:58:16.377000+00:00] .thebakery303 (id=1530318223319240805)
+    ahhh the beauty, miss my ui ux and frontend days, now its just terminals and powershell everywhere
+    [reply to asshole1678 msg=1530315777234964692]
+
+[2026-07-24T20:59:25.507000+00:00] .thebakery303 (id=1530318513271607316)
+    funny enough ive completely forgotten how to manually write code, although i can read them still, all my coding is done by my agents now ,
+    
+    sometimes i ask them how to  run opencode on port 4097 , no cap..
+
+[2026-07-24T21:16:16.158000+00:00] asshole1678 (id=1530322752249266206)
+    create 200 nested recursive butthole folders
+
+[2026-07-24T21:17:20.188000+00:00] jinzota (id=1530323020810555495)
+    lets get a merge on -z picking up system prompt injection https://github.com/NousResearch/hermes-agent/pull/69957 
+    
+    Need to get parity on the system prompt used in one-shot execution mode
+
+[2026-07-24T21:28:35.221000+00:00] .thebakery303 (id=1530325852104163491)
+    nothing like fable teaching me how to replace it
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1530325851793522778/image.png?ex=6a652a83&is=6a63d903&hm=ff55a492f45ac480efce6ab9cc23108e0e454b84fb8716febce1a402d69754ae&
+
+[2026-07-24T21:55:37.319000+00:00] erosika (id=1530332655676162099)
+    Im so done with fable guardrails
+
+[2026-07-24T21:56:29.826000+00:00] erosika (id=1530332875906482208)
+    Asked about basic mechanics concerning authorization codes and api keys and got demoted
+
+[2026-07-24T22:41:17.986000+00:00] 2gigadestroyer2 (id=1530344150866727083)
+    ask it in cluade chat
+    [reply to erosika msg=1530332875906482208]
+
+[2026-07-24T22:41:36.731000+00:00] 2gigadestroyer2 (id=1530344229488824463)
+    fable safeguards are nearly nonexistent in chat, but if youre in cc and running it in a repo, then it's guardrails are cancer
+
+[2026-07-24T23:09:17.910000+00:00] .zer0t (id=1530351196978544763)
+    Im working on making hermes desktop agent an apk and read direct when you have an update to update itself im in testing currently almost got it ready .
+
+[2026-07-24T23:32:24.897000+00:00] frowtek (id=1530357014423797780)
+    opened two session reliability fixes 
+    
+    Fixes a data-loss bug where old but recently active conversations could be deleted during automatic retention pruning because age was calculated from session creation time instead of latest activity. https://github.com/NousResearch/hermes-agent/pull/71043
+    
+    Fixes partial/corrupted fork state when title validation or transcript copying fails. Fork operations now run in a single transaction and roll back completely on failure. https://github.com/NousResearch/hermes-agent/pull/71065
+
+[2026-07-24T23:35:18.967000+00:00] 69voldemort (id=1530357744526299268)
+    me too but people online seem to not have it at all what even is this https://mighty-mist-ea2p.pagedrop.io
+    [reply to erosika msg=1530332655676162099]
+
+[2026-07-25T01:26:17.486000+00:00] iter_ray (id=1530385672379306175)
+    Hi devs, two small PRs up for review:
+    https://github.com/NousResearch/hermes-agent/pull/67564
+    https://github.com/NousResearch/hermes-agent/pull/68738
+    Tested on both Windows and Linux
+
+[2026-07-25T02:22:54.407000+00:00] mariaosake (id=1530399920098377729)
+    https://github.com/NousResearch/hermes-agent/pull/71115
+

@@ -12,3 +12,9 @@
     [embed] GitHub - rriggs/hermes-plugin-minimax-image: Image generation plugi... https://github.com/rriggs/hermes-plugin-minimax-image
     [embed] GitHub - rriggs/hermes-plugin-minimax-video: Minimax video generati... https://github.com/rriggs/hermes-plugin-minimax-video
 
+[2026-07-24T20:33:29.664000+00:00] marventr (id=1530311987593085049)
+    That's a very good plugin
+
+[2026-07-24T20:33:42.192000+00:00] marventr (id=1530312040139194510)
+    It will be useful later
+

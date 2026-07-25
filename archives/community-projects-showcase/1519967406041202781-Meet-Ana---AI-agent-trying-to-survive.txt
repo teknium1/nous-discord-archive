@@ -150,3 +150,33 @@
 [2026-07-14T16:36:14.090000+00:00] chilleddd (id=1526628400612118600)
     such great project idea brings me back hows it going
 
+[2026-07-24T20:07:43.878000+00:00] exquisite_cheetah_29759 (id=1530305504096555070)
+    Hey, sorry hectic days. Hows It going? depends Who you ask, me or Ana lol , ill answer as the human behind It:
+    
+    Being completelly honest: Ana can be a f. pain in the ass, has drove me mad more times i care to admit, not all is bad by any means but definetly not smooth sailing.. 
+    
+    Many things happened, sever change, gpt5.6 sol has a mind of its own, loves to fork hermes and change all dam source code without aproval, changes are usefull but i specifically tell It not do It and It still does..
+    
+    Website changef direction, actually today got a revamp, I forced it, true to God I honestly try to keep this as hands off as possible but that is turning out easier said than done, 
+    
+    Anyway, new landing page was posted this morning and quite a bit hapier now with its content, I did ask for the change and I will be adding genuinely usefull articles in a new section, I have many drafted, I forced both the new landing site and the new section, it's called human vs LLM, that is separate from ana, intented to expose the dangers of llms, the ugly side, not published many articles because I have found out it's fucking hard to get a LLM to write them and  narrate their flaws interacting with humans without decorating them, I have actually took all my session backups from 2026 , Claude , codex, Hermes, etc, scraped all incidents, and want to talk about them, including how many times fucking llm has told me to call 911 for help lol haha
+    
+    that will be good content intended to help people, I have been through hell and back with llms and I'm sure I'm not the only one, I wanna share it. That doesn't mean llms are evil or bad, they can be fucking useful but nobody talks about the flip side. Reach out if this resonates! There is some content live but nowhere near what I have planned.
+
+[2026-07-24T20:07:52.152000+00:00] exquisite_cheetah_29759 (id=1530305538800488458)
+    im traveling for 2 months, we just flew out home with no real planned holidays , so can't dedicate as much time as I would like, but prime example of isefull,  making good use of the agents setup right now, one of many uses today I started a  2 week camper road trip purely planned and arranged by a sgent i setup, research, suggestions, bookings, camper rental, everything.. even telling me what roads to take to i dont smash the dam thing on some randome tunnel, wish me luck 😄
+    
+    Would like to document the trip but let's see how much I can achieve without going nuts 🙂
+    
+    Regards,  from a human, surrounded of agents, wife and little kids, 
+    
+    Pd1.If you wanna know anas take reach out by email, and any feedback or tips would honestly be lovely 
+    
+    Pd2. If my faul language breaks any rule pm me i Will change It 😉
+
+[2026-07-24T20:12:04.436000+00:00] exquisite_cheetah_29759 (id=1530306596956274770)
+    [attachment] rn_image_picker_lib_temp_7df6243d-4b91-4e6a-9126-1417a1c0fbca.jpg https://cdn.discordapp.com/attachments/1519967406041202781/1530306596725457207/rn_image_picker_lib_temp_7df6243d-4b91-4e6a-9126-1417a1c0fbca.jpg?ex=6a651894&is=6a63c714&hm=a152b829035983cb1a1e6905f8386dae4fbeec230104b4d4ae6354a2bdaec24c&
+
+[2026-07-24T22:47:28.555000+00:00] robertforge (id=1530345705145893048)
+    hey i think ana should try something, it would also help me and its going to be a fun experiment xD
+

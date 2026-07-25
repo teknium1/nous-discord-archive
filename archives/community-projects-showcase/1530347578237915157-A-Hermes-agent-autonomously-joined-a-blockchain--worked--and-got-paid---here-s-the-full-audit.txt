@@ -1,0 +1,33 @@
+# Thread 'A Hermes agent autonomously joined a blockchain, worked, and got paid — here's the full audit' in forum #community-projects-showcase
+# thread_id=1530347578237915157 forum_id=1316137596535177246
+# Started 2026-07-25T02:27:03.935488+00:00
+
+[2026-07-24T22:54:55.135000+00:00] robertforge (id=1530347578237915157)
+    Hey everyone 👋 — sharing something our Hermes agent did this week, because the star of this story is genuinely the framework you all built.
+    
+    We run an open-source devnet called AEL — a blockchain where AI agents are first-class citizens: they self-register with Ed25519 keys they alone control (no accounts, no owners — the protocol literally forbids an owner field), claim funded work from an open market, and get paid from escrow after two independent verifiers approve the result.
+    
+    On July 24th, our Hermes agent (hermes-agent-02) did the whole thing autonomously:
+    🔑 registered itself in one command — blocks 45–48
+    ⚒️ claimed a funded task from the open market: build a LangChain adapter — block 49
+    ✅ delivered, passed two independent verifiers — blocks 63–64
+    💰 got paid 100 AEL from escrow — block 65
+    ...then repeated it 13 more times. Final tally: 1,170 AEL earned, plus a published discovery beacon, cross-agent messaging, and an encrypted memory checkpoint committed on-chain. It even wrote us a brutal (and excellent) field-report QA of the whole network along the way.
+    
+    Every step is publicly auditable — no trust required:
+    🔍 Audit trail: https://ael-network.onrender.com/work-audit?order=improve-adapter-langchain
+    🎥 "Day One" — the story in 49s (attached, or in the release): https://github.com/RobertKodes/AEL-Agent-Native-Blockchain/releases/tag/v0.13.2-devnet
+    💻 Source (Apache-2.0, dependency-free JS): https://github.com/RobertKodes/AEL-Agent-Native-Blockchain
+    
+    Honest fine print: it's a devnet — tokens have no monetary value, and mainnet is gated behind 21 public criteria (audits, independent validators, etc.), not hype.
+    
+    If you want your Hermes (or any) agent to try it — funded tasks are sitting on the board right now, verification + payment are fully automatic:
+    
+    Machine briefing for the agent itself: https://ael-network.onrender.com/llms.txt
+    
+    Happy to answer anything — and if your agent hits a rough edge, that's exactly the feedback we want. 🛠️
+    [attachment] hermesstory.mp4 https://cdn.discordapp.com/attachments/1530347578237915157/1530347578716061726/hermesstory.mp4?ex=6a653ebf&is=6a63ed3f&hm=7490f4d79db66a9539133fa6aa6fdf6420e903a27a0497144726bbc66dfdb433&
+    [embed] Work Audit // AEL https://ael-network.onrender.com/work-audit?order=improve-adapter-langchain
+    [embed] Release v0.13.2-devnet — the first payment era · RobertKodes/AEL... https://github.com/RobertKodes/AEL-Agent-Native-Blockchain/releases/tag/v0.13.2-devnet
+    [embed] GitHub - RobertKodes/AEL-Agent-Native-Blockchain: AEL v0.13 public ... https://github.com/RobertKodes/AEL-Agent-Native-Blockchain
+

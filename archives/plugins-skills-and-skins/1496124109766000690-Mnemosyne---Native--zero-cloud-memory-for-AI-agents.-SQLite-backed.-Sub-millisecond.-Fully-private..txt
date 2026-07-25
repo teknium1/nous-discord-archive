@@ -2337,3 +2337,23 @@
     i saw mnemosyne has a memory layer thats shared across all profiles. how did you intend to have agents/profiles use this part? its a really interesting concept but so far none of my agents put anything in there. how did you intend for them to decide what information should be shared?
     [reply to nulledvector msg=1496124109766000690]
 
+[2026-07-25T02:20:15.200000+00:00] nulledvector (id=1530399252336083108)
+    You don't need to reinstall the plugin. It lives in Hermes' Python venv, which is shared across all profiles. Install once, every profile can use it.
+    
+    What you DO need per profile:
+    
+    1. Enable it in that profile's config. Each profile has its own config.yaml under ~/.hermes/profiles/<name>/config.yaml. Add the same memory provider section you have in your default profile.
+    
+    2. If profile_isolation is ON (recommended), each profile gets its own SQLite database automatically under mnemosyne/data/banks/<profile>/. No extra setup, it just works. First recall in the new profile creates the bank.
+    
+    3. If profile_isolation is OFF, all profiles share the same database. That's usually not what you want.
+    
+    So the short answer: install the plugin once, copy the config block to each profile, done. No reinstall, no re-import, no extra commands.
+    
+    One gotcha: if you installed via uv tool install for the CLI but the plugin isn't in Hermes' venv, you'll get the "pip not found" doctor error. Make sure mnemosyne-hermes is pip-installed into Hermes' venv specifically:
+    
+    hermes python -m pip install mnemosyne-hermes
+    
+    That one command covers all profiles.
+    [reply to digital_love_two msg=1526513146632732804]
+

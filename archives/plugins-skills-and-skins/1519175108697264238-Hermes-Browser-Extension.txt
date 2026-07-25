@@ -712,3 +712,24 @@
     once that port is mapped, you connect through Local or Remote Gateway using the API URL and key
     [reply to heeervas msg=1529588453027614771]
 
+[2026-07-24T20:31:05.704000+00:00] jonkomet (id=1530311383781085264)
+    two of our Hermes Agent contributions just merged upstream, strengthening model support for Hermes Browser Extension   
+    
+    → provider-aware request routing
+    → authenticated model/provider discovery
+    
+    less friction, more reliable models, and a solid foundation for what’s next
+    
+    repo : https://github.com/abundantbeing/hermes-browser-extension
+    
+    
+    together, these let Hermes-aware clients discover configured providers/models and route each request to the right runtime without changing global config
+    
+    → provider-aware request routing : https://github.com/NousResearch/hermes-agent/pull/70853
+    
+     → model options inventory : https://github.com/NousResearch/hermes-agent/pull/70900
+    [attachment] HBE_-_Model_PRs_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1530311384263295117/HBE_-_Model_PRs_Update_AD.png?ex=6a651d09&is=6a63cb89&hm=4450bc9f190d90422caf8c5c687cf925354210892683754a159910377164e7a4&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+    [embed] feat(api): honor provider-aware request routing (salvage #54426) by... https://github.com/NousResearch/hermes-agent/pull/70853
+    [embed] fix(api-server): expose model options inventory (salvage #54689) by... https://github.com/NousResearch/hermes-agent/pull/70900
+

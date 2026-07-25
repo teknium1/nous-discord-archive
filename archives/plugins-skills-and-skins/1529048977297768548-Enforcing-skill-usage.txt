@@ -19,3 +19,7 @@
 [2026-07-22T12:49:14.496000+00:00] patrickzhukovbartley (id=1529470378819195012)
     Thanks let me try again digest all this andc see that I should do next
 
+[2026-07-24T23:57:00.452000+00:00] wryrye (id=1530363203350036671)
+    This is a deeper breakdown from the original creator of Alexa: https://open.substack.com/pub/williamtp/p/the-ai-trust-ceiling
+    [embed] The Trust Ceiling: The invisible limit on what AI is allowed to do https://open.substack.com/pub/williamtp/p/the-ai-trust-ceiling
+
