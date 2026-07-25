@@ -2357,3 +2357,31 @@
     That one command covers all profiles.
     [reply to digital_love_two msg=1526513146632732804]
 
+[2026-07-25T02:59:40.234000+00:00] digital_love_two (id=1530409172007387268)
+    Thank you. I just installed mnemosyne and when I ask my agent about how mnemosyne inject token, it paint a diagram to explain it. A fun surprise. Maybe a new feature from hermes agent.
+
+[2026-07-25T03:05:44.050000+00:00] ruangraung (id=1530410697962557591)
+    Hi <@151598363131904000> <@460810169488769025>, I ran `hermes update` recently and hit something I haven't seen reported yet, anywhere (Discord/mnemosyne issue repo), so I wanted to ask you before doing anything hasty.
+    
+    Quick backstory: a few updates ago Hermes started warning that the linked SQLite 3.50.4 was vulnerable to the WAL-reset corruption bug. This new update finally fixed that, it added a "Managed Python runtime repaired (SQLite 3.50.4 → 3.53.1)" step, which is great.
+    
+    But that step rebuilt the Hermes venv from scratch. And because mnemosyne-memory + mnemosyne-hermes live in that venv (installed via uv pip), they got dropped in the swap. The old venv is parked as `venv.stale.runtime-…`, but the live one no longer has the packages.
+    
+    Net effect:
+    • Hermes Dashboard still shows Mnemosyne as the active memory provider, but says "provider mnemosyne is no longer installed."
+    • `hermes mnemosyne stats` now errors: invalid choice 'mnemosyne'.
+    • The agent's mnemosyne tools gone. Hermes lose all mnemosyne memories and tools.
+    
+    Importantly: no data loss. Both .db files pass integrity_check, my config.yaml + MNEMOSYNE_* env vars are intact, and the local models (TinyLlama GGUF, BGE Small) are still on disk. It's purely the package + plugin registration that vanished with the venv.
+    
+    I traced it to Hermes' `managed_uv.py → repair_vulnerable_runtime()`: the repair does `uv sync --locked` from Hermes' own lockfile and never re-applies user-installed packages. So any separately-installed provider gets wiped on repair.
+    
+    I wrote up the full diagnosis + a local fix (reinstalling the wheels + re-registering the plugin) in an attached .md. But I'd much rather hear from you first than blindly fix it,  especially since the permanent fix looks like it lives on the Hermes side (the venv rebuild), not mnemosyne.
+    
+    What's the blessed way to keep mnemosyne across this runtime-repair? And would a `mnemosyne-hermes repair-after-update` helper be welcome as a PR for the interim? Thx.
+    [attachment] mnemosyne-venv-drop-report.md https://cdn.discordapp.com/attachments/1496124109766000690/1530410697710764133/mnemosyne-venv-drop-report.md?ex=6a657987&is=6a642807&hm=021f3cdeb0fb12423caf21e93ae2f4af05d614fb18c8b19eaa688a567614a039&
+
+[2026-07-25T05:39:08.878000+00:00] dplush_ (id=1530449305809453076)
+    Thx for opening up that issue on Mnemosyne GitHub, so we can have a look at it. 🖖
+    [reply to ruangraung msg=1530410697962557591]
+

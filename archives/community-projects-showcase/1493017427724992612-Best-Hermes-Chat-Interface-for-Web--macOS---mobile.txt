@@ -6211,3 +6211,10 @@
     When an agent is running a task or executing tool calls, the chat screen enters a rapid flickering and continuous re-rendering loop.
     [attachment] screen-20260724-100957.mp4 https://cdn.discordapp.com/attachments/1493017427724992612/1530231603698077759/screen-20260724-100957.mp4?ex=6a64d2bc&is=6a63813c&hm=2d04998dd9b8436d9abcd5c5258361f0ab3ed62465ba1a39cfe7995edfbeb615&
 
+[2026-07-25T04:32:01.595000+00:00] perry_2108 (id=1530432414159995082)
+    hi guys i am new to hermes so pls bare with me . i was trying to setup this UI and ran into problems  , i reported on the suppport threads ,and the staff told me that since this is a community project i had to ask the support channel for the community project itself . i could nto find any support thread dedicated to this post so i am just going t ask here . 
+    
+    So basically i have hermes agent setup inside a docker container . with port binds and bind mounts . i have a port bind 8787:8787 to run this UI . the default hermes dahsboard which i usually run on is on port 9119 . upon installing the webUI locally i configured its .env file with the parameters hermes agent told me to setup since i am new to all this i dont know much about the technical side of things . I have attached an image of the .env file for the hermes-webui . but whenever i go to 0.0.0.0:8787 or after changing the .env file if i go to 127.0.0.1:8787  it jusy dosnt load up . the webpage is never working . ofc i always go into the dir within which the hermes-webui file was downloaded and type ./start.sh . it just opens a new window which closes after 2-3 seconds . but i am never able to access it on my browser . can anyone please guide me on this ?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1530432413501755532/image.png?ex=6a658dc1&is=6a643c41&hm=3c7145126deb0d28c2eb113c088704b8b671df34a3a6d003625502567ded06cd&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1530432413866524692/image.png?ex=6a658dc1&is=6a643c41&hm=2b5fa7011e456136d776b18cfdb47357423a89473b9bea0d00b4263ac8d6e3f0&
+

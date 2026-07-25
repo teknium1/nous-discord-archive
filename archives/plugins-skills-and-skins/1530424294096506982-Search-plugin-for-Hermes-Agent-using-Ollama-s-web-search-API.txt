@@ -1,0 +1,9 @@
+# Thread 'Search plugin for Hermes Agent using Ollama's web search API' in forum #plugins-skills-and-skins
+# thread_id=1530424294096506982 forum_id=1485392832154832906
+# Started 2026-07-25T08:08:39.868941+00:00
+
+[2026-07-25T03:59:45.621000+00:00] colorado.rob1459 (id=1530424294096506982)
+    Give your agent web_search and web_fetch capabilities through Ollama Cloud APIs.
+    https://github.com/rriggs/hermes-plugin-ollama-cloud-search
+    [embed] GitHub - rriggs/hermes-plugin-ollama-cloud-search: Search plugin fo... https://github.com/rriggs/hermes-plugin-ollama-cloud-search
+

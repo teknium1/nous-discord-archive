@@ -50652,3 +50652,51 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-25T02:22:54.407000+00:00] mariaosake (id=1530399920098377729)
     https://github.com/NousResearch/hermes-agent/pull/71115
 
+[2026-07-25T02:46:20.927000+00:00] asshole1678 (id=1530405819470839868)
+    ─tehlappy@tehlappy in ~ as 🧙 took 0s
+    [🔴] × chmod +x /home/tehlappy/nssp_install.sh && sudo /home/tehlappy/nssp_install.sh
+    === [1/6] Installing base system ===
+    ==> Creating install root at /mnt
+    ==> Installing packages to /mnt
+    :: Synchronizing package databases...
+    garuda is up to date
+    core is up to date
+    extra is up to date
+    multilib is up to date
+    chaotic-aur  .....
+
+[2026-07-25T02:46:24.905000+00:00] asshole1678 (id=1530405836156043395)
+    == [4/6] Kernel, initramfs, systemd-boot ===
+    Running in a chroot, enabling --graceful.
+    Couldn't find EFI system partition, skipping.
+    Failed to inspect kernel image '/boot': Is a directory
+
+[2026-07-25T04:36:17.721000+00:00] maxfreedompollard (id=1530433488430436382)
+    This repo is useless until it's finished, and I've been trying to finish it but each stage's PR needs to be merged separately. I didn't create the stages, if it was up to me I would do one big PR to finish it all. 
+    
+    #150 (real ground-truth fitness), #151 (guardrails + holdout integrity), #152 (run manifests + audit trail). All three are open, clean, and mergeable.
+    
+    <@387972437901312000> If you're cool with me just doing on PR to finish it let me know. I want this usefully finished for everyone.
+    
+    https://github.com/NousResearch/hermes-agent-self-evolution/pull/150
+
+[2026-07-25T06:29:28.673000+00:00] hallmarkgray (id=1530461971747569764)
+    I’m just 16 years old, and a few weeks ago I started an online business that completely changed my life. Now I’m earning $5,000–$6,000 every single day something I never thought was possible at my age.
+    The best part? It’s 100% legit, beginner-friendly, and you don’t need any special skills to get started.
+    If you want to know how I do it, just send me “I’m interested” and I’ll share the details with you for free.
+    🚀 Don’t just scroll this could be your chance
+    [attachment] 141af3bb-5c45-47a2-b785-269f8f4111dd_2.webp https://cdn.discordapp.com/attachments/1491258766648283238/1530461971420418079/141af3bb-5c45-47a2-b785-269f8f4111dd_2.webp?ex=6a65a948&is=6a6457c8&hm=80dd522e98daad99bb3ade4bf54a7a52493613062b8705e1515682d9c177369b&
+
+[2026-07-25T06:29:46.181000+00:00] 2gigadestroyer2 (id=1530462045181444137)
+    mods
+
+[2026-07-25T06:30:00.622000+00:00] 2gigadestroyer2 (id=1530462105751257119)
+    mooooddddsss
+
+[2026-07-25T06:42:24+00:00] yournahian (id=1530465223704576153)
+    hi
+
+[2026-07-25T07:00:32.911000+00:00] maxfreedompollard (id=1530469790928474133)
+    And now I can talk to animals. It's really cool, but totally secret. And you know what? Life will never be the same.
+    [reply to hallmarkgray msg=1530461971747569764]
+
