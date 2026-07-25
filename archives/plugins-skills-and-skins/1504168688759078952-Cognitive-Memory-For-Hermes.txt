@@ -530,3 +530,16 @@
     
     Fixed: engine 0.10.1 + plugin v0.9.3 (pip install -U yantrikdb-hermes-plugin) - 246× less idle CPU and the backpressure errors are gone. Good catch, thanks for chasing it.
 
+[2026-07-25T17:52:53.320000+00:00] spranab (id=1530633957702373526)
+    Released: yantrikdb-hermes-plugin v0.10.0 🧠
+    
+    18 tools → 7 by default — tool schemas are re-sent every turn, so this cuts ~3.6k → ~1.7k tokens per turn. Nothing lost: full profile brings them all back.
+    Adapts to your context window — uses on_turn_start's remaining_tokens to inject less as you fill up.
+    on_delegation — sub-agent findings now land in the parent's memory instead of dying with the child session.
+    Self-directing loop on by default — memory turns questions it can't answer into tasks, opens the next session with its agenda.
+    
+    pip install -U yantrikdb-hermes-plugin
+    Requires yantrikdb>=0.10.1.
+    https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.10.0
+    [embed] Release v0.10.0 — the install is the product · yantrikos/yantrik... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.10.0
+

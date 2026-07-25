@@ -50784,3 +50784,92 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Is it Fable? The insights are kinda disappointing.
     [reply to gottz.de msg=1530532890780368916]
 
+[2026-07-25T13:42:38.235000+00:00] longshen1461 (id=1530570979871424684)
+    I was wondering how long the Hermes models on the official website will be free for now
+
+[2026-07-25T13:50:52.249000+00:00] realadolan (id=1530573051916324976)
+    1-2 weeks depends on the model
+    [reply to longshen1461 msg=1530570979871424684]
+
+[2026-07-25T13:51:08.549000+00:00] realadolan (id=1530573120283476151)
+    See <#1490858802726043759>
+    [reply to longshen1461 msg=1530570979871424684]
+
+[2026-07-25T13:55:46.339000+00:00] lf1up (id=1530574285419188366)
+    How can I run an analysis on other repos?
+    [reply to gottz.de msg=1530526642009669783]
+
+[2026-07-25T13:56:34.010000+00:00] lf1up (id=1530574485365719062)
+    And yup, seems kinda macOS desktop app is dead now. <:good:1267814174805721193>
+    [reply to perseus.ai msg=1530558392806932623]
+
+[2026-07-25T13:56:55.413000+00:00] longshen1461 (id=1530574575136407643)
+    ok
+    [reply to realadolan msg=1530573051916324976]
+
+[2026-07-25T13:57:29.869000+00:00] gottz.de (id=1530574719655477389)
+    \> that feel when making things look so simple, people assume it's cheap
+    this is not some available runtime
+    [reply to lf1up msg=1530574285419188366]
+
+[2026-07-25T13:59:13.169000+00:00] realadolan (id=1530575152927215826)
+    Crazy. I wonder if mass close is possible 
+    
+    Like get a trust % or something and then just mass close
+    [reply to gottz.de msg=1530526642009669783]
+
+[2026-07-25T13:59:17.968000+00:00] _.exo._ (id=1530575173055549502)
+    Did this consider open/closed/merged?
+    [reply to gottz.de msg=1530526642009669783]
+
+[2026-07-25T14:08:48.023000+00:00] gottz.de (id=1530577564039647272)
+    ofc. it sometimes even suggests reopening
+    [reply to _.exo._ msg=1530575173055549502]
+
+[2026-07-25T16:52:18.085000+00:00] django7787 (id=1530618710421798942)
+    [attachment] session_reset.png https://cdn.discordapp.com/attachments/1491258766648283238/1530618710216146974/session_reset.png?ex=6a663b42&is=6a64e9c2&hm=e25b9d4a669c855d01b972db319ff3d34fa52b7017fc297bd96d1aaaeb3e64bb&
+
+[2026-07-25T16:52:20.584000+00:00] django7787 (id=1530618720903233728)
+    Is this intended behaviour? After the v23 migration, I have 100 open sessions (ended_at=None), is this how it's supposed to be?
+
+[2026-07-25T16:58:01.798000+00:00] yasya_eth (id=1530620152058613890)
+    Hi <@387972437901312000> . I run the suite on a Windows/cp1251 box, so I keep catching breakage the Linux CI never sees. Eleven PRs open, short version.
+    
+    New today, one commit each:
+    
+    #71429 
+    https://github.com/NousResearch/hermes-agent/pull/71429
+    normalize_skill_lookup_name returns a backslash-separated name on Windows, so a nested skill resolved from an absolute path stops matching skills.disabled entries, slash-command names, and cron job names. as_posix() is a no-op on Linux.
+    
+    #71428 
+    https://github.com/NousResearch/hermes-agent/pull/71428
+    Two classes assert exact 0o700/0o600, which Windows chmod can never produce. Class-level skipIf, same idiom the suite already uses. 6 failed becomes 6 skipped.
+    
+    #71425 
+    https://github.com/NousResearch/hermes-agent/pull/71425
+    Tests set HOME and expect ~ to expand there, but ntpath.expanduser reads USERPROFILE and ignores HOME. Sets both
+
+[2026-07-25T16:58:18.254000+00:00] yasya_eth (id=1530620221080080474)
+    Reworked after sweeper review: #58894, #58864, #57248, #56658, #56383. All five were reviewed on Jul 15; all five have the requested code change, plus a rebase and reply by Jul 17. I force-pushed rebases on two today, so 10/11 apply cleanly on current main. Every sweeper pass so far came back keep_open.
+    
+    The one I would point at first is #68076, +71/-8.
+    https://github.com/NousResearch/hermes-agent/pull/68076
+    The secret-source plugin guide tells authors to import the conformance kit from tests/ and calls a green conformance run the review bar, but tests/ is not packaged, so that bar cannot be reached from the standalone plugin repo the same guide tells you to build. The PR ships the kit inside the package. I checked it with pip wheel: the kit lands in the wheel, tests/ does not leak. #68226 is smaller, bws vs bws.exe.
+    
+    One thing I cannot fix from my side: no workflow run has ever been approved on any of my 11 PRs, so not one has checks. Everything above is from local runs on my box. If someone approves a run, I would finally have CI evidence instead of my word.
+
+[2026-07-25T17:00:33.834000+00:00] django7787 (id=1530620789743816764)
+    This seems like a bug actually
+    [reply to django7787 msg=1530618720903233728]
+
+[2026-07-25T17:30:59.329000+00:00] teknium (id=1530628446424924403)
+    Weve also removed overnight resets in general
+    [reply to django7787 msg=1530618720903233728]
+
+[2026-07-25T18:16:06.709000+00:00] perseus.ai (id=1530639801999687700)
+    Please someone help us poor unfortunate souls who use their laptop as a thin client!
+    [reply to lf1up msg=1530574485365719062]
+
+[2026-07-25T18:51:43.283000+00:00] brokeskill (id=1530648763440435200)
+    when running hermes update on my pi, it crashes the whole thing/ makes it extremely slow, anyone has had the same problem?
+

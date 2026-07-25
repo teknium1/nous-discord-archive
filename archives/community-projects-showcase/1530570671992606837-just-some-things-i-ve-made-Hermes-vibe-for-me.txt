@@ -1,0 +1,9 @@
+# Thread 'just some things i've made Hermes vibe for me' in forum #community-projects-showcase
+# thread_id=1530570671992606837 forum_id=1316137596535177246
+# Started 2026-07-25T19:03:34.692163+00:00
+
+[2026-07-25T13:41:24.831000+00:00] cancerous1 (id=1530570671992606837)
+    Ive gotten hermes to make me my own local kg/rag app, and a pretty nice frontend for sd.cpp (which it also added i8 support to ggml for me)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1530570671992606837/1530570672533930064/image.png?ex=6a660e84&is=6a64bd04&hm=accd095ca24c8515c597a624f0f3e72ad3de724cdeab12248957a783f95078fb&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1530570671992606837/1530570672953098410/image.png?ex=6a660e85&is=6a64bd05&hm=9ed7a80823aa782f684e1f2bd0e37df288a48e57285e99f06ba1c9ee503068e6&
+

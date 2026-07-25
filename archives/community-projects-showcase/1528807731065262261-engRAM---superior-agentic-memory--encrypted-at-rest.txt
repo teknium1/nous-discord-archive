@@ -83,3 +83,19 @@
     Stagnation: Without true user sovereignty, AI development shifts from empowering individuals to optimizing manipulation.
     We cannot afford a future where our mental models are harvested by default. The technology exists to prevent this. Ignoring it is a choice to surrender our digital autonomy. The path forward is clear: local memory must be the standard, not an option.
 
+[2026-07-25T18:32:04.518000+00:00] maxfreedompollard (id=1530643819341676694)
+    Sorry for the late reply, I never got the notification.
+    
+    Hermes' native provider (which I take to mean the default memory, not dedicated memory like Hindsight or engRAM) is very basic: similar to a .txt file that stores whatever you explicitly tell the agent to store, like a notes app. The chat/reasoning turn you mention runs through an LLM, so it's almost always cloud unless you're running one locally. engRAM is 100% offline. It never touches the internet, and it actively resists other programs trying to upload its data (weakly, since it's not a firewall, but more resistance than any other memory).
+    
+    To the crux of your question about using a different model for memory than the main LLM: I think you're conflating vectorization (converting stored memories to vectors, often done with a small local model) with deciding what to store, which is a separate concept. engRAM is, in my biased opinion, the only agentic AI memory that's automatic. Once linked, its instruction set tells Claude (or any agent) what to store and retrieve, with no prompting or toggling needed. It just captures everything relevant.
+    
+    There's also optional starter memory so you don't begin from scratch: computer and internet "geography" such as machine models and specs, ports, and other facts essential to agentic operations. Our computers and usage patterns aren't that different, so starting from zero memory is, frankly, dumb. Why make the agent learn over time what someone else already learned for you? No need to start like a baby.
+    
+    Intelligence is the creation of knowledge from other knowledge, all knowledge is actually memory, and people forget the knowledge side of AI because knowledge is treated as "already there," the stuff AI works on. But it's also what AI outputs. A brilliant agent without high-quality memory is like a brilliant human without memory: not very useful.
+    [reply to mariusztogo msg=1529122116656697545]
+
+[2026-07-25T18:39:43.777000+00:00] maxfreedompollard (id=1530645745613668493)
+    BTW - I love your attitude, but Privacy by Default isn't a slogan for Hermes Agent. I also don't think there is mass aggregation of distilled user profiles. Hermes is pretty great in terms of privacy compared to other agentic AI already.
+    [reply to mariusztogo msg=1530184533444530277]
+
