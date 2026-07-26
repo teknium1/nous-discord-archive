@@ -50873,3 +50873,109 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-25T18:51:43.283000+00:00] brokeskill (id=1530648763440435200)
     when running hermes update on my pi, it crashes the whole thing/ makes it extremely slow, anyone has had the same problem?
 
+[2026-07-25T19:19:39.662000+00:00] apyh (id=1530655794683445459)
+    merged ty
+    [reply to perseus.ai msg=1530558392806932623]
+
+[2026-07-25T19:54:13.286000+00:00] django7787 (id=1530664492093018339)
+    Too fast
+    [reply to teknium msg=1530628446424924403]
+
+[2026-07-25T19:59:20.545000+00:00] dias4761 (id=1530665780830539816)
+    https://github.com/NousResearch/hermes-agent/pull/70388 :fix(openrouter): default response_cache to off , Closes #70387
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/70522 :fix(usage): normalize OpenAI cache_write_tokens and Qwen flat cached_tokens, Closes #70543
+    
+    https://github.com/NousResearch/hermes-agent/pull/70528: feat(gemini): support native context caching (cachedContents) for large system prompts ,Closes #29818
+    Closes #70554
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/70383: feat(codex): add explicit prompt cache breakpoint for GPT-5.6+ ,Closes #70382
+    
+    https://github.com/NousResearch/hermes-agent/pull/49517: fix(acp): resolve duplicate user messages in session DB and LLM context , solve  #49391
+
+[2026-07-25T20:34:13.721000+00:00] asshole1678 (id=1530674560247140372)
+    (⁠人⁠ ⁠•͈⁠ᴗ⁠•͈⁠)┬⁠─⁠┬⁠ノ⁠(⁠ ͡⁠°⁠ ͜⁠ʖ⁠ ͡⁠°⁠ノ⁠)
+
+[2026-07-25T21:00:00.525000+00:00] bentomaker (id=1530681048013344852)
+    Temperature check: would it be useful if there was a tool that allowed hermes agent to make payments and shop for things? One concrete skill would be to buy gifts for other people when added to a group chat on telegram and Whatsapp.
+
+[2026-07-25T21:30:26.380000+00:00] gottz.de (id=1530688706204401784)
+    you know.. stripe is a thing.
+    [reply to bentomaker msg=1530681048013344852]
+
+[2026-07-25T21:30:55.255000+00:00] bentomaker (id=1530688827314667651)
+    Stripe accepts payments
+
+[2026-07-25T21:31:08.614000+00:00] bentomaker (id=1530688883346378802)
+    Not the other way around
+
+[2026-07-25T21:36:35.595000+00:00] teknium (id=1530690254804090890)
+    No we have something from stripe that helps you pay for things
+    [reply to bentomaker msg=1530688827314667651]
+
+[2026-07-25T21:36:41.291000+00:00] teknium (id=1530690278694850561)
+    And the shop Shopify skill
+
+[2026-07-25T21:36:58.647000+00:00] bentomaker (id=1530690351491452948)
+    Oh cool will try that out
+
+[2026-07-25T22:10:01.632000+00:00] asshole1678 (id=1530698668733235201)
+    I tried making a PR #157 not sure if i did it right https://github.com/Baal-TehDriverman/hermes-agent-self-evolution-asshole
+    [reply to maxfreedompollard msg=1530433488430436382]
+
+[2026-07-25T23:45:17.415000+00:00] kyssta69 (id=1530722642464604250)
+    https://github.com/NousResearch/hermes-agent/pull/71589
+    
+    **Problem**: HindsightEmbedded requires an LLM API key even for local-only providers (ollama, lmstudio, openai_compatible). Fix supplies a placeholder key when none is configured, allowing local-embedded mode to start without an API key.
+
+[2026-07-25T23:46:41.923000+00:00] perseus.ai (id=1530722996916981912)
+    Can I get a reviewer to review and approve my fix for MacOS Hermes Agent Desktop on Apply Silicon? https://github.com/NousResearch/hermes-agent/pull/71205
+
+[2026-07-26T00:58:16.911000+00:00] g_coinz (id=1530741011402326170)
+    I’m trying to figure out the cleanest way to use my Obsidian vault as a shared second brain for both Hermes and ChatGPT.
+    Hermes can connect through the Obsidian Local REST API plugin. What I’m really hoping for is that, when I’m talking with ChatGPT about a project, it can search or read the same vault too.
+    How have you set this up in real life?
+    I’m especially curious where you run Obsidian and the plugin, whether that is on an always-on Mac mini or your everyday Mac. Right now, I have my Hermes set up and running on my MacMini. Also, how do you handle ChatGPT access when you’re away from your computer, including from your phone?
+    I want to start with read and search access only. I’m not looking to give an AI full permission to edit, delete notes, or run commands in Obsidian.
+    If you have a setup that is simple and reliable, I’d really appreciate hearing how you approached it.
+
+[2026-07-26T01:51:52.462000+00:00] jethac (id=1530754498400882719)
+    great work on the buzz integration stuff this week everyone! i'm really excited to use it - i need multi-agent, multi-persona stuff for my own hermes setup.
+    
+    to that end, i've rebased https://github.com/NousResearch/hermes-agent/pull/62944 (holy god, review requested)
+    
+    and i'm having claude work on a branch that cherry-picks #71610's work on top of #62944 to see what multi-agent looks like in a hermes+buzz world
+    
+    will post that PR in here as well once it's done
+
+[2026-07-26T01:52:38.083000+00:00] xachman_ (id=1530754689749221466)
+    https://discord.com/channels/1053877538025386074/1528162956456759296
+    
+    Is anyone able to help me understand this? <@81637470604627968> is mentioning that send_message is not available to agents. But they seem to be using it in tool calls if its available.
+
+[2026-07-26T02:02:19.723000+00:00] gille (id=1530757129324200098)
+    It still exists as an internal sender used by cron, `hermes send`, Kanban, and opt-in MCP integrations, but it is intentionally not registered as a normal agent tool. Tek’s merge added Slack attachment support to that internal sender, not `send_message` back to the agent toolset. Agents replying in Slack should attach files through their normal response with `MEDIA:/absolute/path/file.pdf`, not by calling `send_message`.
+
+[2026-07-26T02:02:28.836000+00:00] jethac (id=1530757167546765314)
+    draft PR posted as https://github.com/NousResearch/hermes-agent/pull/71686, per-agent Buzz identities
+    [reply to jethac msg=1530754498400882719]
+
+[2026-07-26T02:11:27.447000+00:00] xachman_ (id=1530759426645168329)
+    From what I could tell the agents in this case used sent_message as a tool call. I dont know for sure how it works there. But even when requesting files in the same thread agents in slack chose to use send_message. Without the ability to send attachments it confuses thr agents. So the only option if you want smooth agent interactions in slack is to remove send_message. Im not advocating that the pr is merged but this dosent seem like intended functionality.
+    [reply to gille msg=1530757129324200098]
+
+[2026-07-26T02:13:01.590000+00:00] gille (id=1530759821509263411)
+    i think that agent learned bad habits
+
+[2026-07-26T02:13:14.280000+00:00] realadolan (id=1530759874735247571)
+    <@190818731734204416> Damn, your clanker just said that my PR was the best for an issue. I feel special
+
+[2026-07-26T02:14:48.816000+00:00] realadolan (id=1530760271247708422)
+    https://github.com/NousResearch/hermes-agent/pull/52583
+
+[2026-07-26T02:19:59.814000+00:00] blockcipher (id=1530761575667990651)
+    fix: `hermes doctor` does not account for secrets stored in secrets managers like Bitwarden and 1Password
+    https://github.com/NousResearch/hermes-agent/pull/71647
+
