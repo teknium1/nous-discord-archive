@@ -1,0 +1,28 @@
+# Thread 'Expert.md — a typed reflex format that could slot right into SOUL.md' in forum #community-projects-showcase
+# thread_id=1530850452835536936 forum_id=1316137596535177246
+# Started 2026-07-26T08:22:55.437100+00:00
+
+[2026-07-26T08:13:09.782000+00:00] kratos20011 (id=1530850452835536936)
+    Been experimenting with an idea that might fit naturally into Hermes' architecture, curious what this channel thinks.
+    
+    **The problem:** SKILL.md-style guides are great for procedures, but they're only loaded on-demand when a task triggers them. For domains with an asymmetric cost of failure — security, auth, data handling — that's risky: the model often *knows* the right practice but won't apply it unless something in the prompt explicitly signals "be careful here." A casual "just give me the code" request slips right past the trigger.
+    
+    **The idea — Expert.md:** instead of a full procedural doc, condense a domain into typed reflexes:
+    
+    [BLOCKING|threat=xss] Never store JWT in localStorage — httpOnly cookie only.
+    [WARNING] CORS: never combine '*' with credentials=true.
+    [ADVISORY] Respect prefers-reduced-motion even if not asked.
+    
+    3 severities (BLOCKING / WARNING / ADVISORY), each rule short enough to fit in a few KB total instead of a 20-30KB skill.
+
+[2026-07-26T08:13:22.095000+00:00] kratos20011 (id=1530850504480002058)
+    **Why I think this fits Hermes specifically:** SOUL.md is already the "fixed frame" that's always injected, not triggered on demand — that's a much better home for this than a standard SKILL.md would be. I'm picturing this as a formalized section inside SOUL.md (or a companion file) rather than a new mechanism: `## Reflexes` with typed severity tags, always in context, no trigger dependency.
+    
+    **What I've actually tested so far:** ran a baseline-vs-guided benchmark on a few security scenarios (JWT storage, file upload validation, SSRF, CORS) across multiple runs — baseline misses the security reflex consistently, both a full skill-style guide and the condensed Expert.md version catch it consistently too, with the condensed version costing a fraction of the tokens. Still early, only one domain tested, happy to share the actual logs/methodology if useful.
+    
+    Not proposing a new plugin — more like a writing convention + a lightweight way to validate it (behavior tests, not syntax checks) before anyone commits to a full domain pack. Would love feedback on whether this overlaps with something that already exists here, and whether SOUL.md is really the right layer for it or if I'm missing how gating/loading actually works under the hood.
+
+[2026-07-26T08:15:10.107000+00:00] kratos20011 (id=1530850957515034764)
+    This is the specific point. Please download and read it to better understand what I'm proposing.
+    [attachment] SPEC.md https://cdn.discordapp.com/attachments/1530850452835536936/1530850957242400899/SPEC.md?ex=6a67138e&is=6a65c20e&hm=064deef714453be1d804ce555f7ac74e110e6b0ade666abe0d5c7a3be6796365&
+

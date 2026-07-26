@@ -50979,3 +50979,126 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     fix: `hermes doctor` does not account for secrets stored in secrets managers like Bitwarden and 1Password
     https://github.com/NousResearch/hermes-agent/pull/71647
 
+[2026-07-26T03:41:24.551000+00:00] maxfreedompollard (id=1530782063740059828)
+    You can use my agent memory, engRAM, it connects to all from a central location. Claude, Hermes, ChatGPT, whatever all from one location. 100% encrypted as well + better memory recall. All you need to do is remember one password.
+    
+    https://github.com/MaxFreedomPollard/engRAM
+    [reply to g_coinz msg=1530741011402326170]
+
+[2026-07-26T04:13:40.120000+00:00] dias4761 (id=1530790182104596510)
+    P0 issue : https://github.com/NousResearch/hermes-agent/pull/71747
+    
+    
+    fix(nous-portal,compression-lock): stable sticky-routing key + reclaim crashed lock holders on Windows ,Fixes #71576
+
+[2026-07-26T04:21:32.798000+00:00] akiraminna (id=1530792164659953785)
+    I would like to suggest adding an in-app browser to the platform. This feature could make it easier to inspect and modify the UI, as well as run Playwright tests directly within the application.
+    
+    It would also be highly beneficial if the platform could support multiple custom endpoints simultaneously, particularly for testing and comparing different environments or services.
+    
+    Could you please advise me on the appropriate channel or platform for submitting these feature requests to the development team?
+
+[2026-07-26T04:30:58.542000+00:00] dias4761 (id=1530794537562411008)
+    Proposed partial solution. From what I can see, this is an internal bug on your side.
+    
+    <@387972437901312000>
+    [reply to dias4761 msg=1530790182104596510]
+
+[2026-07-26T04:42:46.398000+00:00] dias4761 (id=1530797506525659166)
+    It's a non-trivial problem, sadly
+
+[2026-07-26T04:45:55.395000+00:00] teknium (id=1530798299236274186)
+    cc <@1471238131431899208>
+    [reply to dias4761 msg=1530794537562411008]
+
+[2026-07-26T04:46:16.862000+00:00] maxfreedompollard (id=1530798389275656194)
+    Can you approve my hermes self improvement while you're here. I just bought a hat, if that helps my case
+    [reply to teknium msg=1530798299236274186]
+
+[2026-07-26T04:56:42.989000+00:00] teknium (id=1530801015442505930)
+    This PR is built on a bunch of false premises
+    [reply to dias4761 msg=1530794537562411008]
+
+[2026-07-26T04:56:47.008000+00:00] teknium (id=1530801032299417721)
+    Compaction will always break cache
+
+[2026-07-26T04:57:05.308000+00:00] teknium (id=1530801109055311915)
+    aux tasks are almost always single turn but I'll add session id to it anyways in case some arent
+
+[2026-07-26T04:58:00.398000+00:00] inuyasha44_88990 (id=1530801340119515176)
+    I thought about the idea of atomizing, to try to keep the cache always warm. And for those who can't, create a function that stores and retrieves the data.
+    [reply to teknium msg=1530801109055311915]
+
+[2026-07-26T05:02:39.478000+00:00] teknium (id=1530802510665748540)
+    ok but after compaction the entire system prompt is rewritten - there is no possibility of keeping the cache
+    [reply to inuyasha44_88990 msg=1530801340119515176]
+
+[2026-07-26T05:03:59.925000+00:00] tunacookie (id=1530802848084918272)
+    hmm should the aux model picker include custom providers?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1530802847690526730/image.png?ex=6a66e6bf&is=6a65953f&hm=64f92a5740b272bb37fde468fcda4db38325e04fdd71ea33c2e4dc6cce4d7dad&
+
+[2026-07-26T05:04:28.528000+00:00] teknium (id=1530802968054730782)
+    why wouldn't it
+    [reply to tunacookie msg=1530802848084918272]
+
+[2026-07-26T05:04:39.108000+00:00] teknium (id=1530803012430331914)
+    or rather, why shouldn't it
+
+[2026-07-26T05:04:50.887000+00:00] tunacookie (id=1530803061834907710)
+    dont see it in the list is what im showing in the screenshot haha
+
+[2026-07-26T05:04:55.202000+00:00] teknium (id=1530803079933333604)
+    #17..?
+
+[2026-07-26T05:05:29.244000+00:00] tunacookie (id=1530803222715830453)
+    i mean it shows on the whole list itself for hermes model but not on the aux list
+
+[2026-07-26T05:06:02.402000+00:00] teknium (id=1530803361790820553)
+    but it says "Custom endpoint" right there
+
+[2026-07-26T05:06:05.331000+00:00] teknium (id=1530803374075936810)
+    wdym <a:aPES_Think:493353113332219924>
+
+[2026-07-26T05:06:08.032000+00:00] tunacookie (id=1530803385404620910)
+    Existing PRs on aux models (open, relevant)
+    #52642
+    • Title: fix(cli): show custom providers in auxiliary model picker
+    • Scope: Exact match. Forwards user/custom providers to aux picker. Open since 2026-06-25, no reviews.
+
+[2026-07-26T05:06:18.640000+00:00] inuyasha44_88990 (id=1530803429897797672)
+    Lmao
+    [reply to teknium msg=1530803374075936810]
+
+[2026-07-26T05:06:57.405000+00:00] inuyasha44_88990 (id=1530803592489865356)
+    Yes, in this case, regardless, there's not much i can do to warm up the cache, according to your thesis.
+
+[2026-07-26T05:07:00.954000+00:00] tunacookie (id=1530803607375446156)
+    it mean after no.30 the custom doesnt reveal the custom providers that we have added already like in the hermes model
+    
+    but i guess we can add.. all manually again on no. 17 like you say..
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1530803607052751030/image.png?ex=6a66e774&is=6a6595f4&hm=b771824a033f50c20a624ece8ff0f77e0e29a7b167bd7609bb0f030dd963e107&
+    [reply to teknium msg=1530803374075936810]
+
+[2026-07-26T05:07:33.217000+00:00] 69voldemort (id=1530803742696275998)
+    banger
+    [reply to tunacookie msg=1530803607375446156]
+
+[2026-07-26T05:08:26.231000+00:00] tunacookie (id=1530803965053243513)
+    i havent check the PR myself, but my hermes said its already open so it doesnt want to make one
+
+[2026-07-26T05:11:15.715000+00:00] drexux (id=1530804675920662639)
+    https://github.com/NousResearch/hermes-agent/pull/71178 - prevent custom endpoint slug collisions from cross-routing API credentials
+    https://github.com/NousResearch/hermes-agent/pull/71238 prevent URL userinfo credentials from leaking to third-party extraction providers
+    https://github.com/NousResearch/hermes-agent/pull/71276 persist crash-recovery attempts before agent initialization to enforce the auto-continue loop limit
+
+[2026-07-26T05:13:59.477000+00:00] teknium (id=1530805362788270091)
+    mm looking at the pr
+    [reply to tunacookie msg=1530803607375446156]
+
+[2026-07-26T05:15:04.812000+00:00] jethac (id=1530805636823126017)
+    hey friends would appreciate this provider PR for ai& being reviewed
+    
+    did a paid test and it works
+    
+    https://github.com/NousResearch/hermes-agent/pull/71690
+

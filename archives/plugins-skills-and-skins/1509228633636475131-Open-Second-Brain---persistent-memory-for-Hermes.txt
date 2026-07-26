@@ -474,3 +474,11 @@
     Hi Serg. I added you as a friend so I could send you the test repository.
     [reply to techmeat msg=1529233214747578498]
 
+[2026-07-26T07:47:08.753000+00:00] techmeat (id=1530843905405485060)
+    <@563508791010656306> - friend request accepted, so feel free to send the test repository whenever it's convenient for you. Looking forward to it.
+    
+    And a general apology to you and to everyone else in this thread for the slow replies over the past few days. I've just flown to Singapore to start building a new AI project, and I'm still fighting the jet lag - the pace here is intense in every sense of the word.
+    
+    Nothing is being ignored: I'll get back to every message, and I'm genuinely happy to dig into any code, PR or repo you send my way. Thanks for the patience and for keeping the momentum going in here. 🙏
+    [reply to lipebez msg=1530320910391836692]
+

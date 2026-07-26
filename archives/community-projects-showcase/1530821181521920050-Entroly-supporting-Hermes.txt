@@ -1,0 +1,10 @@
+# Thread 'Entroly supporting Hermes' in forum #community-projects-showcase
+# thread_id=1530821181521920050 forum_id=1316137596535177246
+# Started 2026-07-26T08:22:55.822449+00:00
+
+[2026-07-26T06:16:50.957000+00:00] adalako6028 (id=1530821181521920050)
+    We want to lower the operational cost of AI bills to every possible way so we invented Entroly which  is the context assurance for your agents. It's Auditable context engineering for AI agents for context compression, receipts,answer verification.
+    
+    https://github.com/juyterman1000/entroly
+    [embed] GitHub - juyterman1000/entroly: Auditable context engineering for A... https://github.com/juyterman1000/entroly
+

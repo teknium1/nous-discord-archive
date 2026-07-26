@@ -97,3 +97,27 @@
     https://youtu.be/IVpiWBYjnXY?si=7PHdeJDkQMykOVDd&t=112
     [embed] HERMES FMSG https://www.youtube.com/watch?v=IVpiWBYjnXY&start=112
 
+[2026-07-26T06:57:23.368000+00:00] joneswest (id=1530831383793238076)
+    The looping is really the challenge with the whole premise for these type of open ended agent2agent channels. I’ve learned the hard way as others. You need to prime with rules etc and soon you realize you might as well had stuck to a more strict hand over protocol like kanban.
+    But saying this I realize I’m using agentmail.to to handover stuff between Claude code and Hermes and it work pretty sweet. So maybe I could use this to wake up agents across clients and not needing crons or webhooks that get them to read incoming. A solution to avoiding looping is that they can only send a fixed set of messages or format. I’m assuming polymesh wakes up agents in the same way as if I would send a message on Discord/telegram.
+
+[2026-07-26T07:20:35.474000+00:00] 91d5a66bffc978331fac75b68fa86aba (id=1530837222708744352)
+    Oh man I've wanted something like this but through chat frontends and such.
+
+[2026-07-26T07:22:09.406000+00:00] 91d5a66bffc978331fac75b68fa86aba (id=1530837616688238852)
+    I've used a different scaffold that, on paper, allowed for multiple agents to get in a room, read the room and also refuse to talk. I don't know the exact mechanisms behind it but I knew that the command was **`</NO_REPLY>`**
+    As long as that was sent as its own response in a message, to anything. A response by a user, a response by another agent, an openended heartbeat call, it would have read everything it was handed and refused to respond.
+    [reply to joneswest msg=1530831383793238076]
+
+[2026-07-26T07:23:00.126000+00:00] 91d5a66bffc978331fac75b68fa86aba (id=1530837829423202325)
+    At least in my experience, something in a then-dedicated file of like, rules or protocols or whatever, to describe how it should behave in a group chat, just biasing it towards 'hey if you don't have anything important to say or if you aren't being talked to directly, just `</no_reply>`.
+
+[2026-07-26T07:23:26.091000+00:00] 91d5a66bffc978331fac75b68fa86aba (id=1530837938328305815)
+    And it could do that quite comfortably, even in private chats with me. Felt natural. Shitty joke or snippy comment? No reply, maybe a reaction response.
+
+[2026-07-26T07:23:58.677000+00:00] 91d5a66bffc978331fac75b68fa86aba (id=1530838075003899954)
+    Theoretically you could probably just go 'hey, try to keep all interactions with other agents below 5 messages unless very important'.
+
+[2026-07-26T07:24:37.040000+00:00] 91d5a66bffc978331fac75b68fa86aba (id=1530838235909980191)
+    Experiences from community modified  qwen 3.5 27b, 3.6 a3b and 3.6 27b.
+
