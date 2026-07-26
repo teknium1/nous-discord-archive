@@ -6218,3 +6218,18 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1530432413501755532/image.png?ex=6a658dc1&is=6a643c41&hm=3c7145126deb0d28c2eb113c088704b8b671df34a3a6d003625502567ded06cd&
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1530432413866524692/image.png?ex=6a658dc1&is=6a643c41&hm=2b5fa7011e456136d776b18cfdb47357423a89473b9bea0d00b4263ac8d6e3f0&
 
+[2026-07-26T10:29:12.516000+00:00] alto69 (id=1530884689823535105)
+    hope you figured it out. I just asked my agent to setup and use localhost:8787
+    [reply to perry_2108 msg=1530432414159995082]
+
+[2026-07-26T10:44:31.243000+00:00] perry_2108 (id=1530888543243862107)
+    Well I haven't figured it out yet , 
+    Did it work for you ?
+    Where exactly are the ports configured ? Like where is the configuration of ports saved ? Config.yaml ? Or .env ? Or some other file ?
+
+[2026-07-26T13:13:58.724000+00:00] alto69 (id=1530926155585028176)
+    did you ask your agent. it set it up for me and my public tunnel
+
+[2026-07-26T13:14:33.540000+00:00] alto69 (id=1530926301614178346)
+    looks like you had it up right there
+

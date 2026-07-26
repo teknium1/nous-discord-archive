@@ -2392,3 +2392,9 @@
 [2026-07-26T08:15:19.649000+00:00] 0xlfg (id=1530850997537214535)
     Guys I just updated hermes how to activate agaun?
 
+[2026-07-26T09:15:21.749000+00:00] s.whal (id=1530866105839521832)
+    hello how do I install Mnemosyne on nixos ?
+
+[2026-07-26T09:16:02.746000+00:00] s.whal (id=1530866277793398836)
+    im not familiar with installing python stuff on nixos. it doent seem to like it
+

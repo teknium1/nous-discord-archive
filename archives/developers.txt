@@ -51102,3 +51102,7 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     https://github.com/NousResearch/hermes-agent/pull/71690
 
+[2026-07-26T11:31:15.741000+00:00] kyssta69 (id=1530900306160779415)
+    https://github.com/NousResearch/hermes-agent/pull/71927/
+    When a host install has a stale docker stamp in the code-scoped .install_method file (e.g. from a previous container-based run or manual echo "docker" > .install_method), detect_install_method() returned "docker" even on non-containerized hosts. This caused hermes update to print the Docker pull guidance and exit, blocking legitimate updates.
+
