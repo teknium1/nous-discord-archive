@@ -65,3 +65,9 @@
     https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.7.0
     [embed] Release v0.7.0 · MrTrenchTrucker/turbohaul-manager https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.7.0
 
+[2026-07-26T17:24:26.912000+00:00] .s0uthpaw (id=1530989188374073526)
+    Turbohaul fit checker and adaptive Main/Aux model server manager
+    https://github.com/SouthpawIN/turbofit
+    [attachment] turbofit-promo-1080p.mp4 https://cdn.discordapp.com/attachments/1505384448223346818/1530989188902686872/turbofit-promo-1080p.mp4?ex=6a67944b&is=6a6642cb&hm=09454f1902a52a459cfa4c15f63e834cad4135dfaf2411ac8c1757353637a1f2&
+    [embed] GitHub - SouthpawIN/turbofit: Local-first adaptive LLM runtime for ... https://github.com/SouthpawIN/turbofit
+

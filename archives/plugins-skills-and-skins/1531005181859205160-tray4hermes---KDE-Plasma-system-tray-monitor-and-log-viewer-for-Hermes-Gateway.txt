@@ -1,0 +1,24 @@
+# Thread 'tray4hermes — KDE/Plasma system-tray monitor and log viewer for Hermes Gateway' in forum #plugins-skills-and-skins
+# thread_id=1531005181859205160 forum_id=1485392832154832906
+# Started 2026-07-26T19:13:23.216971+00:00
+
+[2026-07-26T18:28:00.056000+00:00] zombiczech (id=1531005181859205160)
+    If you run Hermes Agent on its own box and use it as your daily driver, you probably babysit the gateway through `systemctl --user` and `journalctl`.  I got tired of that and built a tray app for it.
+    
+    It shows gateway state right in the KDE panel  (🟢 running / 🟠 warming up / 🔴 failed), does Start / Stop / Restart in one click, and switches profiles  from the menu.
+    
+    The part I spent most time on is the **log viewer**: coloured levels, per-level filters, traceback awareness (stack traces get their own toggle), a time-window filter, search, and a line-number gutter. It reads `~/.hermes/logs/gateway.log` directly.
+    
+    It is **read-only with respect to Hermes Agent** — it drives the gateway through `systemctl --user`, writes one small JSON of its own, and reads everything else. No tokens, no provider config, no edits to `config.yaml`.  Uninstall it and Hermes doesn't notice.
+    
+    ```pip install tray4hermes```
+    
+    Requires KDE Plasma 5 (Qt5) and Python 3.11+. UI is English or Czech, switchable at runtime. MIT.
+    
+    Repo: 
+    https://github.com/MoDD0/tray4hermes
+    
+    Not an official Hermes component, just a convenience addon I use daily. 
+    Feedback and distro-specific fixes welcome — it's developed on Manjaro KDE, so other setups are untested.
+    [embed] GitHub - MoDD0/tray4hermes: Passive KDE/Plasma tray monitor for Her... https://github.com/MoDD0/tray4hermes
+

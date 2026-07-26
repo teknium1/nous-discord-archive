@@ -1,0 +1,13 @@
+# Thread 'Compartment - superior agentic memory, encrypted at rest' in forum #community-projects-showcase
+# thread_id=1528807731065262261 forum_id=1316137596535177246
+# Started 2026-07-26T19:06:56.769515+00:00
+
+[2026-07-26T16:12:21.072000+00:00] maxfreedompollard (id=1530971044486054048)
+    Compartment - superior agentic memory, encrypted at rest
+
+[2026-07-26T16:18:00.050000+00:00] maxfreedompollard (id=1530972466263097525)
+    Added a topbar app for Mac and a minimal app for Windows. Very minimal, click to expand the menu. 
+    
+    I hated using other agentic memory, because it would inevitably unlink, and then I would just keep using the agent without knowing it was broken, wasting tons of time. Now I can click the topbar, see everything's running, toggle on options such as whether or not to save new memories, and view the last 5 memories saved at a quick glance. It also makes it easy to lock and unlock the encrypted memory.
+    [attachment] Compartment.png https://cdn.discordapp.com/attachments/1528807731065262261/1530972465855987814/Compartment.png?ex=6a6784b7&is=6a663337&hm=582ae41948e5f9f838acf93f86d781c290e6f0a7cff128fb266357f46748dec1&
+

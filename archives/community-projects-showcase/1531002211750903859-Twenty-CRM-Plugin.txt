@@ -1,0 +1,20 @@
+# Thread 'Twenty CRM Plugin' in forum #community-projects-showcase
+# thread_id=1531002211750903859 forum_id=1316137596535177246
+# Started 2026-07-26T19:06:44.948250+00:00
+
+[2026-07-26T18:16:11.927000+00:00] treeindustries (id=1531002211750903859)
+    We gave Hermes Agent Twenty open source CRM instance and asked it to go find business.  
+    
+    “Find manufacturers that resemble our best customers. Verify the companies, identify the likely buyers, rank the strongest opportunities, and prepare a personal first touch.” Hermes Agent can research the market, inspect the live Twenty schema, remove companies already in the pipeline, connect source evidence to each account, and build an outreach-ready queue.  
+    
+    With approved channels and policies in place, scheduled jobs can continue the work: send authorized outreach, monitor responses, update the opportunity, prepare the next message, and escalate the conversations that need a person.   
+    
+    That is one many of the emergent capabilities we saw when combining Twenty’s records, relationships, workflows, and dashboards with the memory, skills, research, scheduling, messaging, plugins, and MCP connections of Hermes Agent.
+    
+    We have built the integration as a Hermes Agent plugin and have now open sourced it because founders should have an AI-native business operation that they own and can evolve along with their business.
+    
+    https://github.com/TREE-Ind/hermes-twenty-crm
+    [attachment] C__c_Users_jill_AppData_Local_hermes_projects_tree-estimates_infographic_hermes-twenty-crm-video_hermes-agent-twenty-crm-plugin-autonomous-growth-loop-30s-v3.mp4 https://cdn.discordapp.com/attachments/1531002211750903859/1531002212397089101/C__c_Users_jill_AppData_Local_hermes_projects_tree-estimates_infographic_hermes-twenty-crm-video_hermes-agent-twenty-crm-plugin-autonomous-growth-loop-30s-v3.mp4?ex=6a67a06c&is=6a664eec&hm=15fb0a5d3e932c626a92359d9c16422c5731f008ec2c0f4bba0f77df7597fb1a&
+    [attachment] hermes_twenty_plugin_infographic.png https://cdn.discordapp.com/attachments/1531002211750903859/1531002213135159446/hermes_twenty_plugin_infographic.png?ex=6a67a06c&is=6a664eec&hm=60bcf4e684fb86e9f4aa6881100bf055995e7b5f13376553c05cb90d6021ebd1&
+    [embed] GitHub - TREE-Ind/hermes-twenty-crm: Twenty CRM plugin for Hermes A... https://github.com/TREE-Ind/hermes-twenty-crm
+

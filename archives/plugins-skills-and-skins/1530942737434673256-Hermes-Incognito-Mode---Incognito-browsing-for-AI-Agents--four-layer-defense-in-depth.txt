@@ -1,0 +1,53 @@
+# Thread 'Hermes Incognito Mode — Incognito browsing for AI Agents, four-layer defense-in-depth' in forum #plugins-skills-and-skins
+# thread_id=1530942737434673256 forum_id=1485392832154832906
+# Started 2026-07-26T19:13:23.713725+00:00
+
+[2026-07-26T14:19:52.145000+00:00] karakoori (id=1530942737434673256)
+    I built a privacy skill for Hermes Agent together with Hermes itself: **Incognito Mode**.
+    
+    The premise is simple: browsers have incognito mode — why don't AI agents?
+    
+    Every time an agent works on your system, it leaves traces: shell history, temp files, memory entries, terminal snapshots (with plaintext API keys), subagent sandbox residues... Usually harmless. But when you're fixing a friend's server, handling sensitive data, or just want a clean slate — you need agent-level privacy.
+    
+    ## How it works
+    
+    **Four-layer defense-in-depth** — pre-hoc isolation + post-hoc audit, dual insurance:
+    
+    🛡️ **Skill Policy** — blocks memory writes, skill creation, cron creation at the tool level
+    🛡️ **Runtime Guardrails** — HISTFILE=/dev/null on every command, compound commands wrapped in bash -c, all writes confined to timestamp TTL sandbox
+    🛡️ **Framework Support** — session isolation markers, subagent automatically inherits incognito protocol
+    🛡️ **Post-Session Audit** — 10+ step reverse audit pipeline on session end: filesystem, shell history, memory, skills, processes, config, git. Everything found gets Python secure wipe (os.urandom → fsync → truncate → unlink), then the entire session container is destroyed
+    
+    ## Polished through 10 rounds of cross-audit
+    
+    This isn't a first draft. Hermes and I cross-audited it 10 rounds, each time finding real leak blind spots in actual sessions:
+    
+    • Broken PID lock → replaced with timestamp TTL
+    • Compound command syntax errors → unified bash -c wrapping
+    • Terminal snapshot leak → hermes-snap-*.sh now force-wiped (v2.4.1)
+    • Cache/tmp/subagent blind spots → all now audited
+    • Python history → .python_history included
+    • Long-session variable loss → Phase 4 auto-recovers from pid.lock
+
+[2026-07-26T14:20:09.111000+00:00] karakoori (id=1530942808595239072)
+    ## Install
+    
+    ```bash
+    hermes skills tap add GenmetsuWenxuePress/hermes-skills
+    hermes skills install incognito-mode
+    ```
+    
+    Then `/incognito start` in any session. Reply `确认销毁` when done — the agent runs the full audit, wipe, and session destruction automatically.
+    
+    ## Honest disclaimer
+    
+    OS kernel-level traces (swap, core dumps, journald) and network-level (LLM API provider logs) are outside this skill's control. Full disclaimer shown on activation. Pair with Ollama for maximum privacy.
+    
+    ---
+    
+    🔗 GitHub: https://github.com/GenmetsuWenxuePress/hermes-skills
+    📄 Security: Hermes skills-guard-v1 — SAFE
+    📝 License: MIT
+    👥 Authors: 幻灭文学出版社 + Hermes
+    [embed] GitHub - GenmetsuWenxuePress/hermes-skills: 幻灭文学出版社... https://github.com/GenmetsuWenxuePress/hermes-skills
+

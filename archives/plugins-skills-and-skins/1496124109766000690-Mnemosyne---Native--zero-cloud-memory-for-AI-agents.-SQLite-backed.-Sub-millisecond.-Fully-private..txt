@@ -2398,3 +2398,6 @@
 [2026-07-26T09:16:02.746000+00:00] s.whal (id=1530866277793398836)
     im not familiar with installing python stuff on nixos. it doent seem to like it
 
+[2026-07-26T18:29:35.690000+00:00] _mlsmith_ (id=1531005582977269790)
+    Ask your agent to update your nix config
+

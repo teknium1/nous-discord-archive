@@ -51106,3 +51106,56 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/71927/
     When a host install has a stale docker stamp in the code-scoped .install_method file (e.g. from a previous container-based run or manual echo "docker" > .install_method), detect_install_method() returned "docker" even on non-containerized hosts. This caused hermes update to print the Docker pull guidance and exit, blocking legitimate updates.
 
+[2026-07-26T13:47:54.427000+00:00] skholmes (id=1530934693942394901)
+    I resimplified these PRs to stay on original target:
+    
+    https://github.com/NousResearch/hermes-agent/pull/54535
+    https://github.com/NousResearch/hermes-agent/pull/55640
+    
+    Been trying to keep it updated so local stuff still works 😅
+
+[2026-07-26T13:57:01.845000+00:00] sam.da.mannn (id=1530936989980037291)
+    might be useful for someone out there <a:cooldancemario:1254484684017242194> 
+    https://github.com/sambegui/claudecodex-podman
+
+[2026-07-26T14:07:34.139000+00:00] lesterliang (id=1530939642013290497)
+    <@&1214801236323467284>  Hi! Could someone approve the workflow and take a look at #69937 when convenient?
+    
+    It fixes `process(action="close")` falsely reporting EOF success on native Windows PTYs. The latest head has been rechecked on native Windows with Python 3.11.15 + pywinpty 2.0.15: 5 passed, 1 skipped, including the byte-oriented real-PTY regression. All follow-up feedback has been addressed, and the PR is mergeable; CI is only waiting for workflow approval.
+    
+    https://github.com/NousResearch/hermes-agent/pull/69937
+
+[2026-07-26T14:08:05.305000+00:00] promptsiren (id=1530939772732833832)
+    don't ping moderators for things like this
+    team has a system
+    all PRs will be reviewed
+    [reply to lesterliang msg=1530939642013290497]
+
+[2026-07-26T14:09:06.446000+00:00] lesterliang (id=1530940029176778842)
+    Got it, thanks for clarifying — I won’t ping moderators for PR reviews going forward.
+
+[2026-07-26T15:41:22.383000+00:00] nv.cho (id=1530963248579350633)
+    hey! would you mind sharing details about how PRs are selected for merge?
+    [reply to promptsiren msg=1530939772732833832]
+
+[2026-07-26T15:59:17.603000+00:00] inuyasha44_88990 (id=1530967758379159712)
+    It will depend on the severity of the issue.
+    [reply to nv.cho msg=1530963248579350633]
+
+[2026-07-26T16:00:27.116000+00:00] inuyasha44_88990 (id=1530968049937813625)
+    The closer to level 0, the faster it will be read; however, the degree of complexity is greater and more abstract.
+
+[2026-07-26T18:09:47.774000+00:00] alelpoan (id=1531000600496574636)
+    Clicking Branch on a reply opens a new chat that only contains that reply the question it answered is dropped. If you restart the app while that branched chat is open, it's gone entirely on the next launch ("session not found"). And if you're already inside a branched chat, clicking Branch again does nothing at all no error, no toast, just a silent no-op.
+    
+    Two PRs, split by root cause:
+    https://github.com/NousResearch/hermes-agent/pull/71960 (missing question + branch lost on restart) 
+    https://github.com/NousResearch/hermes-agent/pull/71969 (dead button in a branch)
+    
+    Both PRs include tests and were verified locally.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531000600307699804/image.png?ex=6a679eeb&is=6a664d6b&hm=28463bc292d15b176c04b90d2bfb73674b41aa74376cb7a97906c1f800c85c03&
+
+[2026-07-26T18:51:35.349000+00:00] sassyfatcat (id=1531011118028554271)
+    My P3 took ~3 weeks to be merged
+    [reply to nv.cho msg=1530963248579350633]
+
