@@ -6233,3 +6233,6 @@
 [2026-07-26T13:14:33.540000+00:00] alto69 (id=1530926301614178346)
     looks like you had it up right there
 
+[2026-07-27T08:13:32.207000+00:00] _big_owen_ (id=1531212934758273218)
+    Hey I thought I would ask but would this work with my Claude code Or am I going to have to make a fork for Claude code to make
+

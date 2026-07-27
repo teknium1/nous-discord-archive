@@ -51451,3 +51451,276 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     not to say that it won't help slow the influx ofc
     and make people spend more time checking or polishing before opening etc
 
+[2026-07-27T02:44:14.677000+00:00] mariaosake (id=1531130065671426169)
+    This project's community is incredibly competitive. I've only had two PRs merged over the past week.
+
+[2026-07-27T02:54:31.691000+00:00] mariaosake (id=1531132653615714434)
+    There's a much simpler solution: make your project less popular and less driven by FOMO  LOL
+    [reply to promptsiren msg=1531126972972011553]
+
+[2026-07-27T03:02:17.252000+00:00] asshole1678 (id=1531134606319943831)
+    meaning of life=42=6 δ(∞)=0=1 else non-exist
+    why is 6 scared of 7?
+    6x7=42 but 789<:richxi:1151275508475117648>
+
+[2026-07-27T03:33:07.727000+00:00] waefrebeorn (id=1531142367774507008)
+    https://github.com/NousResearch/hermes-agent/pull/72437
+    
+    
+    not a huge thing but i found a silent billing bug
+    
+    lost $18 to it
+    
+    if possible can i have my api credited for finding the bug lol
+    
+    if not thats ok lol
+
+[2026-07-27T03:34:10.778000+00:00] waefrebeorn (id=1531142632229699584)
+    i was being billed for hy3 normal due to work i was doing on mixture of agents passing the flag and the :free flag being misinterpreted on hy3
+    
+    
+    when i purged back to repo hermes, i found this bug was still present, so reported it
+    
+    
+    essentially your hermes will not show the billing (maybe gateway does tho) and then your dashboard shows the proper since you had your :free trimmed if a openrouter standard accidentally gets routed by a mixture of agents design
+    
+    by making this remedy, we allow user modifications without the billing risk
+
+[2026-07-27T03:41:14.231000+00:00] realadolan (id=1531144408320311377)
+    Hey man, might want to use ```support@nousresearch.com``` for that. I definitely think this could be arranged
+    [reply to waefrebeorn msg=1531142367774507008]
+
+[2026-07-27T03:41:52.246000+00:00] asshole1678 (id=1531144567766781952)
+    I know we're not friends yet but allow me to introduce myself. I apologize if I may seem rude. I'm type 1 diabetic with myelopathy and tendonitis. I've been stuck at home since 4/16 on work mans comp and they don't give me enough money to pay my bills let alone take care of my condition. Hermes has help me to drastically organize and improve my life when no one else will take the time to listen to me or help me. Just wanted to say thanks for the amazing work you all do here 🙂 💔
+    [reply to teknium msg=1531124884401422346]
+
+[2026-07-27T03:44:30.380000+00:00] waefrebeorn (id=1531145231028981761)
+    made the email, thank you for the direction
+    [reply to realadolan msg=1531144408320311377]
+
+[2026-07-27T04:05:53.024000+00:00] kyssta69 (id=1531150610827841629)
+    https://github.com/NousResearch/hermes-agent/pull/72121
+    
+    **Problem**: Updated stale Electron headers sha256 hash in nix/desktop.nix to fix Nix build of hermes-desktop — hash mismatch was blocking electron-headers fetchurl (#72095)
+
+[2026-07-27T04:06:00.826000+00:00] kyssta69 (id=1531150643551670342)
+    https://github.com/NousResearch/hermes-agent/pull/72332
+    
+    **Problem**: Fix false-positive Ollama Cloud stop-length truncation in run_agent.py and propagate partial SSE status in api_server.py — stops spurious continuation prompts for Ollama Cloud GLM models
+
+[2026-07-27T04:11:32.645000+00:00] kyssta69 (id=1531152035301298276)
+    https://github.com/NousResearch/hermes-agent/pull/72460
+    
+    **Problem**: RelayMediaClient.is_relay_media_url() now verifies origin match instead of substring check; externals URLs with /relay/media/ in path no longer receive the relay bearer.
+
+[2026-07-27T04:14:44.244000+00:00] kyssta69 (id=1531152838925746257)
+    https://github.com/NousResearch/hermes-agent/pull/72463
+    
+    **Problem**: Auxiliary Azure Foundry Entra ID calls now preserve the callable token provider instead of stringifying it to a function repr, fixing HTTP 401 on title generation, smart approval, and compression.
+
+[2026-07-27T05:03:16.669000+00:00] blooddragon90 (id=1531165054521708554)
+    3 as a limit seems to be quite limiting. OpenClaw is 20. <@387972437901312000> however Hermes has 17k open PR's so a rapid cleanup like we did at OC is probably best to close anything from 30+ days that isn't P0/P1 and or require proof and post within 5 days or something or auto closed.
+    [reply to teknium msg=1531121493176746056]
+
+[2026-07-27T05:34:12.559000+00:00] drexux (id=1531172838688424067)
+    What does this PR do?
+    In a multiplex gateway, a primary/shared adapter can route an inbound source to another profile. /approvals still resolved its admin policy from GatewayRunner.config and persisted through the process-default HERMES_HOME.
+    
+    That made the command report success while changing the wrong profile's persistent approval mode. It could also reject the routed profile's real admin because the slash gate consulted the default profile's admin list.
+    
+    This installs the routed profile scope for both the slash-access check and the /approvals read/write. Single-profile behavior is unchanged.
+    
+    https://github.com/NousResearch/hermes-agent/pull/72476
+
+[2026-07-27T07:57:38.564000+00:00] gottz.de (id=1531208934889619498)
+    so.. people will then instead move towards 10k+ LoC PR's?
+    [reply to teknium msg=1531121493176746056]
+
+[2026-07-27T07:59:54.180000+00:00] gottz.de (id=1531209503704617030)
+    8 hours later and I'm still not happy with the throughput.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531209503335387236/image.png?ex=6a68617a&is=6a670ffa&hm=b16796d03e2e9a9191684c8c7f671c20f146ab70b10ef03217a00daf13929634&
+    [reply to gottz.de msg=1531083678069821450]
+
+[2026-07-27T08:00:44.688000+00:00] gottz.de (id=1531209715550388305)
+    I really hope these triages help merge faster.
+
+[2026-07-27T08:51:03.993000+00:00] egilewski (id=1531222379433431180)
+    <@190818731734204416> https://github.com/NousResearch/hermes-agent/pull/59478#pullrequestreview-4784218123 is kinda excessive, you could increase throughput by deterministically skipping cases like that.
+
+[2026-07-27T08:51:32.903000+00:00] realadolan (id=1531222500690624675)
+    I think, in my humble and probably mostly irrelevant opinion, that the project should focus on fixing bugs right now instead of adding new features. This, along with perhaps mass-closing duplicate PRs to clean up the backlog
+    [reply to gottz.de msg=1531208934889619498]
+
+[2026-07-27T08:52:27.225000+00:00] egilewski (id=1531222728533606400)
+    It is the focus per CONTRIBUTING.md.
+    [reply to realadolan msg=1531222500690624675]
+
+[2026-07-27T08:53:51.694000+00:00] realadolan (id=1531223082822406324)
+    Sure, but is that what’s happening in reality? I might be mistaken, but I feel like the latest announcements have mostly focused on adding new features
+    [reply to egilewski msg=1531222728533606400]
+
+[2026-07-27T08:55:37.754000+00:00] egilewski (id=1531223527670419566)
+    Announcements about fixing bugs are only exciting for nerds like us.
+    [reply to realadolan msg=1531223082822406324]
+
+[2026-07-27T08:55:40.626000+00:00] realadolan (id=1531223539716198544)
+    Pets, for example, introduced a leak, and the fix has been open for over 30 days without being merged
+
+[2026-07-27T08:56:08.971000+00:00] realadolan (id=1531223658603745351)
+    Yes, I understand. It doesn’t sell as well...
+    [reply to egilewski msg=1531223527670419566]
+
+[2026-07-27T08:57:01.652000+00:00] darth_kermit1 (id=1531223879563870350)
+    Hey how do i get the dev tag?
+
+[2026-07-27T08:57:11.065000+00:00] darth_kermit1 (id=1531223919044989049)
+    I have some pushed commits
+
+[2026-07-27T08:57:11.884000+00:00] egilewski (id=1531223922480119858)
+    Let's advertise that PR even if it's not yours.
+    [reply to realadolan msg=1531223539716198544]
+
+[2026-07-27T08:58:03.709000+00:00] realadolan (id=1531224139850055720)
+    https://github.com/NousResearch/hermes-agent/pull/52603
+    [reply to egilewski msg=1531223922480119858]
+
+[2026-07-27T09:01:07.303000+00:00] kyssta69 (id=1531224909899104296)
+    https://github.com/NousResearch/hermes-agent/pull/72574
+    
+    **Problem**: When launched via python -m hermes_cli.main, the lazy import in code_skew._fingerprint() re-executed the module and triggered _apply_profile_override() twice — the second pass hijacked HERMES_HOME to the sticky active_profile, causing a systemd restart loop. Fix: check __main__ first to avoid the re-import.
+
+[2026-07-27T09:01:28.752000+00:00] egilewski (id=1531224999862730794)
+    It is assigned my the team here occasionally. You can post here a link to your latest merged PR or the commits in `main` and ask for it, but you'll still need patience.
+    [reply to darth_kermit1 msg=1531223879563870350]
+
+[2026-07-27T09:01:38.148000+00:00] realadolan (id=1531225039272149032)
+    I’m not joking. Almost every feature announcement over the past month has introduced a bug, and a PR has been opened to fix it
+    [reply to realadolan msg=1531222500690624675]
+
+[2026-07-27T09:10:49.983000+00:00] egilewski (id=1531227353835896993)
+    You're a pro, right? You know it's almost always much worse.
+    [reply to realadolan msg=1531225039272149032]
+
+[2026-07-27T09:11:05.219000+00:00] realadolan (id=1531227417740447814)
+    Of course, of course
+    [reply to egilewski msg=1531227353835896993]
+
+[2026-07-27T09:11:06.596000+00:00] realadolan (id=1531227423516000358)
+    **My open Hermes PRs**
+    https://github.com/NousResearch/hermes-agent/pulls/Adolanium
+    
+    **Desktop**
+    
+    **#69987** Global command search in Desktop Settings (pages, fields, appearance, credentials). https://github.com/NousResearch/hermes-agent/pull/69987
+    
+    **#69950** Command-style search on the Tools & Keys credential lists. https://github.com/NousResearch/hermes-agent/pull/69950
+    
+    **#47911** Desktop tables follow RTL when the message is RTL. https://github.com/NousResearch/hermes-agent/pull/47911
+    
+    **Security / approval**
+    
+    **#65393** Busybox/toybox multi-call applet verbs go through the hardline approval floor. https://github.com/NousResearch/hermes-agent/pull/65393
+    
+    **#63920** Skills Hub revalidates redirect targets on fetch so installs can't hop somewhere hostile. https://github.com/NousResearch/hermes-agent/pull/63920
+    
+    **#63905** Peel exec wrappers before the MCP hermes-0day scan. https://github.com/NousResearch/hermes-agent/pull/63905
+    
+    **#58742** Approval scanning for stuff hidden behind `sh -c` and `env --split-string`. https://github.com/NousResearch/hermes-agent/pull/58742
+    
+    **#58663** Cron-session approval markers are scoped to the job, not shared. https://github.com/NousResearch/hermes-agent/pull/58663
+    
+    **#58643** Close leading-wrapper and path bypasses of the hardline approval floor. https://github.com/NousResearch/hermes-agent/pull/58643
+    
+    **#58726** Dashboard fs preview and git diffs stay inside the managed root. https://github.com/NousResearch/hermes-agent/pull/58726
+    
+    **#58712** Unbroker programmatic SMTP send requires TLS before login. https://github.com/NousResearch/hermes-agent/pull/58712
+    
+    **#61411** Strip control chars from formatted log records (escape sequences in logs are bad). https://github.com/NousResearch/hermes-agent/pull/61411
+    
+    **Sessions / agent core**
+    
+    **#66751** Unwrap nested OpenAI-compat response envelopes so clients actually get the payload. https://github.com/NousResearch/hermes-agent/pull/66751
+    
+    **#65409** Session identity via ContextVar instead of process env (stops concurrent sessions stepping on each other). https://github.com/NousResearch/hermes-agent/pull/65409
+    
+    **#52641** Session counts stay correct after rewind. https://github.com/NousResearch/hermes-agent/pull/52641
+    
+    **#52583** Relay acks buffered `passthrough_forward` deliveries so retries don't double-send. https://github.com/NousResearch/hermes-agent/pull/52583
+    
+    **Other**
+    
+    **#49473** Official TickTick support (MCP catalog entry + skill). https://github.com/NousResearch/hermes-agent/pull/49473
+    
+    **#52603** Pets no longer leave intermediate images in `cache/images`. https://github.com/NousResearch/hermes-agent/pull/52603
+
+[2026-07-27T09:22:04.916000+00:00] gottz.de (id=1531230184710344826)
+    holy moly. you almost need a dashboard for this in order to not loose track of it: https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AAdolanium+sort%3Aupdated-desc
+    [reply to realadolan msg=1531227423516000358]
+
+[2026-07-27T09:23:34.838000+00:00] gottz.de (id=1531230561870286858)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531230561472090112/image.png?ex=6a687516&is=6a672396&hm=10a4091c8dd7358a3a9e8b0312ebf86deb1724d9d9eb1807c2e618d230fb74b4&
+    [reply to realadolan msg=1531227423516000358]
+
+[2026-07-27T09:28:40.681000+00:00] solitudinem (id=1531231844668936242)
+    My open Hermes PRs — https://github.com/NousResearch/hermes-agent/pulls/Solitud1nem
+    
+    Langfuse
+    #64309 Reject right-prefix template keys (pk-lf-...) that slip past the wrong-prefix-only guard and then make tracing die silently. This morning's triage on #51399 tagged it the complete fix — "Merge #64309 as the focused fix". https://github.com/NousResearch/hermes-agent/pull/64309
+    
+    Config / Desktop
+    #63656 Probe local /v1/models on loopback directly instead of through the env proxy, which was returning an empty model list with no diagnostic. https://github.com/NousResearch/hermes-agent/pull/63656
+    #63691 Show copilot-acp in the model pickers when its executable actually resolves (it was filtered out with no probe). https://github.com/NousResearch/hermes-agent/pull/63691
+    
+    Security
+    #67969 Mask inline fallback-provider API keys in hermes dump, so debug share stops uploading them to a public paste. https://github.com/NousResearch/hermes-agent/pull/67969
+    
+    Voice / audio
+    #65431 Drive the silence-detection tests off an explicit clock instead of real sleeps, so they stop flaking on Windows' coarse timer. https://github.com/NousResearch/hermes-agent/pull/65431
+    #37346 Honor PIPEWIRE_REMOTE in WSL audio detection (it only checked PULSE_SERVER). https://github.com/NousResearch/hermes-agent/pull/37346
+    #34522 Make voice.max_recording_seconds actually take effect — documented, but dead in the classic-CLI and TUI paths. https://github.com/NousResearch/hermes-agent/pull/34522
+    
+    Tests
+    #68002 Fix Windows CRLF shifting the log-truncation boundary (the test flaked 9==10); byte-exact fixtures so it passes on every OS. https://github.com/NousResearch/hermes-agent/pull/68002
+
+[2026-07-27T09:28:42.279000+00:00] kyssta69 (id=1531231851371561010)
+    guess u havent seen mine https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Akyssta-exe+sort%3Aupdated-desc+
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531231850964451338/image.png?ex=6a68764a&is=6a6724ca&hm=ad24a229333a00dffdd2e3567c0f98da8a2768a81fc8caff90766f2972812e6d&
+    [reply to gottz.de msg=1531230184710344826]
+
+[2026-07-27T09:29:33.398000+00:00] solitudinem (id=1531232065780056330)
+    wow
+    [reply to kyssta69 msg=1531231851371561010]
+
+[2026-07-27T09:42:07.448000+00:00] gottz.de (id=1531235228494987324)
+    this is crazy dedication
+    [reply to kyssta69 msg=1531231851371561010]
+
+[2026-07-27T09:42:30.120000+00:00] kyssta69 (id=1531235323588116500)
+    <:shrug:1362670914889846894>
+    [reply to gottz.de msg=1531235228494987324]
+
+[2026-07-27T09:42:32.616000+00:00] kyssta69 (id=1531235334057099274)
+    guess im addicted
+
+[2026-07-27T09:42:38.812000+00:00] egilewski (id=1531235360045142126)
+    Yeah... I only have 26 open, but I try not to open PRs if I can push other people's clankers to get their tokens together and fix their PRs.
+    [attachment] IMG_20260727_114000.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1531235359822708899/IMG_20260727_114000.jpg?ex=6a68798e&is=6a67280e&hm=c9108b4f9b61ee4ffb9bba8af22d89c21016bc8f6926bd1290b5657f141c06ab&
+    [reply to kyssta69 msg=1531231851371561010]
+
+[2026-07-27T09:42:53.645000+00:00] gottz.de (id=1531235422259122197)
+    you are doing manual triage, right?
+    -# you are crazy dedicated too as far as I know
+    [reply to egilewski msg=1531235360045142126]
+
+[2026-07-27T09:42:58.577000+00:00] kyssta69 (id=1531235442945556631)
+    nice
+    [reply to egilewski msg=1531235360045142126]
+
+[2026-07-27T09:45:27.100000+00:00] gottz.de (id=1531236065896304752)
+    btw. you can use \@me as short-hand for yourself in github filters.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531236065002782730/image.png?ex=6a687a36&is=6a6728b6&hm=359b65306146f230f6b2b893e201e47138b5be0a5368d0259464e8c15aab35af&
+
+[2026-07-27T09:46:26.637000+00:00] kyssta69 (id=1531236315612319754)
+    sometimes doesnt work for me idk why but yea
+    [reply to gottz.de msg=1531236065896304752]
+

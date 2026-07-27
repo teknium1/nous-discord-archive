@@ -318,3 +318,17 @@
 [2026-07-26T11:07:06.297000+00:00] davidzinaz (id=1530894226752143504)
     I just installed hindsight as it seemed easiest and got good press.
 
+[2026-07-27T04:38:51.795000+00:00] xeno_thales (id=1531158910394699928)
+    different cases call for different memory/data frameworks
+    [reply to davidzinaz msg=1530725272477761607]
+
+[2026-07-27T04:42:52.574000+00:00] xeno_thales (id=1531159920295022622)
+    that's how it's always been in programming. I definitely feel you though. the "second brain" larp has been annoying to watch bc it's misleading (at best). none of these vibe coding biz devs understand neuromorphic computer systems and it shows.
+
+[2026-07-27T04:53:21.147000+00:00] xeno_thales (id=1531162556721533093)
+    someone posted this here the other day. it's a good reference. I'm currently:
+    - trying to port https://GitHub.com/cortextkit/magic-context to Hermes for repo/project-pinned context
+    - configuring OpenViking for local filesystem ops (local files are versioned by Chezmoi + Forgejo and OV is the navigation + OS-scoped memory for Hermes' computer-use tool) with AGENTS.md files in all my local folders for context/location-aware agent instructions + routing (eg. preferences for running local inference stored in ~/user/models)
+    - and ByteRover or Hindsight for general purpose memory
+    [attachment] 02154e90-77db-11f1-b581-27786f51502c.png https://cdn.discordapp.com/attachments/1508346129861841026/1531162557241622620/02154e90-77db-11f1-b581-27786f51502c.png?ex=6a6835c1&is=6a66e441&hm=9f1fc4c35a7f2def8ec5cdbd60d847b2dd7ebfcf96168159847f096c645ee3ad&
+

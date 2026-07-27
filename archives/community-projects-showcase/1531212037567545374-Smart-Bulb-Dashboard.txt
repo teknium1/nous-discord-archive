@@ -1,0 +1,14 @@
+# Thread 'Smart Bulb Dashboard' in forum #community-projects-showcase
+# thread_id=1531212037567545374 forum_id=1316137596535177246
+# Started 2026-07-27T09:47:11.480935+00:00
+
+[2026-07-27T08:09:58.300000+00:00] _big_owen_ (id=1531212037567545374)
+    https://github.com/THEROCKSSS/smart-bulb-dashboard A local, cloud-independent dashboard for controlling Tuya-based smart bulbs (Wi-Fi RGB+CCT bulbs sold under many brands — Bytech, Merkury, Feit, Teckin, Govee's Tuya-based line, etc). Built as a prototype after reverse-engineering local control of a Bytech A19 bulb — see HANDOFF.md for the full story of how the device credentials were obtained.
+    [embed] GitHub - THEROCKSSS/smart-bulb-dashboard: Local, cloud-independent ... https://github.com/THEROCKSSS/smart-bulb-dashboard
+
+[2026-07-27T08:11:39.443000+00:00] _big_owen_ (id=1531212461792034816)
+    I do plan on Bringing it out of prototype and having a lot more features And I do plan on integrating a lot more other things with other light bulbs I just need other people to test them and make sure that they actually work and can be implemented Including making a possible rename change or another repo called Smart Tech Dashboard which is basically this project but has like thermostats and a lot more other things that can be configured able inside your house through your AI agent and also ways that you can turn it off and have it where your agent can't turn it on back itself that will be a quite a masterpiece to figure out But they'll only get smarter so they'll most likely bypass it one way or another
+
+[2026-07-27T08:11:56.196000+00:00] _big_owen_ (id=1531212532058951772)
+    But if you have any PRS or issues you want to submit please let me know and we can help build this U to be a working product for people to use for free And host at home
+
