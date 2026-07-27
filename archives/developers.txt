@@ -51841,3 +51841,72 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-27T14:07:14.010000+00:00] realadolan (id=1531301945451479175)
     https://github.com/NousResearch/hermes-agent/pull/72650
 
+[2026-07-27T14:31:04.194000+00:00] schrauberhirn (id=1531307944078213200)
+    hey guys, do you do your bug reports with hermes automatically ? Is there a skill for it, or does hermes do it by its own ?
+
+[2026-07-27T14:43:18.776000+00:00] egilewski (id=1531311025138303087)
+    There is a manual pinned in <#1485307775444844625>
+    [reply to schrauberhirn msg=1531307944078213200]
+
+[2026-07-27T15:37:02.248000+00:00] realadolan (id=1531324545359675453)
+    https://github.com/NousResearch/hermes-agent/pull/72717
+
+[2026-07-27T16:19:39.545000+00:00] 0xmagic0 (id=1531335271440973844)
+    Hi, I sent a security advisory over a week ago via GitHub (https://github.com/NousResearch/hermes-agent/security/advisories/GHSA-7x36-8jrh-v4pw), and contacted the team via security@nousresearch.com, but have not received a response. I'm posting here, just to bring it to the teams attention. Happy to answer any questions via the appropriate channels.
+
+[2026-07-27T16:26:09.847000+00:00] realadolan (id=1531336908486086866)
+    Now I'm interested
+
+[2026-07-27T16:27:27.834000+00:00] dexspecial (id=1531337235587403809)
+    Where's your pfp from?
+    [reply to realadolan msg=1531336908486086866]
+
+[2026-07-27T16:27:42.407000+00:00] realadolan (id=1531337296710991944)
+    Heilung
+    [reply to dexspecial msg=1531337235587403809]
+
+[2026-07-27T16:27:44.810000+00:00] Translator Bot#1043 (id=1531337306789777480)
+    cure
+    [reply to realadolan msg=1531337296710991944]
+
+[2026-07-27T16:28:24.137000+00:00] realadolan (id=1531337471739166802)
+    You like it?
+
+[2026-07-27T16:29:17.554000+00:00] dexspecial (id=1531337695786438828)
+    Someone I know has the same one
+    [reply to realadolan msg=1531337471739166802]
+
+[2026-07-27T16:29:23.469000+00:00] dexspecial (id=1531337720595484903)
+    Was curious what it was
+
+[2026-07-27T16:29:52.140000+00:00] silverhawk4385 (id=1531337840850505728)
+    **Feature request: Full Korean (`ko`) localization for Hermes Desktop**
+    
+    Hi Hermes team — I’d like to request full Korean localization for Hermes Desktop.
+    
+    Hermes currently supports `display.language: ko` for a limited subset of CLI and gateway messages, but the main Desktop experience — including navigation, settings, model/provider configuration, Command Center, cron jobs, agents, skills, and profiles — remains English-only.
+    
+    Now that Hermes Desktop has a typed i18n foundation and complete Simplified Chinese localization, the technical groundwork appears to be in place for additional languages. Korean would be a particularly valuable next locale: Korea has a large and rapidly growing community of developers and power users adopting agentic coding and local AI tools, while an English-only interface remains a meaningful onboarding barrier.
+    
+    This would be more than a cosmetic improvement. Clear Korean translations would help users understand provider and API settings, permissions, automation controls, and other important configuration options more safely and confidently.
+    
+    Could full Korean localization be considered for the roadmap, or could a community translation contribution path be documented? I’d be happy to help review terminology and translation quality from a native Korean user’s perspective.
+    
+    Thank you for considering it.
+
+[2026-07-27T16:42:03.654000+00:00] egilewski (id=1531340909042470983)
+    I'm not the team, but hi! Your message will get lost in time here. I'm not aware of any translation plans, but I see that some languages are already supported, so I guess it's doable.
+    
+    You'll have to do the same as the rest of us: create an issue on github to coordinate the Korean translation effort in, then start sending pull requests (better not all at once) with translation pieces (I think something readable in 10 minutes is the ideal size). Then you'll need patience, also as the rest of us (you can look up a conversation here from 10 hours ago to get the general feeling of how it goes).
+    [reply to silverhawk4385 msg=1531337840850505728]
+
+[2026-07-27T16:58:59.740000+00:00] deme4447 (id=1531345170816041051)
+    How does everyone keep their hermes updated while making changes to it that aren't on the main repo yet? They just fork it? and push updates to the fork and rebase off main?
+
+[2026-07-27T17:49:54.557000+00:00] drahcir_rahl (id=1531357983647203431)
+    https://hermes-agent.nousresearch.com/docs/getting-started/updating/#local-changes-on-non-interactive-updates
+    [reply to deme4447 msg=1531345170816041051]
+
+[2026-07-27T18:30:17.322000+00:00] realadolan (id=1531368145460269156)
+    Hey, <@119192111202566149> might want to take a look: https://github.com/NousResearch/hermes-agent/pull/72801 https://github.com/NousResearch/hermes-agent/pull/72846
+

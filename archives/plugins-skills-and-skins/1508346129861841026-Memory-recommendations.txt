@@ -332,3 +332,7 @@
     - and ByteRover or Hindsight for general purpose memory
     [attachment] 02154e90-77db-11f1-b581-27786f51502c.png https://cdn.discordapp.com/attachments/1508346129861841026/1531162557241622620/02154e90-77db-11f1-b581-27786f51502c.png?ex=6a6835c1&is=6a66e441&hm=9f1fc4c35a7f2def8ec5cdbd60d847b2dd7ebfcf96168159847f096c645ee3ad&
 
+[2026-07-27T19:25:01.662000+00:00] k.reeeee (id=1531381920980795514)
+    So many interesting side, almost like choosing your pokemon.
+    I think we just need to chose one and see if it fit to our workflow. Running honcho, i’m at phase building and personalize my hermes. Later probably will move to mnemosyne or super-memory since i mostly work on information management and synthesis.
+
