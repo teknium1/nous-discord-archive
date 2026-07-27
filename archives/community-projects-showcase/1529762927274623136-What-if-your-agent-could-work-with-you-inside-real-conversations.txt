@@ -24,3 +24,7 @@
 [2026-07-23T09:51:55.213000+00:00] rostelinalise (id=1529788142297546885)
     also thought of that, was creating some stuff but haven't really taking it seriously yet
 
+[2026-07-26T19:53:48.631000+00:00] steininger_ (id=1531026776548053063)
+    we are on teams, like it or not. (a secret, I do not like it that much)
+    I created a ms-bot-framework adapter with different hermes behind, some for personal reason, other for bi jobs. we add it to group chats and it interacts while chatting, can read also chat history when it was not mentioned, to catch up once it is mentioned.
+

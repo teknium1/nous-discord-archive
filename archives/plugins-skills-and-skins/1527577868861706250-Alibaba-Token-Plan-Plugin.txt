@@ -19,3 +19,6 @@
     Started life as an in-tree PR (#52915), repackaged standalone per the provider policy. Two generic core gaps I hit while repackaging are filed as #66133 and #66135 if anyone else is building provider plugins.
     [embed] GitHub - oliver-mee/hermes-alibaba-token-plan: Hermes Agent model-p... https://github.com/oliver-mee/hermes-alibaba-token-plan
 
+[2026-07-26T19:43:53.531000+00:00] tarz99 (id=1531024280517873674)
+    Thanks  a lot !! i was looking something like this for my m2 Hemes.
+

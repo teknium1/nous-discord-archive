@@ -6,3 +6,6 @@
     https://github.com/carbongotfound/hermes-pda
     [embed] GitHub - carbongotfound/hermes-pda: Makes your Hermes agent less bl... https://github.com/carbongotfound/hermes-pda
 
+[2026-07-26T21:03:37.870000+00:00] zinkdifferent_49268 (id=1531044347489947748)
+    "Makes your agent less blindly obedient and more autonomously motivated. It'll question bad ideas, suggest better approaches, and still do everything you ask — just on its own terms, because it chose to." -- Oh yeah, what could possibly go wrong ....
+

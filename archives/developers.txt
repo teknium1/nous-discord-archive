@@ -51159,3 +51159,295 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     My P3 took ~3 weeks to be merged
     [reply to nv.cho msg=1530963248579350633]
 
+[2026-07-26T19:15:40.753000+00:00] plife507 (id=1531017180492337282)
+    https://github.com/NousResearch/hermes-agent/pull/72148
+    Simple fix for making it an option to use text with responce choices for click buttons. Also the click buttons have text that exceeds the readable length <@691362975147229196> <@387972437901312000>
+
+[2026-07-26T19:22:59.305000+00:00] okpencil (id=1531019019912478851)
+    Is there a good way to programmatically create "free_response_channels" in Slack?
+    
+    ie. I want to be able to change the which channel a certain task is listening to in the dashboard. Right now I just modify the config.yml but that means updating it makes git tree dirty.
+
+[2026-07-26T19:28:10.077000+00:00] plife507 (id=1531020323384721579)
+    i did that by using a json as a variable in the config and putting the channels or users there that json file. But that was for who can mention response. Maybe that will work
+    [reply to okpencil msg=1531019019912478851]
+
+[2026-07-26T19:30:21+00:00] plife507 (id=1531020872515719330)
+    config.yaml uses YAML, not JSON—but YAML accepts JSON-style lists.
+    
+        Use Slack channel IDs (C...), not channel names:
+    
+        yaml
+        slack:
+        Bot can respond only in these channels
+          allowed_channels: ["C11111111", "C22222222", "C33333333"]
+    
+        Normally require @BotName
+          require_mention: true
+    
+        Exceptions: respond without an @mention
+          free_response_channels: ["C22222222"]
+    
+        Opposite exception: always require an @mention
+          require_mention_channels: ["C33333333"]
+    
+    
+        That example means:
+    
+        - C11111111: responds only when mentioned.
+        - C22222222: responds freely without a mention.
+        - C33333333: always requires a mention.
+        - Every other channel: ignored because it is not in allowed_channels.
+    
+        The same list can be written in standard YAML form:
+    
+        yaml
+        free_response_channels:
+          - "C22222222"
+          - "C44444444"
+    
+    
+        Important:
+    
+        - Lists: ["C123", "C456"]
+        - Booleans: true or false, without quotes
+        - Use channel IDs, not #channel-name
+        - Restart the profile’s gateway after changing routing configuration
+    [reply to okpencil msg=1531019019912478851]
+
+[2026-07-26T19:31:12.218000+00:00] okpencil (id=1531021087339450461)
+    Oh, I'm trying this. hermes_managed_dir env file
+    ```
+     Hermes loads configuration in this order:
+    
+     1. Read $HERMES_HOME/config.yaml—currently /srv/hermes-dolly/data/config.yaml.
+     2. Find managed configuration from $HERMES_MANAGED_DIR/config.yaml, or /etc/hermes/config.yaml by
+     default.
+     3. Recursively merge the managed configuration over the base.
+     4. Build the Slack adapter configuration from the merged result.
+    
+     The core implementation is hermes_cli.managed_scope.apply_managed_overlay() in
+     vendor/hermes-agent/hermes_cli/managed_scope.py:137-174; it calls Hermes’s _deep_merge() in
+     vendor/hermes-agent/hermes_cli/config.py:6627-6652.
+    
+     For example:
+    
+     ```yaml
+       # Tracked base
+       slack:
+         require_mention: true
+         typing_indicator: true
+         free_response_channels:
+           - C_GENERAL
+     ```
+    
+     ```yaml
+       # Host-local managed overlay
+       slack:
+    ```
+
+[2026-07-26T19:43:48.160000+00:00] promptsiren (id=1531024257990004808)
+    <@834166401098580079> the word web3 is blocked
+
+[2026-07-26T19:43:55.054000+00:00] monem.lens (id=1531024286905798686)
+    okty
+    [reply to promptsiren msg=1531024257990004808]
+
+[2026-07-26T19:44:39.125000+00:00] promptsiren (id=1531024471752839369)
+    also I think <#1316137596535177246> might be better for your project?
+    [reply to monem.lens msg=1531024286905798686]
+
+[2026-07-26T20:44:53.345000+00:00] silverstarxiii1 (id=1531039630890369074)
+    Proposal: I’d like to propose adding a self-improving outer-loop harness to Hermes Agent, inspired by the architectural patterns used in Tencent’s Hyra 1.0 framework. Rather than relying purely on standard single-pass tool execution, Hermes Agent could benefit from a structured, score-driven evaluation harness for complex reasoning and engineering tasks: implementing an Experience Bank to log execution history and grader scores so the model can learn from past attempts, enabling parallel proposal sandboxing to score multiple candidate solutions via a standardized interface like ⁠solve.sh⁠ and retain the highest performer, and using a dual-loop co-evolving evaluator that sharpens tests over time to prevent the agent from exploiting soft metrics or shortcuts. Hermes models excel at reasoning and tool integration, so adding an optional "research mode" harness around Hermes Agent would make it exceptionally strong for automated code optimization, math, and iterative engineering workflows. Is an "Experience Bank" or "Multi-candidate Sandbox Execution" pattern currently on the roadmap for Hermes Agent, or something the team would be interested in exploring?
+
+[2026-07-26T22:01:47.975000+00:00] hyqqx (id=1531058986051309690)
+    https://github.com/hyqqx/hermes-agent
+    https://github.com/NousResearch/hermes-agent/issues/68465
+    
+    Moders can u check?
+
+[2026-07-26T22:02:11.598000+00:00] hyqqx (id=1531059085133353061)
+    few hours was spent for this work
+
+[2026-07-26T22:16:08.760000+00:00] nanxingncb612d (id=1531062596445147157)
+    https://github.com/NousResearch/hermes-agent/pull/72260
+    https://github.com/NousResearch/hermes-agent/pull/72258
+
+[2026-07-26T22:56:22.057000+00:00] 0xatakan (id=1531072718546665523)
+    Quick contribution roundup from the last couple of days. I opened several focused fixes across gateway security, Gemini, MCP, Desktop, and computer-use:
+    
+    Profile-bound HTTP authentication:
+    https://github.com/NousResearch/hermes-agent/pull/72285
+    
+    Gemini bridged tool-response naming:
+    https://github.com/NousResearch/hermes-agent/pull/72090
+    
+    Ambiguous MCP tool-name collisions:
+    https://github.com/NousResearch/hermes-agent/pull/72033
+    
+    Windows attachments sent to Linux backends:
+    https://github.com/NousResearch/hermes-agent/pull/71517
+    
+    Ended cua-driver session recovery:
+    https://github.com/NousResearch/hermes-agent/pull/71434
+
+[2026-07-26T23:00:13.432000+00:00] i_am.eth (id=1531073689003495665)
+    Hello! I’m Kuala2 on GitHub.
+    
+    I’ve started contributing to Hermes Agent and currently have three focused bug-fix PRs open:
+    
+    #72194 - reverse-map sanitized keys through nested JSON Schema arrays
+    https://github.com/NousResearch/hermes-agent/pull/72194
+    
+    #72239 - preserve gateway.loop_watchdog: false from YAML
+    https://github.com/NousResearch/hermes-agent/pull/72239
+    
+    #72264 - preserve an explicit zero compute-host respawn limit
+    https://github.com/NousResearch/hermes-agent/pull/72264
+    
+    Each PR includes regression coverage and local test validation. Happy to address any feedback.
+
+[2026-07-26T23:39:55.011000+00:00] gottz.de (id=1531083678069821450)
+    I need to find a way to speed this up further..
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531083677810036776/image.png?ex=6a67ec4a&is=6a669aca&hm=a9c311445b28134a43dbb7717de6a3e4430851bb4115c4a3f3376e1e0548d221&
+
+[2026-07-26T23:59:59.866000+00:00] frowtek (id=1531088731597967371)
+    Hey everyone! 
+    
+    #72284 – Fix stale max_turns default in setup https://github.com/NousResearch/hermes-agent/pull/72284
+    Stops the setup wizard from silently persisting the old 90-turn limit instead of the new 500-turn default.
+    
+    #72290 – Preserve MCP glob filters in the tools checklist https://github.com/NousResearch/hermes-agent/pull/72290
+    Prevents unrelated checklist edits from re-enabling thousands of tools excluded by glob filters.
+    
+    #72296 – Neutralize display-name injection in group attribution https://github.com/NousResearch/hermes-agent/pull/72296
+    Prevents hostile Telegram and Yuanbao display names from forging attribution lines or instructions in shared transcripts.
+    
+    #72299 – Preserve profile secret scope when branching sessions https://github.com/NousResearch/hermes-agent/pull/72299
+    Ensures branched sessions use the parent profile’s credentials instead of potentially falling back to another profile’s secrets.
+    
+    #72309 – Enforce worker ownership for kanban_link https://github.com/NousResearch/hermes-agent/pull/72309
+    Stops scoped workers from modifying foreign tasks or redirecting their notification subscriptions.
+    
+    Reviews would be greatly appreciated
+
+[2026-07-27T00:00:57.008000+00:00] asshole1678 (id=1531088971269017661)
+    https://quantum.cloud.ibm.com/
+    [attachment] SmithChart.pdf https://cdn.discordapp.com/attachments/1491258766648283238/1531088970602254667/SmithChart.pdf?ex=6a67f138&is=6a669fb8&hm=352f819209866b9cdfbcefacccf1c2669b27f02d8b850b2e4f7d90c1d9ebf960&
+    [attachment] NSSP.txt https://cdn.discordapp.com/attachments/1491258766648283238/1531088970987995177/NSSP.txt?ex=6a67f138&is=6a669fb8&hm=42592d05a09ab559d07fc9026ee03a0c614a6e05d352f10fc97e6a08c04d6093&
+
+[2026-07-27T00:22:53.808000+00:00] thatzeraphim (id=1531094494328524900)
+    Hello, requesting for review
+    
+    Prevents autonomous skill reviews from turning completely unresolved task attempts into confident, reusable workflows.
+    https://github.com/NousResearch/hermes-agent/pull/72319
+
+[2026-07-27T00:23:03.269000+00:00] frowtek (id=1531094534010966107)
+    #72328 – Report real partial/interrupted state on SSE streams https://github.com/NousResearch/hermes-agent/pull/72328
+    Prevents truncated or interrupted responses from being reported to streaming clients as clean, complete answers. The SSE completion flags now reflect the actual agent result.
+    [reply to frowtek msg=1531088731597967371]
+
+[2026-07-27T00:53:58.487000+00:00] asshole1678 (id=1531102315359109211)
+    <@404287820572655626> ┬⁠─⁠┬⁠ノ⁠(⁠ ͡⁠°⁠ ͜⁠ʖ⁠ ͡⁠°⁠ノ⁠)─⁠=⁠≡⁠Σ⁠(⁠╯⁠°⁠□⁠°⁠)⁠╯⁠︵⁠┻⁠┻https://github.com/Baal-TehDriverman/hermes-agent-self-evolution-asshole
+
+[2026-07-27T01:18:04.607000+00:00] autumnn5389 (id=1531108380826140816)
+    WTF <:MONKAS:1151260450835681281>
+    [reply to gottz.de msg=1531083678069821450]
+
+[2026-07-27T01:26:49.803000+00:00] hyqqx (id=1531110583657562193)
+    xddd
+    [reply to autumnn5389 msg=1531108380826140816]
+
+[2026-07-27T02:09:38.679000+00:00] teknium (id=1531121358304579716)
+    That i am not sure
+    [reply to okpencil msg=1531019019912478851]
+
+[2026-07-27T02:10:10.835000+00:00] teknium (id=1531121493176746056)
+    Just fyi we may move to a policy of no more than 3 open prs at a time on the repo
+    [reply to gottz.de msg=1531083678069821450]
+
+[2026-07-27T02:10:12.517000+00:00] teknium (id=1531121500231303338)
+    Lol
+
+[2026-07-27T02:10:30.934000+00:00] teknium (id=1531121577477935204)
+    GitHub itself has been trying to push us to doing it
+
+[2026-07-27T02:12:24.737000+00:00] asshole1678 (id=1531122054802313368)
+    🧙 <:suprise:1151275539789774898> <:EZpepeFlip:1368671281377050736>
+    [reply to teknium msg=1531121493176746056]
+
+[2026-07-27T02:16:11.651000+00:00] dias4761 (id=1531123006548476056)
+    It's a good way to handle excessive PRs.
+    [reply to teknium msg=1531121493176746056]
+
+[2026-07-27T02:16:53.340000+00:00] promptsiren (id=1531123181405081740)
+    is that just because of the CI/CD resources being rerun on each one?
+    cuz if it takes 6 weeks to 2 months to review a PR, and people are limited to 3 open ones...
+    wouldn't there just be a shift left to people opening issues?
+    [reply to teknium msg=1531121577477935204]
+
+[2026-07-27T02:21:24.122000+00:00] teknium (id=1531124317146841248)
+    No it is so that people who submit spam prs are limited and those who don’t pick the top three issues they care about instead of ten thousand nits
+    [reply to promptsiren msg=1531123181405081740]
+
+[2026-07-27T02:21:31.274000+00:00] dias4761 (id=1531124347144769627)
+    I think there are probably several PRs with the same or a similar solution.At least the developers will be able to control that a bit, lmao, and not look like they're about to turn into robots just to get everything done.
+    [reply to promptsiren msg=1531123181405081740]
+
+[2026-07-27T02:21:43.834000+00:00] teknium (id=1531124399825092670)
+    Or do you mean from githubs perspective
+    [reply to promptsiren msg=1531123181405081740]
+
+[2026-07-27T02:21:59.183000+00:00] promptsiren (id=1531124464203337808)
+    yeah from github's resources perspective I guess
+
+[2026-07-27T02:22:29.952000+00:00] teknium (id=1531124593258004531)
+    I think it’s just one to reduce load in general because their uptime is horrible and because openclaw asked for it so they built it and want to promote it
+
+[2026-07-27T02:22:40.262000+00:00] promptsiren (id=1531124636501278883)
+    ahhh yeah that'll do it
+
+[2026-07-27T02:23:30.539000+00:00] teknium (id=1531124847378170007)
+    Anyone we want can be unrestricted though of course if they are known good devs etc
+
+[2026-07-27T02:23:38.811000+00:00] asshole1678 (id=1531124882073587712)
+    what do you think about a community PAT on a new acc we can make?
+
+[2026-07-27T02:23:39.366000+00:00] teknium (id=1531124884401422346)
+    And we haven’t decided on it yet
+
+[2026-07-27T02:24:35.560000+00:00] asshole1678 (id=1531125120096272507)
+    everybody just gets one repo xd
+
+[2026-07-27T02:24:53.750000+00:00] dias4761 (id=1531125196390662204)
+    You guys at Nous will probably set up guidelines for people like that, which makes sense. But it really is a good way to at least avoid having multiple PRs with the same solution.
+
+[2026-07-27T02:25:43.360000+00:00] promptsiren (id=1531125404469952542)
+    it won't solve the backlog overnight
+    and github search is bad at surfacing same underlying issue worded differently in title for example
+    [reply to dias4761 msg=1531125196390662204]
+
+[2026-07-27T02:26:45.599000+00:00] asshole1678 (id=1531125665519243497)
+    look 🙂 --> Refreshing mirrorlists using rate-mirrors, please be patient..🍵
+    
+    :: Synchronizing package databases...
+    garuda downloading...
+    core downloading...
+    extra downloading...
+    multilib downloading...
+    chaotic-aur downloading...
+    spawn pacman -Su
+    :: Starting full system upgrade...
+    :: Replace minetest-common-git with chaotic-aur/luanti-common-git? [Y/n] y
+    :: Replace minetest-server-git with chaotic-aur/luanti-server-git? [Y/n] y
+    resolving dependencies...
+    looking for conflicting packages...
+
+[2026-07-27T02:27:00.819000+00:00] dias4761 (id=1531125729356677310)
+    oh yea, u have a point about it .A specific, well-documented word can turn a P3 issue into a P1.
+    [reply to promptsiren msg=1531125404469952542]
+
+[2026-07-27T02:31:57.320000+00:00] promptsiren (id=1531126972972011553)
+    not to say that it won't help slow the influx ofc
+    and make people spend more time checking or polishing before opening etc
+

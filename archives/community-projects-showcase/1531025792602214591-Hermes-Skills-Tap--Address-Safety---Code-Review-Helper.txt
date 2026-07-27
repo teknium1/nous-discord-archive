@@ -1,0 +1,19 @@
+# Thread 'Hermes Skills Tap: Address Safety + Code Review Helper' in forum #community-projects-showcase
+# thread_id=1531025792602214591 forum_id=1316137596535177246
+# Started 2026-07-27T02:41:35.322905+00:00
+
+[2026-07-26T19:49:54.040000+00:00] monem.lens (id=1531025792602214591)
+    published my first skills tap with 2 helpers 
+    
+    **Address Safety**
+    - checks address format + warns about common copy-paste risks
+    - includes a Python helper script for format verification
+    
+    **Code Review**
+    - analyzes algorithm solutions for complexity + suggests improvements
+    
+    Install: `hermes skills tap add pucedoteth/hermes-security-skills`
+    
+    Repo: https://github.com/pucedoteth/hermes-security-skills
+    [embed] GitHub - pucedoteth/hermes-security-skills https://github.com/pucedoteth/hermes-security-skills
+
