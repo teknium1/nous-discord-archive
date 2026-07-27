@@ -6236,3 +6236,10 @@
 [2026-07-27T08:13:32.207000+00:00] _big_owen_ (id=1531212934758273218)
     Hey I thought I would ask but would this work with my Claude code Or am I going to have to make a fork for Claude code to make
 
+[2026-07-27T10:17:27.660000+00:00] deor42 (id=1531244121308795122)
+    When you bind to 0.0.0.0 this means its listening on ALL ip addresses. You need to enter the IP address of the machine its actually running on, rather then 0.0.0.0
+    [reply to perry_2108 msg=1530432414159995082]
+
+[2026-07-27T10:19:42.307000+00:00] deor42 (id=1531244686058979359)
+    For me this means i bind 0.0.0.0 but i can either access my Hermes server on 192.168.1.42 or on its Tailscale address of 100.72.142.21 without having to specify them separately. (these are not my real ip addresses)
+

@@ -51724,3 +51724,120 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     sometimes doesnt work for me idk why but yea
     [reply to gottz.de msg=1531236065896304752]
 
+[2026-07-27T09:48:03.474000+00:00] egilewski (id=1531236721776263208)
+    No, I'm just trying to keep my reviewer from getting thing very wrong. And there is just a bit of triage, mostly it reviews every duplicate, as an initially better PR may be abandoned, and a duplicate may address all my complains.
+    [reply to gottz.de msg=1531235422259122197]
+
+[2026-07-27T10:04:39.682000+00:00] egilewski (id=1531240900175466678)
+    I'm not crazy dedicated, I'm just crazy. I spend way too much effort on my reviewer insted or letting the simpler workig version just review stuff. The reviewer is now more of an agent wrapped in a skill. Ultra buggy overengineered agent, because it's an experiment on getting GPT to "engineer" something, which I'm quite tired of TBH, and going to redesing it from scratch with natural intelligence if I'll have time.
+    [reply to gottz.de msg=1531235422259122197]
+
+[2026-07-27T10:05:19.120000+00:00] jonkomet (id=1531241065590292551)
+    did this get any love yet?
+    [reply to jonkomet msg=1530082633193885768]
+
+[2026-07-27T10:07:03.434000+00:00] gottz.de (id=1531241503114919936)
+    well. it's P3 and 3 days old
+    [reply to jonkomet msg=1531241065590292551]
+
+[2026-07-27T10:08:16.828000+00:00] egilewski (id=1531241810951802930)
+    Always worked for me for years. Maybe you aren't logged in or forget "@" in front? GitHub, as usual, has that syntax backwars.
+    [reply to kyssta69 msg=1531236315612319754]
+
+[2026-07-27T10:08:39.029000+00:00] kyssta69 (id=1531241904069414913)
+    wait there is @ too? lol i guess yea
+    [reply to egilewski msg=1531241810951802930]
+
+[2026-07-27T10:09:05.318000+00:00] kyssta69 (id=1531242014333472908)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531242014065299517/image.png?ex=6a687fc1&is=6a672e41&hm=c5b564150689a8cb177ad65562b3183aa7954df8e891f4e99616097e63982e89&
+
+[2026-07-27T10:09:08.946000+00:00] kyssta69 (id=1531242029550665880)
+    from:@me doesnt work
+
+[2026-07-27T10:09:30.333000+00:00] kyssta69 (id=1531242119254245399)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531242119094599740/image.png?ex=6a687fda&is=6a672e5a&hm=557f0c0d85558141128f2ebb9c593adcc07ae0d38817644cb59a9a735490b157&
+
+[2026-07-27T10:09:35.046000+00:00] kyssta69 (id=1531242139021738095)
+    involves:@me does
+
+[2026-07-27T10:09:51.408000+00:00] egilewski (id=1531242207648940053)
+    "author:@me"?
+
+[2026-07-27T10:11:33.368000+00:00] gottz.de (id=1531242635300438036)
+    does it autocomplete for you inside the issues section? apparently they did not add autocomplete to the pr section.
+
+[2026-07-27T10:12:30.489000+00:00] gottz.de (id=1531242874883280908)
+    so fluid.. makes me really wonder why it's only in issues.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531242874358857796/image.png?ex=6a68808e&is=6a672f0e&hm=1c8aac9f7db4890330d0d646f0bcf2b484370e1ab8918b4f02657f2e3d7b44f5&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531242874690338878/image.png?ex=6a68808e&is=6a672f0e&hm=26251a6e25269e059632a3a567727dbd03c15eb5bb89ba0679c56388526dbe81&
+
+[2026-07-27T10:24:22.691000+00:00] kyssta69 (id=1531245862074843266)
+    hmm yea
+    [reply to egilewski msg=1531242207648940053]
+
+[2026-07-27T10:24:24.414000+00:00] kyssta69 (id=1531245869301633065)
+    that works
+
+[2026-07-27T10:24:25.214000+00:00] kyssta69 (id=1531245872657207338)
+    mb
+
+[2026-07-27T11:41:30.822000+00:00] egilewski (id=1531265273863213118)
+    <@145786028483936256> can we be friends?
+
+[2026-07-27T11:42:19.266000+00:00] realadolan (id=1531265477052207165)
+    We are aren’t we
+    [reply to egilewski msg=1531265273863213118]
+
+[2026-07-27T11:42:31.754000+00:00] realadolan (id=1531265529430544415)
+    <:Prayge:1151275585000185968>
+
+[2026-07-27T11:43:45.603000+00:00] egilewski (id=1531265839175569497)
+    DMs, <@145786028483936256>, can I get into your DMs?
+
+[2026-07-27T11:44:33.607000+00:00] realadolan (id=1531266040519196842)
+    Of course
+
+[2026-07-27T11:44:45.729000+00:00] realadolan (id=1531266091362291732)
+    Sent you a request
+
+[2026-07-27T12:51:50.863000+00:00] doud34.fr (id=1531282973998055525)
+    Hello everyone, i don't know if i make mistake or other but i have PR was 1.5 month, my PR is fixed and clean, but not not merged...
+    I don't understand why, i like to know if is me or other... But if my PR is never merged, i stop to push
+    Thanks in advance
+
+[2026-07-27T13:00:07.743000+00:00] egilewski (id=1531285058063695872)
+    Same for us. There are 17000+ open PRs and just a handful of maintainers, however fast they are. If you PR is P3 it may take a while. You don't have to keep it clean as long as you'll react to comments on your PR when they come.
+    [reply to doud34.fr msg=1531282973998055525]
+
+[2026-07-27T13:10:32.259000+00:00] doud34.fr (id=1531287677473915021)
+    Hey, Thanks for you answer <@1387527976224297133> 
+    Sorry, i'm new in this, and i don't know how that work... I understand now why PR arent merged befor mine ! 🤗 
+    I have PR not critical... I'm wait most safe
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531287677100494987/image.png?ex=6a68aa48&is=6a6758c8&hm=de4a3de3dd373d7a4a95d34cc23815c1eccd8ce8cf85309a01a948f0f822d7cd&
+
+[2026-07-27T13:14:38.796000+00:00] egilewski (id=1531288711525040249)
+    A couple P2. Well, there is a chance they will be merged in reasonable time.
+    [reply to doud34.fr msg=1531287677473915021]
+
+[2026-07-27T13:16:21.845000+00:00] egilewski (id=1531289143743615138)
+    The current inflow of PRs is somewhat above reasonable, that's the problem.
+
+[2026-07-27T13:20:33.795000+00:00] gottz.de (id=1531290200498770005)
+    I just realized I can queue the graph for it's triaged insights..
+    Is it correct this sits at P3? seems to be quite breaking for llmstudio users.
+    https://github.com/NousResearch/hermes-agent/issues/25989
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531290200225873940/image.png?ex=6a68aca1&is=6a675b21&hm=af063b8b3c49b1a740c2aa196fcd4f4ed036995264d7715519d94662326900f4&
+
+[2026-07-27T13:22:09.452000+00:00] darth_kermit1 (id=1531290601713307821)
+    cool will do
+    [reply to egilewski msg=1531224999862730794]
+
+[2026-07-27T13:22:18.794000+00:00] darth_kermit1 (id=1531290640896495706)
+    can i jsut send it hee?
+
+[2026-07-27T13:24:05.475000+00:00] darth_kermit1 (id=1531291088349040722)
+    https://github.com/NousResearch/hermes-agent/pull/17854
+
+[2026-07-27T14:07:14.010000+00:00] realadolan (id=1531301945451479175)
+    https://github.com/NousResearch/hermes-agent/pull/72650
+

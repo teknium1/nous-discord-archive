@@ -9,3 +9,7 @@
 [2026-07-26T21:03:37.870000+00:00] zinkdifferent_49268 (id=1531044347489947748)
     "Makes your agent less blindly obedient and more autonomously motivated. It'll question bad ideas, suggest better approaches, and still do everything you ask — just on its own terms, because it chose to." -- Oh yeah, what could possibly go wrong ....
 
+[2026-07-27T11:37:40.536000+00:00] flash_speed3412 (id=1531264307973722252)
+    you choose how autonomous it goes
+    [reply to zinkdifferent_49268 msg=1531044347489947748]
+

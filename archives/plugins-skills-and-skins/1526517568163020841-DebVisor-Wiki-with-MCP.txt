@@ -19,3 +19,7 @@
 [2026-07-21T08:06:46.337000+00:00] undifined. (id=1529036905222770810)
     https://debvisor.com/wiki/wiki-pack/graph.html
 
+[2026-07-27T10:43:08.110000+00:00] undifined. (id=1531250582424391690)
+    It has practically received a full rewrite, from sqlite to postgres , compressed content, caches, ongoing recategorization, and a higher rate of collecting.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1526517568163020841/1531250582122135613/image.png?ex=6a6887bc&is=6a67363c&hm=2d05b777ace1e132d8e9e5f6a72e7a2e4b8cc8c6f0e1ffc513a0c199f91a1883&
+
