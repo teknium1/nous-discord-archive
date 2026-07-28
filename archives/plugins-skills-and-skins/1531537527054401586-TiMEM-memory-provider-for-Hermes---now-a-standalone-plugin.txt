@@ -1,0 +1,32 @@
+# Thread '🧠 TiMEM memory provider for Hermes — now a standalone plugin' in forum #plugins-skills-and-skins
+# thread_id=1531537527054401586 forum_id=1485392832154832906
+# Started 2026-07-28T08:36:20.849118+00:00
+
+[2026-07-28T05:43:21.041000+00:00] brave_badger_40708 (id=1531537527054401586)
+    TiMEM is a temporal-hierarchical memory engine that ingests your conversations server-side into a 5-level Temporal Memory Tree (L1 raw interactions → L5 persona). I wrapped it as an opt-in Hermes memory provider, per the CONTRIBUTING.md "ship memory providers as standalone plugins" policy. Built on the TiMEM engine by TiMEM-AI: https://github.com/TiMEM-AI/TiMEM
+    
+    **What it does:**
+    - **Auto recall** — semantic search over your layered memories is injected as `<timem-context>` before each turn, so Hermes remembers across sessions.
+    - **Auto capture** — completed user/assistant turns are submitted for async L1–L5 generation (non-blocking).
+    - **Built-in mirror** — Hermes built-in memory writes are mirrored into TiMEM as tagged L1 facts.
+    - **Tools** — `timem_search`, `timem_add`, `timem_profile`.
+    - **Safe by default** — non-primary contexts (cron/subagents) are read-only, circuit breaker after 5 consecutive failures, trivial turns skipped.
+    
+    **Install (no PR needed):**
+    ```bash
+    git clone https://github.com/aimaoge/hermes-timem-memory
+    cp -r hermes-timem-memory/timem ~/.hermes/plugins/timem
+    pip install timem-ai==0.4.0
+    # add TIMEM_API_KEY=... to ~/.hermes/.env, then:
+    hermes memory setup   # pick timem
+    ```
+    
+    Repo: https://github.com/aimaoge/hermes-timem-memory
+    Get a TiMEM key at https://console.timem.cloud
+    
+    Feedback / PRs welcome — this is my first Hermes plugin, happy to adjust.
+    — Ben
+    [embed] GitHub - TiMEM-AI/TiMEM: Temporal-Hierarchical Memory Consolidation... https://github.com/TiMEM-AI/TiMEM
+    [embed] GitHub - aimaoge/hermes-timem-memory: Standalone Hermes memory-prov... https://github.com/aimaoge/hermes-timem-memory
+    [embed] TiMEM太忆 - 智能体认知引擎 https://console.timem.cloud/
+

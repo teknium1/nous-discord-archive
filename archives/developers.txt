@@ -51949,3 +51949,23 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Permanent user data loss with no recovery path.
     [reply to mariaosake msg=1531472112743747606]
 
+[2026-07-28T02:32:13.522000+00:00] kyssta69 (id=1531489428793462904)
+    https://github.com/NousResearch/hermes-agent/pull/72973
+    
+    **Problem**: Fixed false "docker daemon not running" in `hermes doctor` when using DOCKER_HOST via a TCP socket-proxy. Changed health check from `docker info` (blocked by socket-proxy /info endpoint) to `docker version` (uses /version endpoint, always allowed).
+
+[2026-07-28T03:11:45.465000+00:00] asshole1678 (id=1531499377443602463)
+    Hey so I'm doing some android coding today I'm trying kali Linux pacman and chaurotic-aur but I found this super handy tool klara. It just watches what you do in the background
+    [attachment] Screenshot_2026-07-27-20-09-24-71_7854a6549b26e951a8f6c9525a747568.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1531499376030257162/Screenshot_2026-07-27-20-09-24-71_7854a6549b26e951a8f6c9525a747568.jpg?ex=6a696f71&is=6a681df1&hm=8945f7ae9ef008f47f08e8705db569b08d1ece95a530327af8361665f0ab48a7&
+    [attachment] Screenshot_2026-07-27-20-11-13-71_7854a6549b26e951a8f6c9525a747568.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1531499376445489243/Screenshot_2026-07-27-20-11-13-71_7854a6549b26e951a8f6c9525a747568.jpg?ex=6a696f71&is=6a681df1&hm=ea89ec066df84094f2155ff09317209ef413d621dd69b366ef57ea80c51b0583&
+    [attachment] Screenshot_2026-07-27-20-11-22-84_7854a6549b26e951a8f6c9525a747568.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1531499377091285092/Screenshot_2026-07-27-20-11-22-84_7854a6549b26e951a8f6c9525a747568.jpg?ex=6a696f71&is=6a681df1&hm=7ff37bd0bc16b1fef3cb339a184067f8e698b37e7ee99f332c613fc9951e506e&
+
+[2026-07-28T03:32:03.821000+00:00] asshole1678 (id=1531504487599050804)
+    https://youtu.be/SO7KT_DPE_4?is=kWHYkpZEOmxTpWHe
+    [attachment] image0.gif https://cdn.discordapp.com/attachments/1491258766648283238/1531504487561166988/image0.gif?ex=6a697433&is=6a6822b3&hm=684c6e3db57d16b823350ef5434392730eb6d81394b49b889ed7234121f2141f&
+
+[2026-07-28T07:23:20.179000+00:00] kyssta69 (id=1531562689263042640)
+    https://github.com/NousResearch/hermes-agent/pull/73193
+    
+    **Problem**: Codex credential rotation fix: exhausted entries with expired access tokens were stuck until last_error_reset_at because the quota probe always failed (401) — now the token is refreshed before probing, so the pool can correctly detect restored quota and resume using the credential.
+

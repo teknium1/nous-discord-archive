@@ -22,3 +22,11 @@
     [embed] GitHub - mauricemohr88-debug/hermes-plugin-guard: Static, no-execut... https://github.com/mauricemohr88-debug/hermes-plugin-guard
     [embed] Add outbound network egress detection by mauricemohr88-debug · Pul... https://github.com/mauricemohr88-debug/hermes-plugin-guard/pull/3
 
+[2026-07-28T04:38:09.434000+00:00] moze88. (id=1531521120585650307)
+    Just a small update: HPG112 is merged and included in v0.1.2 now, so the PR link in the original post is no longer the current test path.
+    
+    Install:
+    `pipx install "git+https://github.com/mauricemohr88-debug/hermes-plugin-guard.git@v0.1.2"`
+    
+    I also fixed the false compatibility warnings around the current `pre_verify` and Kanban task hooks. If anyone gives it a try on a real plugin, even a quick note about useful, noisy or missing findings would help a lot.
+

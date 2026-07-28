@@ -2401,3 +2401,28 @@
 [2026-07-26T18:29:35.690000+00:00] _mlsmith_ (id=1531005582977269790)
     Ask your agent to update your nix config
 
+[2026-07-28T02:49:13.338000+00:00] nulledvector (id=1531493706211922051)
+    <@843913220867096606> Mains Nixos can tell you more about it right?
+    [reply to s.whal msg=1530866277793398836]
+
+[2026-07-28T02:55:38.689000+00:00] s.whal (id=1531495322491031552)
+    Its ok I managed to install it with uv
+    [reply to nulledvector msg=1531493706211922051]
+
+[2026-07-28T02:56:22.120000+00:00] nulledvector (id=1531495504653975634)
+    There we go! ✨
+
+[2026-07-28T02:57:44.467000+00:00] nulledvector (id=1531495850042200215)
+    Let us know how it goes after a week or so
+
+[2026-07-28T07:04:40.520000+00:00] floory (id=1531557993072689233)
+    on nixos it's recommended to use nix-shell for programming dependencies
+    
+    more information can be found at https://wiki.nixos.org/wiki/Python
+    
+    asking your agent to install it should work just fine too though, it'll probably decide to use hermes' venv instead
+    
+    which one works depends on how you've  got hermes installed
+    [embed] Python https://wiki.nixos.org/wiki/Python
+    [reply to s.whal msg=1531495322491031552]
+
