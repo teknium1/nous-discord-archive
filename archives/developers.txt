@@ -51969,3 +51969,136 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     **Problem**: Codex credential rotation fix: exhausted entries with expired access tokens were stuck until last_error_reset_at because the quota probe always failed (401) — now the token is refreshed before probing, so the pool can correctly detect restored quota and resume using the credential.
 
+[2026-07-28T09:01:12.668000+00:00] kyssta69 (id=1531587320267149372)
+    https://github.com/NousResearch/hermes-agent/pull/73254
+    
+    **Problem**: Fix 401 on api-key providers: retry once before fallback instead of immediately falling back. Generic handler for chat_completions mode adds 401 retry where no refresh helper exists.
+
+[2026-07-28T09:14:29.093000+00:00] kyssta69 (id=1531590660715712693)
+    https://github.com/NousResearch/hermes-agent/pull/73255
+    
+    **Problem**: Langfuse plugin: skip key prefix validation for custom endpoints. When HERMES_LANGFUSE_BASE_URL is custom, don't reject non-pk-lf-/sk-lf- keys.
+
+[2026-07-28T09:41:47.175000+00:00] realadolan (id=1531597531329466458)
+    <@1068770268660629574> is on fire
+
+[2026-07-28T09:41:58.411000+00:00] realadolan (id=1531597578456793261)
+    Be careful they're going to limit us to 3 PRs per user
+
+[2026-07-28T09:42:00.768000+00:00] kyssta69 (id=1531597588342767616)
+    <:sob_oh:1522632048194621632>
+
+[2026-07-28T09:42:06.283000+00:00] kyssta69 (id=1531597611474092053)
+    what
+    [reply to realadolan msg=1531597578456793261]
+
+[2026-07-28T09:42:09.797000+00:00] kyssta69 (id=1531597626213011627)
+    they cant do this to me
+
+[2026-07-28T09:42:13.684000+00:00] kyssta69 (id=1531597642516267140)
+    i wouldnt be able to breathe
+
+[2026-07-28T09:42:27.525000+00:00] kyssta69 (id=1531597700569628813)
+    i want everyone to sign a petition rn
+
+[2026-07-28T09:42:30.547000+00:00] kyssta69 (id=1531597713244950619)
+    against it
+
+[2026-07-28T09:43:49.010000+00:00] realadolan (id=1531598042342621234)
+    Look here
+    [reply to teknium msg=1531121493176746056]
+
+[2026-07-28T09:44:08.639000+00:00] kyssta69 (id=1531598124672483410)
+    fuck github
+    [reply to teknium msg=1531121577477935204]
+
+[2026-07-28T09:45:14.235000+00:00] kyssta69 (id=1531598399802183701)
+    cursor origin is going to be the future
+
+[2026-07-28T09:47:30.822000+00:00] realadolan (id=1531598972689453168)
+    Did they launch it yet
+
+[2026-07-28T09:47:34.301000+00:00] realadolan (id=1531598987281567886)
+    Not yet right?
+
+[2026-07-28T09:53:52.769000+00:00] kyssta69 (id=1531600574691414131)
+    yea not yet
+
+[2026-07-28T09:55:20.817000+00:00] egilewski (id=1531600943991492720)
+    Teknium said they would be able to make exceptions if they know someone's a good developer. So everybody be on your best behavior for now, maybe even read code or something.
+    [reply to kyssta69 msg=1531597626213011627]
+
+[2026-07-28T09:55:37.450000+00:00] kyssta69 (id=1531601013755346964)
+    <:deviousahh:1459000065694629999>
+
+[2026-07-28T09:57:57.796000+00:00] egilewski (id=1531601602409005218)
+    We can even run a private fork where we cross-review our PRs to then pretend we can slop them well from the start.
+
+[2026-07-28T10:07:47.062000+00:00] realadolan (id=1531604073969881110)
+    Best comment this month
+    [reply to egilewski msg=1531600943991492720]
+
+[2026-07-28T10:56:13.987000+00:00] gottz.de (id=1531616266496770068)
+    there are some crazy complexes inside the repo.. https://hermes-triage.gottz.de/?complex=bf43efe5bffaaf4d41ff76485268ae7e
+
+[2026-07-28T10:56:44.804000+00:00] realadolan (id=1531616395752898581)
+    Yes
+    [reply to gottz.de msg=1531616266496770068]
+
+[2026-07-28T11:51:24.607000+00:00] egilewski (id=1531630152243740693)
+    This is not a healthy thing for a man to look at.
+    [reply to gottz.de msg=1531616266496770068]
+
+[2026-07-28T11:55:09.595000+00:00] godsboy7777 (id=1531631095911677983)
+    Hey <@387972437901312000>, quick update on the remaining Hermes Agent PRs after rechecking them against current `main`.
+    
+    I also closed #47814 because the merged per-topic free-response implementation in #65543 now covers that user-facing behaviour.
+    
+    **1. Gateway session-list starvation**
+    https://github.com/NousResearch/hermes-agent/pull/65509
+    
+    Newer sessions from other chats can crowd out useful same-chat history, causing `/sessions` and bare `/resume` to omit valid conversations.
+    
+    The branch is clean, mergeable, and all checks are green.
+    
+    **2. Permission-gated plugin injection into gateway sessions**
+    https://github.com/NousResearch/hermes-agent/pull/64436
+    
+    Plugins currently cannot inject messages into existing gateway sessions.
+    
+    I rebased this onto current `main`, preserved the newer authorisation checks, and retained the role-grant revalidation requested during review.
+    
+    The branch is clean, mergeable, and the new CI run is fully green.
+    
+    **3. Numbered resume after session search**
+    https://github.com/NousResearch/hermes-agent/pull/60138
+    
+    After `/sessions search <query>`, `/resume <number>` can resolve against an unrelated recent-session list instead of the selected search result.
+    
+    The branch merges cleanly and the implementation checks pass.
+    
+    The only remaining gate is the maintainer-controlled `ci-reviewed` label.
+    
+    **4. Telegram media caption formatting**
+    https://github.com/NousResearch/hermes-agent/pull/57090
+    
+    Telegram media captions can display broken or raw Markdown instead of rendered formatting.
+    
+    The UTF-16 caption-limit feedback and emoji-boundary regression are addressed.
+    
+    The branch is clean, mergeable, and all checks are green.
+    
+    Could you please give these a maintainer pass when you have a gap and merge any you are happy with?
+    
+    Three have fully green CI, and #60138 only needs the `ci-reviewed` label.
+    
+    Happy to adjust anything needed.
+
+[2026-07-28T13:12:02.462000+00:00] mariaosake (id=1531650443678322848)
+    <@387972437901312000> <@690519146701783042> Thank you for merging my commit.
+    [reply to mariaosake msg=1531472112743747606]
+
+[2026-07-28T13:19:30.479000+00:00] kxee (id=1531652322797817886)
+    thanks for contributing!
+    [reply to mariaosake msg=1531650443678322848]
+

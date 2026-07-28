@@ -1,0 +1,14 @@
+# Thread '🧹 pip-clean' in forum #plugins-skills-and-skins
+# thread_id=1531660255086379108 forum_id=1485392832154832906
+# Started 2026-07-28T14:07:02.666165+00:00
+
+[2026-07-28T13:51:01.684000+00:00] jex03394 (id=1531660255086379108)
+    A zero-dependency, single-file Python micro-utility that scans your codebase, identifies "ghost" dependencies that are installed but never imported, and cleans them up interactively.
+    
+    Comment your thoughts below
+    Thought this would help you guys 🙂
+    
+    https://github.com/JithunMethusahan/pip-clean
+    [attachment] Screenshot_2026-07-28_191516.png https://cdn.discordapp.com/attachments/1531660255086379108/1531660255782768741/Screenshot_2026-07-28_191516.png?ex=6a6a0545&is=6a68b3c5&hm=d54c33a2c34270f815cbce4301dade027b472458e1b7c69ba7166eab773e29d3&
+    [embed] GitHub - JithunMethusahan/pip-clean: A zero-dependency Python utili... https://github.com/JithunMethusahan/pip-clean
+

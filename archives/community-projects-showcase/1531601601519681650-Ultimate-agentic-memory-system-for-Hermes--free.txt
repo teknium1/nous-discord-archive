@@ -1,0 +1,23 @@
+# Thread 'Ultimate agentic memory system for Hermes, free' in forum #community-projects-showcase
+# thread_id=1531601601519681650 forum_id=1316137596535177246
+# Started 2026-07-28T14:00:44.562390+00:00
+
+[2026-07-28T09:57:57.584000+00:00] jaixii (id=1531601601519681650)
+    Engraphis: local-first memory for coding agents. Daily updates. Durable context across sessions and repos, bi-temporal history, code-aware recall, MCP, self-hosted WebUI. Apache-2.0, free core. Beats Obsidian in every imaginable metric.
+    
+    Recall: six-term scoring (retention, semantic, lexical, graph proximity, importance, recency) with visible score breakdowns. Ebbinghaus decay with reinforcement. Deterministic conflict resolution (add/reinforce/supersede), no LLM in the write path. Contradictions invalidate facts instead of overwriting; engraphis_why shows supersession history with word-level diffs.
+    
+    Local: SQLite + local embeddings (all-MiniLM-L6-v2, 80 MB once). Base lib depends on numpy only. Deterministic offline embedder fallback.
+    
+    Code-aware: incremental symbol/call/import graph across 11 languages (Python, JS, TS, Go, Rust, Java, C#, C, C++, SQL, Terraform). Tree-sitter with regex fallback. Code↔memory links, path queries, git/PR impact analysis, portable graph exports + git merge driver.
+    
+    MCP: 29 tools for Claude Code, Cursor, Cline, Zed, Windsurf. Remember, hybrid recall, cited answers or explicit abstention, proactive_context, governance (pin/forget/correct/promote/merge), indexing, impact, privacy receipts.
+    
+    Security: AES-256 at rest (SQLCipher), loopback default, constant-time bearer token, hostile-input hardening on sync/merge/repo-walk, opt-in auditable LLM extraction with local fallback.
+    
+    WebUI: 14 tabs, same MemoryService as MCP/library. Supersession diffs, offline force-directed graph, SHA-256 content-free audit receipt chain, full governance ledger, nothing hard-deleted.
+    
+    https://engraphis.com/
+    [attachment] 2026-07-28_03_25_39-Engraphis_Ledger_-_Comet.png https://cdn.discordapp.com/attachments/1531601601519681650/1531601601888915517/2026-07-28_03_25_39-Engraphis_Ledger_-_Comet.png?ex=6a69cea5&is=6a687d25&hm=da371ca39df362d272836f1573a1d75b7bd2b01c1c6249ffcc052981df459edb&
+    [embed] Engraphis | Memory that knows where it came from https://engraphis.com/
+

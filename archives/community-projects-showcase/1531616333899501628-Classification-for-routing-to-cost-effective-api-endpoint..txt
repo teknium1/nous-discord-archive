@@ -1,0 +1,12 @@
+# Thread 'Classification for routing to cost effective api endpoint.' in forum #community-projects-showcase
+# thread_id=1531616333899501628 forum_id=1316137596535177246
+# Started 2026-07-28T14:00:44.133626+00:00
+
+[2026-07-28T10:56:30.057000+00:00] x00d1000_46206 (id=1531616333899501628)
+    This is a classifier to route queries to the most cost effective api currently only trained for video generation however LLM routing is planned, I have include openclaw and hermes capable SKILL.md
+    trained classifiers are on huggingfaces.
+    project is MIT
+    https://github.com/xDarkicex/switchboard
+    [attachment] banner_v1.png https://cdn.discordapp.com/attachments/1531616333899501628/1531616334218006538/banner_v1.png?ex=6a69dc5e&is=6a688ade&hm=8fae83fdda9c66a648c620ae7737f399a5175b7644f6cf84401e4dbdc0a24d18&
+    [embed] GitHub - xDarkicex/switchboard: Zero-alloc, mmap-backed AI proxy en... https://github.com/xDarkicex/switchboard
+

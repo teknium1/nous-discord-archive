@@ -41,3 +41,23 @@
 [2026-07-28T07:37:17.711000+00:00] jcrabapple (id=1531566202126860319)
     This app is incredible
 
+[2026-07-28T11:48:01.368000+00:00] jcrabapple (id=1531629299797463141)
+    <@109053738517299200> do you think you can make it a share target on Android? So I can share links and text directly to it.
+
+[2026-07-28T11:51:03.140000+00:00] xpeta (id=1531630062204358796)
+    <@460986566022660097> Thanks for the suggestion! It's actually already implemented and will be included in the next update that's about to be released.
+    
+    Really appreciate the feedback and the support—it helps a lot
+
+[2026-07-28T11:52:44.641000+00:00] jcrabapple (id=1531630487930536057)
+    Great! Thank you! You've achieved something really great here. I've been looking for a good Hermes android app for so long.
+    [reply to xpeta msg=1531630062204358796]
+
+[2026-07-28T11:58:19.033000+00:00] xpeta (id=1531631890472239184)
+    Thank you so much, I really appreciate it!
+    
+    That's actually why I started building it I couldn't find a good, stable Hermes app for Android either.
+    
+    And if you ever come across anything that could be improved, just let me know. I'm always happy to hear feedback and keep making it better.
+    [reply to jcrabapple msg=1531630487930536057]
+
