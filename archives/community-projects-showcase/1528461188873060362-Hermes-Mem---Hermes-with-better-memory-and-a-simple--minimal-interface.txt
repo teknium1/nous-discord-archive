@@ -21,3 +21,20 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1528461188873060362/1528461190571884736/image.png?ex=6a5e61e9&is=6a5d1069&hm=03874b936b483a8fb3a08f55f6abae023a3b2cbf61c9727069575bcad6943728&
     [embed] GitHub - FPP-Labs/hermes_mem: Hermes Mem is an independent communit... https://github.com/FodorProPro/hermes_fpp.git
 
+[2026-07-28T18:33:45.796000+00:00] fodor_pro_pro (id=1531731407729066004)
+    Hermes Mem Beta 0.2 
+    
+    changed:
+    Added: YouTube link recognition and automatic extraction of video subtitles as timestamped text.
+    Improved: Web search with DuckDuckGo and custom SearXNG support.
+    Changed: 1. Redesigned Hermes Mem settings with search and voice configuration inside the app. 2. The installer now preserves chats, memory, and settings during updates.
+    Fixed: More reliable memory saving, timestamps, exact quotes.
+    
+    You can explore the source code, read more about the project, or ask questions and report bugs through GitHub Issues:
+    https://github.com/FPP-Labs/hermes_mem
+    Install on Linux or macOS:
+    git clone https://github.com/FodorProPro/hermes_fpp.git && cd hermes_fpp && ./install.sh
+    When the installer menu appears, choose 1.
+    [embed] GitHub - FPP-Labs/hermes_mem: Hermes Mem is an independent communit... https://github.com/FPP-Labs/hermes_mem
+    [embed] GitHub - FPP-Labs/hermes_mem: Hermes Mem is an independent communit... https://github.com/FodorProPro/hermes_fpp.git
+

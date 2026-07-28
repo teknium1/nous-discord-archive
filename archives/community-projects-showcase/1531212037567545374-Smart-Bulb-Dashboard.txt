@@ -12,3 +12,45 @@
 [2026-07-27T08:11:56.196000+00:00] _big_owen_ (id=1531212532058951772)
     But if you have any PRS or issues you want to submit please let me know and we can help build this U to be a working product for people to use for free And host at home
 
+[2026-07-28T15:45:02.644000+00:00] _big_owen_ (id=1531688948152406138)
+    **Smart Bulb Dashboard — v0.1.0** (2026-07-27)
+    Initial prototype. 97 working features, built after reverse-engineering local control of a Bytech A19 Wi-Fi RGB+CCT bulb (Tuya protocol v3.5).
+    
+    Full changelog: https://therocksss.github.io/smart-bulb-dashboard/changelog.html
+    [embed] Changelog — Smart Bulb Dashboard https://therocksss.github.io/smart-bulb-dashboard/changelog.html
+
+[2026-07-28T15:45:08.021000+00:00] _big_owen_ (id=1531688970704916510)
+    **Smart Bulb Dashboard — v0.1.1** (2026-07-27)
+    
+    **Added**
+    - Polyform Noncommercial License 1.0.0
+    - GitHub mirror links in README.md
+    
+    **Fixed**
+    - Scrubbed a briefly-leaked device ID and LAN IP before the GitHub mirror went public
+    
+    Full changelog: https://therocksss.github.io/smart-bulb-dashboard/changelog.html
+    [embed] Changelog — Smart Bulb Dashboard https://therocksss.github.io/smart-bulb-dashboard/changelog.html
+
+[2026-07-28T15:45:14.111000+00:00] _big_owen_ (id=1531688996248354886)
+    **Smart Bulb Dashboard — v0.2.0** (2026-07-28)
+    Two build rounds shipped together: audio-reactive lighting (and its v2 rework) and secure remote access. Feature count: 97 → 137.
+    
+    **Added**
+    - Audio-reactive lighting: 12 modes, capturing from VoiceMeeter/virtual-cable sources or real microphones
+    - Multi-bulb audio orchestration — unison, phase-offset, and band-split roles
+    - Sub-15ms internal decision latency, decoupled from a configurable per-bulb dwell time
+    - Network auto-discovery — weekly background scanning plus on-demand scan
+    - PIN-gated remote access — PBKDF2-hashed PIN, signed sessions, brute-force lockout
+    - AGENTS.md, a ~1,000-item phased roadmap, three new project skills, this documentation site
+    
+    **Fixed**
+    - An IP-change log entry reported the wrong "old IP"
+    - The audio brightness floor never actually reached its floor during silence
+    - Bulb network calls inside the audio callback froze the entire analysis pipeline when the bulb was slow/offline
+    - Hue smoothing broke at the 0°/360° wrap boundary
+    - The PIN gate blocked the root page itself once enabled
+    
+    Full changelog: https://therocksss.github.io/smart-bulb-dashboard/changelog.html
+    [embed] Changelog — Smart Bulb Dashboard https://therocksss.github.io/smart-bulb-dashboard/changelog.html
+

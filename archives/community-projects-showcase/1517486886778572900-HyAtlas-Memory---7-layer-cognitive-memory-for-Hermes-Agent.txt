@@ -311,3 +311,6 @@
     gpt and a pipeline of reference images
     [reply to halibusal msg=1531284043729998084]
 
+[2026-07-28T17:01:34.592000+00:00] tunacookie (id=1531708208178135131)
+    Contemplating to rewrite it into Go
+

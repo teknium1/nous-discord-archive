@@ -11,3 +11,94 @@
     I hated using other agentic memory, because it would inevitably unlink, and then I would just keep using the agent without knowing it was broken, wasting tons of time. Now I can click the topbar, see everything's running, toggle on options such as whether or not to save new memories, and view the last 5 memories saved at a quick glance. It also makes it easy to lock and unlock the encrypted memory.
     [attachment] Compartment.png https://cdn.discordapp.com/attachments/1528807731065262261/1530972465855987814/Compartment.png?ex=6a6784b7&is=6a663337&hm=582ae41948e5f9f838acf93f86d781c290e6f0a7cff128fb266357f46748dec1&
 
+[2026-07-28T15:42:21.766000+00:00] maxfreedompollard (id=1531688273381036133)
+    It now has a minimal (but feature packed) GUI on all 3 operating systems.
+
+[2026-07-28T15:42:32.857000+00:00] maxfreedompollard (id=1531688319899926769)
+    The superior math of Compartment, part 1 of 4: what gets stored.
+    
+    All of it lives in one file, src/compartment/ranking.py, which the vault, the dashboard and the benchmark all import, so a measurement is a measurement of the product and not of a copy that has drifted.
+    
+    THE PROBLEM. The encoder reads 512 tokens. Text past that is not weighted less, it is not seen at all, so a long memory was searchable only by its opening. On a real 6,705-memory vault, 40% of records ran past the window and 57.6% of the corpus was invisible to semantic search.
+    
+    THE FIX. A record is embedded as overlapping windows of W = 448 tokens at stride S = 384. The 64 tokens of overlap mean no fact is cut in half by a boundary. The record scores as its best window:
+    
+    windows(d) = ceil( max(0, tokens(d) - W) / S ) + 1     capped at 64
+    
+    s_vec(d)   = max over windows w of d of cos(q, w)
+    
+    In plain terms: chop a long memory into overlapping pages, and judge it by its best page.
+    
+    WHY MAX AND NOT AVERAGE. A memory is relevant if any part of it is relevant. Averaging punishes a long memory for the parts that are about something else. With one window per record the formula reduces exactly to the old behaviour, so it can never be worse for a short memory. The cost is small because most memories are short: 6,705 records produced 6,785 windows.
+    
+    Windows are counted in model tokens, never characters. A character budget is wrong by a factor of three between prose and a hex digest, and being wrong here means silently dropping the end of a memory.
+
+[2026-07-28T15:42:41.219000+00:00] maxfreedompollard (id=1531688354972831795)
+    Part 2 of 4: recall. Two indexes, combined as evidence rather than added.
+    
+    The vector index answers "what does this mean". The keyword index answers "what does this say". Their scores are not denominated in the same thing, and combining them is the entire difficulty.
+    
+    Adding them is the obvious move and it is wrong: a merely-good semantic match outvotes conclusive literal evidence. Searching a real vault for a commit sha occurring in exactly one memory out of 6,705 returned that memory below ten paraphrases of it. The keyword index had ranked it first and the sum buried it.
+    
+    The channels are not addends, they are alternatives: either one alone can establish relevance. That is a soft OR over independent evidence,
+    
+    P(relevant) = 1 - (1 - p_vec)(1 - p_lex)
+    
+    and the score is its logarithm, which ranks identically while still spreading results apart near the top instead of saturating at 1:
+    
+    score(d) = - w_vec log(1 - p_vec(d)) - w_lex log(1 - p_lex(d))
+    w_vec = 0.75, w_lex = 0.25
+    
+    Either channel approaching certainty carries the memory on its own, and neither can veto the other.
+    
+    A COSINE AS A PROBABILITY. An L2-normalized encoder gives cosines comparable across queries, so fixed bounds work:
+    
+    p_vec(d) = clamp( (cos(q,d) - 0.25) / (0.85 - 0.25), 0, 0.88 )
+    
+    Per-query min-max normalization is the tempting alternative and it is a trap: it rescales the best hit of a hopeless query up to 1.0 and throws the calibration away.
+    
+    That 0.88 ceiling is load-bearing. A cosine is a similarity, never an identity: an encoder can say "this is about the same thing", never "this is the record you named". A literal match on a string unique to one memory can say exactly that. So the semantic channel is capped below the certainty the literal channel may reach, and the bound is forced, not chosen: the literal channel tops out at 0.25 * -log(1 - 0.999) = 1.727, so the cap must satisfy 0.75 * -log(1 - cap) < 1.727, giving cap < 0.90.
+
+[2026-07-28T15:42:48.632000+00:00] maxfreedompollard (id=1531688386065072128)
+    Part 3 of 4: reading a keyword hit as a probability, and deliberately not with BM25.
+    
+    BM25 answers "how well does this match", which is not what settles a contest against a semantic hit. What settles it is how unlikely the match was by chance. So each query term carries its self-information over the vault, and a memory scores the fraction of the query's information it accounts for:
+    
+    I(t)     = log( N / (1 + df(t)) )      N = records in the vault
+    
+    p_lex(d) = ( sum of I(t) over query terms t present in d ) / ( sum of I(t) over all query terms t )
+    
+    In plain terms: a word that appears in one memory out of 6,705 is almost proof; a word that appears in a tenth of them proves nearly nothing, whatever its BM25 happens to be. Scoring the share of the question's surprise that a memory accounts for is what makes a literal hit and a semantic hit comparable at all.
+    
+    The keyword index is queried as AND first, since an exact phrase match is the strongest signal available. FTS5's implicit AND means a nine-word question has to appear word for word, so when AND finds nothing it falls back to OR over only the terms carrying information: anything appearing in more than 10% of records is dropped. That ceiling is measured from your own vault rather than taken from an English stopword list, so it behaves the same for a vault full of code, of names, or of another language.
+    
+    Then a small rank-agreement residue, the one thing reciprocal-rank fusion is genuinely good at, sized to break ties rather than decide them:
+    
+    + w_rrf k [ 1/(k + rank_vec) + 1/(k + rank_lex) ]      w_rrf = 0.10, k = 20
+
+[2026-07-28T15:42:54.535000+00:00] maxfreedompollard (id=1531688410824179884)
+    Part 4 of 4: importance and recency multiply, they never add. And the numbers.
+    
+    final(d) = score(d) ( 1 + w_imp (2 importance(d) - 1) + w_rec 2^( -age_days(d) / 180 ) )
+    
+    w_imp = 0.15, w_rec = 0.10
+    
+    MULTIPLICATIVE, so a prior can only reorder a memory that already matched. An additive prior lets a very important memory surface for a question it has nothing to do with, which is how a memory system starts feeling haunted. A memory that matched nothing scores zero, and nothing can lift it off zero.
+    
+    CENTRED on the 0.5 default, which is why 2 importance - 1 appears rather than importance. Every unweighted memory carries 0.5, including thousands of starter facts. Uncentred, they all collect the same silent boost, which is another way of saying importance did nothing at all. Centred, an unweighted memory is exactly neutral and only a deliberate weight moves it.
+    
+    The tiers capture writes: decisions and consent 0.90, personal facts and preferences 0.80, machine and configuration 0.75, other substantive statements 0.55, pleasantries 0.20 (kept, ranked last). Recency halves every 180 days. Soon I'll make this recency reduction more elegant, I mention everything not just perfected, but this I'll fix once I figure something out.
+    
+    Namespace, tag, date and starter-fact filters run after ranking, so the candidate pool starts at 200 per channel and widens up to three times when filtering leaves too few.
+    
+    MEASURED end to end through Vault.search, on a real 6,705-memory vault, 44 queries in four families, against the previous scorer:
+    
+    Recall@1 0.523 to 0.773
+    Recall@5 0.705 to 0.977
+    MRR@10 0.601 to 0.845
+    nDCG@10 0.627 to 0.878
+    exact identifiers in top 5 4/10 to 10/10
+    facts past the encoder window 0/6 to 5/6
+    paraphrases 16/16 to 16/16
+    median latency 4.4 ms to 11.6 ms
+

@@ -61,3 +61,71 @@
     And if you ever come across anything that could be improved, just let me know. I'm always happy to hear feedback and keep making it better.
     [reply to jcrabapple msg=1531630487930536057]
 
+[2026-07-28T14:34:46.884000+00:00] laggingway4018 (id=1531671265973375127)
+    Hey, this is a good app! Looks clean as well - glad to try it out! Will keep you looped in on issues/feature requests <@109053738517299200>
+
+[2026-07-28T14:43:53.028000+00:00] xpeta (id=1531673556667203634)
+    Thanks! That means a lot. I really appreciate you trying it out. If you run into any issues or have ideas for new features, just let me know!
+    [reply to laggingway4018 msg=1531671265973375127]
+
+[2026-07-28T16:07:15.827000+00:00] llongshot (id=1531694539927060672)
+    How can I download the app?
+
+[2026-07-28T16:16:13.092000+00:00] laggingway4018 (id=1531696793379803186)
+    For the model picker in the chat, can we have search functionality built in right there? Right now it's pretty manual
+    [reply to xpeta msg=1531673556667203634]
+
+[2026-07-28T16:19:09.685000+00:00] laggingway4018 (id=1531697534064394321)
+    Join the group, then you can access the playstore link
+    [reply to llongshot msg=1531694539927060672]
+
+[2026-07-28T16:20:13.223000+00:00] xpeta (id=1531697800562081952)
+    Thanks for giving it a try!
+    
+    For now, you'll need to go to https://hermes.xpetalab.dev/ , join the Google testing group, and then use the download link on the website. Make sure you're signed in with the same Google account for both steps.
+    
+    Also, Google sometimes takes a little while to sync your group membership with the download link, so if it doesn't work immediately, give it a bit and try again.
+    
+    Hopefully by tomorrow or the day after, Google will approve the production release, and it'll be available directly on the Play Store, which will make things much easier!
+    [embed] Hermes Console — Tu agente AI self-hosted, en tu bolsillo https://hermes.xpetalab.dev/
+    [reply to llongshot msg=1531694539927060672]
+
+[2026-07-28T16:22:57.023000+00:00] xpeta (id=1531698487589081293)
+    Thanks for the suggestion!
+    
+    I'll implement it in the next update. I think a search bar in the model picker will make things much easier. I really appreciate the feedback, keep it coming!
+    [reply to laggingway4018 msg=1531696793379803186]
+
+[2026-07-28T16:34:21.556000+00:00] laggingway4018 (id=1531701358728581190)
+    Also, once we open up the navbar on the left, can we have an instance picker right at the top? where the name of the instance is populated? just so there's a separate option apart from navigating to the instances section. this can be a dropdown or the same instance picker as right now
+    [reply to xpeta msg=1531698487589081293]
+
+[2026-07-28T16:37:36.778000+00:00] xpeta (id=1531702177549127840)
+    I like that idea! It would definitely make switching between instances much more convenient. I'll add it to the next update. Thanks again for the great UX suggestions!
+    [reply to laggingway4018 msg=1531701358728581190]
+
+[2026-07-28T16:37:43.644000+00:00] laggingway4018 (id=1531702206347214848)
+    And in terms of the Context usage window which we open up, I understand cached tokens are there - they are just not populated. right now we need to calculate those numbers. maybe we could have a separate cached tokens bubble and also a Cache% bubble?
+    also if the v1/models endpoint supports it, will it be possible to get a cost estimate? 
+    and I am not sure if Hermes will support TTT/TPS metrics per message
+    [reply to xpeta msg=1531698487589081293]
+
+[2026-07-28T16:38:33.771000+00:00] laggingway4018 (id=1531702416595222709)
+    TTFT*, not TTT
+
+[2026-07-28T16:41:27.268000+00:00] xpeta (id=1531703144294383616)
+    Those are all great suggestions! I'll make a note of them and see what can be implemented. The Cached Tokens and Cache % metrics definitely make sense, and I'll also look into cost estimates and whether Hermes exposes TTFT and TPS per message. Thanks for taking the time to write all this feedback I really appreciate it!
+    [reply to laggingway4018 msg=1531702206347214848]
+
+[2026-07-28T17:16:12.858000+00:00] laggingway4018 (id=1531711891892605191)
+    NP
+    Also, in the context usage section - under Session status: The call/token data gets wiped out if a given session has been inactive for a while. It gets repopulated after a new message in that session, but will it be possible for that to be retained?
+    [reply to xpeta msg=1531703144294383616]
+
+[2026-07-28T17:34:26.562000+00:00] xpeta (id=1531716479219667018)
+    Good catch! That's actually something I'm already looking into. The goal is to keep those metrics available even after a session has been inactive. Thanks for pointing it out!
+    [reply to laggingway4018 msg=1531711891892605191]
+
+[2026-07-28T17:54:51.178000+00:00] kuipou (id=1531721615631585300)
+    does it do gpt5.6 voice?
+

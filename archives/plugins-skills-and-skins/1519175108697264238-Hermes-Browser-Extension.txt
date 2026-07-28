@@ -733,3 +733,8 @@
     [embed] feat(api): honor provider-aware request routing (salvage #54426) by... https://github.com/NousResearch/hermes-agent/pull/70853
     [embed] fix(api-server): expose model options inventory (salvage #54689) by... https://github.com/NousResearch/hermes-agent/pull/70900
 
+[2026-07-28T19:15:56.618000+00:00] jonkomet (id=1531742022765904024)
+    https://github.com/abundantbeing/hermes-browser-extension/commit/51d704bc4c9ca1de09ffdf5e50b2b8e6e72dede4
+    [attachment] HBE_-_Companion_Context_Fix_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1531742023306973345/HBE_-_Companion_Context_Fix_Update_AD.png?ex=6a6a516c&is=6a68ffec&hm=f44bc18dcae3887026bf14a6055cf33d587e683574465026081f7efcf0866eb3&
+    [embed] fix: authorize companion tools from shared hook ids · abundantbein... https://github.com/abundantbeing/hermes-browser-extension/commit/51d704bc4c9ca1de09ffdf5e50b2b8e6e72dede4
+

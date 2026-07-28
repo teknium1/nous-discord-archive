@@ -1,0 +1,14 @@
+# Thread 'Proteus Arc - Accessibillity for Alzheimer's.' in forum #community-projects-showcase
+# thread_id=1531723302043779266 forum_id=1316137596535177246
+# Started 2026-07-28T19:19:19.482861+00:00
+
+[2026-07-28T18:01:33.250000+00:00] parrotzzz (id=1531723302043779266)
+    Alzheimer’s diagnosis is not accessible, affects millions, and reduces data quantity towards finding novel solutions to Alzheimer's. The main issues are fundamental engineering problems: 
+    - mL models for EEG get flawed only reach approximately 60% diagnostic accuracy IRL, lack edge-based optimization, and lack innovative data processing which has never been done. ***We want that percentage to go to 90%. ***
+    
+    **Solution: **me and my team are building an open-source algorithm that addresses the flaws of Alzheimer's diagnosis. Taking into account EEG(brain-wave) data, and Alzheimer’s Questionnaire Data for a multimodal system. 
+    
+    Right now, we are building the dream team to build this, have a plan and partnership to use this algorithm in the future, and are optimistic for impact. ***if you want to join our team as well, you can contact me, we are currently building our core team. ***
+    **Github:** https://github.com/pizzadude123/Proteus-Arc
+    [embed] GitHub - pizzadude123/Proteus-Arc: Alzheimer's EEG Algorithm. https://github.com/pizzadude123/Proteus-Arc
+

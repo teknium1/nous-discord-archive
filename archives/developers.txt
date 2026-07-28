@@ -52102,3 +52102,190 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     thanks for contributing!
     [reply to mariaosake msg=1531650443678322848]
 
+[2026-07-28T14:13:18.478000+00:00] .omgg (id=1531665862006800394)
+    https://github.com/NousResearch/hermes-agent/pull/73409 - fix(acp): unwedge session when final-response send fails
+
+[2026-07-28T15:38:20.966000+00:00] maxfreedompollard (id=1531687263392501800)
+    <@690519146701783042> If you're merging can you have a look at the hermes self improving agent, the only possible PR (it has set stages of development, this completes a stage) has been waiting for approval for a while. Would love to do next stage. Tahks
+
+[2026-07-28T15:39:33.498000+00:00] kxee (id=1531687567613759618)
+    send over
+    [reply to maxfreedompollard msg=1531687263392501800]
+
+[2026-07-28T15:58:31.534000+00:00] asshole1678 (id=1531692340882833529)
+    I'm training a little gemma model for mobile on Google edge Gallery. Pretty neat!
+    [attachment] Screenshot_2026-07-28-00-23-14-92_b78cd18424c325871699372657284944.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1531692339557568683/Screenshot_2026-07-28-00-23-14-92_b78cd18424c325871699372657284944.jpg?ex=6a6a2327&is=6a68d1a7&hm=81a541da744d9137b27dd275ad68f43fb8f127e81f93af5ea0abf98261a79d73&
+    [attachment] Screenshot_2026-07-28-08-56-16-04_9c94afd36e946b78818d1d2132faa2a2.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1531692339905429645/Screenshot_2026-07-28-08-56-16-04_9c94afd36e946b78818d1d2132faa2a2.jpg?ex=6a6a2327&is=6a68d1a7&hm=86f9a1e44641e215b3456fd0b204421235ff0c1b6c627a7e6f16bef20e8c107b&
+    [attachment] Screenshot_2026-07-28-08-55-33-51_9c94afd36e946b78818d1d2132faa2a2.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1531692340295635005/Screenshot_2026-07-28-08-55-33-51_9c94afd36e946b78818d1d2132faa2a2.jpg?ex=6a6a2327&is=6a68d1a7&hm=5176e06837836f27edbc857e83d11b270ea46860d42dcc337ca73b166644eafb&
+    [attachment] Output.pdf https://cdn.discordapp.com/attachments/1491258766648283238/1531692340589101086/Output.pdf?ex=6a6a2327&is=6a68d1a7&hm=1e7eaee3e6fcf875ee378c24006412992f5a6a2893c593b41e0bf16c37d9a36e&
+
+[2026-07-28T16:07:55.996000+00:00] maxfreedompollard (id=1531694708408062173)
+    I released Compartment vector memory. Here is it's link in the community showcase: 
+    
+    https://discord.com/channels/1053877538025386074/1528807731065262261
+    
+    Compartment is better because:
+    
+    • The vectors are encrypted too, not just the text. A vector inverts back toward its text, and everyone else leaves them in the open.
+    • Offline is enforced, not promised: it aborts on any socket attempt.
+    • Restart or power loss locks it: the key is wrapped under a per-boot secret that never touches a disk.
+    • A menu bar app (tray on Windows, window on Linux) shows status, locked or unlocked, which agents are still connected, capture on or off, the last 5 memories saved. Most memory you don't know when it's off, not working or malfunctioning. 
+    • A hook writes the memory even when the model forgets the tool, and /compartmentalize banks a whole conversation before compaction.
+    • It supersedes the host's own memory after importing it. One vault, not two.
+    • Ships with 6,718 facts, useful before you teach it anything.
+    • No setup after install, you can tweak it, but it will, by default, store useful memories as you chat naturally to Hermes, Claude or Openclaw. One database is used by all, works on all instantly. 
+    
+    Why the mathematics is better:
+    
+    • Vector and keyword combine as independent evidence, 1-(1-p_vec)(1-p_lex), not added, so one exact hit is never outvoted by paraphrases.
+    • Semantic certainty is capped at 0.88, below what a literal match can reach, and arithmetic forces the cap, not taste.
+    • Keyword weight is self-information, log(N/(1+df)), not BM25: a term in 1 memory of 6,705 is near proof, in a tenth of them noise.
+    • Importance multiplies and is centred on 0.5, so a prior reorders a match and can never invent one.
+    • Long records max-pool over 448-token windows, so a memory is judged by its best part, not its opening.
+    • Under 20k records the search is exact: recall 1.0 by construction, not an approximation.
+    
+    https://github.com/MaxFreedomPollard/Compartment
+
+[2026-07-28T17:35:35.955000+00:00] looned. (id=1531716770275004467)
+    Hey 👋 . I've been building a project on top of Hermes for the past few days and
+    hammering on it pretty hard, which shook out three Desktop bugs. Opened PRs
+    for all of them.
+    
+    The one that actually hurt: https://github.com/NousResearch/hermes-agent/pull/73442
+    Start the desktop against a remote gateway that isn't up yet, the cold boot
+    fails and you get the recovery overlay (Retry / Gateway settings / Use local
+    gateway). But a later caller re-enters startHermes() and replays the boot
+    progress, so the fullscreen CONNECTING overlay covers those buttons again for
+    the whole 45s readiness wait. They're only clickable in the gap between
+    attempts. (Behavior on MacOS Tahoe 26.5.2)
+    
+    Two smaller ones in the review panel:
+    https://github.com/NousResearch/hermes-agent/pull/73364
+    "Unstage all" throws in a repo with no commits yet.
+    
+    https://github.com/NousResearch/hermes-agent/pull/72947 
+    Revert on a file that is both new and staged reports success and does nothing.
+    
+    These are my first PRs here, so the workflows are all stuck on pending
+    maintainer approval and no CI has run. If someone can click approve, I'd
+    appreciate it.
+    
+    *P.S. written with Hermes in the loop. I know what the changes do, and if
+    review wants anything reworked I'll do it by hand.*
+
+[2026-07-28T17:48:33.151000+00:00] gottz.de (id=1531720030071427153)
+    just wait for the review bots to catch up to it. welcome!
+    [reply to looned. msg=1531716770275004467]
+
+[2026-07-28T17:48:45.287000+00:00] solitudinem (id=1531720080973365361)
+    yay... IM A DEVELOPER NOW! <:nousgirl:1341983870752653352>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531720080612659240/image.png?ex=6a6a3cfd&is=6a68eb7d&hm=8fc1247d4e9f95118b7dd1df3b0b58f3172c11d576014e7869e789c9285d32d7&
+
+[2026-07-28T17:49:23.643000+00:00] gottz.de (id=1531720241850355773)
+    noice! even got your own fix mentioned and not just your name!
+    [reply to solitudinem msg=1531720080973365361]
+
+[2026-07-28T17:49:56.624000+00:00] solitudinem (id=1531720380182564994)
+    thx for your reviews btw
+    [reply to gottz.de msg=1531720030071427153]
+
+[2026-07-28T17:53:04.606000+00:00] gottz.de (id=1531721168636215337)
+    I just hope they help. Thanks for the appreciation.
+    [reply to solitudinem msg=1531720380182564994]
+
+[2026-07-28T17:57:24.426000+00:00] looned. (id=1531722258400411658)
+    Hey, thanks for the response! quick question tho, how does it work?
+    The PR is open for 19h now, is the queue really that long or am I missing something? 
+    
+    If it is somewhere in the markdowns and I am just blind, I'd appreciate a link 😄
+    [reply to gottz.de msg=1531720030071427153]
+
+[2026-07-28T17:57:52.958000+00:00] gottz.de (id=1531722378072035419)
+    https://hermes-triage.gottz.de/ look at the numbers on top 😄
+    [reply to looned. msg=1531722258400411658]
+
+[2026-07-28T17:58:19.282000+00:00] looned. (id=1531722488483024936)
+    that's crazy
+
+[2026-07-28T17:58:33.095000+00:00] gottz.de (id=1531722546419077301)
+    yes indeed
+
+[2026-07-28T17:59:04.943000+00:00] gottz.de (id=1531722679999135846)
+    teknium literally told me to triage some pr's and I built this in response XD
+
+[2026-07-28T17:59:37.668000+00:00] looned. (id=1531722817257865447)
+    that's so cool tho
+    
+    awesome, I love how this process looks and the visibility of it. I guess I just have to forget about todays PRs and pivot to creating new ones kkkkk
+
+[2026-07-28T17:59:52.690000+00:00] looned. (id=1531722880264699976)
+    as in 9-5, always gotta have some PR open 😄 here it is quite easily achievable..
+
+[2026-07-28T17:59:54.175000+00:00] gottz.de (id=1531722886492983449)
+    it's crazy how many pr's and issues are opened each day
+
+[2026-07-28T18:00:26.005000+00:00] gottz.de (id=1531723019997679786)
+    and the duplicates.. it's really crazy
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531723019414798458/image.png?ex=6a6a3fb9&is=6a68ee39&hm=1a8d5d03f8f782b5b1fd1642b527867aa2afec80d8c6d314fd818f248d10d3cf&
+
+[2026-07-28T18:00:40.914000+00:00] looned. (id=1531723082530820106)
+    Well, Error/Repair count tells me there is possibly a lot of instantly closable slop
+
+[2026-07-28T18:00:58.534000+00:00] looned. (id=1531723156434194463)
+    But yeah, the daily amount is crazy even when not counting those
+
+[2026-07-28T18:01:01.685000+00:00] gottz.de (id=1531723169650704424)
+    the error / repair cases are just not passing my quality gates.
+
+[2026-07-28T18:01:15.236000+00:00] gottz.de (id=1531723226487591032)
+    I should probably create a infographic of how my triage works right now.
+
+[2026-07-28T18:01:21.736000+00:00] gottz.de (id=1531723253750435923)
+    I would be interested to see it myself xD
+
+[2026-07-28T18:01:32.302000+00:00] looned. (id=1531723298067451944)
+    sounds like a plan for the evening XD
+
+[2026-07-28T18:02:29.686000+00:00] gottz.de (id=1531723538753519768)
+    oh it's building right now.
+
+[2026-07-28T18:02:43.072000+00:00] gottz.de (id=1531723594898608188)
+    -# as if I'd do this manually
+
+[2026-07-28T18:03:02.954000+00:00] gottz.de (id=1531723678289760316)
+    I want to get the same "oshit" moment as you
+
+[2026-07-28T18:21:40.443000+00:00] teknium (id=1531728365378211840)
+    <a:Nod:1060091954836295760>
+    [reply to looned. msg=1531723156434194463]
+
+[2026-07-28T18:21:48.529000+00:00] teknium (id=1531728399293481070)
+    thats why we're considering limiting unknown contribs to 3 prs max
+
+[2026-07-28T18:28:21.826000+00:00] 0xatakan (id=1531730048900534485)
+    Hi <@387972437901312000> I currently have 16 open PRs. I’ve heard that a limit of 3 open PRs per contributor may be introduced soon.
+    
+    I reviewed all of my open PRs again:
+    
+    - they are currently conflict-free and mergeable against the latest main
+    - requested changes have been addressed where applicable
+    - the updated branches were tested locally
+    - the main shared blocker is that GitHub Actions ends with `action_required` before CI jobs start
+    
+    Since I cannot approve workflows in the upstream repository, I cannot move them forward on my own.
+    
+    All of my open PRs are here:
+    https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Aopen+author%3AAtakanGs
+    
+    Thank you for your time.
+
+[2026-07-28T18:32:24.431000+00:00] teknium (id=1531731066459787334)
+    Who are you responding to 😄
+
+[2026-07-28T19:01:11.241000+00:00] looned. (id=1531738309225615480)
+    Is it really that significant issue? 
+    
+    I mean, does the volume come in a great portion because of first time contributors that push > 3 PRs? 
+    Is this amount not overwhelmed just by the pure amount of contributors, even with 1 PR?
+    [reply to teknium msg=1531728399293481070]
+
