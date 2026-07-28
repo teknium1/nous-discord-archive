@@ -1,0 +1,15 @@
+# Thread 'Hermes Control Deck' in forum #community-projects-showcase
+# thread_id=1531404591910879424 forum_id=1316137596535177246
+# Started 2026-07-28T02:21:50.504700+00:00
+
+[2026-07-27T20:55:06.833000+00:00] mgf.654 (id=1531404591910879424)
+    I Bulit a Micro Deck like Codex Micro for fast 
+    
+    It’s for controlling long-running tasks - that’s the idea. You can see what the agent is doing and continue the work with a single button.
+    
+    It wasn't meant to be a dashboard with a chat interface.
+    
+    The application also features an official integration with Codex.
+    [attachment] IMG_9899-compressed.mov https://cdn.discordapp.com/attachments/1531404591910879424/1531404592665989271/IMG_9899-compressed.mov?ex=6a69172b&is=6a67c5ab&hm=b8767aad07ed0b18c01e30dfbd0bc407068e31f393ab4229117890acd567505c&
+    [attachment] IMG_6421.png https://cdn.discordapp.com/attachments/1531404591910879424/1531404593672753303/IMG_6421.png?ex=6a69172b&is=6a67c5ab&hm=fed9fb9452dbc44d0d4f5dce297bfe34f094f257dc7c60ff968bd1a0c79c9910&
+

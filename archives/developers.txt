@@ -51910,3 +51910,42 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-27T18:30:17.322000+00:00] realadolan (id=1531368145460269156)
     Hey, <@119192111202566149> might want to take a look: https://github.com/NousResearch/hermes-agent/pull/72801 https://github.com/NousResearch/hermes-agent/pull/72846
 
+[2026-07-27T22:00:30.151000+00:00] 0xatakan (id=1531421047499395093)
+    Quick status update on my open Hermes PRs:
+    
+    I reviewed the outstanding branches and resolved the remaining merge conflicts. They are currently mergeable against the latest main, and the revised branches have been validated locally.
+    
+    Full list of my open PRs:
+    https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Aopen+author%3AAtakanGs
+    
+    A few notable ones with additional external validation or recent conflict resolution:
+    
+    Process poll reader-lock deadlock:
+    https://github.com/NousResearch/hermes-agent/pull/65002
+    
+    Native Windows cua-driver session recovery:
+    https://github.com/NousResearch/hermes-agent/pull/71434
+    
+    Profile-bound HTTP authentication:
+    https://github.com/NousResearch/hermes-agent/pull/72285
+    
+    MCP cross-process discovery guard, recently rebuilt onto current main:
+    https://github.com/NousResearch/hermes-agent/pull/62856
+    
+    dependentRequired schema preservation, recently rebuilt onto current main:
+    https://github.com/NousResearch/hermes-agent/pull/64623
+    
+    Could a maintainer approve the pending workflows when convenient? Feedback on any of these is also welcome.
+
+[2026-07-28T01:23:25.054000+00:00] mariaosake (id=1531472112743747606)
+    https://github.com/NousResearch/hermes-agent/pull/73020
+
+[2026-07-28T01:41:40.852000+00:00] mariaosake (id=1531476708853809283)
+    Bug: Message data loss on Gateway shutdown due to FTS5 corruption
+    
+    When the FTS5 index is corrupted, the INSERT INTO messages operation fails. The Gateway then keeps the unsaved messages in the _pending_messages variable (memory only
+    However, during shutdown, the current code calls _pending_messages.clear(), which permanently deletes all pending messages. Users experience the issue of “the conversation disappeared” with no way to recover it
+    Impact  
+    Permanent user data loss with no recovery path.
+    [reply to mariaosake msg=1531472112743747606]
+

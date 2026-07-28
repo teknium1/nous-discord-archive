@@ -19,3 +19,9 @@
 [2026-07-25T04:43:02.718000+00:00] thegiuseppe (id=1530435187110969345)
     i didnt have much luck with laguna. its ok but i found qwen 3.6 either 27b or 35b to be better. for freely available hy3 was better during its free period. if probably put this laguna model slightly above stepfun 3.7 but not particularly highly ranked in actual work
 
+[2026-07-28T01:26:10.964000+00:00] henrymascot_18739 (id=1531472808620855356)
+    Finally got it to work 
+    
+    https://x.com/iamhenrymascot/status/2081846827159113917?s=46
+    [embed]  https://twitter.com/iamhenrymascot/status/2081846827159113917?s=46
+
