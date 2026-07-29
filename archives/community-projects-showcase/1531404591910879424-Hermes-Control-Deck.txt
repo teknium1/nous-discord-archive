@@ -13,3 +13,42 @@
     [attachment] IMG_9899-compressed.mov https://cdn.discordapp.com/attachments/1531404591910879424/1531404592665989271/IMG_9899-compressed.mov?ex=6a69172b&is=6a67c5ab&hm=b8767aad07ed0b18c01e30dfbd0bc407068e31f393ab4229117890acd567505c&
     [attachment] IMG_6421.png https://cdn.discordapp.com/attachments/1531404591910879424/1531404593672753303/IMG_6421.png?ex=6a69172b&is=6a67c5ab&hm=fed9fb9452dbc44d0d4f5dce297bfe34f094f257dc7c60ff968bd1a0c79c9910&
 
+[2026-07-29T03:14:07.178000+00:00] mgf.654 (id=1531862359696736457)
+    Hermes Control Deck v0.1.0-alpha
+    
+    For the past few weeks I’ve been building something I wanted for my own workflow:
+    
+    A mobile control deck for AI agents.
+    
+    The idea is simple:
+    Instead of opening remote desktops or SSH sessions every time I want to interact with my agents, I can control them directly from my phone.
+    
+    Current features include:
+    
+    • start new runs
+    • send prompts
+    • live streaming responses
+    • STOP
+    • approvals / deny
+    • session management
+    • runtime monitoring
+    • unified interface for Hermes WebUI and Codex CLI
+    
+    The public release is CLI-first.
+    Desktop bridge experiments remain private and are not part of the open-source version.
+    
+    I spent a lot of time making sure the public repository contains no private bridge code, secrets, or desktop integration, and testing it on a separate machine before publishing.
+    
+    It’s still v0.1.0-alpha, so I’m looking for:
+    
+    * bug reports
+    * feature requests
+    * ideas
+    * contributors
+    
+    GitHub:
+    https://github.com/filipj9/Hermes-Control-Deck
+    
+    I’d love to hear what you would build with something like this.
+    [embed] GitHub - filipj9/Hermes-Control-Deck: Hermes Control is a CLI-first... https://github.com/filipj9/Hermes-Control-Deck
+

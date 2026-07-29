@@ -52484,3 +52484,81 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Each ships a repro that fails on main.
 
+[2026-07-29T02:33:10.615000+00:00] kyssta69 (id=1531852056124588193)
+    https://github.com/NousResearch/hermes-agent/pull/73404
+    
+    **Problem**: Replace raw SQL in kanban get_board() with known_assignees() so fresh profiles appear in the assignee dropdown before they've been assigned a task.
+
+[2026-07-29T02:36:54.019000+00:00] .omgg (id=1531852993148878888)
+    https://github.com/NousResearch/hermes-agent/pull/73524
+    
+    Issue: The desktop preview live-reload watcher (watchPreviewFile in apps/desktop/electron/main.ts) created an fs.watch FSWatcher with no 'error' listener. When a previewed file's parent directory is deleted, unmounted, or loses permissions, Node raises the watcher 'error' event as an uncaught exception and takes down the entire Electron main process.
+
+[2026-07-29T02:49:27.962000+00:00] luxie47 (id=1531856155414892616)
+    What are some free model providers? Like even if it's low its ok just that I don't got any payment method and what about omniroute
+
+[2026-07-29T03:09:11.413000+00:00] dias4761 (id=1531861119168282746)
+    https://github.com/NousResearch/hermes-agent/pull/73809 : fix(web_server): remove GIL-holding gateway prewarm from desktop lifespan- #73809
+     Fixes #71226(p1 issue)
+
+[2026-07-29T03:15:30.588000+00:00] sam.da.mannn (id=1531862709543637023)
+    very cool, I like it <a:cooldancemario:1254484684017242194>
+    [reply to linuztx. msg=1531814299868332195]
+
+[2026-07-29T04:08:28.411000+00:00] wittgenstein9840 (id=1531876038299226252)
+    keep building fam!
+
+[2026-07-29T04:27:02.951000+00:00] dias4761 (id=1531880713018675241)
+    feat(web_server): warm gateway module via subprocess instead of thread :https://github.com/NousResearch/hermes-agent/pull/73839
+    
+    Fixes #73830 — follow-up to #71226 / PR #73809.
+    
+    ⚠️ Depends on #73809 (not yet merged)
+
+[2026-07-29T04:48:47.089000+00:00] kyssta69 (id=1531886182970032208)
+    https://github.com/NousResearch/hermes-agent/pull/73856
+    
+    **Problem**: Flaky test test_detach_keeps_draining_into_buffer fails intermittently because the FakeBridge test data includes a b'' idle tick between two real chunks. Fix: remove the idle tick (the bridge naturally returns b'' when empty anyway), eliminating the extra run_in_executor round-trip that causes the timing race.
+
+[2026-07-29T05:55:03.762000+00:00] undifined. (id=1531902862345506877)
+    yesterday for an unknown reason, all my sqlite databases got corrupted in hermes, a quick reinstall got me going again, maybe i should do a better job with backups
+
+[2026-07-29T06:01:05.548000+00:00] dias4761 (id=1531904379785838723)
+    https://github.com/NousResearch/hermes-agent/pull/73914 : fix(web_server): stop Codex OAuth worker from finishing after cancel- #73914
+      (closes #73912)
+    
+    cancelling a pending OpenAI Codex device-code OAuth login did not stop the background worker. If the user approved the device code at OpenAI after clicking Cancel, the worker still exchanged the code and saved tokens — and could save them into the wrong profile, since profile resolution fell back to the caller's current active profile once the session entry was gone.
+
+[2026-07-29T06:13:40.729000+00:00] sounderstanding (id=1531907547244793946)
+    I dig the new wake word, just imagine how great conversation mode would be if it were able to interrupt/steer/queue with voice while waiting on the reply. And oh boy they need a good default engine like https://github.com/ServeurpersoCom/qwentts.cpp and SenseVoice for STT (detects emotions in your speech and faster than whisper).
+    
+    With qwen customvoice natural language instruct you can literally have your TTS reply emotionally according to your emotional state. Also, any custom TTS servers need to be started automatically on first synth and exit WITH Hermes but I am coming up with a plugin for this for now.
+
+[2026-07-29T06:34:41.203000+00:00] kyssta69 (id=1531912834055934042)
+    https://github.com/NousResearch/hermes-agent/pull/73930
+    
+    **Problem**: Korean holographic memory recall improved from 3/12 to 9/12 via NFC normalization and Hangul FTS5 prefix operator — bare nouns now match their particle-suffixed indexed forms.
+
+[2026-07-29T07:19:26.244000+00:00] gottz.de (id=1531924095934136482)
+    # Duplicate assessment — open PRs (2026-07-29)
+    
+    Of 17,704 open PRs, 5,310 (30.0%) are most likely duplicates of another PR or issue, based on two evidence tiers:
+    
+    - 3,851 open PRs (21.8%) carry at least one LLM-verified duplicate_of edge from the triage pipeline (the strongest evidence class). Of these, 1,891 duplicate a counterpart that is already merged or closed — i.e. they are likely obsolete; the remaining ~1,960 compete with another still-open item.
+    - 1,459 additional open PRs (8.2%) exceed the embedding fold threshold (cosine >= 0.88 on title+body, the level at which the graph merges nodes into one complex) but have not yet been LLM-reviewed. 992 of these point at already-completed counterparts.
+    
+    A further ~11,960 open PRs sit in the 0.68-0.88 similarity band — related or overlapping work, but similarity alone at that level is not sufficient to call them duplicates.
+    
+    Caveat: the 30% figure mixes verified verdicts (21.8%) with high-confidence embedding similarity (8.2%); only the first tier has been adversarially confirmed by the triage pipeline.
+
+[2026-07-29T07:35:38.144000+00:00] realadolan (id=1531928172378193990)
+    Two little leaks caused by the latest TTS merge PR, fixed here: https://github.com/NousResearch/hermes-agent/pull/73964
+
+[2026-07-29T08:14:56.110000+00:00] realadolan (id=1531938062404161658)
+    xAI streaming TTS is currently dead code on main. It crashes before any network even starts: `websockets.connect` is called with `extra_headers`, a kwarg that websockets 15 removed (the repo pins 15.0.1), so every call raises TypeError locally without ever touching the wire. And even past that, the server rejects the bare WS URL with HTTP 400 at the handshake, and the message format matches nothing the server sends.
+    
+    Fix up here: https://github.com/NousResearch/hermes-agent/pull/73986
+    
+    Rewrites the provider on the real protocol (query-param URL, text.delta/text.done, base64 audio.delta), streams chunks as they arrive instead of buffering the whole sentence, and replaces the mock-the-seam unit test with a fake WS server that pins the wire format. Live run on the branch: 8 chunks, 210 KB of PCM, first chunk after 1.7s. Details in #73985.
+    <@387972437901312000> Verified all of this live with a real key.
+
