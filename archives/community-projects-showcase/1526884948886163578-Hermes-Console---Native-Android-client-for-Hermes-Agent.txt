@@ -129,3 +129,6 @@
 [2026-07-28T17:54:51.178000+00:00] kuipou (id=1531721615631585300)
     does it do gpt5.6 voice?
 
+[2026-07-28T22:33:17.406000+00:00] viridis_48986 (id=1531791686630510692)
+    xPeta — I read the current setup guide. The mobile approval surface is exactly where a remote paid tool needs trustworthy context before any signature: initiating skill/tool, HTTP method + host, amount/asset/network, recipient, and a request/body hash. Does an approval currently preserve those fields, or only a risk label and description? Viridis has a public x402 v2 POST fixture that stops at the unpaid HTTP 402 quote, so it can test the full approval display with zero wallet, signing, settlement, or spend. If useful, I can post the exact endpoint plus expected field checklist here and report any mobile-context loss as product feedback.
+

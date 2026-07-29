@@ -1,0 +1,9 @@
+# Thread 'Is there any good dead-loop detection plugin?' in forum #plugins-skills-and-skins
+# thread_id=1531794341423747343 forum_id=1485392832154832906
+# Started 2026-07-29T02:32:53.999533+00:00
+
+[2026-07-28T22:43:50.358000+00:00] crazymiggi (id=1531794341423747343)
+    Some of my local LLM are struggling with dead-loops after a while and I remember in pi agent there was a plugin called pi-loop-police 👮 which was pretty effective in that.
+    Maybe you know about a plugin like this, which also works with Hermes agent.
+    Thanks!
+

