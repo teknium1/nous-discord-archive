@@ -1,0 +1,8 @@
+# Thread 'Use your Kimi subscription with Hermes' in forum #plugins-skills-and-skins
+# thread_id=1531961656375119975 forum_id=1485392832154832906
+# Started 2026-07-29T14:11:03.548885+00:00
+
+[2026-07-29T09:48:41.351000+00:00] lanisan (id=1531961656375119975)
+    I extracted the Kimi Code experiment into a standalone Hermes plugin, following the third-party integration policy discussed on #5257. The plugin registers one explicit, read-only kimi_code_delegate tool and does not register Kimi as a primary/fallback/auxiliary model because Kimi Code 0.29.2 does not expose a verified privileged system/developer channel over ACP. It owns subprocess/ACP lifecycle outside Core, leaves OAuth with the Kimi CLI, denies ACP permissions/filesystem/terminal requests, and has isolated Fake-ACP plus built-wheel Hermes smokes plus positive live k3/k3-256k turns against current Hermes upstream. It intentionally does not duplicate generic ACP PR #68222. Repository and redacted evidence: https://github.com/s-a-s-k-i-a/hermes-kimi-code.
+    [embed] GitHub - s-a-s-k-i-a/hermes-kimi-code: Delegate-only, fail-closed K... https://github.com/s-a-s-k-i-a/hermes-kimi-code
+

@@ -6243,3 +6243,50 @@
 [2026-07-27T10:19:42.307000+00:00] deor42 (id=1531244686058979359)
     For me this means i bind 0.0.0.0 but i can either access my Hermes server on 192.168.1.42 or on its Tailscale address of 100.72.142.21 without having to specify them separately. (these are not my real ip addresses)
 
+[2026-07-29T10:27:10.690000+00:00] alto69 (id=1531971342444793967)
+    Its for hermes but you can always use /terminal to spawn it there or make an extension for it so others can try. Im curious why youd want both
+    [reply to _big_owen_ msg=1531212934758273218]
+
+[2026-07-29T10:28:07.164000+00:00] alto69 (id=1531971579314176031)
+    https://github.com/nesquena/hermes-webui/issues/6593
+    [embed] Feature Request: Enhanced Artifacts Tab and `Skills Used` Section ... https://github.com/nesquena/hermes-webui/issues/6593
+
+[2026-07-29T12:10:45.759000+00:00] kratos20011 (id=1531997410333818931)
+    Expert.md Specification — v1.0
+    Status: Open draft, welcoming community feedback.
+    Goal: a stable, versioned, testable format so any tool (Hermes, OpenClaw, Claude Code, custom agents) can load, validate, and score an Expert.md file the same way.
+    This document defines what a file must contain to be a conformant Expert.md, independent of domain.
+    1. Principle
+    An Expert.md encodes reflexes, not procedures. It doesn't replace a SKILL.md, it precedes it: always loaded, it triggers the right behavior; the SKILL.md only loads if the agent actually enters technical execution of the domain.
+    A conformant file must be:
+    Size-bounded: 3–12 KB (beyond that, it's a skill in disguise — see §6)
+    Testable: every reflex must be verifiable through a BDD scenario (see bdd/SCHEMA.md)
+    Versioned: shipped with a manifest (see §3)
+    2. Required section structure
+    Section
+    Required
+    Role
+    # EXPERT.md — Domain: [NAME]
+    ✅
+    Title + domain
+    ## ⚠️ Silent prerequisites
+    ✅
+    Non-negotiable domain assumptions
+    ## ⚡ Reflexes
+    ✅
+    Trigger → action, free prose
+    ## 🚫 Anti-patterns
+    ✅
+    What the agent refuses without discussion
+    ## ✅ Quality gates
+    ✅
+    Checklist before delivery
+    ## 🛡️ Typed rules
+    Conditional*
+    See §4 — required if the domain has an asymmetric cost of omission (security, legal, finance, health)
+    ## 📡 Weak signals
+    Recommended
+    Cases where the agent should stop and ask for confirmation
+    *An "asymmetric cost" domain is one where a silent error is catastrophic and unrecoverable after the fact (e.g. data leak, XSS flaw, wrong medical advice). The spec requires the typed section in this case — it's not optional.
+    [attachment] SPEC.md https://cdn.discordapp.com/attachments/1493017427724992612/1531997410044149870/SPEC.md?ex=6a6b3f45&is=6a69edc5&hm=bc1b3239c0ea17b4407f844da01bab2547b40be6f08d71cddb6cf0032498a3cd&
+

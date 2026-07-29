@@ -30,3 +30,18 @@
     
     I also fixed the false compatibility warnings around the current `pre_verify` and Kanban task hooks. If anyone gives it a try on a real plugin, even a quick note about useful, noisy or missing findings would help a lot.
 
+[2026-07-29T11:14:53.500000+00:00] moze88. (id=1531983349940228246)
+    v0.1.3 is now on PyPI, so the install is simply:
+    
+    pipx install hermes-plugin-guard
+    
+    This release matches the current Hermes plugin shapes more closely: plugin.yaml, dashboard manifests and bundles, and pip entry points. It also reduces several noisy findings, adds remote-installer checks, and keeps the HPG112 network-egress inventory.
+    
+    The scanner still reads plugin code as data only: no imports, execution, network requests or telemetry.
+    
+    PyPI: https://pypi.org/project/hermes-plugin-guard/
+    Release notes: https://github.com/mauricemohr88-debug/hermes-plugin-guard/releases/tag/v0.1.3
+    
+    If anyone tests it, rule IDs plus a minimal safe reproducer are the most useful feedback.
+    [embed] Release Hermes Plugin Guard v0.1.3 · mauricemohr88-debug/hermes-pl... https://github.com/mauricemohr88-debug/hermes-plugin-guard/releases/tag/v0.1.3
+

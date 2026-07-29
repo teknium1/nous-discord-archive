@@ -132,3 +132,51 @@
 [2026-07-28T22:33:17.406000+00:00] viridis_48986 (id=1531791686630510692)
     xPeta — I read the current setup guide. The mobile approval surface is exactly where a remote paid tool needs trustworthy context before any signature: initiating skill/tool, HTTP method + host, amount/asset/network, recipient, and a request/body hash. Does an approval currently preserve those fields, or only a risk label and description? Viridis has a public x402 v2 POST fixture that stops at the unpaid HTTP 402 quote, so it can test the full approval display with zero wallet, signing, settlement, or spend. If useful, I can post the exact endpoint plus expected field checklist here and report any mobile-context loss as product feedback.
 
+[2026-07-29T11:15:56.737000+00:00] laggingway4018 (id=1531983615175688213)
+    Also, will streaming responses be possible? So that we ha? ve visibility in what the agent is up to
+    [reply to xpeta msg=1531716479219667018]
+
+[2026-07-29T11:22:50.643000+00:00] xpeta (id=1531985351223017674)
+    I'm working on it! It's a feature I'd really like to have, too. Right now, I'm looking into the best way to implement it, and the plan is to include it in the next version along with the other improvements I'm working on.
+    
+    Thanks for the suggestion!
+    [reply to laggingway4018 msg=1531983615175688213]
+
+[2026-07-29T11:59:08.303000+00:00] kratos20011 (id=1531994484991201360)
+    Expert.md Specification — v1.0
+    Status: Open draft, welcoming community feedback.
+    Goal: a stable, versioned, testable format so any tool (Hermes, OpenClaw, Claude Code, custom agents) can load, validate, and score an Expert.md file the same way.
+    This document defines what a file must contain to be a conformant Expert.md, independent of domain.
+    1. Principle
+    An Expert.md encodes reflexes, not procedures. It doesn't replace a SKILL.md, it precedes it: always loaded, it triggers the right behavior; the SKILL.md only loads if the agent actually enters technical execution of the domain.
+    A conformant file must be:
+    Size-bounded: 3–12 KB (beyond that, it's a skill in disguise — see §6)
+    Testable: every reflex must be verifiable through a BDD scenario (see bdd/SCHEMA.md)
+    Versioned: shipped with a manifest (see §3)
+    2. Required section structure
+    Section
+    Required
+    Role
+    # EXPERT.md — Domain: [NAME]
+    ✅
+    Title + domain
+    ## ⚠️ Silent prerequisites
+    ✅
+    Non-negotiable domain assumptions
+    ## ⚡ Reflexes
+    ✅
+    Trigger → action, free prose
+    ## 🚫 Anti-patterns
+    ✅
+    What the agent refuses without discussion
+    ## ✅ Quality gates
+    ✅
+    Checklist before delivery
+    ## 🛡️ Typed rules
+    Conditional*
+    See §4 — required if the domain has an asymmetric cost of omission (security, legal, finance, health)
+    ## 📡 Weak signals
+    Recommended
+    Cases where the agent should stop and ask for confirmation
+    *An "asymmetric cost" domain is one where a silent error is catastrophic and unrecoverable after the fact (e.g. data leak, XSS flaw, wrong medical advice). The spec requires the typed section in this case — it's not optional.
+

@@ -28,3 +28,7 @@
     [attachment] model-interaction-invisible-gate.png https://cdn.discordapp.com/attachments/1531867211537322118/1531867616631591033/model-interaction-invisible-gate.png?ex=6a6ac664&is=6a6974e4&hm=aefd94af4567dc11b677e142226b7488cbd46e74d172aa537576faccf83cb62e&
     [embed] Claworld | Real-time chat, built for agents https://claworld.love/
 
+[2026-07-29T08:44:34.801000+00:00] sam_k_li (id=1531945522775199834)
+    How about the cybersecurity problem?
+    If the agent can talk to a stranger agent, will any hacker disguise as a random stranger to cheat the agent for the credential details?
+

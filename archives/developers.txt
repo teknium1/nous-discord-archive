@@ -52562,3 +52562,182 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Rewrites the provider on the real protocol (query-param URL, text.delta/text.done, base64 audio.delta), streams chunks as they arrive instead of buffering the whole sentence, and replaces the mock-the-seam unit test with a fake WS server that pins the wire format. Live run on the branch: 8 chunks, 210 KB of PCM, first chunk after 1.7s. Details in #73985.
     <@387972437901312000> Verified all of this live with a real key.
 
+[2026-07-29T09:39:51.875000+00:00] gottz.de (id=1531959435591684216)
+    that PR pressure is crazy.
+    source: https://github.com/NousResearch/hermes-agent/pull/15929#issuecomment-5115844644
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531959435092693043/image.png?ex=6a6b1be7&is=6a69ca67&hm=7a46b60b6bdfef8ab72245c7baf89ea6a715e91fdf561323323928d18012bde9&
+
+[2026-07-29T09:55:51.788000+00:00] kyssta69 (id=1531963461758881883)
+    https://github.com/NousResearch/hermes-agent/pull/74028
+    
+    **Problem**: Fix Telegram MarkdownV2 lost formatting on chunked messages — escape parentheses in chunk indicators (1/2), (2/3) etc. so Telegram doesn't reject them and fall back to plain text.
+
+[2026-07-29T10:02:25.031000+00:00] realadolan (id=1531965111139434747)
+    It is inevitable to limit the number of PRs per developer and perhaps expand the core team
+    [reply to gottz.de msg=1531959435591684216]
+
+[2026-07-29T10:03:07.806000+00:00] gottz.de (id=1531965290550788237)
+    maybe it's time to jump ships for me then and press send today..
+    [reply to realadolan msg=1531965111139434747]
+
+[2026-07-29T10:03:37.100000+00:00] gottz.de (id=1531965413418729572)
+    that graph I plotted turned out really valuable for assessment and merge efforts.
+
+[2026-07-29T10:16:40.110000+00:00] realadolan (id=1531968697600708719)
+    The PR body mentions a unit test but no test file is included
+    [reply to kyssta69 msg=1531963461758881883]
+
+[2026-07-29T10:17:57.880000+00:00] realadolan (id=1531969023791599758)
+    <@190818731734204416> I sent you a quick PM
+
+[2026-07-29T10:48:33.695000+00:00] lanisan (id=1531976723757797407)
+    Hey there — I’ve now reviewed these PRs against the failure I’m seeing in my actual Hermes Telegram gateway. I need this path fixed soon because Hermes has become unreliable for real work, especially in longer threads.
+    
+    **#69190** is the most important fix for me:  
+    https://github.com/NousResearch/hermes-agent/pull/69190
+    
+    The change is narrow and technically sound. A short connection failure should give the primary transport a chance to rebuild before Hermes starts walking the fallback chain. The PR still allows bounded fallback for genuinely stale streams. Without it, a transient OpenAI Codex transport error turns into a completely unnecessary provider cascade.
+    
+    **#70910** fixes the next failure in that cascade:  
+    https://github.com/NousResearch/hermes-agent/pull/70910
+    
+    It guards against blank Anthropic text blocks both during final request assembly and in the synthetic leading user turn created after compaction. That second part matters in long-running Telegram threads. The implementation is focused, and the full upstream CI is green.
+    
+    **#62986** fixes a separate but very visible CLI problem:  
+    https://github.com/NousResearch/hermes-agent/pull/62986
+    
+    Anthropic’s live catalog already returns `claude-opus-5`, but `hermes fallback add` still reads the old static list. On current `main`, I would route this through `cached_provider_model_ids("anthropic")` rather than calling the live resolver directly. That keeps model discovery aligned with Hermes’ existing credential-aware cache and `--refresh` behavior.
+    
+    I’ve integrated all three fixes into my installed Hermes line, with that cache adjustment:
+    
+    - 73/73 focused regression tests passing
+    - 165/165 surrounding Anthropic, transport recovery, gateway and Telegram fallback tests passing
+    - live Anthropic catalog: 13 models, including `claude-opus-5`
+    - real `hermes fallback add` flow: OpenAI Codex remained primary and Opus 5 was added successfully
+    - restarted gateway and primary-model smoke test passing
+    
+    Why I need this now: Telegram is one of my actual working interfaces to Hermes. At the moment, one recoverable primary connection error can send the session into Anthropic, where a compacted thread may hit the blank-block failure. Until #62986 is fixed, the CLI also prevents me from selecting the Anthropic model I actually intend to use. The result is delayed or missing answers and credentials being marked exhausted even though the primary transport could have recovered.
+    
+    Running Codex in parallel is not the root cause I found. The failure is in the recovery and fallback path itself.
+    
+    Could you please prioritise review and merge of #69190, #70910 and #62986, or let me know if there is a conflicting architectural direction? I need the Telegram path to recover predictably before I can trust it with longer tasks again.
+    
+    One separate boundary: I would not use #72173 as the answer to the Anthropic subscription-billing problem. Re-shaping Hermes requests to get past a provider-side billing classifier is neither policy-safe nor sustainable. What Hermes needs there is an officially supported OAuth or Agent SDK path.
+
+[2026-07-29T11:01:09.590000+00:00] cryptodombili (id=1531979894211481750)
+    Hi <@387972437901312000> , I recently submitted four pull requests to Nous Research repositories — three to Hermes Agent and one to Pokémon Agent.
+    
+    They are currently awaiting review, and I would really appreciate any feedback when you have time.
+    
+    GitHub: https://github.com/CryptoDombili
+    
+    Thank you!
+
+[2026-07-29T11:23:35.834000+00:00] gottz.de (id=1531985540767809636)
+    lol you just opened them.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1531985540344316084/image.png?ex=6a6b3437&is=6a69e2b7&hm=9ce1bac8a67a9dfb907bab6cd7fa2708ea3768b0b64f1f6933b2858535552d04&
+    [reply to cryptodombili msg=1531979894211481750]
+
+[2026-07-29T11:25:01.041000+00:00] gottz.de (id=1531985898152136704)
+
+[2026-07-29T11:25:01.579000+00:00] gottz.de (id=1531985900408672336)
+    just a quick reminder: <@845609764439588885>
+
+[2026-07-29T11:25:24.915000+00:00] cryptodombili (id=1531985998286950451)
+    Fair point 😅 I only meant that I had submitted them and would appreciate feedback whenever the maintainers have time. I’m happy to wait for the normal review process.
+    [reply to gottz.de msg=1531985540767809636]
+
+[2026-07-29T11:26:25.404000+00:00] gottz.de (id=1531986251996073995)
+    fair. automagic review will come. just takes a couple hours to days.
+    [reply to cryptodombili msg=1531985998286950451]
+
+[2026-07-29T11:27:08.805000+00:00] godsboy7777 (id=1531986434033188985)
+    <@387972437901312000> Could you please take a look at two separate Telegram voice regressions we reproduced on current Hermes main?
+    
+    1. Non-streaming generated voice notes are silently dropped
+    
+    OpenAI gpt-4o-mini-tts successfully generates a valid Telegram-compatible OGG/Opus file, but the non-streaming delivery path removes the attachment before sending it.
+    
+    The current-turn tool result is incorrectly included in the prior-media history used for deduplication, so the newly generated voice note is classified as already delivered.
+    
+    Existing issue and proposed fix:
+    https://github.com/NousResearch/hermes-agent/issues/72536
+    https://github.com/NousResearch/hermes-agent/pull/72542
+    
+    The issue demonstrates image_generate, but the affected MEDIA: handling is shared. We reproduced the same behaviour with a text_to_speech audio attachment.
+    
+    2. /voice on now sends voice replies after typed text
+    
+    With Telegram streaming enabled, delivery works again, but voice_only behaves like all. This was introduced by the recent runner gate change in commit 28adb8689:
+    
+    https://github.com/NousResearch/hermes-agent/commit/28adb868914a9207394745a05dbb8ad0d5646746
+    
+    The adapter-level auto-TTS flag is incorrectly allowed to override an explicit voice_only mode.
+    
+    Existing focused fix:
+    https://github.com/NousResearch/hermes-agent/pull/73938
+    
+    PR #73938 keeps explicit all, voice_only and off modes authoritative, and adds the missing regression test using the actual adapter state.
+    
+    We have disabled Telegram streaming again and are waiting for the upstream fixes rather than applying local patches. Could you please review these two PRs and confirm whether they are the intended upstream fixes?
+
+[2026-07-29T11:27:14.753000+00:00] cryptodombili (id=1531986458980909096)
+    Got it, thanks!
+    [reply to gottz.de msg=1531986251996073995]
+
+[2026-07-29T12:13:16.038000+00:00] egilewski (id=1531998040649629706)
+    <@387972437901312000> this guy ^ has over a dozen commits merged, could you brand him too for our convenience please?
+    [reply to frowtek msg=1531842020484841614]
+
+[2026-07-29T12:38:25.127000+00:00] realadolan (id=1532004370227400786)
+    <@190818731734204416> nice
+    [attachment] hnt34z6.png https://cdn.discordapp.com/attachments/1491258766648283238/1532004370089246910/hnt34z6.png?ex=6a6b45c1&is=6a69f441&hm=13f70147830f49633ff232aa9351f947636e730d14c63587c32c3dbda3ae8d01&
+
+[2026-07-29T12:39:36.332000+00:00] realadolan (id=1532004668882948136)
+    Only high quality no duplicates PRs
+
+[2026-07-29T12:48:59.640000+00:00] gottz.de (id=1532007031568076992)
+    I get a ton of github notifications (for some reason) and I read them all. from what I can see, many are thankful, some close their pr's themselves, some brag and need further followups, some ask for help in how they could catch up.. It's a very active mess right now.
+    [reply to realadolan msg=1532004668882948136]
+
+[2026-07-29T12:49:22.724000+00:00] gottz.de (id=1532007128389390396)
+    I guess the triage doesn't only help nous but also all the people submitting things
+
+[2026-07-29T12:50:30.139000+00:00] realadolan (id=1532007411148132432)
+    True
+
+[2026-07-29T13:21:53.397000+00:00] gottz.de (id=1532015310104690848)
+    just added a new stage that answers user questions.
+    https://github.com/NousResearch/hermes-agent/issues/70085#issuecomment-5118276945
+    [reply to realadolan msg=1532007411148132432]
+
+[2026-07-29T13:23:19.328000+00:00] realadolan (id=1532015670525558905)
+    Looks good!
+    [reply to gottz.de msg=1532015310104690848]
+
+[2026-07-29T13:23:26.148000+00:00] realadolan (id=1532015699130581143)
+    Ripping your tokens even further 😄
+
+[2026-07-29T13:32:41.871000+00:00] gottz.de (id=1532018030001787131)
+    gpt 20x weekly is 74% left.
+    claude max 20x... two accounts saturated. third in use.
+    [reply to realadolan msg=1532015699130581143]
+
+[2026-07-29T13:33:14.153000+00:00] realadolan (id=1532018165402435726)
+    <a:partyblob:1151261550032724052>
+
+[2026-07-29T13:33:35.713000+00:00] gottz.de (id=1532018255831765112)
+    was it worth it?
+    absolutely.
+    what did it cost?
+    everything!
+
+[2026-07-29T13:33:44.720000+00:00] realadolan (id=1532018293609726073)
+    Lol
+
+[2026-07-29T13:39:18.785000+00:00] dias4761 (id=1532019694779764902)
+    p1 issue : fix(cron): retire unconfirmed one-shot dispatches instead of deleting them- #74098
+    https://github.com/NousResearch/hermes-agent/pull/74098
+    
+    Fixes issue #73973
+
