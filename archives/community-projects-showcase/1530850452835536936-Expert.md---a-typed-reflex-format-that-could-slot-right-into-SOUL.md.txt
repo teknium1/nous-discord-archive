@@ -26,3 +26,6 @@
     This is the specific point. Please download and read it to better understand what I'm proposing.
     [attachment] SPEC.md https://cdn.discordapp.com/attachments/1530850452835536936/1530850957242400899/SPEC.md?ex=6a67138e&is=6a65c20e&hm=064deef714453be1d804ce555f7ac74e110e6b0ade666abe0d5c7a3be6796365&
 
+[2026-07-29T18:49:16.322000+00:00] kratos20011 (id=1532097698503589929)
+    <@109053738517299200> Here is the complete Expert.md file
+

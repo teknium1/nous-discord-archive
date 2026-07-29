@@ -209,3 +209,41 @@
     TestFlight beta:
     https://testflight.apple.com/join/BDC7nuMk
 
+[2026-07-29T14:07:30.418000+00:00] _albertjames (id=1532026790002954402)
+    Forge 0.3.52 is released.
+    
+    Since 0.3.24, Forge added major new planning, learning, collaboration, navigation, and security capabilities.
+    
+    People became a first-class owner-scoped memory surface. Forge can import People from Wiki pages, connect them to the wider entity graph, and securely share selected information between independent Forge installations through explicit pairing and directional grants.
+    
+    Courses and Concepts are now complete learning surfaces. Forge supports modular lessons, prerequisites, activities, interleaved checkpoints, mastery tracking, remediation, written assessments, grades, and reusable concepts that can appear across several courses.
+    
+    Forge’s security model was rebuilt around default-deny access. Reaching Forge through Tailscale or another network no longer grants access by itself. Remote browsers, phones, Codex, Hermes, OpenClaw, and other clients must pair once and receive a scoped renewable credential.
+    
+    Pairing is now much smoother. Pending requests appear as notifications in the unlocked Forge interface and open directly in Settings → Agents. The owner reviews the client, enters its short code once, and approves. Terminal users can manage the same requests with:
+    
+    ```bash
+    npx forge-memory pairing
+    ```
+    
+    Local use remains automatic, while paired browsers and the Companion renew their sessions silently. Credentials can still be reviewed and revoked from Forge.
+    
+    The new Attention inbox brings decisions, unreviewed insights, blocked or overdue work, companion sync problems, and stale agent sessions into one focused queue. Items can be snoozed or dismissed without changing the underlying Forge records.
+    
+    Pins and recent records now work across Forge, making important goals, projects, tasks, notes, People, Life Events, and other entities easier to reopen from the Action Bar, web app, iPhone, and watch.
+    
+    Backups, restore, export, data-root switching, Google credentials, audit logging, background jobs, AI execution, network requests, and cost controls also received stricter protection underneath without removing their intended functionality.
+    
+    Sports, Movement, Calendar, Life Events, Sleep, Psyche, Preferences, question flows, responsive layouts, and general web stability received substantial fixes and usability improvements.
+    
+    OpenClaw, Codex, Hermes, Forge Memory, the public docs, and OpenAPI were updated for the new capabilities and security model. The normal installation path remains:
+    
+    ```bash
+    npx forge-memory
+    ```
+    
+    Forge Companion 1.0.170 adds faster discovery and protected pairing. Existing valid phone pairings continue working through silent credential renewal.
+    
+    TestFlight beta:  
+    https://testflight.apple.com/join/BDC7nuMk
+

@@ -87,3 +87,15 @@
 [2026-06-26T12:20:48.751000+00:00] markopaasila (id=1520041139900776540)
     This looks very good. I’ve been wondering how to get kanban tasks to a better start. By default it jumps too quickly to work. A proper refinement step seems like a low hanging fruit
 
+[2026-07-29T18:14:53.938000+00:00] .blockops (id=1532089048238395482)
+    UPDATE:  HermesUltraCode was refactored onto native routing
+    
+    The before: routing was split in two, with the binding half blocked. The cost router (HERMESULTRACODE_ROUTING=1) could only annotate delegate_task audit rows with the model it would pick, because Hermes binds every subagent from one global delegation: block — and our plan to fix that (Part A: a per-task model field upstream) died when Nous closed per-call/per-task selection as not-planned.
+    
+    The refactor: instead of adding a seam, we moved routing to where Hermes already gives us binding control — entirely native primitives, zero patches, zero upstream dependency:
+    
+    <see attached chart>
+    
+    The flow now: orchestrator classifies a task's risk tier → the pure table router picks the cheapest profile clearing that tier's floor from the roster → resolve() (unstubbed after the refusal) maps tier → the operator's cheap/heavy model slot → the task is tagged and enqueued on the ultracode board → the poller claims it, runs the gate, and spawns hermes -p <profile> -m <model> — or fails closed. On failure/unreadiness, next_rung() cascades: same provider's heavy slot first, then the next profile, then block.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517251209776467969/1532089047890001992/image.png?ex=6a6b949d&is=6a6a431d&hm=9c457aaddb27709f2c66fb56cd84127a09d3b23e6ba6f5e01a9a7f5b5df5377c&
+

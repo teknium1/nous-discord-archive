@@ -180,3 +180,60 @@
     Cases where the agent should stop and ask for confirmation
     *An "asymmetric cost" domain is one where a silent error is catastrophic and unrecoverable after the fact (e.g. data leak, XSS flaw, wrong medical advice). The spec requires the typed section in this case — it's not optional.
 
+[2026-07-29T15:51:48.858000+00:00] jcrabapple (id=1532053039802880081)
+    Hey <@109053738517299200> I would also love the ability to create a widget or shortcut to jump right into a new session
+
+[2026-07-29T18:36:44.028000+00:00] xpeta (id=1532094543154122773)
+    Thanks for sharing this! I really like the idea of having a standardized "Expert.md" format. I'll take a closer look and see how it could fit into Hermes. I appreciate you sending it over!
+    [reply to kratos20011 msg=1531994484991201360]
+
+[2026-07-29T18:44:40.492000+00:00] xpeta (id=1532096541588717682)
+    Thank you all for your comments and ideas; I've been taking note of everything! 
+    
+    Right now I'm working on the next update; I'm looking into some of Hermes' latest features, such as the new support for the wake word (“Hey Hermes”). I’d love to add something similar on Android as well, but first I need to figure out what’s actually possible within Android’s restrictions regarding the microphone and background operation. If I can get it to work reliably, I’d definitely like to include it in a future update.
+
+[2026-07-29T18:45:02.641000+00:00] jcrabapple (id=1532096634488488137)
+    I was just thinking about this
+    [reply to xpeta msg=1532096541588717682]
+
+[2026-07-29T18:45:19.453000+00:00] jcrabapple (id=1532096705003130910)
+    The Conduit app for OpenWebUI has the ability to set it as the digital assistant on Android
+
+[2026-07-29T18:45:25.202000+00:00] jcrabapple (id=1532096729116311642)
+    Maybe look to that for inspiration
+
+[2026-07-29T18:46:35.250000+00:00] xpeta (id=1532097022918656221)
+    The problem with this is Google's own restrictions, because ultimately you're interfering with its “Hey Google” feature.
+
+[2026-07-29T18:47:32.454000+00:00] xpeta (id=1532097262849884282)
+    I need to see how they've implemented it to get some ideas. Thanks for the suggestion!
+    [reply to jcrabapple msg=1532096705003130910]
+
+[2026-07-29T18:50:37.743000+00:00] kratos20011 (id=1532098040008015874)
+    <@109053738517299200> I have the complete specifications that I can send and I have already sent them here. I already mentioned it in the comments of the post; check your notifications. And if you need any further details, I'm happy to provide them.
+
+[2026-07-29T18:52:57.470000+00:00] xpeta (id=1532098626065535198)
+    I just wanted to say a huge thank you to everyone who's been testing Hermes Console and sharing ideas. The amount of feedback I've received has honestly been amazing.
+    
+    I'll keep adding new features, fixing bugs, and actively maintaining the project. There are already a lot of improvements planned for the next updates, and I'll keep releasing them progressively as they're ready rather than making everyone wait for one huge release.
+    
+    I'm also keeping a close eye on the latest Hermes Agent features to see what can be brought to Android. Some things are straightforward, while others (like wake word support) depend on Android's platform restrictions, but I'll keep exploring what's possible.
+    
+    Hermes is a project I'm genuinely passionate about, and seeing people use it and contribute ideas makes me want to keep improving it even more. Hopefully we can build a great community around it together.
+    
+    Thank you all for the support it really means a lot. ❤️
+
+[2026-07-29T18:54:39.498000+00:00] xpeta (id=1532099054001983599)
+    Thank you so much! I must have missed the notification. I'll take a look at it, read through the full specifications, and implement it. I really appreciate you taking the time to share this; if I have any questions, I'll let you know. 
+    Thanks again!
+    [reply to kratos20011 msg=1532098040008015874]
+
+[2026-07-29T18:56:31.166000+00:00] kratos20011 (id=1532099522371653764)
+    No problem 🤜🏾🤛🏾 
+    
+    <@109053738517299200>
+
+[2026-07-29T19:00:49.943000+00:00] kratos20011 (id=1532100607760928778)
+    <@109053738517299200> Contains the complete specification file.
+    [attachment] SPEC.md https://cdn.discordapp.com/attachments/1526884948886163578/1532100607240966304/SPEC.md?ex=6a6b9f61&is=6a6a4de1&hm=88ec874f0cce4e3b0bbe3f218d2158ef2b70f2affda586298550e8a57cc5f0f2&
+

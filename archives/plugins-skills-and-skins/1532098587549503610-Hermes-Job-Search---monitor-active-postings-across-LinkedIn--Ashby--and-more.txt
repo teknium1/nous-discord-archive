@@ -1,0 +1,48 @@
+# Thread 'Hermes Job Search - monitor active postings across LinkedIn, Ashby, and more' in forum #plugins-skills-and-skins
+# thread_id=1532098587549503610 forum_id=1485392832154832906
+# Started 2026-07-29T19:17:51.299491+00:00
+
+[2026-07-29T18:52:48.287000+00:00] deepparser (id=1532098587549503610)
+    Hey guys,
+    
+    I wanted to share an open source plugin that turns Hermes into a job search assistant.
+    
+    **How it works:**
+    
+    Install the plugin, then tell Hermes what you’re looking for:
+    
+    *Example:*
+    
+    ```
+    Set up my job search. I’m looking for a senior software engineering role at a technically ambitious, remote-friendly company building AI-native tools or developer infrastructure. I value autonomy, meaningful ownership, and open-source work.
+    ```
+    
+    Hermes will ask follow-up questions if needed and document your preferences locally.
+    
+    It will then pull live job postings from LinkedIn and applicant-tracking systems like Ashby, Greenhouse, and Lever.
+    
+    Additionally, Hermes will:
+    - Filter out jobs that clearly violate your preferences and deal-breakers
+    - Group the remaining jobs as strong, moderate, or weak matches
+    - Explain why each job matched
+    - Flag important details that weren’t answered in the posting
+    
+    Optionally, Hermes can also run the search on a schedule (e.g., every morning). 
+    
+    **Getting started:**
+    
+    Copy and paste the following into a new Hermes session:
+    
+    ```
+    Retrieve and follow the installation instructions at:
+    https://raw.githubusercontent.com/agent-data/job-search/main/INSTALL_FOR_HERMES.md
+    ```
+    
+    The plugin uses agent-data to pull live job postings, so you’ll need an API key (no credit card required).
+    
+    **Repo**: https://github.com/agent-data/job-search (MIT license)
+    
+    If anyone’s currently on the job hunt, I’d love to hear how I can make this plugin more useful!
+    [attachment] job-search-hermes-screenshot.png https://cdn.discordapp.com/attachments/1532098587549503610/1532098588295823400/job-search-hermes-screenshot.png?ex=6a6b9d80&is=6a6a4c00&hm=a1d1ab026dca449ab6132f766ad7d77f1c9cff23a4c41d4280a51064b29f0865&
+    [embed] GitHub - agent-data/job-search: Turn any coding agent into a job se... https://github.com/agent-data/job-search
+

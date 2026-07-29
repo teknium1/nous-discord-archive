@@ -52741,3 +52741,75 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Fixes issue #73973
 
+[2026-07-29T14:26:51.207000+00:00] drexux (id=1532031658704900126)
+    <:catemoji:1530452895508598844>
+    [reply to dias4761 msg=1532019694779764902]
+
+[2026-07-29T14:34:51.880000+00:00] drexux (id=1532033674793717781)
+    P1 fix(cron): reconcile the dispatch claim when a run is cancelled or killedhttps://github.com/NousResearch/hermes-agent/pull/74077
+
+[2026-07-29T15:18:18.088000+00:00] alphakilo (id=1532044606022090922)
+    qq, was there any charges requested I missed or just delayed maintainer review amidst a flood of PRs? https://github.com/NousResearch/hermes-agent/pull/67839
+    
+    10-liner if anyone wants to also look in case I bork something
+
+[2026-07-29T16:39:49.567000+00:00] gottz.de (id=1532065122372161616)
+    is it a security issue or something else?
+
+[2026-07-29T16:40:52.720000+00:00] gottz.de (id=1532065387255038072)
+    ye you should consult someone with a blue name then
+
+[2026-07-29T16:41:32.123000+00:00] gottz.de (id=1532065552523202713)
+    I'm just a random user like you
+
+[2026-07-29T16:46:29.025000+00:00] promptsiren (id=1532066797820444952)
+    for billing/payment issues best to email support@nousresearch.com
+    I deleted your vid, in case that was actually part of your cc
+
+[2026-07-29T16:58:28.913000+00:00] hyqqx (id=1532069817249435822)
+    <@387972437901312000> 
+    Been working on native-Windows issues in hermes-agent. All 36 CI jobs run on ubuntu-latest, so this class of bug can't surface in CI. Verified on real Windows 11 (build 26200, Python 3.11.6).
+    
+    #74083 — pytest tests/ collects nothing on native Windows https://github.com/NousResearch/hermes-agent/pull/74083 Two test modules run a POSIX-only statement at import time (import pty, and a /tmp fallback that mkdir's at module scope). pytest aborts the whole run on a collection error, so not one of the ~50k tests is runnable. Both already carry the right skipif(win32) markers — they just never get evaluated, because the failing statement runs first. Before: Interrupted: 3 errors. After: 50391 collected, exit 0.
+    
+    #74220 — a test asserts a fact about the host, not the code https://github.com/NousResearch/hermes-agent/pull/74220 assert platform.win32_ver() == ("", "", "", "") — monkeypatching IS_WINDOWS doesn't change what win32_ver() reads, so it fails on any real Windows machine.
+    
+    #72101 — CONTRIBUTING.md tells contributors to re-create a fixed bug https://github.com/NousResearch/hermes-agent/pull/72101 Rule 10 says use pythonw.exe + DETACHED_PROCESS. The code deliberately does neither (#54220/#56747, and MSDN says DETACHED_PROCESS makes CREATE_NO_WINDOW a no-op). It even cites _spawn_detached as its reference — whose docstring says the opposite. Fixed in all four places the claim appears.
+    
+    #68465 — repro attempt on the Telegram connect hang https://github.com/NousResearch/hermes-agent/issues/68465#issuecomment-5085063942 Didn't reproduce on current main (connects on attempt 3/8 after 74s). Posted the full log + two findings: DoH finishes in 1.08s so it isn't the suspected deadlock, and each attempt is bounded by read_timeout=20s, not the 30s _init_timeout. Flagged it as "didn't reproduce here", not "not a bug" — my network isn't the reporter's.
+    
+    GitHub:  hyqqx
+
+[2026-07-29T17:03:19.534000+00:00] accidentaljedi (id=1532071036202258532)
+    anyone working on making the "pet" system more useful? I have ideas,,, but really don't want to be the one to build this one out.  I'm a little short on qupota these days.... but roughly.. 
+    key nuances:
+    work = feeding (not click-to-feed)
+    caring is separate from feeding (the relationship layer)
+    angel on your shoulder (always watching, offering feedback)
+    role assignments shape what the pet notices
+    sniffing around as real attention, not random wander
+    usefulness meter tied to real agent activity
+    [attachment] pet-companion-proposal.md https://cdn.discordapp.com/attachments/1491258766648283238/1532071035128774857/pet-companion-proposal.md?ex=6a6b83d7&is=6a6a3257&hm=fb88cc95e57b24f2432c7dad14bda56551ab8c271ae0f0320951724a3b761baf&
+
+[2026-07-29T17:20:29.795000+00:00] .blockops (id=1532075357430353960)
+    <@387972437901312000> 
+    
+    #74254 - fix(delegation): honor documented delegation.api_mode on the provider-resolution path - 
+    https://github.com/NousResearch/hermes-agent/pull/74254
+    delegation.api_mode is documented (user-guide delegation.md, first config example) as a config-level transport override alongside delegation.provider, and _resolve_delegation_credentials() parses it — but it is only honored on the direct-endpoint (delegation.base_url) branch. On the provider-resolution branch the key is silently discarded and the child always gets the runtime-resolved api_mode, so the documented example is a no-op: a user forcing api_mode: anthropic_messages for a provider whose default resolves to chat_completions gets 404s with no hint why.
+
+[2026-07-29T17:55:29.286000+00:00] accidentaljedi (id=1532084163333591252)
+    [attachment] pet-companion-proposal.md https://cdn.discordapp.com/attachments/1491258766648283238/1532084163203563540/pet-companion-proposal.md?ex=6a6b9011&is=6a6a3e91&hm=30e26e5a67bcf327d7c4a5bcb263b70c8ff5a232f41b667f87a38072cb842438&
+
+[2026-07-29T18:41:24.716000+00:00] dias4761 (id=1532095720444661981)
+    <@387972437901312000>  Could you take a look at my PR for P1? The issue has been resolved, but when comparing the solution to the PR I created, it offers some benefits that I’ll list now, such as: prevention of silent loss, protection against accidental manual executions, etc. Plus, atomization also helps anticipate the problem in general.
+
+[2026-07-29T18:41:54.491000+00:00] dias4761 (id=1532095845330325666)
+    https://github.com/NousResearch/hermes-agent/pull/74098
+
+[2026-07-29T18:44:42.102000+00:00] dias4761 (id=1532096548341809162)
+    and it retains the deletion history
+
+[2026-07-29T18:45:24.753000+00:00] dias4761 (id=1532096727232942252)
+    <@387972437901312000>  thats the issue https://github.com/NousResearch/hermes-agent/issues/73973
+
