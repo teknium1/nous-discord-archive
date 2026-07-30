@@ -53039,3 +53039,81 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/70925
     https://github.com/NousResearch/hermes-agent/pull/72319
 
+[2026-07-30T14:18:39.625000+00:00] realadolan (id=1532391984726147082)
+    We need this inside Hermes.
+    [attachment] 799dk9m.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1532391984411709631/799dk9m.mp4?ex=6a6caebf&is=6a6b5d3f&hm=055e4911ed5e695473a9a78e7f30f731d4d0eeca50a53da31cfeaed15f8e835f&
+
+[2026-07-30T14:20:21.415000+00:00] .omgg (id=1532392411664220211)
+    that would nice being able to @ profile names so those specific profiles have the selected models we want
+
+[2026-07-30T14:23:01.577000+00:00] realadolan (id=1532393083432341574)
+    You can
+
+[2026-07-30T14:23:11.931000+00:00] realadolan (id=1532393126860165332)
+    It already works this way in my MVP
+
+[2026-07-30T15:12:29.685000+00:00] 0xmagic0 (id=1532405532579594390)
+    Hi <@387972437901312000> <@691362975147229196> <@217473293190430721> 10 days ago I sent a vulnerability report via github (https://github.com/NousResearch/hermes-agent/security/advisories/GHSA-7x36-8jrh-v4pw) following the projects SECURITY.md. I also sent an email, but have gotten no response. Could someone take a look? If you get a 404 then probably they need to add you as a collaborator (since the GHSA is private), or you might need to ping the appropriate team member
+    
+    Best regards
+
+[2026-07-30T15:35:54.904000+00:00] gottz.de (id=1532411426495529211)
+    my triage bot got a brain update.. https://github.com/NousResearch/hermes-agent/pull/34537#pullrequestreview-4820444372 I guess it falls more in line with tekniums decision making now
+
+[2026-07-30T16:28:12.931000+00:00] xipong (id=1532424588334596290)
+    Could someone please take a look at my open PRs and approve the pending fork CI workflows?
+    
+    #74858 — delegation parent session identity
+    #74378 — same-turn subagent result injection
+    #74375 — unified subagent model picker
+    #68087 — Codex Harmony token session-poisoning fix
+    #66401 — preserve /steer through turn-budget enforcement
+    
+    All of them are currently blocked at action_required before CI jobs are created.
+
+[2026-07-30T16:28:30.720000+00:00] xipong (id=1532424662947074208)
+    <@387972437901312000> <@691362975147229196> <@217473293190430721>
+
+[2026-07-30T16:31:33.499000+00:00] witcheer (id=1532425429577633902)
+    hello, there are 70k+ PRs to review, no need to ping on this, we’ll get to them at some point 🙂
+    [reply to xipong msg=1532424588334596290]
+
+[2026-07-30T16:56:27.704000+00:00] grimshadowe (id=1532431696727900241)
+    Hi sorry if I was annoying earlier but I got a dev question. If I gave Hermes an MCP API and the MCP can access all my workflows. Does this mean Hermes can use N8N by using the MCP as an API?
+
+[2026-07-30T17:03:12.279000+00:00] gokhe (id=1532433393638313995)
+    What do you mean MCP API, MCP itself connects to an API and is based over a similar protocol. You can obviously ping an api and use it if you have access to it.
+    [reply to grimshadowe msg=1532431696727900241]
+
+[2026-07-30T17:03:31.865000+00:00] grimshadowe (id=1532433475788083402)
+    Thnx
+    [reply to gokhe msg=1532433393638313995]
+
+[2026-07-30T17:03:35.632000+00:00] Translator Bot#1043 (id=1532433491587891320)
+    thanks
+    [reply to grimshadowe msg=1532433475788083402]
+
+[2026-07-30T17:24:07.314000+00:00] thereallenon (id=1532438657636765849)
+    U just could use discord for that...
+    [reply to .omgg msg=1532392411664220211]
+
+[2026-07-30T17:49:05.605000+00:00] .omgg (id=1532444941924434090)
+    true but people like customization and their own workflows like how they made buzz instead of using discords but his addition to the desktop application would be nice for new hermes users who aren't as technical
+    [reply to thereallenon msg=1532438657636765849]
+
+[2026-07-30T18:50:03.243000+00:00] theoveo (id=1532460283170127962)
+    Yes he can easily
+    [reply to grimshadowe msg=1532431696727900241]
+
+[2026-07-30T18:52:04.490000+00:00] grimshadowe (id=1532460791716905082)
+    But it's telling me smt dif some reason
+    [reply to theoveo msg=1532460283170127962]
+
+[2026-07-30T18:59:16.919000+00:00] psigho (id=1532462605455593552)
+    can someone help please?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532462604818190606/image.png?ex=6a6cf084&is=6a6b9f04&hm=d6688d44dc3c732febe020605c48bcb69c6d862386fe6eea30e55cdc28527f25&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532462605124505710/image.png?ex=6a6cf084&is=6a6b9f04&hm=22ed2970d4f8076969c5d4824f14a3d9b541fb3b4341632b9c6721b1fd2d52fa&
+
+[2026-07-30T19:09:26.976000+00:00] .omgg (id=1532465164220108800)
+    my though is double check the model selector and make sure its nousportal
+

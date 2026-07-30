@@ -6308,3 +6308,14 @@
     I run a NanoGPT sub and use Minimax M3 for Hermes. Using WebUi has completely replaced everything I ever did with Claude.
     [reply to _big_owen_ msg=1532157362973053090]
 
+[2026-07-30T17:58:56.548000+00:00] avidfuturist (id=1532447420519153814)
+    👋 **Newcomers:** Hermes WebUI is the best way to access the full capabilities of Hermes across every device and platform!
+    
+    See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    **Hermes WebUI works across all platforms: Windows/Linux/macOS** as web & desktop apps as well as **native iOS and Android apps**! 
+    
+    👉 GitHub repo: https://github.com/nesquena/hermes-webui
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+

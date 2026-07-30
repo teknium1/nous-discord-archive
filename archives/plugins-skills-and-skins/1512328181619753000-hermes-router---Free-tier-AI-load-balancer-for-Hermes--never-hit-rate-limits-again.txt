@@ -1406,3 +1406,17 @@
     Hmmmmm
     [reply to shaf_2665 msg=1532324460764463205]
 
+[2026-07-30T15:21:41.236000+00:00] irteza080 (id=1532407845952426004)
+    Is it possible to set up each model to act as agents and work together like one model codes the other model does reasearch one model does the planning and there is one model which prompts the other models to do the thing it needs to
+    [reply to shaf_2665 msg=1532324460764463205]
+
+[2026-07-30T15:28:45.394000+00:00] shaf_2665 (id=1532409624999755858)
+    Like an Agent OS,
+    Actually I am cooking a separate project for it, that's why I had not updated this project recently.
+    [reply to irteza080 msg=1532407845952426004]
+
+[2026-07-30T15:35:05.864000+00:00] irteza080 (id=1532411220806729952)
+    Ooooooo
+    I cant wait
+    [reply to shaf_2665 msg=1532409624999755858]
+

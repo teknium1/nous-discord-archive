@@ -741,3 +741,6 @@
 [2026-07-29T22:39:27.984000+00:00] jonkomet (id=1532155628813025430)
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1532155628498325705/image.png?ex=6a6bd29f&is=6a6a811f&hm=99cf0bc5adb26109ba9ba3eb249e32c1e5606c85e52c570546a310670e109802&
 
+[2026-07-30T16:10:53.449000+00:00] machad0.gabriel (id=1532420228430958702)
+    Hey Jon, is the extension still in alpha? Or is it already available in the chrome store? Great work btw!
+

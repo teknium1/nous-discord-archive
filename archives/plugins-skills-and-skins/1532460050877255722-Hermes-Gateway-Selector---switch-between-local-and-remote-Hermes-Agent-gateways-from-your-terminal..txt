@@ -1,0 +1,25 @@
+# Thread 'Hermes Gateway Selector — switch between local and remote Hermes Agent gateways from your terminal.' in forum #plugins-skills-and-skins
+# thread_id=1532460050877255722 forum_id=1485392832154832906
+# Started 2026-07-30T19:28:28.933473+00:00
+
+[2026-07-30T18:49:07.860000+00:00] tomrevo.x (id=1532460050877255722)
+    Running bare hermes pops an interactive picker. All other commands pass through unchanged. Supports password-authenticated gateways (gated mode).
+    
+    ─ bash
+    
+    # Install via skills.sh (works across agents)
+    `npx skills add tommulkins/hermes-gateway-selector`
+    
+    # Or via Hermes tap
+    ```sh
+    hermes skills tap add tommulkins/hermes-gateway-selector
+    hermes skills install tommulkins/hermes-gateway-selector/hermes-gateway-selector
+    ```
+    
+    Use case: run Hermes locally, pick which gateway on a remote machine to connect to. Good for home server / work laptop / VPS setups.
+    [attachment] demo.png https://cdn.discordapp.com/attachments/1532460050877255722/1532460051107676362/demo.png?ex=6a6cee23&is=6a6b9ca3&hm=a20471669452c3ce3f1d06034862276ec7f56655cfed09cae39a4b4720171f65&
+
+[2026-07-30T19:15:39.744000+00:00] tomrevo.x (id=1532466727722418468)
+    Here's the github for those interested in learning more! https://github.com/tommulkins/hermes-gateway-selector
+    [embed] GitHub - tommulkins/hermes-gateway-selector: Shell selector for cho... https://github.com/tommulkins/hermes-gateway-selector
+

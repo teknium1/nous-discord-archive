@@ -638,3 +638,10 @@
     
     Many thanks to everyone🫶🏻
 
+[2026-07-30T18:31:57.289000+00:00] vayaperson (id=1532455728348921956)
+    Good afternoon, everyone. 
+    After having found time to move forward on the project and make some improvements, we still need to verify that everything is working correctly. 
+    One of the projects (events) that takes up most of our time is close to taking place. After that, we will continue with development and intensive testing in order to release the update.
+    The event I am organizing will take place during the first week of September, so it's very likely that we won't be able to make improvements or advance work on Andoriña until then. Although, as you already know, we have implemented improvements and fixes that, once tested and verified, we will release in the next update which we will try to launch within that same month of September.
+    Thank you very much to everyone for your patience. We want Andoriña to be at least minimally usable even if there is a bug or error in the update, and we don't want to break the program for people who are already using it.
+

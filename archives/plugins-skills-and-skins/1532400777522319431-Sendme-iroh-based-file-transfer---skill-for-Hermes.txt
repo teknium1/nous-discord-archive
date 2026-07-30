@@ -1,0 +1,17 @@
+# Thread 'Sendme(iroh based file transfer)  skill for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1532400777522319431 forum_id=1485392832154832906
+# Started 2026-07-30T19:28:29.395108+00:00
+
+[2026-07-30T14:53:35.991000+00:00] drahcir_rahl (id=1532400777522319431)
+    Enables
+    Sending and receiving files with SendMe
+    Long-running sender lifecycle and transfer tracking
+    Safe handling of SendMe bearer-like tickets
+    Direct peer-to-peer connections and relay fallback
+    Sensitive-file protections and completion verification
+    Android/Termux interoperability guidance
+    
+    
+    https://github.com/rahlquist/hermes-sendme-file-transfer
+    [embed] GitHub - rahlquist/hermes-sendme-file-transfer: Hermes Agent skill ... https://github.com/rahlquist/hermes-sendme-file-transfer
+

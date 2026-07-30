@@ -25,3 +25,7 @@
     yoo this is fire! i am struggling with frontend pretty hard and need exactly what you are showing
     [reply to jaixii msg=1531601601519681650]
 
+[2026-07-30T17:07:55.774000+00:00] jaixii (id=1532434582702526525)
+    Been doing massive updates daily, especially today. The software saves tokens and context, that alone makes it worth having. But it does much more 😃  hope you like it! Lot of details in readme
+    [reply to youareanumberjustlikeme msg=1532323766044983347]
+

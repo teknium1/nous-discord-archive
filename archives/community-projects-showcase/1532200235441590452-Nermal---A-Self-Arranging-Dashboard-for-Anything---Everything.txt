@@ -10,3 +10,13 @@
     Note: In this video everything is fictional. I've replaced all my services with randomly picked services and names for demonstration purposes.
     [attachment] Nermal-Dashboard-Demo.mp4 https://cdn.discordapp.com/attachments/1532200235441590452/1532200236859134194/Nermal-Dashboard-Demo.mp4?ex=6a6bfc2b&is=6a6aaaab&hm=73900315484b8631571a652b0fb3320baaef34e3d9ccf0177cddf19a7872652c&
 
+[2026-07-30T16:48:07.708000+00:00] nat2r (id=1532429599592550592)
+    New Feature: 
+    
+    Sparklines are now available for relevant tiles. Ask your agent what supports them and have it implement!
+    
+    Additionally, a drop down was added to the dashboard that will allow you to show/hide categories. 
+    
+    Live on Github.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1532200235441590452/1532429598736777396/image.png?ex=6a6cd1c7&is=6a6b8047&hm=fe28f7d232686d3a3d6054d1907662117c47fa5f8e3163f4cd805f34da7ab760&
+
