@@ -21,3 +21,7 @@
     [attachment] 2026-07-28_03_25_39-Engraphis_Ledger_-_Comet.png https://cdn.discordapp.com/attachments/1531601601519681650/1531601601888915517/2026-07-28_03_25_39-Engraphis_Ledger_-_Comet.png?ex=6a69cea5&is=6a687d25&hm=da371ca39df362d272836f1573a1d75b7bd2b01c1c6249ffcc052981df459edb&
     [embed] Engraphis | Memory that knows where it came from https://engraphis.com/
 
+[2026-07-30T09:47:35.024000+00:00] youareanumberjustlikeme (id=1532323766044983347)
+    yoo this is fire! i am struggling with frontend pretty hard and need exactly what you are showing
+    [reply to jaixii msg=1531601601519681650]
+

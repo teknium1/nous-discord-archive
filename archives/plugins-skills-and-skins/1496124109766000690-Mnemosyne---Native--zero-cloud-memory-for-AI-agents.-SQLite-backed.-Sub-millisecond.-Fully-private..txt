@@ -2429,3 +2429,6 @@
 [2026-07-30T02:10:43.191000+00:00] nat2r (id=1532208792484315207)
     [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1532208792383787169/image.png?ex=6a6c0423&is=6a6ab2a3&hm=8b4c7b16b2c7ad3a0962695cb7e2a71cc3b82ef1f4f4525d1474eb9ce20ad485&
 
+[2026-07-30T09:55:05.616000+00:00] myasga (id=1532325655964946492)
+    hey, would be cool for videotutorial how to best operate with Plugin local , install ,setup , best practices- all the best !
+

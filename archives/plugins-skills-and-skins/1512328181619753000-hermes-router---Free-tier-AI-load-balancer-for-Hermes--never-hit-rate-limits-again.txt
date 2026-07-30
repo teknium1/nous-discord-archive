@@ -1320,3 +1320,89 @@
     
     Grab the feast with `hr update` and `hr restart`
 
+[2026-07-30T08:46:05.437000+00:00] irteza080 (id=1532308290795475155)
+    Yo fude could you tell me all the niche and nice features this has i had my agent set it up
+    [reply to shaf_2665 msg=1526181102035669002]
+
+[2026-07-30T09:12:11.587000+00:00] irteza080 (id=1532314859704680489)
+    Yooo ts is goooooood
+    [reply to irteza080 msg=1532308290795475155]
+
+[2026-07-30T09:12:13.675000+00:00] irteza080 (id=1532314868462522449)
+    Absolutely! That's the whole point of Hermes Router. You can add keys from multiple providers (and multiple keys per provider) to build a resilient pool. When one key gets rate-limited or a provider fails, it automatically falls over to the next.
+    
+    Here's how to add keys from each provider:
+    
+    # Add keys one at a time, provider by provider
+    hr auth add nvidia        # NVIDIA NIM
+    hr auth add gemini        # Google Gemini
+    hr auth add openrouter    # OpenRouter
+    hr auth add groq          # Groq
+    hr auth add cerebras      # Cerebras
+    hr auth add sambanova     # SambaNova
+    hr auth add mistral       # Mistral
+    hr auth add cohere        # Cohere
+    hr auth add github_models # GitHub Models
+    hr auth add huggingface   # Hugging Face
+    hr auth add zai           # Z.ai (GLM)
+    hr auth add naga          # Naga AI
+    hr auth add kimi          # Kimi/Moonshot
+    hr auth add openai        # OpenAI (paid)
+    hr auth add anthropic     # Anthropic (paid)
+    hr auth add opencode      # OpenCode Zen (free)
+    
+    # After adding, restart to load all new keys
+    hr restart
+    
+    
+    Stack multiple keys per provider by running the same command multiple times. The router rotates through them round-robin and puts rate-limited keys on cooldown automatically.
+    
+    Retrieve info:
+    - hr auth list — see all providers and their key counts
+    - hr status — live health dashboard
+    - Open http://localhost:8319/ in a browser — visual dashboard
+    
+    Once you'd like, just share your API keys (or paste them in a safe way) and I'll add them all for you. The CLI hides input when typing keys. After adding everything, just one hr restart loads them all.
+    
+    Do you want to start adding keys now?
+
+[2026-07-30T09:24:50.259000+00:00] shaf_2665 (id=1532318041805946992)
+    Looks like you learned it the easy way
+    [reply to irteza080 msg=1532314868462522449]
+
+[2026-07-30T09:25:25.598000+00:00] shaf_2665 (id=1532318190028456016)
+    Still updating for some new features
+
+[2026-07-30T09:25:39.201000+00:00] shaf_2665 (id=1532318247083315210)
+    <@292288108362203137> 
+    Kindly check your PR
+
+[2026-07-30T09:28:44.134000+00:00] irteza080 (id=1532319022748663928)
+    Is there anything else I should know bout this?
+    [reply to shaf_2665 msg=1532318041805946992]
+
+[2026-07-30T09:29:17.966000+00:00] irteza080 (id=1532319164650360885)
+    I was tryna make my own Robin round thing and falling terribly until I can across this thread 
+    Your the goat gng
+    [reply to shaf_2665 msg=1532318041805946992]
+
+[2026-07-30T09:45:07.923000+00:00] irteza080 (id=1532323149058932806)
+    Question
+    [reply to shaf_2665 msg=1532318041805946992]
+
+[2026-07-30T09:45:40.596000+00:00] irteza080 (id=1532323286099431544)
+    Can i add like 20 of each type of keys in it using 20 different accounts or could I get ip banned
+
+[2026-07-30T09:45:53.506000+00:00] irteza080 (id=1532323340247765062)
+    <:MONKAS:1151260450835681281>
+
+[2026-07-30T09:49:39.594000+00:00] shaf_2665 (id=1532324288529436772)
+    Who knows 🤔
+
+[2026-07-30T09:50:20.658000+00:00] shaf_2665 (id=1532324460764463205)
+    I am using like 15 accounts for openrouter
+
+[2026-07-30T09:56:49.833000+00:00] irteza080 (id=1532326093082857543)
+    Hmmmmm
+    [reply to shaf_2665 msg=1532324460764463205]
+

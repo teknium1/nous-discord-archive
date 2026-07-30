@@ -52953,3 +52953,89 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-30T07:23:47.845000+00:00] flownium (id=1532287581033861150)
     https://github.com/NousResearch/hermes-agent/pull/74669
 
+[2026-07-30T08:44:27.027000+00:00] gottz.de (id=1532307878034145281)
+    hey <@387972437901312000> we are keeping up with the new-pr pressure right now: https://hermes-triage.gottz.de/timeline.html?bucket=day&mode=sub&series=pr_created,pr_merged,pr_closed
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532307877518114877/image.png?ex=6a6c606a&is=6a6b0eea&hm=b60266db81702094656a860aa749de3601f40e59524396859ddd189fa3bbd893&
+
+[2026-07-30T08:51:31.640000+00:00] looned. (id=1532309658990153939)
+    If my PR waits for workflow approval and I can see there are new conflicts, should I update the PR or is it going to reset PR queue? 😄
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532309658738364577/image.png?ex=6a6c6213&is=6a6b1093&hm=2d3af37e4b200208429e1fab52c28e6648e479dca43d3d289301cc60e9aca112&
+
+[2026-07-30T09:02:54.134000+00:00] egilewski (id=1532312521577463879)
+    For clarity I propose to remove the mark that it closes a closed issue, better to just reference it.
+    [reply to dias4761 msg=1532115480360259624]
+
+[2026-07-30T09:23:04.576000+00:00] egilewski (id=1532317598539321466)
+    You can do either. The sweeper doesn't just sort from latest branch update. But if the resolution of the conflict is clear then it will be handled automatically.
+    
+    You could monitor if `main` didn't invalidate PR's priors, but most importantly just react to reviews within reasonable number of days for its priority. And even if you won't, your PR will likely be salvaged with authorship preserved, unless a better, independent one emerges.
+    [reply to looned. msg=1532309658990153939]
+
+[2026-07-30T09:23:56.604000+00:00] looned. (id=1532317816760565843)
+    Got it, thank you for the explanation.
+
+[2026-07-30T10:21:26.325000+00:00] godsboy7777 (id=1532332285939159050)
+    <@387972437901312000>, when you have a chance, could you please review this `/sessions` fix?
+    
+    On busy gateways with multiple chats or Telegram topics, the current `/sessions` behaviour is functionally broken for the affected lane. In my case, the command shows only one session even though the database contains many valid sessions for that same chat.
+    
+    The cause is the query order:
+    
+    1. Hermes fetches the first 10 sessions across the entire platform source.
+    2. It only then filters those sessions to the caller’s exact DM or topic.
+    3. Sessions from unrelated chats can consume the result window, causing valid same-chat history to disappear from `/sessions` and bare `/resume`.
+    
+    PR **#65509** changes the order so Hermes filters by the exact `session_key` first and only then applies the limit. It preserves the existing origin and IDOR checks, Telegram DM/topic routing, pinned-session behaviour, and compression-lineage handling.
+    
+    The PR has been refreshed onto current `main`, the focused regression suite passes, and all GitHub CI checks are green.
+    
+    **PR:** https://github.com/NousResearch/hermes-agent/pull/65509  
+    **Issue:** https://github.com/NousResearch/hermes-agent/issues/65500
+    
+    I’ve attached a screenshot of the actual `/sessions` result showing only one session, together with an infographic explaining the query-order problem and the fix.
+    
+    I’d appreciate your review when you have time.
+    [attachment] session-listing-starvation.png https://cdn.discordapp.com/attachments/1491258766648283238/1532332285141975111/session-listing-starvation.png?ex=6a6c7726&is=6a6b25a6&hm=a022beef60846f350bfe9698695062b4b7347c1e9a83d8247f5d71375b116bcc&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532332285628649542/image.png?ex=6a6c7726&is=6a6b25a6&hm=ca4b3082768011a970ea87445fe54152ac98dca1eb5a87da23a755d66b1b1da9&
+
+[2026-07-30T10:30:23.894000+00:00] antoan1699 (id=1532334540666835124)
+    Hi fols, I am new here and came to look for a good quickstart on RL with Hermes, I noticed that the Antropos repo has been archived and wonndered if RL itraining is no longer covered/maintained for the community/ecosystem?  https://github.com/NousResearch/atropos
+
+[2026-07-30T10:36:37.686000+00:00] gottz.de (id=1532336108464242789)
+    We now have live-candles about the repository status. I'll refine it further.. just a quickshot
+    https://hermes-triage.gottz.de/timeline.html?bucket=24h&mode=candle&series=pr_created,issue_created&win=14
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532336107637702767/image.png?ex=6a6c7ab5&is=6a6b2935&hm=d188e4ed1ed7f245bb5fcf4655eee293c3a11ce5bae708f6e7ddc522b28255b8&
+    [reply to gottz.de msg=1532307878034145281]
+
+[2026-07-30T10:40:36.983000+00:00] dongjiang_90131 (id=1532337112148611132)
+    Hey All maintainer, Please review my PR, thanks
+
+[2026-07-30T10:40:37.526000+00:00] dongjiang_90131 (id=1532337114426118265)
+    https://github.com/NousResearch/hermes-agent/pull/51244
+
+[2026-07-30T10:48:16.290000+00:00] dongjiang_90131 (id=1532339038621532230)
+    and。https://github.com/NousResearch/hermes-agent/pull/51178
+
+[2026-07-30T10:48:24.053000+00:00] dongjiang_90131 (id=1532339071182045286)
+    cc <@387972437901312000>
+
+[2026-07-30T10:48:34.035000+00:00] dongjiang_90131 (id=1532339113049456760)
+    [sticker] Wave
+
+[2026-07-30T11:05:20.116000+00:00] felirami (id=1532343332859285585)
+    sorry for the ping everyone , didn't had access to here, anyhow would like you to see this PR, had some issues with my hermes desktop -> hermes server connection and its fixed, will open more PRs in the future regarding UI/UX and security. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/74779
+
+[2026-07-30T11:13:51.418000+00:00] dongjiang_90131 (id=1532345477415174234)
+    https://github.com/NousResearch/hermes-agent/pull/50782
+
+[2026-07-30T12:05:31.413000+00:00] ct0547 (id=1532358479736733907)
+    I want to make the desktop app more user friendly for non techies, so it can be more easily adopted by businesses and be as easy to use as ChatGPT Work or Claude Cowork desktop apps for that market… is that something you’re interested in <@387972437901312000>?
+
+[2026-07-30T12:06:37.122000+00:00] thatzeraphim (id=1532358755339997245)
+    Hi maintainers, requesting review for these PRs. Thank you.
+    
+    https://github.com/NousResearch/hermes-agent/pull/70925
+    https://github.com/NousResearch/hermes-agent/pull/72319
+

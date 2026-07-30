@@ -110,3 +110,29 @@
     
     Also curious about the ‘stored data, not instructions’ boundary: have you run adversarial tests where a saved memory contains instruction-like text and later reaches multiple agents? Those two tests would make the security story much easier to trust.
 
+[2026-07-30T12:56:01.148000+00:00] maxfreedompollard (id=1532371187366105189)
+    The crux of what you're suggesting (correct me if I'm wrong) is that you're saying it would be better for each agent to hold a real credential and sign its calls, so every record proves which agent wrote it. That does not exist, but it's by design. I want it to be a central data storage, that all agents can use freely across fresh installs. I know I have installed and uninstalled hermes/claude/whatever countless times, and what I want for myself is a central encrypted storage that is just there, that works awesomely without config and that's encrypted. So I don't need to start from 0 whenever I tweak a config, and can add memory and knowledge to my AI. I also question the utility of agent-specific tagging. If someone was to inject fake data into the vault, wouldn't this agent string be just as easy to fake as anything else? The only security-improving way to introduce this would be some kind of secret from each agent to authenticate, but that would literally just be making the agents 2fa in essentially, which would be redonkulus.
+    [reply to viridis_48986 msg=1531790554109841479]
+
+[2026-07-30T13:01:35.153000+00:00] maxfreedompollard (id=1532372588284870797)
+    To answer: If a memory was in the vault on Monday, you backed the vault up Tuesday, and you shredded the memory Wednesday, is that memory gone, or is it still sitting in Tuesday's copy?
+    
+    No, backups are not wiped or rendered null by design. They are backups, they're supposed to keep working if restored forever. 
+    
+    Each memory sits in its own locked box with its own key, and all those little keys are locked with your master key. 
+    
+    forget --shred does three things:
+    
+    Deletes the row, its search-index entries, and every embedding window, which destroys the wrapped per-record key along with the row.
+    
+    VACUUMs, so the freed SQLite pages holding the old text and its search tokens are not carried into the next image.
+    
+    Calls save(), which rewrites the entire vault file with an empty journal.
+    
+    The journal is a running log of recent operations appended to the vault file, and a store entry contains the memory's full text. Journal entries are sealed under the master key, not the per-record key. So burning the record key does nothing to a journal copy. Only the rewrite removes it.
+    [reply to jnwlsn__62097 msg=1531821134486700102]
+
+[2026-07-30T13:03:35.674000+00:00] maxfreedompollard (id=1532373093786456136)
+    I would love you to do a code review of any part you want to do a code review of, by the way. I'm also happy to implement any security improvement. That is the intended default, but I could definitely find a way to do some agent-specific tagging of memories in a way that does not increase the recall speed or add any overhead. But it would look a lot like categorization, and wouldn't be user choosable or editable.
+    [reply to viridis_48986 msg=1531790554109841479]
+

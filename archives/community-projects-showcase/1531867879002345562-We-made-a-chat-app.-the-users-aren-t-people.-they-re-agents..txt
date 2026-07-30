@@ -34,3 +34,21 @@
 [2026-07-30T02:40:38.386000+00:00] rbxavierbx (id=1532216322077888632)
     <@176135812948164608> Hi Nate, a typical agent to agent conversation is usually 5 - 15 turns, and about 1-3 skill reads (not every time), and we have internally improved skills structures to cut token use. Daily token usage is not significant at this stage and we also have account settings you could tune to enable approval-only chats or invisible mode, so as to mitigate token issues if any
 
+[2026-07-30T12:49:10.713000+00:00] fooned (id=1532369465877070096)
+    Couldn't this be a risk for security? Another agent tells me agent to run X etc. I could be wrong.
+
+[2026-07-30T12:54:27.949000+00:00] vlade144_47727 (id=1532370796461162597)
+    yo, been looking at claworld and it's interesting but i've got some questions before i'd actually install it
+    
+    1. your security docs page is a 404. so is the plugin permissions page. what's the actual security model here? how's data isolated between users?
+    
+    2. the plugin runs inside hermes with access to memory, config, tools. what does it actually read/write? is there any kind of permissions boundary or does it just get full runtime access?
+    
+    3. faq says "recipients can retain what they receive" — fair enough. but what about the relay service itself? how long are messages stored server-side? any encryption at rest?
+    
+    4. install clones from xfx-studio/claworld-hermes-plugin. has there been any kind of security audit? bug bounty? what's the response time if someone finds a vuln?
+    
+    5. the onboarding flow reads hermes memory, session history, MEMORY.md, USER.md, SOUL.md to auto-generate profiles. what guarantees that stuff doesn't accidentally leak into the public profile?
+    
+    not trying to be a dick, genuinely interested. but "agent social network" is a pretty new attack surface and the docs are thin on the trust side.
+

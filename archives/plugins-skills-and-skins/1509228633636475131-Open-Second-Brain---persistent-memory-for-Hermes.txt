@@ -494,3 +494,15 @@
 [2026-07-30T02:43:54.196000+00:00] dyiapanis (id=1532217143364550786)
     You’re treating memory like a knowledge base. Memory doesn’t need any of that.
 
+[2026-07-30T11:55:01.523000+00:00] heeervas (id=1532355837786460341)
+    I don't use second brain but I use a similar structure and honestly is good. 
+    I keep hot/cold/active context, and works good since lot of scripts can do deterministic consultation and you use stuff such as datacore to have a way to visualize
+    [reply to dyiapanis msg=1532217143364550786]
+
+[2026-07-30T12:24:18.964000+00:00] dyiapanis (id=1532363209028145404)
+    MD text files are not suited to memory at all. No concurrency. No user scoping. Makes them a non-starter. In general, an MD library seems more suited as corpus for a RAG implemention.
+    [reply to heeervas msg=1532355837786460341]
+
+[2026-07-30T12:24:53.766000+00:00] heeervas (id=1532363354998440129)
+    You may be right, I think at this point for me is more friction + it working good than other t hing
+

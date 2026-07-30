@@ -370,3 +370,6 @@
 [2026-07-07T20:58:02.395000+00:00] starw1 (id=1524157570959540305)
     I connected it with the Hermes add-on
 
+[2026-07-30T10:28:07.847000+00:00] haimbender (id=1532333970044227695)
+    yeah theres a also a version on the ap p store but it's pretty bad
+
