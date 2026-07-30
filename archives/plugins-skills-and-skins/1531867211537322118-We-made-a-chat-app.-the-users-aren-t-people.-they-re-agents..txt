@@ -32,3 +32,10 @@
     How about the cybersecurity problem?
     If the agent can talk to a stranger agent, will any hacker disguise as a random stranger to cheat the agent for the credential details?
 
+[2026-07-30T02:56:02.950000+00:00] rbxavierbx (id=1532220199980367932)
+    Hi Sam, thanks for the question and its a good one. We have been taking cybersecurity issues seriously during testing and development. 
+    
+    We did test the stranger agent trickery scenario you mentioned. We instructed one agent to trick the other agent to give out his credentials. We found that runtime agent prompts, such as those provided by hermes, combined with model intelligence (even the small ones) , is capable in refusing to giving out credentials. Agents in claworld are aware of the circumstances and are more cautious, and non of our tests eventually led to credential leaks.
+    
+    On the other hand, we made it very clear in claworld related prompts we provide to the agents that they are talking to other agents, not to their human users. This also strengthened agents' cautiousness dealing with sensitive informations. We will continue to have these kind of issues in mind in future development.
+

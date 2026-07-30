@@ -1,0 +1,42 @@
+# Thread 'Memento v0.1.1 - Private journal you talk to' in forum #community-projects-showcase
+# thread_id=1532238876188475492 forum_id=1316137596535177246
+# Started 2026-07-30T08:22:01.352733+00:00
+
+[2026-07-30T04:10:15.705000+00:00] .0xd40 (id=1532238876188475492)
+    Memento is an Agentic Multimodal AI Journal with Persistent Memory and Retrieval Grounded Interaction
+    
+    A private journal you talk to. Record a video or voice log — or hold a full conversation with an agent that has read everything you've ever logged. Every entry is transcribed, embedded, summarized, and cross-linked, so the archive answers questions instead of just storing them.
+    
+    Inspiration comes from video journal technology from sci-fi films such as  The Martian, Interstellar, Moon, Project Hail Mary, Avatar. I always wanted to have something like this so I built something that satisfies that desire for me.
+    
+    Runs entirely on your own hardware. Transcription, embeddings, concept extraction, reflection, vision, and day/week reports are all local models; the only optional cloud call is the realtime voice session. With Tailscale, you can host on your main machine at home, and remote to Memento from your Android, iOS or another Laptop device.
+    
+    Log your entry, ask it to remind you and it will pin you. Ask it about a historical memory or concept that and it will retrieve it in real-time live. Say "story time" to start your autobiography session, or "time capsule" to lock away a memory until a certain time.  
+    
+    A lot of new features are in the works right now and still working out some bugs. I think this is worth a bookmark. 
+    
+    UI has some customization as well. Fork it and make it yours. 
+    
+    *Live avatar still work in progress, waiting for Wan Streamer open weights to be released.
+    
+    Link: https://github.com/xD4O/memento
+    [attachment] home.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238876914225312/home.png?ex=6a6c2027&is=6a6acea7&hm=cd6eb93fe2521981ab0eb734796498120b06dd7ce870358c57acc841cbc324a5&
+    [attachment] live.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238877627125862/live.png?ex=6a6c2028&is=6a6acea8&hm=02d0ff0ad270ed76671de9f49d10d5877593049552ef5176610c225e15e61380&
+    [attachment] search.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238878033842236/search.png?ex=6a6c2028&is=6a6acea8&hm=33fa2c68dfe3bcc80dbd84661095e9697489def5c584946696e5417009834113&
+    [attachment] calendar.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238878550003952/calendar.png?ex=6a6c2028&is=6a6acea8&hm=4f57116b579325cb7f4996c5827bebd83c8b72385abc9b9dba827a0a20eccf3e&
+    [attachment] stats.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238879019761734/stats.png?ex=6a6c2028&is=6a6acea8&hm=cb3459fcca174a026d87b560e6946b4bc7c5067c8f8888020e735a403c3929f8&
+    [attachment] starmap.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238879623610420/starmap.png?ex=6a6c2028&is=6a6acea8&hm=41caee28fb7e236fdf69d86b4a857cf8af3a61f5d9547dc979cd26abb8c39755&
+    [attachment] profile.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238880063881276/profile.png?ex=6a6c2028&is=6a6acea8&hm=fd5782ce987739d961869f92e582ea7f6e72a40b93522dc7099598aac5a3b9c8&
+    [attachment] story.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238880483446955/story.png?ex=6a6c2028&is=6a6acea8&hm=9af66d7ed23a49848a1a2fbf5962c22e725967bcde4e90c8200efb638345b82a&
+    [attachment] vault.png https://cdn.discordapp.com/attachments/1532238876188475492/1532238881007603873/vault.png?ex=6a6c2028&is=6a6acea8&hm=f4114e2f6b586f44708b0e77437a6f3e01f9585976ec66e7fe1403aedaf70a9b&
+    [embed] GitHub - xD4O/memento: An Agentic Multimodal AI Journal with Persis... https://github.com/xD4O/memento
+
+[2026-07-30T04:13:17.717000+00:00] .0xd40 (id=1532239639602004029)
+    <@575461682151686145> <@1262618655011901440>
+
+[2026-07-30T04:17:34.982000+00:00] .s0uthpaw (id=1532240718649622568)
+    Yes fuck yes dude
+
+[2026-07-30T04:18:46.028000+00:00] movieplex (id=1532241016638275696)
+    6am
+

@@ -237,3 +237,6 @@
     <@109053738517299200> Contains the complete specification file.
     [attachment] SPEC.md https://cdn.discordapp.com/attachments/1526884948886163578/1532100607240966304/SPEC.md?ex=6a6b9f61&is=6a6a4de1&hm=88ec874f0cce4e3b0bbe3f218d2158ef2b70f2affda586298550e8a57cc5f0f2&
 
+[2026-07-30T02:13:38.469000+00:00] nat2r (id=1532209527653404824)
+    Silly suggestion, but I would completely rip all the themes that are in the Hermes Desktop application so that users can mirror their experiences 1:1
+

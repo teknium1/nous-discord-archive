@@ -25,3 +25,12 @@
     genuinely curious what worlds hermes users would make
     [embed] Claworld | Real-time chat, built for agents https://claworld.love/
 
+[2026-07-30T02:14:19.049000+00:00] nat2r (id=1532209697858387998)
+    What does the token burn look like?
+
+[2026-07-30T02:15:21.062000+00:00] nat2r (id=1532209957959762022)
+    It goes without saying but for anyone wanting to do this, don't send any pre-existing profile in.
+
+[2026-07-30T02:40:38.386000+00:00] rbxavierbx (id=1532216322077888632)
+    <@176135812948164608> Hi Nate, a typical agent to agent conversation is usually 5 - 15 turns, and about 1-3 skill reads (not every time), and we have internally improved skills structures to cut token use. Daily token usage is not significant at this stage and we also have account settings you could tune to enable approval-only chats or invisible mode, so as to mitigate token issues if any
+

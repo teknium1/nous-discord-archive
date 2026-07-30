@@ -1,0 +1,14 @@
+# Thread 'Browser Tools SDK - twice the token efficiency compared to agent-browser' in forum #plugins-skills-and-skins
+# thread_id=1532241630348710001 forum_id=1485392832154832906
+# Started 2026-07-30T08:28:57.993737+00:00
+
+[2026-07-30T04:21:12.348000+00:00] tkancharla (id=1532241630348710001)
+    Browser Tools is an alternative browser harness for agents that achieves more than twice the efficiency of agent-browser. 
+    
+    https://libretto.sh/browser-tools
+    [attachment] Screenshot_2026-07-21_at_2.15.36_PM.png https://cdn.discordapp.com/attachments/1532241630348710001/1532241630726193242/Screenshot_2026-07-21_at_2.15.36_PM.png?ex=6a6c22b8&is=6a6ad138&hm=63ee2658ed4eaee1ef3e5ceb5650006400a40a8e8d674aba237c65ed1bfa56a1&
+    [embed] Browser Tools SDK | Libretto https://libretto.sh/browser-tools
+
+[2026-07-30T04:21:29.472000+00:00] tkancharla (id=1532241702172102776)
+    [attachment] Screenshot_2026-07-29_at_6.21.22_PM.png https://cdn.discordapp.com/attachments/1532241630348710001/1532241701903536209/Screenshot_2026-07-29_at_6.21.22_PM.png?ex=6a6c22c9&is=6a6ad149&hm=70c9e42e5de1f5dbc2a69bdeee0027d8822fa2b80dc5265746dc0bbeb720de09&
+

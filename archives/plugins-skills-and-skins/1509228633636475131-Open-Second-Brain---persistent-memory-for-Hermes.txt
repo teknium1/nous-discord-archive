@@ -491,3 +491,6 @@
     The index is bun:sqlite with FTS5 for keyword search, plus an optional sqlite-vec layer (chunk_vec virtual table + embeddings from any OpenAI-compatible provider) for the semantic lane. That way you get real ranked retrieval without your memory disappearing into a DB you can't grep, diff or git-version.
     [reply to dyiapanis msg=1532189510354604213]
 
+[2026-07-30T02:43:54.196000+00:00] dyiapanis (id=1532217143364550786)
+    You’re treating memory like a knowledge base. Memory doesn’t need any of that.
+

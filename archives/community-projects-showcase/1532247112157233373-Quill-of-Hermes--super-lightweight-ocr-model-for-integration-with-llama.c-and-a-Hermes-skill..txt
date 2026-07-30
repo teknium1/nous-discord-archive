@@ -1,0 +1,27 @@
+# Thread 'Quill of Hermes, super lightweight ocr model for integration with llama.c and a Hermes skill.' in forum #community-projects-showcase
+# thread_id=1532247112157233373 forum_id=1316137596535177246
+# Started 2026-07-30T08:22:00.880233+00:00
+
+[2026-07-30T04:42:59.313000+00:00] drahcir_rahl (id=1532247112157233373)
+    https://github.com/rahlquist/quill-of-hermes
+    Requirements
+    
+        Linux host; systemd user service instructions assume systemd
+        Python 3.10+, uv, FastAPI, Uvicorn, python-multipart
+        llama.cpp build containing llama-mtmd-cli with --model, --mmproj, and --image
+        OvisOCR2 main GGUF plus matching mmproj-*.gguf
+        pdftoppm and pdfinfo for PDF input
+        ImageMagick magick for TIFF input
+    
+    Supported input
+    
+        PNG, JPEG, WebP: single page
+        PDF: rendered at 150 DPI, up to 50 pages
+        TIFF/TIF: single or multi-page, up to 50 pages; ImageMagick renders each page
+        Upload limit: 100 MB
+    
+    Each page is sent independently to OvisOCR2. Results are joined with a Markdown horizontal rule (---). The API also returns page_count and total elapsed_seconds.
+    
+    PR's welcome or fork and have fun!
+    [embed] GitHub - rahlquist/quill-of-hermes: LAN OCR web service for OvisOCR... https://github.com/rahlquist/quill-of-hermes
+

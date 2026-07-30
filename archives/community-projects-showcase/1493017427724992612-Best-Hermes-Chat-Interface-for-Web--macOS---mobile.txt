@@ -6303,3 +6303,8 @@
     [embed] GitHub - block/buzz: A hive mind communication platform https://github.com/block/buzz
     [reply to kratos20011 msg=1531997410333818931]
 
+[2026-07-30T08:08:35.306000+00:00] deor42 (id=1532298853062152343)
+    Personally, i ditched Anthropic awhile ago, they just became too frustrating to use for anything other than their own tools.
+    I run a NanoGPT sub and use Minimax M3 for Hermes. Using WebUi has completely replaced everything I ever did with Claude.
+    [reply to _big_owen_ msg=1532157362973053090]
+

@@ -1,0 +1,13 @@
+# Thread 'Skill for Indian tax Filing' in forum #plugins-skills-and-skins
+# thread_id=1532265456499691680 forum_id=1485392832154832906
+# Started 2026-07-30T08:28:57.556534+00:00
+
+[2026-07-30T05:55:52.945000+00:00] agnelvishal6618 (id=1532265456499691680)
+    Skill for Indian tax Filing(ITR)
+    
+    Repo at  https://github.com/agnelvishal/itr-filing-skill
+    
+    Install for hermes using 
+    `mkdir -p ~/.hermes/skills/productivity/itr-filing-skill && git clone https://github.com/agnelvishal/itr-filing-skill.git ~/.hermes/skills/productivity/itr-filing-skill`
+    [embed] GitHub - agnelvishal/itr-filing-skill: Hermes and Claude Skill to f... https://github.com/agnelvishal/itr-filing-skill
+
