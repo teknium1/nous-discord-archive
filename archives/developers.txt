@@ -52813,3 +52813,69 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-29T18:45:24.753000+00:00] dias4761 (id=1532096727232942252)
     <@387972437901312000>  thats the issue https://github.com/NousResearch/hermes-agent/issues/73973
 
+[2026-07-29T19:12:01.913000+00:00] teknium (id=1532103426207649852)
+    If its a P1 it will be reviewed very soon, you do not need to ping about it
+    [reply to dias4761 msg=1532095720444661981]
+
+[2026-07-29T19:15:14.419000+00:00] .blockops (id=1532104233636204679)
+    Really want to get Hermes to the point where I can use it as a realtime voice assistant without the long pauses. Hope this helps...
+    
+    #74301 — voice replies: killed the dead air between sentences
+    https://github.com/NousResearch/hermes-agent/pull/74301
+    When Hermes answers out loud with a voice that can't stream (the offline built-ins, and every plugin voice), it worked like this: generate sentence one, say it, go silent while it generates sentence two, say it, go silent again. Every pause lasted as long as it takes to generate a sentence — for a local voice model, that's roughly as long as the sentence itself. 
+    
+    The fix: generate the next sentence WHILE the current one is playing. Same voice, same audio, just scheduled smarter. Measured with a locally cloned voice on a Mac, same three-sentence answer: first word 10.8s → 4.4s after you stop talking, silence mid-reply 11.2s → 1.8s, full answer 33s → 17s. Cloud voices with real streaming (ElevenLabs etc.) already flowed — this brings everyone else up to par, which matters now that the wake word makes Hermes a hands-free assistant. Caveats stated in the PR: one pre-existing macOS test failure is unrelated (verified identical on unpatched main), and my numbers come from a heavily loaded machine — the relative gains held across interleaved runs, the absolutes will look better on an idle box. 4 new tests, zero regressions across 227 existing voice tests.
+
+[2026-07-29T19:59:55.847000+00:00] dias4761 (id=1532115480360259624)
+    I tagged this because the issue has already been merged, but I believe the implementation I created might also be helpful in some way.
+    [reply to teknium msg=1532103426207649852]
+
+[2026-07-29T20:06:57.629000+00:00] dias4761 (id=1532117249442447422)
+    So, since the issue is already marked as “resolved,” I don't think it will be reviewed again for now. That's why I mentioned it.
+
+[2026-07-29T20:29:50.209000+00:00] teknium (id=1532123006460231809)
+    If the label says p1, it will be
+
+[2026-07-29T20:32:45.886000+00:00] dias4761 (id=1532123743302979594)
+    Yes Sr
+
+[2026-07-29T20:56:42.167000+00:00] kendotdev (id=1532129767501992196)
+    I ran into an issue testing laguna-xs-2.1 where it kept hallucinating tool names so I created a tool-aliases config map to work around it. I know Hermes doesn't patch for model problems but if there is any interest in adding the ability to alias tool names via the config I'm happy to share the PR/details.
+
+[2026-07-29T21:02:58.992000+00:00] drexux (id=1532131348020723712)
+    Then all that's left to do is wait <:pepeshy:1151299913322332191>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532131347043320029/image.png?ex=6a6bbc02&is=6a6a6a82&hm=849a4ef89f39f5f6806adb453419d5ba81b9079afd8380c0cf9820072b032d6a&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532131347517411338/image.png?ex=6a6bbc02&is=6a6a6a82&hm=7a05887dc2e27d20687d39d371a1a24592696d9c34b44284c86fe3d80593a183&
+    [reply to teknium msg=1532123006460231809]
+
+[2026-07-29T22:18:55.494000+00:00] dias4761 (id=1532150459375292416)
+    https://github.com/NousResearch/hermes-agent/pull/74350 :fix(history): stop personality marker from swallowing the next real promp 
+    Fixes history: personality-switch marker can merge with the next real prompt and get hidden wholesale, losing it #74315
+    
+    https://github.com/NousResearch/hermes-agent/pull/74348 : fix(codex): stop duplicating billed inferences on post-terminal drain errors- #74348
+    Fixes issue codex: retry after response.completed duplicates an already-finished, billed inference #74310
+    
+    https://github.com/NousResearch/hermes-agent/pull/74352:fix(api): enforce pagination bounds on session/message list routes 
+    CLOSES:api: negative limit query params bypass pagination clamps on session/message routes
+     
+    
+    https://github.com/NousResearch/hermes-agent/pull/74344:fix(routing): stop stale api_mode from leaking across provider switches
+    FIX:routing: persisted model.api_mode from a different provider leaks into explicit-provider resolution
+
+[2026-07-29T22:47:46.422000+00:00] sassyfatcat (id=1532157719413526648)
+    https://github.com/NousResearch/hermes-agent/pull/74393
+
+[2026-07-29T22:47:53.958000+00:00] sassyfatcat (id=1532157751021666496)
+    Fixes installer flow bugs clean PR, P1.
+
+[2026-07-30T00:11:43.735000+00:00] hyqqx (id=1532178847435587665)
+    Let somebody check please
+    [reply to hyqqx msg=1532069817249435822]
+
+[2026-07-30T00:47:35.212000+00:00] .surly (id=1532187871384174602)
+    that feeling when you get a positive <@190818731734204416> ai feedback on your pr. 🥰
+
+[2026-07-30T00:51:51.377000+00:00] gottz.de (id=1532188945818062858)
+    unbiased feedback
+    [reply to .surly msg=1532187871384174602]
+

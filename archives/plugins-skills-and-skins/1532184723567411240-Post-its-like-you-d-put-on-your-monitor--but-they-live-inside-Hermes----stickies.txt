@@ -1,0 +1,20 @@
+# Thread 'Post-its like you'd put on your monitor, but they live inside Hermes - 'stickies'!' in forum #plugins-skills-and-skins
+# thread_id=1532184723567411240 forum_id=1485392832154832906
+# Started 2026-07-30T02:13:47.137167+00:00
+
+[2026-07-30T00:35:04.714000+00:00] videogamefreak (id=1532184723567411240)
+    If you’re like me, out of sight = out of mind. Random ideas, intrusive thoughts, tangents that aren't enough to start their own sessions yet - that die if I don’t jot them down. Notes, Keep, texts to myself, paper pad on the desk - then I have five places to remember to follow back on that inevitably get forgotten or fall through the cracks...
+    
+    Hermes is *always* open on my desktop. 
+    So I built sticky notes into it - 'stickies'! Like post-its you would put on the side of your screen, but living inside Hermes.
+    
+    Break out = stand alone sticky note in Hermes window. Drag them together = pile. Stack all = clean UI, still remember that random thought.
+    
+    Global, profile-scoped storage. Pure Hermes Desktop plugin SDK, no app fork.
+    
+    Already shared to X, but thought I'd share here too as a way of introducing myself in the Discord 😋 🤘 
+    
+    http://github.com/VGFreakXBL/hermes-sticky-notes
+    [attachment] Screen_Recording_2026-07-29_at_2.20.10_PM.mov https://cdn.discordapp.com/attachments/1532184723567411240/1532184729456218294/Screen_Recording_2026-07-29_at_2.20.10_PM.mov?ex=6a6bedba&is=6a6a9c3a&hm=b73713022a0626a31e8e5eddaeff1ee58c3c3eb46bdcee6dadb561e29f51cafc&
+    [embed] GitHub - VGFreakXBL/hermes-sticky-notes: Sticky / post-it notes for... http://github.com/VGFreakXBL/hermes-sticky-notes
+

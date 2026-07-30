@@ -1,0 +1,12 @@
+# Thread 'Nermal - A Self Arranging Dashboard for Anything & Everything' in forum #community-projects-showcase
+# thread_id=1532200235441590452 forum_id=1316137596535177246
+# Started 2026-07-30T02:08:19.529527+00:00
+
+[2026-07-30T01:36:43.033000+00:00] nat2r (id=1532200235441590452)
+    If this interests you let me know below. I pulled this together because I have a ton of stuff live at any given moment, and this helps me monitor my agent's server uptime and other various services related and un-related to my agent. Happy to pull something together and drop it on Github so that you can just simply point your agent to it and let it start stringing everything up en masse. 
+    
+    The theme is directly pulled from Hermes Desktop's Slate theme in Dark Mode because its infinitely pleasing.
+    
+    Note: In this video everything is fictional. I've replaced all my services with randomly picked services and names for demonstration purposes.
+    [attachment] Nermal-Dashboard-Demo.mp4 https://cdn.discordapp.com/attachments/1532200235441590452/1532200236859134194/Nermal-Dashboard-Demo.mp4?ex=6a6bfc2b&is=6a6aaaab&hm=73900315484b8631571a652b0fb3320baaef34e3d9ccf0177cddf19a7872652c&
+

@@ -482,3 +482,12 @@
     Nothing is being ignored: I'll get back to every message, and I'm genuinely happy to dig into any code, PR or repo you send my way. Thanks for the patience and for keeping the momentum going in here. 🙏
     [reply to lipebez msg=1530320910391836692]
 
+[2026-07-30T00:54:05.973000+00:00] dyiapanis (id=1532189510354604213)
+    Why would you use Obsidian as a memory store over SQLite or SurrealDB?
+
+[2026-07-30T01:19:53.682000+00:00] techmeat (id=1532196001916522506)
+    SQLite is already in there - it's just not the store of truth. Markdown in the vault is; the SQLite index is derived and can be rebuilt from the files at any time. Obsidian is only the view layer on top.
+    
+    The index is bun:sqlite with FTS5 for keyword search, plus an optional sqlite-vec layer (chunk_vec virtual table + embeddings from any OpenAI-compatible provider) for the semantic lane. That way you get real ranked retrieval without your memory disappearing into a DB you can't grep, diff or git-version.
+    [reply to dyiapanis msg=1532189510354604213]
+

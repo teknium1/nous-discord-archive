@@ -342,3 +342,7 @@
 [2026-07-29T17:21:32.040000+00:00] _tobie (id=1532075618504540322)
     I'm trying to have an usable local setup, what are the most capable memory plugins with the least token comsumption (in and outs)?
 
+[2026-07-29T23:47:06.323000+00:00] davidzinaz (id=1532172650720530594)
+    I been trying to figure that our for a month.  Please let us know your feedback.  I am runinng hindsight in a docker on a different server - but what I may have learned - not sure , still researching and the catch is that hindsigh works best by unsing a AI model to do some of the work so you need to eitehr run another local AI model to do that bit or use an online model which costs and I think kinda throws privacy out the door.  If your sending your memories that has all the info, right?  who knows but let us know what you decide!!
+    [reply to _tobie msg=1532075618504540322]
+

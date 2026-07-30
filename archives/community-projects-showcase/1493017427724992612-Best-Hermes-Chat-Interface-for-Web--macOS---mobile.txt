@@ -6290,3 +6290,16 @@
     *An "asymmetric cost" domain is one where a silent error is catastrophic and unrecoverable after the fact (e.g. data leak, XSS flaw, wrong medical advice). The spec requires the typed section in this case — it's not optional.
     [attachment] SPEC.md https://cdn.discordapp.com/attachments/1493017427724992612/1531997410044149870/SPEC.md?ex=6a6b3f45&is=6a69edc5&hm=bc1b3239c0ea17b4407f844da01bab2547b40be6f08d71cddb6cf0032498a3cd&
 
+[2026-07-29T22:46:21.440000+00:00] _big_owen_ (id=1532157362973053090)
+    I guess it's because I can't use my Claude plan With Hermes without having to pay for usage out of pocket Unless there's another way that I just don't know about that no one's been telling me but if it's something that doesn't be planned to be implemented I might LAN on making a fork just for Claude and Hermes and then make it where I can orchestrate the agents in some way I don't know maybe some features of my own I would implement
+    [reply to alto69 msg=1531971342444793967]
+
+[2026-07-30T01:27:09.274000+00:00] alto69 (id=1532197828921655356)
+    The beauty of extension system is that everyone can use optionally. I can't afford the Claude plan but I would imagine I'd use up the credits very quickly. I need free models for read only and auxiliary vision subagents and have been using longcat 2.0 as driver
+    [reply to _big_owen_ msg=1532157362973053090]
+
+[2026-07-30T01:33:59.526000+00:00] alto69 (id=1532199549643391006)
+    Sounds like a fast way to burn tokens. Aicodeking said he likes buzz (https://github.com/block/buzz) but I'll stick with Hermes it already supports all the models and parallelization
+    [embed] GitHub - block/buzz: A hive mind communication platform https://github.com/block/buzz
+    [reply to kratos20011 msg=1531997410333818931]
+
