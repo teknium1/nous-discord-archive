@@ -1420,3 +1420,33 @@
     I cant wait
     [reply to shaf_2665 msg=1532409624999755858]
 
+[2026-07-31T00:47:58.379000+00:00] shaf_2665 (id=1532550356419215461)
+    ## **🛰️ New on Hermes Router: Multi-instance manager + better dashboard health
+    **
+    **Big dashboard upgrade shipped for Hermes Router.**
+    
+    You can now run and monitor multiple Hermes Router instances from one main dashboard:
+    
+    • Instances tab — register existing routers by base URL, or launch Docker-managed routers on new ports like `8320`, `8321`, etc.
+    
+    • Agent-friendly setup — each instance gets its own OpenAI-compatible base URL + router key, so agents can point at separate Hermes Router instances without extra orchestration.
+    
+    • Copy existing provider keys — when creating a Docker instance, you can now select existing provider keys from the main router and copy them into the new instance safely. Raw keys are never exposed in the browser/API response.
+    
+    • Better broken-instance visibility — if an instance is down/unreachable, the dashboard now shows it clearly in the table, the Instances sidebar indicator, and the summary card. No more “saved successfully” confusion when the target router is actually unreachable.
+    
+    • Docs + website updated — added usage docs for Instances, Docker-managed routers, copied provider keys, env vars, and API examples.
+    
+    Also added Playwright coverage for the dashboard flow, including a deliberately broken instance test, and GitHub Actions are passing on Python 3.10 + 3.12.
+    
+    Update with:
+    
+    `hr update`
+    `hr restart`
+    
+    Then open:
+    
+    `http://localhost:8319/`
+    
+    and check the new **Instances** tab.
+

@@ -53117,3 +53117,54 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-30T19:09:26.976000+00:00] .omgg (id=1532465164220108800)
     my though is double check the model selector and make sure its nousportal
 
+[2026-07-30T20:12:04.454000+00:00] asshole1678 (id=1532480924225241208)
+    OPEX Bluetooth file transfer via findmyphone xD lineage 22.1>magisk>Termux>Kali nethunter>pocketpal/edge gallery>Klara/xeno ai file assistant/vethos>llama>hermes>goclaw>>
+
+[2026-07-30T20:13:43.805000+00:00] asshole1678 (id=1532481340933668875)
+    Oh oh vibe ssh
+
+[2026-07-30T21:28:33.682000+00:00] brokeskill (id=1532500172842471597)
+    how does hermes support streaming? how does a reponse have to look like if its streamed like this
+    ```[4207ms] content: 'Hello'
+    [4207ms] content: '!'
+    [4207ms] content: ' How'
+    [4232ms] content: ' can'
+    [4232ms] content: ' I'
+    [4232ms] content: ' assist'
+    [4232ms] content: ' you'
+    [4232ms] content: ' today'
+    [4232ms] content: '?'```
+    (dont mind the timing)
+
+[2026-07-30T21:52:35.869000+00:00] turbo0433 (id=1532506221813174323)
+    does anyone know if there are good vps docker manage tools, i can open and close docker easily? also would love to explore solutions on how to install a group of mcp and skill to diffferent docker in a easy way, thks!
+
+[2026-07-30T21:56:51.553000+00:00] .omgg (id=1532507294229594163)
+    try dockge maybe something like this https://dockge.kuma.pet/
+
+[2026-07-30T22:10:42.951000+00:00] turbo0433 (id=1532510781365682277)
+    tks!
+
+[2026-07-31T01:26:54.194000+00:00] iloveass_21 (id=1532560153537286164)
+    I was working on a plugin just wanted a second  opinion. Here's the idea: a "governor" plugin that sits between the user prompt and the normal Hermes turn loop.
+    
+    It goes like this
+    user prompt
+      ---> Discovery / Planning Layer         
+      • inspects available tools, models 
+      • reads task hints (complexity,    
+        domain, latency budget, etc.)    
+      • selects / spins up a tailored    
+        set of capabilities for this  
+        turn (single model, MoA, specialist + tools, etc.)        
+     ---> Proposal Generation                
+       Each selected capability produces  
+        a candidate response / action plan 
+    ---> Governor (eval + decision)         
+     • scores / critiques proposals     
+      • checks uncertainty, conflicts,   
+        safety, cost                     
+     • picks ONE final commit, or       
+       abstains / asks for clarification
+    ---> normal Hermes commitment & delivery
+

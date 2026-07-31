@@ -373,3 +373,6 @@
 [2026-07-30T10:28:07.847000+00:00] haimbender (id=1532333970044227695)
     yeah theres a also a version on the ap p store but it's pretty bad
 
+[2026-07-30T20:54:08.165000+00:00] haimbender (id=1532491509436387439)
+    i just don't know how to delete it yet from the app store and just keep the dmg
+

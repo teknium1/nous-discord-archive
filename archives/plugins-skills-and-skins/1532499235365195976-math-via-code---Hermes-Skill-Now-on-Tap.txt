@@ -1,0 +1,26 @@
+# Thread '🧮 math-via-code — Hermes Skill Now on Tap!' in forum #plugins-skills-and-skins
+# thread_id=1532499235365195976 forum_id=1485392832154832906
+# Started 2026-07-31T02:41:41.185122+00:00
+
+[2026-07-30T21:24:50.170000+00:00] tomrevo.x (id=1532499235365195976)
+    LLM arithmetic is unreliable, especially past ~150k context. This skill fixes it: if there are 3+ numbers, write code. Every time.
+    
+    What it does:
+    • Routes all math through execute_code or Python scripts — never in-head
+    • Enforces self-check assertions against source data
+    • Covers SDE, margins, growth rates, annualizations, rollups, weighted averages
+    • Handles Excel/CSV/API inputs with pitfall guards (data_only=True, whitespace stripping, etc.)
+    
+    Install:
+    
+    hermes skills tap add tommulkins/hermes-skill-math-via-code
+    hermes skills install tommulkins/hermes-skill-math-via-code/math-via-code
+    
+    Also works with Claude Code, Cursor, Codex, and 70+ agents via npx skills add tommulkins/hermes-skill-math-via-code.
+    [attachment] social-preview.png https://cdn.discordapp.com/attachments/1532499235365195976/1532499235990405120/social-preview.png?ex=6a6d12a2&is=6a6bc122&hm=68211ae7d5e778c3da6bdfda147007a446f3cb42c7a82a3cb7c6c933e7b6b7fb&
+
+[2026-07-30T21:25:51.971000+00:00] tomrevo.x (id=1532499494577504376)
+    The github link if you'd like to learn more!
+    https://github.com/tommulkins/hermes-skill-math-via-code
+    [embed] GitHub - tommulkins/hermes-skill-math-via-code: Hermes Agent skill:... https://github.com/tommulkins/hermes-skill-math-via-code
+

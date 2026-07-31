@@ -1,0 +1,24 @@
+# Thread '🧠 New memory provider: hermes-llmwiki (v0.1.0 on PyPI)' in forum #plugins-skills-and-skins
+# thread_id=1532574063963406557 forum_id=1485392832154832906
+# Started 2026-07-31T02:41:39.480301+00:00
+
+[2026-07-31T02:22:10.698000+00:00] 0xxbei (id=1532574063963406557)
+    pip install hermes-llmwiki
+    
+    Why I built this: every serious Hermes user hits the same wall — the agent forgets everything between sessions. Existing providers either lock you into SaaS or require Docker + vector DB.
+    
+    hermes-llmwiki is Karpathy-native:
+    - 3-layer architecture (Raw → Chronicle → Compiled)
+    - Zero deps (Python + ripgrep + optional SQLite)
+    - Obsidian-compatible vault
+    - Write + Read bidirectional
+    
+    Config:
+    memory:
+      provider: llmwiki
+      llmwiki:
+        vault_path: ~/Documents/selfwiki
+    
+    Docs: https://github.com/chancelu/hermes-llmwiki
+    [embed] GitHub - chancelu/hermes-llmwiki: Karpathy-native local Markdown wi... https://github.com/chancelu/hermes-llmwiki
+

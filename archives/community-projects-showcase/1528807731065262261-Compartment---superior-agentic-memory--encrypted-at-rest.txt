@@ -144,3 +144,12 @@
     
     Would rotating the master key after a shred change anything, or would an old backup remain recoverable as long as its previous master key is retained? Also, do you see backup retention and expiry as entirely the operator’s responsibility, or as something Compartment may eventually help manage?
 
+[2026-07-30T19:33:30.102000+00:00] maxfreedompollard (id=1532471217129390190)
+    <@1500589418044461225> Rotating wouldn't change anything, and this isn't special to Compartment, it's just how encryption works: old copy, old key. A backup from last month is opened by the passphrase you had last month, and picking a new one today can't reach back into a file that already exists, the same way changing your password now doesn't relock an old zip. You don't even need to keep the old key around for that to be true, because the backup carries its own copy of the key inside it, wrapped under the passphrase you had at the time. Rotating here re-wraps that same master key rather than re-encrypting anything, so the master key never changes anyway.
+    
+    So the only thing at risk is a copy you happened to make in between saving something and shredding it. And your backups are yours: Compartment doesn't make them, doesn't know about them, and can't reach into them.
+    
+    Everything is encrypted before it ever hits the disk, so the vault file you see is already the locked version. Backing it up is just copying that one file, no export, nothing decrypted on the way out. Drop it on another computer, install, type your passphrase, and it's all back, your memories, the search index and the history, none of it tied to the old machine. You can mail it to yourself if you want, and lock --sign lets the other end check it arrived untouched without needing your passphrase.
+    
+    However I am not committed to this - if you have a better idea let me know and I'll implement it. I think for offline use, this is the best way but I don't care.
+
