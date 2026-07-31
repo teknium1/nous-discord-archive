@@ -748,3 +748,7 @@
     This doesn't allow for network requests/console, right? 
     I tested with remote gateway and installed the browser context and nothing
 
+[2026-07-31T18:56:24.603000+00:00] jonkomet (id=1532824270575763627)
+    it wont be available in chrome store until made official.. due to upstream reasons that would create more complications than necessary.. but we are getting there honeslty
+    [reply to machad0.gabriel msg=1532420228430958702]
+

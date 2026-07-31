@@ -53267,3 +53267,51 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-31T13:51:45.023000+00:00] flash_speed3412 (id=1532747600460251156)
     https://github.com/NousResearch/hermes-agent/pull/73880 - fix(desktop): rearm voice conversation after playback
 
+[2026-07-31T14:37:08.774000+00:00] tdamre (id=1532759024699703428)
+    it got merged wow
+    [reply to flash_speed3412 msg=1532747600460251156]
+
+[2026-07-31T14:42:27.479000+00:00] dias4761 (id=1532760361445494925)
+    https://github.com/NousResearch/hermes-agent/pull/70899    : feat(tui): async delegation view — docked agents panel + live steering- #70899
+    #70899
+
+[2026-07-31T14:46:07.921000+00:00] immortal_meister (id=1532761286046126110)
+    Hi — new here. Daily Hermes user on long coding sessions (almost never /new).
+    
+    Auto-compress still spends a summary LLM call on finished side quests / fat tool dumps. I filed a small opt-in proposal (default off): evict off-task bulk first, stub+file, summarize only if still over budget.
+    
+    https://github.com/NousResearch/hermes-agent/issues/75449
+    
+    Happy to adjust or open a PR if the direction makes sense. Thanks.
+
+[2026-07-31T15:13:06.416000+00:00] baophan0123 (id=1532768074506305768)
+    my first contribution got merged into Hermes:  fix for shutdown data loss (#72680). PR: https://github.com/NousResearch/hermes-agent/pull/73905
+
+[2026-07-31T15:54:36.320000+00:00] baophan0123 (id=1532778517920612453)
+    fix(skills): add onchain-safety pre-execution risk analysis: https://github.com/NousResearch/hermes-agent/pull/73162
+    
+    fix(steer): /steer fallback preserves FIFO head: https://github.com/NousResearch/hermes-agent/pull/75254
+    
+    fix(config): guard against scalar overwrite of mapping sections (#74995): https://github.com/NousResearch/hermes-agent/pull/75409
+    
+    fix(disk-cleanup): exclude project dirs from test-pattern auto-deletion: https://github.com/NousResearch/hermes-agent/pull/75424
+    
+    fix(config): preserve scalar model id when setting sub-keys: https://github.com/NousResearch/hermes-agent/pull/75426
+    
+    fix(config): refuse to write config.yaml on YAML syntax errors: https://github.com/NousResearch/hermes-agent/pull/75431
+    
+    fix(config): route _SECRET-suffixed keys to .env: https://github.com/NousResearch/hermes-agent/pull/75499
+
+[2026-07-31T16:13:48.994000+00:00] flash_speed3412 (id=1532783352585785454)
+    <@387972437901312000> can you give me the role
+    [reply to flash_speed3412 msg=1532747600460251156]
+
+[2026-07-31T18:09:16.312000+00:00] drexux (id=1532812407863513189)
+    fix(cli): heal a bare custom provider to its config key, not its display name
+    https://github.com/NousResearch/hermes-agent/pull/75552
+
+[2026-07-31T19:14:31.774000+00:00] maxfreedompollard (id=1532828830501179503)
+    <@387972437901312000> Got sick of waiting, so I did all remaining stages of the Hermes Agent Self Evolution. I know the roadmap says to do it stage by stage by honestly, we don't have the approvers for that.
+    
+    github.com/NousResearch/hermes-agent-self-evolution/pull/162
+

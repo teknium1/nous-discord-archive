@@ -47,3 +47,19 @@
     
     And for the GUI I'm working on a deploy pattern where you can list templates available to be learned. No more blank screen with a fresh install.
 
+[2026-07-31T17:15:42.422000+00:00] garyritchie (id=1532798927831568514)
+    **pt-cli v1.0.0 is live!**
+    
+    After 40+ versions and 146 passing tests, the API is now locked for the 1.x series. No breaking changes to CLI commands, config schema (`~/.pt/config.yaml`), or JSON template format (`.pt-template.json`).
+    
+    **What's in 1.0:**
+    
+    - `pt learn` / `pt init` / `pt update`
+    - Remote templates from GitHub/Gitea URLs
+    - Nested variable expansion via `.env` files
+    - JSON template configs for sharing
+    - Security model: command validation, 50-cmd rate limit, 30s timeout, audit log
+    - Global variables + default post-config tasks
+    
+    Some of the recent updates also used free models from Nous Portal and Open Router. Fun project to do and a great way to learn about model limitations.
+
