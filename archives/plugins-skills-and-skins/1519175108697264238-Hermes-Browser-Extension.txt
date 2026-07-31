@@ -744,3 +744,7 @@
 [2026-07-30T16:10:53.449000+00:00] machad0.gabriel (id=1532420228430958702)
     Hey Jon, is the extension still in alpha? Or is it already available in the chrome store? Great work btw!
 
+[2026-07-31T08:43:09.670000+00:00] heeervas (id=1532669941440974938)
+    This doesn't allow for network requests/console, right? 
+    I tested with remote gateway and installed the browser context and nothing
+

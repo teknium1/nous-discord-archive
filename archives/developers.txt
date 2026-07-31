@@ -53168,3 +53168,79 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
        abstains / asks for clarification
     ---> normal Hermes commitment & delivery
 
+[2026-07-31T03:02:21.504000+00:00] maxfreedompollard (id=1532584175616393448)
+    Wow, I have 2/3rds of non-Hermes-Agent merges on NOUS over the past months.
+
+[2026-07-31T03:03:03.748000+00:00] maxfreedompollard (id=1532584352800702565)
+    It's just so fun to contribute to.
+
+[2026-07-31T03:19:13.786000+00:00] iloveass_21 (id=1532588421434834944)
+    Is it worth trying?
+    [reply to iloveass_21 msg=1532560153537286164]
+
+[2026-07-31T04:59:58.135000+00:00] realadolan (id=1532613773272289413)
+    https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/ This could be handy
+
+[2026-07-31T06:22:20.914000+00:00] dias4761 (id=1532634504790016031)
+    https://github.com/NousResearch/hermes-agent/pull/74340#pullrequestreview-4821712437 :fix(auth): restore secret-scope isolation for fallback API key resolution
+    
+    https://github.com/NousResearch/hermes-agent/pull/74348 : stop duplicating billed inferences on post-terminal drain errors
+    
+    feat(codex): add explicit prompt cache breakpoint for GPT-5.6+:https://github.com/NousResearch/hermes-agent/pull/70383
+    
+    fix(routing): stop stale api_mode from leaking across provider switches:https://github.com/NousResearch/hermes-agent/pull/74344
+    
+    https://github.com/NousResearch/hermes-agent/pull/74352: enforce pagination bounds on session/message list routes
+    
+    fix(history): stop personality marker from swallowing the next real prompt- #74350:https://github.com/NousResearch/hermes-agent/pull/74350
+    
+    fix(web_server): stop Codex OAuth worker from finishing after cancel- #73914:https://github.com/NousResearch/hermes-agent/pull/73914
+
+[2026-07-31T06:24:59.537000+00:00] simon.jo (id=1532635170102837438)
+    Can't we use GPT 5.6 models in Hermes with subscription?
+
+[2026-07-31T06:27:09.212000+00:00] dias4761 (id=1532635713999339531)
+    There's a bug in the part where you select the models, at least in the CLI
+
+[2026-07-31T06:27:41.896000+00:00] dias4761 (id=1532635851085975612)
+    And I noticed that when you connect your OpenAI account and close the session, it remains "active."
+
+[2026-07-31T06:30:06.984000+00:00] dias4761 (id=1532636459629019257)
+    The model is working, but it is exhibiting some strange behavior.
+    [reply to simon.jo msg=1532635170102837438]
+
+[2026-07-31T06:31:27.973000+00:00] simon.jo (id=1532636799321767966)
+    oh I tried to change the model but failed a few days ago
+    [reply to dias4761 msg=1532636459629019257]
+
+[2026-07-31T06:34:17.280000+00:00] dias4761 (id=1532637509446795264)
+    Yes, it's behaving that way. I'll check later to see if this affects only the CLI or if it's happening elsewhere too.
+    [reply to simon.jo msg=1532636799321767966]
+
+[2026-07-31T06:41:04.479000+00:00] dribnet (id=1532639217363058818)
+    Hi All. I'm planning a model release and would like to optimize my metrics for hermes. Is there a good task suite to use for this?
+
+[2026-07-31T07:19:32.866000+00:00] ee.dd (id=1532648899439755304)
+    There are a few different agent benches
+    [reply to dribnet msg=1532639217363058818]
+
+[2026-07-31T07:36:52.055000+00:00] drexux (id=1532653258114338897)
+    fix(telegram): send_image uploads still went out on the short read timeout 
+    https://github.com/NousResearch/hermes-agent/pull/75299
+
+[2026-07-31T08:07:29.466000+00:00] dribnet (id=1532660964774776853)
+    yep - I'm using BFCL v3 (function calling) / τ-bench (multi-turn) / GAIA (general-assistant tasks). but don't have a sense if that's a good hermes mix.
+    [reply to ee.dd msg=1532648899439755304]
+
+[2026-07-31T08:18:35.656000+00:00] egilewski (id=1532663758978023644)
+    Could've been. It's just a new representation of a basic PR feature of being able to target arbitrary branch. Which doesn't work for PRs from another repo.
+    [reply to realadolan msg=1532613773272289413]
+
+[2026-07-31T08:23:02.014000+00:00] egilewski (id=1532664876164714556)
+    I'm just making pseudo-stacked PRs with multiple commits sometimes: https://github.com/NousResearch/hermes-agent/pull/70093/commits
+
+[2026-07-31T08:34:26.153000+00:00] 5amyak_ (id=1532667745651392603)
+    hey folks, I'm very new to agent-based development, and was wondering whether you have an opinion over using github cli or using personal access tokens (PATs) for pushing code to git remotes on machines that are primarily used by agents (think devboxes and the like)
+    
+    lmk if this is not the right channel to ask this question 🙂
+

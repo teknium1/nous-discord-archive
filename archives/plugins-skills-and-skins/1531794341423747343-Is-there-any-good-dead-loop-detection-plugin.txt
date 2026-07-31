@@ -7,3 +7,7 @@
     Maybe you know about a plugin like this, which also works with Hermes agent.
     Thanks!
 
+[2026-07-31T06:46:34.199000+00:00] luongkhanhtoan (id=1532640600308846593)
+    May be you should try this PR https://github.com/NousResearch/hermes-agent/pull/56929
+    [embed] fix(guardrails): reset failure and no-progress counts on successful... https://github.com/NousResearch/hermes-agent/pull/56929
+

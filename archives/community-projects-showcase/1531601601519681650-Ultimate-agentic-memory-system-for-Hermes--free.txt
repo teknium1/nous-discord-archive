@@ -29,3 +29,6 @@
     Been doing massive updates daily, especially today. The software saves tokens and context, that alone makes it worth having. But it does much more 😃  hope you like it! Lot of details in readme
     [reply to youareanumberjustlikeme msg=1532323766044983347]
 
+[2026-07-31T04:12:56.181000+00:00] jaixii (id=1532601937139073146)
+    [attachment] context-efficiency_chart.png https://cdn.discordapp.com/attachments/1531601601519681650/1532601937223094403/context-efficiency_chart.png?ex=6a6d7248&is=6a6c20c8&hm=9d143ef61204f36884fb811d03c65453e37d3bc6f8cf9ebb6fa2f0e78b2c7fa2&
+

@@ -314,3 +314,33 @@
 [2026-07-28T17:01:34.592000+00:00] tunacookie (id=1531708208178135131)
     Contemplating to rewrite it into Go
 
+[2026-07-31T06:55:31.318000+00:00] halibusal (id=1532642853149343764)
+    github.com/wevibe-network take it and use it if you’d like.
+
+[2026-07-31T06:57:26.145000+00:00] halibusal (id=1532643334768693409)
+    Trying to tap into the 99% of unavailable memory only stored in anthropic / OpenAI servers. Personal memory = preferences, shared memory = durable solutions and negative knowledge (what not to do) 
+    
+    Put a lot of work on it. Don’t think I’ll be able to continue
+
+[2026-07-31T06:57:46.410000+00:00] halibusal (id=1532643419766259743)
+    Hope that someone can continue the march, it would benefit all of us
+
+[2026-07-31T07:00:18.033000+00:00] halibusal (id=1532644055719088159)
+    Published the white paper here - https://github.com/WeVibe-Network/wevibe-docs/blob/main/WHITEPAPER.md
+    [embed] wevibe-docs/WHITEPAPER.md at main · WeVibe-Network/wevibe-docs https://github.com/WeVibe-Network/wevibe-docs/blob/main/WHITEPAPER.md
+
+[2026-07-31T07:02:24.130000+00:00] halibusal (id=1532644584608239726)
+    Wrote an article about it here https://x.com/WeVibe_Network/status/2082828696516210887
+    [embed]  https://twitter.com/WeVibe_Network/status/2082828696516210887
+
+[2026-07-31T07:09:52.643000+00:00] halibusal (id=1532646465808109708)
+    Not too often someone comes and drops 10k worth of research and work on you for free. If it can help you all I will be happy. Best of luck
+
+[2026-07-31T07:42:02.188000+00:00] tunacookie (id=1532654558906679339)
+    i'll have my hermes look into it once my quota reset
+    [reply to halibusal msg=1532646465808109708]
+
+[2026-07-31T08:46:49.414000+00:00] tunacookie (id=1532670863114109018)
+    why unable to continue?
+    [reply to halibusal msg=1532643334768693409]
+

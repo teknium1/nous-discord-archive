@@ -1,0 +1,35 @@
+# Thread 'Chatto Platform Adapter' in forum #plugins-skills-and-skins
+# thread_id=1532634404076388488 forum_id=1485392832154832906
+# Started 2026-07-31T08:51:51.443511+00:00
+
+[2026-07-31T06:21:56.902000+00:00] kaihanga (id=1532634404076388488)
+    Connect your self-hosted Chatto server to Hermes Agent. Chat with your agent through rooms, DMs, and threads — all from your Chatto instance.
+    
+    **Install**
+    ```hermes plugins install jrimmer/hermes-chatto-plugin```
+    
+    **Features**
+    - Realtime WebSocket — binary protobuf codec for Chatto's realtime protocol (no external protobuf library needed — pure stdlib)
+    - ConnectRPC REST API — JSON over HTTP for messages, room discovery, and user lookup
+    - Thread support — auto-creates threads for replies in rooms, proper threadRootEventId handling for thread replies
+    - DM support — DMs always get a response, no threading
+    - Mention filtering — require_mention (default true) with free_response_channels for rooms where the bot responds without being tagged
+    - Dynamic room discovery — automatically joins new rooms without restarting the gateway (watches room_created / user_joined_room events)
+    - Session resilience — handles session_terminated (force reconnect), message_retracted (skip deleted messages), user_left_room (stop watching)
+    - Presence broadcasting — keeps the bot showing as online
+    - Cron delivery — standalone sender works outside the gateway process
+    - Zero core changes — pure plugin, no modifications to Hermes internals
+    
+    Tested against Chatto v0.4.19 · Protocol version 1 (binary protobuf over WebSocket)
+    
+    **Links**
+    Repo: https://github.com/jrimmer/hermes-chatto-plugin
+    Issue tracker: https://github.com/jrimmer/hermes-chatto-plugin/issues
+    Chatto: https://github.com/chattocorp/chatto
+    [embed] GitHub - jrimmer/hermes-chatto-plugin: Chatto platform adapter plug... https://github.com/jrimmer/hermes-chatto-plugin
+    [embed] Issues · jrimmer/hermes-chatto-plugin https://github.com/jrimmer/hermes-chatto-plugin/issues
+    [embed] GitHub - chattocorp/chatto: A fully-featured team and group chat ap... https://github.com/chattocorp/chatto
+
+[2026-07-31T06:22:30.909000+00:00] kaihanga (id=1532634546711822378)
+    Chatto Platform Adapter
+

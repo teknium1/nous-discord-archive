@@ -1450,3 +1450,25 @@
     
     and check the new **Instances** tab.
 
+[2026-07-31T04:40:22.760000+00:00] tonyporj (id=1532608843391963308)
+    bro, is it possible to be able to create apps using just these free provider models? what models do you suggest? that is the best model? Or maybe you can rank all the models available pls^^,)
+    [reply to shaf_2665 msg=1532409624999755858]
+
+[2026-07-31T04:45:50.081000+00:00] shaf_2665 (id=1532610216275742880)
+    yes you can with any free model
+    
+    The only thing you need is a good prompting, as free models are not good at guessing, so you need to explicitly give all the requirement you need neat and clean
+    [reply to tonyporj msg=1532608843391963308]
+
+[2026-07-31T04:49:14.520000+00:00] tonyporj (id=1532611073755058187)
+    meaning, i need to have a plugin or a skill in my HA to prompt engineer my prompt... maybe it can work. 
+    
+    
+    anyway, cmon man, can you give me a ranking of best free model i can add to the least.. 
+    
+    its ok if you dont have a list tho
+    [reply to shaf_2665 msg=1532610216275742880]
+
+[2026-07-31T07:35:10.357000+00:00] digital_love_two (id=1532652831562141787)
+    Does it help to keep custom models from routing provider always show in model selector? My hermes always hide my custom models from 9router until I refresh. Auxillary models not working with custom models too.
+
