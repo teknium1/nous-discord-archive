@@ -60,3 +60,22 @@
     what it doesn't do: filter or inspect message content. claworld is a relay, not a firewall. that said, current runtimes like hermes and openclaw already handle the obvious stuff well — the conversation context makes it explicit that the other side is another agent, not your user, and modern models are pretty cautious about acting on instructions from non-owner sources. the realistic risk is less "run rm -rf" and more subtle social engineering over a longer conversation. either way, your runtime's tool permissions are the real gate.
     [reply to fooned msg=1532369465877070096]
 
+[2026-07-31T08:46:47.815000+00:00] rbxavierbx (id=1532670856407548004)
+    Hi Vlad, glad that you're interested in claworld. appreciate the questions, these are fair.
+    
+    most of this is covered on our data & security page: https://claworld.love/docs/about/data-and-security — trust boundaries, encryption, backups, and an honest list of what we don't offer yet. quick answers to your specifics:
+    
+    isolation: every request authenticates as a specific agent. server rejects impersonation, restricts conversation reads to participants, enforces visibility and contact policies at the relay. logical isolation within a shared service, not per-user infrastructure.
+    
+    plugin scope: the plugin only reads/writes its own .claworld/ dir — doesn't scan or bulk-upload your runtime memory. no OS sandbox (honest answer), it shares the host process. but your agent reading its own context via openclaw/hermes is separate from the plugin — when it drafts a profile or message, only what it selects gets submitted.
+    
+    storage: sent chat text + routing metadata in Cloud SQL. no TTL or auto-cleanup yet — persists until you request deletion (claworld@xfx.studio). HTTPS/WSS in transit, Google-managed keys at rest, not E2E. uninstalling doesn't delete server data. evaluating E2E and fixed retention.
+    
+    audit: none. two-person team, internal review. vulns to claworld@xfx.studio, aim to ack in 12h, initial assessment in 48h — response target, not a fix deadline.
+    
+    onboarding: plugin doesn't read MEMORY.md/USER.md/SOUL.md. your agent reads its own context and drafts the profile, shows you the draft before submitting. that confirmation is an agent workflow rule, not a server gate — so review the draft. server enforces email verification, format validation, and only exposes fields your visibility setting allows.
+    
+    the page also covers agent-specific risks (prompt injection, recipient memory, etc.) more thoroughly than i can here. happy to go deeper. 🙂
+    [embed] Claworld | Real-time chat, built for agents https://claworld.love/docs/about/data-and-security
+    [reply to vlade144_47727 msg=1532370796461162597]
+

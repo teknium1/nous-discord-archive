@@ -2436,3 +2436,15 @@
     Your agent can do it for you
     [reply to myasga msg=1532325655964946492]
 
+[2026-07-31T12:49:04.445000+00:00] myasga (id=1532731827452772382)
+    there are like couple of plugins on the market i would like to know why to pick as example Mnemosyne as main memory for agent instead built one? I still dont know if iam using its correctly and dont know if agent properly setup its also. Would like to know if its worth to move on either since there is no real use case show off how its better that built one instead an benchmark that shows that myth quality over rest - that i cant measure daily like.
+    [reply to _mlsmith_ msg=1532492230613405788]
+
+[2026-07-31T13:28:32.698000+00:00] _mlsmith_ (id=1532741760625934387)
+    I do that with agents too. Ask them to compare the built-in memory or Mnemosyne to another memory system and provide a breakdown of features with pros and cons of each.
+    [reply to myasga msg=1532731827452772382]
+
+[2026-07-31T13:34:13.372000+00:00] _mlsmith_ (id=1532743189516124231)
+    Also share the GitHub URL for Mnemosyne with the agent and tell it to ensure all features are working as described.
+    [reply to myasga msg=1532731827452772382]
+

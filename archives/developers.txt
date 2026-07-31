@@ -53244,3 +53244,26 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     lmk if this is not the right channel to ask this question 🙂
 
+[2026-07-31T09:29:36.676000+00:00] realadolan (id=1532681630991388712)
+    The LLM does not have (or see/store) the credentials. It just uses whatever authentication is already present in the environment where gh is running. I don't see any particular problem in doing so, unless you don't trust your LLM with the output it gonna spew
+    [reply to 5amyak_ msg=1532667745651392603]
+
+[2026-07-31T09:37:01.414000+00:00] 5amyak_ (id=1532683496357757108)
+    which is through the CLI route right? The PAT would be stored in a .env file somewhere and as far I've seen, agents sometimes tend to read those files too.
+    [reply to realadolan msg=1532681630991388712]
+
+[2026-07-31T09:52:23.905000+00:00] realadolan (id=1532687365565321277)
+    cli, yes. gh is authenticated on system level, not project specific, so it won't read it
+    [reply to 5amyak_ msg=1532683496357757108]
+
+[2026-07-31T10:05:48.215000+00:00] hyqqx (id=1532690739085967390)
+    Exactly
+    [reply to realadolan msg=1532687365565321277]
+
+[2026-07-31T10:18:59.912000+00:00] egilewski (id=1532694059703861391)
+    It's not. Anyway, PAT allows to narrow access, and the solution for .env files is https://discord.com/channels/1053877538025386074/1490858802726043759/1530288196204892161
+    [reply to 5amyak_ msg=1532667745651392603]
+
+[2026-07-31T13:51:45.023000+00:00] flash_speed3412 (id=1532747600460251156)
+    https://github.com/NousResearch/hermes-agent/pull/73880 - fix(desktop): rearm voice conversation after playback
+

@@ -1472,3 +1472,29 @@
 [2026-07-31T07:35:10.357000+00:00] digital_love_two (id=1532652831562141787)
     Does it help to keep custom models from routing provider always show in model selector? My hermes always hide my custom models from 9router until I refresh. Auxillary models not working with custom models too.
 
+[2026-07-31T10:53:51.488000+00:00] irteza080 (id=1532702832409448543)
+    Ooooooo i like that!!
+    [reply to shaf_2665 msg=1532550356419215461]
+
+[2026-07-31T11:03:05.914000+00:00] tonyporj (id=1532705157840769104)
+    why is it too difficult to install in windows TT
+
+[2026-07-31T11:03:58.984000+00:00] shaf_2665 (id=1532705380432609462)
+    You can just use python router.py command
+
+[2026-07-31T11:06:25.909000+00:00] tonyporj (id=1532705996680593551)
+    not super techie but how do i do that? wait ill check on repo. `python router.py`
+    [reply to shaf_2665 msg=1532705380432609462]
+
+[2026-07-31T11:07:17.501000+00:00] shaf_2665 (id=1532706213073125447)
+    Or you can also check the website 
+    
+    https://hermes-router.vercel.app/
+    [embed] hermes-router https://hermes-router.vercel.app/
+
+[2026-07-31T11:07:55.874000+00:00] tonyporj (id=1532706374021156965)
+    ahh i see okok thankyou. ill update you^^
+
+[2026-07-31T11:28:22.802000+00:00] tonyporj (id=1532711520130043978)
+    Ive read it, seems like ill be going with the docker path
+

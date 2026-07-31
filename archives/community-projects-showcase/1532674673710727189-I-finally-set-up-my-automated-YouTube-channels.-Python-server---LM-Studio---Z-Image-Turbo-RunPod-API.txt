@@ -1,0 +1,18 @@
+# Thread 'I finally set up my automated YouTube channels. Python server > LM Studio > Z-Image-Turbo RunPod API' in forum #community-projects-showcase
+# thread_id=1532674673710727189 forum_id=1316137596535177246
+# Started 2026-07-31T13:59:40.420889+00:00
+
+[2026-07-31T09:01:57.931000+00:00] drgekoz (id=1532674673710727189)
+    There's a LOT more to this.
+    
+    Maybe when I reach 50 subs on my latest YouTube channel, I'll ask my Hermes agent to drop the entire workflow dump so you guys can use it!
+    
+    -----
+    
+    Check out the results here:
+    
+    https://www.youtube.com/@The_Crayon_Diet
+    https://www.youtube.com/@SplitNode
+    [embed] The Crayon Diet https://www.youtube.com/@The_Crayon_Diet
+    [embed] Split Node https://www.youtube.com/@SplitNode
+

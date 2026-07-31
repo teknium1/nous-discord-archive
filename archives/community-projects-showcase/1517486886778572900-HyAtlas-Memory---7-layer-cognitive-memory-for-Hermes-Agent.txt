@@ -344,3 +344,9 @@
     why unable to continue?
     [reply to halibusal msg=1532643334768693409]
 
+[2026-07-31T13:36:31.932000+00:00] halibusal (id=1532743770678755458)
+    Personal reasons. It can work great in tandem with personal memory systems (what you built) but it’s a lot to learn about. It’s been about 4-5 months of work for me
+
+[2026-07-31T13:36:56.190000+00:00] halibusal (id=1532743872424316961)
+    Just barely ready for benchmarking I’m running it on local models right now, hopefully will have something soon
+
