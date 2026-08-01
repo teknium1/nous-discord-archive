@@ -20,3 +20,6 @@
     
     THANK YOU
 
+[2026-08-01T01:09:52.567000+00:00] .weequet (id=1532918256388669590)
+    V2 is out now. In cross-day scenarios, it will not only let your agent know how much time has passed but also the exact date
+

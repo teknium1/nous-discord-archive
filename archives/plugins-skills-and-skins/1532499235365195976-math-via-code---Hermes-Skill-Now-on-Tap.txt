@@ -24,3 +24,9 @@
     https://github.com/tommulkins/hermes-skill-math-via-code
     [embed] GitHub - tommulkins/hermes-skill-math-via-code: Hermes Agent skill:... https://github.com/tommulkins/hermes-skill-math-via-code
 
+[2026-08-01T00:20:38.602000+00:00] jimpickens3203 (id=1532905866561458177)
+    I mean at that point just use wolfram MCP
+
+[2026-08-01T01:21:22.571000+00:00] tomrevo.x (id=1532921150475206818)
+    Hermes already has code execution but it needs a bit of a nudge to use it for math. Found this out the hard way using it for company financials.
+

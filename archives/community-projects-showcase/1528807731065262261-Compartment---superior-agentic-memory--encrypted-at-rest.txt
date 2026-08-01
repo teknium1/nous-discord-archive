@@ -153,3 +153,11 @@
     
     However I am not committed to this - if you have a better idea let me know and I'll implement it. I think for offline use, this is the best way but I don't care.
 
+[2026-08-01T00:24:18.093000+00:00] maxfreedompollard (id=1532906787173437451)
+    "Also, do you see backup retention and expiry as entirely the operator’s responsibility, or as something Compartment may eventually help manage?"
+    
+    I want nothing to be the operator's responsibility, the operator has options, not responsibility. I add as much options as possible while removing as much responsibility as possible, like any good program. I also stay TF out of the way, everything GUI is relegated to a small top bar app on mac and windows and a minimal background app in Linux. I feel like a lot of developers act like their app is the only app a person will ever use. For example, most of my competitors require extensive tweaking from the user, and constant upkeep - as if a user is supposed to care about the app as much as the developer, which is absurd. In the past, I often installed third party MCP memory only to find out that it just stopped working for reasons unknown, or that some part was not installed properly as it required my actions, or some other nonsense. 
+    
+    Compartment is memory + retrieval, no aspect of it should require user intervention besides initial install. Imagine if you had to manually choose to remember everything yourself in your day to day life. You never know what will be relevant.
+    [reply to jnwlsn__62097 msg=1532389033429303437]
+

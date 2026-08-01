@@ -53315,3 +53315,76 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     github.com/NousResearch/hermes-agent-self-evolution/pull/162
 
+[2026-07-31T19:26:22.669000+00:00] maxfreedompollard (id=1532831812211048582)
+    Some PRs on on Hermes Agent, nothing major. Did one refactor, going to check out refactors next.
+    
+    Skills rollback buried your skill one level inside itself after a partial extract, then reported "state restored"
+    https://github.com/NousResearch/hermes-agent/pull/75229
+    
+    A transient read error on auth.json (EMFILE, EACCES, EIO) was classified as corruption and returned an empty store, one save away from wiping every credential
+    https://github.com/NousResearch/hermes-agent/pull/75258
+    
+    A steer landing mid-compression killed the turn and sent you hunting disk space that was never the problem
+    https://github.com/NousResearch/hermes-agent/pull/75264
+    
+    Answering "Always Approve" on /clear told you the preference was saved even when the config write had failed
+    https://github.com/NousResearch/hermes-agent/pull/75261
+    
+    /background was queued behind the very turn it was supposed to run alongside, so it only started once that turn had finished
+    https://github.com/NousResearch/hermes-agent/pull/75267
+    
+    An autouse fixture got redefined at the bottom of a 3,500-line test file, silently dropping credential isolation for all 158 tests in the module, plus a guard so it cannot happen again
+    https://github.com/NousResearch/hermes-agent/pull/75272
+    
+    The Yuanbao forwarded-records loading heartbeat was built as a coroutine and dropped without ever being awaited
+    https://github.com/NousResearch/hermes-agent/pull/75233
+
+[2026-07-31T19:58:24.591000+00:00] teknium (id=1532839873336184852)
+    That’s the way i like it
+    [reply to maxfreedompollard msg=1532828830501179503]
+
+[2026-07-31T19:58:30.809000+00:00] teknium (id=1532839899416494141)
+    Traveling for a few days though
+
+[2026-07-31T20:24:01.924000+00:00] .omgg (id=1532846321378005002)
+    nice https://github.com/NousResearch/hermes-agent/pull/75623 teknium sweeper didnt ask me fix anything yet 🙂
+
+[2026-07-31T21:04:10.814000+00:00] .s0uthpaw (id=1532856424995098918)
+
+[2026-07-31T21:04:11.443000+00:00] .s0uthpaw (id=1532856427633311774)
+    Doubled up
+
+[2026-07-31T21:17:12.913000+00:00] realadolan (id=1532859705356193872)
+    I figured what it was
+    [reply to .s0uthpaw msg=1532856424995098918]
+
+[2026-07-31T21:17:30.178000+00:00] realadolan (id=1532859777770852575)
+    There's a new "plugins" section and "Gatewin pill" (a custom plugin) was enabled by default
+
+[2026-07-31T21:18:25.329000+00:00] realadolan (id=1532860009090781245)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1532860009061548203/image.png?ex=6a6e62a1&is=6a6d1121&hm=d715ec4b2a018e740e9b99957a2b2101a2be70dd3795ab639178a593676bbaaf&
+
+[2026-07-31T21:25:49.971000+00:00] maxfreedompollard (id=1532861874054500374)
+    Is that intentional or an error?
+
+[2026-07-31T21:28:26.321000+00:00] naroh091 (id=1532862529833795823)
+    Hi there! Today I was planning on
+
+[2026-07-31T21:46:59.488000+00:00] fooned (id=1532867198794858556)
+    Will this be in a update then?
+    [reply to teknium msg=1532839873336184852]
+
+[2026-07-31T21:48:55.811000+00:00] gottz.de (id=1532867686688882949)
+    Enjoy your off-time! You deserve it.
+    [reply to teknium msg=1532839899416494141]
+
+[2026-07-31T21:50:36.130000+00:00] schrauberhirn (id=1532868107457265804)
+    Hi guys, this is my first code comit (try). Pls be kind with feedback https://github.com/NousResearch/hermes-agent/pull/75691
+
+[2026-07-31T22:20:27.828000+00:00] gottz.de (id=1532875622383223004)
+    just managed to reduce cost of my triage by 70% while also bumping quality.
+    that's why it's always important to re-check harnesses over-time, to see what works and what doesn't.
+
+[2026-08-01T01:29:57.707000+00:00] remintoscar (id=1532923311112060988)
+    https://github.com/NousResearch/hermes-agent/pull/74542
+
