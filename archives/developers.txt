@@ -53513,3 +53513,53 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Yeah, yeah. I usually do that. I had no idea that this PR request was for p0.
     [reply to drexux msg=1533087623755857982]
 
+[2026-08-01T14:30:37.585000+00:00] abdullahx990 (id=1533119771799978074)
+    each time I update it I get this error
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1533119771065974854/image.png?ex=6a6f548d&is=6a6e030d&hm=79b8c2719d46a2c406eb6e72d0bcc1703386011795d7ce9f044b0a1d3b2de4e3&
+    [attachment] bootstrap-installer.log https://cdn.discordapp.com/attachments/1491258766648283238/1533119771501920267/bootstrap-installer.log?ex=6a6f548d&is=6a6e030d&hm=fc2b7040edaadcdbb216529f9d6d042b8a319b2d47e2c57ea2c40ce635df179a&
+
+[2026-08-01T14:39:48.513000+00:00] .omgg (id=1533122082559234140)
+    run in cmd "hermes update"
+
+[2026-08-01T14:47:42.898000+00:00] drexux (id=1533124072274399282)
+    fix(webhook): stop dropping events whose route script prints non-object JSON 
+    https://github.com/NousResearch/hermes-agent/pull/76170
+    
+    fix(state): keep the pinned "keep" flag when importing sessions
+    https://github.com/NousResearch/hermes-agent/pull/76206
+
+[2026-08-01T14:53:15.404000+00:00] alluring_kiwi_37447 (id=1533125466905510018)
+    agentscan — free local security scanner, now covers Hermes Agent
+    
+    One command audits your Hermes install for exposure (API_SERVER_HOST), missing API_SERVER_KEY, SSRF (allow_private_urls), Tirith fail-open, plaintext secrets, and risky skills — then grades it A–F. Runs locally, zero deps, reads only your config:
+    
+    npx @aayushcodebook/agentscan
+    
+    Cross-agent (OpenClaw + Hermes) from one tool. Open source — feedback and false-positive reports welcome: https://github.com/aayushcodebook/agentscan
+
+[2026-08-01T15:59:15.583000+00:00] abdullahx990 (id=1533142077099999523)
+    done
+    [reply to .omgg msg=1533122082559234140]
+
+[2026-08-01T16:00:13.245000+00:00] .omgg (id=1533142318951956520)
+    so you should be updated now and be able to use the desktop until they push some fixes you can update via this method in the meantime if it already hasnt been fixed
+    [reply to abdullahx990 msg=1533142077099999523]
+
+[2026-08-01T16:20:02.334000+00:00] abdullahx990 (id=1533147306352709703)
+    yup that what I'll do even if they fix it
+    [reply to .omgg msg=1533142318951956520]
+
+[2026-08-01T16:20:25.441000+00:00] abdullahx990 (id=1533147403270619186)
+    Is there a channel to post PRs?
+    https://github.com/NousResearch/hermes-agent/pull/76284
+
+[2026-08-01T17:10:52.677000+00:00] thatzeraphim (id=1533160100418687076)
+    Hello requesting for PR reviews
+    
+    https://github.com/NousResearch/hermes-agent/pull/70925
+    https://github.com/NousResearch/hermes-agent/pull/75213
+    https://github.com/NousResearch/hermes-agent/pull/75301
+
+[2026-08-01T18:11:48.657000+00:00] ethanhere1 (id=1533175434710089869)
+    hey guys!  new to contributing to open source and really enjoy Hermes, been looking at issues and contributing but a bit overwhelmed  with the 5K+ issues and PRs.  If anyone has a particular issue they'd like help with or have any advice on some good first issues to look for that would be awesome!
+

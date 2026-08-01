@@ -35,3 +35,24 @@
 [2026-08-01T09:30:01.647000+00:00] jaixii (id=1533044123592822795)
     One of the biggest updates ever today. 14+ hours work. Optimal for Hermes agents to save tokens and be more efficient
 
+[2026-08-01T14:57:35.059000+00:00] maxfreedompollard (id=1533126555977519245)
+    Creator of Compartment here. I can see you made your memory a couple days ago, I launched Compartment vector memory like a week ago. 
+    
+    Would you like to combine them and work on them together? I feel like mine is better in terms of actual function and one-click install-run-stay, and you have the better website and quite a similar product. Together we could push our vector memory to a much wider audience. We can merge your github into mine, and you can retain control of the website, after hashing out details. I don't do contracts, but it being my Github + your website makes it convenient for both of us to stay together but not inseparable, which should be enough for a mutually beneficial partnership.
+
+[2026-08-01T15:04:55.080000+00:00] maxfreedompollard (id=1533128401559224490)
+    Anyway some thoughts:
+    
+    I don't get "retention" and "recency" as separate scoring terms. Ebbinghaus retention is already a function of elapsed time plus reinforcement. Scoring both double-weights recency.
+    
+    "Deterministic offline embedder fallback." A deterministic hash-based embedder produces vectors with no semantic structure. Recall silently degrades to noise while still returning confident-looking score breakdowns and citations. I get it's a fallback, but why does it need a fallback?
+    
+    The headline says "for Hermes" and nothing in the body is Hermes. Your integration list is Claude Code, Cursor, Cline, Zed, Windsurf. I don't see Hermes integration. 
+    
+    "nothing hard-deleted" vs. "governance (pin/forget/correct...)" and "privacy receipts." A forget that never deletes is misnamed. A coding-agent memory will ingest .env values, tokens, and keys by accident. If nothing is ever hard-deleted, that secret is permanent and still recoverable from the DB, and AES-256 at rest does not help because your own app holds the key, and anything targetting this will be AI so it won't even confuse or delay.
+    
+    On branding: "Beats Obsidian in every imaginable metric" is a category error. Obsidian has iOS and Android apps, a WYSIWYG editor, Canvas, and thousands of community plugins.  We're competing with Mem0, which is still big with 24mil in funding.
+
+[2026-08-01T15:06:32.874000+00:00] maxfreedompollard (id=1533128811737251974)
+    Also put words on the nodes man. Those are just circles.
+

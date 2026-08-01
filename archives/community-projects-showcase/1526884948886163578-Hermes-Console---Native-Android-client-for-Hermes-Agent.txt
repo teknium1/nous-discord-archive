@@ -240,3 +240,16 @@
 [2026-07-30T02:13:38.469000+00:00] nat2r (id=1532209527653404824)
     Silly suggestion, but I would completely rip all the themes that are in the Hermes Desktop application so that users can mirror their experiences 1:1
 
+[2026-08-01T15:29:57.305000+00:00] xpeta (id=1533134702347686073)
+    Hi everyone! 
+    
+    The new Hermes Console v1.2.2 (build 909) is now available for testing, with several improvements to the interface, streaming, voice mode, widgets, conversation management, and Android sharing.
+    
+    I’m also continuing to work on more features and improvements, including several of the suggestions you’ve shared here on Discord. Thanks again for all your feedback and support 
+    
+    it’s helping make the app much better!
+
+[2026-08-01T15:31:45.112000+00:00] xpeta (id=1533135154523013130)
+    Not a silly suggestion at all! I’ll add the Hermes Desktop themes in the next version so users can have a more consistent experience across both apps. Thanks for the suggestion!
+    [reply to nat2r msg=1532209527653404824]
+

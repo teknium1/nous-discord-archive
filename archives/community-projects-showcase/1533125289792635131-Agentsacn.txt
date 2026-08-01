@@ -1,0 +1,14 @@
+# Thread 'Agentsacn' in forum #community-projects-showcase
+# thread_id=1533125289792635131 forum_id=1316137596535177246
+# Started 2026-08-01T19:04:57.349350+00:00
+
+[2026-08-01T14:52:33.177000+00:00] alluring_kiwi_37447 (id=1533125289792635131)
+    agentscan — free local security scanner, now covers Hermes Agent
+    
+    One command audits your Hermes install for exposure (API_SERVER_HOST), missing API_SERVER_KEY, SSRF (allow_private_urls), Tirith fail-open, plaintext secrets, and risky skills — then grades it A–F. Runs locally, zero deps, reads only your config:
+    
+    npx @aayushcodebook/agentscan
+    
+    Cross-agent (OpenClaw + Hermes) from one tool. Open source — feedback and false-positive reports welcome: https://github.com/aayushcodebook/agentscan
+    [embed] GitHub - aayushcodebook/agentscan: Cross-agent security posture sca... https://github.com/aayushcodebook/agentscan
+

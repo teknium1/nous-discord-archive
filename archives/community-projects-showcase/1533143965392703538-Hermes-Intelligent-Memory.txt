@@ -1,0 +1,22 @@
+# Thread 'Hermes Intelligent Memory' in forum #community-projects-showcase
+# thread_id=1533143965392703538 forum_id=1316137596535177246
+# Started 2026-08-01T19:04:56.925534+00:00
+
+[2026-08-01T16:06:45.787000+00:00] abdullahx990 (id=1533143965392703538)
+    Hey everyone! 👋 
+    
+    I'd like to share **Hermes Intelligent Memory** (`hermes-intelligent-memory`), a local-first, Arabic-aware, and multilingual `MemoryProvider` plugin engineered specifically for the **Hermes Agent** ecosystem.
+    
+    ### ✨ Key Architectural Highlights:
+    - **⚡ Local-First & Deterministic (Zero-Latency Hot Path):** Operates 100% locally via SQLite (`WAL` mode) using FTS5 and trigram indexing. Cloud inference is kept off the critical path to guarantee zero-latency memory prefetching.
+    - **🇸🇦 Multilingual & Arabic First-Class Support:** Built with advanced text normalization, token overlap, and character trigram indexing for high-precision Arabic and mixed-language substring recall.
+    - **📜 Append-Only Provenance & Lifecycle Management:** Tracks complete memory lineage (`active`, `superseded`, `archived`, `rejected`) with immutable audit trails.
+    - **🔄 Automatic Projections Sync:** High-importance global facts automatically materialize into `MEMORY.md` and `USER.md` markdown projections with atomic writes and safety backups.
+    - **🛠️ Diagnostics Included:** Ships with built-in health diagnostics (`doctor.py`) and automated setup scripts.
+    
+    🔗 **GitHub Repository:**
+    https://github.com/hoysama/hermes-intelligent-memory
+    
+    Feedback and contributions are welcome! 🚀✨
+    [embed] GitHub - hoysama/hermes-intelligent-memory https://github.com/hoysama/hermes-intelligent-memory
+
