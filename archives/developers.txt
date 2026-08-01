@@ -53433,3 +53433,83 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     But today, you were both lucky and skilled—you got more than 10 commits merged.
     [reply to baophan0123 msg=1533023509695959180]
 
+[2026-08-01T08:17:54.122000+00:00] baophan0123 (id=1533025972637405264)
+    Thanks ser ! but still learning from you guys though 🫡
+    [reply to autumnn5389 msg=1533024979514294292]
+
+[2026-08-01T08:18:26.114000+00:00] autumnn5389 (id=1533026106821709867)
+    oke bro
+    [reply to baophan0123 msg=1533025972637405264]
+
+[2026-08-01T08:19:34.337000+00:00] baophan0123 (id=1533026392969711727)
+    sure ser 🫂
+    [reply to autumnn5389 msg=1533026106821709867]
+
+[2026-08-01T08:29:33.494000+00:00] autumnn5389 (id=1533028906016440391)
+    You deserve to receive role dev
+    [reply to baophan0123 msg=1533022390173433967]
+
+[2026-08-01T08:42:18.331000+00:00] asshole1678 (id=1533032113975201884)
+    Hold the phone I'm making Linux on android
+    [attachment] Screenshot_2026-08-01-01-40-58-73_16760760d4fabf65d9ef40d095f6e1cc.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1533032113312632932/Screenshot_2026-08-01-01-40-58-73_16760760d4fabf65d9ef40d095f6e1cc.jpg?ex=6a6f02ea&is=6a6db16a&hm=72241ca0946fd399e977f03ebfae3424516aa79320c08e7d538d3add544b340f&
+    [attachment] Screenshot_2026-08-01-01-40-34-53_b783bf344239542886fee7b48fa4b892.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1533032113774002280/Screenshot_2026-08-01-01-40-34-53_b783bf344239542886fee7b48fa4b892.jpg?ex=6a6f02ea&is=6a6db16a&hm=85adf08b1dd8544fc9c21f38153c3ab72359f6409c8ea5c463a657f0b10908a4&
+
+[2026-08-01T09:40:15.951000+00:00] baophan0123 (id=1533046700170674228)
+    hope I can get it soon bro, thank you!
+    [reply to autumnn5389 msg=1533028906016440391]
+
+[2026-08-01T10:17:24.087000+00:00] ct0547 (id=1533056045650284645)
+    Got some PRs ready
+    
+    feat(skills): add profile-aware skills.auto_load- #74060
+    https://github.com/NousResearch/hermes-agent/pull/74060 
+    
+    feat(mcp): expose tool annotations in Desktop discovery - this is a first step to a Desktop update for better MCP tool permissions control
+    https://github.com/NousResearch/hermes-agent/pull/74555
+    
+    feat(update): CLI release track infrastructure- #74837
+    https://github.com/NousResearch/hermes-agent/pull/74837
+    
+    feat(desktop): release and fast update tracks - this requires #74837 first
+    https://github.com/NousResearch/hermes-agent/pull/74838
+    
+    feat(tts): add configurable pronunciation substitutions- #73966
+    #73966
+    https://github.com/NousResearch/hermes-agent/pull/73966
+    
+    feat(cron): add fresh configurable prompt timestamps- #73967
+    #73967
+    https://github.com/NousResearch/hermes-agent/pull/73967
+
+[2026-08-01T10:31:31.790000+00:00] .omgg (id=1533059601174499330)
+    perf(agent): memoize send-path tool-call argument canonicalization - #76098 https://github.com/NousResearch/hermes-agent/pull/76098 - can someone see if they get the same results  500 tool calls x 2KB args: OLD 1056.1ms -> NEW 57.6ms (18.3x); 500 x 16KB: OLD 5744.2ms -> NEW 79.3ms (72.5x); 250 x 16KB: 1403.2ms -> 23.7ms (59.3x); 100 x 2KB: 43.5ms -> 2.6ms (16.6x). Final-iteration cost at 500x16KB drops from 24.7ms to ~0.2ms — real latency added to every API call in long sessions, now flat.
+
+[2026-08-01T11:37:18.239000+00:00] dias4761 (id=1533076153781194792)
+    https://github.com/NousResearch/hermes-agent/pull/76121  :fix(caching): honor prompt_caching.cache_ttl=off on MoA and fallback stub paths- #76121
+    FIX:prompt_caching.cache_ttl disable is bypassed on stub-resolved cache-plan paths (MoA aggregator/advisors, auxiliary fallbacks)
+     #76085
+
+[2026-08-01T12:00:08.528000+00:00] drexux (id=1533081901190090854)
+    PRs labeled p0 or p1 are already getting reviewed within 2–3 days. I think it would be better to post the p2 and p3 PRs here <:Prayge:1151275585000185968> <:thinksmart:1151275543333970013>
+    [reply to dias4761 msg=1533076153781194792]
+
+[2026-08-01T12:14:03.428000+00:00] dias4761 (id=1533085403014496267)
+    The problem itself is p2. But I think the solution I came up with was more complicated than usual, lol.
+    [reply to drexux msg=1533081901190090854]
+
+[2026-08-01T12:14:19.902000+00:00] dias4761 (id=1533085472111198329)
+    but tysm for warning me
+
+[2026-08-01T12:22:52.894000+00:00] drexux (id=1533087623755857982)
+    Ah no, not a warning at all, just a quick suggestion. My P0 and P1 PRs get merged 100% of the time, but the ones I drop here are usually P2 or P3. They still get merged whenever Teknium has the bandwidth, so it all works out great.  Respect for your work bro  <:xqcL:1151275556990631946>
+    [reply to dias4761 msg=1533085472111198329]
+
+[2026-08-01T12:23:14.206000+00:00] drexux (id=1533087713144869045)
+    fix(update): claim the four shipped modules missing from the first-party roster 
+    
+    https://github.com/NousResearch/hermes-agent/pull/76143
+
+[2026-08-01T12:24:08.572000+00:00] dias4761 (id=1533087941172396124)
+    Yeah, yeah. I usually do that. I had no idea that this PR request was for p0.
+    [reply to drexux msg=1533087623755857982]
+

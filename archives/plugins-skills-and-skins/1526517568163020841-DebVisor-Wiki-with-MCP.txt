@@ -23,3 +23,8 @@
     It has practically received a full rewrite, from sqlite to postgres , compressed content, caches, ongoing recategorization, and a higher rate of collecting.
     [attachment] image.png https://cdn.discordapp.com/attachments/1526517568163020841/1531250582122135613/image.png?ex=6a6887bc&is=6a67363c&hm=2d05b777ace1e132d8e9e5f6a72e7a2e4b8cc8c6f0e1ffc513a0c199f91a1883&
 
+[2026-08-01T08:48:34.697000+00:00] undifined. (id=1533033692568485978)
+    was about to celebrate 1mil, but already at 2
+    lots of improvements made
+    [attachment] image.png https://cdn.discordapp.com/attachments/1526517568163020841/1533033692329541793/image.png?ex=6a6f0462&is=6a6db2e2&hm=f2c53fce9e7820873349e6cca579becf552d4cfcd5dbefb660cf7d51eea65e21&
+
