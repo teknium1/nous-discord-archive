@@ -1,0 +1,20 @@
+# Thread 'Epiphany - one local memory shared across all your AI tools (Hermes, Claude, Grok, Cursor, Warp)' in forum #community-projects-showcase
+# thread_id=1532954101325889707 forum_id=1316137596535177246
+# Started 2026-08-01T08:16:13.845120+00:00
+
+[2026-08-01T03:32:18.666000+00:00] gatsvghost (id=1532954101325889707)
+    Hey all, I built Epiphany and wanted to share it here since this channel clearly loves agent memory.
+    
+    Most memory tools live inside one agent. Epiphany is one memory that ALL your tools share: Hermes, Claude, Grok, Gemini, Cursor, and Warp all read and write the same brain through MCP. Tell one, the others already know.
+    
+    Local-first: it's a SQLite file on your own machine, embeddings run on-device, nothing leaves your box. No account, no cloud.
+    Reasoning graph, not bullet points: thoughts carry typed connections (because, builds_on, contradicts), so when you ask "why" it walks the chain back to the decision, not just a matching fact.
+    Hermes support built in: "epiphany connect hermes" wires it into ~/.hermes via hermes mcp add.
+    Never lose a session: a background watcher files your session logs into memory automatically, even ones that crashed.
+    MIT, just went live on npm and the MCP Registry.
+    Install: npm i -g epiphany-mcp
+    Code: github.com/GATSV-tech/epiphany
+    
+    Would love feedback, especially from folks who've built the other memory tools in here. Happy to answer anything.
+    [attachment] download.jpeg https://cdn.discordapp.com/attachments/1532954101325889707/1532954101464305856/download.jpeg?ex=6a6eba42&is=6a6d68c2&hm=b5a63800e356425217b275dca832eb5377711e9b7c0ac2cce065b03b4a349197&
+

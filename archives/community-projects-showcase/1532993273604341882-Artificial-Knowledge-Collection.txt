@@ -1,0 +1,26 @@
+# Thread 'Artificial Knowledge Collection' in forum #community-projects-showcase
+# thread_id=1532993273604341882 forum_id=1316137596535177246
+# Started 2026-08-01T08:16:12.827113+00:00
+
+[2026-08-01T06:07:58.065000+00:00] maxfreedompollard (id=1532993273604341882)
+    Intelligence is the creation of knowledge from knowledge. Anyone who builds or works with AI needs a solid body of knowledge to build on and to check its output against. This repository exists to collect exactly that: knowledge that is cleaned, rare, or otherwise hard to come by, each body of it put into one ready-to-use file. This is artificial knowledge, knowledge gathered for the making of, and utilization by, artificial intelligence.
+    
+    These datasets are great for offline AI, AI training/creation, and other agentic AI usages. I designed it for my own purposes with Hermes Agent. 
+    
+    The founding common-sense knowledge base: 159,722 human-written concepts and the logical relationships between them, the largest body of common sense ever built by hand. This is the knowledge base from the Cyc program, the decades-long effort to teach a computer the ordinary things a person knows by the age of ten. It matters because this is the only uncorrupted copy in circulation. The mirrors that survive are deeply corrupted and salted with spam; this is the clean edition. It was written by people, one fact at a time, before generative AI existed.
+    
+    WordNet: Princeton's hand-built map of the English language: 117,791 meanings, each with a definition and its links to other meanings. 
+    
+    The human core of ConceptNet: 226,284 everyday facts typed in plain English by volunteers.
+    
+    Physical constants: The CODATA 2022 values, the SI prefixes, and the exact unit conversions, 415 records. The sky and the elements. Geography facts, most from CIA World Factbook.
+    
+    Human word norms. How people actually hold 85,889 words (how concrete each is, how early it is learned, how strongly one word calls another to mind), plus 72,089 measured association pairs. 
+    
+    AKC-Eval. 11,250 yes or no reasoning questions whose every answer is provable from the knowledge itself. A test of reasoning grounded in human-checked fact rather than model output.
+    
+    github.com/MaxFreedomPollard/artificial-knowledge-collection-6.0
+
+[2026-08-01T06:09:00.705000+00:00] maxfreedompollard (id=1532993536335675484)
+    All good suggestions will be actioned and implemented!
+

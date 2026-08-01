@@ -53388,3 +53388,48 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-01T01:29:57.707000+00:00] remintoscar (id=1532923311112060988)
     https://github.com/NousResearch/hermes-agent/pull/74542
 
+[2026-08-01T04:37:58.461000+00:00] baophan0123 (id=1532970626023821553)
+    fix(gateway): don't claim /reload-mcp opt-out was saved when write failed
+    https://github.com/NousResearch/hermes-agent/pull/75827
+    
+    fix(cli): derive inline-dispatch from CommandDef for /status /agents /profile /version /help /egress
+    https://github.com/NousResearch/hermes-agent/pull/75835
+    
+    feat(plugins): show load errors in hermes plugins list
+    https://github.com/NousResearch/hermes-agent/pull/75840
+
+[2026-08-01T05:35:41.264000+00:00] drexux (id=1532985150072426669)
+    What
+    564e9b9 added providers.is_official_openai_host() — the canonical host plus OpenAI's documented <region>.api.openai.com data-residency hosts, hostname-parsed — and routed host_mandated_api_mode() through it, so a residency endpoint mandates codex_responses exactly like the canonical one.
+    
+    https://github.com/NousResearch/hermes-agent/pull/75896
+
+[2026-08-01T06:48:05.654000+00:00] 10ofdisks (id=1533003371764519082)
+    Thank you to whoever worked on the desktop app Kanban, so good!
+
+[2026-08-01T07:50:56.373000+00:00] flash_speed3412 (id=1533019187306434601)
+    <@387972437901312000>
+    [reply to flash_speed3412 msg=1532747600460251156]
+
+[2026-08-01T07:51:02.678000+00:00] flash_speed3412 (id=1533019213751521340)
+    can I have my developer role
+
+[2026-08-01T08:03:39.996000+00:00] baophan0123 (id=1533022390173433967)
+    got some PRs merged into Hermes recently. Thanks <@387972437901312000> for the reviews! 🙏
+    https://github.com/NousResearch/hermes-agent/commits?author=Baophan00
+
+[2026-08-01T08:05:54.757000+00:00] autumnn5389 (id=1533022955402035232)
+    You want to get the Dev role, don’t you? LOL.
+    [reply to baophan0123 msg=1533022390173433967]
+
+[2026-08-01T08:08:06.911000+00:00] baophan0123 (id=1533023509695959180)
+    Jst happy to contribute 🫡
+    [reply to autumnn5389 msg=1533022955402035232]
+
+[2026-08-01T08:09:07.031000+00:00] baophan0123 (id=1533023761857773768)
+    but if there's a Dev role... 👀 <:Prayge:1151275585000185968>
+
+[2026-08-01T08:13:57.343000+00:00] autumnn5389 (id=1533024979514294292)
+    But today, you were both lucky and skilled—you got more than 10 commits merged.
+    [reply to baophan0123 msg=1533023509695959180]
+

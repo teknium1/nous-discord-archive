@@ -1498,3 +1498,21 @@
 [2026-07-31T11:28:22.802000+00:00] tonyporj (id=1532711520130043978)
     Ive read it, seems like ill be going with the docker path
 
+[2026-08-01T03:57:13.520000+00:00] tonyporj (id=1532960371197874217)
+    <@1272778978624540704> what models do you recommend per provider? will qwen/qwen3-coder:free, poolside/laguna-s-2.1:free, or even google/gemma-4-31b-it:free - work with openrouter provider?
+
+[2026-08-01T03:58:55.615000+00:00] tonyporj (id=1532960799415603250)
+    https://hermes-router.vercel.app/free-model-rankings/#quality-ranking nvm i saw it^^,)
+    [embed] Free Model Rankings https://hermes-router.vercel.app/free-model-rankings/
+
+[2026-08-01T05:21:35.622000+00:00] tonyporj (id=1532981603192672256)
+    made it work with 106 different keys lol. took me since last night setting it up. thankss
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512328181619753000/1532981602798272682/image.png?ex=6a6ed3df&is=6a6d825f&hm=0ab524899d1f41de313666a5360e4dbde0f5e2dabfb33e93605f00b5b9ee3147&
+
+[2026-08-01T06:09:48.819000+00:00] maxfreedompollard (id=1532993738140291162)
+    Great job man.
+
+[2026-08-01T08:03:25.939000+00:00] shaf_2665 (id=1533022331213975622)
+    nice job bro
+    [reply to tonyporj msg=1532981603192672256]
+

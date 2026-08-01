@@ -1,0 +1,8 @@
+# Thread 'i made an ai changelog generator! it's free for open source projects!' in forum #community-projects-showcase
+# thread_id=1532979530208120872 forum_id=1316137596535177246
+# Started 2026-08-01T08:16:13.406710+00:00
+
+[2026-08-01T05:13:21.384000+00:00] cell666 (id=1532979530208120872)
+    check it out! https://kittylog.app/
+    [embed] KittyLog - AI Changelog Generator for GitHub https://kittylog.app/
+

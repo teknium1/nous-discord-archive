@@ -1,0 +1,34 @@
+# Thread 'A tiny skills tap: Pure Data + SuperCollider for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1532960809573941338 forum_id=1485392832154832906
+# Started 2026-08-01T08:22:42.119820+00:00
+
+[2026-08-01T03:58:58.037000+00:00] mozp (id=1532960809573941338)
+    Two stdlib-only live-audio skills — no MCP, no npm, no compiled bridge, just
+    driving a live synth instance over a thin protocol:
+    
+    🎹 pd-patching   — build & control Pure Data patches over [netreceive]
+    🎚️ supercollider — build & control SuperCollider synths over OSC
+    
+    Install:
+      hermes skills tap add mrev-lab/hermes-skills
+      hermes skills install mrev-lab/hermes-skills/pd-patching --force
+      hermes skills install mrev-lab/hermes-skills/supercollider --force
+    
+    Repo: https://github.com/mrev-lab/hermes-skills
+    
+    Why --force? They're community-trust, so the install scanner flags them as
+    `caution` (they bind a loopback port by default and mention `sudo` in the setup
+    docs). Nothing here touches the network or reads your secrets — `inspect` shows
+    the full scan first.
+    
+    Both are also proposed for the official optional-skills collection (in review):
+      pd-patching   → https://github.com/NousResearch/hermes-agent/pull/67456
+      supercollider → https://github.com/NousResearch/hermes-agent/pull/67892
+    Once merged, install from `official/creative/...` instead and I'll retire them
+    from the tap.
+    
+    Feedback welcome 🙏
+    [embed] GitHub - mrev-lab/hermes-skills: Community Hermes skills tap: pd-pa... https://github.com/mrev-lab/hermes-skills
+    [embed] feat(skills): add Pure Data dynamic-patching optional skill (pd-pat... https://github.com/NousResearch/hermes-agent/pull/67456
+    [embed] feat(skills): add Strudel + Hydra live-coding optional skill (strud... https://github.com/NousResearch/hermes-agent/pull/67892
+
