@@ -53660,3 +53660,65 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     -# Lol I read "LubeHub"
     [reply to maxfreedompollard msg=1533378360179294208]
 
+[2026-08-02T13:55:56.028000+00:00] drexux (id=1533473428982599740)
+    fix(photon): resolve the Hermes-managed Node for the sidecar : https://github.com/NousResearch/hermes-agent/pull/76804
+
+[2026-08-02T14:27:59.938000+00:00] thatzeraphim (id=1533481498445873412)
+    Got it, thanks mate
+    [reply to egilewski msg=1533383410922422415]
+
+[2026-08-02T14:30:39.147000+00:00] whitethunder2660 (id=1533482166217085120)
+    fix(gateway): namespace telegram topic mode by profile under multiplex: https://github.com/NousResearch/hermes-agent/pull/76487
+    
+    When `multiplex_profiles: true`, every profile shares one state.db. The Telegram topic-mode tables were keyed only by Telegram identifiers:
+    
+        `telegram_dm_topic_mode` — PK `(chat_id)`
+        `telegram_dm_topic_bindings` — PK `(chat_id, thread_id)`
+    
+    In private chats, `chat_id` is the user's Telegram id — identical across bots. Multiple profiles therefore collide on the same rows: last write wins, thread bindings get overwritten, replies fail with "Message thread not found."
+    
+    This PR adds a `profile_name` dimension to both tables and threads the routed profile (`source.profile`) through every gateway access path. Legacy rows migrate into the `"default"` namespace only (no replication across configured profiles).
+
+[2026-08-02T16:00:22.286000+00:00] dias4761 (id=1533504744738390026)
+    https://github.com/NousResearch/hermes-agent/pull/76882 : fix(secrets): close #76574 secret-scope residuals (insights, camofox cache, aux readers, whatsapp guard)- #76882
+
+[2026-08-02T16:03:56.648000+00:00] .omgg (id=1533505643837915170)
+    Hermes Agent — spfcraze contributions merged 🚀 (10 PRs)
+    
+       ⚡ Performance (7)
+       • #76098 — Memoized tool-call argument canonicalization: agent loop went from O(n²) to O(n) on the request path — up to 72x faster in long sessions
+       • #76237 — messages(session_id, id) index: window queries 32–307x faster (6.3ms → 0.03ms)
+       • #76287 — Batched cron due-dispatch: 45x faster tick on restart catch-up (110ms → 2.5ms)
+       • #76194 — Read-only config loads on the approval guard path: 18.9x faster per command guard
+       • #76142 — Holographic memory encode hoists: 8x / 3.9x faster retrieval on every user message
+       • #76161 — search_sessions correlated subquery: 5.4x faster resume/CLI session lists, flat at 1M+ rows
+       • #76357 — Discord replies/edits without fetch_message round trips: one fewer API call per reply and per streaming edit tick
+    
+       🔒 Security (2)
+       • #75623 — Closed the cron prompt scanner's GitHub auth-header exemption abuse (subshell/lookalike-host bypass)
+       • #75170 — Fixed flush-scan cursor invalidation — stale cursors could silently drop delivery obligations
+    
+       🛠️ Correctness (1)
+       • #74458 — V4A Begin/End Patch markers anchored to full lines — stops prefixed content from being misread as patch boundaries
+
+[2026-08-02T17:11:29.535000+00:00] r4ys1988 (id=1533522642878070836)
+    have people get this problem cannot update n reinstall
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1533522642609504486/image.png?ex=6a70cbc1&is=6a6f7a41&hm=6756727c6d61110335777146723903665f1f61e0beef963f9e4f859f490b9673&
+
+[2026-08-02T17:28:33.900000+00:00] .omgg (id=1533526939376291982)
+    go in terminal and type "hermes update"
+
+[2026-08-02T17:38:32.245000+00:00] drexux (id=1533529449016852571)
+    fix(patch-parser): reflect ADD in the validation overlay https://github.com/NousResearch/hermes-agent/pull/76840
+
+[2026-08-02T18:12:38.228000+00:00] xipong (id=1533538030491537571)
+    #76228, #76229, #76230, #76370, #76480, #76497
+
+[2026-08-02T18:40:58.178000+00:00] onlinetanveer (id=1533545160598884403)
+    https://www.streamworldradio.com/popular
+
+[2026-08-02T18:49:13.499000+00:00] coffeexcoin (id=1533547238125736036)
+    Would you guys be open to a PR to adjust tool call output for discord to use proper markdown links instead of raw truncation?
+    
+    Currently when hermes uses web fetch or reads pages it shows a truncated version of the url which renders as a dead link. Would be great if it could utilize markdown syntax to keep truncation but still make the link be valid
+

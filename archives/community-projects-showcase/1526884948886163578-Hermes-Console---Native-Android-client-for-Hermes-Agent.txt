@@ -314,3 +314,6 @@
     Done in version 1.2.3 (910). Cron-generated sessions no longer appear in the regular conversation list. They now have their own Cron Results section, so the outputs remain accessible without cluttering normal conversations.
     [reply to jcrabapple msg=1533206893831651523]
 
+[2026-08-02T17:54:52.553000+00:00] jcrabapple (id=1533533560726618332)
+    Nice update! Love the widget!
+
