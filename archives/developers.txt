@@ -53644,3 +53644,19 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     One commit with your (co)authorship in `main` is enough. But the role is assigned manually, so the time to getting it varies. You can post a link to your contribution here and ask for it, if somebody who can assign roles (I know only Teknium) has time when he sees it, you'll get it.
     [reply to thatzeraphim msg=1533239458827079812]
 
+[2026-08-02T08:47:50.377000+00:00] ducky_56789 (id=1533395894542536856)
+    Hi <@387972437901312000> ! I opened PR #76685 to improve Telegram fallback resilience:
+    https://github.com/NousResearch/hermes-agent/pull/76685
+    I reproduced a case where Google and Cloudflare DoH both returned the same single Telegram edge. If that edge later failed, Hermes could not try the second built-in seed because discover_fallback_ips() returned immediately after receiving any valid DoH result.
+    The patch keeps DoH results first, then appends and deduplicates the built-in seed pool as last-resort alternatives. All 19 targeted Telegram network tests and ruff check passed. It was also verified on a live Windows multiplex gateway with two Telegram profiles.
+    Feedback on the fallback strategy would be appreciated!
+
+[2026-08-02T09:17:02.375000+00:00] kyssta69 (id=1533403242955018251)
+    https://github.com/NousResearch/hermes-agent/pull/76695
+    
+    **Problem**: llama.cpp backend 400 'Cannot determine type of item' on every message: Responses-API assistant input items were missing the required type=message field. Now emitted in canonical shape (fixes #76657).
+
+[2026-08-02T09:45:04.417000+00:00] gottz.de (id=1533410297950240839)
+    -# Lol I read "LubeHub"
+    [reply to maxfreedompollard msg=1533378360179294208]
+

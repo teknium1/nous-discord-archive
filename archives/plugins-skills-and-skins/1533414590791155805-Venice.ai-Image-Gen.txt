@@ -1,0 +1,9 @@
+# Thread 'Venice.ai Image Gen' in forum #plugins-skills-and-skins
+# thread_id=1533414590791155805 forum_id=1485392832154832906
+# Started 2026-08-02T13:21:23.299682+00:00
+
+[2026-08-02T10:02:07.910000+00:00] haiku_45525 (id=1533414590791155805)
+    https://github.com/etkecc/hermes-venice/tree/main/image-gen
+    Uncensored, private. Generate, edit/inpaint, uspcale, remove background, etc.
+    [embed] hermes-venice/image-gen at main · etkecc/hermes-venice https://github.com/etkecc/hermes-venice/tree/main/image-gen
+

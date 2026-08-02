@@ -293,3 +293,24 @@
     Yes very
     [reply to rbot5544 msg=1533209277660135767]
 
+[2026-08-02T12:21:51.625000+00:00] xpeta (id=1533449754640650402)
+    Hello everyone! I have a new update, 1.2.3 (910), which is being uploaded and will soon be available for testing.
+    
+    The previous version focused primarily on introducing the new design and fixing several issues that could cause sessions to stop or terminate unexpectedly. This update continues to refine that foundation and addresses the main feedback received during the last round of testing.
+    
+    The session context indicator has returned to the active chat. Tapping it opens a popup window with the token breakdown and available session metrics, including TTFT and cache information when Hermes provides that data.
+    
+    Cron-generated sessions have also been removed from the regular chat list and moved to their own Cron Results section, so scheduled exits remain accessible without interfering with normal conversations.
+    
+    Cron and Kanban have been improved to work more like Hermes Desktop, along with adaptive widgets for Android, new light and dark themes, simpler voice setup, and various performance, stability, accessibility, and user interface improvements.
+    
+    I hope you like the new design; personally, I think it's much cleaner and easier to navigate. Thanks again for all your feedback and support. If you have any issues, please feel free to email me at hola@xpetalab.dev or join me on Discord.
+
+[2026-08-02T12:22:17.145000+00:00] xpeta (id=1533449861679288411)
+    This is now implemented in version 1.2.3 (910). The session context indicator is back in the active chat, and tapping it opens a separate popup with the token breakdown and the available session metrics. The same information is also available from Session Details.
+    [reply to laggingway4018 msg=1533200881133031445]
+
+[2026-08-02T12:22:35.877000+00:00] xpeta (id=1533449940246990870)
+    Done in version 1.2.3 (910). Cron-generated sessions no longer appear in the regular conversation list. They now have their own Cron Results section, so the outputs remain accessible without cluttering normal conversations.
+    [reply to jcrabapple msg=1533206893831651523]
+
