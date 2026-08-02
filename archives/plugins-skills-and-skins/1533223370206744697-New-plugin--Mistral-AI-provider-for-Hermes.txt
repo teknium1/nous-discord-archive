@@ -1,0 +1,56 @@
+# Thread 'New plugin: Mistral AI provider for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1533223370206744697 forum_id=1485392832154832906
+# Started 2026-08-02T02:39:39.133606+00:00
+
+[2026-08-01T21:22:17.370000+00:00] merouane.agar (id=1533223370206744697)
+    Just released hermes-mistral-provider, a production-grade Mistral
+    profile for Hermes Agent (api.mistral.ai).
+    
+    Install: hermes plugins install merouaneagar/hermes-mistral-provider
+    Key: MISTRAL_API_KEY in your env
+    
+    What's inside:
+    • reasoning_effort gated per model family - handles Mistral's
+      medium→high rejection and the stream crash on high (content-list
+      deltas) that many custom setups hit
+    • never emits extra_body.think (HTTP 422 quirk)
+    • vision routing (supports_vision), live model catalog via /v1/models
+    • 12 unit tests, validated E2E on 34 chat models (32 OK, 2 are
+      account-gated labs models)
+    
+    Covers small/medium/large, codestral (FIM), devstral, magistral,
+    ministral, voxtral (audio) and OCR - full docs & quirks in the README.
+    
+    https://github.com/merouaneagar/hermes-mistral-provider
+    [attachment] mistral.png https://cdn.discordapp.com/attachments/1533223370206744697/1533223370345287790/mistral.png?ex=6a6fb509&is=6a6e6389&hm=2c0d9c9091b30344de1bd1498272e78735d27fefc3fc12ade8edf1c59f21fa90&
+    [embed] GitHub - merouaneagar/hermes-mistral-provider: Mistral AI model pro... https://github.com/merouaneagar/hermes-mistral-provider
+
+[2026-08-01T21:48:57.937000+00:00] jcrabapple (id=1533230083471573234)
+    Are any of the Mistral models good enough at agentic stuff to run Hermes on?
+
+[2026-08-01T22:47:40.213000+00:00] merouane.agar (id=1533244856967630858)
+    yes for a subset, with caveats. I've run Hermes on Mistral for weeks and published a production provider plugin for it (github.com/merouaneagar/hermes-mistral-provider) after E2E-testing all 34 chat models.
+    
+    Biggest wins Mistral brings to Hermes:
+    
+    🇪🇺 European sovereignty — the only EU-based LLM provider. Data stays processed in Europe (GDPR), decisive for client work vs a stack that's otherwise 100% Chinese/American.
+    
+    💰 $10/month free API credits — my 34-model test matrix consumed almost nothing. Near-free compute for volume tasks.
+    
+    🧩 Missing capabilities no other provider in my stack declares: OCR (mistral-ocr), RAG embeddings tuned for code (codestral-embed), audio transcription/TTS (voxtral), vision, plus fast FIM autocomplete (codestral).
+    
+    Best agentic candidates:
+    - mistral-medium-latest — SWE-bench 77.6%, solid tool calling, the one I'd run Hermes on
+    - devstral-2 (medium) — built for agentic coding loops, cheap
+    - codestral — great for code-heavy tasks
+    - magistral-small — strong reasoning (AIME25 77.3%) but not an agentic workhorse
+    
+    Tool calling is not the issue: tools worked on nearly every model (only voxtral-small never called them).
+    
+    Real constraints:
+    1. Free-tier rate limits: large capped at 0.07 rps (~1 req/14s) — painful for agent loops; medium 25k tpm/0.8 rps is usable. Pay-as-you-go fixes it.
+    2. reasoning_effort accepts only none/high — "medium" gets HTTP 400, and "high" crashes Hermes 0.19's stream parser (content as list). The plugin omits positive efforts.
+    3. medium/large are slower per turn — fine for deliberate agent work, not chatty loops.
+    
+    My setup:  (opencode-go) as main engine, Mistral as fallback + specialist. All-in on Mistral? mistral-medium-latest or devstral-2 run Hermes fine for coding-agent workloads.
+

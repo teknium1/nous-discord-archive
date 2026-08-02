@@ -253,3 +253,39 @@
     Not a silly suggestion at all! I’ll add the Hermes Desktop themes in the next version so users can have a more consistent experience across both apps. Thanks for the suggestion!
     [reply to nat2r msg=1532209527653404824]
 
+[2026-08-01T19:23:17.059000+00:00] laggingway4018 (id=1533193421571756052)
+    <@109053738517299200> Hey, did you remove the chat session breakdown from before? I can see certain suggestions have landed, thanks for those
+
+[2026-08-01T19:43:06.320000+00:00] xpeta (id=1533198409694056650)
+    I haven't deleted it.  If you're referring to the old “Sessions” section, it's now called “Conversations.” Everything should still be there, but let me know if you're referring to something else and I'll take a look.
+    
+    If you think it makes more sense to call it “Sessions,” I can change it in the next update. 
+    
+    I’m going to release an update later with some changes, such as the server voice section, which I think is a bit confusing, according to a tester; I’ll implement the suggestions I’ve received here about Hermes Desktop and a few other tweaks that I think were missing. 
+    
+    Let me know if you think this update is better.
+    
+    Thanks for the feedback.
+    [reply to laggingway4018 msg=1533193421571756052]
+
+[2026-08-01T19:47:21.241000+00:00] laggingway4018 (id=1533199478910226442)
+    I'm talking about the session status, which gives the token usage and tool usage breakdown
+    Or gave
+    [reply to xpeta msg=1533198409694056650]
+
+[2026-08-01T19:51:08.132000+00:00] xpeta (id=1533200430560182372)
+    Yeah, I removed it from the main view because I wasn't happy with how it was implemented. The information is still available in the session details, but I agree it's more useful to have it visible at a glance. I'll be bringing it back in the next update with a better implementation. Another tester mentioned the same thing, so it's already on my list. Thanks for the reminder!
+    [reply to laggingway4018 msg=1533199478910226442]
+
+[2026-08-01T19:52:55.557000+00:00] laggingway4018 (id=1533200881133031445)
+    Where do I get the breakdown now? And you can just give a small info I button which would surface the session details in a separate popup maybe?
+
+[2026-08-01T20:16:49.096000+00:00] jcrabapple (id=1533206893831651523)
+    Can we remove cron job sessions from the session list?
+
+[2026-08-01T20:22:00.260000+00:00] laggingway4018 (id=1533208198947803218)
+    Maybe a different section for cron jobs outputs. So that they're still accessible, but not a part of the overall conversation list
+
+[2026-08-01T20:26:17.445000+00:00] rbot5544 (id=1533209277660135767)
+    Is this app usable in its current state?
+

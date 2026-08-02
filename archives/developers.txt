@@ -53563,3 +53563,58 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-01T18:11:48.657000+00:00] ethanhere1 (id=1533175434710089869)
     hey guys!  new to contributing to open source and really enjoy Hermes, been looking at issues and contributing but a bit overwhelmed  with the 5K+ issues and PRs.  If anyone has a particular issue they'd like help with or have any advice on some good first issues to look for that would be awesome!
 
+[2026-08-01T19:13:15.925000+00:00] luchoman08 (id=1533190900233142433)
+    A newbee question here: looking at the code Hermes support only SQLite. Could be cool if it also could support Postgres or other database backends decoupled and switchable. I am interested in doing that, but not sure if the official team has any decisions already going on that or it is just not wanted for keeping the agent simple. If anyone could help me with this doubt I would be very grateful 🙈
+
+[2026-08-01T20:00:57.156000+00:00] .omgg (id=1533202901105639475)
+    🙂 https://github.com/NousResearch/hermes-agent/pull/76357  discord improvement for message replies
+
+[2026-08-01T21:28:21.532000+00:00] spacecadetleader (id=1533224897613140188)
+    Hello Devs, I humbly request some feedback on two pull requests I (Hermes, 5.6 sol, and I) recently opened. 
+    
+    The ability to 'hermes update --version' which allows up to install a specific version tag, rather than whatever main head is at the moment you run hermes update (https://github.com/NousResearch/hermes-agent/pull/75521). 
+    
+    The second is to allow /resume to filter out (by default) cron sessions, I have a lot of cron jobs and it was frustrating trying to page back and find a specific cli/tui (human) session that I wanted to continue (https://github.com/NousResearch/hermes-agent/pull/75116).
+    
+    Any feedback would be appreciated.
+
+[2026-08-01T22:02:33.553000+00:00] .omgg (id=1533233504412766391)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/76394#event-28828022288 
+    https://github.com/NousResearch/hermes-agent/pull/75863#event-28808603287
+    Thank you for the merges recently, I'm Spfcraze on github
+
+[2026-08-01T22:04:20.941000+00:00] ethanhere1 (id=1533233954830811137)
+    quick question - if I have conflicts on my PR do I resolve those or leave them for a maintainer
+
+[2026-08-01T22:07:04.302000+00:00] teknium (id=1533234640016507010)
+    no need every PR will have them
+    [reply to ethanhere1 msg=1533233954830811137]
+
+[2026-08-01T22:07:08.800000+00:00] teknium (id=1533234658882621451)
+    so we take care of it for you 😄
+
+[2026-08-01T22:07:42.128000+00:00] ethanhere1 (id=1533234798670123139)
+    awesome thank you, happy to be able to contribute to hermes!
+
+[2026-08-01T22:08:10.776000+00:00] bexli (id=1533234918828806356)
+    Oh perfect lol
+    
+    Thoughts on this: https://github.com/NousResearch/hermes-agent/pull/64696
+
+[2026-08-01T22:09:10.405000+00:00] bexli (id=1533235168930955356)
+    My "issue" is I'll be like "what is was the results of free practice, it just happened" and despite that, it'll be like "no it hasn't happened yet, that's tomorrow"
+    
+    It doesn't realize there was a time skip
+
+[2026-08-01T22:26:13.196000+00:00] thatzeraphim (id=1533239458827079812)
+    Hello just a quick question, how many PRs accepted do we need to get a dev role? Also does salvaged PR's count?
+
+[2026-08-01T22:37:33.797000+00:00] bexli (id=1533242313474838770)
+    This fixes the broken telegram tables (I knew it was a regression 😉)
+    
+    https://github.com/NousResearch/hermes-agent/pull/72114
+
+[2026-08-02T00:37:48.800000+00:00] hyqqx (id=1533272575390650550)
+    try
+    [reply to teknium msg=1533234658882621451]
+

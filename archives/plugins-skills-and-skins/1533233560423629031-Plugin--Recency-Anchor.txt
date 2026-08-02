@@ -1,0 +1,12 @@
+# Thread 'Plugin: Recency Anchor' in forum #plugins-skills-and-skins
+# thread_id=1533233560423629031 forum_id=1485392832154832906
+# Started 2026-08-02T02:39:38.678477+00:00
+
+[2026-08-01T22:02:46.907000+00:00] haiku_45525 (id=1533233560423629031)
+    https://github.com/etkecc/hermes-recency-anchor
+    
+    Your system prompt is message zero. Whatever the user just typed is message N. On a model that leans hard on recency, that is not a fair fight.
+    
+    This plugin restates your instruction at the end of the user turn, which is the last thing the model reads before it opens its mouth.
+    [embed] GitHub - etkecc/hermes-recency-anchor: Hermes Agent plugin. Adds yo... https://github.com/etkecc/hermes-recency-anchor
+

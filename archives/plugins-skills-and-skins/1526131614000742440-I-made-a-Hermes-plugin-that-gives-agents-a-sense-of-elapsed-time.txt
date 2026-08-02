@@ -23,3 +23,6 @@
 [2026-08-01T01:09:52.567000+00:00] .weequet (id=1532918256388669590)
     V2 is out now. In cross-day scenarios, it will not only let your agent know how much time has passed but also the exact date
 
+[2026-08-02T02:29:15.371000+00:00] panbartosz (id=1533300620902010951)
+    Very cool I csnt believe that something like this is not a defsult for interactive sessions already
+
