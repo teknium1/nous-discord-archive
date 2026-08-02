@@ -1,0 +1,27 @@
+# Thread '🕷️ hermes-zyte-scraper — describe a scrape in plain English, get a deployed Scrapy spider' in forum #plugins-skills-and-skins
+# thread_id=1533359322652868649 forum_id=1485392832154832906
+# Started 2026-08-02T08:27:12.459708+00:00
+
+[2026-08-02T06:22:30.959000+00:00] jishnav34567 (id=1533359322652868649)
+    Just released hermes-zyte-scraper, a production-grade Zyte + Scrapy integration for Hermes Agent.
+    
+    The idea: tell Hermes what you want scraped in natural language → it generates a real Scrapy spider using the Zyte API → deploys it to Scrapy Cloud → schedules recurring runs → monitors jobs → pulls structured results back. End-to-end, no hand-written spiders.
+    
+    Seven tools:
+    - zyte_extract — multi-page general-purpose extraction (auto-extract + browserHtml, multi-strategy pagination, dedup, quality scoring)
+    - zyte_build_spider — generates a full Scrapy + scrapy-zyte-api project into ~/.hermes/spiders/<name>/, Cloud-ready
+    - zyte_deploy / zyte_schedule / zyte_list_jobs / zyte_get_results — full Scrapy Cloud lifecycle with name resolution, tags, and streaming .jl retrieval
+    - autoresearch — propose → experiment → measure loop, used to self-improve the plugin
+    
+    Design note: domain detection is additive only. The core extraction and pagination logic is deliberately domain-agnostic, so it works on arbitrary sites rather than just the usual detectable targets (Zillow, Amazon, etc.). Built against the current Zyte API contracts — mutual-exclusion rules, extractFrom, sessions, actions, model pinning, 520 ban-retry handling — and modern Hermes plugin patterns (ctx.register_tool, plugin.yaml with requires_env, handlers always returning JSON).
+    
+    Install:
+    git clone https://github.com/deepspace28/hermes-zyte-scraper ~/.hermes/plugins/hermes-zyte-scraper
+    hermes plugins enable hermes-zyte-scraper
+    
+    You'll be prompted for a ZYTE_API_KEY (and optionally a Scrapy Cloud key) via requires_env.
+    
+    Repo: https://github.com/deepspace28/hermes-zyte-scraper
+    MIT licensed. Feedback and issues very welcome — especially if you throw it at a site that breaks the general-purpose extraction.
+    [embed] GitHub - deepspace28/hermes-zyte-scraper https://github.com/deepspace28/hermes-zyte-scraper
+

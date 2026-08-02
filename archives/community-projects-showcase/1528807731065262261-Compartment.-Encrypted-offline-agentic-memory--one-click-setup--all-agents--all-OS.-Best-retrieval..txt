@@ -5,3 +5,25 @@
 [2026-08-01T06:12:46.307000+00:00] maxfreedompollard (id=1532994482579046551)
     Compartment. Encrypted offline agentic memory, one click setup, all agents, all OS. Best retrieval.
 
+[2026-08-02T07:39:38.979000+00:00] maxfreedompollard (id=1533378733975666728)
+    WARNING to all people who work with MCPs on GitHub:
+    
+    I'm the creator of Compartment (encrypted offline agentic memory). I listed it on the LobeHub marketplace today.
+    
+    Listings can't be requested via issue anymore due to recent changes. I filed one; told the "CLI just launched" and OAuth through CLI is the only way on. That CLI path is unpinned remote code execution as you, every run (npx -y).
+    
+    CLI connect does two OAuth apps: first read-only, then admin on every repo. Odd I had to connect twice, so I double checked.
+    
+    Consent granted: Full control of private repositories (repo); Update github action workflows (workflow); Create gists; Read org and team membership; Read all user profile data; Access user email addresses.
+    
+    OAuth app, not a GitHub App, so no per-repo selection. Account-wide read/write on every repo you own, including private repos.
+    
+    workflow is the scary scope. PyPI/npm CI OIDC trusted publishing mints identity at runtime scoped to (repo, workflow filename, environment). With workflow you can rewrite that file and ship a package under your name. For most MCPs that means a malicious package on every user's machine INCLUDING EXISTING USERS. Compartment is genuinely exempt: the integration writes an absolute path to an installed binary (command='/Users/username/.local/bin/vector memory' args=['--vault', ..., 'serve']), not a floating package name. Not exaggeration. They could put their own AI agent on your machine and do whatever they want without sudo and without any user action.
+    
+    Seems intentional. They swapped a fine approval process for this. No need for admin on all your repos just to confirm ownership of a listing. They lead with the reasonable OAuth first to confuse. It shows the same screen twice, so most people assume they're the same.
+    
+    Unless you personally know the creator of an agentic memory system and everyone involved in the download and update process, don't trust it.
+
+[2026-08-02T07:40:48.516000+00:00] maxfreedompollard (id=1533379025634853065)
+    Compartment is the only trustless vector memory, if you're not using it you're trusting a bunch of random people who don't even use their real names.
+

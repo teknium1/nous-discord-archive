@@ -26,3 +26,10 @@
 [2026-08-02T02:29:15.371000+00:00] panbartosz (id=1533300620902010951)
     Very cool I csnt believe that something like this is not a defsult for interactive sessions already
 
+[2026-08-02T02:46:37.285000+00:00] .weequet (id=1533304991006199950)
+    I think mainstream frameworks leave this out because they assume most sessions only last a few hours and get archived after one task. Hermes' default session lifetime is actually within a day too. But I tend to work in long conversations, a session can stretch across days or even weeks. So I keep hitting the problem where the agent still thinks it's the same day
+    [reply to panbartosz msg=1533300620902010951]
+
+[2026-08-02T02:53:00.873000+00:00] panbartosz (id=1533306599890882701)
+    I tend to use Hermes as a personal asistant type of deal and this feature is what I have been missing. I did not chsnge default session lifetime, but I use several profiles and, some of them are used only a few times a day and this is super useful.
+
