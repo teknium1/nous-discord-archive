@@ -71,3 +71,51 @@
     Ah I didn’t see the cloud for OPs, that’s not for me. Saw your other thread will check it out.
     [reply to maxfreedompollard msg=1533209552277737523]
 
+[2026-08-02T20:43:09.839000+00:00] jaixii (id=1533575911813939291)
+    No the cloud is optional, it is local by default. Teams and users can self host in cloud if they like as an option with railway template so it's easier to share an instance, it's still private.
+    [reply to goated138 msg=1533216095694225659]
+
+[2026-08-02T21:03:56.385000+00:00] jaixii (id=1533581140206682294)
+    Pretty much everything you said was incorrect and not based on an understanding of engraphis. No I didn't make it a couple days ago, over a month ago. The ui graph nodes do have labels, you can tune them to show as many or as few labels as desired. Engraphis is local first, not cloud. Cloud is optional and private self hosted on railway. Most ai users use Obsidian for memory when it's not designed for ai. And to assume yours is better and say so without much research doesn't show me integrity. Anything you said that WAS correct, I am accounting for and fixing today. Don't want to argue or discuss anything else just post on your thread please
+    [reply to maxfreedompollard msg=1533209552277737523]
+
+[2026-08-02T21:06:02.145000+00:00] jaixii (id=1533581667682222142)
+    Where Engraphis wins compared to Compartment:
+    
+    Multi-repo project boundaries: First-class workspace → repo → session scopes, rather than Compartment’s flat namespaces plus caller ACLs. Better for isolating work across repos and sessions.
+    
+    Time-aware fact history: Record-level valid_at and known_at, plus supersession chains, corrections, promotion, and timelines. Compartment has save/discovery dates and temporal relations, but not equivalent bi-temporal memory recall.
+    
+    Evolving facts without deletion: Engraphis can add, reinforce, relate, or invalidate a claim while retaining its predecessor for “what changed and why?” queries. Compartment deduplicates near-identical records; correction otherwise relies on deletion or shredding.
+    
+    Code-native memory: Indexes symbols, calls, imports, files, and code-to-memory links. Supports structural search, dependency paths, git-range impact, and PR graph reports. I found no comparable parser, symbol index, or call graph in Compartment. 
+    
+    Graph-informed retrieval: Engraphis’s entity and code graph is a normal retrieval arm using PPR, not just a manually queried relation store. Compartment’s ranker is vector plus lexical, while relations are queried separately.
+
+[2026-08-02T21:06:06.696000+00:00] jaixii (id=1533581686770765844)
+    Grounded answer contract: Returns a cited answer or explicitly abstains below an evidence threshold. Compartment returns ranked records and warnings, not a citation-bound answer or abstention result.
+    
+    Prompt-context control: Hard token-budget context packets, compact responses, usage accounting, and adaptive fallback to raw history. Better for agents operating under fixed context windows.
+    
+    Retrieval and model flexibility: Embedders, vector indexes, rerankers, and optional LLM extraction are interface-driven and swappable. Compartment intentionally pins a bundled embedding space, which improves reproducibility but is less flexible for deployments.
+    
+    Memory lifecycle tooling: Typed working, episodic, semantic, and procedural memories, plus reinforcement, consolidation, governance, provenance, and inspection. Compartment uses importance and recency ranking and delegates most curation to the host agent.
+    
+    Engineering-data ingestion: Built-in paths for code, documents, PDF/OCR, audio/video transcription, and PostgreSQL schema ingestion.
+    
+    Shared-workspace workflows: Optional encrypted workspace sync and hosted team controls, alongside repo and session boundaries. Compartment supports local multi-agent ACLs, but not the same project and team model.
+
+[2026-08-02T23:22:22.066000+00:00] exquisite_badger_30594 (id=1533615976757727362)
+    <@408443408894394368> Mate, dont listen to the nay sayers, what you got here is real logic, & I think its really good ! That memory of what works & what doesnt work makes all the difference. After countless hours of reminding my ai as to where he stored "his own file" of networking  commands for the VM's i have him working with, is/was crazy until i started making links & crumbs around for him to pick up. I like the idea of auto copying everything into a .md file as part time lined  "system calander" & having the AI sort through it systematically & feeding this sorted info into something like what you have here is exactly what i think is important right now. So nice work !!!
+
+[2026-08-02T23:56:16.307000+00:00] jaixii (id=1533624508982886491)
+    Thanks friend. Pretty much every day putting out the most comprehensive set of improvements and updates, 2 days worth of updates arrive tonight. It's really worth having on all LLMs you use, to save tokens if nothing else. If you can think of anything I can improve after testing it, be happy for your feedback
+    [reply to exquisite_badger_30594 msg=1533615976757727362]
+
+[2026-08-03T00:58:53.409000+00:00] exquisite_badger_30594 (id=1533640267410706492)
+    would love to, but little busy myself, building an entire OS with AI, inc a Browser that spoofs rick astley vids to fingerprinters, while keeping your history encrypted, a full media player +++, so ive been training mine to build the OS from scratch in a VW's it set up itself on my old laptop, "it knows the code better than anyone". I say to it "I want to add some gauges on the left peek(what we call the small side windows) and a day later (& many itereations later!!!), we have the gauges on the left of my screen, "fully functional" > bubbling cauldron linked to RAM,>> to be animated later "probable just another day with hermes?" but thats why i know the importance of what you are doing. My theory is fine tune everything until it can be a cronjob(actual system cronjob), & thats where sorting through the memories you have already made the quickest smoothest way possible is the key to it all right now.  All in Zig & cairo, "so far" with mpv the backend of the media player, so I'm a bit busy for now, but keep doing what you are doing & we might even chat about setting up the memory of the os with something like this at some stage. "my AI knows Zig & cairo very well now, so i'd prefer to keep it with as little dependancies as  possible.  keep at it, chat soon!
+    [attachment] ssOo.png https://cdn.discordapp.com/attachments/1531601601519681650/1533640265900888257/ssOo.png?ex=6a71394d&is=6a6fe7cd&hm=94117d226a576f86641b4195e52e8c0142a932ae18e4c293fdcb123816f82778&
+    [attachment] ssOp.png https://cdn.discordapp.com/attachments/1531601601519681650/1533640266530164886/ssOp.png?ex=6a71394d&is=6a6fe7cd&hm=3bda6272002f517db4ae20584fd1f51b868becf1afc9a6d8c9221ab3fdf1b74d&
+    [attachment] ssOq.png https://cdn.discordapp.com/attachments/1531601601519681650/1533640267129684108/ssOq.png?ex=6a71394d&is=6a6fe7cd&hm=079d7262a3593ded3e6cb430452d096b64dfcdd3b8735dd2fad2aa7e12db344b&
+    [reply to jaixii msg=1533624508982886491]
+

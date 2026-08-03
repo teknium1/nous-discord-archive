@@ -53722,3 +53722,210 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Currently when hermes uses web fetch or reads pages it shows a truncated version of the url which renders as a dead link. Would be great if it could utilize markdown syntax to keep truncation but still make the link be valid
 
+[2026-08-02T19:13:07.400000+00:00] realadolan (id=1533553252342173889)
+    Small perf PR up: session search no longer reads full message content it never returns, which saves tens of MB of wasted I/O per search on big state DBs https://github.com/NousResearch/hermes-agent/pull/77034
+
+[2026-08-02T20:05:16.354000+00:00] realadolan (id=1533566376126578838)
+    Another perf PR: the MoA reference trim was re-scanning the whole message list after every drop, now it weighs each frame once. 100ms down to under 1ms on long advisory views https://github.com/NousResearch/hermes-agent/pull/77064
+
+[2026-08-02T20:13:31.818000+00:00] xipong (id=1533568454253088809)
+    My PRs, lmao
+    [reply to xipong msg=1533538030491537571]
+
+[2026-08-02T20:45:25.719000+00:00] rcdpge (id=1533576481735839906)
+    What is the difference between a software developer and a software engineer <:Wdym:1151275546777501696>
+
+[2026-08-02T21:22:33.450000+00:00] fedpostoffice (id=1533585825516753069)
+    I've noticed that hermes doesn't have any target resolution for simplex-chat or simplex-relay in the source, so if you try to configure it, it just falls through when you try to test it with `hermes send`.
+
+[2026-08-02T21:23:41.801000+00:00] teknium (id=1533586112201625700)
+    Shouldve been fixed today
+    [reply to r4ys1988 msg=1533522642878070836]
+
+[2026-08-02T21:23:56.504000+00:00] teknium (id=1533586173870604571)
+    hmm lemme see
+    [reply to fedpostoffice msg=1533585825516753069]
+
+[2026-08-02T21:24:08.282000+00:00] fedpostoffice (id=1533586223271116940)
+    Note, the version I'm using is the install script version.
+
+[2026-08-02T21:24:18.667000+00:00] fedpostoffice (id=1533586266828832859)
+    If it's in the upstream that hasn't been pushed to that yet, that might be why.
+
+[2026-08-02T21:24:22.211000+00:00] teknium (id=1533586281693577530)
+    the version of simplex?
+
+[2026-08-02T21:24:28.845000+00:00] fedpostoffice (id=1533586309518590112)
+    No, the version of hermes.
+
+[2026-08-02T21:24:38.035000+00:00] teknium (id=1533586348064116736)
+    all installs of hermes use the install script
+
+[2026-08-02T21:24:42.168000+00:00] teknium (id=1533586365399175199)
+    including gui installer 🙂
+
+[2026-08-02T21:25:11.028000+00:00] teknium (id=1533586486447046687)
+    markdown links to what
+    [reply to coffeexcoin msg=1533547238125736036]
+
+[2026-08-02T21:25:14.269000+00:00] fedpostoffice (id=1533586500040790101)
+    `hermes --version` yields v0.19.1 (2026.7.30)
+
+[2026-08-02T21:26:22.620000+00:00] fedpostoffice (id=1533586786725531809)
+    Symptoms are that after configuring simplx-chat with `hermes gateway setup` , the env vars populate in `$HERMES_HOME/.env` but hermes send --list doesn't see it because nothing populates it in the `channel_directory.json`.
+
+[2026-08-02T21:30:27.735000+00:00] teknium (id=1533587814812221491)
+    ```Checked. Short version: there is no platform named simplex-chat or simplex-relay anywhere in the source — the platform name is just simplex. Those two identifiers appear zero times in the repo, so anything configured under them will never resolve; the target string's platform segment fails Platform("simplex-chat") and you get the fall-through you're seeing.
+    
+    What actually exists:
+    
+    ◆ Bundled plugin at plugins/platforms/simplex/ (registers as name="simplex", label "SimpleX Chat"). It landed on main 2026-06-25 and IS included in the v2026.7.30 tag, so the install-script version has it — no upstream lag here.
+    ◆ It supports hermes send standalone — the plugin registers a standalone_sender_fn that opens an ephemeral WebSocket to your simplex-chat daemon, so a running gateway is not required for plain text sends (media does need the live gateway).
+    
+    Correct usage:
+    
+    
+    .env / hermes config
+    SIMPLEX_WS_URL=ws://127.0.0.1:5225      # your simplex-chat daemon in WS mode
+    SIMPLEX_HOME_CHANNEL=<contact or group id>   # optional, for bare sends
+    
+    send
+    hermes send --to simplex:<contactDisplayName> "hello"
+    hermes send --to simplex:group:<groupId> "hello"
+    hermes send --to simplex "hello"        # uses SIMPLEX_HOME_CHANNEL```
+    [reply to fedpostoffice msg=1533585825516753069]
+
+[2026-08-02T21:31:26.359000+00:00] coffeexcoin (id=1533588060699365678)
+    Tool call urls - these render as broken links because of the truncation, so if I click them to see what it was viewing (which can be useful for extra context) I can't actually get the full url
+    [attachment] IMG_5800.png https://cdn.discordapp.com/attachments/1491258766648283238/1533588060422279238/IMG_5800.png?ex=6a7108ae&is=6a6fb72e&hm=536529a8a23091c0ec762f2de65b710343431285f443df9f1136e7392df99dfb&
+    [reply to teknium msg=1533586486447046687]
+
+[2026-08-02T21:31:45.560000+00:00] fedpostoffice (id=1533588141234061475)
+    Odd. `hermes send --list` tells me it doesn't exist, so I was having trouble figuring out the syntax.
+
+[2026-08-02T21:31:46.748000+00:00] fedpostoffice (id=1533588146216763583)
+    Thanks.
+
+[2026-08-02T21:32:07.984000+00:00] teknium (id=1533588235287269438)
+    ohh, yea that would be good! lmk when you have a PR up
+    [reply to coffeexcoin msg=1533588060699365678]
+
+[2026-08-02T21:32:26.610000+00:00] teknium (id=1533588313410109550)
+    thought you meant markdown links for the terminal commands themselves 😄
+
+[2026-08-02T21:32:41.286000+00:00] fedpostoffice (id=1533588374965977240)
+    Can confirm that hermes send --to simplex:group:groupid seems to work.
+    [reply to teknium msg=1533587814812221491]
+
+[2026-08-02T21:32:41.978000+00:00] teknium (id=1533588377868177609)
+    will see if for some reason thats just bugged itself
+    [reply to fedpostoffice msg=1533588141234061475]
+
+[2026-08-02T21:32:59.343000+00:00] teknium (id=1533588450702528683)
+    ```That's actually expected behavior, though I agree it's misleading. hermes send --list doesn't enumerate supported platforms — it reads ~/.hermes/channel_directory.json, which is populated by channel discovery while the gateway runs. If the gateway has never connected to your simplex daemon, no simplex entries exist in the directory, so --list shows nothing for it even though the platform works fine as a send target.```
+
+[2026-08-02T21:33:00.340000+00:00] fedpostoffice (id=1533588454884249712)
+    From what I can tell the send --list doesn't have a test case for simplex and falls through.
+
+[2026-08-02T21:33:19.455000+00:00] fedpostoffice (id=1533588535058235442)
+    And simplex never populates to the .json file.
+
+[2026-08-02T21:33:41.628000+00:00] teknium (id=1533588628058669178)
+    gonna clean this command up
+
+[2026-08-02T21:34:24.491000+00:00] fedpostoffice (id=1533588807838994474)
+    Thanks, my dude.
+
+[2026-08-02T21:45:10.699000+00:00] laithma (id=1533591518231920722)
+    Hello developers. Is there a specific place to contribute to open source for Nous?
+
+[2026-08-02T22:08:53.849000+00:00] teknium (id=1533597487355531305)
+    Yes, the hermes agent github repo 🙂
+    [reply to laithma msg=1533591518231920722]
+
+[2026-08-02T22:08:57.332000+00:00] teknium (id=1533597501964292098)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30616134633566332f47695639636e6c44685463566e6269655871656b485f594176544942494c2e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1533597502022881320/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30616134633566332f47695639636e6c44685463566e6269655871656b485f594176544942494c2e706e67.png?ex=6a711179&is=6a6fbff9&hm=8d51d7ff6054f7892203fcb20177ccc002dec2954d4ac81eeb5b9c4bfa5662cd&
+    [reply to fedpostoffice msg=1533588807838994474]
+
+[2026-08-02T22:10:43.950000+00:00] laithma (id=1533597949152727122)
+    I’m an idiot thank you brother
+    [reply to teknium msg=1533597487355531305]
+
+[2026-08-02T22:14:15.161000+00:00] brokeskill (id=1533598835035607130)
+    was anything ever said about having live artifacts (HTML JSX) inside the hermes desktop? Cant find anything on google talking about it (this was posted in <#1476316988992258300>  just a minute ago but I noticed its the wrong chat, my bad)
+
+[2026-08-02T22:17:17.960000+00:00] hyqqx (id=1533599601750446140)
+    Hi <@387972437901312000> m1 — I've been working through native-Windows issues in hermes-agent and wanted to put it in one place.
+    
+    Structural note first: all 36 CI jobs run on ubuntu-latest (the only other runner in the tree is ubuntu-24.04-arm in docker.yml). This class of bug is invisible to CI by construction. Everything below was found and verified on a real Windows 11 box — build 26200, Python 3.11.6.
+    
+    Open
+    
+    https://github.com/NousResearch/hermes-agent/pull/74083
+    pytest tests/ collected nothing on Windows — a /tmp fallback that mkdirs at module scope aborts collection for all ~50k tests. Only reproduces from PowerShell; Git Bash sets TMPDIR and hides it entirely. @monerostar reproduced on his own Win11 and left an LGTM.
+    
+    https://github.com/NousResearch/hermes-agent/pull/77120
+    8 tests in test_file_operations.py fail on Windows. The interesting one: the search fallback shells out to POSIX find, which on Windows resolves to System32\find.exe — a string-search utility, not a file finder — so it silently returns zero results instead of erroring.
+    
+    https://github.com/NousResearch/hermes-agent/pull/72101
+    CONTRIBUTING.md rule 10 tells contributors to spawn the detached gateway with pythonw.exe + DETACHED_PROCESS. The code deliberately does neither — following the guide re-creates the console-flash regression from #54220/#56747. Fixed in all four places the claim appears.
+    
+    Closed
+    
+    #74220 — right fix, but the test it targeted got pruned from main before review landed. No complaints.
+    
+    Nothing merged yet, so I'm not going to pretend I've earned anything. What I do have is the one thing that's hard to get here: a Windows machine and the patience to run the suite on it. Happy to keep clearing the Windows backlog either way — and if there's a bar for the Developer role, I'd rather hear it straight than guess.
+
+[2026-08-02T22:17:19.941000+00:00] fedpostoffice (id=1533599610059358340)
+    Just updated. It appears to be working on my machine. \o/
+    [reply to teknium msg=1533597501964292098]
+
+[2026-08-02T22:18:44.052000+00:00] ct0547 (id=1533599962846199939)
+    Hey all… I’ve been thinking a lot about Hermes’ multi-server and multiplayer model.  
+    
+    What’s the protocol for discussing design things like this? Or should I just work on PRs and submit?
+    
+    I’m thinking a structure like…
+    
+    person identity → organisation membership → agent membership → active connection
+    
+    With permissions for tools, data and approvals attached to the relevant layer.
+    
+    That separate who someone is, which organisations and agents they can access, which server they’re currently using, and what they’re allowed to do.  
+    
+    There are already pieces of this in Hermes, I’m happy to work on PRs around this but discussion might be better first?
+
+[2026-08-02T22:20:10.612000+00:00] teknium (id=1533600325905420441)
+    https://cdn.discordapp.com/attachments/302153478556352513/1515118137916391627/IMG_3482.gif
+    [embed]  https://cdn.discordapp.com/attachments/302153478556352513/1515118137916391627/IMG_3482.gif
+    [reply to fedpostoffice msg=1533599610059358340]
+
+[2026-08-03T01:03:16.158000+00:00] ct0547 (id=1533641369460146187)
+    I propose a rename of Plugins in the Desktop app to be Addons or something else... ChatGPT Desktop and Claude Desktop use plugins to mean a .plugin file thats basically a zip file that contains bundled skills and mcp definitions you can easily install. And I'd like Hermes to be compatible with installing these and not confuse non-techies coming from these platforms already family with those plugins.
+
+[2026-08-03T01:28:13.247000+00:00] _.exo._ (id=1533647648706400267)
+    Sounds like GPT and Claude drank stupid juice and went doodoo brain with their naming
+    [reply to ct0547 msg=1533641369460146187]
+
+[2026-08-03T01:32:50.416000+00:00] ct0547 (id=1533648811237445772)
+    think about it from a non tech persons perspective... I want to install a "Creative Team plugin" that instantly gives my agent (in their case chatgpt or claude) a bunch of capabilities a heap of new skills and MCP (which chatgpt calls apps and claude calls connectors)
+    
+    My alternative is, we get Hermes to support these same .plugin files but hermes calls them "Capability Plugins"
+    
+    but anyone coming from these other tools will see the plugins menu in settings and not know that Plugins are not the same.
+    [reply to _.exo._ msg=1533647648706400267]
+
+[2026-08-03T01:34:11.077000+00:00] _.exo._ (id=1533649149554065508)
+    Just point hermes to the folder and tell it to hook it up
+    [reply to ct0547 msg=1533648811237445772]
+
+[2026-08-03T01:39:14.523000+00:00] ct0547 (id=1533650422299099247)
+    100% I agree... I work with non techies constantly trying to use AI tools though... a Desktop UI where they can click "Upload plugin" is far less scary than a just point hermes to a folder and tell hermes to set it up, also requires no token use to do it
+    [reply to _.exo._ msg=1533649149554065508]
+
+[2026-08-03T02:25:28.806000+00:00] emperor_sai (id=1533662058485387424)
+    Does anyone wanna team up on a kaggle challenge?
+
+[2026-08-03T02:30:56.677000+00:00] baophan0123 (id=1533663433675899072)
+    [sticker] hermes3
+

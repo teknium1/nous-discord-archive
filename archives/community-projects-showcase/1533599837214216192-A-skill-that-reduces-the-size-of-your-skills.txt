@@ -1,0 +1,16 @@
+# Thread 'A skill that reduces the size of your skills' in forum #community-projects-showcase
+# thread_id=1533599837214216192 forum_id=1316137596535177246
+# Started 2026-08-03T02:35:12.955434+00:00
+
+[2026-08-02T22:18:14.099000+00:00] fizbott (id=1533599837214216192)
+    As weird as it sounds, frontier models often perform worse when a skill over-specifies and adds too much hand-holding. That's the opposite of older models, which often benefited from detailed guidance.
+    
+    Boris Cherny (creator of Claude Code) has said as much directly: stop over-specifying and "let the model cook." Simpler skills let frontier models do the heavy lifting.
+    
+    I built **skillet** to make that cleanup easy. It's a tiny skill that audits your existing skills and strips away unnecessary over-specification.
+    
+    GitHub: https://github.com/fayzan123/skillet
+    
+    Open to suggestions or feedback on use cases.
+    [embed] GitHub - fayzan123/skillet: A Claude Code skill that reduces over-s... https://github.com/fayzan123/skillet
+

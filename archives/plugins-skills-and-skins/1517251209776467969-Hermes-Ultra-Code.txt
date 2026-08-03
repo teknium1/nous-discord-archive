@@ -99,3 +99,6 @@
     The flow now: orchestrator classifies a task's risk tier → the pure table router picks the cheapest profile clearing that tier's floor from the roster → resolve() (unstubbed after the refusal) maps tier → the operator's cheap/heavy model slot → the task is tagged and enqueued on the ultracode board → the poller claims it, runs the gate, and spawns hermes -p <profile> -m <model> — or fails closed. On failure/unreadiness, next_rung() cascades: same provider's heavy slot first, then the next profile, then block.
     [attachment] image.png https://cdn.discordapp.com/attachments/1517251209776467969/1532089047890001992/image.png?ex=6a6b949d&is=6a6a431d&hm=9c457aaddb27709f2c66fb56cd84127a09d3b23e6ba6f5e01a9a7f5b5df5377c&
 
+[2026-08-02T20:16:29.370000+00:00] bazsi1__ (id=1533569198960410674)
+    Interesting project, did you test it on benchmarks like humaneval or deepswe?
+

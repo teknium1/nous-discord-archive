@@ -1,0 +1,33 @@
+# Thread 'hermes-talk — Realtime 2 voice + Hermes agents (API key or Codex subscription)' in forum #plugins-skills-and-skins
+# thread_id=1533647495232749638 forum_id=1485392832154832906
+# Started 2026-08-03T02:41:54.605989+00:00
+
+[2026-08-03T01:27:36.656000+00:00] smokealot420 (id=1533647495232749638)
+    In July OpenAI shipped voice that starts and steers your Codex agents. Might be the best thing they shipped all year.
+    
+    So I brought it to Hermes. Open source. <:nousgirl:1341983870752653352> 
+    
+    Say "go audit the auth module and report back." It kicks off a real background agent, tells you it's running, and you keep talking. A few minutes later it tells you what it found. You didn't have to ask again. Cut it off mid-sentence and it stops. Ask how it's going and it checks.
+    
+    Full-duplex, which in practice means it listens while it talks, so interrupting works the way it does with a person. Runs on `gpt-realtime-2.1` (Realtime 2), the model OpenAI actually ships to developers. GPT-Live, the one behind their desktop version, has no developer API.
+    
+    ```
+    hermes plugins install TheSmokeDev/hermes-talk --enable
+    pip install "hermes-talk[audio]"
+    hermes talk
+    ```
+    
+    Two things it does that the Codex version doesn't.
+    
+    It calls your tools. Realtime function calls go straight into Hermes's tool surface, so ask it something it can't know and you hear it go look, then answer from what it found.
+    
+    It already knows you. The session opens with what Hermes knows: your `SOUL.md`, plus whatever your memory provider hands it. No warm-up turn.
+    
+    Two ways to authenticate. Bring an OpenAI API key, or bring nothing: signed into the Codex CLI (`codex login`) and it runs on the ChatGPT subscription you already pay for, no separate API bill. The credential gets minted server-side into an ephemeral secret and never touches the socket.
+    
+    Terminal (`hermes talk`) or a Talk tab in the Hermes dashboard. No core edits, pure `register(ctx)`. 240 tests, CI on ubuntu and windows. MIT.
+    
+    https://github.com/TheSmokeDev/hermes-talk
+    [attachment] hermes-talk-dashboard-cut.mp4 https://cdn.discordapp.com/attachments/1533647495232749638/1533647495966490777/hermes-talk-dashboard-cut.mp4?ex=6a714008&is=6a6fee88&hm=054ce2b8fd31a287d5b921eabe11d8768c1fba5cc74e0ece1cf10bbadd143627&
+    [embed] GitHub - TheSmokeDev/hermes-talk https://github.com/TheSmokeDev/hermes-talk
+

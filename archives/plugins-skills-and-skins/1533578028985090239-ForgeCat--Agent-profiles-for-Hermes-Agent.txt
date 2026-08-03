@@ -1,0 +1,26 @@
+# Thread '🐈 ForgeCat: Agent profiles for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1533578028985090239 forum_id=1485392832154832906
+# Started 2026-08-03T02:41:55.718172+00:00
+
+[2026-08-02T20:51:34.612000+00:00] yoochana (id=1533578028985090239)
+    ForgeCat does two things.
+    It's a hub where you browse and share agent profiles,
+    and it's a CLI that manages them on your machine (install, update, uninstall, version pinning).
+    
+    Hermes is one of the install targets. forgecat install <profile> -p hermes finds your profile home, drops the skills into <home>/skills/ as-is, and merges the persona and instruction parts into SOUL.md.
+    Your config.yaml and MCP setup are left alone.
+    
+    Profiles are cross-platform, so a setup someone built for Claude Code or Codex or Cursor carries over to Hermes without porting anything.
+    Same in reverse when you publish your own with forgecat init then forgecat push.
+    
+    npm i -g forgecat
+    forgecat search
+    forgecat install @forgecat/<profile> -p hermes
+    
+    https://forgecat.ai
+    https://github.com/nota-america/forgecat-agent-profiles
+    
+    Would love to hear what breaks 🙏
+    [embed] ForgeCat — The Agent Hub https://forgecat.ai/
+    [embed] GitHub - nota-america/forgecat-agent-profiles: Production-ready AI ... https://github.com/nota-america/forgecat-agent-profiles
+

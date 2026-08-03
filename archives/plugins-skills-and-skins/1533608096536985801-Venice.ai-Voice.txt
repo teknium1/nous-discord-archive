@@ -1,0 +1,9 @@
+# Thread 'Venice.ai Voice' in forum #plugins-skills-and-skins
+# thread_id=1533608096536985801 forum_id=1485392832154832906
+# Started 2026-08-03T02:41:55.184446+00:00
+
+[2026-08-02T22:51:03.275000+00:00] haiku_45525 (id=1533608096536985801)
+    https://github.com/etkecc/hermes-venice/tree/main/voice#readme
+    TTS (11 models), STT (5 models), voice cloning (1 model), Zero Data Retention, all knobs
+    [embed] hermes-venice/voice at main · etkecc/hermes-venice https://github.com/etkecc/hermes-venice/tree/main/voice
+
