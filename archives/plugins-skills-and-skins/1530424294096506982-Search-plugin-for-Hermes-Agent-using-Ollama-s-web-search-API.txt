@@ -7,3 +7,6 @@
     https://github.com/rriggs/hermes-plugin-ollama-cloud-search
     [embed] GitHub - rriggs/hermes-plugin-ollama-cloud-search: Search plugin fo... https://github.com/rriggs/hermes-plugin-ollama-cloud-search
 
+[2026-08-03T03:52:48.864000+00:00] realadolan (id=1533684036881612801)
+    I will definitely try this! Thanks for the share
+

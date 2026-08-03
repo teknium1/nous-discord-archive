@@ -53929,3 +53929,60 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-03T02:30:56.677000+00:00] baophan0123 (id=1533663433675899072)
     [sticker] hermes3
 
+[2026-08-03T03:15:12.587000+00:00] remintoscar (id=1533674573369708544)
+    https://github.com/NousResearch/hermes-agent/pull/77274    fix(tui-gateway): merge agent output on model-switch history_version mismatch (#76870)- #77274
+
+[2026-08-03T03:16:31.320000+00:00] remintoscar (id=1533674903599845416)
+    <@690519146701783042> Please check help me
+
+[2026-08-03T03:21:45.861000+00:00] teknium (id=1533676222880415824)
+    plugins can already bundle tools and skills
+    [reply to ct0547 msg=1533641369460146187]
+
+[2026-08-03T03:21:47.849000+00:00] teknium (id=1533676231218823178)
+    but also much more
+
+[2026-08-03T03:24:35.421000+00:00] coffeexcoin (id=1533676934066737243)
+    Implemented with https://github.com/NousResearch/hermes-agent/pull/77267
+    
+    One thing of note, discord prevents you from using markdown links where the link text is a different link/url to prevent deceptive links so the implementation drops the `https://` prefix from the URL in the rendered output
+    [reply to teknium msg=1533588235287269438]
+
+[2026-08-03T03:29:40.036000+00:00] remintoscar (id=1533678211714519110)
+    https://github.com/NousResearch/hermes-agent/commit/2a2e6ee2a4bea45a9978deae81a3dce366198085
+    https://github.com/NousResearch/hermes-agent/commit/b6ca4fc856c8e8bc3bc922ed48957af853fa3dfa
+    I have two merged commits. Can I receive the DEV role, Tek <@387972437901312000>
+    [reply to remintoscar msg=1533674573369708544]
+
+[2026-08-03T03:30:19.818000+00:00] coffeexcoin (id=1533678378572316793)
+    also wondering if you could take a look at #69844 and #70075
+    
+    69844 in particular is an interesting one because it seems like anthropic is explicitly fingerprinting specific query patterns, despite walking back their policy changes around `claude -p`; I had to dig through the difference in openclaw and hermes request patterns to figure out what is different because openclaw works fine without extra usage
+
+[2026-08-03T03:33:19.574000+00:00] coffeexcoin (id=1533679132523630613)
+    <@387972437901312000> if 69844 is cant fix/wontfix because of policy just lmk and I'll set up something more robust on my machine outside of hermes to proxy through that adds these headers/prefixes
+    [reply to coffeexcoin msg=1533678378572316793]
+
+[2026-08-03T05:18:20.292000+00:00] marciob_97530 (id=1533705559650336808)
+    Hey guys, I'm revisiting my architecture when it comes to the best way to leverage Hermes Agent and wanted a second opinion. I run a LXC (ai-stack) with all my tools and AI stuff: Codex, Claude Code, VS Code etc then remote SSH from my laptop. Hermes Agent has it's own LXC (hermes-agent) then a OpenBao LXC for the API Keys and another LCX (cred-broker) as a keys broker that interacts with Hermes. 
+    Should I merge (hermes-gent)  to (ai-stack) or is it best practice to keep it "isolated" and continue to prompt it pointing to the projects on the dev LXC? I have 20+ project and 2-3 always active then the session limit eventually hit...  so I'm trying to figure out the best way to hand-over and check on progress. 
+    Cheers
+    [attachment] current-architecture-2026-08-03.png https://cdn.discordapp.com/attachments/1491258766648283238/1533705559256076418/current-architecture-2026-08-03.png?ex=6a71761c&is=6a70249c&hm=2340fc91d8533a3a37f1c96dcdc45a6ca6edecf5c4915d74693fc60fd1cc454e&
+
+[2026-08-03T07:24:03.712000+00:00] ninja_the_real_one_xd (id=1533737199047020644)
+    yeah install latest npm install with command in powershell worked fine for me and after that hermes install runs fine 😉
+    [reply to r4ys1988 msg=1533522642878070836]
+
+[2026-08-03T07:24:32.102000+00:00] ninja_the_real_one_xd (id=1533737318123311165)
+    but i think they already fix that ^^
+
+[2026-08-03T07:46:27.424000+00:00] realadolan (id=1533742834983633019)
+    Quick gateway perf PR: the pairing check was re-reading and re-parsing the approved users file from disk on every single inbound message, now it's cached by file mtime so it reads once until something actually changes https://github.com/NousResearch/hermes-agent/pull/77441
+
+[2026-08-03T08:45:17.895000+00:00] marciob_97530 (id=1533757642852274256)
+    I created a script that validates npm after the update because there were lnow CVEs on nmp bein re-added when I updated hermes. that was a while ago, not sure how it is today
+    [reply to r4ys1988 msg=1533522642878070836]
+
+[2026-08-03T09:34:28.707000+00:00] 2cb2 (id=1533770019455107072)
+    <@387972437901312000> still got a bunch of GHSAs sat open, some high severity
+

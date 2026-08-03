@@ -352,3 +352,7 @@
     https://github.com/TencentCloud/TencentDB-Agent-Memory
     [embed] GitHub - TencentCloud/TencentDB-Agent-Memory: TencentDB Agent Memor... https://github.com/TencentCloud/TencentDB-Agent-Memory
 
+[2026-08-03T08:51:16.266000+00:00] rostelinalise (id=1533759145969320046)
+    nah, it seems that there is a new memory system everytime i blinked
+    [reply to gdesmedt1 msg=1532552297027211365]
+

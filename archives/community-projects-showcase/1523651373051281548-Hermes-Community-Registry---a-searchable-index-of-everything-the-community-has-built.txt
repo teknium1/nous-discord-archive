@@ -81,3 +81,9 @@
 [2026-07-27T07:59:09.132000+00:00] _big_owen_ (id=1531209314759606364)
     [attachment] image.png https://cdn.discordapp.com/attachments/1523651373051281548/1531209314776125521/image.png?ex=6a68614d&is=6a670fcd&hm=0808f6778d2fe01d1e43d63302d929cc2f106d81425bb268b14f23c30a23410c&
 
+[2026-08-03T06:09:41.065000+00:00] alexkucera (id=1533718481349120080)
+    New update is up at **https://babylondreams.de/hermes-registry** with 936 entries reflecting the latest data.
+
+[2026-08-03T08:44:28.423000+00:00] jaixii (id=1533757435351924768)
+    Worked well for me
+

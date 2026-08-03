@@ -6,3 +6,6 @@
     https://github.com/carbongotfound/hermes-pda
     [embed] GitHub - carbongotfound/hermes-pda: Makes your Hermes agent less bl... https://github.com/carbongotfound/hermes-pda
 
+[2026-08-03T03:18:16.864000+00:00] tr1gg4 (id=1533675346283462876)
+    how much does this actually affect personality? ive spent a lot of time crafting my agent to act and speak a certain way, and has a character roleplay theme behind it. How will this affect that?
+

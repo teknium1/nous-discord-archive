@@ -752,3 +752,7 @@
     it wont be available in chrome store until made official.. due to upstream reasons that would create more complications than necessary.. but we are getting there honeslty
     [reply to machad0.gabriel msg=1532420228430958702]
 
+[2026-08-03T08:30:27.972000+00:00] rostelinalise (id=1533753910244802741)
+    Hello, does anyone know a bug in which i can't do pin current tab to add context to the hermes. Can it be just messed up from the setting side or something. Thankyou
+    [attachment] Screen_Recording_2026-08-03_at_15.27.58.mov https://cdn.discordapp.com/attachments/1519175108697264238/1533753909900742686/Screen_Recording_2026-08-03_at_15.27.58.mov?ex=6a71a323&is=6a7051a3&hm=da96a2c09c87ffdf5de75c1835a1e839288051880dd59c8ff386525a5ec556ef&
+
