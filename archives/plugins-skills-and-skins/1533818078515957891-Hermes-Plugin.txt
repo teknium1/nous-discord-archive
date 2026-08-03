@@ -1,0 +1,31 @@
+# Thread 'Hermes Plugin' in forum #plugins-skills-and-skins
+# thread_id=1533818078515957891 forum_id=1485392832154832906
+# Started 2026-08-03T14:38:47.314941+00:00
+
+[2026-08-03T12:45:26.880000+00:00] ducky_56789 (id=1533818078515957891)
+    Hello world
+
+[2026-08-03T12:45:32.893000+00:00] ducky_56789 (id=1533818103736303627)
+    Hey Hermes team! I’ve published a new standalone community plugin: Hermes Execution Router.
+    Repository: https://github.com/duclucky/hermes-execution-router
+    It allows a single Hermes Agent running on Windows to route terminal commands deterministically between:
+    native Hermes shell for portable Git/Python/Node tasks;
+    Windows PowerShell for Windows services, registry, scheduled tasks, winget, and Windows-specific operations;
+    Ubuntu WSL for apt, systemd, Linux permissions, deployment tools, and Linux filesystem paths.
+    The router is implemented through Hermes tool_request middleware, so rewritten commands still pass through Hermes hooks, guardrails, approvals, and the original terminal execution path.
+    It does not use an additional model or API call for routing, and it does not replace or override the terminal tool.
+    Current verification:
+    49 local tests passing;
+    live Git Bash → PowerShell test passing;
+    live Git Bash → Ubuntu WSL test passing;
+    Windows and Ubuntu CI passing on Python 3.11 and 3.12;
+    package build and Hermes-native repository installation verified;
+    raw command storage disabled by default.
+    Install:
+    hermes plugins install duclucky/hermes-execution-router --enable
+    Then:
+    hermes gateway restart
+    hermes execution-router doctor
+    I’d appreciate feedback on the routing rules, security boundaries, and whether there is an official community plugin catalog where this repository should be listed.
+    [embed] GitHub - duclucky/hermes-execution-router: Deterministic Windows an... https://github.com/duclucky/hermes-execution-router
+

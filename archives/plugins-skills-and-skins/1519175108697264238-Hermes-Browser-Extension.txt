@@ -756,3 +756,11 @@
     Hello, does anyone know a bug in which i can't do pin current tab to add context to the hermes. Can it be just messed up from the setting side or something. Thankyou
     [attachment] Screen_Recording_2026-08-03_at_15.27.58.mov https://cdn.discordapp.com/attachments/1519175108697264238/1533753909900742686/Screen_Recording_2026-08-03_at_15.27.58.mov?ex=6a71a323&is=6a7051a3&hm=da96a2c09c87ffdf5de75c1835a1e839288051880dd59c8ff386525a5ec556ef&
 
+[2026-08-03T12:59:06.380000+00:00] jonkomet (id=1533821515748081695)
+    are you connected on local , remote, or cloud?
+    [reply to rostelinalise msg=1533753910244802741]
+
+[2026-08-03T13:10:58.682000+00:00] jonkomet (id=1533824503358947369)
+    working on the language settings
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1533824502973206720/image.png?ex=6a71e4e2&is=6a709362&hm=a95ac782987a05e8fce0582f85288a824986c5b060e47f39a3236d7d4f3ffc93&
+

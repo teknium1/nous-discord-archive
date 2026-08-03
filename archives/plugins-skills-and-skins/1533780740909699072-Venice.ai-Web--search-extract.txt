@@ -1,0 +1,10 @@
+# Thread 'Venice.ai Web (search/extract)' in forum #plugins-skills-and-skins
+# thread_id=1533780740909699072 forum_id=1485392832154832906
+# Started 2026-08-03T14:38:47.678915+00:00
+
+[2026-08-03T10:17:04.901000+00:00] haiku_45525 (id=1533780740909699072)
+    https://github.com/etkecc/hermes-venice/tree/main/web
+    
+    With config knobs to play
+    [embed] hermes-venice/web at main · etkecc/hermes-venice https://github.com/etkecc/hermes-venice/tree/main/web
+

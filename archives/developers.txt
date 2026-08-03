@@ -53986,3 +53986,136 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-03T09:34:28.707000+00:00] 2cb2 (id=1533770019455107072)
     <@387972437901312000> still got a bunch of GHSAs sat open, some high severity
 
+[2026-08-03T09:44:14.325000+00:00] _ultrainstinct_ (id=1533772475714895903)
+    I hope it's not rude to ask but could
+    someone have a look at this multi user isolation bug please: https://github.com/NousResearch/hermes-agent/issues/62549
+
+[2026-08-03T10:26:49.294000+00:00] ducky_56789 (id=1533783192031465574)
+    > Hey everyone! I’ve just contributed a Windows updater fix to Hermes Agent:
+    >
+    > **PR #77517:** https://github.com/NousResearch/hermes-agent/pull/77517  
+    > **Related issue #73381:** https://github.com/NousResearch/hermes-agent/issues/73381
+    >
+    > The bug was caused by the `hermes update` process importing Bitwarden’s `cryptography` dependency before running `uv`. On Windows, that maps `cryptography/hazmat/bindings/_rust.pyd` into the updater process, so the updater’s own `uv` child cannot replace the file during a dependency upgrade and fails with `Access Denied / os error 5`.
+    >
+    > The PR fixes both import paths:
+    >
+    > - `hermes update` still loads the selected profile, `.env`, managed environment, and required config, but skips external secret-manager fetching because it isn’t needed for Git/dependency maintenance.
+    > - Bitwarden’s cryptographic cache primitives are now lazy-loaded only when encrypted cache operations actually need them, preventing full CLI parser construction from mapping `_rust.pyd`.
+    >
+    > I added subprocess regression coverage for both initial CLI startup and complete `main()` dispatch. Locally on Windows 11, **69 targeted tests passed**, the encrypted-cache fallback test passed, Ruff passed, and Hermes’ Windows-footgun scanner passed.
+    >
+    > The PR is currently mergeable. The upstream CI workflow is waiting for maintainer approval because it comes from a fork, so no CI jobs have run yet.
+    >
+    > Feedback and review would be greatly appreciated—especially from anyone who has reproduced the Windows `cryptography/_rust.pyd` update failure. Thank you!
+
+[2026-08-03T12:06:11.748000+00:00] fooned (id=1533808200376254655)
+    Hey, quick one - has anyone else noticed the gateway guard getting aggressive lately?
+    
+    My agent's been getting hard-blocked from inside the gateway process when it tries anything that even looks like it touches a gateway. Even hermes gateway restart --help gets blocked, and restarting a different profile's gateway gets flagged too. That's a bit much, right?
+    
+    I get the point - you don't want an agent SIGTERM-killing the process it's running inside. Makes sense. But I swear this wasn't happening a week ago, only started in the last few days. Looks like it came in with d2fa4590e ("block persistent self-restart jobs")?
+    
+    Just wondering if the sibling-profile restart + --help cases are meant to be blocked or if that's over-matching. And is there a config flag to relax the in-session check without opening up the cron restart-loop footgun?
+
+[2026-08-03T12:10:24.700000+00:00] baophan0123 (id=1533809261333971056)
+    register_task_env_overrides was mutating env.cwd on the shared container. One session changes dir, another session picks it up during script-path resolution. Also fixed clear_session_cwd not normalizing its key like record_session_cwd does, so the "default" record survived every teardown forever.
+    https://github.com/NousResearch/hermes-agent/pull/77585
+    
+    Foreground command runs longer than lifetime_seconds → idle reaper kills the sandbox mid-execution. _last_activity is only bumped before env.execute(), never during. Fixed by tracking in-flight foreground task ids so the cleanup sweep skips them.
+    https://github.com/NousResearch/hermes-agent/pull/77589
+    
+    _cleanup_inactive_envs checks has_active_processes(task_id) but background jobs registered under collapsed effective_task_id. When raw and collapsed keys differ → sandbox torn down with process still running. Now checks both keys.
+    https://github.com/NousResearch/hermes-agent/pull/77621
+
+[2026-08-03T12:16:48.910000+00:00] unktneemo (id=1533810872827515090)
+    Just verified your PR #77517 on a real Windows 11 host — the exact platform where the _rust.pyd self-lock bites. Reproduced the mechanism on current main (importing agent.secret_sources.bitwarden pulls cryptography.hazmat.bindings._rust into the interpreter), then applied your diff and confirmed the updater path no longer maps it.
+    [reply to ducky_56789 msg=1533783192031465574]
+
+[2026-08-03T12:20:09.903000+00:00] unktneemo (id=1533811715852992522)
+    All 5 regression tests pass locally, including the load_external_secrets=False dotenv-preservation cases. Also left a formal review on the PR with the before/after check. Solid fix — lazy imports + the sys.argv[1:2] != ["update"] gate are exactly right.
+
+[2026-08-03T12:21:46.098000+00:00] drexux (id=1533812119324201162)
+    fix(gateway): scope GATEWAY_ALLOW_ALL_USERS in self-gating adapters' open-DM gate
+    https://github.com/NousResearch/hermes-agent/pull/77548
+
+[2026-08-03T12:24:31.679000+00:00] unktneemo (id=1533812813821251696)
+    feat(desktop): add Launch Hermes Desktop at login option (Windows)#77025
+    https://github.com/NousResearch/hermes-agent/pull/77025
+
+[2026-08-03T12:28:44.585000+00:00] unktneemo (id=1533813874586030244)
+    PR #77548 — fix(gateway): scope GATEWAY_ALLOW_ALL_USERS in self-gating adapters' open-DM gate. Real cross-profile authz leak in Weixin/QQ/WhatsApp DM intake under multiplex_profiles — a secondary profile could inherit the default profile's process-env opt-in and open DMs to everyone. Just verified locally: the scope tests pass (including the no-inheritance regression), 42 CI checks green.
+    [reply to drexux msg=1533812119324201162]
+
+[2026-08-03T12:38:40.566000+00:00] baophan0123 (id=1533816374311518238)
+    registry.py — same-toolset tool replacement bypasses the ownership gate. Cross-toolset requires override=True + operator opt-in, but same-toolset just overwrites silently.  fixed.
+    https://github.com/NousResearch/hermes-agent/pull/77658
+
+[2026-08-03T12:40:15.005000+00:00] rusto212 (id=1533816770417135616)
+    As a full stack blockchain AI dev, I know well about Hermes.
+    If you share the detail here, I will check and can help you here.
+    Let 's chat here!
+    [reply to ros77997 msg=1521869453984534610]
+
+[2026-08-03T13:16:53.947000+00:00] unktneemo (id=1533825993448493077)
+    Verified #77658 — 30/30 tests pass, hijack scenario covered, original handler survives. Clean. 38 checks green.
+    [reply to baophan0123 msg=1533816374311518238]
+
+[2026-08-03T13:47:49.407000+00:00] ducky_56789 (id=1533833775811788871)
+    I’ve published Hermes Execution Router, a standalone Hermes middleware plugin that lets one Hermes Agent route terminal commands deterministically between native Windows, PowerShell, and Ubuntu WSL.
+    No extra model/API calls, no terminal override, and all routed commands still go through Hermes guardrails and approvals.
+    Repository:
+    https://github.com/duclucky/hermes-execution-router
+    
+    First public release:
+    https://github.com/duclucky/hermes-execution-router/releases/tag/v0.1.0
+    
+    Green CI: https://github.com/duclucky/hermes-execution-router/actions/runs/30809765297
+    
+    Install: hermes plugins install duclucky/hermes-execution-router --enable
+    Feedback and testing are welcome!
+
+[2026-08-03T14:06:44.489000+00:00] gottz.de (id=1533838536690634814)
+    in case you fine people want to benefit from the pr and issue relationships I linked during my triage efforts, simply use my hermes triage mcp https://hermes-triage-mcp.gottz.de/ to get access to all the wisdom.
+    you do have to be whitelisted. just ping me, and I put your discord acc on it.
+
+[2026-08-03T14:10:30.404000+00:00] unktneemo (id=1533839484247085076)
+    thats great
+
+[2026-08-03T14:10:33.155000+00:00] unktneemo (id=1533839495785349190)
+    i'll check it out
+
+[2026-08-03T14:11:50.825000+00:00] unktneemo (id=1533839821557071963)
+    <@190818731734204416> 282510551266099210
+
+[2026-08-03T14:12:37.930000+00:00] gottz.de (id=1533840019129897040)
+    added 🙂
+    [reply to unktneemo msg=1533839821557071963]
+
+[2026-08-03T14:13:21.845000+00:00] gottz.de (id=1533840203322757182)
+    tell me if you encounter any shortcomings
+
+[2026-08-03T14:14:03.493000+00:00] baophan0123 (id=1533840378006868061)
+    thank for cheking 🫡
+    [reply to unktneemo msg=1533825993448493077]
+
+[2026-08-03T14:16:33.537000+00:00] baophan0123 (id=1533841007337013338)
+    ser 987714782759108638
+    
+    thank you
+    [reply to gottz.de msg=1533838536690634814]
+
+[2026-08-03T14:16:52.287000+00:00] gottz.de (id=1533841085980479670)
+    already pre-added 🙂
+    [reply to baophan0123 msg=1533841007337013338]
+
+[2026-08-03T14:25:05.827000+00:00] unktneemo (id=1533843156037009612)
+    <@190818731734204416> how did you setup your hermes with the help of the MCP?
+
+[2026-08-03T14:25:16.130000+00:00] unktneemo (id=1533843199251054642)
+    i want to review some, but also catch some issues
+
+[2026-08-03T14:26:28.379000+00:00] gottz.de (id=1533843502285324431)
+    oh I just made this mcp for the community. I access the data directly via postgresql
+    [reply to unktneemo msg=1533843156037009612]
+
