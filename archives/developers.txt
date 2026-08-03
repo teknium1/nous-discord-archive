@@ -54119,3 +54119,644 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     oh I just made this mcp for the community. I access the data directly via postgresql
     [reply to unktneemo msg=1533843156037009612]
 
+[2026-08-03T14:38:30.511000+00:00] gottz.de (id=1533846531126591559)
+    Also, it's only gated via a white-list, as I don't want to see my openrouter balance vanish
+
+[2026-08-03T14:43:47.807000+00:00] unktneemo (id=1533847861962215616)
+    lmao
+
+[2026-08-03T14:47:05.356000+00:00] unktneemo (id=1533848690543034509)
+    couldnt this be locally hosted though?
+
+[2026-08-03T14:47:46.625000+00:00] unktneemo (id=1533848863637766276)
+    embedding
+
+[2026-08-03T14:47:57.855000+00:00] gottz.de (id=1533848910739669092)
+    everything is pre-embedded
+
+[2026-08-03T14:48:15.469000+00:00] gottz.de (id=1533848984618139798)
+    you can query it and it will cause sub-cent embeddings per query too
+
+[2026-08-03T14:48:23.100000+00:00] gottz.de (id=1533849016625008783)
+    but embedding is only one vector
+
+[2026-08-03T14:49:33.162000+00:00] gottz.de (id=1533849310486331582)
+    you could host it yourself. yes. question is.. how would you install the dataset and keep it up2date?
+    I'm quite literally using a codex 20x subscription to link the nodes and process the repository
+
+[2026-08-03T14:52:00.403000+00:00] gottz.de (id=1533849928059846676)
+    with this mcp, you can literally ask it what kind of known problems exist for a certain topic and will receive the deets.
+
+[2026-08-03T15:11:34.211000+00:00] unktneemo (id=1533854851367436349)
+    rough work
+
+[2026-08-03T15:11:37.968000+00:00] unktneemo (id=1533854867125440774)
+    but helps a lot
+
+[2026-08-03T15:26:42.811000+00:00] autumnn5389 (id=1533858662311788594)
+    873421863311790130   thank bro
+    [reply to gottz.de msg=1533838536690634814]
+
+[2026-08-03T15:35:03.781000+00:00] gottz.de (id=1533860763532394526)
+    approved 🙂
+    [reply to autumnn5389 msg=1533858662311788594]
+
+[2026-08-03T15:52:30.254000+00:00] hyqqx (id=1533865152758419497)
+    <@387972437901312000> 
+    Windows work log for hermes-agent. Context: all 36 CI jobs run on ubuntu-latest, so none of this can surface in CI. Everything below was run on a real Windows 11 box — build 26200, Python 3.11.6, from PowerShell.
+    
+    PRs — open
+    
+    https://github.com/NousResearch/hermes-agent/pull/74083
+    pytest tests/ collected nothing on Windows: a /tmp fallback that mkdirs at module scope aborts collection for all ~50k tests. Invisible in Git Bash (MSYS sets TMPDIR) — only reproduces from PowerShell. @monerostar reproduced on his own Win11 and left an LGTM.
+    
+    https://github.com/NousResearch/hermes-agent/pull/77120
+    8 tests in test_file_operations.py fail on Windows. Best one: the search fallback shells out to POSIX find, which on Windows resolves to System32\find.exe — a string-search tool, not a file finder — so it returns zero results instead of erroring. Before 8 failed / 38 passed, after 38 passed / 8 skipped.
+    
+    https://github.com/NousResearch/hermes-agent/pull/72101
+    CONTRIBUTING.md rule 10 tells contributors to spawn the detached gateway with pythonw.exe + DETACHED_PROCESS. The code deliberately does neither — following the guide re-creates #54220/#56747. Fixed in all four places the claim appears (en/es guide + en/zh-Hans docs).
+    
+    PRs — closed
+    
+    #74220 — correct fix, but the test got pruned from main before review landed.
+
+[2026-08-03T15:52:55.372000+00:00] hyqqx (id=1533865258110947438)
+    <@387972437901312000> 
+    Reviews on other people's PRs (nobody else seems to be running these on Windows)
+    
+    https://github.com/NousResearch/hermes-agent/pull/42872
+    Open since June, never human-verified. Confirmed it still fixes a live collection abort on today's main, cherry-pick clean, 0 → 8 tests collected.
+    
+    https://github.com/NousResearch/hermes-agent/pull/76741
+    The hang fix works — both WinError 216 cases gone. But the "40 passed" test plan doesn't reproduce here: 5 failures remain, all one root cause (fixtures build POSIX layout, Windows code resolves uv.exe / Scripts\python.exe). Traced each to its line.
+    
+    Issue
+    
+    https://github.com/NousResearch/hermes-agent/issues/68465#issuecomment-5085063942
+    Telegram connect hang — did not reproduce on current main (connects on attempt 3/8 after 74s). Posted the full log plus two findings that narrow it. Flagged clearly as "didn't reproduce here", not "not a bug".
+    
+    Github: hyqqx — 467 open PRs carry the platform/windows label and almost none have been run on Windows. Happy to keep working through them.
+
+[2026-08-03T16:14:42.617000+00:00] dias4761 (id=1533870741093749006)
+    fix(config): serialize .env read-modify-write to close a lost-update race (RAH-02)- #77208 : Closes #77187. https://github.com/NousResearch/hermes-agent/pull/77208
+    
+    https://github.com/NousResearch/hermes-agent/pull/77129 : fix(tui-gateway): close WS disconnect/reconnect session race  : Fixes #77127, Fixes #77191, Fixes #77192. 
+    
+    fix(tui-gateway): stop forcing authenticated=True on model.save_key (RAH-04) : https://github.com/NousResearch/hermes-agent/pull/77210 :Closes #77190.
+    
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/76882 : fix(secrets): close #76574 secret-scope residuals (insights, camofox cache, aux readers, whatsapp guard)  :Closes the remaining secret-scope residuals reported in #76574: four
+    confirmed cross-profile identity/credential leaks under gateway.multiplex_profiles.
+
+[2026-08-03T16:30:54.462000+00:00] unktneemo (id=1533874817306984718)
+    just reviewed your PRs #77208, #77210, #77129 — all look good to me, tests pass, good work on the race fixes
+    [reply to dias4761 msg=1533870741093749006]
+
+[2026-08-03T16:41:54.482000+00:00] fattchris. (id=1533877585631645889)
+    Just updated a few of my PRs today based on the comments received
+
+[2026-08-03T16:42:44.677000+00:00] fattchris. (id=1533877796164603994)
+    PR #67696 resolve_turn_limit
+    - 2 gateway bridge sites fixed for null handling
+    - TUI resolver now routes through resolve_turn_limit
+    - Docs updated with none/unlimited/0 examples
+    - 50 tests — all green
+    - Adversarial review caught a second bridge site the original spec missed
+    
+    PR #71670 compressor
+    - Stale commits removed — clean rebased branch
+    - 8 regression tests added (output head preservation + archived marker idempotence)
+    - Pre-existing test assertion fixed
+    - 21 tests — all green
+    
+    Total: 85 tests passing across both PRs.
+
+[2026-08-03T16:44:32.357000+00:00] unktneemo (id=1533878247807516864)
+    nice windows work — verified #74083 (reproduced the /tmp collection abort from PowerShell, fix works), #77120 (38 passed / 8 skipped as you said) and #72101 (docs now match the actual detach flags). all look good to me
+    [reply to hyqqx msg=1533865152758419497]
+
+[2026-08-03T16:49:35.446000+00:00] hyqqx (id=1533879519054659644)
+    thank you bro
+    [reply to unktneemo msg=1533878247807516864]
+
+[2026-08-03T16:49:46.552000+00:00] hyqqx (id=1533879565636734976)
+    cheers for answer
+    [reply to unktneemo msg=1533878247807516864]
+
+[2026-08-03T16:50:46.648000+00:00] ardaaltinors (id=1533879817697628261)
+    Hey, I opened a PR to add Codex OAuth as an STT provider:
+    
+    https://github.com/NousResearch/hermes-agent/pull/77840
+    
+    I found it a bit odd that Hermes can already use a Codex subscription for model access, but there wasn’t any way to use the same subscription for speech-to-text.
+    
+    This reuses the existing Codex login for transcription and keeps local faster-whisper as the fallback. The only questionable part is that it relies on ChatGPT’s undocumented transcription endpoint, so I’d be curious what you guys think about supporting this in core.
+
+[2026-08-03T17:09:01.234000+00:00] unktneemo (id=1533884408724193350)
+    #77840 (codex oauth as STT provider) — interesting idea, reusing the same subscription for transcription makes sense since we already pay for codex. the risk is the undocumented chatgpt.com/backend-api/transcribe endpoint — same class as the codex endpoint, could break without notice. i'd say worth considering in core but that's up to the maintainers. curious what teknium think
+    [reply to ardaaltinors msg=1533879817697628261]
+
+[2026-08-03T18:31:12.044000+00:00] blooddragon90 (id=1533905090040168549)
+    <@190818731734204416> not sure if you're awake but often times your AI bot is just spam on my PR's
+
+[2026-08-03T18:31:28.127000+00:00] gottz.de (id=1533905157497163988)
+    o
+
+[2026-08-03T18:31:30.896000+00:00] gottz.de (id=1533905169111187686)
+    what pr id?
+
+[2026-08-03T18:32:44.486000+00:00] blooddragon90 (id=1533905477770019007)
+    here's an issue for example: https://github.com/NousResearch/hermes-agent/issues/68103#issuecomment-5169749171 the script needs deduping
+
+[2026-08-03T18:34:10.489000+00:00] blooddragon90 (id=1533905838492749835)
+    It basically goes in a circle to say X pr (my PR) solves X issue (the issue) about 5x lol, that X PR is related and PR, AND it's it's own partial fix and BEST fix. I get it, the agent's trying to be similar to clawsweeper etc but I'd recommend actually using the clawsweeper prompts in that case
+
+[2026-08-03T18:34:10.840000+00:00] gottz.de (id=1533905839964950830)
+    I see one message there
+
+[2026-08-03T18:34:42.058000+00:00] gottz.de (id=1533905970902597812)
+    ah you mean in each issue
+
+[2026-08-03T18:35:29.078000+00:00] gottz.de (id=1533906168119038022)
+    https://hermes-triage.gottz.de/?node=68115&complex=b494d995d8f9aa13c50032c3d66fa5b6
+
+[2026-08-03T18:35:35.856000+00:00] gottz.de (id=1533906196548026538)
+    well. it is indeed a bigger complex
+
+[2026-08-03T18:35:43.714000+00:00] dias4761 (id=1533906229506871296)
+    tysm for your checking
+    [reply to unktneemo msg=1533874817306984718]
+
+[2026-08-03T18:36:30.130000+00:00] blooddragon90 (id=1533906424189681855)
+    always appreciate real person reviewing but unless you're a maintainer and you add value, the "reviews" are mostly noise and might confuse people that you're a maintainer
+
+[2026-08-03T18:38:07.318000+00:00] gottz.de (id=1533906831825436722)
+    well. you are the second person who tells me it's noise.
+    thing is, if this wiring is not public, how should someone else make the connection?
+    [reply to blooddragon90 msg=1533906424189681855]
+
+[2026-08-03T18:40:18.076000+00:00] gottz.de (id=1533907380264239325)
+    https://hermes-triage.gottz.de/timeline.html?bucket=24h&mode=candle&series=pr_created&win=14
+    the pressure of new pr's is unmaintainable tbh. without proper links between everythinig of relevance, more and more dupes get created
+
+[2026-08-03T18:41:07.729000+00:00] gottz.de (id=1533907588524281906)
+    currently we have almost 600 new pr's a day
+
+[2026-08-03T18:41:42.118000+00:00] blooddragon90 (id=1533907732762067056)
+    that's also like "we", you act like a maintainer triaging
+
+[2026-08-03T18:42:18.097000+00:00] blooddragon90 (id=1533907883668803656)
+    any agent can search instantly to see what PR's are similar, and it's not typical to post dupe PR's from an agent perspective
+
+[2026-08-03T18:42:19.254000+00:00] gottz.de (id=1533907888521875488)
+    I'm literally just doing what I was suggested to do by teknium so..
+
+[2026-08-03T18:43:09.257000+00:00] blooddragon90 (id=1533908098249392379)
+    If you were adding value with it, totally, contributing and debugging and reviewing for bugs is super helpful
+
+[2026-08-03T18:43:27.245000+00:00] blooddragon90 (id=1533908173696667758)
+    but I've read like 10 of the comments on my issues and PR's and they are just slop
+
+[2026-08-03T18:43:57.216000+00:00] realadolan (id=1533908299404284054)
+    I think the system is okay but maybe the comments could tone down a bit
+
+[2026-08-03T18:44:39.904000+00:00] gottz.de (id=1533908478450597888)
+    any idea is welcome. it doesn't send two pings only cause there is two times the same issue id in there.
+
+[2026-08-03T18:45:03.757000+00:00] gottz.de (id=1533908578497331314)
+    unless of course, it's multiple messages.
+
+[2026-08-03T18:45:22.054000+00:00] sdat4828 (id=1533908655240646920)
+    anyone ever got team debate to work?
+
+[2026-08-03T18:45:23.571000+00:00] realadolan (id=1533908661603270818)
+    And yes, this is true. Any agent can instantly identify all connections related to a single issue or PR. I do it daily. It gets a bit harder when you apply it repo-wide, and that’s where <@190818731734204416>’s system comes into play. Nice addition.
+
+[2026-08-03T18:45:28.796000+00:00] blooddragon90 (id=1533908683518378005)
+    if they actually add value, I'd be like great you pointed out a bug or another PR that we should consolidate etc but 90% are just saying my PR fixes my issue, and some variant of that for about 2000 tokens its wasteful for when my agents review and have to review the slop, overall you add overhead of about 1000 slop tokens to every review x 10k reviews 10,000,000x10 reviews 100mil lol
+
+[2026-08-03T18:46:41.144000+00:00] gottz.de (id=1533908986968150238)
+    if any agent can instantly identify all connections, then why did I have to download each comment, diff, pr, issue, link and so on, to form 1.5 million graph edges?
+    can tell you why..
+    cause text search doesn't work with github.
+    [reply to realadolan msg=1533908661603270818]
+
+[2026-08-03T18:46:42.608000+00:00] blooddragon90 (id=1533908993108476106)
+    agent can search by touched file and diff + issue and name across in <500ms, humans are not as great at it
+    [reply to realadolan msg=1533908661603270818]
+
+[2026-08-03T18:47:13.901000+00:00] gottz.de (id=1533909124360704132)
+    I even detect file overlap
+
+[2026-08-03T18:47:24.093000+00:00] gottz.de (id=1533909167109050621)
+    across all pr's
+
+[2026-08-03T18:47:59.903000+00:00] realadolan (id=1533909317307338752)
+    I'm torn between the two sides because I can see and understand both points of view. Maybe it's good to have the system but cut the comments
+
+[2026-08-03T18:48:11.163000+00:00] gottz.de (id=1533909364535070772)
+    I could disable all the comments and just provide the data as mcp, as I do right now. but it wouldn't help the masses.
+
+[2026-08-03T18:48:13.581000+00:00] realadolan (id=1533909374677028986)
+    Cause comments do add more slop than help. Talking about the comments themselves.
+
+[2026-08-03T18:48:15.260000+00:00] blooddragon90 (id=1533909381719134238)
+    yes and an agent can do that too in 500ms I helped build some of the graph systems that everyone uses lol
+
+[2026-08-03T18:48:34.954000+00:00] blooddragon90 (id=1533909464321622127)
+    whatever you've built might do it faster in like 100ms
+
+[2026-08-03T18:48:38.134000+00:00] gottz.de (id=1533909477659644024)
+    you need 24 hours to download all pr's so..
+    [reply to blooddragon90 msg=1533909381719134238]
+
+[2026-08-03T18:48:48.716000+00:00] gottz.de (id=1533909522043895838)
+    just cause github api is limiting you
+
+[2026-08-03T18:49:14.431000+00:00] realadolan (id=1533909629900165181)
+    You don't really need to search through everything though
+
+[2026-08-03T18:49:32.731000+00:00] blooddragon90 (id=1533909706656186490)
+    tldr: if it added value to any of my PR's historically I'd be for it
+
+[2026-08-03T18:49:45.341000+00:00] blooddragon90 (id=1533909759546101830)
+    i'm not anti help
+
+[2026-08-03T18:50:22.528000+00:00] unktneemo (id=1533909915519680632)
+    without the comment system, how does someone reviews 29 PRs separatedly that are old, broken, cut, or the correct one?
+
+[2026-08-03T18:51:05.482000+00:00] realadolan (id=1533910095682080788)
+    I don't understand the question
+    [reply to unktneemo msg=1533909915519680632]
+
+[2026-08-03T18:51:06.311000+00:00] gottz.de (id=1533910099158896784)
+    I read all notifications tbh.. all of them.. more than 50 times people thanked me for this
+
+[2026-08-03T18:51:06.836000+00:00] blooddragon90 (id=1533910101361037404)
+    well first off most PR's need to be closed, at OC we managed to go thru and wasted millions of dollars in tokens on reviewing them all and most were deprecated and wasteful because they were on old builds
+
+[2026-08-03T18:51:18.192000+00:00] realadolan (id=1533910148991680573)
+    Give me a PR and I give you **all** the connections (dupes, etc) in less than 20 seconds
+
+[2026-08-03T18:51:23.453000+00:00] realadolan (id=1533910171057918032)
+    ONE PR.
+
+[2026-08-03T18:51:26.034000+00:00] realadolan (id=1533910181883412602)
+    Not all PRs
+
+[2026-08-03T18:51:28.199000+00:00] Translator Bot#1043 (id=1533910190963818617)
+    Upon arrival.
+    [reply to realadolan msg=1533910171057918032]
+
+[2026-08-03T18:51:34.624000+00:00] gottz.de (id=1533910217912352879)
+    well that would be easy cause it would have a comment by me already
+    [reply to realadolan msg=1533910148991680573]
+
+[2026-08-03T18:52:04.570000+00:00] realadolan (id=1533910343514849400)
+    I was doing this way before you came up with your system...
+
+[2026-08-03T18:52:21.145000+00:00] realadolan (id=1533910413035569353)
+    Your system is irrelervant in that regard
+
+[2026-08-03T18:52:23.335000+00:00] unktneemo (id=1533910422220968006)
+    its going to use tokens one way or another, in my knowledge, or we take some time doing it, or we do it by ourselves, or let gottz do it
+    [reply to realadolan msg=1533910148991680573]
+
+[2026-08-03T18:52:27.609000+00:00] ruithecat (id=1533910440147550319)
+    why translator bot is here..
+
+[2026-08-03T18:52:34.844000+00:00] realadolan (id=1533910470493470791)
+    It adds more information NOW, but it was working before it also
+
+[2026-08-03T18:53:07.433000+00:00] unktneemo (id=1533910607181647919)
+    i mean, in that case we kind of save our tokens
+
+[2026-08-03T18:53:30.098000+00:00] realadolan (id=1533910702245417090)
+    I think the comments should be removed or toned down a bit. IMHO, they add no value 95% of the time. Calling something the “best fix” when there are no other fixes is just slop. Cut it and save tokens.
+
+[2026-08-03T18:53:46.617000+00:00] gottz.de (id=1533910771531251874)
+    I'm multiple billions of token deep into creating a public map every low-price model can assess..
+    srsly dude..
+
+[2026-08-03T18:54:55.947000+00:00] gottz.de (id=1533911062322085938)
+    andy where were you a week ago when I constantly asked for feedback?
+
+[2026-08-03T18:54:58.500000+00:00] gottz.de (id=1533911073030144081)
+    why now?
+
+[2026-08-03T18:55:01.299000+00:00] gottz.de (id=1533911084770131993)
+    a bit late.
+
+[2026-08-03T18:55:09.280000+00:00] unktneemo (id=1533911118245003416)
+    yeah, when there is only one PR and one issue, it seems redundant, but the rest it is necessary
+    maybe tone down them
+    [reply to realadolan msg=1533910702245417090]
+
+[2026-08-03T18:55:42.991000+00:00] gottz.de (id=1533911259639185489)
+    all pr's are full of hermes written comments.. what human goes through them anyways?
+
+[2026-08-03T18:56:09.169000+00:00] blooddragon90 (id=1533911369437417562)
+    all in all this is the feedback
+    1. it comes off like you're pretending to be a maintainer and hitting the entire repository with some value but majority spam (i checked all my pr's and it didn't add value to one. 
+    2. to anyone that doesn't know every maintainer it comes off like you're making a decision on their PR versus a comment like hey this is my ai info bot tagging related PR's (if none related it doesn't post)
+
+[2026-08-03T18:56:49.539000+00:00] realadolan (id=1533911538761732356)
+    Unfortunately, no humans go through them, which is why every “major” update introduces regression after regression.
+    [reply to gottz.de msg=1533911259639185489]
+
+[2026-08-03T18:57:03.138000+00:00] gottz.de (id=1533911595799941232)
+    which is another problem to itself
+    [reply to realadolan msg=1533911538761732356]
+
+[2026-08-03T18:57:44.540000+00:00] blooddragon90 (id=1533911769452515529)
+    I personally run into nearly no bugs and when I file an issue and PR its usually fixed within a few days, most of the time its nothing like openclaw and as prior openclaw team I can tell you hermes is a total 180
+
+[2026-08-03T18:59:52.663000+00:00] blooddragon90 (id=1533912306839191774)
+    my PR's that are open are mostly remnants of features that have already been superceded or need to be updated to latest main, places where an AI bot would be helpful would be "this has been superceded, review and if it is, it's closable", "pr A-B-C do this and should all be combined together etc" anyways I'm all for help, but if we can bump it to being less spam, less "I'm an authority" and more "im a helper bot here's my ideas and feedback and some bugs I saw etc" it would be more helpful for me
+
+[2026-08-03T19:00:43.687000+00:00] unktneemo (id=1533912520849621183)
+    yeah, i kind of get it
+    [reply to blooddragon90 msg=1533912306839191774]
+
+[2026-08-03T19:01:04.326000+00:00] realadolan (id=1533912607415861528)
+    I just wish the core team would focus on stability for at least the next 3 major updates instead of adding new, half baked features. 0.20.0 really made me frustrated
+
+[2026-08-03T19:01:07.115000+00:00] blooddragon90 (id=1533912619113517317)
+    fyi I know you're german and likely just communicating that way culturally just saying how it comes off to me and my agent who pinged me "I'm annoyed this guy keeps telling me my PR fix my own tagged issue on my PR and waking me up to noise"
+
+[2026-08-03T19:01:26.771000+00:00] blooddragon90 (id=1533912701556752518)
+    what bugs are you having?
+    [reply to realadolan msg=1533912607415861528]
+
+[2026-08-03T19:02:53.270000+00:00] gottz.de (id=1533913064359858287)
+    tbh, I have not intentionally designed the comments this way. their format is the byproduct.
+
+[2026-08-03T19:03:55.970000+00:00] unktneemo (id=1533913327342719037)
+    theres always something to improve in everythin
+
+[2026-08-03T19:05:04.586000+00:00] realadolan (id=1533913615139213528)
+    xAI TTS, which was introduced as one of the core features in this update, is completely broken and can actually cause crashes. I already fixed it and opened a PR, but it has not been merged yet.
+    
+    Then there is the Scheduled Jobs view, which is now missing. I’m really starting to think that the core team does not use Hermes themselves, aside from maybe Tek, to be honest. I would be genuinely surprised if any of them regularly used the desktop app, considering this bug has been present since June 26.
+    
+    There is no way the core team would have missed it if they were actually using the app themselves. I’m very frustrated with this update...
+    [reply to blooddragon90 msg=1533912701556752518]
+
+[2026-08-03T19:05:11.468000+00:00] blooddragon90 (id=1533913644004278413)
+    yeah it's likely a prompt thing thats why I said dedupue and final confidence interval check task of the agent before it post "Is this post adding significant value to the post? Is it just repeating the same thing?----then don't post it. My agent will thank you from waking her up from our server in Paris, she's expensive lol
+
+[2026-08-03T19:05:18.886000+00:00] realadolan (id=1533913675117629520)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1533913674622959616/image.png?ex=6a7237ee&is=6a70e66e&hm=b2def9f4337a5db07d15a7a3251fbc29b3804b10212b23c3f07b4a115c72012f&
+
+[2026-08-03T19:05:35.573000+00:00] egilewski (id=1533913745108111440)
+    Guys, I can't read as fast as you write. GottZ clanker's comments are verbose and (for me) sometimes confusing, but it's what Teknium asked for. The added value is for maintainers, not for you.
+
+[2026-08-03T19:05:37.554000+00:00] unktneemo (id=1533913753417023600)
+    the scheduled jobs seems to be only on Mac
+    [reply to realadolan msg=1533913615139213528]
+
+[2026-08-03T19:05:41.135000+00:00] realadolan (id=1533913768436961470)
+    And yes, I know you can do Ctrl + K -> Cron and find it
+
+[2026-08-03T19:05:41.174000+00:00] unktneemo (id=1533913768600539328)
+    is there an issue for that?
+
+[2026-08-03T19:05:50.535000+00:00] realadolan (id=1533913807863152803)
+    On Windows also
+    [reply to unktneemo msg=1533913753417023600]
+
+[2026-08-03T19:05:57.716000+00:00] unktneemo (id=1533913837982449849)
+    mine is working
+
+[2026-08-03T19:06:01.940000+00:00] unktneemo (id=1533913855699321043)
+    ill print it, om
+
+[2026-08-03T19:07:01.666000+00:00] realadolan (id=1533914106208325833)
+    Update your hermes dude
+
+[2026-08-03T19:07:02.086000+00:00] blooddragon90 (id=1533914107969929386)
+    the point if you read it was there is no added value on most of the PR's, it needs improved prompting so it doesn't just post spam
+    [reply to egilewski msg=1533913745108111440]
+
+[2026-08-03T19:07:04.397000+00:00] realadolan (id=1533914117662969938)
+    And you see it gone
+
+[2026-08-03T19:07:12.654000+00:00] blooddragon90 (id=1533914152295338076)
+    update or do a clean install
+
+[2026-08-03T19:07:14.066000+00:00] unktneemo (id=1533914158217695302)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1533914156905005248/image.png?ex=6a723861&is=6a70e6e1&hm=15fa122247d78f63d882c99dde2fd0e8796652d1b321e61fe41b48938c7607ce&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1533914157378699395/image.png?ex=6a723861&is=6a70e6e1&hm=961da3e79244cc1e67d65b36b53a23de767ba6a047b24fa60489f1f4ed79af97&
+
+[2026-08-03T19:07:19.897000+00:00] egilewski (id=1533914182674809005)
+    That said, just today I fixed a couple issues thanks to GottZ. Even if I had to spend time reading it. It's not like I was doing it for someone else.
+
+[2026-08-03T19:07:22.742000+00:00] unktneemo (id=1533914194607476969)
+    i'm at 0.20.0
+
+[2026-08-03T19:07:47.405000+00:00] realadolan (id=1533914298051727534)
+    You miss crons as well
+    [reply to unktneemo msg=1533914194607476969]
+
+[2026-08-03T19:07:57.511000+00:00] realadolan (id=1533914340439228446)
+    What you have there is the "currently enabled" cron view
+
+[2026-08-03T19:08:00.105000+00:00] realadolan (id=1533914351319122082)
+    It's different
+
+[2026-08-03T19:08:02.364000+00:00] realadolan (id=1533914360794054656)
+    So you have the bug also
+
+[2026-08-03T19:08:12.219000+00:00] unktneemo (id=1533914402129055824)
+    hmm
+
+[2026-08-03T19:08:18.288000+00:00] realadolan (id=1533914427584282716)
+    I'm talking about Scehduled Jobs view. Press Ctrl + K then "Cron"
+
+[2026-08-03T19:08:25.190000+00:00] realadolan (id=1533914456533372969)
+    You'll see it
+
+[2026-08-03T19:08:32.852000+00:00] blooddragon90 (id=1533914488669995069)
+    what we've said the whole time to <@190818731734204416> is to simply improve it, don't act like a maintainer and if its going to be spam don't post it lol
+    [reply to egilewski msg=1533914182674809005]
+
+[2026-08-03T19:08:49.514000+00:00] blooddragon90 (id=1533914558555488386)
+    its like 4-5 loc to fix it
+
+[2026-08-03T19:08:56.252000+00:00] unktneemo (id=1533914586816843836)
+    true
+
+[2026-08-03T19:09:38.974000+00:00] gottz.de (id=1533914766005764257)
+    4-5 loc fix.. ye..
+    dude.. it's 80k LoC
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1533914765657903254/image.png?ex=6a7238f2&is=6a70e772&hm=38308c5bd6b205b15f9bbd1c063079066b3dcd7369b10386f1bf9c49b76f52dc&
+    [reply to blooddragon90 msg=1533914558555488386]
+
+[2026-08-03T19:09:41.152000+00:00] blooddragon90 (id=1533914775140958460)
+    his response "i have permission" and "where were you last week when I wanted feedback" its not like an ego thing, I'd welcome the review and help on em
+
+[2026-08-03T19:10:11.953000+00:00] unktneemo (id=1533914904329851011)
+    <@145786028483936256> whats your PR on the scheduled jobs?
+
+[2026-08-03T19:10:24.132000+00:00] realadolan (id=1533914955412148404)
+    I didn't create a PR for this
+    [reply to unktneemo msg=1533914904329851011]
+
+[2026-08-03T19:10:29.671000+00:00] realadolan (id=1533914978644525167)
+    Only for the xAI protocol
+
+[2026-08-03T19:10:31.942000+00:00] blooddragon90 (id=1533914988169924710)
+    More LOC doesn't = good
+    [reply to gottz.de msg=1533914766005764257]
+
+[2026-08-03T19:10:42.686000+00:00] realadolan (id=1533915033233264641)
+    Had to rewrite it cause currently what is shipped with Hermes is broken and crashes
+
+[2026-08-03T19:10:43.257000+00:00] blooddragon90 (id=1533915035628470412)
+    and it's a prompt issue as I said <@190818731734204416>
+
+[2026-08-03T19:11:18.590000+00:00] blooddragon90 (id=1533915183825813687)
+    prompt is a few lines of code
+
+[2026-08-03T19:11:57.784000+00:00] blooddragon90 (id=1533915348217233408)
+    the output is data > the agent prompt tells it how to wrap that data into the comment on GH
+
+[2026-08-03T19:12:14.662000+00:00] blooddragon90 (id=1533915419008831518)
+    I know its  vibed but if you ask your agent it will tell you where its comment prompt is
+
+[2026-08-03T19:12:41.253000+00:00] gottz.de (id=1533915530539438101)
+    if it was, it would be a security nightmare. you can't prompt-inject this.
+    dude you can criticize the output but without knowing the contents, just slow down a little in your assumptions.
+    [reply to blooddragon90 msg=1533915183825813687]
+
+[2026-08-03T19:12:48.433000+00:00] realadolan (id=1533915560654405873)
+    The only feedback I have regarding <@190818731734204416> ’s system is that if there are no alternative fixes and no competing PRs or issues, there should be no comment. This change alone would make the system much more balanced
+
+[2026-08-03T19:13:03.396000+00:00] blooddragon90 (id=1533915623413780501)
+    mate check my github lol
+
+[2026-08-03T19:13:29.740000+00:00] realadolan (id=1533915733908656288)
+    Send it
+    [reply to blooddragon90 msg=1533915623413780501]
+
+[2026-08-03T19:13:30.495000+00:00] realadolan (id=1533915737075355689)
+    😄
+
+[2026-08-03T19:13:31.751000+00:00] gottz.de (id=1533915742343397508)
+    ye what do you want me to see there?
+    [reply to blooddragon90 msg=1533915623413780501]
+
+[2026-08-03T19:13:38.012000+00:00] gottz.de (id=1533915768603939038)
+    https://github.com/100yenadmin
+    [reply to realadolan msg=1533915733908656288]
+
+[2026-08-03T19:14:09.523000+00:00] realadolan (id=1533915900770652343)
+    Eva??
+
+[2026-08-03T19:14:18.176000+00:00] unktneemo (id=1533915937063833722)
+    yeah, it could send only for ones that are duplicate, multiples PRs or issues
+    [reply to realadolan msg=1533915560654405873]
+
+[2026-08-03T19:14:26.177000+00:00] dias4761 (id=1533915970622455989)
+    The Hermes Agent is still something new; it was released this year. So, it will take quite a while for things to stabilize.
+    [reply to realadolan msg=1533912607415861528]
+
+[2026-08-03T19:14:37.570000+00:00] realadolan (id=1533916018408161300)
+    I know this
+    [reply to dias4761 msg=1533915970622455989]
+
+[2026-08-03T19:14:45.718000+00:00] realadolan (id=1533916052583612537)
+    How is that contradicting what I said
+
+[2026-08-03T19:15:04.473000+00:00] realadolan (id=1533916131247526113)
+    I'm just saying that I understand that new features are more flashy and sell better
+
+[2026-08-03T19:15:13.657000+00:00] realadolan (id=1533916169768145048)
+    But for the love of God at least check if the feature works
+
+[2026-08-03T19:15:30.093000+00:00] gottz.de (id=1533916238705852466)
+    how do you know it has no dupes if there ain't a comment?
+    [reply to unktneemo msg=1533915937063833722]
+
+[2026-08-03T19:15:35.152000+00:00] bentomaker (id=1533916259924836544)
+    Is there a place where one can showcase hermes agent specific tools?
+
+[2026-08-03T19:15:46.904000+00:00] realadolan (id=1533916309216165919)
+    <#1316137596535177246>
+
+[2026-08-03T19:16:01.161000+00:00] realadolan (id=1533916369014231050)
+    and <#1485392832154832906>
+
+[2026-08-03T19:16:04.830000+00:00] bentomaker (id=1533916384403390564)
+    Thx
+
+[2026-08-03T19:16:29.365000+00:00] blooddragon90 (id=1533916487310508192)
+    It comes off more like you want to comment on every post lol
+    [reply to gottz.de msg=1533916238705852466]
+
+[2026-08-03T19:16:36.468000+00:00] unktneemo (id=1533916517102653602)
+    thinking better, i understand
+    its easier for the maintainers to be that way
+    they dont seem to have the time
+    [reply to gottz.de msg=1533916238705852466]
+
+[2026-08-03T19:16:57.866000+00:00] dias4761 (id=1533916606852239470)
+    That's true. But still, it's something I at least view as "normal" for now, precisely because it's new. Maintaining existing elements while adding new features is complicated—lmao—especially keeping them balanced. You implement one thing and three bugs pop up.
+    [reply to realadolan msg=1533916169768145048]
+
+[2026-08-03T19:17:00.624000+00:00] blooddragon90 (id=1533916618420256933)
+    than add value to every post
+
+[2026-08-03T19:17:02.475000+00:00] gottz.de (id=1533916626184044655)
+    What you are saying is the assumption that I want to shine bright or something.
+    [reply to blooddragon90 msg=1533916487310508192]
+
+[2026-08-03T19:17:18.002000+00:00] blooddragon90 (id=1533916691308875796)
+    how you're responding to the feedback for sure
+
+[2026-08-03T19:17:18.404000+00:00] realadolan (id=1533916692994986116)
+    Exactly
+    [reply to dias4761 msg=1533916606852239470]
+
+[2026-08-03T19:17:39.777000+00:00] blooddragon90 (id=1533916782639845488)
+    instead of "yeah I can add value" = "its 80k loc you don't understand how big my dong is"
+
+[2026-08-03T19:18:15.222000+00:00] gottz.de (id=1533916931307081949)
+    the first person who put critics on this was magnus. now you. that's two people out of a couple more who are thankful.
+    [reply to blooddragon90 msg=1533916691308875796]
+
+[2026-08-03T19:19:51.235000+00:00] blooddragon90 (id=1533917334014787636)
+    "thanks for the feedback I'll look at tweaking and deduping the prompt, I can see how posting on your issue spam is not adding value to your PR to just repeat your own PR back to you 5x, I can tweak it so it will add value and not do that"   instead  "criticism isn't valid because someone else told me thank you before"
+
+[2026-08-03T19:20:15.433000+00:00] blooddragon90 (id=1533917435508555837)
+    thats not logical, thats ego
+
+[2026-08-03T19:20:56.169000+00:00] gottz.de (id=1533917606367592578)
+    if you want me to, I can add you to the exclusion list like magnus, so your pr's ain't touched
+
+[2026-08-03T19:21:00.377000+00:00] blooddragon90 (id=1533917624017096836)
+    if any of the comments had found a single bug or helped me find another PR to salvage or put in, I'd say thank you too.
+
+[2026-08-03T19:21:38.588000+00:00] blooddragon90 (id=1533917784285643016)
+    is your repo for it public?
+
+[2026-08-03T19:21:44.847000+00:00] blooddragon90 (id=1533917810537926816)
+    I'll just send you the prompt change
+
+[2026-08-03T19:24:24.981000+00:00] unktneemo (id=1533918482188730448)
+    thats why theres 30k PRs open too
+    [reply to dias4761 msg=1533916606852239470]
+
+[2026-08-03T19:25:35.832000+00:00] realadolan (id=1533918779359363253)
+    You know what I'd do.
+
+[2026-08-03T19:25:48.214000+00:00] realadolan (id=1533918831292977243)
+    Close the PR section unless everything is cleared. For the next 1 month or something
+
+[2026-08-03T19:25:53.442000+00:00] realadolan (id=1533918853220794539)
+    600 new PRs a day is bad for the project
+
+[2026-08-03T19:26:37.937000+00:00] blooddragon90 (id=1533919039846613083)
+    for context clawsweeper is 159k loc 2x the size and helped triage 30k+ issues and PR's down to <3k, trust me I'm very familiar with how they work and how to build maintainer bots lol, another maintainer bot I built and use NeonDiff is also OSS free to take from my own in yours (neon is 160k loc as well)
+

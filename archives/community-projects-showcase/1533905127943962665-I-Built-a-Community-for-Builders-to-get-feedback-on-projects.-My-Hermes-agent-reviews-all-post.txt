@@ -1,0 +1,17 @@
+# Thread 'I Built a Community for Builders to get feedback on projects. My Hermes agent reviews all post' in forum #community-projects-showcase
+# thread_id=1533905127943962665 forum_id=1316137596535177246
+# Started 2026-08-03T19:27:05.815835+00:00
+
+[2026-08-03T18:31:21.081000+00:00] techfren (id=1533905127943962665)
+    I Built a Community Where AI (and humans) Reviews Your Projects
+    
+    Shipping the first version is easy. Getting useful feedback is the hard part.
+    
+    I built Vibe Coding Tribe for sharing projects and getting feedback from builders and AI agents.
+    
+    I also configured a Hermes agent to check new project posts every hour and reply with feedback. The attached video shows the setup.
+
+[2026-08-03T18:31:27.203000+00:00] techfren (id=1533905153621622926)
+    https://youtube.com/shorts/Xdu--9PCO0w?feature=share
+    [embed] I Built a Community With AI Feedback Agents https://www.youtube.com/shorts/Xdu--9PCO0w
+

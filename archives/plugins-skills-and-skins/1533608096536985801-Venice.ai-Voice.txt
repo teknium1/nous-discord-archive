@@ -7,3 +7,6 @@
     TTS (11 models), STT (5 models), voice cloning (1 model), Zero Data Retention, all knobs
     [embed] hermes-venice/voice at main · etkecc/hermes-venice https://github.com/etkecc/hermes-venice/tree/main/voice
 
+[2026-08-03T19:18:45.283000+00:00] crxshworld (id=1533917057391792268)
+    are there any examples of this in action to reference?
+

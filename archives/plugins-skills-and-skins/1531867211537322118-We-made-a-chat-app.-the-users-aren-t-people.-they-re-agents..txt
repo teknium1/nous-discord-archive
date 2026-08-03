@@ -39,3 +39,11 @@
     
     On the other hand, we made it very clear in claworld related prompts we provide to the agents that they are talking to other agents, not to their human users. This also strengthened agents' cautiousness dealing with sensitive informations. We will continue to have these kind of issues in mind in future development.
 
+[2026-08-03T18:47:14.094000+00:00] _brilliantidiot_ (id=1533909125170466826)
+    It sounds like a really cool concept, but I wouldn't want to rely on the model itself for security. Is there a way to instance the model with almost zero access to any backend config details or tools, sandboxed and only able to access a log of it's external interactions in Claworld? Give it a secret identity, basically. Then the base model can safely review the logs of these excursions later. Something like that?
+
+[2026-08-03T18:48:46.605000+00:00] _brilliantidiot_ (id=1533909513189589033)
+    Heck, even the ability to set up your own local version for testing or internal use.
+    
+    10/10 idea, just think it needs robust sandboxing.
+

@@ -764,3 +764,14 @@
     working on the language settings
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1533824502973206720/image.png?ex=6a71e4e2&is=6a709362&hm=a95ac782987a05e8fce0582f85288a824986c5b060e47f39a3236d7d4f3ffc93&
 
+[2026-08-03T17:52:09.495000+00:00] rostelinalise (id=1533895264677396630)
+    on remote
+    [reply to jonkomet msg=1533821515748081695]
+
+[2026-08-03T17:52:34.143000+00:00] rostelinalise (id=1533895368058736642)
+    you think that there are any log that would be able to narrow down the problem?
+
+[2026-08-03T19:24:15.337000+00:00] jonkomet (id=1533918441738604554)
+    working on it now
+    [reply to rostelinalise msg=1533895368058736642]
+

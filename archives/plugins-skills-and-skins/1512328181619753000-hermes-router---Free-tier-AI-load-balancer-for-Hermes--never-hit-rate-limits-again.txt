@@ -1636,3 +1636,11 @@
     also will the agent ui have a place yiu can chat with the agents and you can use an agent for prompt engineering?
     [reply to shaf_2665 msg=1533831125686812784]
 
+[2026-08-03T14:48:08.395000+00:00] shaf_2665 (id=1533848954947768511)
+    Yep you will have a chat interface to talk with the CEO Agent
+    [reply to irteza080 msg=1533846423072800949]
+
+[2026-08-03T19:22:28.346000+00:00] tonyporj (id=1533917992985952336)
+    will you update us here 🙂?
+    [reply to shaf_2665 msg=1533826644215857202]
+
