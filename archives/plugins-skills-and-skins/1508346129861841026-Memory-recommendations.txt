@@ -356,3 +356,15 @@
     nah, it seems that there is a new memory system everytime i blinked
     [reply to gdesmedt1 msg=1532552297027211365]
 
+[2026-08-03T23:45:39.278000+00:00] .lifeisgreat (id=1533984224955334686)
+    **I think you have to define your terms**... **difference between recall of facts/figures/personal memory** (obsidian like for bookmarks knowledge etc...)  **versus remembering preferences and choices e.g. what hermes does a bit today** / modelling its behaviour to match your perceived way you like to work **versus memory for things youve said to it in chat** e.g. I'm in thailand give me some restaurants near x/y/z, so it holds that context. However ideally then deprecates that over time as realistically you might not be there anymore or work for xyz company or like a particular type of music. **Was really interested in the chat memory and if you can introduce temporality i.e. recent stuff is more surfaced older stuff is still known but less surfaced and asked to verify. ** So far stock hermes is great though and obsidian for second brain importing bookmarks/notes etc...
+
+[2026-08-04T00:43:01.352000+00:00] davidzinaz (id=1533998662059819049)
+    <@338366360545394689> I agree, I been watching this thread for a few days and I think there have been at least 4 new memory skills or plugins.  I'm not sure why people keep trying to reinvent the wheel but whatever.  I started using hindsight and it kinda works.
+
+[2026-08-04T02:09:13.487000+00:00] nat2r (id=1534020355566604308)
+    Yeah tis crazy... <#1485392832154832906> is FILLED with memory plugins. Its nuts. 
+    
+    I use Mnemosyne. I haven't identified any issues. Hermes seems to remember things well. If I had a good reason to switch I would but I don't see one.
+    [reply to davidzinaz msg=1533998662059819049]
+

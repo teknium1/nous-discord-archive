@@ -54,3 +54,12 @@
     Full changelog: https://therocksss.github.io/smart-bulb-dashboard/changelog.html
     [embed] Changelog — Smart Bulb Dashboard https://therocksss.github.io/smart-bulb-dashboard/changelog.html
 
+[2026-08-04T01:55:13.098000+00:00] _big_owen_ (id=1534016830719655936)
+    **Hermes Skills Portfolio — updates**
+    - Re-themes the site to Dusk with a persistent sidebar-filter catalog, adds a submission and review pipeline, and makes the stale-content-cache check blocking in CI. Catalog reaches 57 skills. (2026-08-03)
+    - 6 new skills added: media-id-mapping, movie-catalogue-site, movie-night-calendar, streaming-provider-embeds, tmdb-metadata, watchlist-sync. (2026-08-02)
+    - Fixes CI to check every real file instead of 4 hardcoded ones (2 already dead), deletes the dead files, adds a real site-to-docs sync script, and consolidates a fetch-with-fallback pattern that was duplicated in three files. (2026-07-29)
+    - Fixes CI: stops quoting the forbidden-reference patterns inside AGENTS.md, which had been tripping the same check it was describing. (2026-07-29)
+    - Adds project foundation docs (CLAUDE.md, ARCHITECTURE.md, CHANGELOG.md) and fixes a reveal-on-scroll bug that kept the Submit page's pending-sources section permanently invisible. (2026-07-29)
+    - Redesigns the entire site with the Cobalt design system across four pages (Catalog, Bundles, Changelog, Submit), rewrites all 51 skill docs to the real Hermes skill schema, and adds a curated-bundles page plus an external-sourcing review pipeline. (2026-07-29)
+

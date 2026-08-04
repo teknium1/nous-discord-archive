@@ -54760,3 +54760,318 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-03T19:26:37.937000+00:00] blooddragon90 (id=1533919039846613083)
     for context clawsweeper is 159k loc 2x the size and helped triage 30k+ issues and PR's down to <3k, trust me I'm very familiar with how they work and how to build maintainer bots lol, another maintainer bot I built and use NeonDiff is also OSS free to take from my own in yours (neon is 160k loc as well)
 
+[2026-08-03T19:27:10.380000+00:00] unktneemo (id=1533919175922155752)
+    clawsweeper is based on openclaw?
+    [reply to blooddragon90 msg=1533919039846613083]
+
+[2026-08-03T19:27:14.300000+00:00] gottz.de (id=1533919192363831318)
+    enjoy!
+    https://gist.github.com/GottZ/e039c7985075ab73d82427a898cce822
+    [reply to blooddragon90 msg=1533917810537926816]
+
+[2026-08-03T19:27:31.074000+00:00] blooddragon90 (id=1533919262719086823)
+    clawsweeper was built alongside it to deal with the 30k prs and issues lol
+
+[2026-08-03T19:28:40.904000+00:00] unktneemo (id=1533919555607465984)
+    what do you think about openclaw?
+
+[2026-08-03T19:28:47.376000+00:00] unktneemo (id=1533919582753132646)
+    like, the entire project
+
+[2026-08-03T19:29:32.869000+00:00] realadolan (id=1533919773564469368)
+    I like Hermes more
+
+[2026-08-03T19:30:16.602000+00:00] gottz.de (id=1533919956993970338)
+    sounds like a great opportunity to shine then.
+
+[2026-08-03T19:30:20.515000+00:00] unktneemo (id=1533919973406408714)
+    what would you use hermes for, and what would you use openclaw for?
+
+[2026-08-03T19:30:23.594000+00:00] blooddragon90 (id=1533919986320412874)
+    it's pretty much abandonware moving forward
+
+[2026-08-03T19:30:48.691000+00:00] blooddragon90 (id=1533920091584860181)
+    Hermes when they get the Series B fully closed out and Tec has finished hiring sprint will keep going strong, trust me this is nothing on OC
+
+[2026-08-03T19:30:53.882000+00:00] blooddragon90 (id=1533920113357754368)
+    bug wise, issues, etc
+
+[2026-08-03T19:31:01.113000+00:00] blooddragon90 (id=1533920143686504480)
+    hermes is running great and all my customers love it
+
+[2026-08-03T19:31:41.686000+00:00] blooddragon90 (id=1533920313862127636)
+    OC benefited from millions in compute tokens at crazy speed but that also made the maintainers stop using it to build it and they lost focus and many left and the whole thing is a mess
+
+[2026-08-03T19:31:45.492000+00:00] unktneemo (id=1533920329825517699)
+    the biggest differential is that the agent itself improves
+
+[2026-08-03T19:31:45.938000+00:00] blooddragon90 (id=1533920331696177343)
+    that's all I'll say about it lol
+
+[2026-08-03T19:32:29.193000+00:00] blooddragon90 (id=1533920513120800768)
+    when tecknium can spend like that, he'll take lessons learned from OC and they are already insourcing a lot, I think most of the PR's will just be a grave yard
+
+[2026-08-03T19:32:49.261000+00:00] blooddragon90 (id=1533920597292093532)
+    to pick from to scavenge what is of value
+
+[2026-08-03T19:33:39.595000+00:00] blooddragon90 (id=1533920808408190996)
+    <@190818731734204416> <@145786028483936256> here making thread so it doesn't spam channel
+
+[2026-08-03T19:33:54.561000+00:00] gottz.de (id=1533920871180271748)
+    ¯\_(ツ)_/¯
+    [reply to gottz.de msg=1533919192363831318]
+
+[2026-08-03T19:33:56.356000+00:00] Translator Bot#1043 (id=1533920878709051434)
+    tsu
+    [reply to gottz.de msg=1533920871180271748]
+
+[2026-08-03T19:35:23.487000+00:00] dias4761 (id=1533921244162818198)
+    How did you become a beta tester?
+    [reply to realadolan msg=1533919773564469368]
+
+[2026-08-03T19:36:15.806000+00:00] realadolan (id=1533921463604744344)
+    Hermes Premium
+
+[2026-08-03T19:36:36.244000+00:00] dias4761 (id=1533921549327929474)
+    ohh, fair enough
+
+[2026-08-03T19:37:04.205000+00:00] realadolan (id=1533921666604990605)
+    I'm joking.
+    [reply to dias4761 msg=1533921549327929474]
+
+[2026-08-03T19:37:12.314000+00:00] unktneemo (id=1533921700616339607)
+    lmao
+
+[2026-08-03T19:37:17.070000+00:00] blooddragon90 (id=1533921720564449451)
+    hermes ultra pro super saiyan
+
+[2026-08-03T19:37:21.293000+00:00] realadolan (id=1533921738277261392)
+    I think it was cause I had a subscription to Nous Portal
+
+[2026-08-03T19:37:21.582000+00:00] dias4761 (id=1533921739489280232)
+    \o/
+
+[2026-08-03T19:37:32+00:00] realadolan (id=1533921783185412178)
+    Not sure
+
+[2026-08-03T19:37:44.552000+00:00] realadolan (id=1533921835832315954)
+    But I had access to the Hermes Cloud before it was made public, etc
+
+[2026-08-03T19:38:34.831000+00:00] dias4761 (id=1533922046717858083)
+    Maybe that's it—like, if you've been contributing for a while, the maintainers might have come to "trust" you. Idk.
+
+[2026-08-03T19:39:13.281000+00:00] realadolan (id=1533922207988715653)
+    No I don't think that was the case
+
+[2026-08-03T19:39:51.742000+00:00] realadolan (id=1533922369305968843)
+    And I'm saying this casue in the "beta-testing" channel, there are people who aren't contributors.
+
+[2026-08-03T19:44:19.761000+00:00] blooddragon90 (id=1533923493459005541)
+    I finally got my contributor tag in this release
+
+[2026-08-03T19:44:30.401000+00:00] blooddragon90 (id=1533923538086658099)
+    my PR's been getting salvaged for awhile now into main lol
+
+[2026-08-03T19:44:40.352000+00:00] blooddragon90 (id=1533923579823915078)
+    do we get a special additiona tag on top of dev?
+
+[2026-08-03T19:44:44.852000+00:00] gottz.de (id=1533923598698418260)
+    ye. the salvage destroys the tag
+
+[2026-08-03T19:45:01.558000+00:00] blooddragon90 (id=1533923668768460820)
+    [sticker] BeardedNousGirl
+
+[2026-08-03T19:46:03.366000+00:00] realadolan (id=1533923928009871550)
+    Congrats man
+    [reply to blooddragon90 msg=1533923493459005541]
+
+[2026-08-03T19:46:58.066000+00:00] blooddragon90 (id=1533924157438427315)
+    its a start. I'm used to getting like 80 tags in OC releases lol
+
+[2026-08-03T19:47:06.274000+00:00] blooddragon90 (id=1533924191865409688)
+    thats also how I know hermes is good
+
+[2026-08-03T19:47:12.640000+00:00] blooddragon90 (id=1533924218566344704)
+    I have spent so little time debugging
+
+[2026-08-03T19:47:24.833000+00:00] blooddragon90 (id=1533924269707497613)
+    most of it is just adding or improving features
+
+[2026-08-03T19:48:09.954000+00:00] unktneemo (id=1533924458958557204)
+    you guys mean literal tag or tags?
+
+[2026-08-03T19:48:15.421000+00:00] unktneemo (id=1533924481888813217)
+    like mentions
+
+[2026-08-03T19:48:56.109000+00:00] gottz.de (id=1533924652546654330)
+    I guess andy is referring to separate features
+
+[2026-08-03T19:49:06.447000+00:00] gottz.de (id=1533924695907504159)
+    cause getting your name into a release as a footnote is easy
+
+[2026-08-03T19:50:42.212000+00:00] unktneemo (id=1533925097574895818)
+    <@145786028483936256> 77835
+
+[2026-08-03T19:50:44.754000+00:00] realadolan (id=1533925108236816404)
+    <@958058314044956693> you said all your customers love Hermes, can you elaborate?
+
+[2026-08-03T19:50:48.887000+00:00] unktneemo (id=1533925125571739899)
+    about the scheduling
+
+[2026-08-03T19:51:25.617000+00:00] unktneemo (id=1533925279628792031)
+    https://github.com/NousResearch/hermes-agent/pull/77835
+
+[2026-08-03T19:51:37.356000+00:00] realadolan (id=1533925328865464473)
+    https://github.com/NousResearch/hermes-agent/pull/75508 This also
+
+[2026-08-03T19:52:03.399000+00:00] realadolan (id=1533925438097723575)
+    Did you understand what was I talking about btw?
+
+[2026-08-03T19:52:27.555000+00:00] unktneemo (id=1533925539415457863)
+    yes, the scheduler button that was below that gave access to the cron interface doesnt appear in 0.20.0
+
+[2026-08-03T19:53:29.473000+00:00] realadolan (id=1533925799118373006)
+    Cron, gateway
+
+[2026-08-03T19:53:33.279000+00:00] realadolan (id=1533925815082024982)
+    Everything is gone
+
+[2026-08-03T19:53:53.814000+00:00] realadolan (id=1533925901211930724)
+    Where is the ctx indicator?
+
+[2026-08-03T19:54:57.466000+00:00] realadolan (id=1533926168187895858)
+    Start a chat. Tell me if you see the ctx.
+
+[2026-08-03T19:56:00.997000+00:00] unktneemo (id=1533926434656096266)
+    ill check
+
+[2026-08-03T19:57:24.173000+00:00] unktneemo (id=1533926783521394999)
+    yeah, cant see it on windows too
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1533926783236313088/image.png?ex=6a724424&is=6a70f2a4&hm=7a2db528e18da0393d40c00c91b6783d13d2768934a84b6703ae9afd81deb789&
+
+[2026-08-03T19:58:37.107000+00:00] realadolan (id=1533927089428889680)
+    Frustrating
+
+[2026-08-03T20:03:27.315000+00:00] unktneemo (id=1533928306649596098)
+    couldnt it be just hidden by config?
+
+[2026-08-03T20:03:33.833000+00:00] unktneemo (id=1533928333987807525)
+    ill check the interface
+
+[2026-08-03T20:14:00.370000+00:00] realadolan (id=1533930961874718842)
+    Just figured it out. Press Ctrl + Shift + S, then open the Status menu, where you can add a Cron job.
+
+[2026-08-03T20:14:49.050000+00:00] realadolan (id=1533931166053175356)
+    This was extremely frustrating, especially since it is hidden by default. From a UX standpoint, this feels like a regression
+
+[2026-08-03T20:19:52.468000+00:00] it_todorov2461 (id=1533932438680502316)
+    [attachment] voice-message.ogg https://cdn.discordapp.com/attachments/1491258766648283238/1533932438613397617/voice-message.ogg?ex=6a724968&is=6a70f7e8&hm=a2734d1bbf8590885f38faf6ca3d84e53a3e8a87edaed3333ccdfd3dde9a3595&
+
+[2026-08-03T20:20:52.531000+00:00] gottz.de (id=1533932690602983686)
+    you just ask hermes to do it.
+    [reply to it_todorov2461 msg=1533932438680502316]
+
+[2026-08-03T20:29:28.276000+00:00] unktneemo (id=1533934853794300166)
+    is there a check to enable the hidden things?
+    [reply to realadolan msg=1533931166053175356]
+
+[2026-08-03T20:30:12.368000+00:00] realadolan (id=1533935038729555998)
+    After you do the Ctrl + Shift + S you can right click on a panel
+    [reply to unktneemo msg=1533934853794300166]
+
+[2026-08-03T20:34:45.615000+00:00] unktneemo (id=1533936184810668032)
+    and it shows the context also
+
+[2026-08-03T20:35:54.408000+00:00] realadolan (id=1533936473349296148)
+    You can enable context also yes
+
+[2026-08-03T20:36:00.127000+00:00] realadolan (id=1533936497336647750)
+    It's just so weird it was disabled by default
+
+[2026-08-03T21:31:18.816000+00:00] philip010291 (id=1533950416927199413)
+    fix(a2a): long-running peer tasks always died — the a2a_call client default timeout (120s) is shorter than the server's reply window (A2A_REPLY_TIMEOUT, 300s), so the caller always gave up first with a socket timeout. And raw-URL calls hardcode the 120s with no way to raise it.
+    
+    Added a per-call timeout on a2a_call, URL calls now inherit the matching configured peer's auth + timeout, and bumped the client default above the server window. 156 plugin tests green.
+    
+    https://github.com/NousResearch/hermes-agent/pull/78008
+
+[2026-08-03T21:39:16.751000+00:00] bicepcurls (id=1533952421531881562)
+    <@153017054545444864>
+
+[2026-08-03T21:39:32.531000+00:00] bicepcurls (id=1533952487718129856)
+    add me ✝️
+
+[2026-08-03T21:40:30.173000+00:00] bicepcurls (id=1533952729486200903)
+    🔺
+
+[2026-08-03T21:45:46.075000+00:00] gottz.de (id=1533954054474956820)
+    <@387972437901312000> fyi: have to disable my triage comments. out of token. if you want the actively backfilling graph, just use https://hermes-triage-mcp.gottz.de/ but I assume you already have something like that running yourself.
+
+[2026-08-03T22:26:27.305000+00:00] magnus919 (id=1533964293735845958)
+    freshened up for merging if anyone wants to make `web_search` work better.
+    
+    https://github.com/NousResearch/hermes-agent/pull/36136
+
+[2026-08-03T22:36:59.158000+00:00] dias4761 (id=1533966943919280319)
+    https://github.com/NousResearch/hermes-agent/pull/78002 : fix(desktop): reap stale gateway orphans on Desktop backend startup :Fixes #77276
+
+[2026-08-03T22:51:12.549000+00:00] fedpostoffice (id=1533970523300823223)
+    Is there a prescribed format for third-party plugins? I'm writing a couple for myself to tweak Hermes, and the best I could come up with was a `make install` copying the plugin tree to `${HERMES_HOME:-$HOME/.hermes}/plugins`. If I were to share it though, I'd want it to work with any built in hermes command for managing plugins to for the computer savvy.
+
+[2026-08-03T22:57:41.672000+00:00] magnus919 (id=1533972155400851536)
+    ```
+    /hermes-agent Is there a prescribed format for third-party plugins? I'm writing a couple for myself to tweak Hermes, and the best I could come up with was a make install copying the plugin tree to ${HERMES_HOME:-$HOME/.hermes}/plugins. If I were to share it though, I'd want it to work with any built in hermes command for managing plugins to for the computer savvy.
+    ```
+    ```
+    The skill's reference table points me at hermes_cli/plugins.py for plugin management, and the repo has a plugins/ directory. Let me look at the actual source to get the prescribed format.
+    [...]
+    The manifest schema is clear. Now let me see how hermes plugins install works (what it accepts, where it lands) and a real plugin.yaml example.
+    [...]
+    Let me check whether there's a docs page on plugins to point Magnus at, and see the tail of VALID_HOOKS.
+    
+    There's a user-guide plugins doc and a developer-guide/plugins directory. Let me read them to give you the canonical references.
+    [...]
+    Yes, there's a fully prescribed format, and your make install target is already correct — ~/.hermes/plugins/<name>/ is exactly where user plugins live. What you're missing is only the surrounding tooling, which hermes plugins install/update/remove/enable/disable give you for free. Verified against the current source (hermes_cli/plugins.py, hermes_cli/plugins_cmd.py) and docs.
+    [...]
+    ```
+    (and a lot more specific guidance comes after that)
+    
+    Hermes knows how to develop for Hermes if you ask.
+    [reply to fedpostoffice msg=1533970523300823223]
+
+[2026-08-03T23:02:59.989000+00:00] dias4761 (id=1533973490519113738)
+    https://github.com/NousResearch/hermes-agent/pull/78025 : Fixes #65365
+
+[2026-08-03T23:50:27.126000+00:00] magnus919 (id=1533985432277094601)
+
+[2026-08-03T23:50:27.453000+00:00] magnus919 (id=1533985433648763040)
+    And a PR to fix it. Buzz buzz buzz...
+    
+    https://github.com/NousResearch/hermes-agent/pull/78065
+
+[2026-08-04T00:47:54.512000+00:00] dias4761 (id=1533999891662245889)
+    https://github.com/NousResearch/hermes-agent/pull/78063 : fix(agent): drop stale empty tool_calls on repair_message_sequence merge (#77921)- #78063
+    #78063  : Follow-up to #58755 / #59110, tracked in #77921 (empty tool_calls array still causing HTTP 400 from DeepSeek v4 in v0.19.1 — 3 reproductions between 2026-08-01 and 2026-08-03, session permanently stuck after the first hit).
+    
+    This PR fixes three stale-field bugs found in agent/agent_runtime_helpers.py, all sharing the same shape: a merge or chokepoint rewrites a message but leaves a derived field pointing at pre-rewrite state, and that stale field later wins over the fresh one.
+    
+    
+    non duplicated 
+    
+    <@387972437901312000>
+
+[2026-08-04T00:57:25.972000+00:00] fedpostoffice (id=1534002288539209889)
+    Every time you guys paste hermes output at me I feel really dumb. I think it has finally sunk in to trust my agent.
+    [reply to magnus919 msg=1533972155400851536]
+
+[2026-08-04T00:57:49.697000+00:00] fedpostoffice (id=1534002388048810106)
+    It's the current year's let me google that for you.
+
+[2026-08-04T01:01:50.208000+00:00] magnus919 (id=1534003396825321584)
+    this is the way.
+    
+    But it seems unlikely to work. I get it. 
+    
+    It's such a huge power-up once it sinks in.
+    [reply to fedpostoffice msg=1534002288539209889]
+

@@ -1644,3 +1644,17 @@
     will you update us here 🙂?
     [reply to shaf_2665 msg=1533826644215857202]
 
+[2026-08-03T21:26:13.781000+00:00] irteza080 (id=1533949137517678602)
+    Could you make it so the api keys which stored using the command hr auth add (provider) are saved to your bitwarden acvount and the encrypted thing is stored in the .env file?
+    [reply to shaf_2665 msg=1533848954947768511]
+
+[2026-08-03T21:32:58.615000+00:00] irteza080 (id=1533950835514409001)
+    Like a big issue i faved today was my agent got access to my cloudflare's entire thing like everything everyhing 
+    And all the api keys i ahd added 
+    And i dont want something like this to happen again yk
+    [reply to irteza080 msg=1533949137517678602]
+
+[2026-08-04T00:13:09.177000+00:00] shaf_2665 (id=1533991145133183176)
+    Yes
+    [reply to tonyporj msg=1533917992985952336]
+

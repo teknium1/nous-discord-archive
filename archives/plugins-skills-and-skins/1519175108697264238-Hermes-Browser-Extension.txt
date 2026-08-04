@@ -775,3 +775,17 @@
     working on it now
     [reply to rostelinalise msg=1533895368058736642]
 
+[2026-08-03T20:30:55.812000+00:00] jonkomet (id=1533935220947161280)
+    https://github.com/abundantbeing/hermes-browser-extension/pull/57
+    [attachment] HBE_-_PR_57_Right-Click_Actions_Fix_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1533935221370519642/HBE_-_PR_57_Right-Click_Actions_Fix_Update_AD.png?ex=6a724bff&is=6a70fa7f&hm=0413dcfb47ff1b6c3c3606ecfbaddec1bc3045ebf8cb924d25fe683cb41069f3&
+    [embed] Add user-editable context menu items in settings by kidclone3 · Pu... https://github.com/abundantbeing/hermes-browser-extension/pull/57
+
+[2026-08-03T21:35:50.738000+00:00] jonkomet (id=1533951557450596513)
+    https://github.com/abundantbeing/hermes-browser-extension/pull/54
+    [attachment] HBE_-_PR_54_Global_Localization_Fix_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1533951558210027580/HBE_-_PR_54_Global_Localization_Fix_Update_AD.png?ex=6a725b36&is=6a7109b6&hm=bd7b821eb8780f10de795a0a087482b86f703bfd85df13a311adc7fce163a85c&
+    [embed] feat: add English/Chinese interface language setting with runtime i... https://github.com/abundantbeing/hermes-browser-extension/pull/54
+
+[2026-08-04T01:50:27.017000+00:00] delus_ (id=1534015630808973313)
+    Nice to see it merged
+    [reply to jonkomet msg=1533935220947161280]
+

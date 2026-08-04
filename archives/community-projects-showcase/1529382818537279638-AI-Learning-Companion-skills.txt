@@ -17,3 +17,8 @@
 [2026-07-25T12:37:59.852000+00:00] johnwrightai (id=1530554712754229290)
     would this be easy to mod to make it .... learning for AI?
 
+[2026-08-03T23:25:07.722000+00:00] sic_warmersun (id=1533979059434819696)
+    I was building with Wolfram for a while. When they launched the MCP then I repackaged my old code into this skill.
+    If you want to learn AI as a subject (if I understand correctly) … you don’t really need Wolfram unless you’re planning to use their built in stuff for neural networks.
+    You can take some ideas from the skill but you don’t really need it.
+

@@ -1,0 +1,49 @@
+# Thread 'Hermes Tasks — a task board you can manage with Hermes' in forum #plugins-skills-and-skins
+# thread_id=1534006005300465814 forum_id=1485392832154832906
+# Started 2026-08-04T02:20:42.277053+00:00
+
+[2026-08-04T01:12:12.117000+00:00] er3bus_999 (id=1534006005300465814)
+    Hey Everyone,
+    
+    I Built a simple lightweight personal tasks plugin for Hermes Desktop called Hermes Tasks.
+    
+    It was inspired by the existing Hermes Kanban board, which is mainly designed around tracking agent work. Hermes Tasks flips that around: it’s primarily a board for the human, but both you and Hermes can manage the same tasks.
+    
+    I wanted a simple visual task board inside Hermes without moving everything into another app, creating a second database, or building a sync layer between the human’s board and the agent’s view.
+    
+    **How it works:**
+    
+    Your board is stored in one plain tasks.md file.
+    
+    → You manage it visually in Hermes Desktop 
+    → Hermes can read and update the same tasks conversationally 
+    → Both operators work from the same source of truth 
+    → Selecting a card never automatically launches an agent 
+    → Ask Hermes is an explicit action when you want help with a task
+    
+    **It includes:**
+    
+    → Five workflow stages: Next, Doing, Waiting, Later and Done 
+    → Native drag-and-drop movement and ordering 
+    → Independently foldable lanes that still accept dropped cards 
+    → Custom areas for projects, responsibilities or different parts of life 
+    → Area creation, renaming, reassignment and safe removal 
+    → Search, area filters and priority filtering 
+    → Task editing, completion dates and reopening 
+    → Soft work-in-progress guidance for Doing and Next 
+    → Stable task IDs and revision-safe, atomic writes → Automatic migration and backup for the earlier task format
+    
+    Removing an area never deletes its tasks or changes their workflow status. You can reassign affected tasks or leave them without an area.
+    
+    Underneath, it’s deliberately small: one Desktop JavaScript file, one small Python backend and one readable Markdown file. No hosted account, separate task database or proprietary format.
+    
+    https://github.com/itsbeaudean/hermes-tasks
+    
+    Feel free to customise it to your liking with Hermes. Hope it helps someone here. 🙌
+    [attachment] Screenshot_2026-08-04_at_11.10.10_am.png https://cdn.discordapp.com/attachments/1534006005300465814/1534006006525329529/Screenshot_2026-08-04_at_11.10.10_am.png?ex=6a728dec&is=6a713c6c&hm=c3f3867fb0da8342fc12bde47b7d904d66826c34499a5c4424fc7426ff89e631&
+    [attachment] Screenshot_2026-08-04_at_11.10.30_am.png https://cdn.discordapp.com/attachments/1534006005300465814/1534006007003484334/Screenshot_2026-08-04_at_11.10.30_am.png?ex=6a728dec&is=6a713c6c&hm=99c4741b3681ab6ef3c59d5684dec0b2e34555f29ef60a926a5defe6efd8a15b&
+    [embed] GitHub - itsbeaudean/hermes-tasks: A local Markdown task board for ... https://github.com/itsbeaudean/hermes-tasks
+
+[2026-08-04T01:13:25.323000+00:00] er3bus_999 (id=1534006312348811304)
+    Hermes Tasks — a task board you can manage with Hermes
+
