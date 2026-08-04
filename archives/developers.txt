@@ -55131,3 +55131,100 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-04T08:24:38.007000+00:00] darth_kermit1 (id=1534114830250803301)
     Hi
 
+[2026-08-04T10:31:25.711000+00:00] drexux (id=1534146739274121268)
+    https://github.com/NousResearch/hermes-agent/pull/78400 fix(gateway): carry the profile scope into pre-turn hygiene compression
+
+[2026-08-04T10:47:39.192000+00:00] unktneemo (id=1534150822349242438)
+    on windows there is already something that shows the mouse cursor, but that would be great too, even better
+    [reply to gluedmosquito msg=1534104265528840262]
+
+[2026-08-04T11:18:38.659000+00:00] xdarkchain (id=1534158621519122432)
+    <@387972437901312000> When the task is heavy and the turns take a long time, the thread auto renaming on Telegram fails and doesn't work.
+    
+    This PR solves this issue:
+    https://github.com/NousResearch/hermes-agent/pull/78433
+
+[2026-08-04T11:19:57.659000+00:00] unktneemo (id=1534158952869138615)
+    <@700583950166523914> are you working on this feature, need some help?
+
+[2026-08-04T11:43:49.705000+00:00] drexux (id=1534164959305400380)
+    fix(gateway): run /insights, /debug and /goal draft inside the routed profile
+    https://github.com/NousResearch/hermes-agent/pull/78440
+
+[2026-08-04T12:00:08.747000+00:00] ct0547 (id=1534169065705181235)
+    love to try it out on my mac if / when you got something to test
+    [reply to gluedmosquito msg=1534104265528840262]
+
+[2026-08-04T12:11:49.904000+00:00] mrsand0167 (id=1534172006570917948)
+    is this a good place to suggest a small UI type feature?
+
+[2026-08-04T12:22:21.462000+00:00] hyqqx (id=1534174655517163622)
+    <@387972437901312000> could u check please?
+    [reply to hyqqx msg=1533865152758419497]
+
+[2026-08-04T12:41:55.028000+00:00] gluedmosquito (id=1534179577809866843)
+    I'm currently working on this on Fedora! For the Linux side, I'm building it as a standalone app using QT and D-bus/Unix sockets.
+    
+    That said, I know Windows already has all the groundwork built right into the OS. I would absolutely love some help with the Windows side so I don't have to maintain two completely separate versions. If we use native Windows features, it could just act as a simple bridge!
+    [reply to unktneemo msg=1534158952869138615]
+
+[2026-08-04T12:43:41.587000+00:00] gluedmosquito (id=1534180024750706749)
+    I don't have a mac to work with, with enough context from the windows version and linux one you can give it to hermes to port it or maybe someone else if i have something i'll share it in community projects
+    [reply to ct0547 msg=1534169065705181235]
+
+[2026-08-04T12:44:43.386000+00:00] unktneemo (id=1534180283954237600)
+    hmm, nice 
+    ill check it out, can you send me an example for me to test it?
+    and the setup
+    [reply to gluedmosquito msg=1534179577809866843]
+
+[2026-08-04T12:45:31.442000+00:00] gluedmosquito (id=1534180485515841577)
+    i don't have it yet x) i just woke up i just did a spike test to have an overlay + clickthrough on wayland i can share that if you need
+
+[2026-08-04T12:46:22.280000+00:00] unktneemo (id=1534180698745999491)
+    wayland is 100% the hardest part on that i imagine
+
+[2026-08-04T12:46:25.318000+00:00] unktneemo (id=1534180711488295065)
+    but yeah
+
+[2026-08-04T12:50:37.957000+00:00] gluedmosquito (id=1534181771133059213)
+    how can i @ you ? <@282510551266099210>
+    [reply to unktneemo msg=1534180698745999491]
+
+[2026-08-04T12:50:42.971000+00:00] gluedmosquito (id=1534181792163168399)
+    is this yours ?
+
+[2026-08-04T12:51:10.729000+00:00] unktneemo (id=1534181908588531774)
+    my gh is
+
+[2026-08-04T12:51:13.216000+00:00] unktneemo (id=1534181919019892876)
+    https://github.com/tneemo
+
+[2026-08-04T12:51:20.284000+00:00] gluedmosquito (id=1534181948665237534)
+    your discord
+
+[2026-08-04T12:51:20.607000+00:00] unktneemo (id=1534181950019997886)
+    but yeah the discord too
+
+[2026-08-04T12:51:24.061000+00:00] gluedmosquito (id=1534181964507250818)
+    ah ok
+
+[2026-08-04T12:52:25.249000+00:00] gluedmosquito (id=1534182221148323840)
+    there is a little post in community projects so we can keep in touch idk how people work with other people in github but if you prefer there i can do that too
+
+[2026-08-04T12:53:00.183000+00:00] unktneemo (id=1534182367671877632)
+    when you get your project bigger you can make a gh so we can suggest or fix bugs
+
+[2026-08-04T12:53:06.011000+00:00] unktneemo (id=1534182392116285602)
+    issues there works better too
+
+[2026-08-04T12:54:50.968000+00:00] gluedmosquito (id=1534182832337846384)
+    yes that's what i had in mind but i'll post updates in https://discord.com/channels/1053877538025386074/1316137596535177246 for now i will start working on it this night so if you wanna hang out
+
+[2026-08-04T13:14:52.643000+00:00] wyattderp. (id=1534187872528367816)
+    https://github.com/NousResearch/hermes-agent/pull/72283
+
+[2026-08-04T13:19:15.488000+00:00] .omgg (id=1534188974979944599)
+    Feedback on this Sweeper if i should make any changes: Example comment it would leave
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1534188974548189224/image.png?ex=6a733853&is=6a71e6d3&hm=ff73507614b88da3719d93feca4b711684badb3fe49219323ab14be5fd6796bc&
+

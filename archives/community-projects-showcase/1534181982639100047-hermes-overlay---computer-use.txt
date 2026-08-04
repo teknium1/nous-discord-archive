@@ -1,0 +1,40 @@
+# Thread 'hermes overlay + computer use' in forum #community-projects-showcase
+# thread_id=1534181982639100047 forum_id=1316137596535177246
+# Started 2026-08-04T14:05:07.045211+00:00
+
+[2026-08-04T12:51:28.384000+00:00] gluedmosquito (id=1534181982639100047)
+    I will be sharing here the project that enables hermes to do the same things as https://www.heyclicky.com/ overlaying things while working to give help drawing on an overlay or getting a portion of the screen as context 
+    i'm currently working on the linux version (fedora/KDE wayland) some people might help on the windows and macos version. I'll be focusing on linux and when i have a stable version continue on the windows one if some people want to help feel free to join 
+    As for now i don't even have an alpha or anything so i won't have a github repo today but it might come in the coming days 
+    i made this post so you can follow the project <@1064373553111236710> and <@282510551266099210>
+    [embed] heyclicky - an ai buddy on your mac https://www.heyclicky.com/
+
+[2026-08-04T12:51:49.532000+00:00] unktneemo (id=1534182071340109954)
+    nice
+
+[2026-08-04T12:52:13.253000+00:00] unktneemo (id=1534182170833453156)
+    this heyclicky is not open source, it seems
+
+[2026-08-04T12:56:26.965000+00:00] gluedmosquito (id=1534183234978451696)
+    no but they have their first version opensource
+
+[2026-08-04T12:56:42.220000+00:00] gluedmosquito (id=1534183298962821200)
+    https://github.com/farzaa/clicky
+    [embed] GitHub - farzaa/clicky https://github.com/farzaa/clicky
+
+[2026-08-04T12:58:06.546000+00:00] gluedmosquito (id=1534183652651700324)
+    the new one is quite different from this repo but in the end hermes has all the parts already done it just misses the overlay part to be able to draw but for the rest it's already in hermes
+
+[2026-08-04T12:58:07.411000+00:00] unktneemo (id=1534183656279638139)
+    this version is from macOS?
+
+[2026-08-04T12:58:21.390000+00:00] gluedmosquito (id=1534183714911682751)
+    yup they started on mac only
+
+[2026-08-04T12:59:02.152000+00:00] gluedmosquito (id=1534183885880033522)
+    this is my gh https://github.com/slapash
+    [embed] slapash - Overview https://github.com/slapash
+
+[2026-08-04T13:01:35.388000+00:00] unktneemo (id=1534184528598532217)
+    ill check clicky when i get home
+

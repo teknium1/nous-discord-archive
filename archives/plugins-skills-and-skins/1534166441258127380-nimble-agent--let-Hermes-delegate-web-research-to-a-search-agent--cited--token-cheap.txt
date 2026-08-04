@@ -1,0 +1,39 @@
+# Thread 'nimble-agent: let Hermes delegate web research to a search agent (cited, token-cheap)' in forum #plugins-skills-and-skins
+# thread_id=1534166441258127380 forum_id=1485392832154832906
+# Started 2026-08-04T14:14:06.616387+00:00
+
+[2026-08-04T11:49:43.030000+00:00] ilan_41645 (id=1534166441258127380)
+    How much of your context window is raw scraped HTML?
+    
+    That's the thing that bugged me. Hermes is a personal assistant. It shouldn't also be doing its own crawling, paging through results and burning its window on boilerplate before it can start reasoning.
+    
+    So this plugin doesn't give Hermes a search tool. It lets Hermes delegate the whole research task to a Nimble Web Search Agent, which does the searching, crawling and cross-checking on its own infrastructure, then hands back a distilled, cited answer.
+    
+    What that changes:
+    
+    **Context economy.** You get an answer plus sources, not twenty pages of scraped text. The searching happens elsewhere and never touches your window.
+    
+    **Grounded answers.** Results carry sources, per-claim citations and a confidence signal, so the agent can say what's actually supported.
+    
+    **Provenance.** You can see exactly what it read, and constrain where it's allowed to read from.
+    
+    **A delegation, not a blocking call.** `run_start` returns durable ids immediately. Close Hermes, come back later, and `run_result` from any process picks up the answer.
+    
+    ```
+    pip install hermes-nimble-agent
+    hermes plugins enable nimble-agent
+    ```
+    
+    Five tools (list, bootstrap, run_start, run_status, run_result) plus an `agent-research` skill that teaches Hermes when to delegate.
+    
+    Worth saying up front: this is backed by Nimble's API, so it needs a key and isn't self-hosted. It's built for grounded citations and research that outlives the session.
+    
+    Repo: https://github.com/Nimbleway/hermes-nimble-agent
+    Docs: https://docs.nimbleway.com/integrations/connectors/hermes
+    A working example, a standing account monitor built on it: https://github.com/Nimbleway/cookbook/tree/main/apps/hermes-account-monitor
+    
+    Feedback on the tool shape very welcome.
+    [embed] GitHub - Nimbleway/hermes-nimble-agent: Standalone Hermes plugin fo... https://github.com/Nimbleway/hermes-nimble-agent
+    [embed] Hermes - Nimble Docs https://docs.nimbleway.com/integrations/connectors/hermes
+    [embed] cookbook/apps/hermes-account-monitor at main · Nimbleway/cookbook https://github.com/Nimbleway/cookbook/tree/main/apps/hermes-account-monitor
+

@@ -789,3 +789,6 @@
     Nice to see it merged
     [reply to jonkomet msg=1533935220947161280]
 
+[2026-08-04T13:47:34.970000+00:00] ct0547 (id=1534196103124357130)
+    Is this only for use in browser? or can the Hermes desktop use it like how Codex and Claude Desktop apps have Chrome control opening tab groups and controlling them?
+
