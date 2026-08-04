@@ -6325,3 +6325,15 @@
 [2026-08-01T22:00:23.114000+00:00] phospheneoverdrive (id=1533232957312208896)
     I mean conversation forks btw
 
+[2026-08-04T14:46:05.160000+00:00] frostmage10 (id=1534210825928315060)
+    https://github.com/Hungbocluaqua/hermex-android-port
+    
+    this one is nice looking
+    [embed] GitHub - Hungbocluaqua/hermex-android-port: Native Android app for ... https://github.com/Hungbocluaqua/hermex-android-port
+
+[2026-08-04T14:46:12.687000+00:00] frostmage10 (id=1534210857498841190)
+    just rough around the corners
+
+[2026-08-04T17:34:27+00:00] avidfuturist (id=1534253196116230254)
+    Yes that one just came out, worth a try!
+

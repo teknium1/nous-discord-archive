@@ -543,3 +543,34 @@
     https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.10.0
     [embed] Release v0.10.0 — the install is the product · yantrikos/yantrik... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.10.0
 
+[2026-08-04T18:02:05.538000+00:00] spranab (id=1534260152528801932)
+    Released: yantrikdb-hermes-plugin v0.12.1 🧠
+    
+    Three things landed since v0.10 — attachable expertise, memory that works on always-on agents, and a hardening pass.
+    
+    Knowledge packs — attachable expertise
+    A pack is a sealed, signed knowledge file. Mount it to gain its knowledge and rules for a task, unmount to give them back — your own memory left byte-for-byte unchanged. The pack's rules go into the system prompt; its records become recallable alongside yours, labelled as third-party so the agent knows whose claim is whose. Transient by default: a session that mounts a pack leaves nothing behind.
+    
+    
+    YANTRIKDB_PACKS_ENABLED=true
+    Consolidation now runs on long-lived agents
+    Hermes fires on_session_end only at real session boundaries — CLI exit, /reset, gateway expiry. If you run an agent 24/7 (Pi, Telegram/Discord gateway), those can be days apart, so consolidation and the gap→task loop were effectively never running for you. They now also run on a cadence: every 40 turns, once 30 minutes have passed. Background, never two at once, never on the turn's critical path.
+    
+    Recalled memory no longer arrives as "the user said this"
+    Hermes injects recall into the current turn's user message, so unlabelled memory is indistinguishable from what you just typed — the agent "remembers" you saying things you never said, and anything that ever reached memory arrives carrying your authority. Recall is now framed as background reference. One line, ~20 tokens.
+    
+    Sharing an agent with other people?
+    Owner scoping gives each person their own memory namespace, so the agent stops attributing one person's facts to another:
+    
+    
+    YANTRIKDB_OWNER_SCOPING=true
+    
+    
+    pip install -U yantrikdb-hermes-plugin
+    Requires yantrikdb>=0.11.3. 417 tests.
+    https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.12.1
+    [embed] Release v0.12.1 — bounded dependencies, engine 0.12.0 verified ·... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.12.1
+
+[2026-08-04T18:17:14.014000+00:00] spranab (id=1534263962953322496)
+    The moto is keep building 🙂
+

@@ -38,3 +38,36 @@
 [2026-08-04T13:01:35.388000+00:00] unktneemo (id=1534184528598532217)
     ill check clicky when i get home
 
+[2026-08-04T14:34:42.244000+00:00] unktneemo (id=1534207961571004607)
+    I analyzed Clicky (farzaa/clicky), a macOS desktop companion app built in Swift and licensed under the MIT license. The core concept is a tray/menu bar assistant triggered by a global push-to-talk shortcut.
+    
+    Clicky’s workflow is as follows:
+    
+    Activate the assistant via a global hotkey (Ctrl+Option);
+    Capture the screen only when requested by the user;
+    Send the screenshot and transcription to a multimodal model;
+    Receive the response via SSE streaming;
+    Play back the response using TTS;
+    Display a transparent overlay that stays on top without blocking clicks;
+    Identify screen elements using coordinates in the format [POINT:x,y,label:screenN];
+    Support multiple monitors, DPI, and varying pixel scales;
+    Use a Cloudflare proxy to avoid exposing Anthropic, AssemblyAI, and ElevenLabs API keys.
+    There is also an optional integration with Anthropic Computer Use to locate elements and interact with the screen.
+    
+    For the Hermes Agent, the proposal is to create a native Windows version by reusing existing desktop/gateway components rather than cloning Clicky entirely. The MVP criteria are:
+    
+    Global hotkey;
+    Controlled screen capture;
+    STT/TTS;
+    Transparent overlay;
+    Streaming response;
+    Multi-monitor and DPI support;
+    Secure handling of privacy and credentials;
+    Evaluation of whether to use Computer Use or a simpler multimodal locator.
+    The analysis was added to the Kanban board with medium priority under the title "Clicky-like Windows companion for Hermes Agent." The architect was assigned to map out the Hermes implementation, define the Windows MVP, and prepare the `spec.md`, `tasks.md`, and ADRs, as well as handle the handoff for implementation and QA.
+    
+    Important: This conclusion was based on the Clicky snapshot at commit `a80fa80721a8aebe51a170a7780705024ebc6e46`. The task remains active on the Kanban board..
+
+[2026-08-04T14:37:50.136000+00:00] unktneemo (id=1534208749646905526)
+    i`ll test it out on windows and send it to you after
+

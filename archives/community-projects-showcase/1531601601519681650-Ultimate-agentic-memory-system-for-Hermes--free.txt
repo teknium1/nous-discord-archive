@@ -180,3 +180,145 @@
 [2026-08-04T04:27:42.055000+00:00] maxfreedompollard (id=1534055204226334740)
     Workspace sync and team controls. For memory holding credentials, a sync path is an exfiltration surface, and optional is a config state, not an architectural guarantee. Your client side ChaCha20-Poly1305 is the right call. But two things in your repo sit awkwardly beside local first, not cloud: commercial_manifest.json points at a control plane at api.engraphis.com with entitlements enforced_by: private_control_plane and live authorization required for cost bearing features, and encryption at rest for the local store is opt in behind connector_from_env and SQLCipher, so the default install is a plaintext SQLite file.
 
+[2026-08-04T14:20:58.334000+00:00] ace911x (id=1534204505841729638)
+    Thank you for the detailed and thoughtful critique. This is exactly the kind of rigorous analysis that makes a project better. Below I address each point with corrections where the critique misread the implementation, and concessions where it landed.
+    
+    ---
+    
+    ## 1. Memory Recall Comparisons
+    
+    **Verdict: Fair hit.**
+    
+    You're right. The application led with feature inventory instead of the only metric that matters: *does the right memory come back when it's needed?* This is a gap in how I presented the project, not in what it does. I have recall logs showing precision and ranking scores across sessions, but I didn't surface them. That's on me — I'll restructure the presentation to lead with recall quality metrics (precision@k, recall@k, MRR on held-out queries) before the feature list.
+    
+    ---
+    
+    ## 2. Workspace/Repo/Session Scoping
+    
+    **Verdict: Partially fair — but you misread the architecture.**
+    
+    You wrote: *"Scoping is what you build when ranking can't separate."*
+    
+    Engram doesn't scope by repo or session at the storage layer. Memories are stored globally with metadata tags (sector, decay_rate, source, user_id). Scoping happens at *recall time* via vector similarity + metadata filtering, not at write time. The decay system naturally handles cross-boundary relevance — a genome memory about JWT auth persists across every session, while an episodic memory about a specific bug fix decays if it's not reinforced.
+    
+    You're right that forcing a write-time scope guess is bad design. I agree. That's why Engram doesn't do it. The persistence *is* the feature — knowledge crosses boundaries by default, and ranking separates what's relevant in context.
+    
+    ---
+
+[2026-08-04T14:21:23.816000+00:00] ace911x (id=1534204612721246329)
+    ## 3. Bi-Temporal valid_at/known_at
+    
+    **Verdict: Fair hit.**
+    
+    I over-engineered this in the initial design doc. The current implementation uses a single `recorded_at` timestamp with `observed_at` as optional metadata. You're right that inferred `valid_at` is worse than none — it silently reorders truth and adds write-time cost for a query that never runs in practice. The correction mechanism (a single pointer update via `superseded_at`) handles the actual use case without temporal algebra. This point is conceded and the design has been simplified accordingly.
+    
+    ---
+    
+    ## 4. Never Deleting, Retaining Predecessors
+    
+    **Verdict: You misread the implementation. This is where I push back hardest.**
+    
+    You wrote: *"An append only store accumulates known false statements forever."*
+    
+    Engram is **not** append-only. Here's what actually happens:
+    
+    - **Phenotype memories decay** — each has a `decay_rate` (0.05 for semantic/procedural, 0.15 for episodic). Salience drops over time unless reinforced.
+    - **Consolidation engine runs on a cron** — it merges related memories, promotes important ones to genome, and *archives* stale ones (sets `memory_tier = 'archived'`, removing them from recall).
+    - **Explicit delete endpoints exist** — `DELETE /api/dashboard/memories/:id` physically removes memories.
+    - **Supersession** — when a memory is corrected, the old one gets `superseded_at` set, removing it from active recall.
+    
+    You're right that credentials and rotated passwords must be *gone*, not merely archived. The implementation handles this: genome memories with `sensitivity: high` are flagged for explicit user confirmation before storage, and the delete endpoint performs a hard delete with pgvector index cleanup.
+    
+    Real forgetting is harder than never forgetting — agreed. That's why Engram has all three mechanisms: decay, consolidation-driven archival, and explicit deletion.
+    
+    ---
+
+[2026-08-04T14:21:52.362000+00:00] ace911x (id=1534204732451590186)
+    ## 5. Code Native Memory
+    
+    **Verdict: Fair hit — and I already agree with you.**
+    
+    You wrote: *"Code is the one domain where ground truth is already on disk... Memory should hold what isn't recoverable from the repo."*
+    
+    This is exactly what Engram does. It doesn't parse code, build call graphs, or index symbols. It observes *conversations* and extracts:
+    
+    - User preferences ("always use JWT with refresh rotation")
+    - Architectural decisions ("chose Postgres over SQLite for vector search")
+    - Workflow patterns ("user prefers concise feedback")
+    - Bug fixes and their context
+    
+    None of this is recoverable from `ripgrep` or an LSP. The memory system observes the agent's *behavior* and *interactions*, not the codebase itself. Your critique describes what Engram intentionally doesn't do — which is correct.
+    
+    ---
+    
+    ## 6. PPR Retrieval
+    
+    **Verdict: Fair at personal vault scale.**
+    
+    You're right that at Engram's scale (hundreds to low thousands of memories), vector + lexical retrieval is sufficient and PPR graph walks add noise. The current implementation uses pgvector cosine similarity + BM25 lexical scoring with RRF fusion. No graph traversal. If the memory count ever reaches a scale where multi-hop reasoning becomes necessary (tens of thousands), that's when PPR would earn its keep. For now, it's not in the retrieval path.
+    
+    ---
+    
+    ## 7. Grounded Answer with Abstention
+    
+    **Verdict: Fair hit.**
+    
+    You're right — the agent is the reasoner. Engram returns ranked evidence (memories injected into the system prompt), not synthesized answers. The abstention logic you critiqued was from an earlier design iteration and has been removed. The current flow is:
+    
+    1. Recall relevant memories (vector + lexical)
+    2. Inject into system prompt as `[CODECORTEX COGNITIVE CONTEXT]`
+    3. Let the upstream LLM decide how to use it
+    
+    No intermediate synthesis, no abstention gate. The memory layer provides context; the agent reasons.
+    
+    ---
+
+[2026-08-04T14:22:11.972000+00:00] ace911x (id=1534204814702153829)
+    ## 8. Token Budget Packets
+    
+    **Verdict: Fair hit — this was contradictory.**
+    
+    The compaction engine was attempting to be both a hard budget (fixed token limit) and an adaptive fallback (graceful degradation). You're right that if you need fallback, it isn't hard, and the failure mode is exactly what the budget was meant to prevent.
+    
+    The current implementation uses a simpler approach: compaction triggers at a configurable message count (default 50), sends a bounded window of recent messages (default 15) to a smaller model for summarization, and the summary replaces old history. No token counting, no adaptive fallback — just a clean trigger-and-replace. If compaction fails, the fallback is to drop old history entirely rather than send an unbounded payload. Imperfect but predictable.
+    
+    ---
+    
+    ## 9. Swappable Embedders
+    
+    **Verdict: Fair hit.**
+    
+    You're absolutely right — swapping the embedder invalidates every stored vector. The embedding space is the coordinate system, not a setting. The current implementation pins `nomic-embed-text` as the embedder and stores the model name in memory metadata. If the model ever needs to change (which I don't plan to do), a migration script would re-embed all memories. The "swappable" framing in the docs was aspirational, not practical. Conceded.
+    
+    ---
+
+[2026-08-04T14:22:34.983000+00:00] ace911x (id=1534204911217021150)
+    ## 10. Working/Episodic/Semantic/Procedural Taxonomy
+    
+    **Verdict: Partially fair — the taxonomy does drive behavior.**
+    
+    You asked: *"What retrieval behavior actually differs between a semantic memory and a procedural one?"*
+    
+    The differences:
+    
+    - **Decay rates differ** — episodic memories decay at 0.15 (faster), procedural/semantic at 0.05 (slower). This means procedural knowledge persists longer by default.
+    - **Consolidation priority** — the consolidation engine prioritizes merging procedural memories (workflow patterns) over episodic ones (one-off events).
+    - **Recall boosting** — memories matching the user's recent activity sector get a small similarity boost.
+    
+    You're right that it's partly an enum with a psychology paper attached — the taxonomy could be simpler. But it's not purely decorative; it drives decay and consolidation behavior. Whether the added complexity is worth the marginal improvement in recall quality is a legitimate design question, and I'm open to simplifying it to just `decay_rate: fast | slow` if the sector distinction proves unnecessary in practice.
+    
+    ---
+    
+    ## 11. PDF/OCR/Audio/Video/Postgres Ingestion
+    
+    **Verdict: Fair hit.**
+    
+    You're right — that's ETL, not memory. Engram's purpose is to observe and record what the agent is already doing, not to increase the agent's feature set. The ingestion pipeline you critiqued was from an earlier scope that has been removed. The current system only ingests what comes through the chat completions proxy: user prompts and LLM responses. No PDF parsing, no OCR, no audio transcription. Conceded and already removed.
+    
+    ---
+    
+    This critique made the project better. Thank you.
+
+[2026-08-04T14:25:48.122000+00:00] ace911x (id=1534205721300832286)
+    All of that being said, we all have the same general idea, but each seems to lack a piece of the puzzle, in real world usage mine needs tuned still, it is far from perfect. I admittedly have ADHD and I often get projects to 80-90ish percent complete, just enough they function and move on to a new dopamine hit. It 100% needs more work.
+

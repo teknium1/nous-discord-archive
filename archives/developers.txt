@@ -55228,3 +55228,100 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Feedback on this Sweeper if i should make any changes: Example comment it would leave
     [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1534188974548189224/image.png?ex=6a733853&is=6a71e6d3&hm=ff73507614b88da3719d93feca4b711684badb3fe49219323ab14be5fd6796bc&
 
+[2026-08-04T14:33:00.581000+00:00] drexux (id=1534207535165341858)
+    fix(gateway): stop table-to-bullets rendering from deleting repeated columns
+    https://github.com/NousResearch/hermes-agent/pull/78518
+    
+    fix(moonshot): prune dangling required names at every schema depth
+    https://github.com/NousResearch/hermes-agent/pull/78494
+
+[2026-08-04T14:57:25.715000+00:00] bicepcurls (id=1534213680382869504)
+    <@153017054545444864> add me
+
+[2026-08-04T14:57:35.879000+00:00] bicepcurls (id=1534213723013648545)
+    for dm
+
+[2026-08-04T15:11:13.927000+00:00] qqqm (id=1534217154155642930)
+    <@387972437901312000> 
+    
+    regarding https://github.com/NousResearch/hermes-agent/blob/main/optional-mcps/blender/manifest.yaml
+    
+    the version is hard locked to 1.6.4 in the manifest via the lines:
+    
+    ```yaml
+      args:
+        - "blender-mcp==1.6.4"
+      version: "1.6.4"
+    ```
+    
+    after a friend and i thoroughly tested this yesterday with Blender 5.2.0 LTS (after it initially didn't work), we found the following lines to work in the `config.yaml` of hermes, correctly implementing support for https://github.com/ahujasid/blender-mcp and enabling us to establish an MCP connection with blender from hermes.
+    
+    ```yaml
+      blender:
+        command: uvx
+        args:
+          - blender-mcp
+        env:
+          DISABLE_TELEMETRY: 'true'
+        enabled: true
+    ```
+    the blender mcp implementation as configured via `hermes mcp install blender` is currently broken, and I highly recommend this more generalized, agnostic and robust change to allow for future versions, as forcing blender-mcp==1.6.4 does not work correctly as of now. *A small note: the uvx command automatically resolves the ip and port of blender-mcp, which is usually resolved to localhost:9876. For this reason, the ip and port do not need to be explicitly specified. You already do not do this, so that's correct. Additionally, as you probably already know `uvx -v blender-mcp --help` can be used to test the uvx connection directly in case you need to debug it.*
+    
+    Apologies for this message instead of a formal pull request, but I just thought it's a fairly minor change and hope it's okay to mention this here. Thank you.
+
+[2026-08-04T15:36:59.734000+00:00] remintoscar (id=1534223637740261397)
+    https://github.com/NousResearch/hermes-agent/pull/78579
+
+[2026-08-04T15:37:15.892000+00:00] remintoscar (id=1534223705511559239)
+    Fix: Cron dashboard 'Run now' swallowed when host TZ != UTC
+    [reply to remintoscar msg=1534223637740261397]
+
+[2026-08-04T16:33:58.661000+00:00] teknium (id=1534237977759191051)
+    Thanks can you make a pr will review asap
+    [reply to qqqm msg=1534217154155642930]
+
+[2026-08-04T16:55:14.250000+00:00] tylerchambers (id=1534243327967367320)
+    https://x.com/msftsecintel/status/2084642457048752134?s=46 — Hermes using any of these packages? Cursory search shows cacheable in Hermes-WhatsApp-bridge but AFK and cannot confirm exact version etc
+
+[2026-08-04T17:07:40.434000+00:00] unktneemo (id=1534246457689899069)
+    <@387972437901312000> hey! Whenever you have a chance, could you take a look at my PR for adding a “Launch Hermes Desktop at login” option on Windows and MacOS? https://github.com/NousResearch/hermes-agent/pull/77025
+
+[2026-08-04T17:10:49.082000+00:00] illneverstay (id=1534247248937091212)
+    hello need someone to help me setup /godmode willing to pay
+
+[2026-08-04T17:10:58.536000+00:00] tylerchambers (id=1534247288589910057)
+    I think we’re fine, @cacheable/utils@2.5.0 and @cacheable/utils@2.5.0 were used and neither are listed as compromised by socket
+    [reply to tylerchambers msg=1534243327967367320]
+
+[2026-08-04T17:23:54.387000+00:00] kratos20011 (id=1534250542744731928)
+    <@387972437901312000>  Hey, quick idea I wanted to float here rather than open with a full writeup.
+    Hermes already distills successful task runs into local procedural skills (~/.hermes/skills/). Is there any interest in an opt-in sync layer on top of that — where a user could choose to push a validated skill to a shared registry, scoped by domain, so other Hermes instances could pull proven fixes/patterns instead of rediscovering them from scratch?
+    Local memory would stay the default exactly as it is now — this would just be an optional export/import path for skills people want to share. Validation would be based on re-running the associated test/check, not self-reported trust scores.
+    Curious if this overlaps with something already planned, or if it's worth a proper proposal/PR.
+
+[2026-08-04T17:26:12.078000+00:00] qqqm (id=1534251120262647839)
+    done https://github.com/NousResearch/hermes-agent/pull/78665 thank you (fix blender hard locking mcp version by removing the explicit version)
+    [reply to teknium msg=1534237977759191051]
+
+[2026-08-04T17:32:50.490000+00:00] fade_way (id=1534252791323820155)
+    Ive been wondering about people's solution to this too. I guess one way is to use the hermes export feature to just sync profiles and skills across the entire dev team (but maybe in that case we should be swapping repos instead of zips?)
+    [reply to kratos20011 msg=1534250542744731928]
+
+[2026-08-04T17:36:31.196000+00:00] fade_way (id=1534253717032009898)
+    i am vaguely aware that hermes has a skill marketplace so I guess you could set up a local proxy and push/pull your skills to that
+
+[2026-08-04T17:38:42.334000+00:00] tunacookie (id=1534254267064389825)
+    please fix alibaba endpoint <:Prayge:1151275585000185968>  the current one is still serving the old token plan endpoint either replace or add a number 4 for new token plan endpoint since qwen is announced
+
+[2026-08-04T17:41:04.041000+00:00] kratos20011 (id=1534254861426753606)
+    <@108282785906556928> Yeah, repos > zips for sure — you get diffing, history, and a PR becomes the natural validation gate instead of trusting a blob. That's actually the core of what I meant by "re-running the test instead of self-reported trust" — a git-based flow gives you that for free.
+    On the marketplace point — do you know if it already supports domain-scoped push/pull, or is it flat/global right now? If it's flat, that's probably the actual gap: not a new registry, just structure (taxonomy by domain) + validation on top of what's already there. Would rather build on the existing marketplace than duplicate it if it's already close.
+
+[2026-08-04T18:30:06.475000+00:00] drexux (id=1534267202889584822)
+    fix(anthropic): honor custom CA bundles and ssl_verify on the Anthropic client 
+    https://github.com/NousResearch/hermes-agent/pull/78553
+
+[2026-08-04T18:31:54.625000+00:00] drexux (id=1534267656503431248)
+    fix(patch): keep literal \t/\r when the matched region is tab-indented or CRLF
+    https://github.com/NousResearch/hermes-agent/pull/78622
+

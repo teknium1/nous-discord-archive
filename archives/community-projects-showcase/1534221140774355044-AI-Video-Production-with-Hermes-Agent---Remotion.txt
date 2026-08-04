@@ -1,0 +1,14 @@
+# Thread 'AI Video Production with Hermes Agent + Remotion' in forum #community-projects-showcase
+# thread_id=1534221140774355044 forum_id=1316137596535177246
+# Started 2026-08-04T19:28:11.205984+00:00
+
+[2026-08-04T15:27:04.411000+00:00] viky_shetye (id=1534221140774355044)
+    Built an end-to-end AI video production workflow using Hermes Agent + Remotion! 🎬🤖
+    
+    The workflow researches a topic, writes a script, generates a production plan, creates visual assets, builds the video, adds AI voiceover, background music, sound effects, animated word-level captions, and renders the final video all through Hermes Agent.
+    
+    Would love to hear your feedback! 😄
+    
+    📺 YouTube: https://youtu.be/Fp4FnEMj7QI
+    [embed] Create Professional Videos Using Hermes Agent + Remotion (2026 Tuto... https://www.youtube.com/watch?v=Fp4FnEMj7QI
+

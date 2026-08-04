@@ -375,3 +375,10 @@
 [2026-08-04T03:19:25.370000+00:00] davidzinaz (id=1534038021484187658)
     and I think saying that  we need to run 20 different memory mods if we want recall of facts vs figures vs personal memory is kind of a pain and difficult.  If someone is advertising a memory plugin or skill, and it is limited to one small aspect of Hermes, that seems counter productive and just adds more confusion by adding another 'memory' app that is more of a 'focused skill' and not memory.
 
+[2026-08-04T17:30:43.535000+00:00] excessivelysalty (id=1534252258835959920)
+    I've just been using mnemosyne for a couple months now, haven't found any reason to change and Hermes seems to remember everything.
+
+[2026-08-04T18:01:10.210000+00:00] spranab (id=1534259920466083972)
+    Understand you frustration. As the dev for YantrikDB I would say I am working on the engine since Beginning of the year. When I saw hermes-agent wanted to craete a plugin for it, not a dedicated hermes only. Not sure if other devs are also in the same boat. But that is the scenario for me.
+    [reply to davidzinaz msg=1530725272477761607]
+

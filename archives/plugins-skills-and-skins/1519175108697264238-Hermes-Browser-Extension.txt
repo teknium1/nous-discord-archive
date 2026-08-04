@@ -792,3 +792,11 @@
 [2026-08-04T13:47:34.970000+00:00] ct0547 (id=1534196103124357130)
     Is this only for use in browser? or can the Hermes desktop use it like how Codex and Claude Desktop apps have Chrome control opening tab groups and controlling them?
 
+[2026-08-04T19:27:52.467000+00:00] jonkomet (id=1534281740313694362)
+    Hermes has native computer use .. just ask it to control your browser, I’m still building the web bridge parity native to the Hermes browser extension
+    [reply to ct0547 msg=1534196103124357130]
+
+[2026-08-04T19:28:27.261000+00:00] jonkomet (id=1534281886250303622)
+    Oh wait actually … good idea , let me cook this
+    [reply to ct0547 msg=1534196103124357130]
+
