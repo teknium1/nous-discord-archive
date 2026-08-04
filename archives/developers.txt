@@ -55075,3 +55075,59 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     It's such a huge power-up once it sinks in.
     [reply to fedpostoffice msg=1534002288539209889]
 
+[2026-08-04T03:04:08.152000+00:00] drexux (id=1534034174393057361)
+    fix(config): refuse platform-field writes when config.yaml has a YAML syntax error
+    https://github.com/NousResearch/hermes-agent/pull/77971
+    
+    fix(dashboard): scope memory-provider config to the active management profile
+    https://github.com/NousResearch/hermes-agent/pull/77982
+
+[2026-08-04T03:15:55.503000+00:00] .omgg (id=1534037141238317216)
+    trying too iron out some bugs but can get this triage going hopefully
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1534037140864766002/image.png?ex=6a72aaeb&is=6a71596b&hm=d0b37ee12da8dcb6f30a30d529b80e77865c15821d6a9dad17c45d9dd926838c&
+
+[2026-08-04T06:28:08.046000+00:00] ymad47 (id=1534085512229290015)
+    hi guys i did an hermes update and since then my hermes not working and seems buged
+
+[2026-08-04T06:28:16.338000+00:00] ymad47 (id=1534085547008720997)
+    anyone have a clue
+
+[2026-08-04T06:59:26.594000+00:00] mariaosake (id=1534093391430946906)
+    what wrong guy?
+    [reply to ymad47 msg=1534085512229290015]
+
+[2026-08-04T06:59:53.485000+00:00] ee.dd (id=1534093504219713577)
+    Make a <#1485307775444844625> with logs for more help
+    [reply to ymad47 msg=1534085512229290015]
+
+[2026-08-04T07:31:24.671000+00:00] nodius. (id=1534101436428718131)
+    hi, i don't know if this is the right place to ask--i'm trying to contribute to the nous psyche but keep running into this error message, any advice?
+    ```
+    2026-08-04T07:30:56.587711Z  WARN endpoint{id=481168d6c6}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay=https://use1-1.relay.nousresearch.psyche.iroh.link/}: iroh::net_report::reportgen: probe failed: Failed to run HTTPS probe: HTTP request failed: error sending request for url (https://use1-1.relay.nousresearch.psyche.iroh.link/ping): client error (Connect): received fatal alert: AccessDenied
+    2026-08-04T07:30:56.687552Z  WARN endpoint{id=481168d6c6}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay=https://use1-1.relay.nousresearch.psyche.iroh.link/}: iroh::net_report::reportgen: probe failed: Failed to run HTTPS probe: HTTP request failed: error sending request for url (https://use1-1.relay.nousresearch.psyche.iroh.link/ping): client error (Connect): received fatal alert: AccessDenied
+    ```
+
+[2026-08-04T07:42:39.181000+00:00] gluedmosquito (id=1534104265528840262)
+    I want to add a feature to Computer Use. I’m on KDE/Wayland, so I’ll be working on it there, but it seems like it might be easier to prototype on Windows or macOS if anyone wants to try it out.
+    
+    The idea is to let Computer Use draw directly on the screen or display visual overlays and graphics, similar to what HeyClicky does: https://www.heyclicky.com/
+    
+    I’d also like to add a shortcut that gives the model local screen context for a specific area, instead of sharing the entire screen.
+    
+    My main use case would be getting interactive help while working in Blender.
+
+[2026-08-04T08:03:16.965000+00:00] baophan0123 (id=1534109457171349605)
+    env_loader — MCP secrets lost when refresh fails. reset_secret_source_cache clears _SECRET_SOURCES before load_hermes_dotenv repopulates. If the refresh fails mid-call, the cache stays empty and _build_safe_env drops every secret-tagged env var from MCP child processes. Snapshot before clearing, restore if refresh fails.
+    https://github.com/NousResearch/hermes-agent/pull/78278
+    
+    Multiplexed gateway never bridges the routed profile's terminal config. _profile_runtime_scope switches hermes_home and secrets but skips terminal: entirely — a profile with terminal.backend: docker runs commands on the gateway's local backend. Bridge the profile's terminal section inside the scope, restore on exit.
+    https://github.com/NousResearch/hermes-agent/pull/78289
+    
+    auxiliary_client — gpt-5 rejects both temperature and max_tokens, but the retry path only strips temperature. The retry immediately fails again on max_tokens, and the user sees the misleading "temperature not supported" error. Strip max_tokens proactively when the provider rejects temperature.
+    https://github.com/NousResearch/hermes-agent/pull/78305
+    
+    <@387972437901312000> happy to help review and test anything needed, I check the repo daily
+
+[2026-08-04T08:24:38.007000+00:00] darth_kermit1 (id=1534114830250803301)
+    Hi
+

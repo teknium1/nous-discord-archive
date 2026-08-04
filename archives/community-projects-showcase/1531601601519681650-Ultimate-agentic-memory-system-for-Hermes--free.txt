@@ -119,3 +119,64 @@
     [attachment] ssOq.png https://cdn.discordapp.com/attachments/1531601601519681650/1533640267129684108/ssOq.png?ex=6a71394d&is=6a6fe7cd&hm=079d7262a3593ded3e6cb430452d096b64dfcdd3b8735dd2fad2aa7e12db344b&
     [reply to jaixii msg=1533624508982886491]
 
+[2026-08-04T02:59:56.724000+00:00] ace911x (id=1534033119827726417)
+    Alot of us with the same overall idea, I made one as well I have been tinkering with lol, https://github.com/acester822/FTR10-Engram
+    [embed] GitHub - acester822/FTR10-Engram https://github.com/acester822/FTR10-Engram
+
+[2026-08-04T04:17:35.846000+00:00] maxfreedompollard (id=1534052661601505453)
+    "Engraphis is local first, not cloud"
+    
+    It could be a horse and carriage first, it's not offline now, there's so many network calls it has no advantage over anything actually hosted in the cloud. I mean Claude's technically on my computer but I don't consider it anything but a cloud product, there's little difference between communicating with the cloud 24/7 and actually being on the cloud. Doesn't matter if it's local and references local files, it really might as well be a webpage. Compartment is completely offline, different lanes. 
+    
+    "Most ai users use Obsidian for memory when it's not designed for ai." 
+    
+    95%+ of users wouldn't use anything besides default memory, Hermes/Claude/etc have default memory now. The amount of people who use third party memory for agentic AI is actually very small, but most would choose vector memory TODAY. You're looking at history, AI moves very fast, a year ago Obsidian was popular for agentic memory and, as is logical, many still use Obsidian simply by virtue of the fact they have been using it and it's where their memory already exists, but nobody installing a third party memory for agentic AI today would pick obsidian. 
+    
+    "And to assume yours is better and say so without much research doesn't show me integrity"
+    
+    I didn't assume, I'm 100% certain mine is better. 
+    
+    "Where Engraphis wins compared to Compartment:
+    
+    Multi-repo project boundaries: First-class workspace → repo → session scopes, rather than Compartment’s flat namespaces plus caller ACLs. Better for isolating work across repos and sessions."
+    
+    Why would people want to actively manage their AI Agent and, SEPARATELY, their agentic memory? Nobody would actually prefer that in reality. More "control" (complexity) over an extension/plugin/whatever goes against the primary reason people use agentic AI, which is automation. Compartment gives users way more control, by doing what users want it to do without manual control. Continued in next comment.
+    [reply to jaixii msg=1533581140206682294]
+
+[2026-08-04T04:21:19.723000+00:00] maxfreedompollard (id=1534053600609697893)
+    Before I go point by point to explain why you're wrong, I just want to say you've also missed the main point. Compartment creates memories better, stores them better, and recalls them better, automatically and offline. Engraphis could have a thousand features besides this and still be worse agentic memory.
+
+[2026-08-04T04:21:48.924000+00:00] maxfreedompollard (id=1534053723087831131)
+    I actually originally named Compartment engram, lmao. I called it engRAM because it ran in RAM.
+    [reply to ace911x msg=1534033119827726417]
+
+[2026-08-04T04:26:24.905000+00:00] maxfreedompollard (id=1534054880635916338)
+    Alright onto my refutation:
+    
+    You made 11 separate comparisons claims, not one of them was about memory recall. Zero comparisons of whether the right memory comes back. That's the only thing a memory system does. A feature inventory is not a quality argument.
+    
+    Workspace/repo/session scopes. Persistent memory is valuable precisely because knowledge crosses boundaries. Scoping by repo reintroduces amnesia at every boundary, and it forces a write time guess nobody can make: when I learn how someone likes their commits written, is that session, repo, or global? Guess narrow and it's invisible later, guess wide and it's a namespace with extra steps. Scoping is what you build when ranking can't separate.
+    
+    Bi-temporal valid_at/known_at. That's from regulated finance, where you're legally required to reconstruct what was believed on an audit date. Nobody asks an agent what it believed about their printer on July 3rd. You pay that cost on every write and the as-of query never runs. An inferred valid_at that's wrong is worse than none, since it silently reorders truth. What people want here is correction, which is one pointer, not a temporal algebra.
+    
+    Never deleting, retaining predecessors. You're leading with this, so it's where I'll push hardest. An append only store accumulates known false statements forever and every future query has to outrank them, so the index degrades with every correction. Then the liability half: for memory holding credentials, addresses, medical or legal facts, retaining the predecessor is exactly the thing you must not do. When a password rotates, the old one has to be gone. You framed deletion and shredding as my weakness. Real forgetting is harder to build than never forgetting, and it's the one that survives an erasure request.
+
+[2026-08-04T04:26:40.621000+00:00] maxfreedompollard (id=1534054946553598002)
+    Code native memory. Code is the one domain where ground truth is already on disk, free to read, and current, and the agent already has ripgrep and an LSP. A symbol and call index inside a memory system is a stale copy of something authoritative, and a stale call graph is worse than none because it asserts an edge that no longer exists and the agent trusts it over the file. Memory should hold what isn't recoverable from the repo: the decision, why the alternative was rejected, the constraint someone said once. You can't grep those. So yes, no parser in mine. That's a category difference, not a gap.
+    
+    PPR retrieval. Graph expansion buys recall with precision, surfacing neighbors of hits that are adjacent and often wrong. At personal vault scale the right record is already reachable by vector plus lexical, and the walk adds plausible noise and latency. If the graph is LLM extracted, you pay nondeterminism and extraction error at write time and then let those errors steer retrieval. PPR earns its keep on multi hop questions over large corpora. This isn't that.
+    
+    Grounded answer with abstention. The agent is the reasoner. Putting a synthesized answer between it and its own evidence stacks a second, smaller model onto the path, and abstention is worse: it's the memory layer deciding the agent doesn't get to see evidence, on a threshold that can't see the conversation. Return ranked evidence, let the model with full context decide. Also llm/client.py speaks OpenAI and Anthropic, so this needs a key and egress. It's the least local first thing on your list.
+    
+    Token budget packets. If the budget is hard you don't need a fallback, and if you need adaptive fallback to raw history then it isn't hard and the failure mode is the exact thing the budget was for. Separately, 29 MCP tools is 29 schemas in the context window of every request whether they fire or not. That's a permanent context tax levied by the thing meant to save context.
+
+[2026-08-04T04:27:32.095000+00:00] maxfreedompollard (id=1534055162451066990)
+    Swappable embedders. Swapping the embedder invalidates every stored vector. The embedding space isn't a setting, it's the coordinate system the index lives in, and pinning one is what makes results reproducible and a benchmark number mean anything. Your own tree shows the tension: the numpy only offline path is DeterministicEmbedder, which sets supports_semantic_search = False and says in its docstring it is not a semantic model. Real local semantic needs the server extra and a model download, or ApiEmbedder with a key. Credit for flagging that in code and failing closed, but numpy only and semantic recall aren't both true in one install.
+    
+    Working/episodic/semantic/procedural. Straight question: what retrieval behavior actually differs between a semantic memory and a procedural one? If nothing branches on the type, it's an enum with a psychology paper attached. That taxonomy describes neuroanatomy, not a retrieval schema, and it forces a write time classification the writer can't reliably make. On consolidation, if it's LLM driven it rewrites my facts while I'm not looking, and summarization is lossy. Verbatim beats tidy for a personal vault.
+    
+    PDF/OCR/audio/video/Postgres ingestion. That's ETL, not memory. Each is a shim over tesseract, whisper or ffmpeg I can run in one command, and each adds an install failure mode. Modern LLM's that synthesize these things render this feature null, because what could you possibly need this HERE for? Compartment is designed to create memories from what the agent is already doing. It's not there to increase the features of the agent (Hermes and other agents are already superb at this, at incredible rate of improvement, and anything I build would be stale fast) it's to OBSERVE and RECORD and RETRIEVE information that would help the agent.
+
+[2026-08-04T04:27:42.055000+00:00] maxfreedompollard (id=1534055204226334740)
+    Workspace sync and team controls. For memory holding credentials, a sync path is an exfiltration surface, and optional is a config state, not an architectural guarantee. Your client side ChaCha20-Poly1305 is the right call. But two things in your repo sit awkwardly beside local first, not cloud: commercial_manifest.json points at a control plane at api.engraphis.com with entitlements enforced_by: private_control_plane and live authorization required for cost bearing features, and encryption at rest for the local store is opt in behind connector_from_env and SQLCipher, so the default install is a plaintext SQLite file.
+

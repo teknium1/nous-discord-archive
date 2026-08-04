@@ -368,3 +368,10 @@
     I use Mnemosyne. I haven't identified any issues. Hermes seems to remember things well. If I had a good reason to switch I would but I don't see one.
     [reply to davidzinaz msg=1533998662059819049]
 
+[2026-08-04T02:34:57.024000+00:00] rostelinalise (id=1534026829630017657)
+    did you do any categorization for these memory systems?
+    [reply to .lifeisgreat msg=1533984224955334686]
+
+[2026-08-04T03:19:25.370000+00:00] davidzinaz (id=1534038021484187658)
+    and I think saying that  we need to run 20 different memory mods if we want recall of facts vs figures vs personal memory is kind of a pain and difficult.  If someone is advertising a memory plugin or skill, and it is limited to one small aspect of Hermes, that seems counter productive and just adds more confusion by adding another 'memory' app that is more of a 'focused skill' and not memory.
+

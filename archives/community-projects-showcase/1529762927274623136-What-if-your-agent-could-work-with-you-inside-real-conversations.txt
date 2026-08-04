@@ -28,3 +28,9 @@
     we are on teams, like it or not. (a secret, I do not like it that much)
     I created a ms-bot-framework adapter with different hermes behind, some for personal reason, other for bi jobs. we add it to group chats and it interacts while chatting, can read also chat history when it was not mentioned, to catch up once it is mentioned.
 
+[2026-08-04T05:49:05.633000+00:00] gluedmosquito (id=1534075687437340782)
+    look up distill.id it's not the same as what you're doing but how they use agents might help especially the proactive part for example the agent stays silent while you talk with your team but if there are interesting links in your ideas (an idea out of what you're talking about) or missunderstandings the agent might hop in the convo to help
+
+[2026-08-04T07:24:20.035000+00:00] gluedmosquito (id=1534099655376244776)
+    oh also claude tag
+

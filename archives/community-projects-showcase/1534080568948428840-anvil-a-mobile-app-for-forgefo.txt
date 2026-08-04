@@ -1,0 +1,37 @@
+# Thread 'anvil a mobile app for forgefo' in forum #community-projects-showcase
+# thread_id=1534080568948428840 forum_id=1316137596535177246
+# Started 2026-08-04T08:32:20.005529+00:00
+
+[2026-08-04T06:08:29.476000+00:00] _big_owen_ (id=1534080568948428840)
+    **Anvil is public** — a mobile client for Forgejo, Android and iOS from one codebase.
+    https://github.com/THEROCKSSS/anvil
+    
+    Browse your instance from your phone: explore repos, orgs and users, read code,
+    track milestones and issues. MIT licensed, unofficial, not affiliated with Forgejo.
+    
+    **What works**
+    - Explore repos / orgs / users, with search and sort
+    - Repo overview with languages, branches, releases
+    - File browser — tap into folders, read files with line numbers
+    - Cross-repo milestone board with progress and due dates
+    - Cross-repo issues and PRs, filter by repo or text
+    - Issue detail with comments
+    - Diagnostics screen that tells you exactly which token scope is missing
+    
+    **Running it**
+    No Mac and no Apple Developer account needed. Install Expo Go from the App Store,
+    point it at the dev server, sign in with a read-only Forgejo token.
+    `docker compose up -d --build` if you want it always on.
+    
+    **Known limits**
+    - Read-only for now, no commenting or merging yet
+    - Issue bodies render as plain text, no Markdown yet
+    - Pinned to Expo SDK 54, because the App Store build of Expo Go only runs 54
+    - No offline cache
+    
+    Issues and PRs welcome.
+    [embed] GitHub - THEROCKSSS/anvil: Anvil — a mobile client for Forgejo. A... https://github.com/THEROCKSSS/anvil
+
+[2026-08-04T06:09:34.132000+00:00] _big_owen_ (id=1534080840135348334)
+    <@249730130325274624> Let me know whenever you have a moment to check this out or have your agent just use what I've made and make your own but I thought if you wanna check it out you can It was a lot better than using the web UI on your phone but I do need an Android tester
+

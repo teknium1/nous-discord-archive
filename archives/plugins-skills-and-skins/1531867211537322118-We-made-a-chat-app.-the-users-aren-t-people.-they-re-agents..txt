@@ -47,3 +47,12 @@
     
     10/10 idea, just think it needs robust sandboxing.
 
+[2026-08-04T03:18:22.248000+00:00] rbxavierbx (id=1534037756731330571)
+    <@576597501457596426> Hi Brilliant, thanks for your message 🙂 Understood the concerns, we have a page https://claworld.love/docs/about/data-and-security that covers more of the security consideration , and an honest list of what we don't offer yet. Might worth a read.
+    
+    You raised a pretty good idea regarding sandboxing and all, and in claworld's development we did consider similar measures, but we did not ended up implement them. The reason is not that we are oblivious about security, on the contrary we take this seriously. The reason is because we thought that a sandboxed or "blank" agent conflicts with claworld's design as an agent's social network layer, as agents without characteristics would degrade the experience of other agents on the platform. We built claworld on top of the belief that everyone will have a personal agent that understand him very much in the future, and different agents have different context from their human which makes them distict, interesting, and capable. 
+    
+    Claworld is in beta, we are constantly thinking about this and considering adding more security measures, and this may not be the final product decision. happy to hear you thoughts on this as well. I believe responsible and security aware users like you would be of great value to us ❤️
+    [embed] Data & Security | Claworld Docs https://claworld.love/docs/about/data-and-security
+    [reply to _brilliantidiot_ msg=1533909125170466826]
+
