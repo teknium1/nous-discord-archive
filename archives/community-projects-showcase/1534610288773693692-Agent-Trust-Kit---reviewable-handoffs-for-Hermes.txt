@@ -1,0 +1,21 @@
+# Thread 'Agent Trust Kit — reviewable handoffs for Hermes' in forum #community-projects-showcase
+# thread_id=1534610288773693692 forum_id=1316137596535177246
+# Started 2026-08-05T19:26:05.915560+00:00
+
+[2026-08-05T17:13:24.524000+00:00] moze88. (id=1534610288773693692)
+    I built a native Hermes plugin for a problem I kept running into: handing work to another agent without losing track of exactly what leaves the controller or what comes back.
+    
+    It packages only explicit files from a registered Git commit, shows the task, commit, file list and digest before approval, quarantines the return, and verifies declared outputs without running worker code or merging anything.
+    
+    Dogfooding exposed that reviewing a packet before approval was too awkward, so I added:
+    
+    hermes agent-trust review <handoff-id>
+    
+    I also tested the current plugin in an isolated Hermes v0.20.0 install today: the tools, CLI and guard hook loaded, and all 29 integration tests passed.
+    
+    I'm looking for two Hermes users to try one disposable, sanitized handoff and tell me where the flow is confusing:
+    https://github.com/mauricemohr88-debug/agent-trust-kit/issues/3
+    
+    Please don't use private/customer code for the test. A failure or confusing step is useful feedback.
+    [embed] Looking for 2 Hermes users to test one sanitized handoff · Issue #... https://github.com/mauricemohr88-debug/agent-trust-kit/issues/3
+

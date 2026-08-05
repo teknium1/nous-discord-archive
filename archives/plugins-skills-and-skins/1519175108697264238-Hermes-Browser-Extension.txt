@@ -810,3 +810,19 @@
 [2026-08-05T02:15:55.872000+00:00] ct0547 (id=1534384431157088447)
     Making it a Desktop Plugin so we can be in desktop app and then ask it to drive in chrome would be great
 
+[2026-08-05T15:22:52.357000+00:00] jonkomet (id=1534582471448854759)
+    computer use for me , doesn’t mess with anything I’m doing on the computer, it works in the background
+    [reply to ct0547 msg=1534384319399858297]
+
+[2026-08-05T15:23:53.181000+00:00] jonkomet (id=1534582726563463379)
+    Also I was making this but <@119192111202566149>  seems to already have done this 
+    
+    https://x.com/imbabybrooklyn/status/2085019745221554678?s=46
+    
+    so I will be finding works around it
+    [embed]  https://twitter.com/imbabybrooklyn/status/2085019745221554678?s=46
+    [reply to ct0547 msg=1534384431157088447]
+
+[2026-08-05T15:24:35.861000+00:00] jonkomet (id=1534582905576226876)
+    Find a way to make them work together
+

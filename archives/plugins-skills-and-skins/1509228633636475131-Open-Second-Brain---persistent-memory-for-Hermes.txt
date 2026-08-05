@@ -509,3 +509,9 @@
 [2026-08-04T07:03:07.905000+00:00] moonboi7 (id=1534094319676424354)
     this or gbrain?
 
+[2026-08-05T15:36:41.532000+00:00] danbennett (id=1534585949261008967)
+    Hey Serg!
+    FYI - opened a PR for this to fix an issue I had that caused the system to lock up due to too many open files. 
+    
+    This seems to be specifically if using Hermes Desktop and this plugin. The fix I submitted (well, my agent) has resolved the issue on my end so hopefully this helps for future improvements for all.
+

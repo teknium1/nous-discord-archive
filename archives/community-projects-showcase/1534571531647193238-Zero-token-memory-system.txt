@@ -1,0 +1,13 @@
+# Thread 'Zero-token memory system' in forum #community-projects-showcase
+# thread_id=1534571531647193238 forum_id=1316137596535177246
+# Started 2026-08-05T19:26:07.375510+00:00
+
+[2026-08-05T14:39:24.105000+00:00] na.chi (id=1534571531647193238)
+    I know what you're gonna say. Yet another memory system. This one has no external LLM calls and consumes zero tokens. Memory should be free.
+    
+    https://github.com/ptaranat/zeromem
+    
+    I implemented from the Zero-Mem paper that came out a few days ago. https://arxiv.org/abs/2607.29377
+    [embed] GitHub - ptaranat/zeromem: Zero-token memory for LLM agents. Rust i... https://github.com/ptaranat/zeromem
+    [embed] Zero-Mem: Zero-Token Memory Operations for LLM Agents https://arxiv.org/abs/2607.29377
+

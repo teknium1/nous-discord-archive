@@ -399,3 +399,19 @@
 [2026-08-05T13:56:11.340000+00:00] .lifeisgreat (id=1534560656802447472)
     to see if it could be improved
 
+[2026-08-05T14:40:59.801000+00:00] na.chi (id=1534571933025308858)
+    I've also been using Mnemosyne for months and after Zero-Mem paper came out a few days ago,  I implemented my own. https://arxiv.org/abs/2607.29377
+    
+    It's comparable to mnemosyne and way more lightweight. https://github.com/ptaranat/zeromem
+    [embed] Zero-Mem: Zero-Token Memory Operations for LLM Agents https://arxiv.org/abs/2607.29377
+    [embed] GitHub - ptaranat/zeromem: Zero-token memory for LLM agents. Rust i... https://github.com/ptaranat/zeromem
+
+[2026-08-05T18:49:47.970000+00:00] spranab (id=1534634546304258153)
+    Bro, I have been trying to get endorsement for arvix with no luck. So I have been publishing in Zenodo. Would you be able to endorse? 
+    
+    Zenodo: https://zenodo.org/records/18793952
+    Git: https://github.com/yantrikos/yantrikdb
+    [embed] YantrikDB: A Cognitive Memory Engine for Persistent AI Systems https://zenodo.org/records/18793952
+    [embed] GitHub - yantrikos/yantrikdb: Cognitive memory engine for AI agents... https://github.com/yantrikos/yantrikdb
+    [reply to na.chi msg=1534571933025308858]
+

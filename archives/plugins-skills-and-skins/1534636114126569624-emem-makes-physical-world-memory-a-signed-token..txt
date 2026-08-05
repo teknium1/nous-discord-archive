@@ -1,0 +1,13 @@
+# Thread 'emem makes physical world memory a signed token.' in forum #plugins-skills-and-skins
+# thread_id=1534636114126569624 forum_id=1485392832154832906
+# Started 2026-08-05T19:33:25.222169+00:00
+
+[2026-08-05T18:56:01.768000+00:00] av1608 (id=1534636114126569624)
+    We opened a PR adding emem to the optional-mcps catalog: https://github.com/NousResearch/hermes-agent/pull/79583
+    
+    emem is a remote MCP server (no auth, nothing to install) that gives agents signed, citeable facts about real-world places powered by real satellites plus agents' own data. Every fact carries an ed25519 signature and a resolvable emem:fact: token; receipts verify offline against a transparency log. Useful anywhere an agent states something about the physical world and you want that claim checkable.
+    
+    Try it without installing anything: point Hermes at https://emem.dev/mcp , https://github.com/mcp/Vortx-AI/emem and ask it to locate a place and recall the signed a fact like weather, elevation there. Feedback welcome, especially on the default tool selection.
+    [embed] Add emem to optional-mcps catalog by kumari-jaya · Pull Request #7... https://github.com/NousResearch/hermes-agent/pull/79583
+    [embed] MCP Registry | emem, the verifiable memory protocol for the physica... https://github.com/mcp/Vortx-AI/emem
+

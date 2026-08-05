@@ -1,0 +1,8 @@
+# Thread 'I built a multi-agent coding assistant with 9 specialized agents and an audit protocol — here's the' in forum #community-projects-showcase
+# thread_id=1534585832269414543 forum_id=1316137596535177246
+# Started 2026-08-05T19:26:06.905946+00:00
+
+[2026-08-05T15:36:13.639000+00:00] fame0x (id=1534585832269414543)
+    [attachment] banner.png https://cdn.discordapp.com/attachments/1534585832269414543/1534585833007349911/banner.png?ex=6a74a9ed&is=6a73586d&hm=4df3e4fbb37567af6d10f1d51bc94249232804a984659e2670480a3da5bf1d14&
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1534585832269414543/1534585834622156981/message.txt?ex=6a74a9ee&is=6a73586e&hm=16016425116c926338638ebfc4c2a7408601eca8d7a70d07edcda96635e13682&
+

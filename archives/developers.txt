@@ -55446,3 +55446,35 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/73878
     https://github.com/NousResearch/hermes-agent/pull/73886
 
+[2026-08-05T14:04:55.373000+00:00] sahaun (id=1534562854756421684)
+    Bumping this P2 bug, reviewed, waiting to be merged (I guess?)
+    https://github.com/NousResearch/hermes-agent/pull/67571
+
+[2026-08-05T16:45:03.022000+00:00] bexli (id=1534603152156921997)
+    https://github.com/NousResearch/hermes-agent/pull/64696 :)
+
+[2026-08-05T16:59:46.763000+00:00] drexux (id=1534606858835460151)
+    fix(model-switch): read picker key_env through the per-profile secret scope
+    https://github.com/NousResearch/hermes-agent/pull/79222
+    
+    fix(search): strip the FTS5 special characters the sanitizer was missing
+    https://github.com/NousResearch/hermes-agent/pull/79285
+    
+    fix(agent): recover tool_call arguments that arrived wrapped
+    https://github.com/NousResearch/hermes-agent/pull/79333
+
+[2026-08-05T17:14:15.235000+00:00] javdu10 (id=1534610501471043785)
+    Hello I have a question when it comes to the API Server, 
+    
+    Hermes was going to modify itself saying: 
+    
+    The API Server claims to be OpenAI-compatible. A server should not tell an OpenAI client to execute a tool that the server already executed itself
+    
+    Is that a known bug in the API Server or GPT-5.6-sol is smoking?
+
+[2026-08-05T18:22:47.674000+00:00] burak33b (id=1534627750290391080)
+    Thanks for the merge, Captain! <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/78386
+    https://github.com/NousResearch/hermes-agent/pull/79170
+

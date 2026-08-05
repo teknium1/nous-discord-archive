@@ -1,0 +1,8 @@
+# Thread 'Molt: Hermes buys with a disposable card per cart (MCP, open source)' in forum #community-projects-showcase
+# thread_id=1534586459254952146 forum_id=1316137596535177246
+# Started 2026-08-05T19:26:06.372039+00:00
+
+[2026-08-05T15:38:43.124000+00:00] dave_31869 (id=1534586459254952146)
+    Built something with Hermes Agent I wanted to share: Molt, an MCP server that lets an agent spend money under hard limits. You sign a budget once with a passkey; every purchase mints a single-use card scoped to one store and one exact cart. Unknown merchant → the purchase holds until a passkey tap on my phone; Hermes waits and continues on its own. All test mode (Stripe sandbox + testnet USDC), Apache 2.0. 5-min demo with Hermes doing the shopping: https://www.youtube.com/watch?v=AZ_xv7lazl0&t=4s repo: github.com/meyerdav24/molt. Happy for feedback and holes poked.
+    [embed] Hermes Agent buys office supplies with a disposable card per cart (... https://www.youtube.com/watch?v=AZ_xv7lazl0&start=4
+
