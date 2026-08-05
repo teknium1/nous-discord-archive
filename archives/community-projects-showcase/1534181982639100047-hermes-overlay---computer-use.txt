@@ -71,3 +71,9 @@
 [2026-08-04T14:37:50.136000+00:00] unktneemo (id=1534208749646905526)
     i`ll test it out on windows and send it to you after
 
+[2026-08-04T20:54:17.987000+00:00] gluedmosquito (id=1534303489960972319)
+    thanks i just got back home to work on it, on linux it was a bit tricky to setup the overlay on wayland but it works so i just need to do the rest also this could work with hey hermes
+
+[2026-08-05T01:56:16.331000+00:00] gluedmosquito (id=1534379483803549747)
+    computer use has some issues on wayland it's horrible and i don't think my implementation will be cross platform
+

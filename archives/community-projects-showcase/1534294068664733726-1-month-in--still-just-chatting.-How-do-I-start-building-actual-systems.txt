@@ -1,0 +1,26 @@
+# Thread '1 month in, still just chatting. How do I start building actual systems?' in forum #community-projects-showcase
+# thread_id=1534294068664733726 forum_id=1316137596535177246
+# Started 2026-08-05T02:13:46.745751+00:00
+
+[2026-08-04T20:16:51.775000+00:00] gukagurgenidze (id=1534294068664733726)
+    Hey all 👋
+    
+    I'm a performance marketing specialist, 1 month into Hermes. 
+    
+    **Problem: ** I'm still using it as a  chat window, not as a system. I can set up profiles fine (running Codex 5.6 as default), but I haven't made the jump to actually building agents that do work on their own.
+    
+    Three questions for people who made that jump:
+    
+    1. What was the first real system you built that made Hermes click for you?
+    2. What's your minimum viable Hermes stack — which plugins/skills/MCPs are non-negotiable vs. nice-to-have?
+    3. Any repo, template, or doc you'd point a beginner at instead of piecing it together from Discord scrollback?
+    
+    Happy to share back what I build. Thanks 🙏
+
+[2026-08-04T22:59:11.745000+00:00] _.exo._ (id=1534334921059860603)
+    Pick a problem and work through a solution end to end. Your agent will turn that into a skill and the next time you want to solve that same problem, your agent will do it faster. No minimum plugins or MCPs needed unless you have a particular desire to get some specific extended capabilities.
+    
+    Take one thing from your day-to-day and have hermes run it end to end with your guidance.
+    
+    If you have a list of things to work on (eg 5 campaigns to analyse) give hermes the info and tell hermes what you want done with it once you're comfortable with the outcome tell hermes to check some location (eg email) everyday so it can pull that list for you and then you get one end to end workflow completed per day
+

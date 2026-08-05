@@ -31,3 +31,9 @@
     [attachment] hermes-talk-dashboard-cut.mp4 https://cdn.discordapp.com/attachments/1533647495232749638/1533647495966490777/hermes-talk-dashboard-cut.mp4?ex=6a714008&is=6a6fee88&hm=054ce2b8fd31a287d5b921eabe11d8768c1fba5cc74e0ece1cf10bbadd143627&
     [embed] GitHub - TheSmokeDev/hermes-talk https://github.com/TheSmokeDev/hermes-talk
 
+[2026-08-05T00:38:22.031000+00:00] mindcraft3r (id=1534359878368235541)
+    This plugin is pretty sweet. I've been looking for something like this for Hermes 🙌
+
+[2026-08-05T00:38:49.441000+00:00] mindcraft3r (id=1534359993334370506)
+    Does it work with the Hermes desktop app?
+

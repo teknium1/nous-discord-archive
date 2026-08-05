@@ -1,0 +1,7 @@
+# Thread 'https://github.com/lEWFkRAD/hermes-document-reader' in forum #plugins-skills-and-skins
+# thread_id=1534331038229332049 forum_id=1485392832154832906
+# Started 2026-08-05T02:20:49.732113+00:00
+
+[2026-08-04T22:43:46.006000+00:00] jw_mushroom_man (id=1534331038229332049)
+    Document scanning to .md, text, word, or excel outputs for Hermes
+

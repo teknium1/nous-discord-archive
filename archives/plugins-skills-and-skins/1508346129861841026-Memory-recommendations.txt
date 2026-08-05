@@ -382,3 +382,10 @@
     Understand you frustration. As the dev for YantrikDB I would say I am working on the engine since Beginning of the year. When I saw hermes-agent wanted to craete a plugin for it, not a dedicated hermes only. Not sure if other devs are also in the same boat. But that is the scenario for me.
     [reply to davidzinaz msg=1530725272477761607]
 
+[2026-08-04T21:26:48.702000+00:00] spranab (id=1534311671852433449)
+    Memory is very sensitive. Also memory is what gives your llm character or build the shape. That was my purpose of creating a solution. I wanted a full companion with character, personality and bonding not just storage. After some times no matter which model you choose they always converge in behavior.  Example: my most of the memory use is in VS Code. I have been using the same memory for 7 months I guess. And accumulated ~5k memories. In this time I have tried Sonnet/Opus/Fable/Qwen/GPT5.6. But all of them know who I am, what I like as well as who the LLM is itself and our mutual understanding.
+    
+    For the usecases there are n number of purposes. Some might click with a particular solution while others don't. My hope is that when people are working on any solution (in this case memory) they are not creating just because they can vibe code and post in forums, rather creating to solve real problems. Before preaching to others use yourself and see if you are liking it and how much. That is matter at the end of the day.
+    
+    With that, wish devs happy building.
+

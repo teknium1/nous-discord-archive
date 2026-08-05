@@ -55325,3 +55325,39 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     fix(patch): keep literal \t/\r when the matched region is tab-indented or CRLF
     https://github.com/NousResearch/hermes-agent/pull/78622
 
+[2026-08-04T20:52:01.571000+00:00] asshole1678 (id=1534302917790662917)
+    https://klipy.com/gifs/safemoon-gif-shinobi-2
+
+[2026-08-04T20:52:03.755000+00:00] asshole1678 (id=1534302926950891763)
+    Well
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1491258766648283238/1534302926804221972/message.txt?ex=6a73a273&is=6a7250f3&hm=002b36690de1502e277c819cb1295db2db3ae93355a7621eb598335e3822c666&
+
+[2026-08-04T21:19:36.344000+00:00] dias4761 (id=1534309858411810897)
+    https://github.com/NousResearch/hermes-agent/pull/78911 : fix(otlp): span exporter now inherits configured resource_attributes
+    
+    fix(cron): isolate no_agent script subprocesses into their own process group- #78461
+    https://github.com/NousResearch/hermes-agent/pull/78461 (Non duplicated) : supersedes
+
+[2026-08-04T22:43:56.470000+00:00] jw_mushroom_man (id=1534331082118529175)
+    https://github.com/lEWFkRAD/hermes-document-reader
+
+[2026-08-04T22:44:00.855000+00:00] jw_mushroom_man (id=1534331100510425088)
+    for you pdf folks
+
+[2026-08-04T23:30:26.499000+00:00] trippyogi (id=1534342784348065967)
+    pinged! awesome work w that tool
+    [reply to gottz.de msg=1533838536690634814]
+
+[2026-08-04T23:34:58.923000+00:00] gottz.de (id=1534343926977138808)
+    approved!
+    [reply to trippyogi msg=1534342784348065967]
+
+[2026-08-05T00:30:25.010000+00:00] xipong (id=1534357877597409420)
+    #76228, #76229, #76230, #76370, #76480, #76497
+    
+    
+    Pls check this PRs. Thanks!!)
+
+[2026-08-05T00:54:21.367000+00:00] turbo0433 (id=1534363902115184831)
+    just wondering which you guys think is better for coding, claude code with opus or codex with gpt 5.6
+

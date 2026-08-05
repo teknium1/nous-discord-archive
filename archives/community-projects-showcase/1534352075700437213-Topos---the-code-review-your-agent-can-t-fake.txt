@@ -1,0 +1,25 @@
+# Thread 'Topos — the code review your agent can't fake' in forum #community-projects-showcase
+# thread_id=1534352075700437213 forum_id=1316137596535177246
+# Started 2026-08-05T02:13:45.904212+00:00
+
+[2026-08-05T00:07:21.730000+00:00] boundary_operator (id=1534352075700437213)
+    Agents are great at declaring victory. Rename a variable, shuffle some whitespace, call it "refactored" — Topos catches that exact move and flags SUSPICIOUS_NO_STRUCTURAL_CHANGE. No credit for looking busy.
+    
+    Scores three pillars (SIMPLE / COMPOSABLE / SECURE), returns a medal SLOP→GOLD, agent loop is evaluate → one structural edit → re-evaluate → stop at plateau. It's explicitly not SAST — SECURE is a heuristic pass, not a security audit, and it says so instead of pretending otherwise.
+    
+    Local-only, no creds needed.
+    
+    ```
+    hermes skills tap add Krv-Labs/topos
+    hermes skills install Krv-Labs/topos/topos
+    ```
+    Repo: https://github.com/Krv-Labs/topos
+    
+    Running Hermes against real repos? Tell me where the medal thresholds feel wrong — that's the fastest tuning signal I can get.
+    
+    Inspo: https://krv.ai/field-notes/evaluating-code-generation
+    Leaderboard: https://topos.krv.ai/
+    [embed] GitHub - Krv-Labs/topos: Structural code quality metrics for agent-... https://github.com/Krv-Labs/topos
+    [embed] Introducing Topos: Quality is the New Currency https://krv.ai/field-notes/evaluating-code-generation
+    [embed] Topos Package Leaderboard https://topos.krv.ai/
+

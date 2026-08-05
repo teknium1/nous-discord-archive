@@ -800,3 +800,13 @@
     Oh wait actually … good idea , let me cook this
     [reply to ct0547 msg=1534196103124357130]
 
+[2026-08-05T02:15:29.227000+00:00] ct0547 (id=1534384319399858297)
+    Yeah the problem with Computer Use is I can’t be using the computer at the same time, while Claude in chrome extension for example can be running multiple tabs and tab groups while I do other things
+    
+    They also make it visually appealing able to see the mouse movements in the chrome tab, and watch it clicking around but only in the tab itself 
+    
+    Love to see what you cook up
+
+[2026-08-05T02:15:55.872000+00:00] ct0547 (id=1534384431157088447)
+    Making it a Desktop Plugin so we can be in desktop app and then ask it to drive in chrome would be great
+

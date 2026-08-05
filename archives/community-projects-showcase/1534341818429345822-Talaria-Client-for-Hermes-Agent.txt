@@ -1,0 +1,52 @@
+# Thread 'Talaria Client for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1534341818429345822 forum_id=1316137596535177246
+# Started 2026-08-05T02:13:46.329478+00:00
+
+[2026-08-04T23:26:36.206000+00:00] alexchadwick (id=1534341818429345822)
+    # Talaria 🪽, a native iOS client for Hermes Agent
+    
+    Was having behavior issues with WebUI for Hermex that I wasn't having on the Hermes Desktop app, so I worked on a native iOS app with an intuitive UI similar to iMessage. It speaks to hermes-agent's own gateway, so if you're running hermes serve you're most of the way there already. I have found it to be incredibly reliable.
+    
+    ## Chat
+    
+    Streaming replies with reasoning as it thinks, and tool calls with their output
+    Subagent delegation — what got delegated, how far along, what failed
+    Interrupt, steer mid-run, redirect
+    Branch a conversation, undo a turn, compress context
+    Slash commands, image attachments, voice input
+    Permission prompts
+    Approval, clarify, secret and sudo requests, timeouts included. You can run an agent that asks before it acts and answer it from your phone.
+    
+    ## The agent's own state
+    
+    Skills — browse and toggle
+    Tools and toolsets
+    MCP servers
+    Scheduled tasks
+    Memory / learning graph
+    Workspace file browser
+    Token spend and usage analytics
+    Config, driven by your server's own schema
+    Profiles, with per-profile session lists
+    Provider OAuth
+    Sessions
+    Search across all of them, pin, archive, resume, rename. Transcripts cache on device, so they open instantly and read fine with no signal.
+    
+    ## Voice
+    
+    Full conversation mode, speech in and out, either on-device or through your server. Keeps going with the screen off.
+    
+    ## Connecting
+    
+    Straight to a gateway on your network
+    Over SSH it generates a key in the Secure Enclave, pins the host key, starts hermes serve on the far side and tunnels to it. Nothing exposed, no ports forwarded, no VPN
+    Hermes Cloud via Nous Portal sign-in
+    Elsewhere in iOS
+    Siri and Shortcuts, Spotlight search over your conversations, a notification when a turn finishes, keyboard shortcuts, and a real iPad layout with sidebar and split view (less tested than iPhone).
+    
+    No gateway to hand? Sample-data mode covers every screen above, so you can look through the whole app before pointing it at anything real.
+    
+    It's 0.1 so expect rough edges. TestFlight link https://testflight.apple.com/join/UtMgYYNA. Feel free to DM with any problems. I couldn't test a lot of providers and Hermes Portal logins.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1534341818429345822/1534341818777342044/image.png?ex=6a73c6ac&is=6a72752c&hm=3b4b9ced3d19d0c04d63e1b0a3fe5ea100a894f7d463267a1bcb8e574ec62b1a&
+    [embed] Join the Talaria Agent Client beta https://testflight.apple.com/join/UtMgYYNA
+
