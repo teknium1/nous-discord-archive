@@ -1,0 +1,24 @@
+# Thread 'SLOTTLE - A Daily Slot Machine' in forum #community-projects-showcase
+# thread_id=1534417007330726059 forum_id=1316137596535177246
+# Started 2026-08-05T08:31:43.311044+00:00
+
+[2026-08-05T04:25:22.637000+00:00] nat2r (id=1534417007330726059)
+    https://slottle.app
+    
+    Slottle: a slot machine that takes no money and pays no money.
+    
+    One spin a day. Ten full seconds of reels. 277 achievements.
+    
+    All the dopamine of gambling with none of the upside, the downside, or the point.
+    
+    Resets at midnight UTC.
+    
+    Made with ❤️ and Hermes....and Opus
+    
+    
+    🎰 Slottle #217
+    16,004 pts · 17 combos · 3/3 🎯
+    Best: L-Bracket (+1,050)
+    📐⊤🫧🌌⚡➡️
+    [embed] Slottle — one spin a day https://slottle.app/
+

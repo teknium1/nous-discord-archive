@@ -1,0 +1,24 @@
+# Thread 'Hermes Todo - Task Management Plugin' in forum #plugins-skills-and-skins
+# thread_id=1534466499614605414 forum_id=1485392832154832906
+# Started 2026-08-05T08:39:49.320498+00:00
+
+[2026-08-05T07:42:02.517000+00:00] danbennett (id=1534466499614605414)
+    A shared task board for Hermes Desktop and Hermes agents.
+    This is purposely not a kanban, but instead a "Todoist" style task management plugin for getting work done with your agent!
+    
+    **What it includes**
+    - **Now**, **Today** and **Later** planning
+    - **Open**, **Waiting**, **Blocked** and **Done** statuses
+    - Due dates and timed deadlines
+    - Priorities, projects and estimates
+    - Recurrence notes
+    - One shared board across Desktop, CLI, REST API and agents
+    - **Work with Hermes** to open a dedicated session for a task
+    - Profile-scoped SQLite storage, so Desktop and agent changes stay in sync
+    
+    **Repository:**
+    https://github.com/DanBennettUK/hermes-todo
+    
+    Feedback, bug reports and PRs are very very welcome!
+    [embed] GitHub - DanBennettUK/hermes-todo: A shared Todo board for Hermes D... https://github.com/DanBennettUK/hermes-todo
+

@@ -18,3 +18,6 @@
 [2026-07-24T20:33:42.192000+00:00] marventr (id=1530312040139194510)
     It will be useful later
 
+[2026-08-05T04:14:12.720000+00:00] lisim (id=1534414197495169167)
+    What makes this different than just using minimax as your provider for generation
+

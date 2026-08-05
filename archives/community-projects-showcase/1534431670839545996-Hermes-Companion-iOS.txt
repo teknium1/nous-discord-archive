@@ -1,0 +1,12 @@
+# Thread 'Hermes Companion iOS' in forum #community-projects-showcase
+# thread_id=1534431670839545996 forum_id=1316137596535177246
+# Started 2026-08-05T08:31:42.275360+00:00
+
+[2026-08-05T05:23:38.690000+00:00] erick.grau (id=1534431670839545996)
+    Apologies in advance if wrong channel to post - I created an iOS repo to communicate with my desktop Hermes via tailscale network - still working on it but if anyone had interest I wanted to share the repo - https://github.com/chibitek/HermesCompanion
+    [embed] GitHub - chibitek/HermesCompanion: Native iOS client for Hermes Age... https://github.com/chibitek/HermesCompanion
+
+[2026-08-05T08:20:45.442000+00:00] rostelinalise (id=1534476242668228690)
+    nice, are you planning to release it on app store?
+    [reply to erick.grau msg=1534431670839545996]
+

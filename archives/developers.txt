@@ -55361,3 +55361,30 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-05T00:54:21.367000+00:00] turbo0433 (id=1534363902115184831)
     just wondering which you guys think is better for coding, claude code with opus or codex with gpt 5.6
 
+[2026-08-05T06:14:15.323000+00:00] cyberneight (id=1534444407401484328)
+    Can someone please contact me privately I’ve been trying to get help. I think it’s best I don’t drip it in a public forum
+
+[2026-08-05T06:56:06.548000+00:00] promptsiren (id=1534454940242673705)
+    if you need support you can open a <#1485307775444844625> or email support@nousresearch.com
+    [reply to cyberneight msg=1534444407401484328]
+
+[2026-08-05T07:04:27.099000+00:00] turgut.k (id=1534457039705604237)
+    hello <@387972437901312000> , I had a problem with credential rotate, I prefered issue this time instead of PR, can you take a look? https://github.com/NousResearch/hermes-agent/issues/79156
+
+[2026-08-05T07:04:47.548000+00:00] turgut.k (id=1534457125474930798)
+    It started after update, related with commit 2d70f56327
+
+[2026-08-05T07:25:04.471000+00:00] remintoscar (id=1534462229620195348)
+    https://github.com/NousResearch/hermes-agent/pull/79143
+
+[2026-08-05T07:25:09.119000+00:00] remintoscar (id=1534462249115189278)
+    fix(cron): extend inactivity limit for reasoning-model stale timeouts
+    [reply to remintoscar msg=1534462229620195348]
+
+[2026-08-05T08:23:14.849000+00:00] drexux (id=1534476869326475327)
+    fix(slack): insert resolved display names literally when humanizing mentions
+    https://github.com/NousResearch/hermes-agent/pull/78837
+    
+    fix(curator): protect cron skills referenced by absolute path
+    https://github.com/NousResearch/hermes-agent/pull/78860
+
