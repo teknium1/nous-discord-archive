@@ -322,3 +322,17 @@
 [2026-08-04T14:25:48.122000+00:00] ace911x (id=1534205721300832286)
     All of that being said, we all have the same general idea, but each seems to lack a piece of the puzzle, in real world usage mine needs tuned still, it is far from perfect. I admittedly have ADHD and I often get projects to 80-90ish percent complete, just enough they function and move on to a new dopamine hit. It 100% needs more work.
 
+[2026-08-05T10:03:07.899000+00:00] jaixii (id=1534502006000189461)
+    You keep treating your preferences as proof. You said Compartment “creates, stores, and recalls memories better,” but you have provided no head-to-head dataset, query set, error analysis, latency measurements, leakage tests, or reproducible comparison. “I’m 100% certain” is not evidence.
+    Engraphis already has reproducible results: 1.0 Recall@5, hit@5, and answer-token recall on both its sample and CodeMem fixtures; PPR reaches 1.0 on the multi-hop fixture where one-hop reaches 0.0 and vector-only reaches 0.6667; grounded recall works offline without an LLM; and the adversarial-memory security gate passes.
+    Several of your objections are also factually outdated, on top of the 10 things you said that weren't factual: retired memories are excluded from live recall; secure_erase exists for irreversible local deletion; embedding-version changes trigger reindexing; memory types have different scoring and lifecycle behavior; and the local core does not require your preferred cloud architecture. Engraphis is local-first and offline-capable, not falsely advertised as an air-gapped product with no optional hosted features.
+    Your actual conclusion is only that Compartment optimizes for a different set of priorities. That is a preference, not proof that it is better. If you have contrary measurements, publish the reproducible comparison. Otherwise, stop presenting an unsupported product opinion as a technical fact. I already asked you to stop bothering me and you continue harassing. I’m done discussing this.
+    [reply to maxfreedompollard msg=1534053600609697893]
+
+[2026-08-05T10:03:30.529000+00:00] jaixii (id=1534502100917293167)
+    [attachment] 2026-07-28_03_25_39-Engraphis_Ledger_-_Comet.png https://cdn.discordapp.com/attachments/1531601601519681650/1534502100531413194/2026-07-28_03_25_39-Engraphis_Ledger_-_Comet.png?ex=6a745bf2&is=6a730a72&hm=c67e4124207e1918ba38d0ed86569b49206db446b8931444a9e0aa08df0e1dbc&
+
+[2026-08-05T10:04:19.870000+00:00] jaixii (id=1534502307868311552)
+    Reproducible instructions in docs. Independently verified by 3rd parties. Enjoy the cost savings 😃
+    [attachment] context-efficiency_chart.png https://cdn.discordapp.com/attachments/1531601601519681650/1534502307536834650/context-efficiency_chart.png?ex=6a745c23&is=6a730aa3&hm=d8afc77080fd2cc107ea5ae16b5c47696a8bfd835caa29f44fa9695c735874d5&
+

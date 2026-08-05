@@ -77,3 +77,11 @@
 [2026-08-05T01:56:16.331000+00:00] gluedmosquito (id=1534379483803549747)
     computer use has some issues on wayland it's horrible and i don't think my implementation will be cross platform
 
+[2026-08-05T11:19:35.209000+00:00] unktneemo (id=1534521246572613773)
+    got out of usage but i'll try to see what they made on my hermes
+
+[2026-08-05T11:45:38.769000+00:00] unktneemo (id=1534527804618838087)
+    Architectural specification t_7646e1f9 architect ✅ ready (23 min)
+    MVP Windows implementation coder t_bc0a3073 ✅ ready (run 157)
+    QA Windows Companion t_44b63c28 qa-browser ⏳ scheduled — awaiting quota release
+

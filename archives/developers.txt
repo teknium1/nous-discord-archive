@@ -55388,3 +55388,61 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     fix(curator): protect cron skills referenced by absolute path
     https://github.com/NousResearch/hermes-agent/pull/78860
 
+[2026-08-05T09:22:27.593000+00:00] tunacookie (id=1534491770614710392)
+    Ive stopped relying on credential rotate and put/route it behind one api key that switch models when one runs out
+    [reply to turgut.k msg=1534457039705604237]
+
+[2026-08-05T09:23:04.520000+00:00] tunacookie (id=1534491925498040342)
+    idk why it sometimes maybe yes sometimes maybe no
+
+[2026-08-05T09:59:42.112000+00:00] antdx316 (id=1534501142866821243)
+    $AMD
+    https://x.com/grok/status/2084940936551846385?s=46
+
+[2026-08-05T10:00:35.785000+00:00] antdx316 (id=1534501367987830854)
+    [attachment] IMG_2819.png https://cdn.discordapp.com/attachments/1491258766648283238/1534501367731982508/IMG_2819.png?ex=6a745b43&is=6a7309c3&hm=436174522e3e3074c7ab3e9d74df41d94dfa4a519d7fb47a9f045833d4b91788&
+
+[2026-08-05T10:15:24.080000+00:00] godsboy7777 (id=1534505093766844566)
+    <@387972437901312000> Could you please review https://github.com/NousResearch/hermes-agent/pull/71031 when you get a chance?
+    
+    This addresses queued follow-up responses bypassing native MEDIA delivery. On Telegram, Hermes can expose the literal `MEDIA:<path>` text while never sending the actual file. I’ll attach a screenshot showing this happening in a real Telegram reply.
+    
+    #71031 appears to be the best of the current fixes because it covers both affected branches:
+    
+    • fallback responses that were not streamed, where `MEDIA:` is sent as plain text;
+    • already-streamed responses, where the text arrives but the attachment is silently dropped before queued recursion.
+    
+    It also preserves the precomputed thread/reply metadata and correctly keeps protected `MEDIA:` examples and bare paths as visible text.
+    
+    The core production change applies cleanly to current `main`, but the PR is marked conflicting because two test files need a narrow rebase. Before merging, it would also benefit from stronger exactly-once assertions and the same failed-result guard used by the normal completed-turn delivery path.
+    
+    This is important because Hermes tells the user a file was produced, but the file never arrives. That is a user-visible delivery failure which can silently lose important documents, images, and other generated artefacts.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1534505093213454416/image.png?ex=6a745ebb&is=6a730d3b&hm=7ec978db94880503719c41a521bf525dcb8f15aafeaabd194b474d95c82179e7&
+
+[2026-08-05T11:33:09.175000+00:00] drexux (id=1534524660593459281)
+    fix(api-server): resolve reasoning for the request's model, not model.default
+    https://github.com/NousResearch/hermes-agent/pull/78920
+
+[2026-08-05T12:11:13.924000+00:00] realadolan (id=1534534243525595247)
+    Not my PR but holy this must be merged ASAP: https://github.com/NousResearch/hermes-agent/pull/79180
+
+[2026-08-05T12:24:40.461000+00:00] baophan0123 (id=1534537626386825368)
+    close stdout pipe after npm build to prevent update hang
+    https://github.com/NousResearch/hermes-agent/pull/79176
+    
+    equest interrupt before pool shutdown and wait for completion
+    https://github.com/NousResearch/hermes-agent/pull/79313
+    
+    add SiliconFlow to PROVIDER_TO_MODELS_DEV mapping
+    https://github.com/NousResearch/hermes-agent/pull/79342
+
+[2026-08-05T12:38:47.392000+00:00] realadolan (id=1534541178672906400)
+    Fixed the memory gate treating "continue" / "next" / "do it" as trivial, so mid-task replies stopped getting provider recall. One regex, covers Honcho too since it aliases the shared classifier. https://github.com/NousResearch/hermes-agent/pull/79347
+    
+    The #78148 marker repair missed the rows that actually poison resumes: the replayed "[memory]" final reply has no tool_calls, so load repair and clean-markers never touched it. This catches that shape too, gated on a prior marker turn so real replies stay put. https://github.com/NousResearch/hermes-agent/pull/79351
+
+[2026-08-05T14:01:45.110000+00:00] flash_speed3412 (id=1534562056735424522)
+    https://github.com/NousResearch/hermes-agent/pull/73874
+    https://github.com/NousResearch/hermes-agent/pull/73878
+    https://github.com/NousResearch/hermes-agent/pull/73886
+

@@ -24,3 +24,6 @@
     
     If you have a list of things to work on (eg 5 campaigns to analyse) give hermes the info and tell hermes what you want done with it once you're comfortable with the outcome tell hermes to check some location (eg email) everyday so it can pull that list for you and then you get one end to end workflow completed per day
 
+[2026-08-05T09:49:24.096000+00:00] gukagurgenidze (id=1534498550719709264)
+    I really appreciate it man, thanks for the organic advice even though you mentioned shiny objects like plugins or MCPs.
+

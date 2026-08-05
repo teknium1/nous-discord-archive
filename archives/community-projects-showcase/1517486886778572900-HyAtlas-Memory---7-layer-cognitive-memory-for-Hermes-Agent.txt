@@ -350,3 +350,9 @@
 [2026-07-31T13:36:56.190000+00:00] halibusal (id=1532743872424316961)
     Just barely ready for benchmarking I’m running it on local models right now, hopefully will have something soon
 
+[2026-08-05T10:00:32.514000+00:00] tunacookie (id=1534501354268004423)
+    [attachment] F6D7DA90-05A4-4570-A5B3-9179A92DFBDE.png https://cdn.discordapp.com/attachments/1517486886778572900/1534501353785917531/F6D7DA90-05A4-4570-A5B3-9179A92DFBDE.png?ex=6a745b40&is=6a7309c0&hm=3580e0786e8b89ce36772808bc5b9c8953f3b65a93b2dbedd1ed7a4f175c08fe&
+
+[2026-08-05T10:01:27.058000+00:00] tunacookie (id=1534501583042121800)
+    V4.0 will be a test try for a go language rewrite to see if memory systems are better if its in “GoLang”
+

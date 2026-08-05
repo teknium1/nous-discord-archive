@@ -1,0 +1,13 @@
+# Thread '30+ accountants writing skills for agents' in forum #plugins-skills-and-skins
+# thread_id=1534503535708868788 forum_id=1485392832154832906
+# Started 2026-08-05T14:08:51.980432+00:00
+
+[2026-08-05T10:09:12.610000+00:00] mikefrommalta (id=1534503535708868788)
+    I'm an accountant and noticed AI is getting accounting and tax wrong, so why not create an open source project. got 30+ accountants from 30 countries to help me: https://github.com/openaccountants/openaccountants
+    
+    Also, if someone can point me to someone official as Nous Research it would be great. We are very happy to support here.
+    [embed] GitHub - openaccountants/openaccountants: Open-source Tax Guides fo... https://github.com/openaccountants/openaccountants
+
+[2026-08-05T13:11:11.604000+00:00] zerosignal (id=1534549333289078807)
+    This is incredible
+

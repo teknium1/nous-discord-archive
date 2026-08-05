@@ -1,0 +1,20 @@
+# Thread 'hermes-experience-policy — advisory empirical capability model plugin (MIT, v0.1.0)' in forum #plugins-skills-and-skins
+# thread_id=1534544012495687731 forum_id=1485392832154832906
+# Started 2026-08-05T14:08:51.512888+00:00
+
+[2026-08-05T12:50:03.028000+00:00] 00n0x (id=1534544012495687731)
+    Sharing a standalone plugin I built for Hermes Agent.
+    
+    **hermes-experience-policy** is an advisory-only empirical capability model. Observer hooks (pre_tool_call, post_tool_call, post_llm_call, on_session_end, subagent_stop) record bounded metadata — durations, byte counts, enums, HMAC-redacted identifiers. No transcripts, no tool payloads, no conversation content. An append-only hash-chained ledger stores outcomes, and a rebuildable SQLite index computes Wilson-score confidence intervals to rank what actually works.
+    
+    Philosophy: observe, measure, recommend — never mutate. The plugin cannot rewrite skills, modify config, or block calls. It surfaces what the data supports and leaves decisions to you.
+    
+    - Repo: https://github.com/brunopetrovic/hermes-experience-policy
+    - Release v0.1.0: wheel + SHA256SUMS, CI passing on Python 3.11/3.12
+    - Install: `pip install hermes-experience-policy` then `hermes plugins add`
+    - Requires: hermes-agent >=0.19, <0.21
+    - 261 tests, MIT licensed, advisory-only by construction
+    
+    Feedback welcome.
+    [embed] GitHub - brunopetrovic/hermes-experience-policy: Advisory-only empi... https://github.com/brunopetrovic/hermes-experience-policy
+
