@@ -91,3 +91,20 @@
     it's working for me but it still needs a lot of work on linux because Computer use on wayland doesn't give relliable info
     [embed] GitHub - slapash/screen-overlay-spike: Cross-platform transparent c... https://github.com/slapash/screen-overlay-spike
 
+[2026-08-06T11:02:31.139000+00:00] unktneemo (id=1534879339177312366)
+    i'll test it when its possible
+
+[2026-08-06T11:02:35.585000+00:00] unktneemo (id=1534879357825323119)
+    and the windows one also
+
+[2026-08-06T11:03:59.178000+00:00] gluedmosquito (id=1534879708439773250)
+    if you can share the windows one i'll test it too and work on it in one min
+    [attachment] image.png https://cdn.discordapp.com/attachments/1534181982639100047/1534879708326658160/image.png?ex=6a75bb9f&is=6a746a1f&hm=5207d5b14fb5b7d8d657020b13137e7c9735b2dc2da83615b6112b33c80a2bca&
+    [reply to unktneemo msg=1534879357825323119]
+
+[2026-08-06T11:07:43.352000+00:00] unktneemo (id=1534880648693813298)
+    lol
+
+[2026-08-06T11:07:46.402000+00:00] unktneemo (id=1534880661486440570)
+    mine is already over
+

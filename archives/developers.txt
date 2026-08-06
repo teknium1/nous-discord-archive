@@ -55537,3 +55537,55 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     <@387972437901312000> please check help me. P1 bug 👀
     [reply to remintoscar msg=1534834397839364178]
 
+[2026-08-06T09:06:23.888000+00:00] realadolan (id=1534850116408840223)
+    Editing or regenerating a message in the desktop/TUI after a compaction was permanently deleting the archived pre-compaction history, now it only rewrites the live rows: https://github.com/NousResearch/hermes-agent/pull/80195
+
+[2026-08-06T09:22:53.103000+00:00] kyssta69 (id=1534854265477005402)
+    1. [#66323](https://github.com/NousResearch/hermes-agent/pull/66323) — Gateway survives handler crashes instead of dying
+    2. [#75697](https://github.com/NousResearch/hermes-agent/pull/75697) — Stops API-key sessions flipping into Claude Code OAuth on refresh
+    3. [#80032](https://github.com/NousResearch/hermes-agent/pull/80032) — Silent IMAP mail failures now trigger the fatal-error alert
+    4. [#72332](https://github.com/NousResearch/hermes-agent/pull/72332) — Fixes false stop-reason on Ollama Cloud
+    5. [#63856](https://github.com/NousResearch/hermes-agent/pull/63856) — Interrupts subagents on /new and /clear, no more orphan file deletion
+
+[2026-08-06T09:27:44.175000+00:00] realadolan (id=1534855486321721475)
+    ./retry on Telegram/Discord/etc was hard-deleting archived compaction history, now it rewrites only the live rows: https://github.com/NousResearch/hermes-agent/pull/80218
+
+[2026-08-06T09:34:47.494000+00:00] kxee (id=1534857261850169467)
+    reviewing
+    [reply to remintoscar msg=1534834397839364178]
+
+[2026-08-06T09:36:15.063000+00:00] remintoscar (id=1534857629141303436)
+    Thank Sir
+    [reply to kxee msg=1534857261850169467]
+
+[2026-08-06T10:27:29.554000+00:00] realadolan (id=1534870524491202580)
+    This one is also P1
+    [reply to realadolan msg=1534855486321721475]
+
+[2026-08-06T10:37:25.772000+00:00] remintoscar (id=1534873025210613760)
+    https://github.com/NousResearch/hermes-agent/pull/80253                                                        fix(cli): use greedy key match in _set_nested to handle dotted keys
+
+[2026-08-06T11:50:08.588000+00:00] alphawolf147 (id=1534891324187082763)
+    Hello guys i need quick informations if some one already try and know the solution please let me know i have two 128 GB GMKtec Ryzen AI Max+ 395 Pc in RCP share and i want to install local model that perfectly work with hermes with content window around 270K in hermes and also fast i already try Qwen3.5-122B-A10B but its too slow anyone know or tried which model will be perfect or better
+
+[2026-08-06T11:55:34.318000+00:00] loki_60887 (id=1534892690397724672)
+    depends on what you want to do, top models i can say are qwen 27B generally & for coding you can get yourself qwen3-coder-next model, so please give more details about your needs if you want more specifications.
+    [reply to alphawolf147 msg=1534891324187082763]
+
+[2026-08-06T11:58:18.302000+00:00] alphawolf147 (id=1534893378196738048)
+    It not regarding coding its about company daily operations and documentions
+
+[2026-08-06T12:02:13.017000+00:00] loki_60887 (id=1534894362662535380)
+    then pick qwen3 27B put it with mcp and skills needed it performs so well
+    [reply to alphawolf147 msg=1534893378196738048]
+
+[2026-08-06T13:31:55.838000+00:00] drexux (id=1534916939850318086)
+    fix(credential-pool): don't count unleasable rows as something to rotate to
+    https://github.com/NousResearch/hermes-agent/pull/80190
+    
+    fix(goals): decode quality-gate output as UTF-8 instead of the process codepage
+    https://github.com/NousResearch/hermes-agent/pull/80236
+    
+    fix(cli): refuse /refine mid-turn, matching the gateway handler
+    https://github.com/NousResearch/hermes-agent/pull/80332
+
