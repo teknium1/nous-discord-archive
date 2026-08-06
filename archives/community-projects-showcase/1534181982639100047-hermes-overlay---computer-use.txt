@@ -85,3 +85,9 @@
     MVP Windows implementation coder t_bc0a3073 ✅ ready (run 157)
     QA Windows Companion t_44b63c28 qa-browser ⏳ scheduled — awaiting quota release
 
+[2026-08-06T07:17:00.319000+00:00] gluedmosquito (id=1534822586805129237)
+    https://github.com/slapash/screen-overlay-spike
+    
+    it's working for me but it still needs a lot of work on linux because Computer use on wayland doesn't give relliable info
+    [embed] GitHub - slapash/screen-overlay-spike: Cross-platform transparent c... https://github.com/slapash/screen-overlay-spike
+

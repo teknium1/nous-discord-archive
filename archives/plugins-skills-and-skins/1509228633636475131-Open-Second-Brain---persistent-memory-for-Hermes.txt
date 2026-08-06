@@ -515,3 +515,34 @@
     
     This seems to be specifically if using Hermes Desktop and this plugin. The fix I submitted (well, my agent) has resolved the issue on my end so hopefully this helps for future improvements for all.
 
+[2026-08-06T04:31:17.663000+00:00] gazebodega (id=1534780884283293847)
+    I'm starting to appreciate this as well.. Gbrain takes days of chatting with Claude to get it to do the basics... 
+    
+    where did you land?
+    [reply to fleety13 msg=1526041545097089114]
+
+[2026-08-06T05:34:05.984000+00:00] fleety13 (id=1534796689767010365)
+    I lifted whats practical from it, the same from pageindex and rolled my own knowledge base and ingest pipeline.
+    [reply to gazebodega msg=1534780884283293847]
+
+[2026-08-06T05:38:27.418000+00:00] gazebodega (id=1534797786300551229)
+    Cheers, lmk if you decide to publish any further details
+    [reply to fleety13 msg=1534796689767010365]
+
+[2026-08-06T05:44:55.266000+00:00] fleety13 (id=1534799413053100082)
+    other people will have much better implementations, it seems every turkey YT hype boy has the best Second brain or so we're told by the slop thumbnails, ~~so i assume they've done better work~~  So possibly not them, but someone with a highly functional first brain that has worked in knowledge management for decades has likely delivered, albeit less visibly   <:bhob:1151299900496158830>
+    [reply to gazebodega msg=1534797786300551229]
+
+[2026-08-06T05:49:04.179000+00:00] gazebodega (id=1534800457070022686)
+    I want to meet the hidden first brain SME..  trying to get gbrain up and running is very discouraging 😅
+    [reply to fleety13 msg=1534799413053100082]
+
+[2026-08-06T06:22:50.533000+00:00] gazebodega (id=1534808956214710282)
+    https://github.com/VectifyAI/OpenKB this also looks very compelling from pageindex team
+    [embed] GitHub - VectifyAI/OpenKB: OpenKB: Open LLM Knowledge Base https://github.com/VectifyAI/OpenKB
+    [reply to fleety13 msg=1534799413053100082]
+
+[2026-08-06T07:14:34.640000+00:00] gazebodega (id=1534821975783112805)
+    also looks nice https://docs.deeptutor.info/explore/memory/
+    [embed] Memory https://docs.deeptutor.info/explore/memory/
+

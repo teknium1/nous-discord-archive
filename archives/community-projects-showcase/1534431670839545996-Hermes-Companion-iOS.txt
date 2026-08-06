@@ -10,3 +10,6 @@
     nice, are you planning to release it on app store?
     [reply to erick.grau msg=1534431670839545996]
 
+[2026-08-06T02:26:07.869000+00:00] erick.grau (id=1534749385924284445)
+    Yes, I was thinking of - but not until it’s more stable and a few other features are rock solid like CarPlay and Apple Watch for voice only
+

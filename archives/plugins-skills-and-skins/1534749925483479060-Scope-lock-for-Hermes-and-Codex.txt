@@ -20,3 +20,13 @@
     It's a research repo, not an active project — CC BY 4.0, take whatever's useful. If anyone builds on it I'd love to hear about it.
     [embed] GitHub - FlintCraftTech/scope-lock https://github.com/FlintCraftTech/scope-lock
 
+[2026-08-06T02:35:40.073000+00:00] .coughfee. (id=1534751785921544293)
+    I don't know. Codex not mentioned in the Readme so maybe it's more cross platform compatible than I thought. This all very much automatically generated for a friend of mine and untested by me. I actually use Thoughliner, an extremely specialised workflow for no-code developers using Claude. It's all I know so just keep that in mind.
+
+[2026-08-06T02:36:03.230000+00:00] .coughfee. (id=1534751883049308393)
+    Sovereign Implementer is in the process of being renamed to Throughliner.
+
+[2026-08-06T02:36:27.702000+00:00] .coughfee. (id=1534751985692180650)
+    https://github.com/FlintCraftTech/sovereign-implementer/tree/main
+    [embed] GitHub - FlintCraftTech/sovereign-implementer: A structured workflo... https://github.com/FlintCraftTech/sovereign-implementer/tree/main
+

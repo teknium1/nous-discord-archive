@@ -55493,3 +55493,47 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     fix(persistence): persist provider in model_config on model switch   <@690519146701783042> please check help me
     [reply to remintoscar msg=1534736251033223369]
 
+[2026-08-06T03:17:25.412000+00:00] waefrebeorn (id=1534762294074933288)
+    kv cache is a file system
+    [attachment] IMG_7745.png https://cdn.discordapp.com/attachments/1491258766648283238/1534762293647245483/IMG_7745.png?ex=6a754e45&is=6a73fcc5&hm=d8f864355c6d9711c2c3b4d556eca4758149b3eef81f81629f73aa61a7f765c2&
+
+[2026-08-06T03:24:50.488000+00:00] wittgenstein9840 (id=1534764160859115540)
+    Keep building guys!
+
+[2026-08-06T03:49:42.057000+00:00] remintoscar (id=1534770416952807474)
+    https://github.com/NousResearch/hermes-agent/pull/79880
+
+[2026-08-06T04:38:46.433000+00:00] gazebodega (id=1534782766560968744)
+    how did you get on? I'm working on the same
+    [reply to ros77997 msg=1521869453984534610]
+
+[2026-08-06T04:57:08.388000+00:00] realadolan (id=1534787388495102013)
+    read_file no longer loses PDF/Office extraction forever after one failed anydoc install, it retries after a cooldown and first use is race-free  https://github.com/NousResearch/hermes-agent/pull/80002
+    
+    anydoc conversion now rejects files over 50 MB before converting, so one huge PDF can't pin a tool turn and spike RAM https://github.com/NousResearch/hermes-agent/pull/80004
+    
+    read_file's tool description now says PDF/Office/EPUB convert "when available" instead of promising it unconditionally https://github.com/NousResearch/hermes-agent/pull/80009 
+    
+    <@387972437901312000> the second one is a true regression caused by https://discord.com/channels/1053877538025386074/1490858802726043759/1534716483199041536 read_file on a large PDF existed before #79781 and behaved fine (quick raw-text read, char budget applied). After the PR, with anydoc installed, that same tool call on the same file can block for minutes and spike RAM. The other two are more of a gap closers.
+
+[2026-08-06T05:01:51.363000+00:00] teknium (id=1534788575378407474)
+    Checking now <a:partyblob:1151261550032724052>
+    [reply to realadolan msg=1534787388495102013]
+
+[2026-08-06T05:27:51.831000+00:00] dias4761 (id=1534795120455454770)
+    Hey sir.  Check this later 
+    
+    https://github.com/NousResearch/hermes-agent/issues/79017
+    [reply to teknium msg=1534788575378407474]
+
+[2026-08-06T06:42:02.754000+00:00] teknium (id=1534813788979728504)
+    all in
+    [reply to realadolan msg=1534787388495102013]
+
+[2026-08-06T08:03:56.289000+00:00] remintoscar (id=1534834397839364178)
+    https://github.com/NousResearch/hermes-agent/pull/80134                                                                                          fix(agent): bound authorization gate lock acquire and cap excluded_seconds
+
+[2026-08-06T08:05:31.371000+00:00] remintoscar (id=1534834796641910894)
+    <@387972437901312000> please check help me. P1 bug 👀
+    [reply to remintoscar msg=1534834397839364178]
+
