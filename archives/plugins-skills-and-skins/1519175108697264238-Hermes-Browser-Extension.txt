@@ -826,3 +826,8 @@
 [2026-08-05T15:24:35.861000+00:00] jonkomet (id=1534582905576226876)
     Find a way to make them work together
 
+[2026-08-06T00:27:19.710000+00:00] ct0547 (id=1534719488258478120)
+    In app browser is different to controlling chrome 
+    
+    Have you used Claude or ChatGPT desktop apps and how they do browser control? I can record a video if you want
+

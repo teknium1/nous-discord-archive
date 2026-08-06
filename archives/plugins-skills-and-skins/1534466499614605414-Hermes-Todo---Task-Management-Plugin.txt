@@ -22,3 +22,7 @@
     Feedback, bug reports and PRs are very very welcome!
     [embed] GitHub - DanBennettUK/hermes-todo: A shared Todo board for Hermes D... https://github.com/DanBennettUK/hermes-todo
 
+[2026-08-05T21:20:51.825000+00:00] pedrogazil (id=1534672562867535942)
+    Really nice project, I love the Todoist-style approach and how well it fits agent-based workflows. The shared board across Desktop, CLI, and agents is a great idea. Clean, practical, and very promising!
+    [reply to danbennett msg=1534466499614605414]
+

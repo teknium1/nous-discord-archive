@@ -55478,3 +55478,18 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/78386
     https://github.com/NousResearch/hermes-agent/pull/79170
 
+[2026-08-05T21:14:44.680000+00:00] asshole1678 (id=1534671022949662731)
+    So my local models load up but I'm having trouble setting up openai and providers
+    [attachment] VID_20260805_141259.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1534671022710849646/VID_20260805_141259.mp4?ex=6a74f944&is=6a73a7c4&hm=311d8aadbc52cc82675489ab3605a3431a94ba151ca53a8e19d50933405dce13&
+
+[2026-08-06T00:31:19.173000+00:00] yerts (id=1534720492639096956)
+    I was like wtf camera then .. oh
+    [reply to asshole1678 msg=1534671022949662731]
+
+[2026-08-06T01:33:56.267000+00:00] remintoscar (id=1534736251033223369)
+    https://github.com/NousResearch/hermes-agent/pull/79811
+
+[2026-08-06T01:35:04.081000+00:00] remintoscar (id=1534736535465754636)
+    fix(persistence): persist provider in model_config on model switch   <@690519146701783042> please check help me
+    [reply to remintoscar msg=1534736251033223369]
+

@@ -1,0 +1,22 @@
+# Thread 'Scope lock for Hermes and Codex' in forum #plugins-skills-and-skins
+# thread_id=1534749925483479060 forum_id=1485392832154832906
+# Started 2026-08-06T02:29:14.124797+00:00
+
+[2026-08-06T02:28:16.510000+00:00] .coughfee. (id=1534749925483479060)
+    Everyone's solving for **memory** — longer context, better recall, smarter summaries. Tools like Hermes are doing great work there. But an agent that remembers everything and then decides on its own to restructure your database? That's also broken. Just harder to catch.
+     
+    I've been calling the missing piece **scope lock** — the idea that an agent should work only inside boundaries the human defined, and make no decision the human didn't authorise. Memory answers "what did we decide?" Scope lock answers "who gets to decide what happens next?"
+     
+    A few things came out of the research that I think are genuinely portable to anyone's workflow:
+     
+    **Capture instead of act.** When the agent notices something outside scope, it writes it to a backlog file instead of acting on it or asking you a blocking question. Converts an out-of-scope impulse into a record, not an action or an interruption.
+     
+    **The halt rule.** If acting would require the agent to invent scope you never agreed to, it stops and surfaces it. Only hard stop. Everything else captures and continues.
+     
+    **Hooks, not skills.** Scope lock has to be always-on infrastructure that fires on every file mutation. If it's a skill you invoke on demand, you have to remember to use it — which means it fails exactly when you need it most.
+     
+    I've published the research, four articles, and a build prompt (designed to one-shot a standalone scope lock tool for Hermes-based workflows) here: https://github.com/FlintCraftTech/scope-lock
+     
+    It's a research repo, not an active project — CC BY 4.0, take whatever's useful. If anyone builds on it I'd love to hear about it.
+    [embed] GitHub - FlintCraftTech/scope-lock https://github.com/FlintCraftTech/scope-lock
+

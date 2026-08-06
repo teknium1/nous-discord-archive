@@ -415,3 +415,86 @@
     [embed] GitHub - yantrikos/yantrikdb: Cognitive memory engine for AI agents... https://github.com/yantrikos/yantrikdb
     [reply to na.chi msg=1534571933025308858]
 
+[2026-08-05T23:15:42.853000+00:00] ace911x (id=1534701465933844500)
+    I would not turn down feedback on mine, added some synthetic benchmarks today to test it out better, and it routinely scored 75% better than stock hermes and was 5x faster with responses, but you know how that goes, I trust nothing that I can't see and test myself, 
+    
+    https://github.com/acester822/FTR10-Engram.git
+    [embed] GitHub - acester822/FTR10-Engram https://github.com/acester822/FTR10-Engram.git
+
+[2026-08-05T23:16:18.495000+00:00] ace911x (id=1534701615427096759)
+    It has undergone a ton of changes the past two days, 
+    
+    # Engram — What's New
+    
+    ### Commits landed **Aug 4–5, 2026**
+    
+    > 23 commits in 2 days · 13 features · 10 fixes · all on `main`
+    
+    ---
+    
+    ## 🚀 New Features
+    
+    ### Tuesday, August 5
+    
+    | Feature | Commit | What it does |
+    |---|---|---|
+    | **Shaped `/api/cognitive-context` for Hermes sidecar** | `c44520adb` | Engram composes a fully-shaped block (genome + phenotype + gated outward web) into one endpoint. The Hermes plugin `prefetch()` now calls it; falls back to `/recall` on older builds. |
+    | **Benchmark A/B harness** | `e33eaeb52` | Synthetic corpus, no-Engram vs with-Engram vs full-history, deep scored. Produced the 5× / 100% proxy result. |
+    | **Per-tier consolidation buttons + newest-first logs** | `52a8333ce` | Dashboard controls to trigger Recent / Deep consolidation; logs shown in order. |
+    | **Advanced settings table (GUI)** | `566743b0a` | Infra / secrets / misc settings in the GUI; removed duplicate port & provider-kind fields. |
+    | **General settings in GUI** | `59af14e21` | Operational knobs moved to the Settings tab; stops IDE-save diff noise. |
+    | **Canonical model registry + Settings tab** | `5e3000183` | Providers/models configured in the web UI — single source of truth, no hardcoded defaults. |
+    | **Model-config audit (docs)** | `91bdeb295` | Settings-tab registry plan + action matrix. |
+    
+    ### Monday, August 4
+    
+    | Feature | Commit | What it does |
+    |---|---|---|
+    | **Advanced memory features** | `43950a1da` | Hybrid search, windowed embeddings, importance tiers, bi-temporal tracking. |
+    | **Two-tier consolidation engine** | `34b0d7cf5` | Recent + Deep tiers on a schedule. |
+    | **Importance tier + score in Memory Explorer** | `5441a1dcb` | Web UI shows memory importance at a glance. |
+    | **Recall eval harness + embedding provenance** | `e87fad793` | Synthetic-flag provenance for eval; measures retrieval quality. |
+
+[2026-08-05T23:16:28.757000+00:00] ace911x (id=1534701658469175386)
+    ---
+    
+    ## 🛠️ Fixes
+    
+    | Fix | Commit | Day |
+    |---|---|---|
+    | **GUI is source of truth for auto-search + models (live-read)** | `f5db40bca` | Aug 5 |
+    | Proxy phenotype recall now **embeds** the query (was keyword-only) | `c86a41c5e` | Aug 5 |
+    | Consolidation: resolve positional `target_ids` → UUIDs | `c9005f712` | Aug 5 |
+    | Consolidation: chunk LLM calls at 150, `json_object` + tolerant parse | `395e59c6a` | Aug 5 |
+    | Stop session-chatter being stored as memories | `5e50e8c1f` | Aug 4 |
+    | Restore embeddings for extracted memories + backfill | `c46dfb4c6` | Aug 4 |
+    | *(+ several docs / chore / env commits)* | — | both days |
+    
+    ---
+    
+    ## ⭐ Highlighted — built & verified
+    
+    <div align="center">
+    
+    **`c44520adb` · Shaped cognitive-context for the Hermes sidecar**
+    *Inward-first memory shaping — Engram decides what reaches the model, not just what's recalled.*
+    
+    **`f5db40bca` · Settings live-read + auto-search wiring**
+    *GUI toggles now apply immediately; web search verified firing through the gated outward path.*
+    
+    </div>
+    
+    Both committed, pushed to `main`, and verified at runtime (live WEB CONTEXT proof on a weak-recall tech query).
+    
+    ---
+    
+    ## 📊 At a glance
+    
+    ```
+    Features        ████████████████████████  13
+    Fixes           ██████████                10
+    Docs/chore       ████████                  6
+    ─────────────────────────────────────────────
+    Total           ███████████████████████████ 29 commits (2 days)
+    ```
+

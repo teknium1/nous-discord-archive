@@ -6337,3 +6337,10 @@
 [2026-08-04T17:34:27+00:00] avidfuturist (id=1534253196116230254)
     Yes that one just came out, worth a try!
 
+[2026-08-05T19:50:12.624000+00:00] gus003698 (id=1534649749205029106)
+    Are there advantages (especially wrt TUI/CLI windows) of using MacOS app instead of hermes-webui in web browser eg. firefox on Mac? Or perhaps the opposite - chat window more reliable in browser rather than Mac webui app?
+
+[2026-08-06T01:12:35.812000+00:00] avidfuturist (id=1534730880415961209)
+    It’s more like PWA - Desktop app provides multiple tabs and windows, separate icon in dock, hotkeys to bring it up, better notifications, things like that. Works great in the browser too!
+    [reply to gus003698 msg=1534649749205029106]
+

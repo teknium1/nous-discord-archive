@@ -1,0 +1,11 @@
+# Thread 'Just got the skill update live on Hermes and I’m genuinely hyped.delegation-enforcer is now at 0.2.' in forum #plugins-skills-and-skins
+# thread_id=1534708464209760337 forum_id=1485392832154832906
+# Started 2026-08-06T02:29:14.563866+00:00
+
+[2026-08-05T23:43:31.372000+00:00] f4t1i (id=1534708464209760337)
+    Just got the skill update live on Hermes and I’m genuinely hyped.
+    delegation-enforcer is now at 0.2.0 – you can throw it a task and it hands back clean JSON with the right target agent plus the exact skill paths that should get injected.
+    deep_strategy_bundle jumped to 0.2.0 too. It now automatically grabs that enforcer output, builds the proper ACP call (agent + skills + review_lane_kanban), and falls back to local if nothing matches. Roadmap, lessons, everything still gets persisted the same way.
+    Both skills are sitting in ~/.hermes/skills/ and ready to go – CLI or the Telegram /strategic command, doesn’t matter.
+    No more guessing which skills to load. No more stale copies. Every strategic task just brings the current tools with it. Feels solid as hell.
+
