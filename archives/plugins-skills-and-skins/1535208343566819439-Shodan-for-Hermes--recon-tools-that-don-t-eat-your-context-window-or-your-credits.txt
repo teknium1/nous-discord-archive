@@ -1,0 +1,37 @@
+# Thread 'Shodan for Hermes: recon tools that don't eat your context window or your credits' in forum #plugins-skills-and-skins
+# thread_id=1535208343566819439 forum_id=1485392832154832906
+# Started 2026-08-07T13:04:18.500249+00:00
+
+[2026-08-07T08:49:51.898000+00:00] realadolan (id=1535208343566819439)
+    Built a Shodan.io plugin for Hermes. One command to install, one to remove, and it doesn't touch core at all.
+    
+    ```bash
+    hermes plugins install Adolanium/hermes-plugin-shodan --enable
+    ```
+    
+    That prompts for your API key, writes it to `.env`, and enables it. Tools show up everywhere at once (Desktop, CLI, TUI, gateway, cron) because every frontend shares the same registry.
+    
+    Two things make Shodan annoying to hand to an agent, so both got real work.
+    
+    **Size.** A live `1.1.1.1` lookup is 225,130 characters of HTML, base64 favicons and PEM chains. The plugin shapes that down to 4,321 while keeping identity, ports, products, versions, certs and CVEs sorted by severity:
+    
+    ```
+    raw JSON      225,130 chars
+    summary         4,321 chars     52x smaller
+    detail         13,379 chars     17x smaller
+    ```
+    
+    When a result still overruns the budget it degrades in a fixed order instead of truncating JSON into something unparseable.
+    
+    **Money.** A Membership account gets 100 query credits a month and an agent can spend all of them in a minute. There's a per-session ledger that refuses *before* the request goes out, every paid result shows the balance falling, and the tool descriptions push hard toward `shodan_count`, which answers totals and facet breakdowns for free. Mapping a domain costs about one credit.
+    
+    12 tools split into a lean default profile and an opt-in full one. Scanning needs two separate opt-ins because it sends real probes at real hosts. Three bundled skills including all 94 filters and 90 facets, so the model stops inventing filter names.
+    
+    Also works with no API key at all, falling back to InternetDB and CVEDB, and labels the result so a thin answer never reads as a full one.
+    
+    No new dependencies. `httpx`, `rich` and `pyyaml` already ship with Hermes. 125 tests that never call the API, so running them costs no credits.
+    
+    https://github.com/Adolanium/hermes-plugin-shodan
+    [attachment] hermes-shodan-demo.mp4 https://cdn.discordapp.com/attachments/1535208343566819439/1535215021737644093/hermes-shodan-demo.mp4?ex=6a76f3e8&is=6a75a268&hm=eb6568ea9bddc7fc996ad7e4ada5edaf7b583b4159f89496c0b4e29ee6af33cd&
+    [embed] GitHub - Adolanium/hermes-plugin-shodan: Shodan.io for Hermes Agent... https://github.com/Adolanium/hermes-plugin-shodan
+

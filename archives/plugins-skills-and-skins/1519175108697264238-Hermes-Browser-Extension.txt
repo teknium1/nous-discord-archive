@@ -850,3 +850,8 @@
 [2026-08-06T22:32:32.432000+00:00] jonkomet (id=1535052988786278460)
     [attachment] HBE_-_PR_59_58_Transport_Recovery_Fix_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1535052988450873424/HBE_-_PR_59_58_Transport_Recovery_Fix_Update_AD.png?ex=6a765d00&is=6a750b80&hm=6be9786c24f49a6cde8f2075f0a993a804acb6caf5fc21edcb60266bc4a92f2d&
 
+[2026-08-07T12:40:21.478000+00:00] jonkomet (id=1535266349029269554)
+    https://github.com/abundantbeing/hermes-browser-extension/pull/60
+    [attachment] HBE_-_PR_60_Profile_Route_Locked_Fix_Update_AD_-_AI_Draft.png https://cdn.discordapp.com/attachments/1519175108697264238/1535266349398622219/HBE_-_PR_60_Profile_Route_Locked_Fix_Update_AD_-_AI_Draft.png?ex=6a7723b5&is=6a75d235&hm=6a5d2aeb6ef0c558f6417a4f842ba04f2ef63a538bfdad2b8a8770e423e73cbd&
+    [embed] Fix Browser Dashboard Attach profile selection (remote-dashboard) b... https://github.com/abundantbeing/hermes-browser-extension/pull/60
+

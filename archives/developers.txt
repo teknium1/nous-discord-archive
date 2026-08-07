@@ -55661,3 +55661,92 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     The implementation preserves native Hermes plugins and reuses the existing Skill and MCP runtimes rather than adding a second plugin engine. Feedback on how this should map into the tracker and catalog work would be welcome.
 
+[2026-08-07T07:20:30.217000+00:00] dias4761 (id=1535185855046754365)
+    : https://github.com/NousResearch/hermes-agent/pull/80703
+    fix(cron): recover jobs a sibling process wrote during unlocked jobs.json save (#80624)- #80703
+    
+     https://github.com/NousResearch/hermes-agent/pull/80475 : feat(mcp): deterministic record/replay fixtures for MCP servers- #80475
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/78911 :fix(otlp): span exporter now inherits configured resource_attributes- #78911
+    
+      fix(streaming): flag empty tool-call args on clean stream end (#80498) :https://github.com/NousResearch/hermes-agent/pull/80623
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/80505 :feat(debug): local reproduction capsule (hermes debug reproduce)- #80505
+    
+    https://github.com/NousResearch/hermes-agent/pull/80175 : feat(gateway): multi-platform delivery simulator- #80175
+    
+    feat(tests): fault_lab — deterministic real-fault injection for reliability tests: https://github.com/NousResearch/hermes-agent/pull/80485
+    
+    https://github.com/NousResearch/hermes-agent/pull/80165 : feat(credentials): read-only impact map for env-var credentials
+    
+    https://github.com/NousResearch/hermes-agent/pull/80123 : fix(weixin,email): stop pollers leaking proxied TCP sockets on fd exhaustion- #80123
+
+[2026-08-07T07:20:34.910000+00:00] baophan0123 (id=1535185874730487848)
+    reactions weren't showing up live on desktop because the event was routed by window id instead of session id.
+    https://github.com/NousResearch/hermes-agent/pull/80818
+    
+    long sessions with lots of provider fallbacks were leaking file descriptors until hitting EMFILE. Added a GC collect after retiring the shared OpenAI client.
+    https://github.com/NousResearch/hermes-agent/pull/80853
+
+[2026-08-07T07:40:51.326000+00:00] realadolan (id=1535190976748982334)
+    fix(cli): delete git-installed plugins on Windows despite read-only .git objects https://github.com/NousResearch/hermes-agent/pull/80888
+
+[2026-08-07T08:15:04.811000+00:00] pxphantom22 (id=1535199589689327659)
+    how to get hermes 70b api for free
+
+[2026-08-07T09:06:23.948000+00:00] royalaid (id=1535212504526094401)
+    hey guys, I noticed a lot of hitching on my windows machine when running multiple threads. Dug into it a bit and looks like the client is serializing way too much on each turn. Not super familiar with the code base yet but this has dramatically improved the perf for me at least. Open to feedback and recommendation on how to improve or correctly fix this if this approach is flawed for whatever reason https://github.com/NousResearch/hermes-agent/pull/80872
+
+[2026-08-07T09:09:33.123000+00:00] royalaid (id=1535213297983430756)
+    Also saw that path construction is a bit siloed so this PR opens it up to act more like the user's env, I can see both sides of this being good or bad but I think the default experience is better, results in a lot less of the agents working around the issue and finding the path by hand each time https://github.com/NousResearch/hermes-agent/pull/79726
+
+[2026-08-07T09:10:55.165000+00:00] royalaid (id=1535213642092380210)
+    and finally this one just puts reasoning summaries on a summary per line instead of being concatenated together, more inline with what other harness UIs do
+
+[2026-08-07T09:11:07.334000+00:00] royalaid (id=1535213693132869642)
+    https://github.com/NousResearch/hermes-agent/pull/79727
+
+[2026-08-07T09:41:45.562000+00:00] drexux (id=1535221403220058133)
+    fix(gateway): write systemd units and launchd plists without a truncation window
+    
+    https://github.com/NousResearch/hermes-agent/pull/80528
+
+[2026-08-07T09:56:33.127000+00:00] monolith2 (id=1535225125937348728)
+    I am a bit concerned - I see a lot of AI generated merge requests with only other AIs responding to them, is there enough human maintainers to read all of those walls of text?
+
+[2026-08-07T10:13:13.673000+00:00] monolith2 (id=1535229322531569724)
+    At work our velocity of a two person team is like 4-5 PRs at most per week, and PRs go stale if they aren’t merged within 1-2 weeks at most. This repo has an insane churn and velocity so I guess you have like a 5d window to merge it. It would be best just to nuke the whole public PR list and allow only from trusted maintainers, otherwise you will drown.
+    [reply to realadolan msg=1533918853220794539]
+
+[2026-08-07T10:25:53.730000+00:00] maxfreedompollard (id=1535232510441685043)
+    It's a signal, noise and token problem but this is an open source project. It's like saying the cost of water displacement is sinking the boat.
+
+[2026-08-07T10:46:48.499000+00:00] monolith2 (id=1535237773324197910)
+    It wasn’t always like this (before AI), so this high noise to signal ratio is not inevitable. In projects I have been at, restricting contribution often improved velocity and overall sustainability.
+    [reply to maxfreedompollard msg=1535232510441685043]
+
+[2026-08-07T11:46:05.585000+00:00] realadolan (id=1535252692824367214)
+    It would help a lot if people stopped throwing their clankers at the project with the intent to "help" by duplicating already-open PRs... I see this way too often. At least ask your clanker if there’s already an open PR for a specific issue before you do
+
+[2026-08-07T12:19:31.214000+00:00] .omgg (id=1535261105041973300)
+    Would the maintainers or anyone else like if i turn off my comments that is finding code issues that check accuracy across the projects code and catches any drift Is this counter active?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1535261104710615090/image.png?ex=6a771ed3&is=6a75cd53&hm=ada41fadd6be8b6204af5a0f81c960190c9cbd210d88914063eacd4f640dae46&
+
+[2026-08-07T12:21:06.017000+00:00] egilewski (id=1535261502674567168)
+    I haven't checked your comment on one of my PRs yet, so I can't give concrete feedback, but I appreciate the effort.
+    [reply to .omgg msg=1535261105041973300]
+
+[2026-08-07T12:21:21.214000+00:00] .omgg (id=1535261566415667271)
+    ok if you do it will be under "spfcraze"
+    [reply to egilewski msg=1535261502674567168]
+
+[2026-08-07T12:46:01.031000+00:00] loki_60887 (id=1535267773218029588)
+    its also humans in the loop who contribute with AI code, so i dont think its that much of a problem. also you can see that hermes-agent improved so much and at faster rate than before.
+    [reply to monolith2 msg=1535237773324197910]
+
+[2026-08-07T12:46:52.530000+00:00] dias4761 (id=1535267989220237312)
+    that is true
+    [reply to realadolan msg=1535252692824367214]
+

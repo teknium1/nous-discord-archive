@@ -1,0 +1,17 @@
+# Thread 'Hermes Intelligent Memory' in forum #plugins-skills-and-skins
+# thread_id=1535249865070874644 forum_id=1485392832154832906
+# Started 2026-08-07T13:04:18.036270+00:00
+
+[2026-08-07T11:34:51.396000+00:00] abdullahx990 (id=1535249865070874644)
+    🎉 **Hermes Intelligent Memory** — A local-first, bilingual (Arabic & English) memory provider for Hermes Agent!
+    
+    🔗 **Repository:** https://github.com/hoysama/hermes-intelligent-memory
+    
+    ✨ **Features:**
+    - 🌍 Full Arabic & English support with intelligent text normalization & graph relations.
+    - ⚡ Local-first SQLite store with selective cloud enrichment.
+    - 🛠️ Rich provider tools: `intelligent_memory_remember`, `intelligent_memory_recall`, `intelligent_memory_revise`, `intelligent_memory_forget`, `intelligent_memory_status`.
+    - 📦 Installed cleanly as a standalone plugin via:
+      `hermes plugins install https://github.com/hoysama/hermes-intelligent-memory`
+    [embed] GitHub - hoysama/hermes-intelligent-memory https://github.com/hoysama/hermes-intelligent-memory
+
