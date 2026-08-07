@@ -55750,3 +55750,43 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     that is true
     [reply to realadolan msg=1535252692824367214]
 
+[2026-08-07T13:07:21.468000+00:00] 0xgr1mm (id=1535273143760060487)
+    fix(agent): stop the send-path repair from rewriting persisted history (#80498)
+    the tool-call repair wrote into the saved conversation, because the api copy was only shallow. when a stream died mid write_file, the real arguments were replaced with {} in the transcript: the file was never written and the model kept going with an empty call. one report lost a whole chapter draft.
+    https://github.com/NousResearch/hermes-agent/pull/80616
+    
+    
+    fix(heartbeat): accept spaced interval forms in /heartbeat
+    /heartbeat every 90 minutes check ci always failed. the handler split the text and passed only 90 to the parser, so the unit ended up inside the prompt. every spaced form (2 hours, 30 min, 1 day) was rejected, on both cli and gateway.
+    https://github.com/NousResearch/hermes-agent/pull/80185
+    
+    fix(gateway): follow session rotation in the heartbeat poller
+    /heartbeat stopped firing forever after the first context compression. the poller kept using the old session id, read the migrated state as "cleared", and dropped the watch. worst part: /heartbeat status still showed it alive and counting down, so nothing looked wrong.
+    https://github.com/NousResearch/hermes-agent/pull/80208
+    
+    fix(providers): restore Responses-API routing for Actual Computer
+    the /refine feature commit also deleted two unrelated lines that route the actual provider to the responses api. the primary path still works, but an actual fallback entry now gets posted to /v1/chat/completions, which that endpoint does not serve. so the fallback fails exactly when you need it.
+    https://github.com/NousResearch/hermes-agent/pull/80248
+    
+    fix(api): flush the SSE head before waiting for the first run event (#80757)
+    GET /v1/runs/{id}/events prepared the response and then waited on the queue without writing a single byte, so the headers stayed in the socket buffer. a client that subscribes before the first event gets nothing: fetch/EventSource never resolve and the stream looks dead. worst case is the approval flow, where the first event can be 20-60s away.
+    https://github.com/NousResearch/hermes-agent/pull/80776
+    
+    fix(mcp): classify the /reload-mcp diff against config, not live sockets (#80771)
+    "removed" was computed from live connections only, so a server that was still reconnecting got reported as ➖ removed. the same wrong list was also injected into the model's history, telling it the tools were deleted seconds before they arrived. now "removed" means "gone from config".
+    https://github.com/NousResearch/hermes-agent/pull/80794
+    
+    fix(mcp): name the per-server causes in the zero-connected warning (#80938)
+    background discovery already knows why each server is out (failed / connecting / disabled, plus the recorded error), but the warning only said "zero connected servers". it now names each server with its cause, bounded and redacted, so no secret can reach the log.
+    https://github.com/NousResearch/hermes-agent/pull/80948
+
+[2026-08-07T13:43:09.205000+00:00] baophan0123 (id=1535282152021819443)
+    <:4912sadgepray:898917406729191455>
+
+[2026-08-07T15:07:19.535000+00:00] yeesil (id=1535303334641147975)
+    Absolutely
+    [reply to realadolan msg=1535252692824367214]
+
+[2026-08-07T15:07:29.673000+00:00] yeesil (id=1535303377162862613)
+    But if you've done a similar PR, the AI ​​will comment on your PR to indicate this.
+

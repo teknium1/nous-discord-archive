@@ -22,3 +22,10 @@
     I'd love to get your thoughts, architectural feedback, or feature ideas! Feel free to spin it up and drop a ⭐ on GitHub if you like the project!
     [embed] GitHub - maximskorohod/memobase: Local knowledge base for AI agents... https://github.com/maximskorohod/memobase
 
+[2026-08-07T18:26:16.814000+00:00] the_rade. (id=1535353403218333707)
+    Looks interesting, thanks. But I can't not notice the weird take in your readme - "*The RAG stack is heavy: PyTorch, gigabytes of weights, **a toxic AGPL license***"  - why would you think this needs to be cited?
+
+[2026-08-07T18:30:52.891000+00:00] itsa_50191 (id=1535354561168941126)
+    THX! Thanks! It's simple. I'm not a programmer in real life, so some of the things are neural networks and I don't have time for a detailed review.
+    [reply to the_rade. msg=1535353403218333707]
+

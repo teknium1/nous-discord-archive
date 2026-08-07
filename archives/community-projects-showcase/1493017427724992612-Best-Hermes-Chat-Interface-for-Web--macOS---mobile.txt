@@ -6344,3 +6344,29 @@
     It’s more like PWA - Desktop app provides multiple tabs and windows, separate icon in dock, hotkeys to bring it up, better notifications, things like that. Works great in the browser too!
     [reply to gus003698 msg=1534649749205029106]
 
+[2026-08-07T17:44:08.020000+00:00] kyklooppi (id=1535342796687548518)
+    Feature request: allow an optional custom update command in Hermes WebUI
+    
+    I’m running Hermes in a managed self-hosted setup where the update needs to cover more than a Git pull. The current WebUI updater correctly updates source and restarts itself, but it bypasses host-specific maintenance steps such as refreshing a dedicated runtime, reasserting service paths, restarting all enabled services, validating WebUI health, and running SQLite integrity checks.
+    
+    It would be useful if the Update panel supported an opt-in configured update command/handler, for example:
+    updates: custom_command: /home/user/hermes-update-checked
+    
+    When set, WebUI could offer a clearly labelled “Run configured update” action. It should retain the existing active-stream safety check, run the configured executable without shell interpolation, capture/redact output, wait for WebUI health after restart, and reload the browser when ready.
+    
+    My controlled wrapper currently:
+    1. Saves systemd rollback copies.
+    2. Updates Hermes.
+    3. Refreshes the dedicated runtime.
+    4. Reasserts protected runtime/service wiring.
+    5. Restarts enabled services, including WebUI.
+    6. Waits for health.
+    7. Verifies SQLite integrity and FTS across profiles.
+    
+    This would keep the simple built-in update as the default while allowing advanced self-hosted deployments to avoid source/runtime/service drift and use the same safe update flow from the WebUI.
+
+[2026-08-07T18:05:26.878000+00:00] kyklooppi (id=1535348160606634126)
+    created https://github.com/nesquena/hermes-webui/issues/6827
+    [embed] Feature: configurable custom update command / handler in WebUI · I... https://github.com/nesquena/hermes-webui/issues/6827
+    [reply to kyklooppi msg=1535342796687548518]
+
