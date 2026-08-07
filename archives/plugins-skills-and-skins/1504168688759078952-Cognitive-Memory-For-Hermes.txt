@@ -574,3 +574,19 @@
 [2026-08-04T18:17:14.014000+00:00] spranab (id=1534263962953322496)
     The moto is keep building 🙂
 
+[2026-08-07T01:42:07.412000+00:00] spranab (id=1535100698910523392)
+    **yantrikdb-hermes-plugin v0.15.0 + v0.14.0**
+    
+    **v0.15.0**
+    • Engine ceiling raised to 0.13.x — you get the engine's BM25 lexical fusion on your next `pip install -U`, plus everything in 0.13.1 below.
+    • **Knowledge-gap detection is now off by default.** It compared a *composite* recall score against a threshold, and that composite doesn't tell "memory has something near this" from "memory has nothing". Measured on 4,353 records: 0/20 real queries flagged, and 3 of 4 deliberate-nonsense queries scored *above* the threshold — "zzqx wobble frangible" came back 0.4810. Its silence carried no information, and silence reads as "nothing missing". `YANTRIKDB_GAP_DETECTION=true` restores it.
+    • `benchmarks/gap_floor_check.py` ships with it — if you've ever calibrated a threshold against a composite score, this checks your own database in one command.
+    
+    **v0.14.0 — operator constitution**
+    Standing rules in `$HERMES_HOME/yantrikdb-constitution.md`. Injected first, stated to outrank recalled memory and mounted packs, never trimmed when the context window fills. There's deliberately no tool to edit them: the file is the interface and you're the editor.
+    
+    **Engine 0.13.1, which you get for free on the same upgrade:**
+    A tokenizer fix means possessive queries resolve properly — before it, "What is X's role?" and "What is X role?" took different paths, because `X's` never matched entity `X`. On a real 4,400-record memory the possessive form previously missed the right record entirely and anchored on junk; it now returns the same record as the plain form, at the same score. Recall also surfaces relation direction now, e.g. `claims_match: A -reports_to-> B`, so the agent can see who is the subject.
+    
+    Your existing pin already admits 0.13.1 — no plugin update needed for that part.
+

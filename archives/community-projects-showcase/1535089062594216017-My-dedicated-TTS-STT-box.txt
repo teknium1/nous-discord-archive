@@ -1,0 +1,11 @@
+# Thread 'My dedicated TTS-STT box' in forum #community-projects-showcase
+# thread_id=1535089062594216017 forum_id=1316137596535177246
+# Started 2026-08-07T02:34:05.501598+00:00
+
+[2026-08-07T00:55:53.098000+00:00] drahcir_rahl (id=1535089062594216017)
+    1 AMD AI Pro dedicated to this purpose. It's probably about the best setup that I can build at this point.
+    Works terrific with Hermes, who of course helped build it. The voice model comes with no default voice, so you have to supply it with one.
+    
+    https://github.com/rahlquist/slug-tts-stt
+    [embed] GitHub - rahlquist/slug-tts-stt: LAN voice service on AMD Ryzen AI:... https://github.com/rahlquist/slug-tts-stt
+

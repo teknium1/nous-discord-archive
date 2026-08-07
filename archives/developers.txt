@@ -55644,3 +55644,6 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     fix(backup): recognise SQLite stores whose filename isn't .db
     https://github.com/NousResearch/hermes-agent/pull/80570
 
+[2026-08-07T02:30:51.802000+00:00] remintoscar (id=1535112964691066952)
+    https://github.com/NousResearch/hermes-agent/pull/80695                                                        fix(gateway): preserve archived compaction history on /retry rewrite
+
