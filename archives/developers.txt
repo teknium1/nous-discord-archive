@@ -55647,3 +55647,17 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-07T02:30:51.802000+00:00] remintoscar (id=1535112964691066952)
     https://github.com/NousResearch/hermes-agent/pull/80695                                                        fix(gateway): preserve archived compaction history on /retry rewrite
 
+[2026-08-07T03:19:28.238000+00:00] thedavidmurray (id=1535125197110116394)
+    If anyone uses autoreason, and they don't mind a token hog, I put in a PR to do bilevel reasoning over autoreason. It's another loop outside the loop, to autoreason your autoreason (kinda) 
+    
+    https://github.com/NousResearch/autoreason/pull/2
+    
+    it basically autoreasons outside the loop also
+
+[2026-08-07T04:51:02.821000+00:00] godsboy7777 (id=1535148243061841991)
+    <@387972437901312000> Shared a detailed compatibility note in the Plugins Interface Ideas thread about PR #80593, which adds an opt-in Hermes runtime path for the newly launched Agent Plugins 1.0.0 standard.
+    
+    PR: <https://github.com/NousResearch/hermes-agent/pull/80593>
+    
+    The implementation preserves native Hermes plugins and reuses the existing Skill and MCP runtimes rather than adding a second plugin engine. Feedback on how this should map into the tracker and catalog work would be welcome.
+

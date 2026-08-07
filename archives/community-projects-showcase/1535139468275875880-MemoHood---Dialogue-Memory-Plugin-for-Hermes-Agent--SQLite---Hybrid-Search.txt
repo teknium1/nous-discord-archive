@@ -1,0 +1,23 @@
+# Thread '🧠 MemoHood — Dialogue Memory Plugin for Hermes Agent (SQLite + Hybrid Search)' in forum #community-projects-showcase
+# thread_id=1535139468275875880 forum_id=1316137596535177246
+# Started 2026-08-07T07:11:30.359797+00:00
+
+[2026-08-07T04:16:10.749000+00:00] itsa_50191 (id=1535139468275875880)
+    Hey everyone! 👋 
+    
+    I wanted to share **MemoHood**, a dialogue memory plugin I built specifically for `hermes-agent`. It gives the agent a "personal diary" to automatically capture and recall facts across sessions without bloating the context window.
+    
+    🔗 **GitHub:** https://github.com/maximskorohod/memohood
+    
+    ### 🚀 What makes it different?
+    * 🔍 **Smart Recall Pipeline (v1.1):** Uses an offline Model2Vec gate to skip empty talk, runs hybrid search (FTS5 + BGE-M3 vector), and applies `graph_rerank` to pull context-linked entries across different sessions.
+    * 🔄 **SUPERSEDE Versioning:** When a user changes their mind or corrects a fact, the new data replaces the old one. The old fact isn't lost—it moves to a dated history log, so the LLM never gets confused by contradictions.
+    * 📉 **Ebbinghaus Forgetting Curve:** Includes a nightly consolidation cron-job. Fact confidence decays over time unless they are implicitly "pinned" (like names, allergies, or explicit rules).
+    * 💰 **Cost-Efficient:** Free keyword-based signal scoring catches obvious "remember this" triggers without calling an LLM. Only ambiguous cases trigger a cheap Gemini flash-lite call.
+    * 📦 **One-Command Install:** Seamless setup scripts for Windows/Linux that auto-configure everything.
+    
+    It fully supports both English and Russian morphology (via PyStemmer). 
+    
+    I'd love to hear your thoughts, architectural feedback, or feature ideas! Feel free to check out the repo and drop a ⭐ if you find it useful!
+    [embed] GitHub - maximskorohod/memohood: Dialogue memory for AI agents (her... https://github.com/maximskorohod/memohood
+

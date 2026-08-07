@@ -1,0 +1,32 @@
+# Thread '🛡️ obsidian-wikilint: Pre-commit hooks & AI safety for your Obsidian vault' in forum #community-projects-showcase
+# thread_id=1535156928676896838 forum_id=1316137596535177246
+# Started 2026-08-07T07:11:29.410631+00:00
+
+[2026-08-07T05:25:33.633000+00:00] scan_one (id=1535156928676896838)
+    I use Hermes Agent to maintain my Obsidian vault's wiki structure. 
+    But when AI does massive vault-wide refactors (like renaming core concepts), it causes silent link rot. 
+    Standard markdown linters ignore [[wikilinks]], and GUI plugins can't run in a pre-commit hook or CI pipeline.
+    
+    I built obsidian-wikilint to be the safety net for "Vault-as-Code" practitioners.
+    
+    Why it matters for AI workflows:
+    
+    • 🎯 Strict Resolution: No "helpful" fuzzy matching. A typo like [[pepper]]
+      actually fails the build instead of silently resolving to pepper.md.
+    
+    • 🤖 Agent-Friendly: I added an AGENTS.md to the repo. Hermes automatically
+      injects it into context — so when an agent clones this repo, it already knows:
+      parse the --json output to surgically patch exact line numbers, and never use
+      blind sed regex (which corrupts Obsidian aliases and blockrefs).
+    
+    • ⚙️ Git-Native: Runs headless in pre-commit hooks, cron jobs, and GitHub Actions.
+    
+    `pip install git+https://github.com/Scan-law4/obsidian-wikilint.git`
+    
+    🔗 https://github.com/Scan-law4/obsidian-wikilint
+    
+    Question for the channel: 
+    How is everyone else handling link rot when your AI agents rename files in your vault?
+    Are you relying on GUI plugins, or building headless pipelines?
+    [embed] GitHub - Scan-law4/obsidian-wikilint: Check an Obsidian vault for b... https://github.com/Scan-law4/obsidian-wikilint
+

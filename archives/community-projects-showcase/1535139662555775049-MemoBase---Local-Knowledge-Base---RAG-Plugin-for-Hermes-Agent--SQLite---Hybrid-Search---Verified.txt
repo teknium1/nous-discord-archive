@@ -1,0 +1,24 @@
+# Thread '📚 MemoBase — Local Knowledge Base & RAG Plugin for Hermes Agent (SQLite + Hybrid Search + Verified' in forum #community-projects-showcase
+# thread_id=1535139662555775049 forum_id=1316137596535177246
+# Started 2026-08-07T07:11:29.878817+00:00
+
+[2026-08-07T04:16:57.069000+00:00] itsa_50191 (id=1535139662555775049)
+    Hey everyone! 👋
+    
+    I'm excited to share **MemoBase**, a local knowledge base plugin I built for `hermes-agent`. Think of it as a **local NotebookLM inside your agent**. It turns PDFs, DOCX, websites, YouTube channels/videos, audio files, and Obsidian vaults into a secure, hallucination-free RAG system.
+    
+    🔗 **GitHub Repository:** https://github.com/maximskorohod/memobase
+    
+    ### 🧠 Core Features:
+    * 🛡️ **Zero-Hallucination Engine:** Operates on a strict 4-step pipeline: Sufficient Gate → Tool-less LLM response generation → Verbatim citation check against raw text → Honest refusal if no verified quotes remain. It completely blocks fabrications.
+    * 🔍 **Advanced Hybrid Search:** Combines full-text search (FTS5 with Russian/English stemming) and semantic vector search (via sqlite-vec), merged using RRF (k=60) and Cohere rerank-v3.5.
+    * 🎙️ **Rich Audio & Media Ingestion:** Ingests entire YouTube channels (with auto-failover transcripts) or transcribes raw audio files using Groq Whisper. Citations for media include exact, verified timestamps!
+    * 🔮 **Obsidian & Multi-source integration:** Reads Obsidian vaults, mapping out connections (`[[links]]`) and metadata without modifying your notes.
+    * 🔒 **Built-in Security Filters:** Features 6 hardcoded safety walls including SSRF blockers for URLs, prompt injection filters for malicious documents, and a quarantine state for suspicious guest entries.
+    * 📦 **1-Command Install:** Smooth installation scripts for Windows/Linux that auto-configure everything and support a completely offline mode (`--local` via fastembed).
+    
+    It runs seamlessly alongside standard agent memory and features a spend ledger to keep your monthly API costs fully capped.
+    
+    I'd love to get your thoughts, architectural feedback, or feature ideas! Feel free to spin it up and drop a ⭐ on GitHub if you like the project!
+    [embed] GitHub - maximskorohod/memobase: Local knowledge base for AI agents... https://github.com/maximskorohod/memobase
+

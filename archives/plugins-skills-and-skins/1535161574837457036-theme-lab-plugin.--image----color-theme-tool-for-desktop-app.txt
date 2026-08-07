@@ -1,0 +1,26 @@
+# Thread 'theme lab plugin.  image => color theme tool for desktop app' in forum #plugins-skills-and-skins
+# thread_id=1535161574837457036 forum_id=1485392832154832906
+# Started 2026-08-07T07:18:15.027531+00:00
+
+[2026-08-07T05:44:01.364000+00:00] twodogseeds (id=1535161574837457036)
+    https://github.com/0-CYBERDYNE-SYSTEMS-0/theme-lab
+    
+    I made a  color theme plug-in for the hermes-desktop app with the hermes-desktop app. 
+    -drop in an image. 
+    -colors are extracted. 
+    -can swap out the order of colors 
+    -each swatch has a color wheel for full customization.
+    
+    just told hermes to read and learn the hermes-desktop SDK and described the plug-in. 
+    then a few iterations and validations later...
+    
+    get it here: (or tell your hermes-agent to)
+    
+    Thanks for checking it out.
+    contributions welcome!
+    [attachment] Screenshot_2026-08-06_at_22.31.05.png https://cdn.discordapp.com/attachments/1535161574837457036/1535161575478923345/Screenshot_2026-08-06_at_22.31.05.png?ex=6a76c221&is=6a7570a1&hm=b3320602623b871e931f28061e9e94be9fb6d5c367b46de9438b143202078dae&
+    [attachment] Screenshot_2026-08-06_at_22.31.48.png https://cdn.discordapp.com/attachments/1535161574837457036/1535161575789432883/Screenshot_2026-08-06_at_22.31.48.png?ex=6a76c221&is=6a7570a1&hm=054e9214bace6ba08122286f585818cd2b5503a9a272d7720fd25e6cbc03c302&
+    [attachment] sunset-mosaic.png https://cdn.discordapp.com/attachments/1535161574837457036/1535161576410193980/sunset-mosaic.png?ex=6a76c221&is=6a7570a1&hm=6c983b8a84474fa1237be7244b1fafbfbbce1a61f7693bc614eb68bc20672ddb&
+    [attachment] Screenshot_2026-08-03_at_22.51.52.png https://cdn.discordapp.com/attachments/1535161574837457036/1535161577362296882/Screenshot_2026-08-03_at_22.51.52.png?ex=6a76c221&is=6a7570a1&hm=74f723bb77b3f92495ca0443929640c358c8a6d4ead75f359a710b6ea65fb970&
+    [embed] GitHub - 0-CYBERDYNE-SYSTEMS-0/theme-lab: Theme Lab ⚒️ — turn... https://github.com/0-CYBERDYNE-SYSTEMS-0/theme-lab
+

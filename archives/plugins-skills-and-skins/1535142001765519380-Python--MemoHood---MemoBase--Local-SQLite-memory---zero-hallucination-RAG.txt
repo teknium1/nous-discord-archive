@@ -1,0 +1,39 @@
+# Thread '[Python] MemoHood & MemoBase: Local SQLite memory & zero-hallucination RAG' in forum #plugins-skills-and-skins
+# thread_id=1535142001765519380 forum_id=1485392832154832906
+# Started 2026-08-07T07:18:16.941358+00:00
+
+[2026-08-07T04:26:14.780000+00:00] itsa_50191 (id=1535142001765519380)
+    Hey devs! 👋
+    
+    I've open-sourced two Python plugins built specifically for `hermes-agent`. Both run on local SQLite (`sqlite-vec`), support EN/RU morphology, and feature spend ledgers to hard-cap monthly API costs.
+    
+    ---
+    
+    ### 🧠 1. MemoHood (Dialogue Memory Provider)
+    Autonomous long-term memory that captures facts across sessions without bloating the context.
+    
+    * **Recall Pipeline:** Uses an offline `model2vec` gate to skip chatter, runs hybrid search (FTS5 + BGE-M3 vector), and hooks into `graph_rerank` to boost context-linked entries from older sessions.
+    * **SUPERSEDE Versioning:** When a fact is updated, the new data flags the old one as outdated and moves it to a dated history log, preventing LLM contradictions.
+    * **Consolidation:** A background cron-job applies exponential confidence decay based on the Ebbinghaus forgetting curve (except for pinned data).
+    
+    ---
+    
+    ### 📚 2. MemoBase (Local Knowledge Base / RAG)
+    A secure knowledge engine for PDFs, sites, Obsidian vaults, and audio/YouTube channels.
+    
+    * **Anti-Hallucination Loop:** Sufficient Gate → Tool-less generation → Verbatim fuzzy-match citation checker in Python. If quotes don't match the raw source, it returns a hard refusal.
+    * **Safety Walls:** Built-in SSRF verification for URLs, prompt-injection defense for hostile documents, and a quarantine state for guest entries.
+    * **Media Ingestion:** Transcribes audio/YouTube via Whisper with actual segment timestamps, so citations link back to the exact minute.
+    
+    ---
+    
+    Both plugins include a 1-command installer script with fully offline setup (`--local` mode via `fastembed`).
+    
+    Full architecture deep-dives and GitHub links are in the showcase threads:
+    ---
+    
+    👉 **MemoHood Thread:** https://discord.com/channels/1053877538025386074/1535139468275875880
+    👉 **MemoBase Thread:** https://discord.com/channels/1053877538025386074/1535139662555775049
+    
+    Would love to hear your thoughts on the pipeline architecture or how you handle native `memory.provider` integration! 🚀
+
