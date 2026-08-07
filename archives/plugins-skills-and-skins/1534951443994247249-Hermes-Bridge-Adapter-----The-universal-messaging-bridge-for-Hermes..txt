@@ -1,0 +1,27 @@
+# Thread 'Hermes Bridge Adapter --- The universal messaging bridge for Hermes.' in forum #plugins-skills-and-skins
+# thread_id=1534951443994247249 forum_id=1485392832154832906
+# Started 2026-08-07T00:02:44.958606+00:00
+
+[2026-08-06T15:49:02.267000+00:00] john_kesuek (id=1534951443994247249)
+    Talk to your Hermes Agent from any messaging service — without writing a single line of platform-specific Gateway code.
+    
+    I built an open-source plugin that turns the Hermes Gateway into a shared JSON-file interface. Instead of each platform connecting directly to the Gateway, any external service can communicate with Hermes by reading/writing JSON files in a well-defined directory structure.
+    
+    How it works:
+    
+    Your service runs a tiny wrapper script — read outbox/, send via your service's API, write incoming messages to inbox/. Any language, any machine, even over SSH.
+    The adapter polls inbox/, dispatches MessageEvents to the agent, and writes replies to outbox/.
+    Bridges self-register by dropping a YAML manifest into registry/ — no config edit, no gateway restart.
+    Why it's useful:
+    
+    Self-hosted alternative to native adapters where those are a poor fit (e.g. iMessage via BlueBubbles/Photon — I run my own Mac + Apple ID instead of a paid third-party service).
+    Long-tail coverage for services Hermes doesn't natively support — if it can read/write JSON, it can become a bridge.
+    Zero platform code in the Gateway. The contract is the JSON format; everything else stays generic.
+    The agent actually knows what's happening — a system-prompt hint teaches it to read registry/ and address replies as <bridge>:<target>.
+    Features: attachments, reactions, typing indicators, reply chains, per-bridge config, health monitoring, multi-gateway support, runtime self-registration.
+    
+    MIT-licensed, Python 3.11+, no extra dependencies. Works as a user-installed Gateway plugin.
+    
+    Repo: https://github.com/Kesuek/hermes-bridge-adapter
+    [embed] GitHub - Kesuek/hermes-bridge-adapter: Generic JSON-file-based Herm... https://github.com/Kesuek/hermes-bridge-adapter
+

@@ -55589,3 +55589,58 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     fix(cli): refuse /refine mid-turn, matching the gateway handler
     https://github.com/NousResearch/hermes-agent/pull/80332
 
+[2026-08-06T15:46:47.929000+00:00] ace911x (id=1534950880539836648)
+    Tracing my app's own memories with a 3rd party agent as the judge is next level. Next up auto-healing memories. Any suggestions?
+    [attachment] 2026-08-06_10-42-45.png https://cdn.discordapp.com/attachments/1491258766648283238/1534950880158285955/2026-08-06_10-42-45.png?ex=6a75fde7&is=6a74ac67&hm=14bad8a46b321b88224cb14811698c537c3efa2d28057e1321981c6693fde153&
+
+[2026-08-06T17:06:29.267000+00:00] .thebakery303 (id=1534970934924939396)
+    I wouldnt trust a judge model without an agent governance infrastructure
+
+[2026-08-06T17:10:43.150000+00:00] .thebakery303 (id=1534971999787552869)
+    Anything youre using  for it? Like a mature rag, observability and proof tiering infra?
+
+[2026-08-06T17:46:32.339000+00:00] ace911x (id=1534981014139699220)
+    In short it is my  agentic memory and cognition backend that I am building. I  have verbatim traces and score provenance already as well. I am adding in this next, 
+    - Judge calibration report: a fixed set of ~10–20 curated traces with human-labeled expected scores → re-score on demand → report agreement
+    - Consistency check: re-score a small random sample N times, report variance. Low variance = stable judge.
+    - Policy thresholds: move 0.7/0.4 into Settings, plus an optional alert ("recall_relevance avg < 0.4 over 24h → flag").
+    - Review loop: a "needs review" flag on low-scored traces until you open them.
+
+[2026-08-06T17:49:22.119000+00:00] ace911x (id=1534981726248505344)
+    Once I am confident in the systems capabilities, the last step is going to be a way to optimize memory automatically, based off of live, current memories. The way that I build code, what I search, what I know will not be the same for the next person, so making a memory system that more or less does the same thing for everyone is not the answer to LLM memory. It needs to evolve and adapt to the user. Recognize gaps and adjust automatically. That is my end game goal. All with 100% visibility to the user. No data going anywhere that cannot be SEEN by the user as well
+
+[2026-08-06T18:40:01.560000+00:00] masonjames (id=1534994474587914433)
+    Is there a preferred way to get maintainer eyes on a PR? This local MCP bug has hit me so many times in the past few months, would love to know if I can assist in prioritizing the fix https://github.com/NousResearch/hermes-agent/pull/80518
+
+[2026-08-06T18:44:39.789000+00:00] asshole1678 (id=1534995641565052988)
+    put some of my models at the bottom but you could probably run better models than me i run a 3060 with a ryzen 5000 XD
+    [attachment] pdf.txt https://cdn.discordapp.com/attachments/1491258766648283238/1534995641241960616/pdf.txt?ex=6a762797&is=6a74d617&hm=8ecd2a556c41d31e193a32e3b0f6fbf2a85e071e633a999493fb046c888293e1&
+    [reply to alphawolf147 msg=1534891324187082763]
+
+[2026-08-06T19:54:19.161000+00:00] paxed0x (id=1535013171121754323)
+    https://github.com/NousResearch/hermes-agent/pull/80566
+    
+    I found an open issue where a user got stuck reactivating a lost Google OAuth token, even though the existing setup already worked headlessly it just wasn't documented clearly. I added one clarifying line to the skill's docs explaining that, then committed, forked, and pushed it. Finally we opened pull request #80566 back to the main repo, linked to the original issue.
+
+[2026-08-06T19:56:23.961000+00:00] undifined. (id=1535013694570762280)
+    hy3:free  already told me that google had several non-compliance and broken issues with their implementation of oauth2
+
+[2026-08-06T19:57:05.521000+00:00] undifined. (id=1535013868886036510)
+    it is also one of the few that does not ask for your unborn child to get implemented
+
+[2026-08-06T20:17:49.495000+00:00] waefrebeorn (id=1535019086491287592)
+    yo when you have a old hermes, state db migration is flaky
+    
+    you guys might need to clean install and migrate
+    
+    i am having tons of state.db corruption issues above 600mb if its a mixed old db migrated and a new hermes db
+    
+    this is been my experience
+
+[2026-08-06T20:46:07.471000+00:00] undifined. (id=1535026208318820362)
+    yes, I have had crashed forced re-install over broken sqlite too
+
+[2026-08-06T23:47:54.401000+00:00] drexux (id=1535071955298947163)
+    fix(backup): recognise SQLite stores whose filename isn't .db
+    https://github.com/NousResearch/hermes-agent/pull/80570
+

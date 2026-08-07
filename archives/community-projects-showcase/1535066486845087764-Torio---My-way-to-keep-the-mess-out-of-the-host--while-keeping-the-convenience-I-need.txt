@@ -1,0 +1,35 @@
+# Thread 'Torio - My way to keep the mess out of the host, while keeping the convenience I need' in forum #community-projects-showcase
+# thread_id=1535066486845087764 forum_id=1316137596535177246
+# Started 2026-08-06T23:55:53.939493+00:00
+
+[2026-08-06T23:26:10.620000+00:00] looned. (id=1535066486845087764)
+    I use Hermes daily through Hermes Desktop, and my problem was probably similar to what most of us are facing. I wanted the agent working on my actual repositories, but I did not want an agent process on my laptop with my SSH keys and my whole home directory.
+    
+    So I wrote Torio. It is one Go binary,  that:
+    - creates a Lima VM
+    - installs a pinned Hermes Agent and runs hermes serve as a user systemd unit
+    - keeps a private Markdown second brain, registered as a Hermes project any other can reach
+    - clones selected repositories and registers them. The model sees those and nothing else.
+    
+    The part I actually care about is what it refuses to do:
+    - It holds no credentials.
+    - It opens no tunnel.
+    - The persistent backend has only read access to the checkouts.
+    - Write capability exists only inside torio project shell, which only temporarily forwards my own SSH agent
+    
+    Being straight about the rest of it:
+    It was built with heavy AI assistance.  I did not have time for manual code at that stage. Now, that it is verified and serves me daily, I would love to do more manual work. Perhaps with help of contributors, if it sounds interesting for anyone.
+    
+    It works well for me. This is my daily driver, but it is single maintainer software. macOS on Apple Silicon is what I work on.
+    
+    MCP is partially done and labelled as such. `torio mcp install` provisions the custody boundary, a separate uid with a private credential home and a root-owned policy directory that the agent can read but not write. Nothing carries traffic yet.  I still need to figure out how to keep power of MCP while not sacrificing the rest.
+    
+    Long road ahead. This is where I would currently love to collaborate:
+    - a real MCP broker.
+    - architecture other than mine
+    - backends beyond Hermes. Although it can be controversial on this sub
+    - editors. There is a Neovim panel in the repo, but it is far from being usable
+    
+    Code and better explanation: https://github.com/wzslr321/torio
+    [embed] GitHub - wzslr321/torio: Run an AI second brain and your repositori... https://github.com/wzslr321/torio
+

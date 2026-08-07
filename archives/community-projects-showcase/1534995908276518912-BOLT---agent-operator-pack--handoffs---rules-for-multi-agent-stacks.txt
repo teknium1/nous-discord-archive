@@ -1,0 +1,24 @@
+# Thread 'BOLT — agent operator pack (handoffs + rules for multi-agent stacks)' in forum #community-projects-showcase
+# thread_id=1534995908276518912 forum_id=1316137596535177246
+# Started 2026-08-06T23:55:55.569796+00:00
+
+[2026-08-06T18:45:43.378000+00:00] gatsvghost (id=1534995908276518912)
+    Built for people running agents hard (Claude Code, Cursor, multi-agent setups) — including stacks like Hermes.
+    
+    Problem: every session restarts your whole world. Projects, constraints, “what’s next” — explained again from zero.
+    
+    BOLT is a file-based operator system:
+    
+    • standing rules (calm, leverage-first, ADHD-aware)
+    • handoff protocol — done / exact next / blocker
+    • memory policy that stores reasoning, not junk
+    • skills + playbooks (session start, daily ops, multi-agent routing)
+    
+    ~15 min install. Not a prompt dump.
+    
+    Founding $77 → https://gatsv.gumroad.com/l/bolt_pro
+    
+    Free tip if you skip the pack: end every agent session with a 5-line handoff a cold session can execute.
+    [attachment] 2.png https://cdn.discordapp.com/attachments/1534995908276518912/1534995908641689880/2.png?ex=6a7627d7&is=6a74d657&hm=69d203589f0dd40bbc3023b9e77251e966a065f904094ba22f072f88c9759185&
+    [embed] BOLT — Agent Operator Pack https://gatsv.gumroad.com/l/bolt_pro
+

@@ -108,3 +108,13 @@
 [2026-08-06T11:07:46.402000+00:00] unktneemo (id=1534880661486440570)
     mine is already over
 
+[2026-08-06T19:43:49.159000+00:00] gluedmosquito (id=1535010528701710520)
+    i made a little test on windows i'll share it in a few min
+    [reply to unktneemo msg=1534880661486440570]
+
+[2026-08-06T20:05:54.329000+00:00] gluedmosquito (id=1535016086867677234)
+    this one is one shotted and no thought about architecture or anything but it works like intended, i tried it on the calculator app to show me how to do 2+2 
+    
+    https://github.com/slapash/windows-screen-hint
+    [embed] GitHub - slapash/windows-screen-hint: Temporary click-through Windo... https://github.com/slapash/windows-screen-hint
+

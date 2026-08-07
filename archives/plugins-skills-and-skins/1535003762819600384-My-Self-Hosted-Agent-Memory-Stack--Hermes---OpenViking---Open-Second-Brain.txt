@@ -1,0 +1,29 @@
+# Thread 'My Self-Hosted Agent Memory Stack (Hermes × OpenViking × Open Second Brain)' in forum #plugins-skills-and-skins
+# thread_id=1535003762819600384 forum_id=1485392832154832906
+# Started 2026-08-07T00:02:43.688514+00:00
+
+[2026-08-06T19:16:56.047000+00:00] the_rade. (id=1535003762819600384)
+    So, OpenViking is a bitch to set up, but it's worth it. Also - some pitfalls are very non-obvious, so read on if you're interested. 
+    
+    I run Hermes Agent with OpenViking as the single memory.provider (Hermes allows only one provider at a time). OV is self-hosted in a rootless Podman container (AGPL) and does two jobs: a hierarchical memory store (L0 abstract / L1 overview / L2 full) and a knowledge base where I ingested my whole session history as searchable resources.
+    
+    All inference is local on one GPU (4060Ti 16GB) via three separate llama-server containers: 
+    - Qwen3-Embedding-0.6B (dim 1024) for embed, 
+    - BGE-reranker-v2-m3 for rerank, 
+    - Qwen3-VL-4B for the VLM that builds abstracts. 
+    No Ollama for this plane since it can't serve a real reranker.
+    
+    Two non-obvious bits:
+    
+    - Qwen3-Embedding is instruction-tuned, so a thin embed proxy applies the query vs document instruct prefix (OV only forwards query_param/document_param as extra_body, never rewrites input). Without it retrieval is mushy and fails silently.
+    - llama-server halves the context you request for embedding models, so set it double or chunks silently drop from vector search.
+    - Open Second Brain runs as a tandem, not a second provider: over MCP (brain_* tools) plus a nightly dream cron curating a vault Brain. Two separate stores; OV for retrieval memory, O2B for curated prefs/rules.
+    
+    Pitfalls we hit: 
+    - Agent Evolution defaults OFF, so commits silently discard extracted memories (6 of 7 sessions landed empty) until server.agent_evolution.enabled=true. Long agentic sessions overflow the extractor (whole archive + tool outputs in one VLM prompt) — fixed by windowed re-extraction and ingesting history as resources. Upstream: volcengine/OpenViking#3226, #3595 (PR), #3640.
+    
+    Net: real long-term memory + full history search, all on-machine, GPU/electricity cost only.
+    
+    Full details in the file attached.
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1535003762819600384/1535003762983174286/message.txt?ex=6a762f28&is=6a74dda8&hm=36b0e42be18c8371ba5bd5e093e15bd8c866f87f7ef68bb8e1eda7bde74f0d86&
+

@@ -1,0 +1,8 @@
+# Thread 'Uncencred model in hermes' in forum #community-projects-showcase
+# thread_id=1534998058809688136 forum_id=1316137596535177246
+# Started 2026-08-06T23:55:55.093754+00:00
+
+[2026-08-06T18:54:16.105000+00:00] kizo0027 (id=1534998058809688136)
+    Dadgpt is the claude jailbreak model its morepowerful as opus 4.5 and can do crazy things try it out in hermes https://dadgpt.live
+    [embed] DadGPT - Uncensored AI Chat, Coding Assistant & API https://dadgpt.live/
+

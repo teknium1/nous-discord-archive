@@ -1,0 +1,8 @@
+# Thread 'Hermes RLM - Prime agents in Hermes' in forum #plugins-skills-and-skins
+# thread_id=1535002218338455642 forum_id=1485392832154832906
+# Started 2026-08-07T00:02:44.162374+00:00
+
+[2026-08-06T19:10:47.814000+00:00] marvelousmoondance (id=1535002218338455642)
+    https://github.com/jarnodevries-byte/hermes-rlm A Hermes Agent plugin that ports the useful parts of Prime Agent's RLM model onto Hermes' own tool stack: a persistent Python kernel per session, subagents as function calls (blocking or handle-only), Python-backed skills, crash-surviving checkpoints, and a continual harness that carries lessons across sessions. Stdlib-only, no core patch — it survives every hermes update.
+    [embed] GitHub - jarnodevries-byte/hermes-rlm: RLM Prime Agent for Hermes ... https://github.com/jarnodevries-byte/hermes-rlm
+

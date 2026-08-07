@@ -502,3 +502,12 @@
     same boots, nobody wants to get endorsement
     [reply to spranab msg=1534634546304258153]
 
+[2026-08-06T20:03:07.198000+00:00] the_rade. (id=1535015385869455522)
+    I run Hermes Agent with OpenViking as the main memory.provider and Open Second Brain as a tandem, not a second provider: over MCP (brain_* tools) plus a nightly dream cron curating a vault Brain. 
+    
+    Two separate stores; OV for retrieval memory, O2B for curated prefs/rules. This is because I do a lot of writing in Obsidian, I also plugged hermes directly into it via plugin as a coworker, so it's neat to have it's curated prefs and memories inside the vault (my vault, not that llm-wiki thing). 
+    
+    OpenViking is great, but a bitch to set up **properly**, so I wrote an article of sorts about my setup: https://discord.com/channels/1053877538025386074/1535003762819600384 As I'm on Linux, rootless podman all the way here - OpenViking stack is 5 podman containers on it's own network - OV itself, 3x llama-servers for embedder, reranker and vlm, and a thin **embed proxy** in front of the embed `llama-server` as Qwen3-Embedding is an **instruction-tuned** model and expects a different *task instruction* prepended to queries versus documents. You can find mor details in my post if interested.
+    
+    All in all - very satisfied so far with the large corpus ingested and how it handles retrievals and recalls important info.
+

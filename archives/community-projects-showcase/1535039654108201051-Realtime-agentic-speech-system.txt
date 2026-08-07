@@ -1,0 +1,22 @@
+# Thread 'Realtime agentic speech system' in forum #community-projects-showcase
+# thread_id=1535039654108201051 forum_id=1316137596535177246
+# Started 2026-08-06T23:55:54.581228+00:00
+
+[2026-08-06T21:39:33.197000+00:00] neopabo (id=1535039654108201051)
+    I recently built a realtime speech system which utilizes chatgpt-realtime-2.1 (a state-fo-the-art realtime speech model by openai), and sits as a voice layer on top of hermes.
+    
+    Simple commands for music, timers and such run in real-time with no interruption. Complex requests such as coding or research run in the background on hermes (via the Kanban board). 
+    
+    Some key features:
+    - Lightweight wakeword listener model and process (~250kb in RAM, little to no impact on device performance)
+    - Tray icon process, to easily control the listener or trigger manually
+    - Fast tools are fully extensible - simply request to build a new tool, and a Kanban request for your hermes agent will be generated, to add it to the speech system for you.
+    - True, smooth, realtime voice-to-voice interaction.
+    - Error logging, to easily diagnose and fix problems as they occur.
+    
+    Try it out!
+    
+    https://github.com/H-Ali13381/okay-hermes-realtime
+    [attachment] image.png https://cdn.discordapp.com/attachments/1535039654108201051/1535039654334562334/image.png?ex=6a765095&is=6a74ff15&hm=313800e429c1770bca40e9d0900693ab50cea8563cb4e89e4f47819178a45d8c&
+    [embed] GitHub - H-Ali13381/okay-hermes-realtime: Okay Hermes Realtime: loc... https://github.com/H-Ali13381/okay-hermes-realtime
+
