@@ -136,3 +136,26 @@
 [2026-08-08T12:39:01.791000+00:00] unktneemo (id=1535628402663489606)
     so we can branch it for windows, linux and master(both)
 
+[2026-08-08T12:45:25.062000+00:00] unktneemo (id=1535630010218450984)
+    did some changes here, worked
+    [attachment] 50487843-FECA-4F3D-AE4E-99F439A0CB6C.png https://cdn.discordapp.com/attachments/1534181982639100047/1535630009920921660/50487843-FECA-4F3D-AE4E-99F439A0CB6C.png?ex=6a787664&is=6a7724e4&hm=a2ffe807166ce3ace196acdb32ed8f4ee11e2ec33e3b541d5f7cb605fd530e1d&
+
+[2026-08-08T12:46:04.065000+00:00] unktneemo (id=1535630173809147944)
+    i made it find dynamically the layout and buttons related
+
+[2026-08-08T12:46:18.381000+00:00] unktneemo (id=1535630233854681191)
+    i think yours was based on the new calcualtor
+
+[2026-08-08T12:56:25.887000+00:00] unktneemo (id=1535632781919522916)
+    maybe we can reuse the claude harness that is the literal computer use from hermes?
+
+[2026-08-08T12:56:43.598000+00:00] unktneemo (id=1535632856204976218)
+    idk if its only the cursor, selections on design
+
+[2026-08-08T13:50:35.182000+00:00] unktneemo (id=1535646410450407556)
+    https://github.com/slapash/windows-screen-hint/pull/1
+    [embed] feat: add 'steps' subcommand for simultaneous multi-rect guidance b... https://github.com/slapash/windows-screen-hint/pull/1
+
+[2026-08-08T15:14:00.245000+00:00] unktneemo (id=1535667403206164593)
+    [attachment] C__Users_tneemo_professor_demo_curto.mp4 https://cdn.discordapp.com/attachments/1534181982639100047/1535667403290185768/C__Users_tneemo_professor_demo_curto.mp4?ex=6a789938&is=6a7747b8&hm=8e973b752512f64a94f481ef345319ebbea672889a0606c18caa2f2852615e1f&
+

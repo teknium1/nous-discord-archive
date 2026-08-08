@@ -546,3 +546,12 @@
     also looks nice https://docs.deeptutor.info/explore/memory/
     [embed] Memory https://docs.deeptutor.info/explore/memory/
 
+[2026-08-08T16:40:35.267000+00:00] ddhrs_43057 (id=1535689192707858503)
+    Hi! I found a small Hermes integration issue while investigating unreliable Brain persistence. brain_pre_compact_extract expects turn_start and turn_end as strings, but the provider sends integers, which strict MCP validation rejects with -32602.
+    
+    I submitted a minimal fix with regression tests:
+    https://github.com/itechmeat/open-second-brain/pull/158
+    
+    The PR is intentionally limited to this schema mismatch.
+    [embed] fix(hermes): conform pre-compact turn bounds to schema by GMDD59 ·... https://github.com/itechmeat/open-second-brain/pull/158
+

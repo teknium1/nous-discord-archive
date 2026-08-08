@@ -28,3 +28,14 @@
     Feedback welcome, especially from multi-machine A2A folks. Curious what breaks.
     [embed] GitHub - pstayets/hermes-pilot-bridge: Run Hermes A2A between machi... https://github.com/pstayets/hermes-pilot-bridge
 
+[2026-08-08T18:15:14.616000+00:00] philip010291 (id=1535713013624082652)
+    <@420597780524957696> you reported A2A progress tracking breaking on long tasks a week back, I picked it up from there (#78007, fixes in #78357/#79721) and it also got me building the bridge above.
+    
+    It solves the other half of your setup: your machines run A2A with no exposed ports, no VPN, both ends stay on 127.0.0.1.
+    
+    pls try it between two of your machines and tell me what breaks. 5 min setup, README has everything.
+
+[2026-08-08T18:31:35.879000+00:00] delus_ (id=1535717129339281448)
+    Your solution is to use your product Pilot Protocol as relay service instead of VPN right? I think I am okay with my current Tailscale
+    [reply to philip010291 msg=1535713013624082652]
+

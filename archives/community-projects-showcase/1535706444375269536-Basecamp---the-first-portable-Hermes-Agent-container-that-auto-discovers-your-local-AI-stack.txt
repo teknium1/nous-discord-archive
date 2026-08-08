@@ -1,0 +1,47 @@
+# Thread 'Basecamp — the first portable Hermes Agent container that auto-discovers your local AI stack' in forum #community-projects-showcase
+# thread_id=1535706444375269536 forum_id=1316137596535177246
+# Started 2026-08-08T18:33:41.966225+00:00
+
+[2026-08-08T17:49:08.385000+00:00] mooser200010 (id=1535706444375269536)
+    Setting up an agent against a local AI stack is config hell. Point Hermes at
+        TabbyAPI, wire SearXNG for search, connect MCPO, pick a model, pray your keys
+        survive. I've done it enough times to hate it — and once, my own tooling
+        clobbered my Hermes install. So I built the thing I wished existed:
+    
+        **Basecamp — a portable Docker image (Hermes Agent + Ollama) that
+        auto-discovers your entire local AI stack on first boot.**
+    
+        One command:
+        bash
+        docker pull jpanasuk/basecamp:1.0.2
+        docker run -it --rm --network your-ai-network jpanasuk/basecamp:1.0.2
+    
+    
+        What happens next:
+        - Scans your network for Ollama, TabbyAPI, vLLM, LiteLLM, LocalAI,
+          llama.cpp, SearXNG, MCPO, Open WebUI, SillyTavern
+        - Connects Hermes to the best brain it finds (picks Ollama for the 64K
+          context Hermes needs; offers TabbyAPI/vLLM interactively)
+        - Generates a tavern CLI toolkit for the whole stack
+        - Finds nothing? Falls back to its own bundled Ollama. Never stuck.
+    
+        The part I care most about — it cannot damage your Hermes install:
+        - Config is env-scoped + a named provider, written only inside its own
+          container home. Never touches your host's config.yaml or .env.
+        - No secrets baked into the image. Keys entered at the connect screen,
+          saved chmod 600 inside the volume.
+    
+        Tested the gauntlet way: pulled it fresh as a stranger, threw it at a live
+        6-service stack, found and fixed 5 real bugs. It works — verified with real
+        chats through the stack and its own fallback.
+    
+        Built on the Hermes team's excellent work — runs the official installer,
+        ships all 71 bundled skills, stays out of your way.
+    
+        Details in the README.
+        - Image: hub.docker.com/r/jpanasuk/basecamp
+        - Source + docs: huggingface.co/jpanasuk/basecamp
+        - Landing: huggingface.co/spaces/jpanasuk/basecamp-landing
+    
+        Feedback welcome — especially from people with bigger stacks than mine.
+

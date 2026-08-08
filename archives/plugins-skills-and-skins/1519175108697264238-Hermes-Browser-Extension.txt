@@ -884,3 +884,38 @@
 [2026-08-08T10:57:26.060000+00:00] mindcraft3r (id=1535602835314712667)
     So that Hermes can do things in the local browser from the extension
 
+[2026-08-08T17:12:44.573000+00:00] jonkomet (id=1535697284803600415)
+    much more full customization options on the way, then browser control stuff rolling out in phases and some more compatibility for cloud and remote users, so they can browser control too , cant wait for people to try this out
+    [reply to phospheneoverdrive msg=1535411070443978833]
+
+[2026-08-08T17:13:37.195000+00:00] phospheneoverdrive (id=1535697505516396644)
+    & `/steer` as well? 😛
+
+[2026-08-08T17:13:42.173000+00:00] jonkomet (id=1535697526395764867)
+    Yes, that is apart of a PR i just submitted last night, i am working on that mapped connection to device from remote, vps, and cloud
+    [reply to mindcraft3r msg=1535602553251692544]
+
+[2026-08-08T17:14:26.540000+00:00] jonkomet (id=1535697712484319232)
+    steer is already there, but sometimes it goes through as a fallback, I will figure this out as well.. I notice it works great on my cloud connection in the browser extension.. but on my local it just vanishes sometimes
+    [reply to phospheneoverdrive msg=1535697505516396644]
+
+[2026-08-08T17:14:56.173000+00:00] jonkomet (id=1535697836774137966)
+    I'll get this out first before the next version as well
+    [reply to phospheneoverdrive msg=1535697505516396644]
+
+[2026-08-08T17:16:22.790000+00:00] phospheneoverdrive (id=1535698200072036372)
+    I just never see it listed in the available slash commands thus my confusion I guess 😄
+
+[2026-08-08T17:22:03.744000+00:00] jonkomet (id=1535699630136762540)
+    yeah , i never added it as a slash command tbh.. i only did a button and send implemention... i will add the slash command
+    [reply to phospheneoverdrive msg=1535698200072036372]
+
+[2026-08-08T17:22:51.969000+00:00] jonkomet (id=1535699832407199764)
+    For this one, you guys can also add any font you want from google fonts or from on your computer
+    [reply to jonkomet msg=1535366063905185943]
+
+[2026-08-08T18:39:12.761000+00:00] jonkomet (id=1535719045641412629)
+    https://github.com/abundantbeing/hermes-browser-extension/commit/64df7b14cdd03fed956714c98960fa00a181b748
+    [attachment] HBE_-_Theme_Marketplace__Agent_Theme_Studio_Fix_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1535719046056779888/HBE_-_Theme_Marketplace__Agent_Theme_Studio_Fix_Update_AD.png?ex=6a78c950&is=6a7777d0&hm=1f9e8136e154d2f90dd14d17854a9f132a78adbd23749d02b253967596a42347&
+    [embed] feat: VS Code theme marketplace with Agent Theme Studio · abundant... https://github.com/abundantbeing/hermes-browser-extension/commit/64df7b14cdd03fed956714c98960fa00a181b748
+

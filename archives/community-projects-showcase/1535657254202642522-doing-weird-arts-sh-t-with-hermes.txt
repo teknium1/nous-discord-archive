@@ -1,0 +1,15 @@
+# Thread 'doing weird arts sh*t with hermes' in forum #community-projects-showcase
+# thread_id=1535657254202642522 forum_id=1316137596535177246
+# Started 2026-08-08T18:33:42.777318+00:00
+
+[2026-08-08T14:33:40.534000+00:00] prismatic7. (id=1535657254202642522)
+    hey gang, long time lurker first time poster. i'm currently using hermes for some weirdly specific research into machine collaboration for live performance/practice as research that are coming together at https://github.com/orgs/techne-tools/repositories. my interests are  in emergent agent behaviour and human interaction through performance, so the key projects in the org are the Research Trajectory Designer which helps build a research project through established PaR frameworks (Haseman, Smith&Dean, Bolt, Bergdorff etc) and a weird inflection of https://github.com/amazinglvxw/enso-os 's "Proactive Accountability Challenge" at https://github.com/techne-tools/pac - this is really tuned towards yelling at me to stop getting on the beers and actually do my research work. 
+    
+    Anyway. Thought this might inject some non-crypto-bro anti-dev energy into the space, because I'm an artist who literally does not know what the f**k i'm doing.
+    
+    Big love
+    yer man p7
+    [embed] techne-tools https://github.com/orgs/techne-tools/repositories
+    [embed] GitHub - amazinglvxw/enso-os: The first AI plugin that speaks first... https://github.com/amazinglvxw/enso-os
+    [embed] GitHub - techne-tools/pac: Proactive Accountability Challenge for H... https://github.com/techne-tools/pac
+
