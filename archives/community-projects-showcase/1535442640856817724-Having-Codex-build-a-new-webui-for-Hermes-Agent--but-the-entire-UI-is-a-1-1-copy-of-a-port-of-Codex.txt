@@ -1,0 +1,15 @@
+# Thread 'Having Codex build a new webui for Hermes Agent, but the entire UI is a 1:1 copy of a port of Codex' in forum #community-projects-showcase
+# thread_id=1535442640856817724 forum_id=1316137596535177246
+# Started 2026-08-08T01:21:39.884528+00:00
+
+[2026-08-08T00:20:52.725000+00:00] crescenzo_ (id=1535442640856817724)
+    So I'm working on a project in codex where I'm having it create a new web UI for the Hermes Agent that mimics the look and feel of Codex Desktop. I've been using an electron port of codex desktop for a few months now on my Framework laptop running Ubuntu Desktop 26.04, and it led me to think, what if I made a web ui of the codex desktop app while still keeping the full console options available for Hermes Agent. It runs right alongside the stock dashboard on my network so I won't need an extra login or have to mess around with existing setups.
+    
+    It'll use the three main sections like codex and I tried to keep the chat area as clean as possible so on the left there's a collapsible sidebar for threads and workspaces, the middle is for the actual transcript, and then on the right there's an optional panel where you can check tool activity and file diffs if you need to. Instead of raw text cluttering up the screen, tool operations show up in collapsible cards and file edits render as reviewable diffs, plus there's a sandboxed terminal tucked into a bottom panel. I'm thinking about doing like the Hermes Agent webui and integrate use of customized fonts and sizes across the board too, and light or dark themes that can both work.
+    
+    For security I made sure this codex desktop web ui clone runs under its own profile with separate memory and settings so it won't touch my default agent data and any file writes are locked down to a dedicated sandbox folder. It hooks into my local model inventory to grab choices dynamically, or pull from openrouter.ai.
+    
+    I also built it so the workbench code stays separate from the main Hermes engine updates and that way updating the backend won't blow away any UI changes. If an update breaks a specific component adapter down the road, I'm trying to get it to gracefully disable just that single control and show a warning instead of crashing everything, so the chat and read-only screens stay totally usable. Right now I'm just running through a test plan to double check the network rules and sandbox limits before calling it done.
+    
+    Tell me I'm not crazy, and that someone else has tried doing the same?
+

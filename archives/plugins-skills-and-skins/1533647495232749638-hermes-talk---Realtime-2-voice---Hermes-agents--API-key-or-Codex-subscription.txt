@@ -51,3 +51,6 @@
 [2026-08-07T18:03:07.196000+00:00] tunacookie (id=1535347574737870931)
     This is awesome
 
+[2026-08-07T19:28:41.771000+00:00] drahcir_rahl (id=1535369110706200636)
+    Very nice, I have something similar built using AMD NPU drivers.
+

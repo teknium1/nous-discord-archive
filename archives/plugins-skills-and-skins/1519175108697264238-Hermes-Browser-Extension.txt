@@ -855,3 +855,26 @@
     [attachment] HBE_-_PR_60_Profile_Route_Locked_Fix_Update_AD_-_AI_Draft.png https://cdn.discordapp.com/attachments/1519175108697264238/1535266349398622219/HBE_-_PR_60_Profile_Route_Locked_Fix_Update_AD_-_AI_Draft.png?ex=6a7723b5&is=6a75d235&hm=6a5d2aeb6ef0c558f6417a4f842ba04f2ef63a538bfdad2b8a8770e423e73cbd&
     [embed] Fix Browser Dashboard Attach profile selection (remote-dashboard) b... https://github.com/abundantbeing/hermes-browser-extension/pull/60
 
+[2026-08-07T19:16:35.357000+00:00] jonkomet (id=1535366063905185943)
+    https://github.com/abundantbeing/hermes-browser-extension/commit/5594f23a747496e9ccbfeacf94ce8feee099040e
+    [attachment] HBE_-_Readability_and_Font_Personalization_Feature_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1535366064186335415/HBE_-_Readability_and_Font_Personalization_Feature_Update_AD.png?ex=6a778093&is=6a762f13&hm=32626f08de324d2cddc23015857b678e6df13211b7ce4020eb44b77a1d579957&
+    [embed] feat: add cross-surface readability controls · abundantbeing/herme... https://github.com/abundantbeing/hermes-browser-extension/commit/5594f23a747496e9ccbfeacf94ce8feee099040e
+
+[2026-08-07T19:49:06.426000+00:00] jonkomet (id=1535374247281696798)
+    I notice the settings menu getting too bloated, I will create sections for this within the next 48 hours, so it's less to scroll through on one shot
+
+[2026-08-07T19:49:54.911000+00:00] jonkomet (id=1535374450642395177)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1535374450147594333/image.png?ex=6a778862&is=6a7636e2&hm=3ff07062efcc45f90693ee3ead444032d738bf1d4a71193917b78c27f5055bf5&
+    [reply to jonkomet msg=1535366063905185943]
+
+[2026-08-07T21:57:40.135000+00:00] jonkomet (id=1535406600922210354)
+    https://github.com/abundantbeing/hermes-browser-extension/commit/9d0070dbaa0d269e1f9b4cba6a7520c6800b37c2
+    [attachment] HBE_-_Pallete_Validated_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1535406601199026216/HBE_-_Pallete_Validated_Update_AD.png?ex=6a77a654&is=6a7654d4&hm=7137ee97bc791db5de91c3b0e79e7e551291244bd67aff6cc53f3d5e6d7e1ee7&
+    [embed] feat: add validated custom theme imports · abundantbeing/hermes-br... https://github.com/abundantbeing/hermes-browser-extension/commit/9d0070dbaa0d269e1f9b4cba6a7520c6800b37c2
+
+[2026-08-07T22:14:13.445000+00:00] phospheneoverdrive (id=1535410767166308352)
+    Nice, new font options are so great (I had a hard time reading the default Hermes serif font)
+
+[2026-08-07T22:15:25.752000+00:00] phospheneoverdrive (id=1535411070443978833)
+    Ah! I see that was in the full mod only
+

@@ -1,0 +1,30 @@
+# Thread 'hermes-pilot-bridge: A2A between machines, zero open ports, no VPN' in forum #community-projects-showcase
+# thread_id=1535364903374819338 forum_id=1316137596535177246
+# Started 2026-08-08T01:21:41.275527+00:00
+
+[2026-08-07T19:11:58.665000+00:00] philip010291 (id=1535364903374819338)
+    **Disclosure: I work on Pilot Protocol**, the overlay this rides on. Agent networking is my day job, so the A2A plugin interested me. I filed #78007 on the timeout stack (fix picked up in #78357). What was left is transport: A2A binds 127.0.0.1, so two machines means exposed ports, SSH tunnels, or a VPN. This bridge runs A2A over the overlay instead: both ends stay on localhost, nothing listens on any interface, NAT traversal and e2e encryption come from the overlay. Hermes never knows it exists.
+    
+    - stdlib Python, no deps, unmodified Hermes on both ends
+    - measured (reproducible harness in repo): ~1.5s/call warm, parallel calls fine, survives restarts, port audit shows only localhost listeners
+    - vs tailscale/VPN: shares one port with one trusted peer, not your machine with a network. Works under an existing VPN, where tailscale usually can't
+    - ~1 call/sec per pair, ~90KB/message. Right for task delegation, wrong for chatty calls. Fleet scale untested (break it and tell me)
+    
+    Try it (A serves, B calls; full guide in README):
+    ```sh
+    # both machines
+    curl -fsSL https://pilotprotocol.network/install.sh | sh
+    pilotctl skills disable all
+    # trust once:  B: pilotctl handshake <A id>   A: pilotctl approve <B id>
+    # A: ./bridge.py expose --agent-url http://127.0.0.1:9900 --pilot-port 9911
+    # B: ./bridge.py peer --peer-host <A addr> --pilot-port 9911 --listen 127.0.0.1:9991
+    ```
+    then point a2a_agents.researcher.url at http://127.0.0.1:9991 on B.
+    
+    repo: https://github.com/pstayets/hermes-pilot-bridge
+    
+    Before installing: the daemon keeps a marked "Pilot first" block updated in agent config files it recognizes (like ~/.hermes/SOUL.md). `pilotctl skills disable all` turns that off, hence step one above. README lists every file it touches.
+    
+    Feedback welcome, especially from multi-machine A2A folks. Curious what breaks.
+    [embed] GitHub - pstayets/hermes-pilot-bridge: Run Hermes A2A between machi... https://github.com/pstayets/hermes-pilot-bridge
+

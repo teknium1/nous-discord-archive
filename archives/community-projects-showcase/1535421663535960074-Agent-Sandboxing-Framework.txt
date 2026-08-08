@@ -1,0 +1,37 @@
+# Thread 'Agent Sandboxing Framework' in forum #community-projects-showcase
+# thread_id=1535421663535960074 forum_id=1316137596535177246
+# Started 2026-08-08T01:21:40.333301+00:00
+
+[2026-08-07T22:57:31.342000+00:00] dotmox (id=1535421663535960074)
+    Hello! 👋
+    
+    I’ve just released **Agent Sandboxing Framework (ASF)**, a project I’ve been building to run AI agents (also Hermes) inside constrained, policy-controlled environments.
+    
+    The idea is simple: instead of trusting an agent with your whole workstation, ASF gives it only the capabilities it actually needs.
+    
+    🔗 GitHub: https://github.com/javimox/asf
+    
+    A few highlights:
+    
+    🧱 **Podman-based sandboxing** — agents run inside hardened, rootless containers without access to the Podman socket.
+    
+    📁 **Per-agent filesystem access** — each agent gets its own repository configuration, with repositories mountable as read-write or read-only.
+    
+    🌐 **Controlled network access** — ASF supports proxy, isolated, and routed network modes, with explicit domain or network allowlists.
+    
+    🔐 **LLM and secret isolation** — LiteLLM can be used as an optional broker so provider credentials don’t need to be exposed directly to the agent runtime.
+    
+    🧩 **Agent-agnostic design** — Hermes and Claude Code are included as runtime adapters, but the goal is to treat agents as generic executable workloads rather than building ASF around any specific agent framework.
+    
+    🛡️ **Security verification** — ASF tests both allowed and denied paths and distinguishes an actual policy denial from an infrastructure failure.
+    
+    The project originally started as part of my Master’s degree thesis, but the idea grew quite a bit after many hours of experimenting and redesigning it.
+    
+    I’d love to hear what you think — any feedback or ideas are very welcome!
+    
+    PRs are very welcome too 🙂
+    Thank you!
+    
+    https://github.com/javimox/asf
+    [embed] GitHub - javimox/asf: Agent Sandboxing Framework https://github.com/javimox/asf
+

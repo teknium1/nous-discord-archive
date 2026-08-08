@@ -1,0 +1,8 @@
+# Thread 'Hermes menu-bar status indicator (native macOS)' in forum #plugins-skills-and-skins
+# thread_id=1535406330922139648 forum_id=1485392832154832906
+# Started 2026-08-08T01:28:03.361905+00:00
+
+[2026-08-07T21:56:35.762000+00:00] nicodemus1237 (id=1535406330922139648)
+    A small ⚕ in the menu bar: gray when idle, green when Hermes is working, orange when memory pressure is critical. A pressure dot (🟡 warning / 🔴 critical) appears whenever memory pressure isn't green. Click for RAM %, swap, CPU %, and the active session name. Native Swift NSStatusItem (not rumps — those fail to compile on macOS 26); a Python poller reads memory_pressure + live agent-process CPU. Install: hermes skills install https://raw.githubusercontent.com/ncline-ui/hermes-statusbar/main/SKILL.md Source: ncline-ui/hermes-statusbar · GitHub (MIT)
+    [attachment] Screenshot_2026-08-07_at_4.40.20_PM-clean.png https://cdn.discordapp.com/attachments/1535406330922139648/1535406331052294226/Screenshot_2026-08-07_at_4.40.20_PM-clean.png?ex=6a77a613&is=6a765493&hm=49f1bb13e7bc1b9756f4a147ee38dcf2997a08e24df0921e285c95fbf42bf881&
+

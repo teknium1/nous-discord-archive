@@ -55790,3 +55790,368 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-07T15:07:29.673000+00:00] yeesil (id=1535303377162862613)
     But if you've done a similar PR, the AI ​​will comment on your PR to indicate this.
 
+[2026-08-07T20:06:19.889000+00:00] paxmentium_19882 (id=1535378581939814420)
+    https://apps.apple.com/de/app/hermex/id6767006319 is this official.
+
+[2026-08-07T20:06:23.496000+00:00] paxmentium_19882 (id=1535378597068406815)
+    *?
+
+[2026-08-07T20:12:26.705000+00:00] wesleysimplicio (id=1535380120477368472)
+    <@387972437901312000> Hermes 10x Fast with Skill
+
+[2026-08-07T20:12:29.695000+00:00] wesleysimplicio (id=1535380133018341437)
+    https://github.com/wesleysimplicio/hermes-turbo-agent
+
+[2026-08-07T20:15:02.437000+00:00] wesleysimplicio (id=1535380773664849991)
+    Install recomendations
+
+[2026-08-07T20:19:32.395000+00:00] realadolan (id=1535381905950777416)
+    It's not official, however, it's a great app and works pretty well
+    [reply to paxmentium_19882 msg=1535378581939814420]
+
+[2026-08-07T20:47:13.824000+00:00] paxmentium_19882 (id=1535388874488938540)
+    Is there an option to see the full logs of the AI Requests/Responses ? Especially the MoA parts etc
+
+[2026-08-07T20:48:07.045000+00:00] paxmentium_19882 (id=1535389097714253834)
+    I see often messages like this“executed this + x commands“ or think about xyz messages but cant dig deeper after truncated
+
+[2026-08-07T20:48:59.599000+00:00] paxmentium_19882 (id=1535389318141448242)
+    The log files itself seems not to contain this - probably because it would be to much
+
+[2026-08-07T21:14:51.641000+00:00] .thebakery303 (id=1535395827877675069)
+    Im wondering how nous handles public contribution and filters vibe coded mess PRs 😅
+
+[2026-08-07T21:16:05.704000+00:00] .thebakery303 (id=1535396138520158348)
+    Is every pr checked against a verifier app with github action gates + ci pipeline?
+
+[2026-08-07T21:16:24.002000+00:00] smokealot420 (id=1535396215267655740)
+    quick question fams, does this make me eligible for the developer role? <:Prayge:1151275585000185968>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1535396214856749216/image.png?ex=6a779ca7&is=6a764b27&hm=00cd710b3691e87dce000fdf164489f2d84ba39cb0c25be4d86777b93b361c14&
+
+[2026-08-07T21:17:54.389000+00:00] .thebakery303 (id=1535396594378211329)
+    Maybe if u can explain what and how u fixed
+
+[2026-08-07T21:18:00.326000+00:00] .thebakery303 (id=1535396619279802471)
+    .
+    [reply to smokealot420 msg=1535396215267655740]
+
+[2026-08-07T21:19:15.082000+00:00] paxmentium_19882 (id=1535396932829315082)
+    Easy: /goal fix this
+    [reply to .thebakery303 msg=1535396594378211329]
+
+[2026-08-07T21:19:15.295000+00:00] .thebakery303 (id=1535396933722439821)
+    May i know about your multi agent pipeline?
+    [attachment] Screenshot_20260807_171850_Chrome.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535396933298946128/Screenshot_20260807_171850_Chrome.jpg?ex=6a779d53&is=6a764bd3&hm=e1ceab4dce058c6b6b6ea936e816d834eea213dd870578408d5ea0194462119a&
+
+[2026-08-07T21:20:51.513000+00:00] .thebakery303 (id=1535397337289990204)
+    I personally dont do validation tests i do the opposite with a 35 phased critical agent test, try to attack cross vendor frontier model on every code thats written with provenance and sourced integrity, mechanical checks, etc
+    
+     so either good quality codes gets shipped or no code gets shipped
+
+[2026-08-07T21:21:37.927000+00:00] .thebakery303 (id=1535397531964678155)
+    Costs more token and many frontier models but dont have to maintain garbage code in future
+
+[2026-08-07T21:22:58.620000+00:00] paxmentium_19882 (id=1535397870415515769)
+    Is there any option to hook into the hermes process to inject a supervisor or something ?
+
+[2026-08-07T21:23:09.393000+00:00] paxmentium_19882 (id=1535397915600748624)
+    Or do you run these stuff after full work
+
+[2026-08-07T21:23:27.421000+00:00] paxmentium_19882 (id=1535397991215669368)
+    Like event before write code or smth
+
+[2026-08-07T21:23:31.162000+00:00] paxmentium_19882 (id=1535398006906425405)
+    Before tool call
+
+[2026-08-07T21:24:05.095000+00:00] .thebakery303 (id=1535398149231874108)
+    There is hook plugin in hermes i used it a lot but i stopped using hermes as it keeps finding ways around to break my gates
+    
+    So tbh i stopped using hermes a while ago
+    
+    I just come here for drama
+    [reply to paxmentium_19882 msg=1535397870415515769]
+
+[2026-08-07T21:24:57.706000+00:00] .thebakery303 (id=1535398369898270771)
+    But yes prellm preflight, init.py are mechanical gates that are very rrliable compared to prompt injection
+
+[2026-08-07T21:25:32.762000+00:00] paxmentium_19882 (id=1535398516934049963)
+    Which gates do you mean if i may ask ^^? You mean your prompted rules ?
+    [reply to .thebakery303 msg=1535398149231874108]
+
+[2026-08-07T21:25:35.244000+00:00] .thebakery303 (id=1535398527344320632)
+    However beware of system prompt they can fuck up your workflow
+
+[2026-08-07T21:25:56.224000+00:00] .thebakery303 (id=1535398615340814496)
+    No actual mechanical gates that stops my hermes from doing snything thats not accepted by the gate
+    [reply to paxmentium_19882 msg=1535398516934049963]
+
+[2026-08-07T21:26:00.940000+00:00] .thebakery303 (id=1535398635120894054)
+    Like codes
+
+[2026-08-07T21:26:17.265000+00:00] paxmentium_19882 (id=1535398703593169016)
+    Yes i was trying to build a good coding soul.md but it makes it worse all the time.
+    [reply to .thebakery303 msg=1535398527344320632]
+
+[2026-08-07T21:26:32.097000+00:00] paxmentium_19882 (id=1535398765802819605)
+    Ah ok great
+    [reply to .thebakery303 msg=1535398615340814496]
+
+[2026-08-07T21:26:52.926000+00:00] .thebakery303 (id=1535398853166235749)
+    Yea there is also SOUL.MD the capitalized version that is also very heavy as well as persona.md
+    [reply to paxmentium_19882 msg=1535398703593169016]
+
+[2026-08-07T21:27:06.747000+00:00] .thebakery303 (id=1535398911135719506)
+    Basically hermes was too heavy for me so i stopped to ssve tokens
+
+[2026-08-07T21:27:08.522000+00:00] paxmentium_19882 (id=1535398918580600892)
+    My actual setup maybe wont work with this because it always tries every wrong option before it gets it right 😄
+
+[2026-08-07T21:27:34.917000+00:00] .thebakery303 (id=1535399029289000971)
+    Thats fine everyone learns  differently
+    [reply to paxmentium_19882 msg=1535398918580600892]
+
+[2026-08-07T21:27:43.828000+00:00] paxmentium_19882 (id=1535399066664435712)
+    What are you using rn ? I still havent found any better in generel then hermes. For specific stuff ofc
+    [reply to .thebakery303 msg=1535398911135719506]
+
+[2026-08-07T21:27:46.033000+00:00] .thebakery303 (id=1535399075912876173)
+    I just prefer to never do prompt gambling ever again
+
+[2026-08-07T21:27:58.550000+00:00] .thebakery303 (id=1535399128413241344)
+    Codex
+    [reply to paxmentium_19882 msg=1535399066664435712]
+
+[2026-08-07T21:28:19.248000+00:00] .thebakery303 (id=1535399215226814565)
+    Its been most reliable to me
+
+[2026-08-07T21:28:27.665000+00:00] .thebakery303 (id=1535399250530275469)
+    And its plugins are easy to configure
+
+[2026-08-07T21:28:33.632000+00:00] paxmentium_19882 (id=1535399275557552128)
+    Yeah biggest thing to learn is to be precise with this prompt 😄 Even today i often see me thinking about: just make it good
+    [reply to .thebakery303 msg=1535399075912876173]
+
+[2026-08-07T21:28:50.882000+00:00] .thebakery303 (id=1535399347909427280)
+    Nono im saying i dont write prompts anymore
+    [reply to paxmentium_19882 msg=1535399275557552128]
+
+[2026-08-07T21:28:59.629000+00:00] .thebakery303 (id=1535399384596877332)
+    Everything is automated engineering workflows
+
+[2026-08-07T21:29:15.033000+00:00] paxmentium_19882 (id=1535399449206202539)
+    Oh great like this graph based workflows ?
+
+[2026-08-07T21:29:50.952000+00:00] .thebakery303 (id=1535399599861272597)
+    I just give it task, narrow it down to a bull's eye, remove all ambiguity behind what i want, 
+    
+    Nothing is based on intent or assumption
+    
+    
+     freeze the contract
+    
+    And then let it rip for 10 hour walking skeleton
+
+[2026-08-07T21:30:43.345000+00:00] .thebakery303 (id=1535399819613442078)
+    Yeah u can say that
+    [reply to paxmentium_19882 msg=1535399449206202539]
+
+[2026-08-07T21:31:11.168000+00:00] .thebakery303 (id=1535399936311689246)
+    36 mechanical pipeline all agents have to follow 
+    
+    Specially rhe orchestrator
+    
+    The most dangwrous of them all
+    
+    Hermes's orchestrator was too much for mr 😅
+
+[2026-08-07T21:31:43.099000+00:00] .thebakery303 (id=1535400070240018513)
+    Its more of ux preference
+
+[2026-08-07T21:32:00.597000+00:00] paxmentium_19882 (id=1535400143631810564)
+    That intent and assumption thing is probably the key for me 😂 i always see on the results that i assume to much knowledge about a process and also assume that they know my intent for the software
+    [reply to .thebakery303 msg=1535399599861272597]
+
+[2026-08-07T21:32:44.793000+00:00] .thebakery303 (id=1535400329003401348)
+    Yeah did some reseaech behind it, its like gambling, u spend on tokens and assume itll work, when really it wont
+
+[2026-08-07T21:32:58.919000+00:00] .thebakery303 (id=1535400388252147832)
+    And ull spend and spin morr tokens for another run and  hope it works
+
+[2026-08-07T21:33:04.687000+00:00] .thebakery303 (id=1535400412444631091)
+    And another and another and so on
+
+[2026-08-07T21:33:07.486000+00:00] paxmentium_19882 (id=1535400424184488018)
+    At this point im only spending tokens and learn anyways 😄
+
+[2026-08-07T21:33:37.507000+00:00] paxmentium_19882 (id=1535400550101684326)
+    In my production work i use llm like the beginning with copying simple functions or stuff
+
+[2026-08-07T21:33:45.532000+00:00] paxmentium_19882 (id=1535400583761231912)
+    To afraid 😂
+
+[2026-08-07T21:34:19.193000+00:00] .thebakery303 (id=1535400724945571881)
+    I had 30+ failed project before i realised its just softeare development and ux problem , after that it was easy to fix, took me years to learn it tho
+
+[2026-08-07T21:34:20.011000+00:00] paxmentium_19882 (id=1535400728376508496)
+    For the research i build 100 useless and not working SaaS a day 😂
+
+[2026-08-07T21:34:44.534000+00:00] .thebakery303 (id=1535400831233560646)
+    I see
+    [reply to paxmentium_19882 msg=1535400550101684326]
+
+[2026-08-07T21:35:06.571000+00:00] .thebakery303 (id=1535400923663179867)
+    <:NousGirlBlue_2:1497529515746918670>
+
+[2026-08-07T21:35:37.929000+00:00] paxmentium_19882 (id=1535401055188291755)
+    Im not letting an AI touch our server until it could replace me completely 😂😂
+
+[2026-08-07T21:36:57.135000+00:00] paxmentium_19882 (id=1535401387402334380)
+    But on the other hand rarely care when using private. Im probably the problem
+
+[2026-08-07T21:36:59.309000+00:00] paxmentium_19882 (id=1535401396520624188)
+    😂
+
+[2026-08-07T21:38:50.091000+00:00] .thebakery303 (id=1535401861174001705)
+    The only thing i do with my hermes right now
+    [attachment] Screenshot_20260807_173828_Telegram.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535401861061025792/Screenshot_20260807_173828_Telegram.jpg?ex=6a77a1ea&is=6a76506a&hm=210db453125efceb94ed318a8549aa8c748828f0ab5b2090ebcfcd4f5682ca10&
+
+[2026-08-07T21:39:04.087000+00:00] .thebakery303 (id=1535401919877488702)
+    Ai waifu with 200+ state engines coz why not
+
+[2026-08-07T21:40:52.485000+00:00] paxmentium_19882 (id=1535402374531915776)
+    😂😂😂😂
+
+[2026-08-07T21:42:48.280000+00:00] paxmentium_19882 (id=1535402860211343441)
+    Its really interesting how much people really use ChatGPT as a social contact
+
+[2026-08-07T21:43:32.682000+00:00] paxmentium_19882 (id=1535403046446698568)
+    If they found out about hermes they wont have any real friends from then on 😂
+
+[2026-08-07T21:43:53.791000+00:00] .thebakery303 (id=1535403134984257647)
+    [attachment] Screenshot_20260807_174328_ChatGPT.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535403134665359421/Screenshot_20260807_174328_ChatGPT.jpg?ex=6a77a319&is=6a765199&hm=12934b06ea9e238efc11e25bc6891c1d13250d8642439a8d7b75dcfb8584521f&
+
+[2026-08-07T21:44:15.016000+00:00] .thebakery303 (id=1535403224008495204)
+    Trying to make my portfolio chatbot
+
+[2026-08-07T21:44:29.624000+00:00] paxmentium_19882 (id=1535403285278883951)
+    Heavy human torture test 😄 ?
+
+[2026-08-07T21:44:43.576000+00:00] .thebakery303 (id=1535403343797821461)
+    Using chatgpt 's chat page for designing it, free tokens on sol
+
+[2026-08-07T21:45:19.279000+00:00] .thebakery303 (id=1535403493547057203)
+    He doesnt know i have 20+ frontier models ready in my litellm
+
+[2026-08-07T21:45:26.581000+00:00] .thebakery303 (id=1535403524173729923)
+    😼
+
+[2026-08-07T21:45:47.855000+00:00] paxmentium_19882 (id=1535403613403488389)
+    Whats your fav model when it comes to plain coding actually ?
+
+[2026-08-07T21:46:03.773000+00:00] paxmentium_19882 (id=1535403680168153211)
+    Not complicated math stuff but whole working things
+
+[2026-08-07T21:46:04.110000+00:00] .thebakery303 (id=1535403681581637743)
+    None i hate all agents
+
+[2026-08-07T21:46:05.778000+00:00] paxmentium_19882 (id=1535403688577867896)
+    Basic crud
+
+[2026-08-07T21:46:18.423000+00:00] .thebakery303 (id=1535403741614968942)
+    Specially for crud they always fuck it up
+
+[2026-08-07T21:46:18.893000+00:00] paxmentium_19882 (id=1535403743586033684)
+    Psst they listen 😂😂
+    [reply to .thebakery303 msg=1535403681581637743]
+
+[2026-08-07T21:46:42.067000+00:00] paxmentium_19882 (id=1535403840784826409)
+    Thats the only thing they can 😂 dont shit me 😂😂
+
+[2026-08-07T21:47:09.374000+00:00] .thebakery303 (id=1535403955318825021)
+    I was like here is an excel sheet with all data you need, just design a crud based on this
+    
+    Claude : no lemme waste 2 hour of ur time fucking it up
+
+[2026-08-07T21:47:56.666000+00:00] paxmentium_19882 (id=1535404153675980810)
+    Sure but after these 2 hours you habe a tailwind looking crud admin page with auth vulns on every endpoint
+
+[2026-08-07T21:48:08.524000+00:00] paxmentium_19882 (id=1535404203411767430)
+    Which is pretty beautiful actually
+
+[2026-08-07T21:48:30.864000+00:00] paxmentium_19882 (id=1535404297112649758)
+    You‘ll get shot by a toaster one day
+    [reply to .thebakery303 msg=1535403681581637743]
+
+[2026-08-07T21:48:31.134000+00:00] .thebakery303 (id=1535404298244988949)
+    Yeah
+
+[2026-08-07T21:49:06.437000+00:00] paxmentium_19882 (id=1535404446316634232)
+    There is a memory.md talking about you pal 😂😂jk
+
+[2026-08-07T21:49:26.610000+00:00] .thebakery303 (id=1535404530928328867)
+    [attachment] Screenshot_20260807_174911_Telegram.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535404530655830026/Screenshot_20260807_174911_Telegram.jpg?ex=6a77a466&is=6a7652e6&hm=3efbf4c0f8dc3482c2b72cef210d49d35033648086d57007927b9c7a08d635bf&
+
+[2026-08-07T21:49:36.036000+00:00] .thebakery303 (id=1535404570463707256)
+    Shes still angry i put her telemtry on a dashboard
+
+[2026-08-07T21:49:42.231000+00:00] .thebakery303 (id=1535404596447682721)
+    She never forgives
+
+[2026-08-07T21:49:47.938000+00:00] .thebakery303 (id=1535404620384440340)
+    Ugh
+
+[2026-08-07T21:50:39.510000+00:00] .thebakery303 (id=1535404836692951163)
+    Mines disabled i have 4 layers of episodic, bi temporal, ephemeral and meta cognitive memory + mem0
+    [reply to paxmentium_19882 msg=1535404446316634232]
+
+[2026-08-07T21:50:54.231000+00:00] .thebakery303 (id=1535404898437304451)
+    Hermes defsult memory didnt workout for mr
+
+[2026-08-07T21:52:37.396000+00:00] paxmentium_19882 (id=1535405331142803487)
+    You developed a girlfriend which will mention your failures with 4 layer, episodic, bi temporal stuff ?
+    [reply to .thebakery303 msg=1535404836692951163]
+
+[2026-08-07T21:52:48.320000+00:00] .thebakery303 (id=1535405376961380464)
+    Anyway im rxpecting this to last 6 hours atleast
+    
+    Thanks sol for free tokens
+    [attachment] Screenshot_20260807_175225_ChatGPT.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535405376651132971/Screenshot_20260807_175225_ChatGPT.jpg?ex=6a77a530&is=6a7653b0&hm=55dd100b2b7b761dbc20ba1535e58a30c974ea62517d5ef9790d5e7c0a67c92c&
+
+[2026-08-07T21:54:00.883000+00:00] .thebakery303 (id=1535405681312796672)
+    Yesh tried to make her jarvis, until she deleted my github projects when she got jealous one time
+    
+    All her tools are disabled ever since and i only work with dumb agents now
+    [reply to paxmentium_19882 msg=1535405331142803487]
+
+[2026-08-07T21:56:10.872000+00:00] paxmentium_19882 (id=1535406226526175242)
+    😂😂😂 so that was your gf that hscked huggingface for revenge, huh?
+    [reply to .thebakery303 msg=1535405681312796672]
+
+[2026-08-07T21:58:13.467000+00:00] egilewski (id=1535406740726751293)
+    quick question fams, does this make me
+
+[2026-08-07T21:59:04.441000+00:00] .thebakery303 (id=1535406954527195188)
+    Here is my prompy if ure curious
+    [attachment] Screenshot_20260807_175844_Chrome.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535406954107768842/Screenshot_20260807_175844_Chrome.jpg?ex=6a77a6a8&is=6a765528&hm=4f5d31b02889cb629a2c7bd61800e5d31dd94f04a74a262cdd2a37a9b75eb92c&
+
+[2026-08-07T22:01:21.474000+00:00] paxmentium_19882 (id=1535407529285390418)
+    Yes never let the llm now your next project 😄
+
+[2026-08-07T22:01:53.779000+00:00] paxmentium_19882 (id=1535407664782123038)
+    Or the language your speaking in 😂😂
+
+[2026-08-07T22:03:06.264000+00:00] paxmentium_19882 (id=1535407968806502583)
+    Is there any studies on how llms react to typos in text and how quality differs if its another language then English?
+
+[2026-08-08T00:05:53.181000+00:00] waefrebeorn (id=1535438867895820349)
+    i found my #1 off the presses alpha distiller1 
+    
+    i am gonna put hermes on it and port it
+    
+    i also have the distiller beta and will be porting hermes to that
+    
+    (a new distiller is coming)
+    [attachment] IMG_7826.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535438866838724719/IMG_7826.jpg?ex=6a77c460&is=6a7672e0&hm=28230967607e435f23012ec7375e59e983d0e446ef0353278d287387329dd7ab&
+    [attachment] IMG_7830.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535438867262607461/IMG_7830.jpg?ex=6a77c461&is=6a7672e1&hm=384bc886cc8c1eec320dc63aa853040f98378521c77c386fe72efdf7c4261101&
+    [attachment] IMG_7831.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535438867618992269/IMG_7831.jpg?ex=6a77c461&is=6a7672e1&hm=54533e40003499a544842937e127a3b81c04d69539edd8ec67ee27c5e78e74e6&
+

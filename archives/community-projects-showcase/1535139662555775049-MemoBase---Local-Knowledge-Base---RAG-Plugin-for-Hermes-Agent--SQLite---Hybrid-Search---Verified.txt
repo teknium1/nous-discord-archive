@@ -29,3 +29,9 @@
     THX! Thanks! It's simple. I'm not a programmer in real life, so some of the things are neural networks and I don't have time for a detailed review.
     [reply to the_rade. msg=1535353403218333707]
 
+[2026-08-07T19:55:24.498000+00:00] the_rade. (id=1535375833030463599)
+    Understood, thanks for clarifying 🙂 I suggest to remove that piece, it's kind of an ideological stance that has nothing to do with your code or program. Licensing it under MIT is clearly readable and should be enough for anyone that cares. 
+    
+    Also - I'm wondering which model wrote that for you? That is a really Twitter/reddit take to have in training data, so I'm really curious. 
+    BTW - again - thanks for making this - I placed it in the backlog of my Hermes to spin up a VM and test it in a couple of days - will try to give you some feedback when I get to it, if you're interested 🙂
+
