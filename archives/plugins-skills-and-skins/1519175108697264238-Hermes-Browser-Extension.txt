@@ -878,3 +878,9 @@
 [2026-08-07T22:15:25.752000+00:00] phospheneoverdrive (id=1535411070443978833)
     Ah! I see that was in the full mod only
 
+[2026-08-08T10:56:18.811000+00:00] mindcraft3r (id=1535602553251692544)
+    Is it possible for Hermes to use computer/browser-use functionality with this extension in a local PC Chrome browser while Hermes is running on a Vps?
+
+[2026-08-08T10:57:26.060000+00:00] mindcraft3r (id=1535602835314712667)
+    So that Hermes can do things in the local browser from the extension
+

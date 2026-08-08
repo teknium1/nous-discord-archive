@@ -118,3 +118,21 @@
     https://github.com/slapash/windows-screen-hint
     [embed] GitHub - slapash/windows-screen-hint: Temporary click-through Windo... https://github.com/slapash/windows-screen-hint
 
+[2026-08-08T12:21:08.224000+00:00] unktneemo (id=1535623899797131304)
+    ill check the windows one
+
+[2026-08-08T12:21:55.792000+00:00] unktneemo (id=1535624099311910972)
+    it can already do 2+2, have you tested more?
+
+[2026-08-08T12:32:40.318000+00:00] unktneemo (id=1535626802649628722)
+    ill check blender
+
+[2026-08-08T12:34:10.906000+00:00] unktneemo (id=1535627182603378758)
+    i suggest you make a github for both platforms, could be better so we can share code and changes
+
+[2026-08-08T12:34:15.386000+00:00] unktneemo (id=1535627201393852507)
+    i mean, one repo
+
+[2026-08-08T12:39:01.791000+00:00] unktneemo (id=1535628402663489606)
+    so we can branch it for windows, linux and master(both)
+

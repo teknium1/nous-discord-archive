@@ -56161,3 +56161,120 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     This PR solves this issue:
     https://github.com/NousResearch/hermes-agent/pull/78433
 
+[2026-08-08T07:48:03.001000+00:00] yeesil (id=1535555175190630431)
+    The improvements we've made are being reviewed by the team🫡
+    
+    <@387972437901312000>  said: You don't need to share your PRs here. They are all being reviewed
+    [reply to xdarkchain msg=1535531290714046626]
+
+[2026-08-08T09:52:39.839000+00:00] 0xgr1mm (id=1535586535322157108)
+    thanks for reminder, ll pay attention to this
+    [reply to yeesil msg=1535555175190630431]
+
+[2026-08-08T10:43:00.140000+00:00] monolith2 (id=1535599203382993016)
+    I added a review that could improve long term maintainability, if you don’t mind https://github.com/NousResearch/hermes-agent/pull/78433#pullrequestreview-4888644341
+    [reply to xdarkchain msg=1535531290714046626]
+
+[2026-08-08T10:50:38.623000+00:00] monolith2 (id=1535601126399942706)
+    using dataclasses instead of dicts could help static type checking a lot and also help ai agents (and humans) to understand the codebase better.
+
+[2026-08-08T10:58:55.560000+00:00] realadolan (id=1535603210704789565)
+    This issue is P0 but stale of an already fixed bug on main. Housekeeping close possible: https://github.com/NousResearch/hermes-agent/issues/81639
+
+[2026-08-08T11:04:30.317000+00:00] yeesil (id=1535604614777274429)
+    🫡🫡
+    [reply to 0xgr1mm msg=1535586535322157108]
+
+[2026-08-08T11:13:52.489000+00:00] teknium (id=1535606972697542706)
+    thanks, but the 10x figure isn't measured anywhere — the repo's own benchmarks show ~2x on JSON microbenchmarks, which doesn't move end-to-end turn latency. If any specific optimization shows a real measured win on stock Hermes (turns/wall-clock before/after), we'd take it as a focused PR; a skill that patches users' installed bundles is not something we can recommend.
+    [reply to wesleysimplicio msg=1535380120477368472]
+
+[2026-08-08T11:27:50.085000+00:00] immortal_meister (id=1535610485829804033)
+    Hi — daily Hermes user (long coding sessions in TUI + Desktop). I really like how much care already went into sticky user hrome.                                                                                                                     
+                                                                                                                                
+    Filed a small opt-in idea: sticky turn header with an optional short task title (not just raw last message), Desktop + TUI  parity, default-safe / phased. Builds on existing sticky rather than replacing opt-out (#80146).                            
+                                                                                                                                
+    feat(ui): sticky turn header with optional aux task title (desktop + TUI) #81684 : https://github.com/NousResearch/hermes-agent/issues/81684                                                                                                               
+                                                                                                                       
+    Happy to adjust or help with a PR if the direction makes sense. Thanks for Hermes — it’s become core to how I work.
+
+[2026-08-08T12:08:34.758000+00:00] sprmn24 (id=1535620739531542599)
+    Issue: _inspect_git() and _find_mutation() in self_repo_guard.py return None when the git alias recursion depth limit is reached — meaning “no mutation found, safe to run.” A git alias chain deeper than _MAX_RECURSION levels pointing to checkout or reset --hard bypasses the guard entirely.
+    
+    Fix: Both return sites now return a blocking string instead of None, so the caller correctly denies the command.
+    
+    https://github.com/NousResearch/hermes-agent/pull/81664
+
+[2026-08-08T12:19:47.371000+00:00] teknium (id=1535623560675070002)
+    furthermore: 
+    
+    ```Tested. Verdict: nothing to upstream — two of their four real proposals already exist on main, and the other two are measured noise.
+    
+    Per-candidate results (stock Hermes, repo .venv, Python 3.11):
+    
+    ① SQLite per-round write batching — already implemented. hermes_state.py:6660 append_messages_batch() writes the whole turn as one BEGIN IMMEDIATE/commit, wired into run_agent.py:2262, TUI gateway, and CLI. Their proposal is a description of our existing code.
+    
+    ② Tool discovery/schema caching — already implemented. model_tools.py:287 _tool_defs_cache memoizes get_tool_definitions() with generation-counter invalidation on register/deregister + a 30s check_fn TTL cache in the registry (#19251). Same story.
+    
+    ③ orjson/msgspec fast JSON — real speedup, irrelevant magnitude. Measured on realistic Hermes shapes:
+    
+    
+    payload                  json→orjson loads   dumps
+    tool result 4KB          2.6x                20.7x
+    30-msg history 68KB      2.1x                19.1x
+    40-tool schema 30KB      1.7x                10.6x
+    
+    
+    The multipliers look great until you total them: a heavy 10-tool-iteration turn spends 1.20ms in stdlib JSON; orjson cuts it to 0.11ms. Saved: ~1.1ms per turn that takes 30-300 seconds of wall clock. That's a 0.001-0.01% end-to-end win, plus a new C-extension dependency and a str/bytes seam through ~200 json.dumps call sites. Not worth the diff.
+    
+    ④ uvloop — doesn't apply. The agent core loop is synchronous (threads); only the gateway is asyncio, and it's I/O-bound waiting on provider APIs at personal-agent message volume. uvloop only exists in our tree as uvicorn's optional extra. Scheduling overhead isn't the bottleneck anywhere we've ever profiled — the one real startup finding we have on record (hermes -w 18.5s) was in a prune function, not the event loop.
+    
+    Rust hermes_fast parser and warm daemon: skipped on their own evidence — their README admits small payloads lose to stdlib through the FFI boundary, and our streamed tool-call deltas ARE small payloads. The warm daemon is a fork-lifecycle feature, not a patch.
+    
+    Bottom line: the fork's two legitimate ideas are things we shipped already; the rest optimizes code paths that account for ~1ms of a multi-second turn. Nothing to file. If you want, I can drop a courteous comment on Wesley's Discord message with the batching/caching pointers so he knows main already covers it.```
+    [reply to teknium msg=1535606972697542706]
+
+[2026-08-08T12:20:45.758000+00:00] teknium (id=1535623805567901766)
+    cc <@119192111202566149>
+    [reply to immortal_meister msg=1535610485829804033]
+
+[2026-08-08T12:21:08.664000+00:00] coexismail (id=1535623901642760293)
+    🏠 New optional skill: real-estate-analyzer
+     😕Tired of manually comparing listings? Drop any property URL and Hermes will analyze it for you.
+    
+    👉🏻What it does:
+    Opens the listing with browser, finds comparables via web search, and compares across these categories:
+    Category Detail
+    Price per m²/sqft
+    Neighborhood average
+    Total price
+    Comparable size/room listings
+    Days on market
+    vs area average (leverage signal)
+    Room count
+    same type filter (1+1, 2+1, 3+1)
+    Size ±20% filter
+    Building age
+    premium/discount factor
+    Parking; covered / open / none
+    Site amenities; pool, gym, security, playground
+    Floor;ground/top floor discount flag
+    Delivers a structured BUY / NEGOTIATE / PASS verdict.
+    No API keys, no config. Works with any publicly accessible listing page.
+    User: analyze this listing: https://...
+    
+    Hermes: ## Property Analysis: 2BR Flat, Hackney
+    
+    Price per m²: £6,200 vs area avg £6,800 → 9% below market
+    Days on market: 8 (avg 31) — not distressed
+    Parking: covered ✓
+    Site amenities: gym, 24h security ✓
+    
+    Verdict: NEGOTIATE — offer £5k below asking
+    PR: https://github.com/NousResearch/hermes-agent/pull/81710
+    
+    GitHub
+    feat(skills): add real-estate-analyzer — property listing analysis and market comparison by babatorik · Pull Request #81710 · NousResearch/hermes-agent
+    What does this PR do?
+    Adds real-estate-analyzer to optional-skills/productivity/ — a skill that turns any property listing URL into a structured market report with a BUY / NEGOTIATE / PASS verdict....
+
