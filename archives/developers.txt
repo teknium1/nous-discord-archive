@@ -56155,3 +56155,9 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [attachment] IMG_7830.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535438867262607461/IMG_7830.jpg?ex=6a77c461&is=6a7672e1&hm=384bc886cc8c1eec320dc63aa853040f98378521c77c386fe72efdf7c4261101&
     [attachment] IMG_7831.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1535438867618992269/IMG_7831.jpg?ex=6a77c461&is=6a7672e1&hm=54533e40003499a544842937e127a3b81c04d69539edd8ec67ee27c5e78e74e6&
 
+[2026-08-08T06:13:08.498000+00:00] xdarkchain (id=1535531290714046626)
+    <@387972437901312000> When the task is heavy and the turns take a long time, the thread auto renaming on Telegram fails and doesn't work.
+    
+    This PR solves this issue:
+    https://github.com/NousResearch/hermes-agent/pull/78433
+

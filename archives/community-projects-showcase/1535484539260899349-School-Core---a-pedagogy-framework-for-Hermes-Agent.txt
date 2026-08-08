@@ -1,0 +1,35 @@
+# Thread 'School Core - a pedagogy framework for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1535484539260899349 forum_id=1316137596535177246
+# Started 2026-08-08T06:47:11.287603+00:00
+
+[2026-08-08T03:07:22.083000+00:00] whalemoneyyy (id=1535484539260899349)
+    Hello everyone my name is Brandon I’m a full stack engineer w/ 3+ YoE building PERN stack apps and 5+ YoE in music education and I’ve been really enjoying using Hermes agent. 
+    
+    I’ve spent the last couple of months coming to a realization as the agentic engineering space continues to grow and evolve. Engineers are seeking to recreate “pedagogy”  which is the method and practice of teaching.
+    
+    The most well known loop we experience IS actually school itself. Many engineers I speak to have a strong stance on AI but they place more blame on the agents rather than the environment they’re in. This is pretty similar to a students experience, and when you zoom out to may start to notice similarities in the kind of tasks and responsibilities we expect of an agent. It needs context, it needs books, it needs manners and behavior, etc. The entire framework itself is centered on this concept, and I believe that in order to grow into this next stage of development you need to abstract layers away and look at problems from a more creative perspective. I ran into a bunch of different kinds of problems that I’ll TLDR here that I hope might help you. 
+    
+    
+    TLDR: Agent school is a developmental framework for AI agents where students grow through practice, feedback, challenge, and rest. Orca provides a consistent worktree backed,  firstmate spawns ephemeral crew mates with role based personas (student, teachers student coder, student researcher). Students are disposed and their work is saved to a bookbag that goes through a brutal adversarial review.
+    
+    please test and provide some feedback! repo is linked
+    [attachment] IMG_3746.jpg https://cdn.discordapp.com/attachments/1535484539260899349/1535484539647041717/IMG_3746.jpg?ex=6a77eeea&is=6a769d6a&hm=5a5663e0d3caf9e41efeb5f223fd965424bf42ed4a18a7cfbb1a49159c510673&
+    [attachment] IMG_3761.jpg https://cdn.discordapp.com/attachments/1535484539260899349/1535484540112470117/IMG_3761.jpg?ex=6a77eeea&is=6a769d6a&hm=10544c79eaf617bb97067a2215eb5027e8b72c7418d174f5263facfa9a9de207&
+
+[2026-08-08T03:07:32.759000+00:00] whalemoneyyy (id=1535484584039420024)
+    1. I found Hermes agent after being frustrated with rate limits, and then I found another solution called Omniroute which is an all in one AI proxy. Helps to route students to different models 
+    
+    2. Spawned students are ephemeral, I tried to make the workflow as light as possible by making the areas the agents work in easily disposable and repeatable
+    
+    3. Context bursts was a huge problem, the agents would find what they needed and try to eat it all at once, my solution to this was to make an obsidian vault and use memory as a pointer to specific doors of information and once they get there they could use symbolic search, you can check the MCP tools section for that 
+    
+    3. The framework grew by me pointing Hermes agent at AI papers every day using a cron job, this is the default but I recently swapped it to Hermes built in memory graph
+    
+    4.  the human in the loop all the time was starting to get hella annoying so I connected the agents to agent mail so they can give each other hand offs and only raise something to be if it’s super important, they ping me on telegram 
+    
+    These agents have to survive a gauntlet before even thinking about writing any code, feedback would be greatly appreciated!
+
+[2026-08-08T03:08:10.985000+00:00] whalemoneyyy (id=1535484744371019898)
+    https://github.com/branben/school-core/blob/main/campus.md
+    [embed] school-core/campus.md at main · branben/school-core https://github.com/branben/school-core/blob/main/campus.md
+

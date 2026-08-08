@@ -35,3 +35,7 @@
     Also - I'm wondering which model wrote that for you? That is a really Twitter/reddit take to have in training data, so I'm really curious. 
     BTW - again - thanks for making this - I placed it in the backlog of my Hermes to spin up a VM and test it in a couple of days - will try to give you some feedback when I get to it, if you're interested 🙂
 
+[2026-08-08T05:54:28.012000+00:00] itsa_50191 (id=1535526591055003699)
+    I wrote this using the Fable/Opus 5 models, but you know, I didn't just say, "Do it." I studied the context of what existed, wrote down constraints, and ran a couple of iterations with testing. I guided, not just said, "Do it." I'm a marketer, but I've always liked programming and never had time to dive in. Finally, I can create something I'm already working on. Thx for test, i will wait
+    [reply to the_rade. msg=1535375833030463599]
+
