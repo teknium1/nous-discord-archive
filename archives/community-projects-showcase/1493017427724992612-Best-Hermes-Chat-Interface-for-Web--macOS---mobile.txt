@@ -6370,3 +6370,14 @@
     [embed] Feature: configurable custom update command / handler in WebUI · I... https://github.com/nesquena/hermes-webui/issues/6827
     [reply to kyklooppi msg=1535342796687548518]
 
+[2026-08-08T18:57:55.509000+00:00] tesao (id=1535723754787840160)
+    this webui for Hermes CLI or Works with desktop to?
+
+[2026-08-09T01:17:34.468000+00:00] avidfuturist (id=1535819296666550292)
+    WebUI interconnects with CLI sessions and can import them, it’s a setting
+    [reply to tesao msg=1535723754787840160]
+
+[2026-08-09T01:17:41.983000+00:00] avidfuturist (id=1535819328186884227)
+    Thanks for capturing!
+    [reply to kyklooppi msg=1535348160606634126]
+

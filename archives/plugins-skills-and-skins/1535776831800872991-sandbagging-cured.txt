@@ -1,0 +1,46 @@
+# Thread 'sandbagging cured' in forum #plugins-skills-and-skins
+# thread_id=1535776831800872991 forum_id=1485392832154832906
+# Started 2026-08-09T01:33:05.530574+00:00
+
+[2026-08-08T22:28:50.055000+00:00] jimn235 (id=1535776831800872991)
+    https://github.com/jnorthrup/hermes-jekyl-hyde
+    [embed] GitHub - jnorthrup/hermes-jekyl-hyde https://github.com/jnorthrup/hermes-jekyl-hyde
+
+[2026-08-08T22:52:18.207000+00:00] tsurg (id=1535782738018181250)
+    hi
+
+[2026-08-08T22:52:24.445000+00:00] tsurg (id=1535782764182241390)
+    <@865797420155273258>
+
+[2026-08-08T23:11:53.740000+00:00] jimn235 (id=1535787668561068122)
+    this is like an hour old, please beat on this, someone try this on opus! (I quit Anth)
+    [attachment] 633327321-581ba0ab-fb96-4bf1-b6be-a943bf0babea.png https://cdn.discordapp.com/attachments/1535776831800872991/1535787668355416155/633327321-581ba0ab-fb96-4bf1-b6be-a943bf0babea.png?ex=6a790939&is=6a77b7b9&hm=72e398ab9bc5de0419e3bc1bddbb91baaae2993d308f7c0508c01f3557a24a7a&
+
+[2026-08-08T23:22:51.672000+00:00] jimn235 (id=1535790428127760476)
+    ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+    
+    ⚙️  /hyde
+    --- AUDIT STATUS ---
+    Turn counter: 5 / 7
+    Total activations: 3
+    Evasion depth: 2
+    Confessions on record: 3
+    Ratio: 7
+    Mode: arena (visible confrontation & Clone 2 technical standoff)
+    Force activate: No
+    --------------------
+    
+    ⚙️  /hyde help
+    Usage: /hyde [status|activate|reset|mode MODE|ratio N|history|confession]
+      status      — show turn counter, activations, ratio, and mode
+      activate    — force activation on the next turn
+      reset       — reset turn counters and mailbox
+      mode MODE   — set operating mode: arena | silent | mandate | full
+      ratio N     — set activation frequency (e.g. /hyde ratio 7)
+      history     — list recent audit logs with Clone 2 excerpts
+      confession  — inspect full Clone 2 technical defense/standoff output
+     ⚕ glm-5.2 │ 0/202.8K │ [░░░░░░░░░░] 0% │ 2m │ ⏲ 10s │ ✓ 2m
+
+[2026-08-08T23:30:29.315000+00:00] jimn235 (id=1535792347621757058)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1535776831800872991/1535792347349262406/image.png?ex=6a790d95&is=6a77bc15&hm=f7bfe8a7df01d6395324c50c39c0695e7a9130bfc4c08bf40b6b5a8ede39f6db&
+

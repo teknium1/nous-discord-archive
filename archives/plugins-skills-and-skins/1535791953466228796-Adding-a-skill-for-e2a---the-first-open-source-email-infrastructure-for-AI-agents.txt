@@ -1,0 +1,8 @@
+# Thread 'Adding a skill for e2a - the first open source email infrastructure for AI agents' in forum #plugins-skills-and-skins
+# thread_id=1535791953466228796 forum_id=1485392832154832906
+# Started 2026-08-09T01:33:05.141093+00:00
+
+[2026-08-08T23:28:55.341000+00:00] joshjsz (id=1535791953466228796)
+    Could anyone review this PR? https://github.com/NousResearch/hermes-agent/pull/82045 Thanks!
+    [embed] feat(skills): add e2a email integration by jiashuoz · Pull Request... https://github.com/NousResearch/hermes-agent/pull/82045
+

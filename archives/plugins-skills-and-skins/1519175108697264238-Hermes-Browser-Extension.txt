@@ -919,3 +919,22 @@
     [attachment] HBE_-_Theme_Marketplace__Agent_Theme_Studio_Fix_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1535719046056779888/HBE_-_Theme_Marketplace__Agent_Theme_Studio_Fix_Update_AD.png?ex=6a78c950&is=6a7777d0&hm=1f9e8136e154d2f90dd14d17854a9f132a78adbd23749d02b253967596a42347&
     [embed] feat: VS Code theme marketplace with Agent Theme Studio · abundant... https://github.com/abundantbeing/hermes-browser-extension/commit/64df7b14cdd03fed956714c98960fa00a181b748
 
+[2026-08-08T18:52:39.574000+00:00] jonkomet (id=1535722429660401724)
+    [attachment] Recording_8_9_2026_1_44_41_AM.mp4 https://cdn.discordapp.com/attachments/1519175108697264238/1535722428767146105/Recording_8_9_2026_1_44_41_AM.mp4?ex=6a78cc77&is=6a777af7&hm=202dae7d504d4c6b5905ceb2ec9f127569c5cef64c549804dab0f491857d77e1&
+    [reply to jonkomet msg=1535719045641412629]
+
+[2026-08-08T20:18:54.932000+00:00] mindcraft3r (id=1535744136685158433)
+    Hell yea, I'm looking forward to that update. This might become my favorite way to interact with Hermes since I'm already always in Chrome lol. Thanks bro!
+    [reply to jonkomet msg=1535697526395764867]
+
+[2026-08-08T21:17:41.931000+00:00] jonkomet (id=1535758929991307365)
+    it's my #1 way to use hermes , this and hermes desktop, so I will be working on this daily all the time
+    [reply to mindcraft3r msg=1535744136685158433]
+
+[2026-08-09T00:47:32.688000+00:00] phospheneoverdrive (id=1535811739453493258)
+    Thanks again for the font settings!
+
+[2026-08-09T00:47:47.041000+00:00] phospheneoverdrive (id=1535811799654334494)
+    https://klipy.com/gifs/yuge-huge
+    [embed] Donald Trump: Yuge Huge https://klipy.com/gifs/yuge-huge
+

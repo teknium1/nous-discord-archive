@@ -56657,3 +56657,134 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     https://github.com/NousResearch/hermes-agent/pull/80505
 
+[2026-08-08T19:02:33.701000+00:00] ajtowns (id=1535724921609527347)
+    it's a gateway like discord/telegram; no worries, merging/rebasing it on top of origin/main is no big deal, I just want somewhere to direct my enthusiasm 🙂
+    [reply to teknium msg=1535711549719715901]
+
+[2026-08-08T19:03:16.199000+00:00] hyqqx (id=1535725099859181609)
+    Windows work log for hermes-agent, updated. All 36 CI jobs run on ubuntu-latest and the ARC migration branch moves to GKE — still Linux — so none of this can surface in CI. Everything below was run on a real Windows 11 box, build 26200, Python 3.11.6, from PowerShell. <@387972437901312000> 
+    
+    New — found in v0.20.0, one day after release
+    
+    https://github.com/NousResearch/hermes-agent/pull/81926
+    tests/hermes_cli/test_doctor_journal_modes.py shipped two days ago and aborts collection on Windows, which stops the whole run. The Windows guard is already there and correct — skipif(os.name == "nt") — but the decorator directly beneath it evaluates os.geteuid() at import time, before pytest reads either marker. os.geteuid doesn't exist on Windows, so the author's own guard never gets to fire. Before: ERROR at collection. After: 25 passed, 2 skipped.
+    
+    Open
+    
+    https://github.com/NousResearch/hermes-agent/pull/77120
+    8 tests in test_file_operations.py fail on Windows. The search fallback shells out to POSIX find, which on Windows resolves to System32\find.exe — a string-search tool, not a file finder — so it returns zero results instead of erroring. LGTM from @monerostar after reproducing on his own Win11.
+    
+    https://github.com/NousResearch/hermes-agent/pull/74083
+    pytest tests/ collected nothing on Windows: a /tmp fallback that mkdirs at module scope. Invisible in Git Bash — MSYS sets TMPDIR — so it only reproduces from PowerShell. LGTM from @monerostar.
+    
+    https://github.com/NousResearch/hermes-agent/pull/72101
+    CONTRIBUTING rule 10 tells contributors to spawn the detached gateway with pythonw.exe + DETACHED_PROCESS. The code deliberately does neither. Rebased onto current main today — zero commits behind.
+
+[2026-08-08T19:03:28.181000+00:00] hyqqx (id=1535725150115467266)
+    Reviews on other people's PRs
+    
+    Nobody else appears to be executing these on Windows, so I've started verifying them on mine. <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/42872
+    Open since June, never human-verified. Confirmed it still fixes a live collection abort on current main; cherry-pick clean, 0 → 8 tests collected.
+    
+    https://github.com/NousResearch/hermes-agent/pull/76741
+    The hang fix works — both WinError 216 cases gone. But the "40 passed" in the test plan doesn't reproduce here: 5 failures remain, one root cause — fixtures build a POSIX layout while the Windows paths resolve uv.exe and Scripts\python.exe. Traced each to its line.
+    
+    Issue
+    
+    https://github.com/NousResearch/hermes-agent/issues/68465#issuecomment-5085063942
+    Telegram connect hang — did not reproduce on current main. Posted the full log and two findings that narrow it, flagged clearly as "didn't reproduce here", not "not a bug".
+    
+    Where this is heading
+    
+    With collection unblocked I ran all 230 test files added since v2026.7.30 — first Windows execution they've had. 76 failures across 24 files, including 4 in the new ! shell mode. Working through them.
+    
+    467 open PRs carry the platform/windows label. GitHub: hyqqx
+
+[2026-08-08T19:04:13.912000+00:00] teknium (id=1535725341925056562)
+    We also have full plugin support for gateway channels too!
+    [reply to ajtowns msg=1535724921609527347]
+
+[2026-08-08T19:04:22.608000+00:00] teknium (id=1535725378398589051)
+    Just ask hermes to turn that PR into a plugin and you're good to go
+
+[2026-08-08T19:04:32.329000+00:00] hyqqx (id=1535725419171414128)
+    check DM please
+    [reply to teknium msg=1535725341925056562]
+
+[2026-08-08T19:05:49.421000+00:00] hyqqx (id=1535725742518702080)
+    personal messages
+    [reply to teknium msg=1535725378398589051]
+
+[2026-08-08T19:37:03.303000+00:00] 5amyak_ (id=1535733602149597274)
+    hey for those who're using hermes for coding tasks - which model has the best performance/price ratio right now and on what subscription do you typically run it?
+
+[2026-08-08T19:58:02.340000+00:00] yeesil (id=1535738882933526559)
+    Absolutely 🫡
+    [reply to teknium msg=1535725378398589051]
+
+[2026-08-08T20:03:01.075000+00:00] teknium (id=1535740135918936165)
+    Kimi k3
+    [reply to 5amyak_ msg=1535733602149597274]
+
+[2026-08-08T20:16:28.479000+00:00] crowexx (id=1535743522416631810)
+    you guys into opencode.. or openrouter? which one?
+
+[2026-08-08T20:48:15.174000+00:00] prshv (id=1535751519675093153)
+    for coding 
+    - kimi k3 (opensource)
+    - gpt sol (better bang for buck with subscription)
+    
+    for day to day tasks 
+    - deepseek v4 flash (opensource)
+    - gpt lunna/terra (better bang for buck with subscription)
+    [reply to 5amyak_ msg=1535733602149597274]
+
+[2026-08-08T20:49:30.345000+00:00] egilewski (id=1535751834965254237)
+    <@387972437901312000> your paper-scout seems to really want this security issue to have a higher priority than P3: https://github.com/NousResearch/hermes-agent/issues/78515
+
+[2026-08-08T21:13:01.187000+00:00] muddlebee (id=1535757752465621022)
+    hey <@387972437901312000> 
+    
+    sorry for the ping, pls tell me some cool and interesting ideas to build on hermes stack. I saw the hackathon posts you shared earlier, but feels very generic.
+    I want to build something which could be really useful for the community like infra/etc??
+
+[2026-08-08T21:13:04.620000+00:00] decisionparalysis (id=1535757766864543755)
+    Been doing this intuitively, good to see it's the "canon" recommendation!
+    [reply to teknium msg=1535725341925056562]
+
+[2026-08-08T21:13:08.547000+00:00] decisionparalysis (id=1535757783335436368)
+    That being said, it seems to default to wanting everything upstream, even when asking to have patches self-contained in plugins - I've had to tell my agent to stop opening PRs a few times 🤣
+
+[2026-08-08T21:15:06.810000+00:00] decisionparalysis (id=1535758279366410240)
+    In cases of plugins with shared ownership (e.g. honcho adapter), what's the best channel for FRs or issues? I'm seeing channel/session conflation with Discord sessions in Honcho, and the adapter seems to ship with Hermes. I could monkey-patch in plugin, but I don't want to overengineer things either
+
+[2026-08-08T23:50:39.999000+00:00] jimn235 (id=1535797425598627910)
+    add me some stars on github if you like kicking sandbagging model assses!  https://github.com/jnorthrup/hermes-jekyl-hyde
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1535797425334259842/image.png?ex=6a79124f&is=6a77c0cf&hm=5819605e1702ccfbca704b510f4a134a418d19ad4270e579757a8e4288fb3a91&
+
+[2026-08-09T00:23:36.504000+00:00] dias4761 (id=1535805715661324370)
+    Any moderator avaliable?
+
+[2026-08-09T00:24:08.026000+00:00] dias4761 (id=1535805847874048130)
+    I found an issue and would like to know if it's considered public or private.
+
+[2026-08-09T00:25:46.057000+00:00] drexux (id=1535806259045998633)
+    Today I saw the 4 merge notifications, Welcome back boss xD I'm leaving 4 more PRs here in case youd like to review them when you're available. And if you see fit, could I get that role as well? Thanks. <:Prayge:1151275585000185968> 
+    
+    fix(file-ops): stop read_file blocking forever on non-regular files
+    https://github.com/NousResearch/hermes-agent/pull/82075
+    fix(agent): stop the MoA prepared request reaching a swapped-in native client
+    https://github.com/NousResearch/hermes-agent/pull/82082
+    fix(agent): a failed preflight compaction must not take the turn down
+    https://github.com/NousResearch/hermes-agent/pull/82091
+    fix(agent): keep native compaction checkpoints out of the thinking-only drop
+    https://github.com/NousResearch/hermes-agent/pull/82108
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1535806258941005904/image.png?ex=6a791a8a&is=6a77c90a&hm=45dac98219033b7500a89b2bf33502f51af2273bd24daabaaeac45a4d8aa626f&
+    [reply to teknium msg=1535695856492355594]
+
+[2026-08-09T00:26:16.765000+00:00] drexux (id=1535806387844808725)
+    <@690519146701783042>
+    [reply to dias4761 msg=1535805847874048130]
+

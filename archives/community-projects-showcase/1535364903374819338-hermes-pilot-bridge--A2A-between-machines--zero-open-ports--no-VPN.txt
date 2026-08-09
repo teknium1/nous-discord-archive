@@ -39,3 +39,6 @@
     Your solution is to use your product Pilot Protocol as relay service instead of VPN right? I think I am okay with my current Tailscale
     [reply to philip010291 msg=1535713013624082652]
 
+[2026-08-08T19:24:38.914000+00:00] philip010291 (id=1535730479955837049)
+    <@420597780524957696> fair enough, tailscale is perfectly fine for this. The bridge would just restrict the join to one port for one approved peer instead of your whole machine joining a tailnet, so a smaller surface if the other end is ever a box you don't fully trust.  btw: connections are direct p2p, relay only as fallback.
+
