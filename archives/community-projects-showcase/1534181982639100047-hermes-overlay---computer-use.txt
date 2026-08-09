@@ -196,3 +196,9 @@
 [2026-08-09T01:42:32.001000+00:00] gluedmosquito (id=1535825577775341569)
     like for example drawing diagrams to explain something while you're working
 
+[2026-08-09T10:59:28.467000+00:00] unktneemo (id=1535965736592216115)
+    yeah i was testing this out
+
+[2026-08-09T10:59:42.905000+00:00] unktneemo (id=1535965797149712424)
+    was kinda buggy but it was responding whats on the screen
+

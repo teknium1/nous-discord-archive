@@ -2680,3 +2680,64 @@
 [2026-08-09T06:24:24.437000+00:00] john_10613 (id=1535896513673175060)
     your not telling us what the errors are and only complaining
 
+[2026-08-09T07:13:38.607000+00:00] cspiritsong (id=1535908904360349816)
+    if there is no error, just tell the LLM to explain "what seems to be the error"
+
+[2026-08-09T09:16:16.017000+00:00] jaixii (id=1535939763574673439)
+    Wanted to do an honest comparison between these 2 systems to see the differences: 
+    
+    Mnemosyne gives agents a simple way to store, search, and consolidate memories. Engraphis goes further by providing a complete project memory system with workspace, repository, and session scopes; typed memories; bi-temporal history; conflict handling; code-aware search; grounded answers with citations and abstention; session handoffs; provenance and audit trails; and a local dashboard for inspecting timelines, sources, graphs, and superseded memories. It also reduces prompt waste by returning focused evidence instead of entire documents, packing results to a hard token budget, consolidating repeated memories, and supporting compact responses. In Engraphis’s published fixtures, structure-aware retrieval reduced average returned content from 740 to 214 tokens, and one context diagnostic used 98.2 percent fewer tokens than full-history replay. The result is an agent that remembers the right project context, knows what is still current, shows why an answer is supported, and leaves more of the prompt available for the actual work.
+    [attachment] 2026-08-09_05_15_05-ChatGPT.png https://cdn.discordapp.com/attachments/1490447053791428718/1535939763054321684/2026-08-09_05_15_05-ChatGPT.png?ex=6a7996df&is=6a78455f&hm=b40c66e4a67748bc4d379e45b6f0060158b499961ed3ed4f3020f94afbe74884&
+
+[2026-08-09T11:37:08.312000+00:00] k.shepherd (id=1535975215069265991)
+    Y'all cant read. There where no errors. I explained as much as can be explained. Here is my LLM summary 🤪
+    
+    ---
+    
+     **Mnemosyne Tool Registration Blocker — Explainer**
+    
+    **Context**
+    Installed `mnemosyne-oss/mnemosyne` as Hermes Agent's long-term memory provider. The core engine loaded successfully and began injecting context, but the `mnemosyne_*` tools never appeared in `hermes tools list`. No errors were logged during installation or startup.
+    
+    **The Blocker**
+    - **Engine:** ✅ Loaded & operational (uses simple `__init__.py` marker)
+    - **Dashboard Plugin:** ✅ Loaded via WebUI Plugins screen
+    - **CLI Tools (`mnemosyne_*`):** ❌ Silent failure — zero surface registration, zero logs
+    
+    **Assumed Cause**
+    Version incompatibility between **Hermes Agent v0.19.0** and **mnemosyne-hermes v0.5.0**. 
+    
+    Hermes v0.19 changed how plugins expose their toolsets. During registration, `add_provider()` → `get_tool_schemas()` calls `read_hermes_config_key()` to validate the provider's config. This function lacks a fallback for the `HERMES_HOME` environment variable. At schema-request time, `self._hermes_home` hasn't been set yet, so the config read silently returns `None`. 
+    
+    The code falls through to a default "return all tools" path, but because the validation fails downstream, the tools never actually register on the surface. It's a silent no-op rather than a crash. (Matches known issue NousResearch/hermes-agent/issues/645) regarding silent config read failures during tool registration.)
+    
+    **Key Takeaways for Devs**
+    1. **Engine ≠ Tools:** A memory provider loading successfully does not guarantee its CLI tools will register. They use separate discovery paths.
+    2. **Silent Config Fails are Silent:** Missing env var fallbacks in `read_hermes_config_key()` cause silent tool registration failures, not exceptions. Adding a `HERMES_HOME` fallback or explicit logging here would save hours of debugging.
+    3. **Native Plugins > Side-Venv Shims:** Manual symlinking and side-venv wrappers for external providers are fragile against Hermes config discovery changes. Native plugin registration is more stable across versions.
+    [reply to john_10613 msg=1535896513673175060]
+
+[2026-08-09T12:16:15.149000+00:00] cspiritsong (id=1535985058417221683)
+    this is at least better than "no error".  one, update your hermes to the latest if posible.
+    
+    two. 
+    │ "Quick note: I'm not going to be a copy-paste courier here — I ran this through myagent, and the full write-up is below. It's self-contained; run the checks in the orderlisted and you'll find either that everything was fine (likely — hermes tools list nevershows memory-provider tools) or the exact line to fix.
+    │
+    │ If you have follow-ups, do this: paste your startup log into your own Hermes agent andask it to check the registration line — it'll walk you through it faster than I evercould shuttling messages. If it's still stuck after that, reply here once and I'll pointyou at the right place. That keeps me out of the middle and gets you answers from thething that actually knows the system."
+    
+    and here's the whole thing I'll paste as a meat relay:
+    
+    ade Hermes first (v0.19 → v0.20; registration path is clean there)
+    hermes update
+    # reinstall the plugin wrapper into the Hermes venv, then enable + configure
+    ~/.hermes/hermes-agent/venv/bin/mnemosyne-hermes --hermes-home ~/.hermes install --mode wrapper --python ~/.hermes/hermes-agent/venv/bin/python
+    hermes plugins enable hermes-mnemosyne
+    hermes config set memory.provider mnemosyne
+    
+    …then restart the session/gateway and re-check the log line.
+    
+    On the assumed root cause: I read read_hermes_config_key() in mnemosyne core 3.15.1 — itindeed still has no HERMES_HOME fallback (config_path is empty when hermes_home isfalsy), but it fails soft: returns None → provider uses config defaults. That degradessettings; it doesn't zero out tool registration. If tools are truly missing after thesteps above, grab the first ~30 lines of agent log at startup and post them — theregistration line (or its absence) will pinpoint where it stops.
+    
+    One more note: the issue you linked (#645) is actually about slash-command autocomplete,not config reads during registration — probably misremembered. If it's still brokenafter this, a fresh issue with the startup log would be the fastest route to a real fix.
+    [reply to k.shepherd msg=1535975215069265991]
+

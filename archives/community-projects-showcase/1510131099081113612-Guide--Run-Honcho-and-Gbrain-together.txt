@@ -19,3 +19,7 @@
 [2026-08-09T04:05:46.952000+00:00] cutepetpig (id=1535861627612831845)
     Hi. How about Adding Obsidian Vault??? will it work together with this?
 
+[2026-08-09T08:36:15.502000+00:00] jaixii (id=1535929695084875837)
+    Obsidian is just bad for ai, not properly organized and prepared for ai use. However I spent a lot of time providing the proper ai systems needed for optimal memory utilization and storage with minimal context overhead, and token savings all in one. And the past few days 20+ hours of work improving all things. Today, an automated method to turn crap stale junk obsidian memory into ai usable files with Engraphis. Coming in the next hour or two
+    [attachment] 9.png https://cdn.discordapp.com/attachments/1510131099081113612/1535929694371971132/9.png?ex=6a798d7f&is=6a783bff&hm=2c236615c544dc01f7fd18b5be5e4563f47d13e4a6224b77382f5b4b85bf6ae4&
+

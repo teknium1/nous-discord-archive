@@ -1,0 +1,10 @@
+# Thread 'Hall Of Wisdom' in forum #plugins-skills-and-skins
+# thread_id=1535927555763208252 forum_id=1485392832154832906
+# Started 2026-08-09T12:49:35.222079+00:00
+
+[2026-08-09T08:27:45.448000+00:00] shaf_2665 (id=1535927555763208252)
+    Hall of Wisdom is a local, cross-platform Agent OS for coordinating coding agents (Claude Code, Codex, and others) against your own projects — while keeping your provider credentials on your own machine. Hall never collects passwords, API keys, or subscription auth files; each agent runs through your own already-authenticated local CLI.
+    
+    Repo Link: https://github.com/Shaf2665/HallOfWisdom
+    [embed] GitHub - Shaf2665/HallOfWisdom https://github.com/Shaf2665/HallOfWisdom
+

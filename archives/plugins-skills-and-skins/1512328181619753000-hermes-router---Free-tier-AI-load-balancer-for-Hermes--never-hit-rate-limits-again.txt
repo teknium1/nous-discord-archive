@@ -1658,3 +1658,32 @@
     Yes
     [reply to tonyporj msg=1533917992985952336]
 
+[2026-08-09T08:31:24.446000+00:00] shaf_2665 (id=1535928474307526719)
+    👋 Hi everyone!
+    
+    The wait is almost over — the Agent OS I mentioned earlier is getting closer to its first public release.
+    
+    The project is called Hall of Wisdom 🏛️ — an Agent OS built to coordinate AI agents, tools, and workflows from one place.
+    
+    Before moving toward a stable release, I’m planning to make an Alpha version available for the community to try.
+    
+    The Alpha release will mainly help us:
+    
+    🐛 Find bugs and unexpected issues
+    💡 Collect ideas and improvement suggestions
+    🧪 Test the system with real-world use cases
+    ⚡ Improve performance, usability, and reliability
+    
+    🚧 Currently in development: Hermes Router integration
+    
+    🤝 Contributors are also very welcome!
+    
+    If you're interested in AI agents, open-source development, integrations, UI/UX, testing, documentation, or just have ideas that could improve the project, you're welcome to contribute. Even testing the Alpha and reporting issues would be a huge help.
+    
+    You can follow the development and discussion here:
+    https://discord.com/channels/1053877538025386074/1535927509672005642
+    
+    I’ll share more details once the Alpha build is ready.
+    
+    Hall of Wisdom is getting closer — testers, contributors, and feedback are all welcome! 🚀
+

@@ -1,0 +1,26 @@
+# Thread 'Hall Of Wisdom' in forum #community-projects-showcase
+# thread_id=1535927509672005642 forum_id=1316137596535177246
+# Started 2026-08-09T12:43:25.193293+00:00
+
+[2026-08-09T08:27:34.459000+00:00] shaf_2665 (id=1535927509672005642)
+    Hall of Wisdom is a local, cross-platform Agent OS for coordinating coding agents (Claude Code, Codex, and others) against your own projects — while keeping your provider credentials on your own machine. Hall never collects passwords, API keys, or subscription auth files; each agent runs through your own already-authenticated local CLI.
+    
+    Repo Link: https://github.com/Shaf2665/HallOfWisdom
+    [embed] GitHub - Shaf2665/HallOfWisdom https://github.com/Shaf2665/HallOfWisdom
+
+[2026-08-09T08:58:10.534000+00:00] irteza080 (id=1535935210728980541)
+    Iz finally here 🔥🔥🔥🔥
+    [reply to shaf_2665 msg=1535927509672005642]
+
+[2026-08-09T08:58:57.304000+00:00] irteza080 (id=1535935406896447539)
+    Could you make like a demo video showing how everything works?
+    [reply to shaf_2665 msg=1535927509672005642]
+
+[2026-08-09T09:03:25.883000+00:00] shaf_2665 (id=1535936533398425690)
+    sure after hermes-router direct integration
+    [reply to irteza080 msg=1535935406896447539]
+
+[2026-08-09T09:03:54.921000+00:00] irteza080 (id=1535936655192756224)
+    Appreciate it gng
+    [reply to shaf_2665 msg=1535936533398425690]
+

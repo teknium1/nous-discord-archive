@@ -56826,3 +56826,53 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-09T03:25:27.415000+00:00] smokealot420 (id=1535851479338848348)
     <:tekcheer:1453863338537779242>  much love!
 
+[2026-08-09T07:14:27.412000+00:00] kxee (id=1535909109063491654)
+    DM
+    [reply to dias4761 msg=1535805847874048130]
+
+[2026-08-09T07:44:08.572000+00:00] owl_dv (id=1535916579789733940)
+    <@387972437901312000>  - updated https://github.com/NousResearch/hermes-agent/pull/70638
+
+[2026-08-09T08:47:49.586000+00:00] flash_speed3412 (id=1535932606284169276)
+    ## ✅ Merged PRs
+    
+    **feat(desktop): support multiple cron delivery targets**
+    
+    * https://github.com/NousResearch/hermes-agent/pull/73886
+    
+    **perf(tools): shrink lazy tool catalog overhead**
+    
+    * https://github.com/NousResearch/hermes-agent/pull/74025
+    
+    **fix(desktop): rearm voice conversation after playback**
+    
+    * https://github.com/NousResearch/hermes-agent/pull/73880
+    
+    
+    <@387972437901312000>
+
+[2026-08-09T08:53:18.983000+00:00] teknium (id=1535933987875454976)
+    <:catemoji:1530452895508598844>
+    [reply to flash_speed3412 msg=1535932606284169276]
+
+[2026-08-09T08:53:46.177000+00:00] flash_speed3412 (id=1535934101935358022)
+    thanks
+    [reply to teknium msg=1535933987875454976]
+
+[2026-08-09T09:25:48.799000+00:00] yasya_eth (id=1535942165996249088)
+    Hi <@387972437901312000>, I'm cryptoyasenka on GitHub. Thank you for landing my fix and for keeping my
+    authorship on the commit  f2d03c1f via #82109, the reasoning round-trip bug I filed as
+    #57240. Thank you for your trust 🫶🏻 
+    
+    https://github.com/NousResearch/hermes-agent/commit/f2d03c1f2aacead8c7356d070382b5142a037c0e
+
+[2026-08-09T11:28:27.589000+00:00] ooiuuii (id=1535973030998704218)
+    <@387972437901312000>  — I’ve just rebased and tightened https://github.com/NousResearch/hermes-agent/pull/73132 onto current main. It now uses the canonical config-loader seam, keeps non-bundled model providers opt-in before import, and retains the runtime/provider/MCP/Dashboard gates. The scoped matrix is 598 passing and the final AutoReview is clean. Before I keep extending it, could you sanity-check the direction? I intentionally left revision/tombstone ledgers, install/remove transactions, bytecode hardening, and legacy hidden-name migration out. One UX choice I’d especially value your call on: when an inactive user override falls back to a bundled runtime winner, should management show only the actionable installed override (what this scoped version does), or show both the effective winner and override separately? If the core direction looks right, I’ll keep any further hardening in separate follow-ups.
+
+[2026-08-09T11:53:46.898000+00:00] dias4761 (id=1535979403442659429)
+    Imma send DM for u
+    [reply to kxee msg=1535909109063491654]
+
+[2026-08-09T11:58:44.786000+00:00] dias4761 (id=1535980652875350168)
+    <@690519146701783042> I explained the problem to you. Check your DMs when you have a chance.
+
