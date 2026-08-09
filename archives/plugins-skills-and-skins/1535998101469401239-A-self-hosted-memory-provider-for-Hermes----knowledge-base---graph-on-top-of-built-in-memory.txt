@@ -1,0 +1,30 @@
+# Thread '**A self-hosted memory provider for Hermes -  knowledge base + graph on top of built-in memory 🧠**' in forum #plugins-skills-and-skins
+# thread_id=1535998101469401239 forum_id=1485392832154832906
+# Started 2026-08-09T18:42:22.098033+00:00
+
+[2026-08-09T13:08:04.855000+00:00] toomij (id=1535998101469401239)
+    Built another entry for the memory-provider slot and recorded the full install + smoke test. To be clear up front: this runs **alongside** MEMORY.md/USER.md, it doesn't replace them - same as the other providers.
+    
+    Why bother, given built-in memory is solid: built-in is bounded + local + keyword session search, and it's the agent's own notes. This provider adds the stuff you reach for when that's not enough:
+    - a real **knowledge base** — ingests Jira/Confluence/Notion/GitHub/Drive/Slack
+    - **hybrid retrieval** — dense + SPLADE + Neo4j graph (built-in session search is FTS keyword)
+    - typed records (`fact`/`preference`/`pinned`), team-scoped
+    - a **freshness pipeline** for stale/conflicting facts
+    
+    All self-hosted (Docker + Ollama, no external LLM). Selected the normal way — `hermes config set memory.provider metronix` — nothing exotic.
+    
+    Straight up: Hermes already ships self-hosted providers (Hindsight, Holographic, OpenViking...). The reason for this one is the unified KB + connectors + freshness combo in one backend, not "self-hosted" on its own. Curious whether that combo is actually what people want or if I'm overbuilding.
+    
+    🎥 Video: https://youtu.be/Sc6QOyD7Yek?si=HhayPISLxkOnXcU0
+    📦 Provider: https://github.com/mtrnix/hermes-memory-metronix (Apache-2.0)
+    🚀 Metronix Memory: https://github.com/mtrnix/metronix-memory
+    
+    Would love people to break it - provider prefetch/injection is the flaky-looking part and reports there help most. 
+    Also, we're looking for contributors!
+    If you're interested in memory systems, retrieval, agent infrastructure, or open-source AI tooling, we'd love to have you involved. There are plenty of opportunities, from documentation and testing to connectors, retrieval improvements, benchmarking, and new features.
+    Whether you want to fix bugs, review designs, or build something substantial, every contribution helps. Feel free to open an issue, start a discussion, or submit a PR.
+    [attachment] ChatGPT_Image_Aug_9_2026_at_04_03_36_PM.png https://cdn.discordapp.com/attachments/1535998101469401239/1535998101817524345/ChatGPT_Image_Aug_9_2026_at_04_03_36_PM.png?ex=6a79cd34&is=6a787bb4&hm=455d1aa29686e334ffa40b2b36746c0dc85c254dafdf3c1def5df587dccfd613&
+    [embed] Hermes + Metronix: Native Persistent Memory https://www.youtube.com/watch?v=Sc6QOyD7Yek
+    [embed] GitHub - mtrnix/hermes-memory-metronix: Native Metronix memory prov... https://github.com/mtrnix/hermes-memory-metronix
+    [embed] GitHub - mtrnix/metronix-memory: Metronix Memory is self-hosted mem... https://github.com/mtrnix/metronix-memory
+

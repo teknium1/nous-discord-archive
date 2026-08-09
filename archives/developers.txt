@@ -56876,3 +56876,42 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-09T11:58:44.786000+00:00] dias4761 (id=1535980652875350168)
     <@690519146701783042> I explained the problem to you. Check your DMs when you have a chance.
 
+[2026-08-09T13:50:56.671000+00:00] delus_ (id=1536008888447402024)
+    hi <@387972437901312000> I just have a PR about adding config to setup A2A not only for hermes agents, but also others agent kind (tested in Pi family like bare pi, omp, and feynman). 
+    check this out: https://github.com/NousResearch/hermes-agent/pull/82503
+
+[2026-08-09T14:23:08.249000+00:00] hyqqx (id=1536016990072733768)
+    <@387972437901312000> could u check my last results ?
+
+[2026-08-09T14:23:18.520000+00:00] hyqqx (id=1536017033152569384)
+    I did much
+
+[2026-08-09T14:23:29.696000+00:00] hyqqx (id=1536017080028110879)
+    Could i get role?
+
+[2026-08-09T14:55:38.331000+00:00] hyqqx (id=1536025169309470821)
+    <@81637470604627968> <@217473293190430721> <@387972437901312000>
+
+[2026-08-09T15:21:14.831000+00:00] teknium (id=1536031613857702069)
+    If you spam the staff, no
+    [reply to hyqqx msg=1536025169309470821]
+
+[2026-08-09T15:24:40.795000+00:00] hyqqx (id=1536032477733195796)
+    I just want to make sure you're reading, I've written many times and nothing happened. Thanks bro
+    [reply to teknium msg=1536031613857702069]
+
+[2026-08-09T16:45:37.405000+00:00] drexux (id=1536052847832080434)
+    fix(compression): stop the stale-replay prune anchoring on retry scaffolding
+    https://github.com/NousResearch/hermes-agent/pull/82571
+
+[2026-08-09T18:02:35.344000+00:00] irteza080 (id=1536072216872099930)
+    Is it this issue even though I have 1mil context iz still compressing it?
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1536072216494735360/image0.jpg?ex=6a7a123b&is=6a78c0bb&hm=1b13a34156b2e1aa76b3c2e9fa716d61e511b4c5aee56671f0dcbd351c25e706&
+    [reply to drexux msg=1536052847832080434]
+
+[2026-08-09T18:13:52.939000+00:00] jimn235 (id=1536075058911383625)
+    for the one i posted with glm and neomotron 1112k tokens
+
+[2026-08-09T18:14:22.701000+00:00] jimn235 (id=1536075183742386187)
+    it went from (gpt-sol-270k)300->600->1100
+

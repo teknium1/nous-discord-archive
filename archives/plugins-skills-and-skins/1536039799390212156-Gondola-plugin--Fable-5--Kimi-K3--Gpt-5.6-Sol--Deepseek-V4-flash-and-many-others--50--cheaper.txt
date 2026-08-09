@@ -1,0 +1,36 @@
+# Thread 'Gondola plugin: Fable 5, Kimi K3, Gpt-5.6 Sol, Deepseek V4 flash and many others >50% cheaper' in forum #plugins-skills-and-skins
+# thread_id=1536039799390212156 forum_id=1485392832154832906
+# Started 2026-08-09T18:42:21.703697+00:00
+
+[2026-08-09T15:53:46.414000+00:00] xatarrer (id=1536039799390212156)
+    Shipped a model-provider plugin for **Gondola (gondola-ai.com)**, a USDC-settled marketplace
+    for Venice AI inference. (Not the travel-booking Gondola with the MCP entry, different company.)
+    
+    Each request routes to the cheapest supplier on the Venice catalog, so prices sit below Venice
+    list. Pay per request from a USDC balance on Base. No subscription, no Venice account. Prompts
+    and completions are never persisted.
+    
+    Install:
+    
+    ```
+    mkdir -p "$HOME/.hermes/plugins/model-providers"
+    git clone https://github.com/Gondola-Market/hermes-gondola-provider \
+      "$HOME/.hermes/plugins/model-providers/gondola-provider"
+    export GONDOLA_API_KEY=gnd_...
+    ```
+    
+    Gondola then shows up in `hermes model` with a live catalog (filtered to chat-capable models;
+    the raw catalog also has image/video) and a `hermes doctor` connectivity row. 100+ text models: GPT-5.6, Claude Opus 5 and Fable 5,
+    Gemini 3.6 Flash, Grok 4.20, Kimi K3, DeepSeek V4, hermes-3-405b, the venice-uncensored line.
+    Live price comparison vs the official APIs: gondola-ai.com/models.
+    
+    The API also takes accountless per-request x402 payments (402 challenge, USDC on Base) for
+    agents that speak the protocol; the plugin itself uses plain API-key auth.
+    
+    Keys: gondola-ai.com/wallet (format `gnd_...`). Setup guide: gondola-ai.com/guides/hermes-agent.
+    
+    https://github.com/Gondola-Market/hermes-gondola-provider
+    Feedback welcome.
+    [attachment] gondola-mark-tile-512.png https://cdn.discordapp.com/attachments/1536039799390212156/1536044897336037376/gondola-mark-tile-512.png?ex=6a79f8c9&is=6a78a749&hm=f3fda097483c71a3722f9feb81569f02adc0682ab6e78f4d26f8017eaf807bd0&
+    [embed] GitHub - Gondola-Market/hermes-gondola-provider: Gondola (gondola-a... https://github.com/Gondola-Market/hermes-gondola-provider
+
