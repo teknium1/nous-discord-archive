@@ -177,3 +177,22 @@
 [2026-08-08T19:13:20.265000+00:00] unktneemo (id=1535727633495756863)
     [attachment] C__Users_tneemo_Desktop_cogumelo_tutorial_cogumelo_tutorial_final.mp4 https://cdn.discordapp.com/attachments/1534181982639100047/1535727632933589002/C__Users_tneemo_Desktop_cogumelo_tutorial_cogumelo_tutorial_final.mp4?ex=6a78d150&is=6a777fd0&hm=818a40cfbf841db0cdc91afdce280cda5af8626b3220f401d3e33f49952e2e3d&
 
+[2026-08-09T01:34:50.676000+00:00] gluedmosquito (id=1535823642838040666)
+    Github for linux version
+    [reply to gluedmosquito msg=1534822586805129237]
+
+[2026-08-09T01:35:02.397000+00:00] gluedmosquito (id=1535823691999608894)
+    github for windows
+    [reply to gluedmosquito msg=1535016086867677234]
+
+[2026-08-09T01:37:57.572000+00:00] gluedmosquito (id=1535824426736558170)
+    both the windows and linux ones are just tests not really thought well to work well i just wanted to make sure i understand how it works and how i could make it 
+    but yes the goal is to use computer use to get the data about buttons etc and for something like blender we could use a visual model  also with the new HUD mode in hermes desktop this could be great
+
+[2026-08-09T01:41:12.096000+00:00] gluedmosquito (id=1535825242629345280)
+    just remember that the goal is not guiding you only 
+    i want it to be more like a general tool to let hermes show things on the screen and one of those applications is guiding you through an app
+
+[2026-08-09T01:42:32.001000+00:00] gluedmosquito (id=1535825577775341569)
+    like for example drawing diagrams to explain something while you're working
+

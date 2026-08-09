@@ -1,0 +1,35 @@
+# Thread 'Hermes for Home Assistant: Use Hermes as your HA Assistant 🏠🪽' in forum #community-projects-showcase
+# thread_id=1535870874509508649 forum_id=1316137596535177246
+# Started 2026-08-09T06:52:20.605591+00:00
+
+[2026-08-09T04:42:31.584000+00:00] morocodes (id=1535870874509508649)
+    Hermes Assistant is a custom integration that adds a Hermes Agent Gateway as a selectable voice assistant in Home Assistant Assist.
+    
+     I wanted to be able to use my Hermes Gateway as my Voice assistant so I could have the convenience and locality of Home Assistant and it's new Voice features, combined with the superpowers of Hermes. This uses Hermes' API capabilities and exposes them as a simple Assist entity to Home Assistant.
+    
+    🔗 Repo: https://github.com/RichiCoder1/hermes-assistant
+    
+    **Requirements:**
+    - Home Assistant 2025.12.0 or newer
+    - A Hermes Agent Gateway configured with API Server enabled
+    
+    **Highlights:**
+    - Continued conversations with configurable memory sharing
+    - Conversation, device, user, and assistant-wide memory scopes
+    - Voice-focused prompt and response controls
+    - Authenticated local gateway connectivity
+    - Standard installation through HACS
+    
+    **Installation:**
+    1. If you don’t have HACS installed, follow the official setup guide:  
+       https://www.hacs.xyz/docs/use/download/download/
+    2. Open **HACS → Integrations → Custom repositories**
+    3. Add the following URL as an **Integration**:  
+       https://github.com/RichiCoder1/hermes-assistant
+    4. Install **Hermes Assistant** and restart Home Assistant
+    5. Open **Settings → Devices & services → Add integration**
+    6. Select **Hermes Assistant**, then enter your gateway URL and `API_SERVER_KEY`
+    7. Edit your Assist pipeline and select **Hermes Assistant** as its conversation agent
+    
+    Feedback, testing, and contributions are welcome!
+

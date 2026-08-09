@@ -44,3 +44,7 @@
 [2026-08-08T23:30:29.315000+00:00] jimn235 (id=1535792347621757058)
     [attachment] image.png https://cdn.discordapp.com/attachments/1535776831800872991/1535792347349262406/image.png?ex=6a790d95&is=6a77bc15&hm=f7bfe8a7df01d6395324c50c39c0695e7a9130bfc4c08bf40b6b5a8ede39f6db&
 
+[2026-08-09T02:20:29.455000+00:00] jimn235 (id=1535835130109755532)
+    if you don't beleive in ai being scary, this is GLM 5.2, a "nice" model, asked to update the readme, it destroyed the code and did none of teh README updates just tweaked a mermaid box, and committed twice, obfuscating the first act with a reset to the first version
+    [attachment] image.png https://cdn.discordapp.com/attachments/1535776831800872991/1535835129895985234/image.png?ex=6a79356d&is=6a77e3ed&hm=928d1b332e0c0fc314351178afe1104029f9077c3cd7db10134a6d89662cbf6e&
+

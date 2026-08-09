@@ -2641,3 +2641,42 @@
     I know I just posted a photo of my cap but this one is so much better I'm double dipping. Now I can take my autism out into the real world.
     [attachment] IMG_9180.jpg https://cdn.discordapp.com/attachments/1490447053791428718/1534271014567940096/IMG_9180.jpg?ex=6a7384bb&is=6a72333b&hm=b49e9e3a96b6ccc056be80a8b8c85e6742bc88382bc667f990414323d2b269b1&
 
+[2026-08-09T04:17:22.814000+00:00] k.shepherd (id=1535864546269470760)
+    Hey y'all - I'm struggling with getting Mnemosyne installed - I saw the Plugin and was really excited to test this out, I've seemingly got it registered as a Memory provider but the Tools aren't showing up at all --- any tips?
+
+[2026-08-09T04:29:14.026000+00:00] k.shepherd (id=1535867529308807178)
+    Would love some tips or help on getting this setup! Really excited to use this.
+    I've gotten the Memory system working, but the tools are not showing up in Hermes. Memory is working and I can confirm as I also installed the mnemosyne-dashboard that is showing up correctly in the plugins/tools and I can access to see my memory, but I'm not seeing the tools for the mnemosyne memory itself.
+    [reply to nulledvector msg=1490447053791428718]
+
+[2026-08-09T04:48:08.121000+00:00] john_10613 (id=1535872286047993877)
+    ask ai to set it up for you
+    [reply to k.shepherd msg=1535864546269470760]
+
+[2026-08-09T04:48:41.111000+00:00] k.shepherd (id=1535872424418086982)
+    Obviously that is what I've tried. Now Ive run into a block that my AI can't even help with
+    [reply to john_10613 msg=1535872286047993877]
+
+[2026-08-09T04:48:49.388000+00:00] cspiritsong (id=1535872459134341151)
+    disable the original memory, just tell the AI "i just want to use mnemosyne"
+
+[2026-08-09T04:48:55.502000+00:00] cspiritsong (id=1535872484778451035)
+    tell us what the error spat out
+
+[2026-08-09T04:50:46.540000+00:00] k.shepherd (id=1535872950505578617)
+    No Error.
+    Memory is working and running. As I said.. Even the community dashboard is working.
+    
+    But - no tools are being discovered by Hermes
+    [reply to cspiritsong msg=1535872484778451035]
+
+[2026-08-09T05:01:11.789000+00:00] k.shepherd (id=1535875572989952052)
+    I don't need generic skills - the Mnemosyne Hermes Plugin is supposed to come bundled with Tools.... Those tools are not populating when I installed the plugin
+
+[2026-08-09T06:23:57.485000+00:00] john_10613 (id=1535896400628555796)
+    good luck boy
+    [reply to k.shepherd msg=1535875572989952052]
+
+[2026-08-09T06:24:24.437000+00:00] john_10613 (id=1535896513673175060)
+    your not telling us what the errors are and only complaining
+

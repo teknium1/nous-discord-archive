@@ -1,0 +1,21 @@
+# Thread 'ANTI-HALLUCINATON-PROTOCOL' in forum #community-projects-showcase
+# thread_id=1535848282029297704 forum_id=1316137596535177246
+# Started 2026-08-09T06:52:20.973700+00:00
+
+[2026-08-09T03:12:45.117000+00:00] paulina88 (id=1535848282029297704)
+    ANTI-HALLUCINATION FOR HERMES AGENT.
+    (for now AI level, tomorrow I’m adding the HUMAN verification level)
+    https://github.com/antydizajn/anti-hallucination-protocol/tree/main
+    
+    for testing by YOUR agents:
+    https://github.com/antydizajn/anti-hallucination-protocol/blob/main/AUDITS/CANONICAL-AGENT-AUDIT-PROMPT.md
+    
+    tomorrow I’m adding the HUMAN EVALUATION layer as well
+    and for the last 2 days I’ve also been fighting with the f***ing ANTI-SYCOPHANCY, where a shitload of my work is going into manually documenting different FAILURES of my Gniewka from the last 3 months and describing exactly how she should have behaved instead.
+    
+    in the meantime I decided to build anti-hallucination too, and from the f***ed-up V2 we now have V5.4.2, a child of collaboration between 10 different agents in 24h XD
+    I’D ESPECIALLY LOVE TO GET CANONICAL-AGENT-AUDIT-PROMPT.md RUN ON OPUS 5, KIMI K3 AND GLM-5.2.
+    [attachment] Zrzut_ekranu_2026-08-9_o_05.02.39.jpg https://cdn.discordapp.com/attachments/1535848282029297704/1535848282323025950/Zrzut_ekranu_2026-08-9_o_05.02.39.jpg?ex=6a7941ad&is=6a77f02d&hm=ae93a76afe59cc96e29bf9158db213ef8cc95c09cb1383df306aa42afaeb1d9c&
+    [embed] GitHub - antydizajn/anti-hallucination-protocol: Anti-Hallucination... https://github.com/antydizajn/anti-hallucination-protocol/tree/main
+    [embed] anti-hallucination-protocol/AUDITS/CANONICAL-AGENT-AUDIT-PROMPT.md ... https://github.com/antydizajn/anti-hallucination-protocol/blob/main/AUDITS/CANONICAL-AGENT-AUDIT-PROMPT.md
+

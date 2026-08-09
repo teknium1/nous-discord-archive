@@ -16,3 +16,6 @@
 [2026-08-08T23:36:38.633000+00:00] jaideairblade (id=1535793896653594636)
     would be intresting to see for sure
 
+[2026-08-09T04:05:46.952000+00:00] cutepetpig (id=1535861627612831845)
+    Hi. How about Adding Obsidian Vault??? will it work together with this?
+
