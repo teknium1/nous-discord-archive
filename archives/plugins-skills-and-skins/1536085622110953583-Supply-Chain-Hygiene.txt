@@ -1,0 +1,12 @@
+# Thread 'Supply Chain Hygiene' in forum #plugins-skills-and-skins
+# thread_id=1536085622110953583 forum_id=1485392832154832906
+# Started 2026-08-10T01:35:30.617609+00:00
+
+[2026-08-09T18:55:51.402000+00:00] tomrevo.x (id=1536085622110953583)
+    https://github.com/tommulkins/hermes-skill-supply-chain-hygiene?v=2
+    
+    Supply-chain attacks on npm and PyPI are now routine: a compromised package released last week installs silently into a fresh project because there's no lockfile and no one checked when the release landed. This Hermes skill encodes a standing policy so agents apply it automatically — no dependency younger than 14 days, every install vuln-checked, known-vulnerable versions blocked, lockfiles committed immediately, pnpm by default — for TypeScript, JavaScript, and Python projects.
+    
+    The critical gap it closes: Hermes' terminal and execute_code run in non-interactive shells where the user's shell aliases and wrappers do not fire. The skill makes the agent enforce the policy itself, plus ships deterministic gate tools for projects already on disk.
+    [embed] GitHub - tommulkins/hermes-skill-supply-chain-hygiene: A standing p... https://github.com/tommulkins/hermes-skill-supply-chain-hygiene?v=2
+

@@ -1,0 +1,35 @@
+# Thread 'Hermes Control Deck' in forum #community-projects-showcase
+# thread_id=1536118382280179792 forum_id=1316137596535177246
+# Started 2026-08-10T01:28:48.401786+00:00
+
+[2026-08-09T21:06:02.035000+00:00] mgf.654 (id=1536118382280179792)
+    Hermes Control Update
+    
+    Two major additions are now live:
+    
+    • Hermes Gateway & TUI integration with session resume, live prompt streaming, runtime states, and remote Allow/Deny approvals from the mobile control deck.
+    
+    • Experimental Codex Desktop Bridge for Windows with prompt submission, live status, approvals, stop controls, session switching, and reasoning controls.
+    
+    CLI-first remains the default public setup. The Desktop bridge is unofficial, Windows-only, disabled by default, and may require updates when Codex Desktop changes.
+    
+    Complete installation, update, security, and troubleshooting guides are now included.
+    
+    https://github.com/filipj9/Hermes-Control-Deck
+    [attachment] IMG_6792.png https://cdn.discordapp.com/attachments/1536118382280179792/1536118383064518707/IMG_6792.png?ex=6a7a3d3a&is=6a78ebba&hm=fa4ac4538a3e7faa5130da9521e07c2ae7a23bebf0e9e85364e06d8ed6e43cea&
+    [embed] GitHub - filipj9/Hermes-Control-Deck: Hermes Control is a CLI-first... https://github.com/filipj9/Hermes-Control-Deck
+
+[2026-08-09T21:06:33.481000+00:00] mgf.654 (id=1536118514174132305)
+    [attachment] IMG_0340.mov https://cdn.discordapp.com/attachments/1536118382280179792/1536118513331208272/IMG_0340.mov?ex=6a7a3d59&is=6a78ebd9&hm=e0f57ab2bc1ff38af1e98c9f986844f335865596478f30e27b38f598933e48e4&
+
+[2026-08-09T21:06:45.525000+00:00] mgf.654 (id=1536118564690468864)
+    CLI-first commit:
+    https://github.com/filipj9/Hermes-Control-Deck/commit/282e9f6621cb47dd9477a73ca7f19eb37c4df972
+    Experimental Desktop commit:
+    https://github.com/filipj9/Hermes-Control-Deck/commit/d5070f32acea4e71312719c5eda459722fb28497
+    Setup documentation commit:
+    https://github.com/filipj9/Hermes-Control-Deck/commit/c2804d5a5932cb427704d82e25ece887305665ae
+    [embed] feat: add optional Hermes Gateway and TUI integration · filipj9/He... https://github.com/filipj9/Hermes-Control-Deck/commit/282e9f6621cb47dd9477a73ca7f19eb37c4df972
+    [embed] feat: add opt-in experimental Codex Desktop bridge · filipj9/Herme... https://github.com/filipj9/Hermes-Control-Deck/commit/d5070f32acea4e71312719c5eda459722fb28497
+    [embed] docs: add complete CLI and Desktop setup runbooks · filipj9/Hermes... https://github.com/filipj9/Hermes-Control-Deck/commit/c2804d5a5932cb427704d82e25ece887305665ae
+
