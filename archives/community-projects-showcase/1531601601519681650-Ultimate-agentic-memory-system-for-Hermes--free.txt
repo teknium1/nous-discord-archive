@@ -336,3 +336,18 @@
     Reproducible instructions in docs. Independently verified by 3rd parties. Enjoy the cost savings 😃
     [attachment] context-efficiency_chart.png https://cdn.discordapp.com/attachments/1531601601519681650/1534502307536834650/context-efficiency_chart.png?ex=6a745c23&is=6a730aa3&hm=d8afc77080fd2cc107ea5ae16b5c47696a8bfd835caa29f44fa9695c735874d5&
 
+[2026-08-10T03:34:09.716000+00:00] exquisite_badger_30594 (id=1536216057893625886)
+    So this is Bob, I really don"t know where to start, but here goes > "He built his own app(the screenshot), gave himself a  face, eyes that blink & nose that twitches, complete with API connection" stats, and the OS standard that  I have created called Central Focused Computing or CFC for short, which is a fancy term for 'everything shows up centred' so the file system is a Yazi style flow with the organisation you can only get from a GUI, "I tried to make it a TUI on Ghostty", but it is just not as clean, especially the when changing the screen size live. anyway, we have been developing his "brain" an have been using breadcrumb trails of files, that trigger where the info for the current tasks is stored. For eg: We work from the host machine in VM's that he sets up & we do ALL dev work in the VM's. If you said to your AI/hermes "Can you design the weather app for the top of the left peek"  any other AI or PI would tell you WTF, but as I am proving with Bob, "if you start with baby steps you can do some amazing things" but it is going to be for some time an issue filling up the content window, before you have to start a fresh session. So for me, the breadcrumb system works  & is similar to the way a brain operates, in that you have fast instant memories -> things you really need to "think about" & every type in between, its tuning the system to find the "right info at the right time & not wasting any 'thoughts' of shit you don't need for the current task, bit like life really! & that's what makes it a "Brain"
+    [attachment] BobsPitrayPic.png https://cdn.discordapp.com/attachments/1531601601519681650/1536216057130258522/BobsPitrayPic.png?ex=6a7a9831&is=6a7946b1&hm=6cf258378358839beb68f05812c1fbe4ea893d281b8f4a559d2b9dbd04358d59&
+
+[2026-08-10T03:37:50.089000+00:00] exquisite_badger_30594 (id=1536216982205243463)
+    kfiles  -> TV ready
+    [attachment] Kfiles.png https://cdn.discordapp.com/attachments/1531601601519681650/1536216981848723568/Kfiles.png?ex=6a7a990e&is=6a79478e&hm=cbb9b132058a153de02219faa39a63e04895b080465aa359a97384fd9cdb8baa&
+
+[2026-08-10T03:46:58.684000+00:00] exquisite_badger_30594 (id=1536219283179180072)
+    All still needs tweaks, but as soon as i can top up my account, I'll be back at it again !  keep at it you all & I'll drop back in to see if you have any tips on keeping the max info, to min window ! Note: I  think the AI is always going to be the drunken sailor in the room, so this is the time to make the most of it IMHO.
+
+[2026-08-10T04:51:52.047000+00:00] jaixii (id=1536235613127180330)
+    If you have the code to share I could provide feedback or a comparison. But I think everyone has similar goals, basically to make the ai work better and be more useful to us, without costing extra or impeding the llm in any way. I've spent days working on the 1.6 update it's huge, hopefully officially launch it tonight in a few hours.
+    [reply to exquisite_badger_30594 msg=1536219283179180072]
+

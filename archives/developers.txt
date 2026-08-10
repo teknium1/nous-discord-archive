@@ -57055,3 +57055,73 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-10T01:28:11.603000+00:00] minddragon (id=1536184356870160414)
     DM
 
+[2026-08-10T01:34:18.409000+00:00] remintoscar (id=1536185895366041670)
+    https://github.com/NousResearch/hermes-agent/pull/82848
+
+[2026-08-10T02:07:48.528000+00:00] baophan0123 (id=1536194326416330884)
+    could I get dev role ser <@387972437901312000> 
+    here some of my merged PRs: https://github.com/NousResearch/hermes-agent/commits?author=Baophan00
+
+[2026-08-10T03:03:56.967000+00:00] baophan0123 (id=1536208454673371217)
+    https://github.com/NousResearch/hermes-agent/pull/75499
+    
+    https://github.com/NousResearch/hermes-agent/pull/75424
+    
+    https://github.com/NousResearch/hermes-agent/pull/75254
+    
+    https://github.com/NousResearch/hermes-agent/pull/73905
+    
+    https://github.com/NousResearch/hermes-agent/pull/75867
+    
+    https://github.com/NousResearch/hermes-agent/pull/75885
+    
+    https://github.com/NousResearch/hermes-agent/pull/75900
+    
+    https://github.com/NousResearch/hermes-agent/pull/75904
+
+[2026-08-10T03:12:44.083000+00:00] dias4761 (id=1536210665557983303)
+    sir ,Don't worry, they'll give you the dev position eventually, lol
+    [reply to baophan0123 msg=1536208454673371217]
+
+[2026-08-10T03:49:08.886000+00:00] quocanh261997 (id=1536219829286207498)
+    Hi <@387972437901312000> , really appreciate if you could take a look at this. Small fix to re-enable the functionality to rename Thread in discord after creating one. https://github.com/NousResearch/hermes-agent/pull/82911 . Thanks a lot 🙏
+
+[2026-08-10T04:17:54.816000+00:00] kidzhou (id=1536227068361183374)
+    Hey <@387972437901312000> , got a small one open for the qqbot adapter — it was dying silently after reconnect exhaustion, now it hands off to the gateway watcher. https://github.com/NousResearch/hermes-agent/pull/72673 whenever you have a moment 🙏
+
+[2026-08-10T04:22:46.994000+00:00] kxee (id=1536228293844410368)
+    sure
+    [reply to .omgg msg=1536159503198724127]
+
+[2026-08-10T04:32:58.200000+00:00] dias4761 (id=1536230857428443196)
+    hey sir, i send a dm for u
+    [reply to kxee msg=1536228293844410368]
+
+[2026-08-10T04:33:09.448000+00:00] dias4761 (id=1536230904605835284)
+    about that private issue, check when u have time <@690519146701783042>
+
+[2026-08-10T04:36:02.267000+00:00] realadolan (id=1536231629461135441)
+    I reported an issue via GHSA as well, hoping it gets some attention. Thank you 🙂
+
+[2026-08-10T04:59:48.088000+00:00] kxee (id=1536237609788121088)
+    <@153017054545444864> o7
+    [reply to realadolan msg=1536231629461135441]
+
+[2026-08-10T04:59:50.391000+00:00] Translator Bot#1043 (id=1536237619447603230)
+    <@153017054545444864> Ah
+    [reply to kxee msg=1536237609788121088]
+
+[2026-08-10T05:00:32.266000+00:00] kxee (id=1536237795083952169)
+    read the 6th rule and also please dont ping for roles
+    [reply to baophan0123 msg=1536194326416330884]
+
+[2026-08-10T05:01:11.307000+00:00] realadolan (id=1536237958833635369)
+    Love it how it translated it to "Ah" 🤣
+
+[2026-08-10T05:06:24.200000+00:00] baophan0123 (id=1536239271202000957)
+    yes, I noted this, thank you ser
+    [reply to kxee msg=1536237795083952169]
+
+[2026-08-10T05:06:42.041000+00:00] baophan0123 (id=1536239346032836678)
+    <:Prayge:1151275585000185968>
+

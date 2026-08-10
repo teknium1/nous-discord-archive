@@ -28,3 +28,6 @@
     [embed] GitHub - mtrnix/hermes-memory-metronix: Native Metronix memory prov... https://github.com/mtrnix/hermes-memory-metronix
     [embed] GitHub - mtrnix/metronix-memory: Metronix Memory is self-hosted mem... https://github.com/mtrnix/metronix-memory
 
+[2026-08-10T06:16:13.268000+00:00] toomij (id=1536256841426796554)
+    A self-hosted memory provider for Hermes -  knowledge base + graph on top of built-in memory 🧠
+

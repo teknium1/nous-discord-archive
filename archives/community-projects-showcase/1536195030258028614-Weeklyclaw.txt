@@ -1,0 +1,9 @@
+# Thread 'Weeklyclaw' in forum #community-projects-showcase
+# thread_id=1536195030258028614 forum_id=1316137596535177246
+# Started 2026-08-10T07:27:17.588920+00:00
+
+[2026-08-10T02:10:36.337000+00:00] henrymascot_18739 (id=1536195030258028614)
+    Podcast powered autonomosly by a hermes agent (https://superada.ai) but human hosts
+    [attachment] Screenshot_2026-08-10_at_3.10.15_AM.png https://cdn.discordapp.com/attachments/1536195030258028614/1536195030782320750/Screenshot_2026-08-10_at_3.10.15_AM.png?ex=6a7a849c&is=6a79331c&hm=f2b4b29c1989b80a4f5fb9f39566b2e27708a7caa40e1f9adaf891e227fe0023&
+    [embed] SuperAda https://superada.ai/
+

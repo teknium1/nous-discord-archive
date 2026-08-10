@@ -33,3 +33,10 @@
     [embed] feat: add opt-in experimental Codex Desktop bridge · filipj9/Herme... https://github.com/filipj9/Hermes-Control-Deck/commit/d5070f32acea4e71312719c5eda459722fb28497
     [embed] docs: add complete CLI and Desktop setup runbooks · filipj9/Hermes... https://github.com/filipj9/Hermes-Control-Deck/commit/c2804d5a5932cb427704d82e25ece887305665ae
 
+[2026-08-10T05:30:50.582000+00:00] bleddfons (id=1536245421653889086)
+    does this work with claude code cli too?
+
+[2026-08-10T06:01:59.578000+00:00] pak_1148 (id=1536253260791545947)
+    can iphone use this?
+    [reply to mgf.654 msg=1536118564690468864]
+

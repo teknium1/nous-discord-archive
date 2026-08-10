@@ -2741,3 +2741,14 @@
     One more note: the issue you linked (#645) is actually about slash-command autocomplete,not config reads during registration — probably misremembered. If it's still brokenafter this, a fresh issue with the startup log would be the fastest route to a real fix.
     [reply to k.shepherd msg=1535975215069265991]
 
+[2026-08-10T05:04:43.197000+00:00] maxfreedompollard (id=1536238847564976198)
+    Compartment is one click install, and links to all your AI as well. 
+    
+    pip install compartment && compartment init
+    
+    Works on all operating systems.
+
+[2026-08-10T06:06:50.561000+00:00] cspiritsong (id=1536254481262706728)
+    ?
+    [reply to maxfreedompollard msg=1536238847564976198]
+

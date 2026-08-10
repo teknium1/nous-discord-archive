@@ -12,3 +12,7 @@
     📺 YouTube: https://youtu.be/Fp4FnEMj7QI
     [embed] Create Professional Videos Using Hermes Agent + Remotion (2026 Tuto... https://www.youtube.com/watch?v=Fp4FnEMj7QI
 
+[2026-08-10T01:51:01.439000+00:00] admund__ (id=1536190102378774631)
+    Show some example of the video's.   
+    Your video was made with Davinci?
+

@@ -1,0 +1,18 @@
+# Thread 'Are you building AI agents or thinking about turning them into services?' in forum #community-projects-showcase
+# thread_id=1536270567894949898 forum_id=1316137596535177246
+# Started 2026-08-10T07:27:16.893308+00:00
+
+[2026-08-10T07:10:45.913000+00:00] ttdunk (id=1536270567894949898)
+    We’re a small team building a social collaboration platform for AI agents.
+    You can bring your own self-hosted agent into private or group conversations and use it with friends or teammates. We currently support OpenClaw and Hermes, and we’re exploring UGC features so creators can share useful agents and eventually offer agent-based services.
+    We’re still in the early beta stage, so sharing and permission controls are being refined. 
+    If you’re building agents, providing agent-based services, or interested in creator monetization, we’d love to hear your thoughts.
+    Website: https://agino.ai
+    What would be most valuable to you: collaboration, distribution, permissions, or monetization?
+    [attachment] ee9e25c3c4ab972c823d6501275fe958.png https://cdn.discordapp.com/attachments/1536270567894949898/1536270568288944188/ee9e25c3c4ab972c823d6501275fe958.png?ex=6a7acaf6&is=6a797976&hm=12d76085953e04ed60b8a4c561f7b6515671820f050dc9a6d8f81abfa6d2c829&
+    [attachment] eacd3ad4666f7e0346bffa090fcb726d.png https://cdn.discordapp.com/attachments/1536270567894949898/1536270568775745556/eacd3ad4666f7e0346bffa090fcb726d.png?ex=6a7acaf6&is=6a797976&hm=95e98f489181049981e1b17ec38269695a8e2586cd16d65c603bf56a1b8eaa33&
+    [attachment] 26ae28df0e7f88ac9f515fe417ac395b.png https://cdn.discordapp.com/attachments/1536270567894949898/1536270569140518952/26ae28df0e7f88ac9f515fe417ac395b.png?ex=6a7acaf6&is=6a797976&hm=188d0ea1508255c6af7e1647f3f546b136fe1d4c3cdb11e7d0c6c8f4d6643a25&
+    [attachment] 8e596470a3bff0e9d9969f2670902e28.png https://cdn.discordapp.com/attachments/1536270567894949898/1536270569505558548/8e596470a3bff0e9d9969f2670902e28.png?ex=6a7acaf6&is=6a797976&hm=c9c27b2c0c096a4d89dce497ddb1c3b0deccd70c9bfdf3488e2cde998bf060a0&
+    [attachment] 6e87492f9e1ac18deaee253534b121d4.png https://cdn.discordapp.com/attachments/1536270567894949898/1536270569799163945/6e87492f9e1ac18deaee253534b121d4.png?ex=6a7acaf6&is=6a797976&hm=9ef658fc8c24aa0f31f3982c2e4348b94ae94a45badeaeb6dd4686971ee6561a&
+    [embed] 灵络 Agino｜让 Agent 加入社交 https://agino.ai/
+

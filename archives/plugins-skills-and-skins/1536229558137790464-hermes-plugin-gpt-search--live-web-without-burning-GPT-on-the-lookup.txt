@@ -1,0 +1,52 @@
+# Thread 'hermes-plugin-gpt-search: live web without burning GPT on the lookup' in forum #plugins-skills-and-skins
+# thread_id=1536229558137790464 forum_id=1485392832154832906
+# Started 2026-08-10T07:34:29.377192+00:00
+
+[2026-08-10T04:27:48.425000+00:00] realadolan (id=1536229558137790464)
+    **hermes-plugin-gpt-search** is out
+    
+    Live web search for Hermes Agent, powered by OpenAI Codex's standalone search path. Your active model stays the reasoner. The lookup itself isn't a GPT completion turn.
+    
+    **Install**
+    ```
+    hermes plugins install Adolanium/hermes-plugin-gpt-search --enable
+    ```
+    
+    **You need**
+    - Hermes Agent
+    - `codex login` *or* `CODEX_ACCESS_TOKEN` in your Hermes env
+    
+    Then:
+    ```
+    hermes gpt-search doctor
+    ```
+    
+    **What you get**
+    - `gpt_search` — one-shot live search
+    - `gpt_web` — multi-step research (search → open page → find → click)
+    - `/gpt-search <query>` — skill slash, agent answers in a normal chat bubble
+    - `hermes gpt-search search "…"` — terminal, no agent required
+    
+    **Why bother**
+    Reuse the Codex/ChatGPT session you already have. Sticky research sessions so `ref_id`s work across turns. Results cleaned for the context window. Errors that tell the model what to do next instead of dying mid-thought.
+    
+    Repo: https://github.com/Adolanium/hermes-plugin-gpt-search
+    
+    Questions / bugs welcome. If it breaks, `hermes gpt-search doctor` first.
+    [embed] GitHub - Adolanium/hermes-plugin-gpt-search: Codex standalone web s... https://github.com/Adolanium/hermes-plugin-gpt-search
+
+[2026-08-10T04:33:52.718000+00:00] siioh (id=1536231086093373491)
+    replaces web search tool?
+    [reply to realadolan msg=1536229558137790464]
+
+[2026-08-10T04:34:19.871000+00:00] realadolan (id=1536231199981441035)
+    No 🙂 Can work side by side
+    [reply to siioh msg=1536231086093373491]
+
+[2026-08-10T04:34:59.755000+00:00] siioh (id=1536231367267065897)
+    fair, but if this works nicely, I'd probably use this to replace my paid web search and save some money ✅
+    [reply to realadolan msg=1536231199981441035]
+
+[2026-08-10T04:35:13.528000+00:00] realadolan (id=1536231425034952765)
+    I can do that ✅
+
