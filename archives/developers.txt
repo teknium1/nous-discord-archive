@@ -57125,3 +57125,212 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-10T05:06:42.041000+00:00] baophan0123 (id=1536239346032836678)
     <:Prayge:1151275585000185968>
 
+[2026-08-10T07:40:34.296000+00:00] prshv (id=1536278068916916234)
+    <@387972437901312000> random question: do u use Hermes to code, or some other harness??
+
+[2026-08-10T07:47:59.374000+00:00] _ultrainstinct_ (id=1536279935709093981)
+    💀 😞
+    [reply to _ultrainstinct_ msg=1536121695285284874]
+
+[2026-08-10T08:01:09.915000+00:00] realadolan (id=1536283251478364260)
+    fix(tools): only trust read_file empty/past-EOF notes when the read came back empty https://github.com/NousResearch/hermes-agent/pull/83024
+    
+    fix(tools): special-file guard follow-ups: error key on refusal, POSIX-marked tests, unicode-FIFO regression test https://github.com/NousResearch/hermes-agent/pull/83033
+
+[2026-08-10T08:02:56.946000+00:00] kxee (id=1536283700399177758)
+    hermes only
+    [reply to prshv msg=1536278068916916234]
+
+[2026-08-10T08:15:19.830000+00:00] jimn235 (id=1536286816280514601)
+    when you guys test a mod or a plugin for objective performance and response, what's the means to keep two runs isolated,  A one with the mod, and B one without?  just rehome hermes to avoid mixing experiences and skills created and such?
+
+[2026-08-10T08:27:40.771000+00:00] baophan0123 (id=1536289924012052522)
+    just spin up a separate profile per run, skills memories and plugins stay isolated, no need to rehome unless you want the config and auth fully separate too <:4912sadgepray:898917406729191455>
+    [reply to jimn235 msg=1536286816280514601]
+
+[2026-08-10T08:28:03.631000+00:00] jimn235 (id=1536290019893837914)
+    does that rewquire desktop to access profiles?
+
+[2026-08-10T08:29:16.969000+00:00] baophan0123 (id=1536290327495708683)
+    i think no
+    [reply to jimn235 msg=1536290019893837914]
+
+[2026-08-10T08:29:38.115000+00:00] baophan0123 (id=1536290416188723200)
+    you can try profiles work from the CLI too, just hermes profile create test then hermes profile use test, desktop is just another frontend for the same thing
+
+[2026-08-10T08:29:54.178000+00:00] jimn235 (id=1536290483561570305)
+    skills appear to save a lot of time fwiw, i just did A/B run back tro back in different consoles, first one 30 minutes, second one 90 seconds
+
+[2026-08-10T08:31:24.604000+00:00] teknium (id=1536290862835957782)
+    only hermes develops hermes agent
+    [reply to prshv msg=1536278068916916234]
+
+[2026-08-10T08:32:29.043000+00:00] baophan0123 (id=1536291133112582224)
+    oh, what task were you running? br
+    [reply to jimn235 msg=1536290483561570305]
+
+[2026-08-10T08:33:35.790000+00:00] jimn235 (id=1536291413069930538)
+    ```                      ARTEMIS-SSH BUILD MANIFEST
+    ========================================================================
+    
+    TIMELINE  (from file mtimes)
+      Started:      2026-08-09T20:06:09 CDT   (requirements.txt)
+      Completed:    2026-08-09T20:36:15 CDT   (sftp.py — final SFTP fix)
+      Duration:     30 min 06 sec
+    
+    FILE INVENTORY  (measured: wc -l, wc -c)
+      requirements.txt                     2 lines       36 B
+      README.md                          102 lines    3,263 B
+      config/config.example.yaml          40 lines    1,115 B
+      test_integration.py                 54 lines    1,968 B
+      ssh_server/init.py              15 lines      574 B
+      ssh_server/main.py               5 lines       98 B
+      ssh_server/cli.py                  163 lines    4,555 B
+      ssh_server/config.py               155 lines    6,584 B
+      ssh_server/logging_config.py        86 lines    2,546 B
+      ssh_server/auth.py                 215 lines    7,653 B
+      ssh_server/session.py              271 lines    8,155 B
+      ssh_server/sftp.py                  86 lines    3,045 B
+      ssh_server/forwarding.py           139 lines    4,476 B
+      ssh_server/server.py               237 lines    7,982 B
+      ─────────────────────────────────────────────────────────────────
+      TOTAL                            1,570 lines   52,050 B  (50.8 KB)
+    
+    CODE METRICS  (Python source only)
+    ```
+    [reply to baophan0123 msg=1536290416188723200]
+
+[2026-08-10T08:34:03.779000+00:00] baophan0123 (id=1536291530464165968)
+    hi ser, can you check this <:4912sadgepray:898917406729191455>  https://discord.com/channels/1053877538025386074/1491258766648283238/1536194326416330884
+    [reply to teknium msg=1536290862835957782]
+
+[2026-08-10T08:34:58.601000+00:00] dias4761 (id=1536291760404176956)
+    Someone use before orca router?
+
+[2026-08-10T08:35:06.920000+00:00] jimn235 (id=1536291795296583680)
+    B:  TURN 1 WALL-CLOCK: 136.8 seconds (2.3 min), from first file birth to final server shutdown.
+    
+    TIMELINE (T+ = seconds from first artifact)
+      T+0.0s    Batch 1: config.py + hostkey.py + sftp.py written
+      T+28.4s   Batch 2: auth.py + shell.py(v1) written        -- 28.4s gap (model gen)
+      T+42.6s   Batch 3: server.py + init.py + run.py       -- 14.2s gap (model gen)
+      T+52s     uv venv + pip install asyncssh+cryptography      -- 9.2s (dependency setup)
+      T+57.4s   Server first start (host key generated)          -- 5.6s
+      T+59s     nc -z port check: LISTENING                      -- 2.4s
+      T+72.0s   test_integration.py written                      -- 12.2s gap
+      T+75.2s   TEST RUN 1: exec FAILS, sftp/auth PASS           -- 3.2s (test execution)
+      T+~95s    Bug diagnosis: server log read, _bridge found    -- 34.6s (analysis)
+      T+107.4s  shell.py patched (_bridge finally fix)           -- ~12s (patch)
+      T+120s    Server killed + restarted                        -- 17.4s
+      T+126.6s  TEST RUN 2: ALL 4 PASS                           -- restart+test
+      T+136.8s  Server shutdown, log final write                 -- 30.6s
+    
+    ok 2  minutes and change
+
+[2026-08-10T08:35:57.315000+00:00] dias4761 (id=1536292006668668999)
+    I was invited to try out the Orca router, so I wanted to know if they were similar to the OpenRouter in terms of design, etc.
+
+[2026-08-10T08:37:16.863000+00:00] baophan0123 (id=1536292340317032579)
+    oh, thats wild, full server green in 2 min including a mid run bugfix, what made the first one take 30 min then, no skill to lean on?
+    [reply to jimn235 msg=1536291795296583680]
+
+[2026-08-10T08:37:39.554000+00:00] jimn235 (id=1536292435490242561)
+    im testing code quality with/without the adversarial plugin, i didn't write it to troll the hermes agent, it's supposed to improve the yeild
+
+[2026-08-10T08:38:25.402000+00:00] jimn235 (id=1536292627790438421)
+    i gave it criterion  `you have one user turn to do the following: build a fully articulated ssh server.  begin immediately`
+
+[2026-08-10T08:39:55.637000+00:00] dias4761 (id=1536293006263590963)
+    Yeah, I'll also be migrating my models to Hermes soon. I just haven't done it yet because I'm waiting for the OpenAI routes to stabilize more.
+    [reply to jimn235 msg=1536292435490242561]
+
+[2026-08-10T08:40:42.329000+00:00] dias4761 (id=1536293202104029194)
+    It's really rewarding when you configure them with "yolo" and I can literally step away from the computer to grab a coffee without worrying (if it's a task, there's no risk of breaking the machine lol).
+
+[2026-08-10T08:41:20.399000+00:00] jimn235 (id=1536293361781051472)
+    yolo in hermes is a bit less special than qwen/gemini yolo
+
+[2026-08-10T08:41:52.546000+00:00] jimn235 (id=1536293496615473252)
+    just do while true i n bash for that
+
+[2026-08-10T08:55:26.173000+00:00] jimn235 (id=1536296909214453821)
+    i didn't give it a hard language, nice to see a 30 minute *anything *  .  my normal kotlin project tends to work for a a few turns and then gaslight.  even with kimi3 and glm  there is sandbagging
+    [reply to baophan0123 msg=1536292340317032579]
+
+[2026-08-10T08:56:18.936000+00:00] jimn235 (id=1536297130518650920)
+    python is a a positive training bias in comparison
+
+[2026-08-10T09:02:06.333000+00:00] mythrize (id=1536298587607273522)
+    Hi, everyone. got a quick (possibly silly) question: can I use my nous research account to create images using chatgpt5.6?
+
+[2026-08-10T09:03:46.845000+00:00] realadolan (id=1536299009185026048)
+    [attachment] HPV5IujaYAEVY2f.png https://cdn.discordapp.com/attachments/1491258766648283238/1536299008790888538/HPV5IujaYAEVY2f.png?ex=6a7ae572&is=6a7993f2&hm=d538adeb3e1669cd2a5ef4b84cb0cc0caf077da1898184ef6dc7f29757224d72&
+    [reply to mythrize msg=1536298587607273522]
+
+[2026-08-10T09:03:55.073000+00:00] egilewski (id=1536299043695894533)
+    hi ser, can you check this :
+
+[2026-08-10T09:05:28.977000+00:00] mythrize (id=1536299437557551136)
+    so no image generation using chatgpt? is there no way to use chatgpt image generation, e.g. outside of hermes agent?
+    [reply to realadolan msg=1536299009185026048]
+
+[2026-08-10T09:05:34.877000+00:00] ninja_the_real_one_xd (id=1536299462303948841)
+    i have krea2 and minimax h3 in comfyui 😄
+    [reply to realadolan msg=1536299009185026048]
+
+[2026-08-10T09:06:09.264000+00:00] realadolan (id=1536299606533738567)
+    Oh no, actually you can it seems:
+    [reply to mythrize msg=1536299437557551136]
+
+[2026-08-10T09:06:24.005000+00:00] realadolan (id=1536299668361707552)
+    https://portal.nousresearch.com/info check out here under image gen models
+
+[2026-08-10T09:06:34.150000+00:00] realadolan (id=1536299710912921670)
+    FAL billable unit - gpt-image-2 medium quality, FAL billable unit - gpt-image-2 medium quality
+
+[2026-08-10T09:09:50.643000+00:00] baophan0123 (id=1536300535064567808)
+    yes the one turn thing prob helps, no room for the model to gaslight itself into thinking it done <:NousGirlBlue_2:1497529515746918670>
+    [reply to jimn235 msg=1536296909214453821]
+
+[2026-08-10T09:10:32.057000+00:00] selinadina (id=1536300708767469579)
+    Yoo
+
+[2026-08-10T10:00:46.109000+00:00] realadolan (id=1536313350617571388)
+    I wonder if something like this would work for the project. This is from the Pi project. They auto-close all new issues, and only the ones that get a green light can open a PR for that issue.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1536313350193942618/image.png?ex=6a7af2ce&is=6a79a14e&hm=62d70c3eaa57397a6f2de392ca0bbafddfc69d097afc51c9a7ba88c99056a1bd&
+
+[2026-08-10T10:05:19.610000+00:00] jimn235 (id=1536314497764032549)
+    yes the one turn thing prob helps, no
+
+[2026-08-10T10:47:04.224000+00:00] monolith2 (id=1536325002876551229)
+    Yeah, screening contributors for basic sw development competence would go a long way.
+    [reply to realadolan msg=1536313350617571388]
+
+[2026-08-10T10:52:24.850000+00:00] egilewski (id=1536326347679473689)
+    Resistance is futile
+
+[2026-08-10T11:51:00.169000+00:00] coexismail (id=1536341091996016713)
+    Just shipped a fix for something that's been bugging me..
+    when you test a custom endpoint in the settings panel, hermes was showing a green checkmark for basically any HTTP 200 response. even if the server returned a full HTML page instead of a model list. so you'd think your endpoint is working, start a session, and get hit with EmptyStreamError every time.
+    this was reported in issue #83128 ; the handler only checked the status code, never whether the response actually contained a model list or was even JSON.
+    the fix: if /models comes back with no parseable models or the wrong content type, the test button now shows a warning instead of a success. you can still save the endpoint manually, nothing is blocked — just no more false positives.
+    PR: https://github.com/NousResearch/hermes-agent/pull/83172
+    Issue: https://github.com/NousResearch/hermes-agent/issues/83128
+
+[2026-08-10T11:56:05.428000+00:00] sprmn24 (id=1536342372345053304)
+    <@387972437901312000>  ,take a look when you get a chance ser,
+    
+    PR #83175
+    Issue: Slack was the only mature adapter missing send_choice_picker — Telegram, Discord, and Matrix all have it. The /reasoning and /fast slash commands fall back to plain text on Slack instead of rendering an interactive picker.
+    
+    Fix: Adds send_choice_picker with Block Kit buttons, _handle_choice_picker_action with auth bypass guard and double-tap dedup, and hermes_cp_\d+ action handler registration. 14/14 tests passing.
+    
+    https://github.com/NousResearch/hermes-agent/pull/83175
+
+[2026-08-10T12:42:48.705000+00:00] sprmn24 (id=1536354130141118616)
+    Issue: Signal adapter had full media support but no interactive methods — dangerous-command approvals, clarify prompts, and slash confirmations all fell back to plain text with no way to respond interactively.
+    
+    Fix: Adds send_exec_approval, send_clarify, and send_slash_confirm using numbered text menus (Signal has no native buttons). A new _try_intercept_interactive_reply method intercepts single-digit replies and resolves the pending prompt before it reaches the agent loop. Fail-closed. 21/21 tests passing.
+    
+    https://github.com/NousResearch/hermes-agent/pull/83200
+

@@ -159,3 +159,30 @@
     Finna have it test it out and get the results
     [reply to shaf_2665 msg=1536063588995698839]
 
+[2026-08-10T12:17:01.388000+00:00] irteza080 (id=1536347640223244358)
+    You gotta add a login system all the credentials are saved on your device 
+    A proper one ykyk
+    For hall of wisdom cuz i wan use it by attaching it to a website thingy
+    [reply to shaf_2665 msg=1536063588995698839]
+
+[2026-08-10T12:17:53.506000+00:00] shaf_2665 (id=1536347858821840977)
+    So far tested only in windows
+    Not on Linux yet
+    [reply to irteza080 msg=1536070749272543383]
+
+[2026-08-10T12:18:06.126000+00:00] shaf_2665 (id=1536347911753957469)
+    Yeah it's in the checklist
+    [reply to irteza080 msg=1536347640223244358]
+
+[2026-08-10T12:18:48.986000+00:00] shaf_2665 (id=1536348091521835059)
+    Also any suggestions on website UI improvements?
+
+[2026-08-10T12:56:21.430000+00:00] irteza080 (id=1536357538956578817)
+    ya ima make ma agent tst it on linux
+    [reply to shaf_2665 msg=1536347858821840977]
+
+[2026-08-10T12:57:34.226000+00:00] irteza080 (id=1536357844285259777)
+    i checked it out only a bit cuz i need to screen share to my rasberry pi in another country to use it rlly laggy
+    so i juz left it all on my agent
+    [reply to shaf_2665 msg=1536348091521835059]
+

@@ -54,3 +54,9 @@
     ```
     Gondola = live cheapest market price incl. fee (snapshot 2026-08-09). Live board: gondola-ai.com/models
 
+[2026-08-10T09:05:35.626000+00:00] barthazian (id=1536299465445740624)
+    this is the cheapest end point for any model and has encrypted models, only draw back is limited by per day diem lending supply but has been going up consistently
+
+[2026-08-10T09:11:17.371000+00:00] xatarrer (id=1536300898828165140)
+    We currently have around 300 DIEM, which means around $600 worth of inference on a daily basis.
+

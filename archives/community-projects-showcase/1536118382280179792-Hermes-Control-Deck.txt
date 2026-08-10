@@ -40,3 +40,11 @@
     can iphone use this?
     [reply to mgf.654 msg=1536118564690468864]
 
+[2026-08-10T09:53:37.166000+00:00] mgf.654 (id=1536311551500222474)
+    Yes
+    [reply to pak_1148 msg=1536253260791545947]
+
+[2026-08-10T09:53:45.185000+00:00] mgf.654 (id=1536311585134481468)
+    Not yet, only in codex and Hermes now
+    [reply to bleddfons msg=1536245421653889086]
+

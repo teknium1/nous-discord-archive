@@ -1,0 +1,14 @@
+# Thread 'hermes-unraid: read-only Unraid server visibility for Hermes, via GraphQL API' in forum #community-projects-showcase
+# thread_id=1536275446017294418 forum_id=1316137596535177246
+# Started 2026-08-10T13:01:25.810007+00:00
+
+[2026-08-10T07:30:08.948000+00:00] crystalhawk (id=1536275446017294418)
+    I run Hermes in a Docker container on my Unraid box, which means its shell only sees its own container, and the obvious fixes (SSH to the host, mounting the docker socket) hand an autonomous agent way more power than I wanted it to have. 
+    
+    Built a plugin against Unraid's official GraphQL API (Unraid 7+) using a VIEWER-scoped API key. The agent gets real visibility: array and parity health, per-disk status and temps, docker container states, share usage, live CPU/memory, VM states, and Unraid's own notifications. It gets zero ability to change anything - the key is read-only server-side, mutations are refused client-side, and there's a raw read-only GraphQL escape hatch plus a /unraid slash command for quick status from any connected chat.
+    
+    Install:
+    hermes plugins install shanelord01/hermes-unraid
+    Repo with instructions to create the scoped API key: https://github.com/shanelord01/hermes-unraid
+    [embed] GitHub - shanelord01/hermes-unraid: Read-only Unraid server status ... https://github.com/shanelord01/hermes-unraid
+

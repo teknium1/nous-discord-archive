@@ -202,3 +202,9 @@
 [2026-08-09T10:59:42.905000+00:00] unktneemo (id=1535965797149712424)
     was kinda buggy but it was responding whats on the screen
 
+[2026-08-10T11:50:25.290000+00:00] unktneemo (id=1536340945703018587)
+    maybe we should use CUA
+
+[2026-08-10T11:50:41.264000+00:00] unktneemo (id=1536341012702568518)
+    and extend its features
+

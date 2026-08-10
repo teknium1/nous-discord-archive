@@ -6381,3 +6381,9 @@
     Thanks for capturing!
     [reply to kyklooppi msg=1535348160606634126]
 
+[2026-08-10T11:00:27.952000+00:00] cryptobredda (id=1536328373955985458)
+    hey <@933139410281713755>, sorry if I am asking a question that I can easily find the answer on the github but I wanted to just discuss it here first. so I am looking to use the dashboard that you guys provide with a custom android app that I would build. is it easy to build my app on top of your dashboard? is there API / guides on that?
+
+[2026-08-10T11:02:14.842000+00:00] cryptobredda (id=1536328822285406248)
+    the current hermes app that you guys are maintaining has taken a route that I personally would like to divert from. the app is currently heavily customizable and has a lot of stuff in it. but I am looking for a more "codex" approach. where I would have minimum menus and option or settings. just keep it simple where you would have your different servers into different profiles into your different folders / project into chat. makes it much easier to manage, a lot cleaner, more fun to use.
+
