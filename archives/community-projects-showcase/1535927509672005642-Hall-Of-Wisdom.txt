@@ -186,3 +186,7 @@
     so i juz left it all on my agent
     [reply to shaf_2665 msg=1536348091521835059]
 
+[2026-08-10T16:57:39.767000+00:00] shaf_2665 (id=1536418265503371297)
+    i mean I have not yet tested on linux
+    [reply to irteza080 msg=1536357538956578817]
+

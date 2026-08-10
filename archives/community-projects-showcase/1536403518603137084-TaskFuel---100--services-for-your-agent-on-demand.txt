@@ -1,0 +1,40 @@
+# Thread 'TaskFuel — 100+ services for your agent on demand' in forum #community-projects-showcase
+# thread_id=1536403518603137084 forum_id=1316137596535177246
+# Started 2026-08-10T18:53:49.110390+00:00
+
+[2026-08-10T15:59:03.832000+00:00] moritz1509 (id=1536403518603137084)
+    TaskFuel lets your Hermes agent access tools on its own: an inbox of its own, a phone call, a Linux VM by the hour, a domain, a letter in the actual mail, specialised web search, company/people enrichment, SEC filings, market data, OCR, transcription, code execution, image/video/music generation, frontier models.
+    
+    One account, one prepaid balance, priced per call — no separate signup, idle subscriptions and API key for each single tool.
+    The first $5 are for free, no card.
+    
+    TaskFuel is available as MCP, skill and CLI.
+    
+    Let your agent create a song
+    What it does for you through TaskFuel:
+    `→ discover "music generation"  Suno — POST /suno/generate-music
+    → call (dry_run)   $0.10  ·  nothing charged  ·  balance $5.00
+    → call             track.mp3  ·  charged $0.10  ·  balance $4.90`
+    
+    Guardrails: it spends against the prepaid balance and never touches your payment method. Hard $10 ceiling per call, tighten it per call with max_amount_usd. Every cent itemised as it happens.
+    
+    Working on: discovery is keyword search without a ranking yet. ~100 services; if the one you need is missing, one message is enough to get it added.
+    
+    Think about what your agent can do right now. That list got fixed on the day you set it up, and it doesn’t move until you go back and add something yourself.  We want that your agent's capabilities grow with each task.
+    Every tool we add makes every agent out there a little more capable. That’s a good deal for everyone, and it’s why we’re doing this.
+    
+    Blog: https://taskfuel.ai/blog/introducing-taskfuel/
+    Catalog: https://taskfuel.ai/tools/
+    Start with $5 free: https://app.taskfuel.ai/
+    
+    What service is your agent missing? And where did it get stuck?
+    [attachment] taskfuel-promo-v2.png https://cdn.discordapp.com/attachments/1536403518603137084/1536403518905393172/taskfuel-promo-v2.png?ex=6a7b46c7&is=6a79f547&hm=9007c7c14d33df105c26bd5b194722783eea06c4a8806c41f6b8a5114e249b8f&
+
+[2026-08-10T16:39:08.254000+00:00] rolznz (id=1536413603479953530)
+    TaskFuel is awesome because it gives my Hermes many tools without having to manage extra subscriptions. I use it to create images, videos, and songs, and deploy apps, and I'm only charged for what I use.
+
+[2026-08-10T17:06:44.760000+00:00] imadithya (id=1536420551369691262)
+    Yeah, this is honestly pretty refreshing compared to subscription hell 👍
+    
+    Also helps me a lot esp when I want to generate images with the context spread across a filesystem
+

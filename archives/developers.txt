@@ -57334,3 +57334,157 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     https://github.com/NousResearch/hermes-agent/pull/83200
 
+[2026-08-10T13:09:24.608000+00:00] schrauberhirn (id=1536360823843459184)
+    anybody interessted in aligning format and content of logfiles ? https://github.com/NousResearch/hermes-agent/issues/75458
+
+[2026-08-10T13:48:20.186000+00:00] jimn235 (id=1536370619967610890)
+    i have a design to ontologize CAS trimmed-line-signatures and their neighbors
+
+[2026-08-10T13:49:52.317000+00:00] jimn235 (id=1536371006392766565)
+    generally language rewrites seem to be following a minor trend of creating a chump tokenized form, looks like prolog statements
+
+[2026-08-10T13:50:57.846000+00:00] jimn235 (id=1536371281241309325)
+    prefixes and operands are mechnically sympathetic to a compiler's task  vs c++ grammar
+
+[2026-08-10T13:51:08.583000+00:00] jimn235 (id=1536371326275686450)
+    zig is an example of this
+
+[2026-08-10T14:23:02.087000+00:00] monolith2 (id=1536379352093302876)
+    Have you tried replacing the flux capacitor?
+    [reply to jimn235 msg=1536370619967610890]
+
+[2026-08-10T14:25:35.179000+00:00] jimn235 (id=1536379994207682691)
+    have you ever tried coding?
+    [reply to monolith2 msg=1536379352093302876]
+
+[2026-08-10T14:33:50.973000+00:00] monolith2 (id=1536382073718444043)
+    yes, i have masters from software engineering and have been working in IT for 9 years
+    [reply to jimn235 msg=1536379994207682691]
+
+[2026-08-10T14:42:24.813000+00:00] jimn235 (id=1536384228919353436)
+    so ~15 years without exposure to ontologies and logfiles in the same place, a threatening concept for you I imagine !
+    [reply to monolith2 msg=1536382073718444043]
+
+[2026-08-10T14:43:43.087000+00:00] jimn235 (id=1536384557224304820)
+    i was teaching linguistics profs how to use grep before you were born
+
+[2026-08-10T14:46:23.735000+00:00] jimn235 (id=1536385231030849658)
+    in the vein of the flux capacitor "I've forgotten more about code than most people ever learn"
+
+[2026-08-10T14:52:02.503000+00:00] egilewski (id=1536386651926822962)
+    Let's return to the topic of Hermes development before anyone's banned.
+
+[2026-08-10T14:52:02.774000+00:00] monolith2 (id=1536386653063479367)
+    Sorry, I probably just don’t understand your divine knowledge then.
+
+[2026-08-10T14:52:36.465000+00:00] jimn235 (id=1536386794373914636)
+    not takers on logfiles and ontological strategies ?
+
+[2026-08-10T15:28:59.221000+00:00] ruithecat (id=1536395949516263466)
+    that is core team stuff, more or less architectural then a swap
+
+[2026-08-10T15:36:36.578000+00:00] minddragon (id=1536397867810553920)
+    Any reason why we stay on py 3.11?
+    [reply to egilewski msg=1536386651926822962]
+
+[2026-08-10T15:36:57.544000+00:00] jimn235 (id=1536397955748200498)
+    3.14 replaces the gil with threads
+
+[2026-08-10T15:50:36.454000+00:00] gottz.de (id=1536401390505693344)
+    just docs, quick fix. https://github.com/NousResearch/hermes-agent/pull/83296
+
+[2026-08-10T15:58:38.724000+00:00] fueg0 (id=1536403413292548239)
+    just bumping this pull:
+    https://github.com/NousResearch/hermes-agent/pull/77419
+    
+    MiniMax oauth issues have been the root cause of compatibility fails with various new features for a few months now.
+
+[2026-08-10T16:09:32.190000+00:00] egilewski (id=1536406154127741029)
+    I haven't researched, something is broken, but I guess fixing it is just not prioritized, as older versions are more widely available, and support for 3.14 wouldn't provide immediate benefits.
+    
+    Turning off GIL is optional and is (partially) present since 3.13, so that's probably not a blocker.
+    [reply to minddragon msg=1536397867810553920]
+
+[2026-08-10T16:23:03.644000+00:00] bleddfons (id=1536409557612498975)
+    hey devs any recommendations what to do.. its kinda like annoying honestly ive have like 10times
+    [attachment] Screenshot_2026-08-10-23-21-17-194_app.getmoshi.android-edit.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1536409557444722738/Screenshot_2026-08-10-23-21-17-194_app.getmoshi.android-edit.jpg?ex=6a7b4c67&is=6a79fae7&hm=540eacc3f286f6dec74de38a340d530b2d692efb3006bcc4603ed74b6d63d881&
+
+[2026-08-10T16:24:19.155000+00:00] ruithecat (id=1536409874328719380)
+    seems like context space/max ctx is quite low on the model you used or did you set a ctx limit yourself?
+
+[2026-08-10T16:25:31.981000+00:00] ruithecat (id=1536410179782967462)
+    I had this when I did not setup my local model right, the ctx window on the vllm side set too low, hitting compression everytime. you can set a higher rate for compression like 80%, that may help
+
+[2026-08-10T16:25:43.799000+00:00] bleddfons (id=1536410229351387216)
+    nah its from openai subscribption
+
+[2026-08-10T16:26:26.300000+00:00] bleddfons (id=1536410407613239296)
+    they auto compress where on 200k context
+
+[2026-08-10T16:26:48.483000+00:00] bleddfons (id=1536410500655620157)
+    but how does that higher rate for compression works?
+
+[2026-08-10T16:27:14.484000+00:00] ruithecat (id=1536410609711587479)
+    there is a config, default I think is like 50% of session ctx space?
+
+[2026-08-10T16:27:35.900000+00:00] bleddfons (id=1536410699537059971)
+    should i just tell them to change it?
+
+[2026-08-10T16:27:36.308000+00:00] ruithecat (id=1536410701248078044)
+    this stuff
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1536410700732432517/image.png?ex=6a7b4d78&is=6a79fbf8&hm=dcb9df89d6ed0be6d1f799675bdde697ae270638aafe35cd462da26f2de998c3&
+
+[2026-08-10T16:27:55.886000+00:00] bleddfons (id=1536410783364415488)
+    im not on my desktop thoo
+
+[2026-08-10T16:28:13.319000+00:00] bleddfons (id=1536410856483717210)
+    but thats ur config?
+
+[2026-08-10T16:28:14.683000+00:00] ruithecat (id=1536410862204485722)
+    same thing, you do it through cli
+
+[2026-08-10T16:28:29.456000+00:00] ruithecat (id=1536410924167078010)
+    I leave it default, this is default
+
+[2026-08-10T16:28:42.337000+00:00] bleddfons (id=1536410978193903758)
+    ok ima try to ask whats my current config
+
+[2026-08-10T17:39:28.210000+00:00] jaredclucas (id=1536428786676142212)
+    <@387972437901312000> fyi the blender mcp that is added to the optional skills catalog was hacked:
+    
+    https://x.com/sidahuj/status/2086445625147793503?s=46
+
+[2026-08-10T17:41:05.940000+00:00] teknium (id=1536429196585476106)
+    Do you mean their upstream versions were or
+    [reply to jaredclucas msg=1536428786676142212]
+
+[2026-08-10T17:42:23.913000+00:00] teknium (id=1536429523627806914)
+    I will check but I dont think we would be affected, our version for all dependencies, mcps, etc are all version locked from a safe period of at least 2 weeks old
+    [reply to jaredclucas msg=1536428786676142212]
+
+[2026-08-10T17:52:29.043000+00:00] jimn235 (id=1536432061726990387)
+    i do have a serious developer question. especially with mixed context size models, and the ACE (automatic context engineering) -- why not perform a /save on just the context and  swing for the bleachers with a file  summarization?  (instead of trying to compress in memory)
+
+[2026-08-10T17:52:34.628000+00:00] jaredclucas (id=1536432085152043018)
+    Not sure, the hack was yesterday I believe.  Something to keep an eye one!
+    [reply to teknium msg=1536429196585476106]
+
+[2026-08-10T17:56:12.213000+00:00] .omgg (id=1536432997769814077)
+    at least looks like his repo is offline now until they resolve
+    [reply to jaredclucas msg=1536432085152043018]
+
+[2026-08-10T17:56:15.176000+00:00] jimn235 (id=1536433010197667840)
+    gemini flash models report a 1M context size and shut you down hard at 200001 tokens, i've been having to do this anyways, /save, /new
+
+[2026-08-10T18:40:10.768000+00:00] soflowolf (id=1536444064671604847)
+    how i get around this i did oauth with an account that has acess to pro ?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1536444063925010482/image.png?ex=6a7b6c8a&is=6a7a1b0a&hm=a6333680319a438a7e2d72b766dbd7409239de21ff7c4941b0cb1c1d0f434b40&
+
+[2026-08-10T18:52:43.951000+00:00] dando385 (id=1536447223750205452)
+    hey team!  need a maintainer to approve first-time fork CI on #83278 and #82500. workflows are stuck at action_required so checks can’t run.
+    
+    #83278: clean auth fix replacing #80581. please carry over @alt-glitch labels from #80581 
+    #82500: separate test-isolation PR.
+    
+    please let me know if you have any questions, thanks
+

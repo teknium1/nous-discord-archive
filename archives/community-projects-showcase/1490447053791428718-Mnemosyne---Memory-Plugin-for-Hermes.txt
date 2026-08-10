@@ -2752,3 +2752,6 @@
     ?
     [reply to maxfreedompollard msg=1536238847564976198]
 
+[2026-08-10T15:24:19.989000+00:00] nat2r (id=1536394778332373003)
+    I have been using Mnemosyne for quite a while, but Hermes native memory is still active and filled to the brim. Anyone have any experience with this? Actions?
+

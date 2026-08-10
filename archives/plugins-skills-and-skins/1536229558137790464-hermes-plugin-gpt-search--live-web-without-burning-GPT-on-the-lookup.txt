@@ -50,3 +50,12 @@
 [2026-08-10T04:35:13.528000+00:00] realadolan (id=1536231425034952765)
     I can do that ✅
 
+[2026-08-10T15:40:26.865000+00:00] siioh (id=1536398833703981056)
+    I have a concern about this skill possibly breaking Codex ToS. I'm not certain if the backend query path is supposed to be publicly available here (even with a Codex subscription). Codex provides the model endpoints for external use, but accessing the web-search endpoint externally may be unintended.
+
+[2026-08-10T15:41:06.528000+00:00] realadolan (id=1536399000062791710)
+    You might be right. I did reverse engineer it
+
+[2026-08-10T15:43:34.121000+00:00] realadolan (id=1536399619112697896)
+    Switched the plugin repo to private until I check it out. Cheers to the 6 people who got it <:salute:1258583801358057533>
+

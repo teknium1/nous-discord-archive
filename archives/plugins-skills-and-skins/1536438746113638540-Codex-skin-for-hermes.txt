@@ -1,0 +1,20 @@
+# Thread 'Codex skin for hermes' in forum #plugins-skills-and-skins
+# thread_id=1536438746113638540 forum_id=1485392832154832906
+# Started 2026-08-10T19:00:46.793581+00:00
+
+[2026-08-10T18:19:02.725000+00:00] fpsu_ (id=1536438746113638540)
+    Hey! I made a small Hermes Desktop plugin
+    
+    It gives the chat a Codex-style interface without replacing Hermes’ native behavior.
+    
+    It supports light and dark mode.
+    
+     It’s just a plugin file
+    
+    The source and installation steps are here: https://github.com/FPSUnleashed/hermes-codex-skin
+    
+    Thought I'd take the time to share it
+    [attachment] image.png https://cdn.discordapp.com/attachments/1536438746113638540/1536438746541723788/image.png?ex=6a7b6796&is=6a7a1616&hm=349ee4f725636e220ea6a0787b57187484a18b6452a51cff57ee24c4774b69d2&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1536438746113638540/1536438746906370199/image.png?ex=6a7b6796&is=6a7a1616&hm=6d67c6107548e99ec790588a2d8ed573eaa1909bc4dc3a3840a80bee0a396c77&
+    [embed] GitHub - FPSUnleashed/hermes-codex-skin: Codex Skin: a self-contain... https://github.com/FPSUnleashed/hermes-codex-skin
+

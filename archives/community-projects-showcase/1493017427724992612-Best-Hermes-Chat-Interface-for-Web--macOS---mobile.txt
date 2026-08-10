@@ -6387,3 +6387,22 @@
 [2026-08-10T11:02:14.842000+00:00] cryptobredda (id=1536328822285406248)
     the current hermes app that you guys are maintaining has taken a route that I personally would like to divert from. the app is currently heavily customizable and has a lot of stuff in it. but I am looking for a more "codex" approach. where I would have minimum menus and option or settings. just keep it simple where you would have your different servers into different profiles into your different folders / project into chat. makes it much easier to manage, a lot cleaner, more fun to use.
 
+[2026-08-10T17:29:10.643000+00:00] avidfuturist (id=1536426196412403813)
+    Quite easy yes! You can see the entire API here https://get-hermes.ai/api-docs/
+    [embed] Hermes Bridge API https://get-hermes.ai/api-docs/
+    [reply to cryptobredda msg=1536328373955985458]
+
+[2026-08-10T17:29:21.334000+00:00] avidfuturist (id=1536426241253449778)
+    You can build whatever user experience you want on top of it
+
+[2026-08-10T17:29:48.673000+00:00] avidfuturist (id=1536426355921784873)
+    See https://github.com/Hungbocluaqua/hermex-android-port for example
+
+[2026-08-10T17:51:54.047000+00:00] cryptobredda (id=1536431914943127633)
+    Amazing, thank you!
+    [reply to avidfuturist msg=1536426196412403813]
+
+[2026-08-10T18:42:16.812000+00:00] tesao (id=1536444593338585120)
+    so, i can use the desktop app for tests and WebUI for production on a vps?
+    [reply to avidfuturist msg=1535819296666550292]
+
