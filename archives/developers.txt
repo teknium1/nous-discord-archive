@@ -57488,3 +57488,38 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     please let me know if you have any questions, thanks
 
+[2026-08-10T19:55:03.465000+00:00] alteredcode (id=1536462908408594492)
+    can i propose a push for hermes? on windows file reads are handled very bad and in a non native way, taking 30-60 seconds per file read... i implemented read native now is sub 1 second. Also the auto learning and skill writing feature doesn't trigger from kanban tasks. In my case i have Codex coordinating multiple hermes agents/profiles via kanban and it was never improving
+
+[2026-08-10T20:36:42.468000+00:00] realadolan (id=1536473389987008645)
+    Propose a PR and link it here
+    [reply to alteredcode msg=1536462908408594492]
+
+[2026-08-10T20:38:34.358000+00:00] alteredcode (id=1536473859287552050)
+    should i do 2 separate ones one for autolearning from kanban and one for native windows read or i can just do both in 1?
+    [reply to realadolan msg=1536473389987008645]
+
+[2026-08-10T20:38:54.392000+00:00] realadolan (id=1536473943316111472)
+    1 for each feature
+    [reply to alteredcode msg=1536473859287552050]
+
+[2026-08-10T21:19:35.013000+00:00] sea.gpt (id=1536484180022530120)
+    The Codex voice control is absolutely amazing and I'm curious if we are as a community planning on bringing the same feature to the Hermes-Agent harness
+
+[2026-08-10T22:52:49.666000+00:00] joe.young.security (id=1536507645698113607)
+    Does this sound crazy?
+    
+    When `skills.write_approval` is enabled, every attempted skill write should generate a first-class messaging approval request, using the gateway’s existing approval capabilities similarly to dangerous-command approval.
+
+[2026-08-10T23:22:32.925000+00:00] ct0547 (id=1536515125228601414)
+    Mergable PR: https://github.com/NousResearch/hermes-agent/pull/83266
+    
+    This addresses issue https://github.com/NousResearch/hermes-agent/issues/75375
+
+[2026-08-11T00:45:15.632000+00:00] fueg0 (id=1536535940330430544)
+    is there anything at all that I can do to genuinely assist in getting this pushed through?
+    I dont want to whine/beg/be a burden. I have watched and tested various other PRs trying to solve the MiniMax issue(s). 
+    
+    I just want my models to be able to use all the cool new stuff yall have been adding, that's all 🥲
+    [reply to fueg0 msg=1536403413292548239]
+

@@ -6406,3 +6406,7 @@
     so, i can use the desktop app for tests and WebUI for production on a vps?
     [reply to avidfuturist msg=1535819296666550292]
 
+[2026-08-10T20:56:55.056000+00:00] avidfuturist (id=1536478475949711482)
+    Yeah there’s no reason you couldn’t use them together!
+    [reply to tesao msg=1536444593338585120]
+

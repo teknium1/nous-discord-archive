@@ -8,3 +8,62 @@
     Repo Link: https://github.com/Shaf2665/HallOfWisdom
     [embed] GitHub - Shaf2665/HallOfWisdom https://github.com/Shaf2665/HallOfWisdom
 
+[2026-08-11T00:33:43.236000+00:00] shaf_2665 (id=1536533036210983032)
+    🏛️ Hall of Wisdom — Development Update
+    
+    A lot of work has recently gone into making Hall of Wisdom simpler and easier to use.
+    
+    🧠 Wisdom Gateway improved
+    You can now manage much more of the workflow directly from the Gateway.
+    
+    A task can move through:
+    
+    Ask → Plan → Approve → Choose Agent → Prepare → Start → Monitor → Result
+    
+    You can also see the current step and live progress while the agents are working.
+    
+    👀 New “Needs Your Attention” area
+    Hall now collects important things that require your input in one place, such as:
+    
+    Plans waiting for approval
+    Failed or blocked tasks
+    Agent runs that need intervention
+    
+    So instead of searching around the application, Hall tells you what needs your attention.
+    
+    🧭 Simpler UI and navigation
+    The interface has been cleaned up and grouped into just a few main areas:
+    
+    Home • Work • Attention • Team • Settings
+    
+    Advanced information is still available, but technical details are hidden unless you actually need them.
+    
+    💬 Discuss work directly
+    Tasks and plans can now open their own discussion area, making it easier to talk about a task without losing the context.
+    
+    ✅ Better work results
+    After a run finishes, Hall now shows a simple result summary — how many steps completed, what failed, and what may need review.
+    
+    ⚡ In simple terms
+    
+    Hall of Wisdom is moving closer to the idea of:
+    
+    You tell Hall what you want → Hall creates a plan → agents do the work → Hall keeps you updated.
+    
+    The goal is to make multi-agent workflows usable even for people who don't want to deal with complicated agent configuration.
+    
+    🧪 The project is still under active development.
+    
+    Linux testing, bug reports, UI feedback, feature ideas, and contributions are very welcome!
+    
+    More updates soon 🚀
+
+[2026-08-11T01:32:29.172000+00:00] shaf_2665 (id=1536547825058316308)
+    🏛️ Hall of Wisdom Update
+    
+    Cross-platform onboarding is being added!
+    
+    Hall can now be installed and started on Linux/macOS using install.sh and start.sh, alongside the existing Windows setup.
+    
+    Linux testers are welcome — feedback and bug reports are appreciated 🙌
+

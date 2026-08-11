@@ -1,0 +1,12 @@
+# Thread 'Tklr Reminders: Schedule and productivity assistant' in forum #plugins-skills-and-skins
+# thread_id=1536470554683514881 forum_id=1485392832154832906
+# Started 2026-08-11T01:33:25.143982+00:00
+
+[2026-08-10T20:25:26.479000+00:00] rybodium (id=1536470554683514881)
+    I made a skill that lets Hermes Agent use Tklr as a scheduling and productivity engine. You can schedule events, manage tasks, and get reminders without relying on an external calendar such as Google.
+    
+    https://github.com/37Rb/hermes-skills/tree/main/skills/tklr-reminders
+    
+    I'm new to Hermes, is posting here the best way to share the skill with others?
+    [embed] hermes-skills/skills/tklr-reminders at main · 37Rb/hermes-skills https://github.com/37Rb/hermes-skills/tree/main/skills/tklr-reminders
+

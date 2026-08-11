@@ -52,3 +52,9 @@
     but through hermes im sure he can send it to claude code cli if there is atask right?
     [reply to mgf.654 msg=1536311585134481468]
 
+[2026-08-10T19:41:26.361000+00:00] mgf.654 (id=1536459481225891882)
+    yes, it's possible, but Anthropic forbids it and bans accounts for it. I am planning a separate integration with Claude
+
+[2026-08-10T21:21:16.868000+00:00] mgf.654 (id=1536484607233364001)
+    [attachment] IMG_0339.mov https://cdn.discordapp.com/attachments/1536118382280179792/1536484606809866360/IMG_0339.mov?ex=6a7b924c&is=6a7a40cc&hm=07a6f55e0210f2b895eef6a1477f25761229a429c8846a20331ef41dd1e99da0&
+

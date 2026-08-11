@@ -190,3 +190,71 @@
     i mean I have not yet tested on linux
     [reply to irteza080 msg=1536357538956578817]
 
+[2026-08-10T19:48:38.688000+00:00] irteza080 (id=1536461294536892457)
+    Will give you a better thing later it juz ran some simple tests fina put it on github
+    [reply to shaf_2665 msg=1536418265503371297]
+
+[2026-08-10T19:48:40.330000+00:00] irteza080 (id=1536461301424066580)
+    For u
+
+[2026-08-10T19:48:46.059000+00:00] irteza080 (id=1536461325453238442)
+    Like i did last time
+
+[2026-08-10T19:53:20.583000+00:00] irteza080 (id=1536462476890079324)
+    Btw whats a mock agent?
+
+[2026-08-11T00:09:36.417000+00:00] shaf_2665 (id=1536526967812263957)
+    It's for testing purposes 
+    Will be removed after beta release
+    [reply to irteza080 msg=1536462476890079324]
+
+[2026-08-11T00:33:39.125000+00:00] shaf_2665 (id=1536533018968195165)
+    🏛️ Hall of Wisdom — Development Update
+    
+    A lot of work has recently gone into making Hall of Wisdom simpler and easier to use.
+    
+    🧠 Wisdom Gateway improved
+    You can now manage much more of the workflow directly from the Gateway.
+    
+    A task can move through:
+    
+    Ask → Plan → Approve → Choose Agent → Prepare → Start → Monitor → Result
+    
+    You can also see the current step and live progress while the agents are working.
+    
+    👀 New “Needs Your Attention” area
+    Hall now collects important things that require your input in one place, such as:
+    
+    Plans waiting for approval
+    Failed or blocked tasks
+    Agent runs that need intervention
+    
+    So instead of searching around the application, Hall tells you what needs your attention.
+    
+    🧭 Simpler UI and navigation
+    The interface has been cleaned up and grouped into just a few main areas:
+    
+    Home • Work • Attention • Team • Settings
+    
+    Advanced information is still available, but technical details are hidden unless you actually need them.
+    
+    💬 Discuss work directly
+    Tasks and plans can now open their own discussion area, making it easier to talk about a task without losing the context.
+    
+    ✅ Better work results
+    After a run finishes, Hall now shows a simple result summary — how many steps completed, what failed, and what may need review.
+    
+    ⚡ In simple terms
+    
+    Hall of Wisdom is moving closer to the idea of:
+    
+    You tell Hall what you want → Hall creates a plan → agents do the work → Hall keeps you updated.
+    
+    The goal is to make multi-agent workflows usable even for people who don't want to deal with complicated agent configuration.
+    
+    🧪 The project is still under active development.
+    
+    Linux testing, bug reports, UI feedback, feature ideas, and contributions are very welcome!
+    
+    More updates soon 🚀
+

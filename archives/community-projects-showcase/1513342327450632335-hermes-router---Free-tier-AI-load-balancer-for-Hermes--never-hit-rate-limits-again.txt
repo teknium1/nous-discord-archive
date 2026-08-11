@@ -1100,3 +1100,37 @@
     
     Hall of Wisdom is getting closer — testers, contributors, and feedback are all welcome! 🚀
 
+[2026-08-11T00:30:30.832000+00:00] shaf_2665 (id=1536532229210120333)
+    🚀 Hermes Router — Development Update
+    
+    A few major improvements have recently landed in Hermes Router!
+    
+    🤖 Hermes Coding Runtime
+    Hermes Router now includes a local coding runtime that can work with project files, make code changes, and execute commands while using the router for AI inference.
+    
+    🧠 Improved agent compatibility
+    Several changes have been made to improve compatibility between Hermes Router and AI agent/tool workflows.
+    
+    🐳 Better Docker support
+    The coding runtime is now included directly in the Docker images, making it much easier to run Hermes Router and its agent features inside containers.
+    
+    🧩 VS Code extension fixes
+    The VS Code extension now correctly handles Router URLs that include /v1.
+    
+    This fixes issues such as:
+    
+    Dashboard getting stuck on Loading
+    Router status not appearing correctly
+    Chat requests returning 404 errors
+    
+    📚 Documentation improvements
+    The documentation website has also been updated with guides for the new coding runtime, Docker usage, and other recent features.
+    
+    ⚡ In simple terms:
+    
+    Hermes Router is gradually evolving from just an AI model router into a more complete foundation that AI agents and developer tools can use.
+    
+    There is still more work to come, so testing, feedback, bug reports, and contributions are always welcome! 🧪
+    
+    More updates soon 🚀
+

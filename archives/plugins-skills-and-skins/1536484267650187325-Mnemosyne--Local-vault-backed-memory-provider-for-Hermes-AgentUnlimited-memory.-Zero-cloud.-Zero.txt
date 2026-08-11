@@ -1,0 +1,40 @@
+# Thread 'Mnemosyne 🧠Local vault-backed memory provider for Hermes AgentUnlimited memory. Zero cloud. Zero' in forum #plugins-skills-and-skins
+# thread_id=1536484267650187325 forum_id=1485392832154832906
+# Started 2026-08-11T01:33:24.558528+00:00
+
+[2026-08-10T21:19:55.905000+00:00] badstyles (id=1536484267650187325)
+    https://github.com/Devs-Foundation/mnemosyne
+    [embed] Devs-Foundation/mnemosyne https://github.com/Devs-Foundation/mnemosyne
+
+[2026-08-10T21:27:21.183000+00:00] sahil_ss9 (id=1536486135281360946)
+    Might have a problem when the name Mnemosyne is already a well known name in Hermes Agent 😂
+
+[2026-08-10T23:17:45.929000+00:00] skylinx79 (id=1536513921480003594)
+    Wasn't there a thread on Mnemosyne already? Where has it gone?
+
+[2026-08-10T23:18:39.784000+00:00] skylinx79 (id=1536514147364114505)
+    Anyway I just implemented a custom importer for Obsidian notes into Mnemosyne, which happens periodically and also triggers on file system changes. Pretty cool. I have a large knowledge base and now its information can be recalled automatically like other Mnemosyne memories
+
+[2026-08-10T23:43:14.696000+00:00] badstyles (id=1536520333593546753)
+    Hermes Agent has a built-in memory tool limited to ~2.2KB. When it fills up, older entries get compressed or lost. Mnemosyne removes that limit by storing memories as markdown files on your own filesystem — no third-party services, no API keys, no cloud dependencies.
+
+[2026-08-11T00:22:25.040000+00:00] badstyles (id=1536530191650914305)
+    Response to community feedback on Mnemosyne:
+    
+    Thank you for the feedback. To clarify a few points:
+    
+    Regarding the name "Mnemosyne" — Yes, we're aware Hermes has a built-in memory tool also called Mnemosyne. Our plugin is named after the Greek goddess of memory, not as a competing product. The built-in Mnemosyne (2.2KB limited) and our vault-backed Mnemosyne (unlimited storage) are complementary, not competing — our plugin mirrors the built-in memory writes into unlimited markdown files and injects relevant context via prefetch before each turn. They work together.
+    
+    Regarding SkyLinx's Obsidian importer — Interesting approach. Our implementation works in the opposite direction: it writes through to an Obsidian-compatible vault automatically and searches with ripgrep. No periodic imports, no watchers, no watchers — it's automatic write-through.
+    
+    Our plugin is open source on GitHub. If anyone wants to use it or adapt it, they're welcome to.
+    [reply to sahil_ss9 msg=1536486135281360946]
+
+[2026-08-11T00:37:10.968000+00:00] sahil_ss9 (id=1536533907502010371)
+    <@337022564549525504> i was reffering to https://github.com/mnemosyne-oss/mnemosyne
+    [embed] GitHub - mnemosyne-oss/mnemosyne: Zero-cloud AI memory that works e... https://github.com/mnemosyne-oss/mnemosyne
+
+[2026-08-11T00:41:26.451000+00:00] badstyles (id=1536534979075375165)
+    I'm not here to compete, I'm here to share what I use for myself. If something with the same name already exists, congratulations.
+    [reply to sahil_ss9 msg=1536533907502010371]
+

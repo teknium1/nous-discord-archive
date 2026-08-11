@@ -1,0 +1,39 @@
+# Thread '🚀 RTK Hermes Plus — broader token compression for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1536510048120078427 forum_id=1316137596535177246
+# Started 2026-08-11T01:26:26.886350+00:00
+
+[2026-08-10T23:02:22.448000+00:00] aronbijl (id=1536510048120078427)
+    I tested the existing RTK/Hermes adaptations and found that they mainly rewrite terminal commands. That works, but Hermes also produces large results through native tools such as search_files, process, and read_file, which normally never pass through RTK.
+    
+    So I built RTK Hermes Plus.
+    
+    It provides:
+    Transparent RTK rewriting for terminal commands
+    Compression of large native search_files and process results
+    Optional aggressive compression for native read_file
+    Zero standing prompt or tool-schema overhead
+    No extra model-visible tool and no MCP server
+    Full omitted results saved in private rotating recovery files
+    Positive and negative rewrite caching
+    Local-only operation by default
+    Modern Hermes middleware support with an older-hook fallback
+    
+    A guard for RTK’s current pytest double-quiet edge case
+    Content-free runtime savings metrics
+    Using real o200k_base tokenization on deliberately large outputs, I measured:
+    
+    Native search: 99,239 → 2,555 tokens — 97.4% reduction
+    Repetitive process log: 16,999 → 2,296 — 86.5% reduction
+    Aggressive native read: 27,442 → 3,110 — 88.7% reduction
+    Those are result-level benchmarks, not a claim that every complete session becomes 97% cheaper. Small outputs remain untouched, and every transformation fails open if it cannot produce something genuinely smaller.
+    
+    The package currently passes 40 unit tests plus live integration tests against current Hermes and RTK.
+    
+    🔗 https://github.com/AronAxe/RTK-Hermes-plus
+    
+    I’d especially appreciate testing from people running real Hermes workloads. I’m curious how much it saves across complete sessions, which native tools generate the most waste in practice, and whether there are other result types worth compressing without adding prompt overhead.
+    [embed] GitHub - AronAxe/RTK-Hermes-plus https://github.com/AronAxe/RTK-Hermes-plus
+
+[2026-08-11T00:27:39.970000+00:00] pandziocha1337 (id=1536531512562810880)
+    You could send it over to Jetbrains for testing, they've found out that the OG RTK was bullshit and spending more money instead of saving tokens
+
