@@ -1,0 +1,28 @@
+# Thread 'Real-time Voice Mode' in forum #plugins-skills-and-skins
+# thread_id=1536763559059660860 forum_id=1485392832154832906
+# Started 2026-08-11T19:04:31.546955+00:00
+
+[2026-08-11T15:49:44.166000+00:00] geasshin (id=1536763559059660860)
+    Hey everyone, quick question about real-time voice in Hermes.
+    
+    I've been trying GPT Audio / Realtime 2 lately, and honestly, the ChatGPT voice mode is on another level compared to a classic STT + TTS pipeline. Hermes already has a good streaming voice mode with barge-in and wake words, but it's not really the same thing as native audio models like GPT Audio.
+    
+    I'd love to see a small plugin connecting Hermes to those audio-native models someday. It feels like a first step toward a very different way of using a computer, without a mouse or a keyboard, where you just talk to an agent and it actually does things for you. Runs tools, manages other agents and sessions, fixes an issue, commits a change, adds a reminder to your calendar, all of that.
+    
+    So my question is simple: is anyone working on something like this? A plugin, a third-party app that could be integrated into Hermes later, anything. And is it on the core team's roadmap?
+    
+    I know it's still way too expensive to use on a daily basis, so this is more about exploring the idea than actually using it every day. But I have a feeling computing without a mouse and keyboard might become pretty common sooner than we think, especially now that these models can do serious tool calling.
+    
+    Thanks!
+
+[2026-08-11T17:27:09.628000+00:00] sounderstanding (id=1536788076704305193)
+    To get close to ChatGPT convo level we would need a full duplex model that can listen while speaking (can interrupt and be interrupted)
+
+[2026-08-11T17:34:31.912000+00:00] fooned (id=1536789931777724457)
+    Quick scroll of this channel. 
+    
+    https://discord.com/channels/1053877538025386074/1533647495232749638
+
+[2026-08-11T17:34:54.820000+00:00] fooned (id=1536790027860705394)
+    <@580428524574212097> <@720268006554468423>
+

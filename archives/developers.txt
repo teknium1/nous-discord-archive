@@ -57605,3 +57605,76 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Would really appreciate a maintainer's look when you get a chance - thanks!
 
+[2026-08-11T13:24:00.350000+00:00] mariobgsp (id=1536726884836974752)
+    Hi folks, flagging a fix I just pushed: https://github.com/NousResearch/hermes-agent/pull/83902
+    
+    Root cause was a dict-valued model.default sneaking into agent.model and blowing up init with 'dict' object has no attribute 'lower'. On Telegram it looked like a reset loop — every message asked to reset and resetting did nothing. Covered all 7 model-resolution entry points to force dict→string.
+    
+    Would love a review pass whenever someone's free.
+
+[2026-08-11T13:29:19.042000+00:00] fooned (id=1536728221528105071)
+    hey, small fix open for review if you get a chance - Cl's stuck at action_required (first fork PR).
+    
+    https://github.com/NousResearch/hermes-agent/pull/83908 - model_aliases key_env fix
+
+[2026-08-11T13:50:24.572000+00:00] fooned (id=1536733529545637979)
+    Firecrawl issue too. https://github.com/NousResearch/hermes-agent/pull/83916
+
+[2026-08-11T14:31:23.411000+00:00] kidzhou (id=1536743842664022036)
+    Hi maintainers — when you have a moment, could you please review this QQBot fix I opened?
+    
+    https://github.com/NousResearch/hermes-agent/pull/83778 — treat WSMsgType.CLOSING as a terminal disconnect so unclean WebSocket drops don’t pin a CPU core at ~100% (fixes #41872)
+    While looking into QQBot issues, I also noticed this related open PR that would help DM approval clicks:
+    
+    https://github.com/NousResearch/hermes-agent/pull/31593 — accept dm (alongside c2c) in approval-button auth, since C2C sessions use chat_type="dm"
+    No rush at all — thanks so much for your time!<:catlick:1151260427645366375>
+
+[2026-08-11T14:51:54.125000+00:00] rook8286 (id=1536749004652544040)
+    just fund out i have been using deepseek-v4-flash instead of deepseek-v4-flash 0731 since i got my first hermes subscription💀
+
+[2026-08-11T15:15:16.391000+00:00] deer420 (id=1536754886182445117)
+    Lol
+
+[2026-08-11T15:15:23.219000+00:00] deer420 (id=1536754914821283881)
+    They should remove it really
+
+[2026-08-11T15:46:45.107000+00:00] deer420 (id=1536762808031776830)
+    Damn
+
+[2026-08-11T16:18:09.292000+00:00] pringlesbox (id=1536770710876196905)
+    Does anyone know if they plan to merge one of the Github Copilot Enterprise support feature branches? My company has a strict tool validation policy and it would make our adaptation much easier if ghe.com is natively supported.
+
+[2026-08-11T16:20:09.656000+00:00] teknium (id=1536771215719669811)
+    Never heard of citywise <:4Shrug:1151260419265142815>
+    [reply to puneetkaura msg=1536698053371629659]
+
+[2026-08-11T16:52:45.142000+00:00] fooned (id=1536779417622286408)
+    Quick one 😁 https://github.com/NousResearch/hermes-agent/pull/84014
+
+[2026-08-11T17:23:15.294000+00:00] lesga98 (id=1536787093836144640)
+    Hi everyone — is there a native Hermes way to auto-load a skill for a plain Telegram group chat?
+    
+    I currently use a Telegram DM topic with an auto-loaded skill. It works, but I don’t like the Telegram UX because the topic still lives inside the main DM and appears in the “All” view.
+    
+    I’d prefer a completely separate plain Telegram group, without Telegram topics/forums, but with the same behavior: new sessions in that group should automatically load a specific skill.
+    
+    The group routing/security already works, and I can use channel_prompts, but that’s not the same as injecting the full skill.
+    
+    Is channel_skill_bindings supposed to work for plain Telegram groups, e.g.:
+    
+    channel_skill_bindings:
+      - id: "<telegram_group_id>"
+        skills:
+          - "<skill_name>"
+    
+    Or would that require a Telegram adapter change?
+    
+    Trying to avoid a local patch if there’s a native solution. Thanks!
+
+[2026-08-11T17:34:59.215000+00:00] andrexibiza (id=1536790046294941756)
+    https://github.com/NousResearch/hermes-agent/issues/78791
+    [reply to lesga98 msg=1536787093836144640]
+
+[2026-08-11T17:35:30.725000+00:00] andrexibiza (id=1536790178457194536)
+    Lots of Telegram (and Discord) improvements in the works.
+

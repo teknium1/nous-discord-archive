@@ -1721,3 +1721,11 @@
     
     More updates soon 🚀
 
+[2026-08-11T14:53:14.503000+00:00] booksbytesbikes (id=1536749341782450226)
+    Little concerning that this project is 10 months old and only has one other contributor, only 15 PRs, and none of them are from anyone other than the two 
+    
+    Also: I don't get the feature creep into things like VSCode extension and a "coding runtime", whatever that means. There's no shortage of coding scaffolds
+
+[2026-08-11T14:54:11.037000+00:00] booksbytesbikes (id=1536749578903363685)
+    also no discussions section enabled in github
+

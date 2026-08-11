@@ -30,3 +30,6 @@
 [2026-08-04T13:27:15.323000+00:00] maxfreedompollard (id=1534190987553804340)
     **Top 1% of MCP servers in under two weeks. Currently listed on:** [PyPI](<https://pypi.org/project/compartment/>) · [Glama](<https://glama.ai/mcp/servers/@MaxFreedomPollard/Compartment>) · [LobeHub](<https://lobehub.com/mcp/maxfreedompollard-compartment>) · [MCP Toplist](<https://mcptoplist.com/server/io.github.MaxFreedomPollard%2Fcompartment>) · [mcpservers.org](<https://mcpservers.org/servers/maxfreedompollard/compartment>) · [TensorBlock](<https://www.tensorblock.co/mcp/servers/github-maxfreedompollard-compartment-4ab11161>) · [Libraries.io](<https://libraries.io/pypi/compartment>) · [Snyk Advisor](<https://snyk.io/advisor/python/compartment>) · [deps.dev](<https://deps.dev/pypi/compartment>)
 
+[2026-08-11T17:19:56.475000+00:00] maxfreedompollard (id=1536786259928944661)
+    We have added a native Hermes Plugin
+

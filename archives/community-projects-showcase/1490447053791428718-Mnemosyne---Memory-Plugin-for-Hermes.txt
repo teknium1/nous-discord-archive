@@ -2761,3 +2761,23 @@
     memory and (i forgot the other hting) should be off, then memory provider set to mnemosyne via plugin
     [reply to nat2r msg=1536394778332373003]
 
+[2026-08-11T13:42:56.662000+00:00] nat2r (id=1536731650874933258)
+    sure
+
+[2026-08-11T13:43:38.420000+00:00] nat2r (id=1536731826020679844)
+    <@277780011249958922>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1490447053791428718/1536731825693790288/image.png?ex=6a7c788a&is=6a7b270a&hm=b77b61153a82376569a9ba5f38809746fffbe7b0a245af0b2f5e18a4a276fa2c&
+
+[2026-08-11T13:47:45.478000+00:00] nat2r (id=1536732862257172490)
+    I am also going to submit an issue since I've been battling Mnemosyne for days
+
+[2026-08-11T14:00:40.412000+00:00] cspiritsong (id=1536736112565944400)
+    persistent memory and user profile, turn it off
+    [reply to nat2r msg=1536731826020679844]
+
+[2026-08-11T14:01:06.185000+00:00] cspiritsong (id=1536736220665618524)
+    i know it sounds COUNTER-INTUITIVE, but you tell your LLM to "turn off all memory except MNEMOSYNE"
+
+[2026-08-11T14:50:18.272000+00:00] nat2r (id=1536748602615922820)
+    on it, thanks!
+

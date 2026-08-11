@@ -943,3 +943,8 @@
     [attachment] HBE-session-control-command-plane.png https://cdn.discordapp.com/attachments/1519175108697264238/1536651929118183454/HBE-session-control-command-plane.png?ex=6a7c2e21&is=6a7adca1&hm=284755d8ec42a2e6f80a68e065c29cfb66e12a27518915178b1d9550afab05aa&
     [embed] feat(commands): unify Browser runtime controls · abundantbeing/her... https://github.com/abundantbeing/hermes-browser-extension/commit/38ae31a9752dc392239b5746b2f995974500ea69
 
+[2026-08-11T14:24:48.663000+00:00] jonkomet (id=1536742186971037766)
+    https://github.com/abundantbeing/hermes-browser-extension/commit/3cab192653996f2ab4b9aa90e3ac77c6794c95e0
+    [attachment] HBE_-_Phase_2_Control_Boundaries_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1536742187176304820/HBE_-_Phase_2_Control_Boundaries_Update_AD.png?ex=6a7c8230&is=6a7b30b0&hm=01632902bce06aa52a8a9041a91b274bfbec34aeeb107bdb71eafd8963aae77c&
+    [embed] feat: harden browser consent and run control · abundantbeing/herme... https://github.com/abundantbeing/hermes-browser-extension/commit/3cab192653996f2ab4b9aa90e3ac77c6794c95e0
+

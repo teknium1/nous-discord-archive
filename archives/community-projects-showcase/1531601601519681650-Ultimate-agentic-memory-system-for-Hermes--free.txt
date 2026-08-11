@@ -371,3 +371,7 @@
     Finishing up 5 days of work into one major update, 1.6. Comes with a new physics system for fun, but the underlying enhancements for your LLM is the real story
     [attachment] 2026-08-11_03_07_10-Engraphis_Ledger_-_Comet.png https://cdn.discordapp.com/attachments/1531601601519681650/1536638751152017458/2026-08-11_03_07_10-Engraphis_Ledger_-_Comet.png?ex=6a7c21db&is=6a7ad05b&hm=bb817401994df4c712502f18b765dfa40bfe90826eccda709632984fab50af91&
 
+[2026-08-11T16:41:54.491000+00:00] jaixii (id=1536776688594063471)
+    [attachment] 2026-08-11_04_04_22-Engraphis_Ledger_-_Comet.png https://cdn.discordapp.com/attachments/1531601601519681650/1536776688472694804/2026-08-11_04_04_22-Engraphis_Ledger_-_Comet.png?ex=6a7ca252&is=6a7b50d2&hm=90d60361ed6937b5aabba00c95980c8893a9390c40cda043dd273941f6fcbc1d&
+    [reply to jaixii msg=1536380985183182868]
+
