@@ -2755,3 +2755,9 @@
 [2026-08-10T15:24:19.989000+00:00] nat2r (id=1536394778332373003)
     I have been using Mnemosyne for quite a while, but Hermes native memory is still active and filled to the brim. Anyone have any experience with this? Actions?
 
+[2026-08-11T04:27:33.782000+00:00] cspiritsong (id=1536591884586197002)
+    wait, can you check in setting
+    
+    memory and (i forgot the other hting) should be off, then memory provider set to mnemosyne via plugin
+    [reply to nat2r msg=1536394778332373003]
+

@@ -33,3 +33,6 @@
     
     Feedback, testing, and contributions are welcome!
 
+[2026-08-11T03:46:23.135000+00:00] morocodes (id=1536581521941463042)
+    Updated with some fixes around streaming and monitoring Hermes health, planning on adding support for "AI Tasks" in automation which should light up some cool HA native possibilities for agent augmented smart house stuff
+

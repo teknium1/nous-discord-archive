@@ -1,0 +1,35 @@
+# Thread 'Hermes Walkie-Talkie' in forum #community-projects-showcase
+# thread_id=1536604708523868250 forum_id=1316137596535177246
+# Started 2026-08-11T07:02:34.635558+00:00
+
+[2026-08-11T05:18:31.247000+00:00] sahil_ss9 (id=1536604708523868250)
+    Claude Code recently shipped session-to-session messaging—and I wanted the same capability for Hermes.
+    
+    The idea is simple: stop acting as the human message bus between parallel AI sessions.
+    
+    So I built Hermes Walkie Talkie:
+    
+    - Send a summary or question directly to another live Hermes session—not its full history or files.
+    - Receive replies back in the original session.
+    - Let an agent notify another session when its changes affect that agent’s work.
+    - Queue messages safely when the receiving agent is busy.
+    - Keep communication owner-local, with exact-session targeting and delivery receipts.
+    
+    Think backend, frontend, security and QA agents working in parallel—sharing contract changes, findings and blockers without you repeating everything across four terminals.
+    
+    Current state:
+    
+    - V1 standalone repo: https://github.com/Sahil-SS9/hermes-walkie-talkie
+    - Open Hermes core PR: https://github.com/NousResearch/hermes-agent/pull/83661
+    - V1.1 next: groups, broadcasts, structured requests, progress tracking and full multi-agent workflows.
+    
+    Inspired by Claude Code’s implementation here:
+    
+    https://x.com/i/status/2085817074816070014
+    
+    Bug reports, ideas and contributions are welcome.
+    [attachment] file_000000003ee082438beba79be024a044.png https://cdn.discordapp.com/attachments/1536604708523868250/1536604709110947870/file_000000003ee082438beba79be024a044.png?ex=6a7c0227&is=6a7ab0a7&hm=b613c297f7150108f9965bb56a734d617d4ca78270228fc06f165a9e4da3f451&
+    [embed] GitHub - Sahil-SS9/hermes-walkie-talkie: Secure same-machine peer m... https://github.com/Sahil-SS9/hermes-walkie-talkie
+    [embed] feat(plugins): add safe exact-session message delivery seam by Sahi... https://github.com/NousResearch/hermes-agent/pull/83661
+    [embed]  https://twitter.com/i/status/2085817074816070014
+

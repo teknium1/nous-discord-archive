@@ -67,3 +67,67 @@
     
     Linux testers are welcome — feedback and bug reports are appreciated 🙌
 
+[2026-08-11T01:33:59.035000+00:00] shaf_2665 (id=1536548201971060826)
+    **🏛️ Hall of Wisdom Update**
+    
+    Linux/macOS onboarding has now been added!
+    
+    You can install and start Hall using:
+    ./install.sh
+    ./start.sh
+    
+    Windows support remains unchanged.
+    
+    Linux/macOS testers are welcome — please report any issues you find 🙌
+
+[2026-08-11T02:17:34.178000+00:00] shaf_2665 (id=1536559170675937371)
+    **🏛️ Hall of Wisdom Update**
+    
+    Hermes Router setup is now much easier.
+    
+    You can configure Hermes directly from Settings → Hermes Router without manually setting environment variables.
+    
+    Hall will verify the runtime, Python, router connection, and isolation requirements automatically.
+    
+    Feedback and testing are welcome 🙌
+
+[2026-08-11T02:52:18.501000+00:00] shaf_2665 (id=1536567912960098375)
+    **🏛️ Hall of Wisdom Update**
+    
+    Another Hermes execution issue has been fixed.
+    
+    Hall can now correctly handle standard Git LFS setups where the same safe configuration exists at multiple Git levels.
+    
+    Hermes execution, isolated worktrees, events, cancellation and cleanup were also verified end-to-end with the local test runtime.
+    
+    Real Hermes Router and Linux testers are still welcome 🙌
+
+[2026-08-11T04:04:41.106000+00:00] shaf_2665 (id=1536586127165620245)
+    **🏛️ Hall of Wisdom Update**
+    
+    More of the community feedback has been addressed.
+    
+    Hall now supports Node 22 & 24 LTS and a wider pnpm 10 range, making setup easier across different systems.
+    
+    Linux/macOS onboarding and easier Hermes Router setup have also been added.
+    
+    Thanks for the feedback and testing
+
+[2026-08-11T05:54:04.818000+00:00] shaf_2665 (id=1536613657369383037)
+    **🏛️ Hall of Wisdom Update**
+    
+    A new round of community feedback has been addressed.
+    
+    Latest improvements:
+    
+    Cross-platform test fixes for Windows/Linux
+    Easier agent selection directly inside CEO Plan steps
+    CEO Plans now show readable task names instead of raw IDs
+    Wisdom Gateway Send to CEO flow verified working
+    Cancelled CEO Plans can now be safely deleted
+    Additional safeguards prevent deleting plans that still have delegated work or execution history
+    
+    Thanks to everyone testing Hall of Wisdom and reporting issues — the feedback is helping make the project much easier to use. 🙌
+    
+    More testing and contributions are always welcome!
+

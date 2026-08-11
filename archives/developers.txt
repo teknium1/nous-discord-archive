@@ -57523,3 +57523,36 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I just want my models to be able to use all the cool new stuff yall have been adding, that's all 🥲
     [reply to fueg0 msg=1536403413292548239]
 
+[2026-08-11T01:30:16.102000+00:00] andrexibiza (id=1536547266922418337)
+    https://hermes-semantic-interlock-graph.axlibiza.chatgpt.site/
+    [attachment] IMG_3832.png https://cdn.discordapp.com/attachments/1491258766648283238/1536547266633138268/IMG_3832.png?ex=6a7bcca8&is=6a7a7b28&hm=b3874e2a33cf042c8d3e94f7750695bba2af1332177a9e1acdd1e80ed4a510ae&
+
+[2026-08-11T01:32:10.575000+00:00] drgekoz (id=1536547747057115166)
+    Hey all!
+    
+    In light of the Hermes Pixel Office being released --- I am adding a fork + PR today where it will become multiplayer and use a p2p network for verifying leaderboard scores, with auth login for usernames, points for tool uses, stats, upgrades, tiers, and a real-time chatbox as well.
+    
+    This is my first time wanting to contribute to Hermes - I've been using it long enough that I figure I should.
+    
+    I build 'Hermes IdleViber' which basically connected to the Hermes Gateway port to essentially do a similar thing - but now that an official plugin has been created, I can bring some features of my game into the official plugin to enhance it and make it multiplayer.
+    
+    If Hermes devs see any potential security risks at all, please let me know - you are welcome to adopt and merge anything you desire - but I'll also be having a fork where people can use my version if they're not worried about security? (idk if that's a good idea or not) ----- I just have a feeling the p2p leaderboard scoring/verification might open each other to each other in more ways than just sending score packets?
+    
+    If anyone can provide some thoughts on this I'd highly appreciate it!
+    
+    It's building out and migrating features from my old game into the plugin now!
+
+[2026-08-11T01:37:14.115000+00:00] ct0547 (id=1536549020195885197)
+    Can anyone please merge in the fix for the bug on desktop, where when you change profiles and click into messaging it doesn't show the right profiles messaging settings. There is a PR for it already. 
+    
+    This is the PR and i've verified it fixes the issue. https://github.com/NousResearch/hermes-agent/pull/76913
+
+[2026-08-11T06:10:12.468000+00:00] irteza080 (id=1536617715987390556)
+    Anyone here know why this is happening 
+    Was a million b4 now iz 200k....
+    [attachment] Screenshot_20260811_110905_WhatsApp.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1536617715001720882/Screenshot_20260811_110905_WhatsApp.jpg?ex=6a7c0e44&is=6a7abcc4&hm=bcdf739f41dc76d7ba9ddbb2a3386219d4626f86b41b44960196df4c316ae310&
+    [attachment] Screenshot_20260811_110913_WhatsApp.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1536617715727470632/Screenshot_20260811_110913_WhatsApp.jpg?ex=6a7c0e44&is=6a7abcc4&hm=611097635f7ce1768c157b74877c8857af300c073c403d39990d64a943ccfe1e&
+
+[2026-08-11T06:10:16.342000+00:00] irteza080 (id=1536617732236386345)
+    The context
+

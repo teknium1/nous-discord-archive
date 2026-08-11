@@ -37,3 +37,20 @@
 [2026-08-11T00:27:39.970000+00:00] pandziocha1337 (id=1536531512562810880)
     You could send it over to Jetbrains for testing, they've found out that the OG RTK was bullshit and spending more money instead of saving tokens
 
+[2026-08-11T02:13:10.317000+00:00] aronbijl (id=1536558063962685480)
+    That’s a good point. I checked the JetBrains study, and they found that RTK v0.43 increased median billed cost by 7.6% at low reasoning effort and was effectively neutral at high effort. Their central criticism is valid: reducing an individual tool result does not necessarily reduce the total cost of completing a task.
+    
+    Because of your comment, we’ve now changed RTK-Hermes-plus and added a dedicated "native" mode. It compresses only Hermes-native search and process results, registers no terminal middleware, and never invokes RTK. This lets us properly compare normal Hermes, native compression alone, and the complete RTK integration.
+    
+    Our existing tests show 97.4% fewer tokens for oversized native search results and 86.5% fewer for repetitive process logs, but those are result-level measurements—not yet proof of cheaper complete sessions. I’d genuinely welcome JetBrains testing it using actual billed cost, turns, retries, rereads and task quality.
+    
+    The change is already live on GitHub:
+    
+    https://github.com/AronAxe/RTK-Hermes-plus
+    [embed] GitHub - AronAxe/RTK-Hermes-plus https://github.com/AronAxe/RTK-Hermes-plus
+    [reply to pandziocha1337 msg=1536531512562810880]
+
+[2026-08-11T04:38:14.506000+00:00] jaixii (id=1536594571977556018)
+    You need to do proper benchmarks before releasing anything to do with rtk, cause they lied and only tell people how much they saved even if not true. It's fundamentally harmful and must be reworked significantly to be safe. In my testing it cost me up to 1,000% more tokens while telling me I was saving tokens. That's just wrong. I also built an improved rtk that passed some benchmarks, but I don't run it myself. Not sure if it's worth the risk https://github.com/Coding-Dev-Tools/rtk-improved
+    [embed] GitHub - Coding-Dev-Tools/rtk-improved: Universal RTK token optimiz... https://github.com/Coding-Dev-Tools/rtk-improved
+
