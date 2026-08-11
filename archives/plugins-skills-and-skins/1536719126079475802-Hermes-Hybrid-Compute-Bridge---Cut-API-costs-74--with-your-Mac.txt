@@ -1,0 +1,37 @@
+# Thread 'Hermes Hybrid Compute Bridge - Cut API costs 74% with your Mac' in forum #plugins-skills-and-skins
+# thread_id=1536719126079475802 forum_id=1485392832154832906
+# Started 2026-08-11T13:04:33.141046+00:00
+
+[2026-08-11T12:53:10.518000+00:00] isodl (id=1536719126079475802)
+    GitHub: https://github.com/JackTheGit/hermes-hybrid-compute-bridge
+    
+    Route routine Hermes tasks (summaries, formatting, simple code) to your Apple Silicon Mac's local Ollama engine for free, while reserving Claude cloud for complex reasoning.
+    
+    How it works:
+    
+    VPS (Hermes Agent) → router → [Routine?] → SSH tunnel → Mac Ollama (free)
+                                  → [Complex?] → Claude API (as normal)
+    
+    
+    Requirements: Any M-series Mac + a VPS. Just 3 commands:
+    
+    ```bash
+    Mac: start Ollama + open tunnel
+    
+    ./mac-config/setup.sh
+    ssh -R 11434:localhost:11434 hermes@YOUR_VPS
+    
+    VPS: start the router
+    
+    python3 vps-config/simple-router.py
+    ```
+    
+    Results (tested on M3 Max 48GB):
+    - "say hello" → Mac's phi4-mini (0s, free)
+    - "design architecture" → Claude cloud (correct routing)
+    - 74% estimated monthly savings for solo devs
+    
+    Feedback is appreciated!
+    [attachment] Screenshot_2026-08-11_at_11.03.43.png https://cdn.discordapp.com/attachments/1536719126079475802/1536719126314221578/Screenshot_2026-08-11_at_11.03.43.png?ex=6a7c6cb6&is=6a7b1b36&hm=b5f1d55d9fd622aade63e27c35c6f2e30ed3a26d4918298727d1eb0e12f5772b&
+    [embed] GitHub - JackTheGit/hermes-hybrid-compute-bridge: A secure, hybrid ... https://github.com/JackTheGit/hermes-hybrid-compute-bridge
+

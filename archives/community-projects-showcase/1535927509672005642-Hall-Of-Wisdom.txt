@@ -331,3 +331,51 @@
     
     More testing and contributions are always welcome!
 
+[2026-08-11T08:59:27.907000+00:00] irteza080 (id=1536660310985801799)
+    it logs in on my device
+    but when i try to access it on my browser using cloudflare and a domain it shows this
+    [attachment] image.png https://cdn.discordapp.com/attachments/1535927509672005642/1536660310717370479/image.png?ex=6a7c35ef&is=6a7ae46f&hm=ac259717cde5442efdc8a3ffb890a546d53eddb21a2f687c043145746f1de90b&
+    [reply to shaf_2665 msg=1536613670753411072]
+
+[2026-08-11T09:00:37.998000+00:00] shaf_2665 (id=1536660604968894474)
+    So it's working in localhost but not in hosted machine right?
+    [reply to irteza080 msg=1536660310985801799]
+
+[2026-08-11T09:02:35.110000+00:00] irteza080 (id=1536661096172363806)
+    ya the cloudflare is set up on the same thing as the device running this
+    [reply to shaf_2665 msg=1536660604968894474]
+
+[2026-08-11T09:02:43.976000+00:00] irteza080 (id=1536661133358800986)
+    also whats this?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1535927509672005642/1536661133040287824/image.png?ex=6a7c36b3&is=6a7ae533&hm=d1cfe2826d68df7bf5dec3faf814466bc94a96628cea10157ce14d667f4c60d0&
+
+[2026-08-11T09:03:11.364000+00:00] irteza080 (id=1536661248232656957)
+    screen sharin to my pi from another country is rlly annoying
+    [attachment] image.png https://cdn.discordapp.com/attachments/1535927509672005642/1536661247594856528/image.png?ex=6a7c36cf&is=6a7ae54f&hm=add00123f5396b5d6cc88ef708a5cf849d5cf8ecf08127e1aaaa5e0cdb23cce7&
+
+[2026-08-11T09:04:19.483000+00:00] irteza080 (id=1536661533944324096)
+    i mean how do you get it?
+    [reply to irteza080 msg=1536661133358800986]
+
+[2026-08-11T09:17:54.070000+00:00] shaf_2665 (id=1536664950569705483)
+    Hermes-router base url
+    [reply to irteza080 msg=1536661133358800986]
+
+[2026-08-11T12:19:34.309000+00:00] irteza080 (id=1536710669485740074)
+    you gotta add an option to input images/files or what not and make the ui 
+    like an actual thing like take a look at z code smth like that and in a way you can see what the ceo is telling the agents and what the agents are doing 
+    and have you configured the thing so it knows which Ai model to use for what tasks from the configured providers which have their keys  in hermes router?
+    [reply to shaf_2665 msg=1536664950569705483]
+
+[2026-08-11T12:20:24.818000+00:00] irteza080 (id=1536710881335967845)
+    iz still showin the same error but works on the PI
+    [attachment] image.png https://cdn.discordapp.com/attachments/1535927509672005642/1536710881222856704/image.png?ex=6a7c6508&is=6a7b1388&hm=7445415c96ac1c3b7803a4c8913a413bc98fe56c9d374d2139c574f1f613cad5&
+    [reply to irteza080 msg=1536660310985801799]
+
+[2026-08-11T12:20:59.563000+00:00] shaf_2665 (id=1536711027067060224)
+    Create separate issues for each fix
+    Will solve one by one
+
+[2026-08-11T12:24:03.577000+00:00] shaf_2665 (id=1536711798877720747)
+    <@673178562181857310>
+

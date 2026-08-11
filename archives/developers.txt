@@ -57556,3 +57556,52 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-11T06:10:16.342000+00:00] irteza080 (id=1536617732236386345)
     The context
 
+[2026-08-11T08:02:44.808000+00:00] yasya_eth (id=1536646037354057748)
+    <@387972437901312000> Thanks for merged my code😊   I'm glad to be a contributor
+    
+    im cryptoyasenka on githab
+    https://github.com/NousResearch/hermes-agent/issues/57240#event-29171209028
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1536646036993482804/image.png?ex=6a7c28a4&is=6a7ad724&hm=ccc55264ee014706b006778f36a4e66c1ef72ee1aa931390fc7928ee35caf718&
+
+[2026-08-11T09:06:15.264000+00:00] hanifdotexe (id=1536662019565162496)
+    Why does the latest version of the Hermes agent always throw this kind of error when using 9router and a model from Antigravity (Gemini)? @here
+    
+    ```
+    
+    ❌ antigravity [429]: [429]: { "error": { "code": 429, "message": "Resource has been exhausted (e.g. check quota
+    [09:01:08] ⚠️ [FALLBACK] ⇄ ACC:azxazxazxazx@gmail.com UNAVAILABLE (429) → NEXT ACCOUNT
+    [09:01:08] 🔵 ▶ POST claude → antigravity/gemini-3.6-flash-high · FMT: claude→antigravity · STREAM · 1 MSG · 22 TOOL · THINK:high · ACC:azxazxazxazx@gmail.com
+    [09:01:08] 🔵 ⚙ CAVEMAN:ultra · PONYTAIL:ultra
+    [09:01:23] 🔵 ✗ ERROR 429 · antigravity/gemini-3.6-flash-high · 15006ms URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse [429]: { "error": { "code": 429, "message": "Resource has been exhausted (e.g. check quota).", "status": "RESOURCE_EXHAUSTED" } }
+    [09:01:23] ⚠️ [AUTH] hadespro2002@gmail.com locked modelLock_gemini-3.6-flash-high for 32s [429]
+    ❌ antigravity [429]: [429]: { "error": { "code": 429, "message": "Resource has been exhausted (e.g. check quota
+    [09:01:23] ⚠️ [FALLBACK] ⇄ ACC:azxazxazxazx@gmail.com UNAVAILABLE (429) → NEXT ACCOUNT
+    [09:01:23] ⚪ ▶ POST claude → antigravity/gemini-3.6-flash-high · FMT: claude→antigravity · STREAM · 1 MSG · 22 TOOL · THINK:high · ACC:azxazxazxazx@gmail.com
+    ```
+
+[2026-08-11T09:09:38.371000+00:00] kyssta69 (id=1536662871457660939)
+    your account session expired probably or creds all used up
+
+[2026-08-11T09:22:11.532000+00:00] yeesil (id=1536666030443724821)
+    I think most of the fixes have been resolved, and as a result, the number of merges has decreased considerably
+
+[2026-08-11T09:43:00.103000+00:00] hanifdotexe (id=1536671267330195487)
+    It doesn't seem to be the case, because it worked fine when I used the previous version—using the same model and the same method.
+    [reply to kyssta69 msg=1536662871457660939]
+
+[2026-08-11T11:29:26.393000+00:00] puneetkaura (id=1536698053371629659)
+    Where can I find the list of Citywise Hemes Communities - want to check if any meetups are happening
+
+[2026-08-11T11:29:40.054000+00:00] puneetkaura (id=1536698110670278737)
+    cc <@387972437901312000>
+    [reply to puneetkaura msg=1536698053371629659]
+
+[2026-08-11T12:19:58.441000+00:00] b__gz (id=1536710770702942248)
+    Hi all, I opened A PR a few days back: https://github.com/NousResearch/hermes-agent/pull/80799 
+    
+    It picked up a `needs-decision` label plus a couple of sweeper risk tags.
+    
+    We've been running this fix in production for several days now with good results, and left the details in a PR comment. 
+    
+    Would really appreciate a maintainer's look when you get a chance - thanks!
+
