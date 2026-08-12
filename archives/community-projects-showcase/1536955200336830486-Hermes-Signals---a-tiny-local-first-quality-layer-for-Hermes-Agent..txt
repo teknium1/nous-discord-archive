@@ -1,0 +1,35 @@
+# Thread 'Hermes Signals — a tiny local-first quality layer for Hermes Agent.' in forum #community-projects-showcase
+# thread_id=1536955200336830486 forum_id=1316137596535177246
+# Started 2026-08-12T07:20:48.851970+00:00
+
+[2026-08-12T04:31:15.007000+00:00] decruxrp (id=1536955200336830486)
+    🚨 Hermes Signals is live.
+    
+    A small local-first quality layer for Hermes Agent that catches:
+    
+    ❌ false success
+    🔁 retry loops
+    ✏️ unverified changes
+    🔐 secret risk
+    
+    No GPU. No API key. No hosted service. No outbound telemetry.
+    
+    Install:
+    
+    hermes plugins install DECRUX9812/hermes-signals --enable
+    
+    Then run:
+    
+    hermes signals demo
+    
+    Please try it on some messy real-world traces and tell me where it gets things wrong.
+    
+    ✅ correct
+    ❌ false positive
+    🛠️ policy needs changing
+    
+    Repo:
+    https://github.com/DECRUX9812/hermes-signals
+    [attachment] image.png https://cdn.discordapp.com/attachments/1536955200336830486/1536955200730955827/image.png?ex=6a7d4893&is=6a7bf713&hm=60f5dbf53099ccbcdf3a37a44d731dfcf745299e56178877c6a782f06ecd0797&
+    [embed] GitHub - DECRUX9812/hermes-signals: Local-first deterministic behav... https://github.com/DECRUX9812/hermes-signals
+

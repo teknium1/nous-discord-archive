@@ -57766,3 +57766,183 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-12T01:34:29.406000+00:00] thomasgreen4 (id=1536910717221871797)
     How to connect Hermes to TikTok?
 
+[2026-08-12T03:31:17.546000+00:00] realadolan (id=1536940111491764324)
+    Desktop vibe hearts
+    
+    Floating hearts on thanks/ily were always on, and Message Reactions in Settings looks related but only does tapbacks. Added a real Vibe Hearts toggle (default on):
+    
+    - Issue: https://github.com/NousResearch/hermes-agent/issues/84272
+    - PR: https://github.com/NousResearch/hermes-agent/pull/84273
+
+[2026-08-12T04:22:31.804000+00:00] delus_ (id=1536953005864394762)
+    Excalidraw in desktop
+    
+    I like excalidraw and pretty like the excalidraw editing in Claude desktop, so I cook it into Hermes Desktop. Take a look any chance
+    
+    - PR: https://github.com/NousResearch/hermes-agent/pull/84096
+
+[2026-08-12T04:37:16.732000+00:00] austinthetaco (id=1536956717521174639)
+    I'm thoroughly confused. I'm using the subscription proxy for an app to use my nous portal subscription api pricing on hermes 4 but i cannot for the life of me find ANYWHERE that lists the hermes 4 or other nous model pricing
+
+[2026-08-12T04:37:40.406000+00:00] austinthetaco (id=1536956816817266789)
+    like why the heck is it not listed in the info page
+
+[2026-08-12T04:39:48.549000+00:00] kyssta69 (id=1536957354287824936)
+    https://github.com/NousResearch/hermes-agent/pull/84298
+    
+    **Problem**: Fixed #84289: execute_code now treats only omitted enabled_tools as the legacy all-tools fallback; explicit empty and non-overlapping restrictions expose no sandbox helpers. Added local regression tests.
+
+[2026-08-12T04:45:09.731000+00:00] realadolan (id=1536958701422780416)
+    You're fast af boii
+    [reply to kyssta69 msg=1536957354287824936]
+
+[2026-08-12T04:45:34.732000+00:00] kyssta69 (id=1536958806284566593)
+    meh no got flagged as duplicated already
+    [reply to realadolan msg=1536958701422780416]
+
+[2026-08-12T04:45:43.020000+00:00] realadolan (id=1536958841047220354)
+    Damn
+
+[2026-08-12T04:45:51.923000+00:00] realadolan (id=1536958878389108817)
+    Should have used Grok to make it faster
+
+[2026-08-12T04:45:58.837000+00:00] kyssta69 (id=1536958907388534884)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1536958906922836068/image.png?ex=6a7d4c06&is=6a7bfa86&hm=dd7be0ed43a85248ce36789c10d6883cf42a95cf05ca6e6567f0968d76cbd481&
+
+[2026-08-12T04:46:08.486000+00:00] kyssta69 (id=1536958947859103834)
+    i only have 1 sub, gpt plus
+    [reply to realadolan msg=1536958878389108817]
+
+[2026-08-12T04:46:16.272000+00:00] realadolan (id=1536958980516085831)
+    The slowest one 🙁
+    [reply to kyssta69 msg=1536958947859103834]
+
+[2026-08-12T04:46:27.118000+00:00] kyssta69 (id=1536959026007375912)
+    yea <:SadHamster:1220957637089427466>
+
+[2026-08-12T04:46:31.224000+00:00] Translator Bot#1043 (id=1536959043229319189)
+    as <:Chathamster:12200
+    [reply to kyssta69 msg=1536959026007375912]
+
+[2026-08-12T04:46:34.868000+00:00] kyssta69 (id=1536959058513363015)
+    me poor
+
+[2026-08-12T04:48:15.027000+00:00] delus_ (id=1536959478610661416)
+    apply to codex oss program bro
+    [reply to kyssta69 msg=1536958947859103834]
+
+[2026-08-12T04:48:32.135000+00:00] delus_ (id=1536959550366810183)
+    $200 pro plan x 6 months
+
+[2026-08-12T04:48:32.887000+00:00] kyssta69 (id=1536959553520930846)
+    whats that
+
+[2026-08-12T04:48:49.253000+00:00] delus_ (id=1536959622165045289)
+    https://openai.com/form/codex-for-oss/
+
+[2026-08-12T04:49:05.106000+00:00] delus_ (id=1536959688657207306)
+    for free
+    [reply to delus_ msg=1536959550366810183]
+
+[2026-08-12T04:49:10.495000+00:00] kyssta69 (id=1536959711260188712)
+    oh but im not really a maintainer at hermes-agent, tho i am a active contributer
+
+[2026-08-12T04:49:42.335000+00:00] delus_ (id=1536959844806955058)
+    do you have any project in hermes eco?
+
+[2026-08-12T04:49:51.397000+00:00] kyssta69 (id=1536959882815864923)
+    none big
+
+[2026-08-12T04:49:55.993000+00:00] kyssta69 (id=1536959902092894289)
+    12 stars max
+
+[2026-08-12T04:50:01.709000+00:00] delus_ (id=1536959926067273738)
+    that enough bro
+
+[2026-08-12T04:50:32.265000+00:00] delus_ (id=1536960054228680714)
+    apply it and fill the box with: you project is belong to hermes agent eco system - part of make the world AGI closer :))
+
+[2026-08-12T04:50:48.498000+00:00] kyssta69 (id=1536960122314559578)
+    hmm yes
+    [reply to delus_ msg=1536960054228680714]
+
+[2026-08-12T04:51:11.726000+00:00] delus_ (id=1536960219740119132)
+    then when you wake up you got the mail of free $1k2
+
+[2026-08-12T04:51:23.908000+00:00] kyssta69 (id=1536960270834864148)
+    dam
+
+[2026-08-12T04:52:06.198000+00:00] delus_ (id=1536960448212107275)
+    i think this program is LLM verified only
+
+[2026-08-12T04:52:28.664000+00:00] delus_ (id=1536960542441480323)
+    so write something that gpt model will cry is enough to pass :v
+
+[2026-08-12T04:52:35.177000+00:00] kyssta69 (id=1536960569758711839)
+    yea
+
+[2026-08-12T04:52:40.883000+00:00] kyssta69 (id=1536960593691545711)
+    i should just ask gpt to check my repos
+
+[2026-08-12T04:52:45.911000+00:00] kyssta69 (id=1536960614780375131)
+    and tell me which one to submit
+
+[2026-08-12T04:52:51.062000+00:00] kyssta69 (id=1536960636385501245)
+    <:Hehe:1084659733736206376>
+
+[2026-08-12T04:59:27.941000+00:00] delus_ (id=1536962301016412191)
+    i have a question. my change is a lil couple with the hermes desktop, so should i decouple it? at start I think of making the same as Kanban plugin did, but it was impossible to do without touching some panes features
+    [reply to delus_ msg=1536953005864394762]
+
+[2026-08-12T05:14:12.898000+00:00] realadolan (id=1536966012795093092)
+    Btw Claude also has this system
+
+[2026-08-12T05:14:14.079000+00:00] realadolan (id=1536966017748705301)
+    for OSS
+
+[2026-08-12T05:14:30.678000+00:00] kyssta69 (id=1536966087370080266)
+    yea
+
+[2026-08-12T05:14:36.358000+00:00] kyssta69 (id=1536966111193473024)
+    but very unlikely i would get anything from them
+
+[2026-08-12T05:15:07.209000+00:00] realadolan (id=1536966240592076841)
+    Well, worth to try
+
+[2026-08-12T05:15:16.179000+00:00] realadolan (id=1536966278214975598)
+    Tell ChatGPT to write the absolute giga plan
+
+[2026-08-12T05:20:14.843000+00:00] kyssta69 (id=1536967530902458399)
+    500 characters max
+
+[2026-08-12T05:20:16.172000+00:00] kyssta69 (id=1536967536476819577)
+    ass
+
+[2026-08-12T05:55:26.055000+00:00] realadolan (id=1536976385967394927)
+    Well it's ChatGPTs problem, not yours
+
+[2026-08-12T05:55:28.552000+00:00] realadolan (id=1536976396440576131)
+    Tell him Good luck
+
+[2026-08-12T05:55:43.955000+00:00] kyssta69 (id=1536976461045702697)
+    it failed to maek it 500 characters
+
+[2026-08-12T05:55:46.728000+00:00] kyssta69 (id=1536976472676241419)
+    i had to type manually
+
+[2026-08-12T06:18:43.693000+00:00] berni0695 (id=1536982248086183946)
+    Hey, we are an industrial distributor. 
+    
+    We want to use Hermes Agents to automate the order processing function at our company.
+    
+    Usecase: a customer places an order via email, the person processing it would reach out to shipping vendors to get shipping quotes. Some of those vendors might have follow-up questions.
+    
+    Once the person received a competitive quote, they will respond to the customer with a confirmation email.
+    
+    What's the best way to ensure that a single agent can manage an email inbox autonomously. How do we store context per customer and is able to maintain context across multiple threads (e.g. some suppliers do not respond on the same email conversation, they start new email threads).
+    
+    Has anyone built something similar?
+
+[2026-08-12T06:46:09.129000+00:00] julientalbot (id=1536989149545103420)
+    Hey Nous Research team, tiny xAI catalog fix: I use grok-4.6 and Hermes was treating it as grok-4 (256K + no reasoning.effort). Live API is 500K and the effort dial works. https://github.com/NousResearch/hermes-agent/pull/84341
+

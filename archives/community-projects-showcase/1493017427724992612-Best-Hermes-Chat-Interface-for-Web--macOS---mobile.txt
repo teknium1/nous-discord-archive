@@ -6410,3 +6410,6 @@
     Yeah there’s no reason you couldn’t use them together!
     [reply to tesao msg=1536444593338585120]
 
+[2026-08-12T06:34:50.253000+00:00] josephcy (id=1536986302132650046)
+    is it just me, because i have been noticing this issue for a long time, but the default model selection keep bugging to a wrong default model... I use CPA and have models name with different prefix like  openrouter/gpt-5.6-sol and codex/gpt-5.6-sol  and it keeps jumping between them
+

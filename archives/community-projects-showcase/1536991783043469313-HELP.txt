@@ -1,0 +1,17 @@
+# Thread 'HELP' in forum #community-projects-showcase
+# thread_id=1536991783043469313 forum_id=1316137596535177246
+# Started 2026-08-12T07:20:48.346825+00:00
+
+[2026-08-12T06:56:37.004000+00:00] berni0695 (id=1536991783043469313)
+    Hey, we are an industrial distributor. 
+    
+    We want to use Hermes Agents to automate the order processing function at our company.
+    
+    Usecase: a customer places an order via email, the person processing it would reach out to shipping vendors to get shipping quotes. Some of those vendors might have follow-up questions.
+    
+    Once the person received a competitive quote, they will respond to the customer with a confirmation email.
+    
+    What's the best way to ensure that a single agent can manage an email inbox autonomously. How do we store context per customer and is able to maintain context across multiple threads (e.g. some suppliers do not respond on the same email conversation, they start new email threads).
+    
+    Has anyone built something similar?
+

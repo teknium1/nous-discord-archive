@@ -1729,3 +1729,23 @@
 [2026-08-11T14:54:11.037000+00:00] booksbytesbikes (id=1536749578903363685)
     also no discussions section enabled in github
 
+[2026-08-12T06:36:52.113000+00:00] shaf_2665 (id=1536986813250666548)
+    Fair point 👍
+    
+    Most of the recent backend work is actually because I'm trying to connect Hermes Router natively with my other project, Hall of Wisdom.
+    
+    The goal is still to keep Hermes Router focused mainly on routing, while things like the coding runtime and VS Code support stay more like optional integrations.
+    
+    I also agree that I need to explain that separation better in the docs. And yeah, enabling GitHub Discussions is a good idea too.
+    
+    Thanks for pointing it out!
+    [reply to booksbytesbikes msg=1536749341782450226]
+
+[2026-08-12T06:59:52.280000+00:00] booksbytesbikes (id=1536992602090381352)
+    buddy if you're going to reply to me using an AI, or this is an AI, we're done conversing.  Stop it.
+    [reply to shaf_2665 msg=1536986813250666548]
+
+[2026-08-12T07:09:03.516000+00:00] shaf_2665 (id=1536994914141732884)
+    Sorry about I thought of explaining to you clearly would help
+    [reply to booksbytesbikes msg=1536992602090381352]
+
