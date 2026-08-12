@@ -1,0 +1,53 @@
+# Thread 'Hermes Desktop Plugin - Session Stats' in forum #plugins-skills-and-skins
+# thread_id=1536850638171013120 forum_id=1485392832154832906
+# Started 2026-08-12T01:51:27.812637+00:00
+
+[2026-08-11T21:35:45.444000+00:00] tomrevo.x (id=1536850638171013120)
+    I wanted a way to analyze a session for failed tool calls and performance so I built this:
+    https://github.com/tommulkins/hermes-plugin-session-stats
+    
+    Peruse your sessions and use the "Ask AI" feature to have an LLM judge what went wrong and what could make it better in a new session.
+    
+    Here's an actual example:
+    
+    ```
+    Analyze this Hermes agent session and tell me what went wrong and how to improve the next one.
+    
+    - Session ID: 20260810_164716_649ac0
+    - Title: Verify Hermes runtime and MacBook specs
+    - Source: desktop  ·  Model: gpt-5.6-luna
+    - Started: Aug 10, 04:47 PM  ·  Duration: 20m
+    - Messages: 59  ·  Tool calls: 36
+    - Tokens — input: 147.1k  output: 19.3k  cache read: 1.77M  cache write: 0
+    - Spend: —  (included)
+    - Summary: 36 tool calls across 8 tool types (2 failed); 0 file writes (config.yaml, SKILL.md)
+    
+    Tool usage (calls / failures):
+    - terminal: 11 (1 failed)
+    - skill_view: 7
+    - web_search: 6
+    - web_extract: 5
+    - search_files: 3
+    - skill_manage: 2 (1 failed)
+    - execute_code: 1
+    - read_file: 1
+    
+    Failed tool calls (up to 20):
+    - terminal [call_mWe2yTWcxJElz2aj2bO7jQH4]: [exit 1]
+    - skill_manage [call_snh7sg1ORUxbBFhilxAvJBcd]: Could not find a match for old_string in the file
+    
+    Did you mean one of these sections?
+      45| Mention a URL only if the …
+    
+    You can look up the full session (messages, tool calls, reasoning) by its session id if needed.
+    
+    Answer with:
+    1. What failed and why — the root cause of each failed tool call.
+    2. How the session could have been more compact — token/cache usage, redundant work, context bloat.
+    3. Concrete Hermes config or workflow suggestions to reduce failures and cost next time (e.g. compression thresholds, tools, model choice, prompt changes).
+    4. A short checklist for the next session based on this one.
+    
+    ```
+    [attachment] screenshot.png https://cdn.discordapp.com/attachments/1536850638171013120/1536851344969830410/screenshot.png?ex=6a7ce7d9&is=6a7b9659&hm=2f567cac44442a2bfe9cedca6e65fb1e90169ea7d56b73b90044aab3109931ef&
+    [embed] GitHub - tommulkins/hermes-plugin-session-stats: Per-session analyt... https://github.com/tommulkins/hermes-plugin-session-stats
+

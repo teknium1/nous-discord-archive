@@ -1,0 +1,17 @@
+# Thread 'Hermes Live Activity Visual Sigil Machine' in forum #community-projects-showcase
+# thread_id=1536845324583178290 forum_id=1316137596535177246
+# Started 2026-08-12T01:44:07.571284+00:00
+
+[2026-08-11T21:14:38.586000+00:00] dman5000 (id=1536845324583178290)
+    Guys, I’ve been working on a LIVE activity visual extension HUD to Hermes desk top app. The Hermes Sigil Live Activity Overlay is a transparent Windows desktop extension that turns Hermes Desktop activity into a live, animated visual experience. As Hermes thinks, searches, browses, executes tools, creates content, monitors tasks, or responds, the sigil reacts in real time through animated nodes, mechanical motion, workflow paths, status effects, and completion signals.
+    
+    A privacy-preserving local bridge connects directly to Hermes without exposing prompts, responses, files, credentials, or other sensitive content. The overlay also includes customizable interaction controls, click-through functionality, hotkeys, and a built-in Activity Inspector for monitoring and troubleshooting Hermes activity.
+    
+    In short, it gives Hermes a live visual presence on your desktop, allowing you to see what your AI agent is doing without needing to constantly watch the Hermes application itself. The graphics hardly even take up 5% of my GPU so it could also be ran on a laptop
+     I would love you hear the feed back this video below is a full demonstration to what I have done now. 
+       THIS IS V1 
+    so it’s going to have a lot more features soon.
+    
+    https://youtu.be/e5fNQr6uvQM?is=Pgu8AD82K0xw1HSy
+    [embed] Hermes Agent Live Activity Visual Sigil Machine Extension App @Nou... https://www.youtube.com/watch?v=e5fNQr6uvQM
+

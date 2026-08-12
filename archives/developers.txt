@@ -57678,3 +57678,91 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-11T17:35:30.725000+00:00] andrexibiza (id=1536790178457194536)
     Lots of Telegram (and Discord) improvements in the works.
 
+[2026-08-11T19:00:49.664000+00:00] victoryisnear. (id=1536811648843776132)
+    <@387972437901312000> How can I contact with support, 48 hours I don't receive answer to my email, agent don't work.
+
+[2026-08-11T19:02:29.497000+00:00] victoryisnear. (id=1536812067573604484)
+    Hi, maybe you can help?)
+    [reply to andrexibiza msg=1536790178457194536]
+
+[2026-08-11T19:04:33.652000+00:00] teknium (id=1536812588317548615)
+    Agent dont work is not something our nous portal staff deals with
+    [reply to victoryisnear. msg=1536811648843776132]
+
+[2026-08-11T19:04:38.701000+00:00] teknium (id=1536812609494323320)
+    Please start a <#1485307775444844625>
+
+[2026-08-11T19:05:54.443000+00:00] victoryisnear. (id=1536812927179563088)
+    But I payed subscription on Nous Portal,  but balance still 0.7 $, and agent don't use credits of subscription and go by API to OpenRouter.
+    [reply to teknium msg=1536812588317548615]
+
+[2026-08-11T19:07:19.940000+00:00] teknium (id=1536813285779706007)
+    Ok it'd be good to explain the problems you have so we can properly address them rather than vague things like agent dont work 🙃
+    [reply to victoryisnear. msg=1536812927179563088]
+
+[2026-08-11T19:07:24.413000+00:00] teknium (id=1536813304540954734)
+    <@411637224476770325> will help you with nous portal
+
+[2026-08-11T19:50:51.232000+00:00] kainan_e (id=1536824238332313670)
+    Resolved ^^
+
+[2026-08-11T19:53:58.749000+00:00] kythi (id=1536825024835485857)
+    Hi, 
+    Which model(s) are you using to:
+    
+    * Build and code your n8n workflows
+    * Create plans and architectures
+    * Build agents
+    * Manage your infrastructure?
+    
+    I’ve been testing Claude, Codex, and DeepSeek V4, but after several days I’m still struggling to compare them fairly.
+    
+    I’d also be interested to know which reasoning level you use — low, medium, high, etc. — and why, especially in terms of quality, speed, and cost.
+    
+    Thanks!
+
+[2026-08-11T19:56:06.302000+00:00] razortango (id=1536825559831547905)
+    With the current promo I've been using DeepSeel Flash exclusively, had really crap results on medium reasoning though, max seems quite a bit better.
+    Personally have some very basic monitoring in n8n and plan to leave it fully for Hermes crons + Grafana + Pushover
+    For building agents, at least what I do, DeepSeek seems fine, similar for infra management, as long as I review it to some extent
+
+[2026-08-11T20:52:02.714000+00:00] serefseref (id=1536839637643960391)
+    I’ve been working on one-click plugin installs for Hermes Desktop,  so plugin authors can link directly from a website and open an install flow in Hermes via `hermes://plugin/install?repo=`.
+    
+    PR is up and all checks are passing. Would love feedback/upvotes if you think this is a useful direction 🙌 https://github.com/NousResearch/hermes-agent/pull/82735
+    [attachment] Screenshot_2026-08-11_at_15.30.11.png https://cdn.discordapp.com/attachments/1491258766648283238/1536839637350219886/Screenshot_2026-08-11_at_15.30.11.png?ex=6a7cdcf2&is=6a7b8b72&hm=2fe8e7949efd63f41036521de04e246fc95bb574e8323117609b46f118aedda7&
+
+[2026-08-11T21:53:29.977000+00:00] .omgg (id=1536855103146041546)
+    left A note
+    [reply to serefseref msg=1536839637643960391]
+
+[2026-08-11T22:32:44.274000+00:00] adamludwin (id=1536864977783226490)
+    <@387972437901312000> could you help w/a merge of the latest here.now skill PR #32889, which has been open since May. Latest push fixes a bug for mac app users. would love a merge when someone has a minute. 🙏🙏🙏
+
+[2026-08-11T22:32:57.345000+00:00] adamludwin (id=1536865032606973952)
+    https://github.com/NousResearch/hermes-agent/pull/32889
+
+[2026-08-11T23:20:17.487000+00:00] robert190114 (id=1536876945025929236)
+    Hey everyone. I’m still getting familiar with everything happening here, but I’d be grateful if my experience could be useful to the community in some way.
+    
+    I have spent 11+ years working across AI/ML, full-stack development, backend systems, cloud infrastructure, automation, and production software. I also lead my own software development team.
+    
+    I’d be grateful if my experience could help the community grow, not just one person or one project.
+    That could mean sharing tech knowledge, exchanging ideas, joining discussions, and sharing what I have learned from real projects. I think.
+    I also want to learn from different backgrounds and experiences of here people.
+    
+    If what I have can be helpful in better discussions, stronger ideas, or more collaboration within the community, I would be very happy to contribute. 🤝
+
+[2026-08-12T00:18:49.673000+00:00] b__gz (id=1536891676201713746)
+    Following up on https://github.com/NousResearch/hermes-agent/pull/80799.
+    
+    Context on why we care: we're using Hermes for graph engineering - multi-step pipelines where each step builds on the last. Without this fix that's blocked: in oneshot mode the agent's context gets indiscriminately reset between steps, because `--resume` is accepted but silently ignored, so every step starts from zero with no warning.
+    
+    It's tagged `needs-decision`, so mostly just needs a maintainer call on direction. Happy to adapt to whichever way you want to go 🙏
+
+[2026-08-12T01:34:26.302000+00:00] thomasgreen4 (id=1536910704202747905)
+    Hey team
+
+[2026-08-12T01:34:29.406000+00:00] thomasgreen4 (id=1536910717221871797)
+    How to connect Hermes to TikTok?
+

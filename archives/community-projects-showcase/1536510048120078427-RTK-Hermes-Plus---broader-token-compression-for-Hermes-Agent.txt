@@ -54,3 +54,6 @@
     You need to do proper benchmarks before releasing anything to do with rtk, cause they lied and only tell people how much they saved even if not true. It's fundamentally harmful and must be reworked significantly to be safe. In my testing it cost me up to 1,000% more tokens while telling me I was saving tokens. That's just wrong. I also built an improved rtk that passed some benchmarks, but I don't run it myself. Not sure if it's worth the risk https://github.com/Coding-Dev-Tools/rtk-improved
     [embed] GitHub - Coding-Dev-Tools/rtk-improved: Universal RTK token optimiz... https://github.com/Coding-Dev-Tools/rtk-improved
 
+[2026-08-11T21:29:25.802000+00:00] admund__ (id=1536849045836791808)
+    navigationnavigation
+

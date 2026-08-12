@@ -1,0 +1,36 @@
+# Thread 'RTK Hermes Plus' in forum #plugins-skills-and-skins
+# thread_id=1536855137019232296 forum_id=1485392832154832906
+# Started 2026-08-12T01:51:27.138872+00:00
+
+[2026-08-11T21:53:38.053000+00:00] aronbijl (id=1536855137019232296)
+    I tested the existing RTK/Hermes adaptations and found that they mainly rewrite terminal commands. That works, but Hermes also produces large results through native tools such as search_files, process, and read_file, which normally never pass through RTK.
+    
+    So I built RTK Hermes Plus.
+    
+    It provides:
+    Transparent RTK rewriting for terminal commands
+    Compression of large native search_files and process results
+    Optional aggressive compression for native read_file
+    Zero standing prompt or tool-schema overhead
+    No extra model-visible tool and no MCP server
+    Full omitted results saved in private rotating recovery files
+    Positive and negative rewrite caching
+    Local-only operation by default
+    Modern Hermes middleware support with an older-hook fallback
+    
+    A guard for RTK’s current pytest double-quiet edge case
+    Content-free runtime savings metrics
+    Using real o200k_base tokenization on deliberately large outputs, I measured:
+    
+    Native search: 99,239 → 2,555 tokens — 97.4% reduction
+    Repetitive process log: 16,999 → 2,296 — 86.5% reduction
+    Aggressive native read: 27,442 → 3,110 — 88.7% reduction
+    Those are result-level benchmarks, not a claim that every complete session becomes 97% cheaper. 
+    
+    It includes a dedicated "native" mode. It compresses only Hermes-native search and process results, registers no terminal middleware, and never invokes RTK. This lets us properly compare normal Hermes, native compression alone, and the complete RTK integration.
+    
+    🔗 https://github.com/AronAxe/RTK-Hermes-plus
+    
+    I’d especially appreciate testing from people running real Hermes workloads. I’m curious how much it saves across complete sessions, which native tools generate the most waste in practice, and whether there are other result types worth compressing without adding prompt overhead.
+    [embed] GitHub - AronAxe/RTK-Hermes-plus https://github.com/AronAxe/RTK-Hermes-plus
+

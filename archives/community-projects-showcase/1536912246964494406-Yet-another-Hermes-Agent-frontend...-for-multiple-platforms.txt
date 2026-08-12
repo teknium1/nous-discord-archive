@@ -1,0 +1,11 @@
+# Thread 'Yet another Hermes Agent frontend... for multiple platforms' in forum #community-projects-showcase
+# thread_id=1536912246964494406 forum_id=1316137596535177246
+# Started 2026-08-12T01:44:06.134977+00:00
+
+[2026-08-12T01:40:34.125000+00:00] iggyswildride (id=1536912246964494406)
+    I made a cross platform Hermes UI with flutter. It builds for Android, Linux, Windows, Mac, iOS, and web. 
+    
+    It's still quite young, but would love to hear any feedback anybody has. 
+    
+    I'm still working on getting it into app stores, but for now the releases page has pre-built packages for all of the supported platforms.
+

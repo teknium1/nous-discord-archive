@@ -948,3 +948,8 @@
     [attachment] HBE_-_Phase_2_Control_Boundaries_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1536742187176304820/HBE_-_Phase_2_Control_Boundaries_Update_AD.png?ex=6a7c8230&is=6a7b30b0&hm=01632902bce06aa52a8a9041a91b274bfbec34aeeb107bdb71eafd8963aae77c&
     [embed] feat: harden browser consent and run control · abundantbeing/herme... https://github.com/abundantbeing/hermes-browser-extension/commit/3cab192653996f2ab4b9aa90e3ac77c6794c95e0
 
+[2026-08-11T19:50:24.779000+00:00] jonkomet (id=1536824127380262983)
+    https://github.com/abundantbeing/hermes-browser-extension/commit/5a37c6819e339b1294166f4ebbf7e4ebb149e174
+    [attachment] HBE_-_Multi-Browser_Shell_Capability_Truth_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1536824127703486504/HBE_-_Multi-Browser_Shell_Capability_Truth_Update_AD.png?ex=6a7cce80&is=6a7b7d00&hm=c8a9a44413e2c2c7e9dfea0e1e143288b4e55ab77337bf6ac67763ea78813267&
+    [embed] feat: add multi-browser capability truth · abundantbeing/hermes-br... https://github.com/abundantbeing/hermes-browser-extension/commit/5a37c6819e339b1294166f4ebbf7e4ebb149e174
+
