@@ -60,3 +60,8 @@
 [2026-08-10T09:11:17.371000+00:00] xatarrer (id=1536300898828165140)
     We currently have around 300 DIEM, which means around $600 worth of inference on a daily basis.
 
+[2026-08-12T16:15:42.169000+00:00] xatarrer (id=1537132481663475833)
+    Who wants to be the first to try our x402?
+    https://x402-list.com/services/gondola
+    [embed] Gondola | x402 AI API | x402 List https://x402-list.com/services/gondola
+

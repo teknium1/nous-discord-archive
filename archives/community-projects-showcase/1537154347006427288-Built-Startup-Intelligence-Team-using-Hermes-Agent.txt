@@ -1,0 +1,16 @@
+# Thread 'Built Startup Intelligence Team using Hermes Agent' in forum #community-projects-showcase
+# thread_id=1537154347006427288 forum_id=1316137596535177246
+# Started 2026-08-12T18:58:34.400291+00:00
+
+[2026-08-12T17:42:35.273000+00:00] viky_shetye (id=1537154347006427288)
+    Hey everyone! 👋 I built a 4-agent Startup Intelligence team using Hermes Agent.
+    
+    Instead of asking one AI for startup ideas, I created specialized agents for market research, competitive analysis, orchestration, and skeptical review. They coordinate through Hermes Kanban, run research tasks in parallel, audit weak claims, and turn the findings into ranked B2B AI SaaS opportunities + validation experiments. 🤖
+    
+    The goal was to see if we could move beyond “give me 10 startup ideas” and build a research workflow that actually preserves evidence, uncertainty, and counter-evidence.
+    
+    I walk through the complete setup and final research output in the video:
+    
+    🎥 https://youtu.be/P2d-m5NcEZw
+    [embed] I Built an AI Team to Find My Next Startup Idea (Hermes Agent) https://www.youtube.com/watch?v=P2d-m5NcEZw
+

@@ -58001,3 +58001,197 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-12T13:02:38.380000+00:00] anonymouse3118 (id=1537083895730802699)
     is there any method to make the hermes agent auto update?
 
+[2026-08-12T13:08:01.257000+00:00] tdamre (id=1537085249975099463)
+    ## Fixed the entire termux install and also fixed the hermes desktop so it is now compatible on termux and can display on termux x:11 and chrome on localhost  https://github.com/NousResearch/hermes-agent/pull/67163
+
+[2026-08-12T13:08:21.713000+00:00] zaacishere (id=1537085335773778040)
+    just use schedule task?
+    [reply to anonymouse3118 msg=1537083895730802699]
+
+[2026-08-12T13:14:15.262000+00:00] deme4447 (id=1537086818665766993)
+    What LLM subscription does everyone use that's the best bang for your buck?
+    
+    I have been Claude 20X for a year now but I think there might be something better...
+
+[2026-08-12T13:15:09.807000+00:00] tdamre (id=1537087047444074556)
+    [attachment] Screenshot_20260811_1817192.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1537087046592495716/Screenshot_20260811_1817192.jpg?ex=6a7dc35d&is=6a7c71dd&hm=42b8d6e29760de9e51b02dfcc01bde141af8a9ff6d0c5fe69a9d40b80d88ae2c&
+    [reply to deme4447 msg=1537086818665766993]
+
+[2026-08-12T13:16:21.738000+00:00] zaacishere (id=1537087349144551545)
+    omniroute and openrouter?  use the BYOK options and use whatever models are best for your specific purpose.  Use the compare options or the fusion option for some wild fun. What are you using it for?
+
+[2026-08-12T13:17:26.107000+00:00] deme4447 (id=1537087619127844875)
+    100% off? 😮
+    [reply to tdamre msg=1537087047444074556]
+
+[2026-08-12T13:18:05.359000+00:00] deme4447 (id=1537087783762534541)
+    Software Development for personal and clients
+    [reply to zaacishere msg=1537087349144551545]
+
+[2026-08-12T13:23:47.138000+00:00] zaacishere (id=1537089217287422023)
+    I think OpenAI still benches highest generally for coding etc. ouroborus looks interesting as a runtime, ornith v1 looks pretty dope. 
+    
+    Openrouter and Omniroute has shed loads of free access/discounted access.  But doesn’t quite beat a 20x 100% discount.. how’d you swing that? 
+    
+    Hermes 4 is the right answer here though right lol.
+
+[2026-08-12T13:31:47.248000+00:00] deme4447 (id=1537091231014715412)
+    For real, teach us the ways of 100% discount
+
+[2026-08-12T13:43:15.836000+00:00] kyssta69 (id=1537094119162249276)
+    how tf you have discount
+    [reply to tdamre msg=1537087047444074556]
+
+[2026-08-12T13:43:47.801000+00:00] zaacishere (id=1537094253233316000)
+    startup or partner or...?? Bro hit gastown and run a polecat army
+
+[2026-08-12T13:44:05.512000+00:00] kyssta69 (id=1537094327518634086)
+    i did apply for oss but i dont think so ill get anything
+
+[2026-08-12T13:45:18.912000+00:00] zaacishere (id=1537094635380547668)
+    Also, does anyone have a gas town  they are running well?
+
+[2026-08-12T13:45:39.538000+00:00] tdamre (id=1537094721892261948)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537094712593219725/image.png?ex=6a7dca81&is=6a7c7901&hm=93da9d8f1ae3055b42fdb4b640d7f6687d688c158fb753043bcd17be23f19078&
+    [reply to kyssta69 msg=1537094327518634086]
+
+[2026-08-12T13:45:58.711000+00:00] kyssta69 (id=1537094802309382295)
+    what opensource project do you have
+    [reply to tdamre msg=1537094721892261948]
+
+[2026-08-12T13:46:15.657000+00:00] tdamre (id=1537094873386192906)
+    my application linked to hermes agent pull requests that got merged
+    [reply to kyssta69 msg=1537094802309382295]
+
+[2026-08-12T13:46:32.429000+00:00] kyssta69 (id=1537094943733063770)
+    so basically hermes mainly
+    [reply to tdamre msg=1537094873386192906]
+
+[2026-08-12T13:46:54.805000+00:00] tdamre (id=1537095037584670762)
+    I also do have the official hermes fork app on f-droid
+
+[2026-08-12T13:47:04.940000+00:00] kyssta69 (id=1537095080094204035)
+    oh nice
+
+[2026-08-12T13:47:09.425000+00:00] tdamre (id=1537095098905526353)
+    so i guess there's that too
+
+[2026-08-12T13:47:22.695000+00:00] tdamre (id=1537095154564075680)
+    but my initial application only had my pull requests for termux on hermes
+
+[2026-08-12T13:47:37.453000+00:00] kyssta69 (id=1537095216463355955)
+    how many stars
+
+[2026-08-12T13:48:12.913000+00:00] tdamre (id=1537095365193629787)
+    my app got 147 stars on github now
+
+[2026-08-12T13:48:43.859000+00:00] egilewski (id=1537095494990430208)
+    How many pull requests did you show? And considering that most of our pull requests are formally closed, are they still recognized?
+
+[2026-08-12T13:50:20.080000+00:00] tdamre (id=1537095898570424432)
+    i only linked to one
+    [reply to egilewski msg=1537095494990430208]
+
+[2026-08-12T13:50:34.910000+00:00] tdamre (id=1537095960771956767)
+    the one that had the first termux compatibility one
+
+[2026-08-12T13:54:09.767000+00:00] egilewski (id=1537096861947789314)
+    Cool, I have one that was actually directly merged, and it's a P0 security. Getting a free sub will be awesome! Though no resets...
+
+[2026-08-12T13:55:55.206000+00:00] tdamre (id=1537097304191008810)
+    why not? I thought when tibo resets all sub accounts get reset too
+    [reply to egilewski msg=1537096861947789314]
+
+[2026-08-12T13:56:13.515000+00:00] zaacishere (id=1537097380984524890)
+    Thanks for your work, well done
+
+[2026-08-12T14:02:53.561000+00:00] egilewski (id=1537099058898796585)
+    All paid ones. I heard that OSS don't get them. Which is probably just a shameful oversight, as OSS contributor accounts are not that numerous compared to 10M+ paid ones.
+    [reply to tdamre msg=1537097304191008810]
+
+[2026-08-12T14:05:38.200000+00:00] pierrenode (id=1537099749444947989)
+    I just wanted to share the current PRs that I consider important and high priority. 
+    I hope you find them useful, feel free to take a look.
+    
+    #80982 — Session resume was landing on a stale pre-compression parent instead of the live conversation tip. Review found 2 more functions with the same bug; all fixed together.
+    https://github.com/NousResearch/hermes-agent/pull/80982
+    
+    #80285 — An untrusted env-var check let unrelated agents inject comments/fail tasks in a kanban worker's conversation. Review found 2 more sites with the same gap; closed.
+    https://github.com/NousResearch/hermes-agent/pull/80285
+    
+    #80996 — Voice mic didn't re-arm after dropping a self-heard echo (silent race). Fixed the ordering bug and rewrote the test so it actually catches it.
+    https://github.com/NousResearch/hermes-agent/pull/80996
+    
+    #81007 — ACP sessions could resurrect stale conversation history after a crash, plus a related /reset bug. Both fixed with regression tests.
+    https://github.com/NousResearch/hermes-agent/pull/81007
+    
+    #81690 — session.history had no size limit on long-running sessions. Review + audit found 3 more unbounded read paths; all now bounded.
+    https://github.com/NousResearch/hermes-agent/pull/81690
+
+[2026-08-12T14:06:12.964000+00:00] kyssta69 (id=1537099895255728169)
+    https://github.com/NousResearch/hermes-agent/pull/84577
+    
+    **Problem**: Fixed approval bypasses in issue #84551 by inspecting timeout-wrapped commands and treating interpreter file execution as script execution. Added regression tests.
+
+[2026-08-12T14:10:32.526000+00:00] flep (id=1537100983937536031)
+    I want to add this one:
+    
+    #61507 - Add Desktop-managed Computer Use bridge
+    https://github.com/NousResearch/hermes-agent/pull/61507
+    
+    With Hermes Cloud being a service now, and features like HUD, PR's that make stuff properly work with remote gateways need some love / attention IMO.
+
+[2026-08-12T14:15:15.312000+00:00] tdamre (id=1537102170027987146)
+    oh darn
+    [reply to egilewski msg=1537099058898796585]
+
+[2026-08-12T14:15:31.743000+00:00] drahcir_rahl (id=1537102238944727060)
+    desperately want to get this one in 
+    https://github.com/NousResearch/hermes-agent/issues/82140
+    
+    With that in I plan on several skills for flattening out some file access across running instances
+
+[2026-08-12T14:18:32.780000+00:00] egilewski (id=1537102998268813312)
+    We should pester Tibo about it. Or somebody with lower number of replies per post, so it will be easier to be noticed.
+    [reply to tdamre msg=1537102170027987146]
+
+[2026-08-12T16:14:15.850000+00:00] teknium (id=1537132119615209553)
+    Hmmm
+    [reply to drahcir_rahl msg=1537102238944727060]
+
+[2026-08-12T17:01:30.397000+00:00] tdamre (id=1537144008566902874)
+    I need this desperately
+    [reply to tdamre msg=1537085249975099463]
+
+[2026-08-12T17:31:24.463000+00:00] jimn235 (id=1537151533425102858)
+
+[2026-08-12T17:32:23.703000+00:00] the_dt (id=1537151781895929856)
+    Not sure if this is the place, sorry if its not. But can we get the usage remaining indicator like in webui?  I have my codex usage open all day in chrome taking up space
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537151781111472258/image.png?ex=6a7dffa7&is=6a7cae27&hm=9c45a63abc7e12699363a10d104aa98161343292e4f279deb333c6fe2a9598e6&
+
+[2026-08-12T17:36:10.792000+00:00] jimn235 (id=1537152734376231084)
+    the sandbagging has achieved recognition enough to consider Zenith, it makes a good showing for its claims, i fogort i ported  it to hermes
+    [reply to jimn235 msg=1537151533425102858]
+
+[2026-08-12T17:55:58.605000+00:00] julientalbot (id=1537157716424921088)
+    Now it is
+    [reply to realadolan msg=1537027721115475979]
+
+[2026-08-12T18:00:05.814000+00:00] realadolan (id=1537158753294483558)
+    Yes I'm using it right now 🔥
+    [reply to julientalbot msg=1537157716424921088]
+
+[2026-08-12T18:16:48.259000+00:00] julientalbot (id=1537162957853696030)
+    Of course you are. It's a banger!
+    [reply to realadolan msg=1537158753294483558]
+
+[2026-08-12T18:30:54.110000+00:00] .omgg (id=1537166505609793717)
+    Nous portal issues for anyone else page just shows signin and doesnt finish loading.
+
+[2026-08-12T18:37:32.574000+00:00] ciorba (id=1537168176889069718)
+    it's fine now
+    [reply to .omgg msg=1537166505609793717]
+
+[2026-08-12T18:37:38.426000+00:00] ciorba (id=1537168201434005666)
+    had that issue minutes ago too
+

@@ -2781,3 +2781,6 @@
 [2026-08-11T14:50:18.272000+00:00] nat2r (id=1536748602615922820)
     on it, thanks!
 
+[2026-08-12T18:38:19.482000+00:00] tesao (id=1537168373635616891)
+    can i use Mnemosyne and Soullink? together
+

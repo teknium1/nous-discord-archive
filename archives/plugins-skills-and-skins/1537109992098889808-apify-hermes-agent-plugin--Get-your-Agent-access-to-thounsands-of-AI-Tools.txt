@@ -1,0 +1,22 @@
+# Thread '🚀 apify-hermes-agent-plugin: Get your Agent access to thounsands of AI Tools' in forum #plugins-skills-and-skins
+# thread_id=1537109992098889808 forum_id=1485392832154832906
+# Started 2026-08-12T19:06:07.438638+00:00
+
+[2026-08-12T14:46:20.239000+00:00] emzak (id=1537109992098889808)
+    Hey folks! 👋
+    
+    We just shipped **apify-hermes-agent-plugin** to PyPI 🐍🚀
+    
+    It plugs Apify into your Hermes Agent and gives it access to the entire Apify Store — thousands of ready-made Actors for scraping, automation, and data extraction. Your agent can discover, run, and collect results from any of them.
+    
+    **What you get:**
+    - `apify_discover` — search the Apify Store or pull an Actor's input schema + README
+    - `apify_start` — batch Actor starts (up to 10 per call, so your agent isn't stuck waiting on one scrape at a time)
+    - `apify_collect` — poll run status and pull back the finished dataset
+    - `hermes apify-setup` — one CLI command to save your API token and flip the toolset on
+    
+    Give it a spin and let us know what you build 💪
+    
+    PyPI: https://pypi.org/project/apify-hermes-agent-plugin/
+    GitHub: https://github.com/apify/apify-hermes-agent-plugin
+

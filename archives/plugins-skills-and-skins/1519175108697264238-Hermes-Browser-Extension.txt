@@ -961,3 +961,8 @@
 [2026-08-12T09:33:48.357000+00:00] jonkomet (id=1537031341005209640)
     things cooking
 
+[2026-08-12T13:17:29.521000+00:00] jonkomet (id=1537087633446928535)
+    https://github.com/abundantbeing/hermes-browser-extension/commit/2904d0d4e44c1e17a5fe099fc3066df695c733ec
+    [attachment] HBE_-_Control_That_Wakes_Ready_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1537087633728081990/HBE_-_Control_That_Wakes_Ready_Update_AD.png?ex=6a7dc3e9&is=6a7c7269&hm=fe2bc51babc9687b72f2574fb4cb52a6df3f6a693e3665d97556f31ed2028595&
+    [embed] feat(controller): add durable browser lifecycle · abundantbeing/he... https://github.com/abundantbeing/hermes-browser-extension/commit/2904d0d4e44c1e17a5fe099fc3066df695c733ec
+

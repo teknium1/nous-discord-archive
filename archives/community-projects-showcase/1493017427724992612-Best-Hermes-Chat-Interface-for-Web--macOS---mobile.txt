@@ -6413,3 +6413,23 @@
 [2026-08-12T06:34:50.253000+00:00] josephcy (id=1536986302132650046)
     is it just me, because i have been noticing this issue for a long time, but the default model selection keep bugging to a wrong default model... I use CPA and have models name with different prefix like  openrouter/gpt-5.6-sol and codex/gpt-5.6-sol  and it keeps jumping between them
 
+[2026-08-12T13:05:23.278000+00:00] cryptobredda (id=1537084587363008612)
+    <@933139410281713755> how do I reference the hermes backend ui that you made? so I can recommend it on my posts
+
+[2026-08-12T13:07:49.850000+00:00] cryptobredda (id=1537085202130542664)
+    this is what I made <@933139410281713755> about the changes that I was thinking 
+    https://x.com/DevBredda/status/2087526246108291389?s=20
+    [embed]  https://twitter.com/DevBredda/status/2087526246108291389?s=20
+
+[2026-08-12T17:11:05.504000+00:00] avidfuturist (id=1537146420740751420)
+    Thanks for the shoutout! What do you mean by how to reference? You can link the bridge API  https://get-hermes.ai/api-docs/ or tag @hermes_updates
+    [embed] Hermes Bridge API https://get-hermes.ai/api-docs/
+    [reply to cryptobredda msg=1537084587363008612]
+
+[2026-08-12T17:12:25.607000+00:00] avidfuturist (id=1537146756716826746)
+    And very cool, love seeing new apps using our bridge API! 🙌 gives you pretty much every feature of Hermes for your client!
+
+[2026-08-12T18:05:18.999000+00:00] cryptobredda (id=1537160066887721145)
+    Yeah, just wanted to know who to tag
+    [reply to avidfuturist msg=1537146420740751420]
+

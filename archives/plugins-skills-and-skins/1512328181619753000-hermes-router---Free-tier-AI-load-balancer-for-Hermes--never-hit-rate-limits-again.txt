@@ -1749,3 +1749,10 @@
     Sorry about I thought of explaining to you clearly would help
     [reply to booksbytesbikes msg=1536992602090381352]
 
+[2026-08-12T14:21:52.212000+00:00] shaf_2665 (id=1537103834747248740)
+    Hey everyone,
+    GitHub Discussions is now enabled in the repo, so share your feedback, suggestions, or improvements that we can implement to make this project more efficient to use.
+    
+    GitHub Link : https://github.com/Shaf2665/Hermes-router
+    [embed] GitHub - Shaf2665/Hermes-router: OpenAI/Anthropic-compatible AI rou... https://github.com/Shaf2665/Hermes-router
+

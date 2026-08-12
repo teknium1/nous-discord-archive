@@ -16,3 +16,6 @@
     Show some example of the video's.   
     Your video was made with Davinci?
 
+[2026-08-12T17:37:16.635000+00:00] viky_shetye (id=1537153010541658174)
+    Nope I didn't use Davinci, it was built completely using Remotion and Hermes Agent only. I have shown the full video that was built in the linked youtube video
+

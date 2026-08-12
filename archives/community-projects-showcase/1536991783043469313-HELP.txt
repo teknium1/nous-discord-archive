@@ -15,3 +15,13 @@
     
     Has anyone built something similar?
 
+[2026-08-12T13:14:06.040000+00:00] zaacishere (id=1537086779985764464)
+    Sent the same to your other chat in the Developer channel Download hermes, hermes webui(nesquena), tailscale, tailhopper, buzz (buzz.xyz), Odysseus. You'll need a local model somewhere (buzz/hermes.odysseus all cater to this) to handle the emails in a private way or youre just paying to give them to a cloud provider.
+    
+    Use hermes to setup and configure/control the stack. Add hermes with agentmail and odysseus as agents in buzz and as bots in discord/telegram/chosen comms app. You interact with the agent stack through buzz.
+    
+    You can setup hermes webui and odysseus as a mobile and desktop app (install as app in chrome, add to homepage in IOS).
+    
+    If its not worth scaling up and you want the smallest stack, I'd use hermes, with a profile for your chosen providers, and a profile for private email handling via local model.
+    You can just use hermes builtin gateway if you like because its got native integrations and connections to agentmail (MCP) and IMAP/SMTP. But to scale and for a company I would use the above, with privately hosted granular logging/attribution. (plus native shared inference in buzz is pretty cool. If im an idiot im sure someone will point it out or if i missed something.
+
