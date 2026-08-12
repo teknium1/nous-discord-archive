@@ -1,0 +1,14 @@
+# Thread 'hermes-unraid' in forum #plugins-skills-and-skins
+# thread_id=1537040922414415894 forum_id=1485392832154832906
+# Started 2026-08-12T13:10:23.550670+00:00
+
+[2026-08-12T10:11:52.743000+00:00] crystalhawk (id=1537040922414415894)
+    A Hermes Agent plugin that gives your agent visibility into, and optionally control over, an Unraid server - array health, disk status and temperatures, docker container states, host and container logs, and system notifications - via Unraid's official built-in GraphQL API (Unraid 7+).
+    
+    Built for the common homelab case where Hermes itself runs in a Docker container on the Unraid host: the agent's shell only sees its own container, and you very deliberately do not want to hand it SSH or the Docker socket.
+    
+    Read-only by default. Actuation (container updates, lifecycle, plugin installs, notification management) is opt-in per scope, using Unraid's own permission grammar.
+    
+    https://github.com/shanelord01/hermes-unraid
+    [embed] GitHub - shanelord01/hermes-unraid: Hermes Agent plugin for Unraid ... https://github.com/shanelord01/hermes-unraid
+

@@ -953,3 +953,11 @@
     [attachment] HBE_-_Multi-Browser_Shell_Capability_Truth_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1536824127703486504/HBE_-_Multi-Browser_Shell_Capability_Truth_Update_AD.png?ex=6a7cce80&is=6a7b7d00&hm=c8a9a44413e2c2c7e9dfea0e1e143288b4e55ab77337bf6ac67763ea78813267&
     [embed] feat: add multi-browser capability truth · abundantbeing/hermes-br... https://github.com/abundantbeing/hermes-browser-extension/commit/5a37c6819e339b1294166f4ebbf7e4ebb149e174
 
+[2026-08-12T09:33:42.131000+00:00] jonkomet (id=1537031314891341934)
+    https://github.com/abundantbeing/hermes-browser-extension/commit/7e8a3036c5de4c1772e7183be44358a463dc2ad6
+    [attachment] HBE_-_Phase_4_Three_Routes_One_Broker_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1537031315105255564/HBE_-_Phase_4_Three_Routes_One_Broker_Update_AD.png?ex=6a7d8f76&is=6a7c3df6&hm=402d27b61f4db3bf6fa30b3a8c91b319b8ddadc908a57e3a6912677d719f7548&
+    [embed] feat: add browser control broker protocol · abundantbeing/hermes-b... https://github.com/abundantbeing/hermes-browser-extension/commit/7e8a3036c5de4c1772e7183be44358a463dc2ad6
+
+[2026-08-12T09:33:48.357000+00:00] jonkomet (id=1537031341005209640)
+    things cooking
+

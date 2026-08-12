@@ -1,0 +1,18 @@
+# Thread 'hermes-mempalace-sharedbrain' in forum #plugins-skills-and-skins
+# thread_id=1537041963747115008 forum_id=1485392832154832906
+# Started 2026-08-12T13:10:22.555722+00:00
+
+[2026-08-12T10:16:01.016000+00:00] crystalhawk (id=1537041963747115008)
+    A Hermes Agent memory-provider plugin for MemPalace's shared-brain hub (mempalace serve) - the real multi-machine, multi-agent shared memory mode, not a local palace.
+    
+    Why this exists
+    All other memory-providers for this call MemPalace as an in-process library or wrap the local mempalace CLI against ~/.mempalace/. 
+    
+    This one works by talking to a "Shared Brain" as per MemPalace's own docs: https://mempalaceofficial.com/guide/shared-brain.html
+    
+    This plugin only ever talks to the hub, over HTTP, via its /mcp JSON-RPC endpoint. There is no local palace and no mempalace package dependency - if the hub is unreachable, calls fail loudly instead of silently succeeding against nothing. This allows multiple agents to share the memory. I personally set this up to talk over tailscale.
+    
+    https://github.com/shanelord01/hermes-mempalace-sharedbrain
+    [embed] MemPalace — AI Memory System https://mempalaceofficial.com/guide/shared-brain.html
+    [embed] GitHub - shanelord01/hermes-mempalace-sharedbrain: Hermes memory-pr... https://github.com/shanelord01/hermes-mempalace-sharedbrain
+

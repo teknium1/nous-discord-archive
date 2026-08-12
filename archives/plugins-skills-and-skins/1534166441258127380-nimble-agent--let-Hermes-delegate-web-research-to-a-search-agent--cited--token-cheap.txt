@@ -37,3 +37,8 @@
     [embed] Hermes - Nimble Docs https://docs.nimbleway.com/integrations/connectors/hermes
     [embed] cookbook/apps/hermes-account-monitor at main · Nimbleway/cookbook https://github.com/Nimbleway/cookbook/tree/main/apps/hermes-account-monitor
 
+[2026-08-12T08:32:26.848000+00:00] kobi_kadosh (id=1537015899637293077)
+    What clicked for me is that it isn’t just a better way for Hermes to search. It changes where the research work lives. Hermes can hand off the messy browsing and synthesis, keep its own context focused, and come back for a cited result later, even in a new session.
+    
+    That durable handoff is the part I’m most excited about. It makes longer-running research feel like a real agent workflow, not just another tool call.
+

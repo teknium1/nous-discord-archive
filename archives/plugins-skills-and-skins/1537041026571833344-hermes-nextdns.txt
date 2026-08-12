@@ -1,0 +1,12 @@
+# Thread 'hermes-nextdns' in forum #plugins-skills-and-skins
+# thread_id=1537041026571833344 forum_id=1485392832154832906
+# Started 2026-08-12T13:10:22.989080+00:00
+
+[2026-08-12T10:12:17.576000+00:00] crystalhawk (id=1537041026571833344)
+    A Hermes Agent plugin for DNS triage against NextDNS: query logs, blocked queries with the blocklist that matched, and aggregate analytics by domain, device, blocklist or protocol.
+    
+    Read-only. Every endpoint it uses is a GET; the plugin makes no configuration changes to your NextDNS profile.
+    
+    https://github.com/shanelord01/hermes-nextdns
+    [embed] GitHub - shanelord01/hermes-nextdns: Hermes Agent plugin for NextDN... https://github.com/shanelord01/hermes-nextdns
+

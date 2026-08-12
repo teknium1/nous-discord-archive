@@ -57946,3 +57946,58 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-12T06:46:09.129000+00:00] julientalbot (id=1536989149545103420)
     Hey Nous Research team, tiny xAI catalog fix: I use grok-4.6 and Hermes was treating it as grok-4 (256K + no reasoning.effort). Live API is 500K and the effort dial works. https://github.com/NousResearch/hermes-agent/pull/84341
 
+[2026-08-12T07:41:22.052000+00:00] realadolan (id=1537003044951162932)
+    Is Grok 4.6 out yet?
+    [reply to julientalbot msg=1536989149545103420]
+
+[2026-08-12T08:41:17.487000+00:00] jimn235 (id=1537018125298438184)
+
+[2026-08-12T09:18:37.113000+00:00] julientalbot (id=1537027518970990612)
+    Not yet publicly
+    [reply to realadolan msg=1537003044951162932]
+
+[2026-08-12T09:19:25.308000+00:00] realadolan (id=1537027721115475979)
+    Oh, alright
+    [reply to julientalbot msg=1537027518970990612]
+
+[2026-08-12T09:47:15.087000+00:00] b0b_nyan (id=1537034724675944519)
+    https://github.com/NousResearch/hermes-agent/pull/82793
+    git CRUD like cursor
+
+[2026-08-12T09:47:59.316000+00:00] nice_xy (id=1537034910185951253)
+    <@387972437901312000> Appreciate you taking the time to review this PR — would love to get it merged soon if everything looks good. Thanks a ton! 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/64136
+
+[2026-08-12T10:36:28.576000+00:00] mariobgsp (id=1537047112506806362)
+    Hey Nous Research team, config hardening: nested model.default {provider,model} now flattened to a plain string at load so it can't leak a dict into agent.model and wedge the reset loop. Already swept + flagged mergeable by egilewski — just needs a maintainer to authorize the fork CI and take it off needs-decision. https://github.com/NousResearch/hermes-agent/pull/83902
+
+[2026-08-12T12:05:39.241000+00:00] realadolan (id=1537069554822287430)
+    <@1387527976224297133> is on fire
+
+[2026-08-12T12:09:02.778000+00:00] zaacishere (id=1537070408518471700)
+    DM Me if you like
+    [reply to berni0695 msg=1536982248086183946]
+
+[2026-08-12T12:10:15.212000+00:00] egilewski (id=1537070712328683580)
+    It's all Tibo.
+    [reply to realadolan msg=1537069554822287430]
+
+[2026-08-12T12:12:12.028000+00:00] delus_ (id=1537071202290376765)
+    it Open to review
+    [reply to delus_ msg=1536953005864394762]
+
+[2026-08-12T12:54:13.579000+00:00] zaacishere (id=1537081778441822258)
+    Download hermes, hermes webui(nesquena), tailscale, tailhopper, buzz (buzz.xyz), Odysseus. You'll need a local model somewhere (buzz/hermes.odysseus all cater to this) to handle the emails in a private way or youre just paying to give them to a cloud provider.
+    
+    Use hermes to setup and configure/control the stack. Add hermes with agentmail and odysseus as agents in buzz and as bots in discord/telegram/chosen comms app. You interact with the agent stack through buzz.
+    
+    You can setup hermes webui and odysseus as a mobile and desktop app (install as app in chrome, add to homepage in IOS).
+    
+    If its not worth scaling up and you want the smallest stack, I'd use hermes, with a profile for your chosen providers, and a profile for private email handling via local model.
+    You can just use hermes builtin gateway if you like because its got native integrations and connections to agentmail (MCP) and IMAP/SMTP. But to scale and for a company I would use the above, with privately hosted granular logging/attribution. (plus native shared inference in buzz is pretty cool. If im an idiot im sure someone will point it out or if i missed something.
+    [reply to berni0695 msg=1536982248086183946]
+
+[2026-08-12T13:02:38.380000+00:00] anonymouse3118 (id=1537083895730802699)
+    is there any method to make the hermes agent auto update?
+
