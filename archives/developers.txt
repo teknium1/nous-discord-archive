@@ -58229,3 +58229,45 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     this is my first time contrubuting lol, was hoping you could take a look since it seems like the issue has been open for a couple months now (since May 5th) and no PRs were made to fix it.
 
+[2026-08-13T03:02:20.298000+00:00] decruxrp (id=1537295212810997810)
+
+[2026-08-13T03:02:20.928000+00:00] decruxrp (id=1537295215453282374)
+    tek i get a badge for this lol <:bhob:1151299900496158830> <:pepehmmm:1368671048836317244>
+
+[2026-08-13T03:03:20.517000+00:00] .omgg (id=1537295465387663400)
+    recheck browser_exec's landed URL after execution for SSRF protection - https://github.com/NousResearch/hermes-agent/pull/84999
+
+[2026-08-13T03:25:40.695000+00:00] huaixu77 (id=1537301086501867601)
+    Hi — first-time contributor. PR #84231 (fix for #84158, Harmony tool-call leak on gpt-oss via Ollama) is stuck at the fork-PR CI approval gate (action_required), so no checks have run yet. A one-time workflow approval would unblock it. Thanks!
+    
+    PR：https://github.com/NousResearch/hermes-agent/pull/84231
+
+[2026-08-13T04:01:50.949000+00:00] abhiramasonny (id=1537310189206765658)
+    just updated this as <@852446123154210838> pointed out two issues that I now solved and verified.
+    [reply to abhiramasonny msg=1537275813622186075]
+
+[2026-08-13T04:33:58.716000+00:00] delus_ (id=1537318274847477821)
+    PR: https://github.com/NousResearch/hermes-agent/pull/84096
+    This feature is nearly finish at this time. I can use excalidraw and visualize a documents/concepts right now. Here is result:
+    [attachment] 635258265-3a5f0e14-2bf8-41a3-a263-bd5455d8b205.png https://cdn.discordapp.com/attachments/1491258766648283238/1537318274423980052/635258265-3a5f0e14-2bf8-41a3-a263-bd5455d8b205.png?ex=6a7e9ab6&is=6a7d4936&hm=0b442e33e850e54f1a94343828bee512687314442a1dbd55c4b3bd2aad05544a&
+
+[2026-08-13T05:22:47.203000+00:00] endo9001 (id=1537330557812342804)
+
+[2026-08-13T05:22:48.125000+00:00] endo9001 (id=1537330561679364106)
+    <:salute:1258583801358057533>
+
+[2026-08-13T05:24:30.483000+00:00] schrodienieur (id=1537330990999932988)
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/85019
+    
+    Fix credential leaks in tool call args.
+    [attachment] IMG_20260813_122016.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1537330990614183976/IMG_20260813_122016.jpg?ex=6a7ea68e&is=6a7d550e&hm=df013b12e08c58c19f0f40de170bd3b196d568a6d48597ab8825c80acdcdba27&
+
+[2026-08-13T06:43:45.498000+00:00] realadolan (id=1537350934978498590)
+    har-derived-api-client capture fixes
+    
+    A failed --action died with IndexError before the HAR ever flushed, so you got no file, and CDP capture drove pages[0], meaning --goto could wipe the tab Hermes was actually using. Fixed both, plus in-flight requests, form POST bodies, and base64 samples in derivation:
+    
+    - Issue: https://github.com/NousResearch/hermes-agent/issues/85099
+    - PR: https://github.com/NousResearch/hermes-agent/pull/85100
+

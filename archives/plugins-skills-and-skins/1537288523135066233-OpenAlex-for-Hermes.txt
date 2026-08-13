@@ -1,0 +1,18 @@
+# Thread 'OpenAlex for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1537288523135066233 forum_id=1485392832154832906
+# Started 2026-08-13T07:29:16.424359+00:00
+
+[2026-08-13T02:35:45.355000+00:00] realadolan (id=1537288523135066233)
+    Nice little Hermes plugin for OpenAlex.
+    
+    Look up works, authors, sources, and institutions. `get` is metadata (title, year, venue, authors), not the PDF. `fulltext` without `--confirm` only checks whether OpenAlex has the text. `--confirm` downloads it for $0.01.
+    
+    No key needed. Anonymous is $0.10/day. A free key is $1/day. ID lookups and name resolve are $0 and still work when the daily budget is gone.
+    
+    ```
+    hermes plugins install Adolanium/hermes-plugin-openalex --enable
+    ```
+    
+    https://github.com/Adolanium/hermes-plugin-openalex
+    [embed] GitHub - Adolanium/hermes-plugin-openalex: OpenAlex for Hermes Agen... https://github.com/Adolanium/hermes-plugin-openalex
+

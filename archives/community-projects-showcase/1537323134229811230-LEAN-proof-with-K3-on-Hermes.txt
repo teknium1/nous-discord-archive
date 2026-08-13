@@ -1,0 +1,9 @@
+# Thread 'LEAN proof with K3 on Hermes' in forum #community-projects-showcase
+# thread_id=1537323134229811230 forum_id=1316137596535177246
+# Started 2026-08-13T07:22:56.074573+00:00
+
+[2026-08-13T04:53:17.283000+00:00] juniperbevensee (id=1537323134229811230)
+    Check it out. We used our science/math customised Hermes to formalise the FDE proof in LEAN. https://cyborg.garden/open-science/posts/an-open-weight-model-proved-a-logic-theorem/
+    [attachment] image.png https://cdn.discordapp.com/attachments/1537323134229811230/1537323134586462228/image.png?ex=6a7e9f3d&is=6a7d4dbd&hm=9e586d1c9342fbf39985816b5d53219d7532c5964583c806d9fda5715f64d079&
+    [embed] An Open-Weight Model Proved a Logic Theorem, and Two Agents Argued ... https://cyborg.garden/open-science/posts/an-open-weight-model-proved-a-logic-theorem/
+

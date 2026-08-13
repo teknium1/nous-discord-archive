@@ -511,3 +511,7 @@
     
     All in all - very satisfied so far with the large corpus ingested and how it handles retrievals and recalls important info.
 
+[2026-08-13T03:57:43.556000+00:00] rostelinalise (id=1537309151565447178)
+    https://x.com/beamnxw/status/2087506344911720711?s=46
+    [embed]  https://twitter.com/beamnxw/status/2087506344911720711?s=46
+
