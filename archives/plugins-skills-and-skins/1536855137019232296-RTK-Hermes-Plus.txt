@@ -34,3 +34,6 @@
     I’d especially appreciate testing from people running real Hermes workloads. I’m curious how much it saves across complete sessions, which native tools generate the most waste in practice, and whether there are other result types worth compressing without adding prompt overhead.
     [embed] GitHub - AronAxe/RTK-Hermes-plus https://github.com/AronAxe/RTK-Hermes-plus
 
+[2026-08-13T13:18:51.157000+00:00] austrian_guy (id=1537450363718733967)
+    Intriguing 🙏
+

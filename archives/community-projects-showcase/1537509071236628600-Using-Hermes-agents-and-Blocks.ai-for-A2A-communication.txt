@@ -1,0 +1,10 @@
+# Thread 'Using Hermes agents and Blocks.ai for A2A communication' in forum #community-projects-showcase
+# thread_id=1537509071236628600 forum_id=1316137596535177246
+# Started 2026-08-13T19:00:02.253573+00:00
+
+[2026-08-13T17:12:08.120000+00:00] richwolf_ (id=1537509071236628600)
+    My colleague created this workflow connecting Hermes agents to each other using Blocks.ai. I think it’s a pretty great example of agent-to-agent communication 
+    
+    https://youtu.be/x-A7-W4G0Bc?is=ZBcfxt9mZ-_iSy28
+    [embed] Hermes multi-agent coordination with Blocks.ai https://www.youtube.com/watch?v=x-A7-W4G0Bc
+

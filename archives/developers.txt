@@ -58373,3 +58373,53 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Lucky :(
     [reply to tdamre msg=1537442513877471262]
 
+[2026-08-13T14:01:27.673000+00:00] the_dt (id=1537461086524022834)
+    Was told to put this here
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537461086075363468/image.png?ex=6a7f1fb7&is=6a7dce37&hm=e2db9364d0998d6bc6ba3a681c3a124c2466ad5a260915254635514efb368fa2&
+
+[2026-08-13T14:03:05.713000+00:00] tumadre (id=1537461497733714090)
+    Maybe <@119192111202566149> could look at the pr
+    [reply to the_dt msg=1537461086524022834]
+
+[2026-08-13T14:13:51.436000+00:00] thebizfixer (id=1537464206092279928)
+    Huge for us plugin devs, thank you <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/81998
+    [attachment] plugin_config.png https://cdn.discordapp.com/attachments/1491258766648283238/1537464205756858498/plugin_config.png?ex=6a7f229f&is=6a7dd11f&hm=8bc62acc2e18e4f1a410fcff3b5686000332e9bdf4ffe5eb1dfb563ef9cc7db7&
+
+[2026-08-13T14:22:40.638000+00:00] jonkomet (id=1537466425726476384)
+    https://github.com/NousResearch/hermes-agent/pull/85351
+    
+    For Hermes Browser Extension Browser/Tab control
+
+[2026-08-13T14:59:18.253000+00:00] eliascamargo99 (id=1537475643191861278)
+    I've been reading about machine learning lately, and I decided to start studying it, mostly as a hobby. Where do you recommend I start?
+
+[2026-08-13T15:08:17.733000+00:00] abhiramasonny (id=1537477905934721165)
+    <@387972437901312000> could you take a moment to look at this pls? been facing this bug irl and hasn’t been fixed in months
+    [reply to abhiramasonny msg=1537275813622186075]
+
+[2026-08-13T15:09:32+00:00] abhiramasonny (id=1537478217433092166)
+    axl ibiza reviewed it earlier and said it was good apart from 2 minor issues now fixed
+
+[2026-08-13T16:16:40.025000+00:00] jonkomet (id=1537495112194588843)
+    https://github.com/NousResearch/hermes-agent/pull/85394
+    
+    prevents reference-only compaction summaries from being mistaken for a new active turn, which could cause Hermes to repeat already-completed work
+
+[2026-08-13T16:21:27.362000+00:00] teknium (id=1537496317373325394)
+    No 😎
+    [reply to thebizfixer msg=1537464206092279928]
+
+[2026-08-13T17:35:46.972000+00:00] jonkomet (id=1537515022333378640)
+    https://github.com/NousResearch/hermes-agent/pull/85442
+    
+    prevents Hermes Agent’s internal context-compaction summaries from leaking into user-visible chat history while preserving them for model recovery
+
+[2026-08-13T17:40:01.698000+00:00] dias4761 (id=1537516090731659355)
+    https://github.com/NousResearch/hermes-agent/pull/84048
+    
+    https://github.com/NousResearch/hermes-agent/pull/82977
+    
+    https://github.com/NousResearch/hermes-agent/pull/83190
+    
+    https://github.com/NousResearch/hermes-agent/pull/83620
+
