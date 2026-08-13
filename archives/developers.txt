@@ -58271,3 +58271,105 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     - Issue: https://github.com/NousResearch/hermes-agent/issues/85099
     - PR: https://github.com/NousResearch/hermes-agent/pull/85100
 
+[2026-08-13T08:13:59.231000+00:00] realadolan (id=1537373641820475465)
+    cron delivery + react target fixes
+    
+    Since d409f6748, a cron job's deliver target that neither the parser nor the channel directory recognized got warn-and-dropped instead of handed to the adapter, so the job ran and the output went nowhere. Reactions on platform-native ids broke the same way. Fixed: those callers hand the raw target to the adapter again, the model-facing send tool stays strict:
+    
+    - Issue: https://github.com/NousResearch/hermes-agent/issues/85128
+    - PR: https://github.com/NousResearch/hermes-agent/pull/85129
+
+[2026-08-13T08:14:02.708000+00:00] realadolan (id=1537373656404201513)
+    execute_code venv isolation fix
+    
+    89556c63a's realpath shortcut counted any venv built from the same base python as "the Hermes env", so external project venvs got the repo root injected back into PYTHONPATH and tools/ or agent/ shadowed their own modules. Now it only matches when pyvenv.cfg confirms it's actually Hermes's env, everything else gets probed like before:
+    
+    - Issue: https://github.com/NousResearch/hermes-agent/issues/85136
+    - PR: https://github.com/NousResearch/hermes-agent/pull/85137
+
+[2026-08-13T08:18:14.791000+00:00] kidzhou (id=1537374713716932639)
+    **qqbot send_message media no longer dropped**
+    
+    `send_message` to qqbot used to reject media-only sends and omit attachments on text+media — `_send_qqbot` only ever posted text. This wires native upload + `MSG_TYPE_MEDIA` for C2C/group (local path and URL), with caption handling aligned to other platforms:
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/37315  
+    PR: https://github.com/NousResearch/hermes-agent/pull/85130
+
+[2026-08-13T08:30:51.277000+00:00] monolith2 (id=1537377886649196639)
+    opus writing style is so incredibly weird
+
+[2026-08-13T08:57:21.241000+00:00] realadolan (id=1537384555441561611)
+    OpenCode Go thingy: https://github.com/NousResearch/hermes-agent/pull/85152 <@387972437901312000> ready for a review
+
+[2026-08-13T09:03:49.316000+00:00] teknium (id=1537386183145824308)
+    merged
+    [reply to realadolan msg=1537384555441561611]
+
+[2026-08-13T09:20:51.844000+00:00] baophan0123 (id=1537390471939235912)
+    #84436  compression dead-loop với reasoning models
+    set estimate_messages_tokens_rough to exclude stale thinking from preflight to prevent infinite compaction loop
+    https://github.com/NousResearch/hermes-agent/pull/84436
+    
+    #78278  secret provenance on failed refresh
+    snapshot secret source cache before clearing so failed refresh doesn't drop vault-backed credentials
+    https://github.com/NousResearch/hermes-agent/pull/78278
+    
+    
+    #80853  GC collect after retiring shared OpenAI client
+    force gc.collect() after client retire to release FDs on EMFILE
+    https://github.com/NousResearch/hermes-agent/pull/80853
+    
+    
+    #80818  desktop session routing
+    route message.reaction events by session id, not window id
+    https://github.com/NousResearch/hermes-agent/pull/80818
+
+[2026-08-13T09:22:37.450000+00:00] imgali (id=1537390914882900000)
+    Just flagging these two P2 bug fixes for review:
+    
+    #70087 — Codex cron deadlock 
+    #72691 — OpenRouter error classification
+    
+    Both received keep open / high salvageability from the automated review. Are either likely to be picked up?
+
+[2026-08-13T09:25:11.139000+00:00] baophan0123 (id=1537391559501152276)
+    Hi <@387972437901312000>, could you spare a moment to review these ? thank a ton! <:4912sadgepray:898917406729191455>
+    [reply to baophan0123 msg=1537390471939235912]
+
+[2026-08-13T09:42:51.531000+00:00] jonkomet (id=1537396007107690566)
+    https://github.com/NousResearch/hermes-agent/pull/54466#issuecomment-5268495401
+    
+    need this PR for local steer runs and proper queuing on Hermes Browser Extension ... also seems some other people need this PR as well
+
+[2026-08-13T10:00:17.419000+00:00] liinx (id=1537400393879916604)
+    <@387972437901312000> two from the salvage queue while you're at the wheel:
+    PR #85200, the RFC #58548 kanban observer set. Plugins still poll the board DB for worker exits, stale claims, board edits, and tick outcomes. This lands the five accepted observers, thebizfixer's design, including the #56066 tick re-port fired strictly outside the dispatch lock, with a lock-probe test that fails if it ever regresses. 30 new tests RED-first, 405 passing across the kanban sweep, ruff clean.
+     https://github.com/NousResearch/hermes-agent/pull/85200
+    
+    #58524 got its verdict conditions done the same night: renamed to transform_api_error_classification, skipped-result warning per #64714, rebased green on current main. 14 hook tests, 134 across the touched suites.
+    https://github.com/NousResearch/hermes-agent/pull/58524
+
+[2026-08-13T10:47:48.741000+00:00] jonkomet (id=1537412353191317674)
+    AYEE LETS GOO https://github.com/NousResearch/hermes-agent/pull/85226
+    [reply to jonkomet msg=1537396007107690566]
+
+[2026-08-13T11:24:52.630000+00:00] frizikk (id=1537421680857583769)
+    https://github.com/NousResearch/hermes-agent/pull/85242 - remote gateway problem
+    https://github.com/NousResearch/hermes-agent/pull/85166 - new inbox thing
+
+[2026-08-13T12:01:57.587000+00:00] pringlesbox (id=1537431013003894784)
+    Anyone? 🥹
+    [reply to pringlesbox msg=1536770710876196905]
+
+[2026-08-13T12:18:51.677000+00:00] egilewski (id=1537435266405638245)
+    All I know is that there is a general plan to rapidly add useful features. A way to start guestimation is to count PRs with the same priority created before it and divide by the recent rate of PR merges of the same priority. But a lot depends on how large is the PR, how good is it's quality, how many people need it, how aligned it with the team's vision, etc. You can significantly impact at least some of those factors.
+    [reply to pringlesbox msg=1537431013003894784]
+
+[2026-08-13T12:47:39.609000+00:00] tdamre (id=1537442513877471262)
+    I got the reset it went back to 100% limit I got it
+    [reply to egilewski msg=1537099058898796585]
+
+[2026-08-13T12:53:32.913000+00:00] asmodayhimself (id=1537443995741855744)
+    Lucky :(
+    [reply to tdamre msg=1537442513877471262]
+

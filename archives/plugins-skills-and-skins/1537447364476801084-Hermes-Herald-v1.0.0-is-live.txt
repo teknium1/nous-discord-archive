@@ -1,0 +1,24 @@
+# Thread 'Hermes Herald v1.0.0 is live 📡' in forum #plugins-skills-and-skins
+# thread_id=1537447364476801084 forum_id=1485392832154832906
+# Started 2026-08-13T13:10:51.428522+00:00
+
+[2026-08-13T13:06:56.082000+00:00] bennybuoy1192 (id=1537447364476801084)
+    Hermes agents shouldn’t be islands. Herald gives them four explicit ways to worktogether:
+    
+    • Persistent cross-profile chat — talk directly with separately configured Hermesprofiles
+    • Async dispatch + callbacks — hand work to specialist agents and collect resultslater
+    • Model-selectable subagents — choose a model per task without changing the parentruntime
+    • Pure inference — one-shot text or validated JSON via llm_call, with no tools oragent harness
+    
+    It includes 11 tools, a durable SQLite audit ledger, fail-closed route verification,and zero Hermes core patches.
+    
+    Install:
+    
+    hermes plugins install bennybuoy/hermes-herald --enable
+    
+    GitHub and documentation:
+    Hermes Herald
+    
+    Feedback, experiments, bug reports, and sharp-edge discoveries are very welcome.
+    [attachment] release-x-card-windows-31-expanded-llm-call.png https://cdn.discordapp.com/attachments/1537447364476801084/1537447364930052266/release-x-card-windows-31-expanded-llm-call.png?ex=6a7f12f0&is=6a7dc170&hm=9e01a1f697df2880d23db30f93c84438babc5ebbdbb246b0efeda77bfc747168&
+

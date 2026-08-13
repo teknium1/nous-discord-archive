@@ -57,3 +57,7 @@
 [2026-08-11T18:39:58.782000+00:00] sounderstanding (id=1536806402264408175)
     Can this be used just for the full duplex and routed to another larger model?
 
+[2026-08-13T11:20:05.201000+00:00] finnie3695 (id=1537420475292975145)
+    Does it work with telegram?
+    [reply to smokealot420 msg=1535152142531170384]
+
