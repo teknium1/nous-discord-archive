@@ -65,3 +65,8 @@
     https://x402-list.com/services/gondola
     [embed] Gondola | x402 AI API | x402 List https://x402-list.com/services/gondola
 
+[2026-08-12T20:24:48.704000+00:00] xatarrer (id=1537195171974881300)
+    Grok 4.6 is now available at $0.6946/$2.0808 per Mtok, i.e., -65% cheaper than xAI
+    https://x.com/gondolamarket/status/2087635913807696173
+    [embed]  https://twitter.com/gondolamarket/status/2087635913807696173
+

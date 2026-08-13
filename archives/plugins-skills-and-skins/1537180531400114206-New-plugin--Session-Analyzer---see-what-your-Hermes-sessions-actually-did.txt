@@ -1,0 +1,35 @@
+# Thread '📊 New plugin: Session Analyzer — see what your Hermes sessions actually did' in forum #plugins-skills-and-skins
+# thread_id=1537180531400114206 forum_id=1485392832154832906
+# Started 2026-08-13T01:53:02.301534+00:00
+
+[2026-08-12T19:26:38.119000+00:00] tomrevo.x (id=1537180531400114206)
+    I kept hitting the same problem: a session ends, I know it cost something and had some tool failures, but the "why" is buried. Was it prompt bloat? A tool that keeps failing on the same argument? Cache misses driving up spend? No way to tell without digging through transcripts.
+    
+    So I built a desktop plugin that surfaces it all per session — and it's live on GitHub:
+    
+    **What it shows:**
+    
+    - **Per-session stats** — input/output/cache tokens, spend, duration, message count, tool-call breakdown
+    - **Failed calls** — every failed tool call with the actual error string ([exit 1], missing args, etc.), expandable to see the tool's arguments
+    - **Files touched** — reads and writes, written files highlighted
+    - **Search **— live title filter plus FTS content search over message text (same index Hermes' own session search uses), with snippet context
+    - **Worst-sessions sort** — rank sessions by most failed tool calls, red "N failed" badges
+    - **Ask AI **— one click opens a new session with a ready-made analysis prompt: what failed and why, how to make the next session more compact, config suggestions. Pick your judge model, paste, go.
+    
+    **Why I built it:** session data is the best feedback loop we have for making the next session better — fewer tool failures, less context bloat, lower cost. But you can't fix what you can't see. This makes the failure patterns visible so the fixes become obvious.
+    
+    **Install (macOS/Linux/Windows):**
+    ```
+    git clone https://github.com/tommulkins/hermes-plugin-session-analyzer.git
+    cd hermes-plugin-session-analyzer
+    chmod +x install.sh && ./install.sh   # or .\install.ps1 on Windows
+    ```
+    
+    Restart Hermes Desktop once, then open via sidebar "Session Analyzer" or ⌘K.
+    
+    Repo: https://github.com/tommulkins/hermes-plugin-session-analyzer
+    
+    Feedback welcome — especially on the Ask AI prompt; I want it to give genuinely useful config suggestions, not generic advice.
+    [attachment] social-preview.png https://cdn.discordapp.com/attachments/1537180531400114206/1537180531807101048/social-preview.png?ex=6a7e1a6e&is=6a7cc8ee&hm=9b193a7bd2047ff15145af315cee91b694427b3365ccd9b9eec6d97b9e737eef&
+    [embed] GitHub - tommulkins/hermes-plugin-session-analyzer: Per-session ana... https://github.com/tommulkins/hermes-plugin-session-analyzer
+

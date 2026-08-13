@@ -58195,3 +58195,37 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-12T18:37:38.426000+00:00] ciorba (id=1537168201434005666)
     had that issue minutes ago too
 
+[2026-08-12T20:36:51.047000+00:00] shunnir45 (id=1537198201701011546)
+    https://github.com/NousResearch/hermes-agent/pull/84796
+    
+    Problem: Fixed /usage showing the Nous credits block instead of the active provider's usage (issues #45713, #42904) by adding OpenCode Go usage fetching (rolling/weekly/monthly + reset times via zen/go/v1/usage) and gating the Nous block to provider nous across gateway, CLI and TUI. Added regression tests.
+
+[2026-08-12T20:37:10.502000+00:00] shunnir45 (id=1537198283301068940)
+    hope this helps
+
+[2026-08-12T22:18:00.699000+00:00] rook8286 (id=1537223659666808992)
+    is there anything i can do about api call errors?
+
+[2026-08-13T00:28:30.979000+00:00] liinx (id=1537256502241534032)
+    <@387972437901312000>  thanks for the batch disposition table on #64231, that's a ton of triage work and the salvage call on the classify hook is appreciated. Already applied both conditions: the hook is renamed to transform_api_error_classification and the run-all-then-pick-first dispatch now logs a warning when a valid result gets shadowed, per the #64714 rule. Rebased on current main, 14 new-suite and 134 total tests green across the touched suites, mergeable and ready whenever the cherry-pick wave starts.
+    
+    https://github.com/NousResearch/hermes-agent/pull/58524
+
+[2026-08-13T01:04:00.831000+00:00] pierrenode (id=1537265435488034866)
+    Plugin key collision two plugins declaring the same name: could silently hijack each other's stored config/secrets.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/84907
+    
+    Desktop SSH reuse breaks silently on keyring-less Linux no UI indication why. Added an explanatory notice.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/84913
+    
+    Blank Slate setup skips gateway service install the one setup mode today's fix missed.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/84918
+
+[2026-08-13T01:06:53.025000+00:00] andrexibiza (id=1537266157722144768)
+    <@387972437901312000> i have 10 security patches queued up for you. 1 critical, 8 high, 1 moderate.
+
+[2026-08-13T01:45:15.171000+00:00] abhiramasonny (id=1537275813622186075)
+    Hey <@387972437901312000> , js made this PR fixing a bug with the mistral endpoints https://github.com/NousResearch/hermes-agent/pull/84944
+    
+    this is my first time contrubuting lol, was hoping you could take a look since it seems like the issue has been open for a couple months now (since May 5th) and no PRs were made to fix it.
+

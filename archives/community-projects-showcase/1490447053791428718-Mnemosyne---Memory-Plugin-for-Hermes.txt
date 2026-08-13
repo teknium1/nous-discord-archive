@@ -2784,3 +2784,17 @@
 [2026-08-12T18:38:19.482000+00:00] tesao (id=1537168373635616891)
     can i use Mnemosyne and Soullink? together
 
+[2026-08-12T22:54:25.435000+00:00] walterwego (id=1537232823113621666)
+    Interesting video about Mnemosyne and Hindsight. 
+    
+    https://youtu.be/R1TNGOZAOZs?si=82CzvEBa_BffS2S_
+    [embed] Improved AI Memory? 🧠 Full Hermes Tutorial (Mnemosyne & Hindsight) https://www.youtube.com/watch?v=R1TNGOZAOZs
+
+[2026-08-12T23:23:47.928000+00:00] john_10613 (id=1537240215545061447)
+    installed mnemosyne after this vid lol
+    [reply to walterwego msg=1537232823113621666]
+
+[2026-08-12T23:59:52.288000+00:00] cspiritsong (id=1537249293528997908)
+    this should be one of the videos to point to in helping out to set things up.
+    [reply to walterwego msg=1537232823113621666]
+
