@@ -61,3 +61,13 @@
     Does it work with telegram?
     [reply to smokealot420 msg=1535152142531170384]
 
+[2026-08-14T04:36:24.013000+00:00] smokealot420 (id=1537681272133132338)
+    Yes sir! that’s basically the intended architecture. The Realtime model handles the live duplex audio, interruptions, and conversation, while heavier work can be handed off to whatever larger model your Hermes agent is configured to use. You can keep talking while it works, then it reports the result back into the call.
+    
+    Routing every reply through the larger model isn’t in the released build yet, but that host-authoritative mode is what I’m wiring up now.
+    [reply to sounderstanding msg=1536806402264408175]
+
+[2026-08-14T04:54:13.683000+00:00] smokealot420 (id=1537685758654292040)
+    Not currently, but I’m exploring other platforms and surfaces especially with Brooklyn's HUD
+    [reply to finnie3695 msg=1537420475292975145]
+

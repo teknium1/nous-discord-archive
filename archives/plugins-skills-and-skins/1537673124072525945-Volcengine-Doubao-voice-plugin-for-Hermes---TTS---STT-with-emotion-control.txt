@@ -1,0 +1,33 @@
+# Thread '🌋 Volcengine/Doubao voice plugin for Hermes — TTS + STT with emotion control' in forum #plugins-skills-and-skins
+# thread_id=1537673124072525945 forum_id=1485392832154832906
+# Started 2026-08-14T07:27:26.624970+00:00
+
+[2026-08-14T04:04:01.364000+00:00] westforest_30320 (id=1537673124072525945)
+    Hey everyone 👋 I built a voice provider plugin for Hermes Agent using Volcengine Doubao (火山引擎豆包):
+    https://github.com/linxichen/hermes-volcengine-voice
+    
+    What it gives you:
+    🗣️ TTS — Doubao TTS 2.0, 60+ Chinese voices (5 presets included), streaming HTTP API
+    🎧 STT — streaming WebSocket ASR with dialect support and speaker diarization
+    🎭 Emotion control — prefix any TTS text with [开心], [伤心], [生气], [严肃], [温柔], [快速] etc. and the voice actually performs it. Works out of the box — the plugin injects the syntax into the model's voice context, and the emotion markers are sent via Volcengine's non-billed context_texts field. (Emotion feature contributed by @BartmossW — PR #1!)
+    🎵 Voice presets — 爽快思思 (default), Vivi, 甜美小源, 儒雅逸辰 male voice, all 2.0 models
+    
+    Hear it for yourself (same sentence, different emotions/voices):
+    爽快思思 happy / sad / angry / fast: https://github.com/linxichen/hermes-volcengine-voice/blob/main/docs/demo/sisi-happy.mp3 (and siblings sisi-sad / sisi-angry / sisi-fast)
+    Vivi gentle: https://github.com/linxichen/hermes-volcengine-voice/blob/main/docs/demo/vivi-gentle.mp3
+    儒雅逸辰 male serious: https://github.com/linxichen/hermes-volcengine-voice/blob/main/docs/demo/yichen-serious.mp3
+    
+    Install:
+    hermes plugins install linxichen/hermes-volcengine-voice
+    hermes config set plugins.enabled --append volcengine-voice
+    hermes config set tts.provider volcengine
+    hermes config set stt.provider volcengine
+    # get a Speech API key (NOT an Ark key) at console.volcengine.com/speech
+    
+    
+    Notes: needs a Volcengine Speech API key (free tier available); best for Chinese-language voice interactions; emotion control requires the 2.0 voices. Feedback and PRs welcome!
+    [embed] GitHub - linxichen/hermes-volcengine-voice: Volcengine Doubao TTS &... https://github.com/linxichen/hermes-volcengine-voice
+    [embed] hermes-volcengine-voice/docs/demo/sisi-happy.mp3 at main · linxich... https://github.com/linxichen/hermes-volcengine-voice/blob/main/docs/demo/sisi-happy.mp3
+    [embed] hermes-volcengine-voice/docs/demo/vivi-gentle.mp3 at main · linxic... https://github.com/linxichen/hermes-volcengine-voice/blob/main/docs/demo/vivi-gentle.mp3
+    [embed] hermes-volcengine-voice/docs/demo/yichen-serious.mp3 at main · lin... https://github.com/linxichen/hermes-volcengine-voice/blob/main/docs/demo/yichen-serious.mp3
+

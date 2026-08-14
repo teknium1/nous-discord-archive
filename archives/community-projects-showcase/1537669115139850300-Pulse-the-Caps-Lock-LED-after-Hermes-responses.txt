@@ -1,0 +1,8 @@
+# Thread 'Pulse the Caps Lock LED after Hermes responses' in forum #community-projects-showcase
+# thread_id=1537669115139850300 forum_id=1316137596535177246
+# Started 2026-08-14T07:20:21.163948+00:00
+
+[2026-08-14T03:48:05.560000+00:00] gluedmosquito (id=1537669115139850300)
+    https://github.com/slapash/hermes-capslock-pulse
+    [embed] GitHub - slapash/hermes-capslock-pulse: Pulse the Caps Lock LED aft... https://github.com/slapash/hermes-capslock-pulse
+

@@ -382,3 +382,25 @@
     And have you finally moved away from requiring us to connect Keys and or pay for self hosted features like the Scheduled Sleep, or Analytics? Or is that still a premium feature? (which for self hosting something, shouldnt cost users. Appreciate the work, but there's like 7 other memory systems that do things very similar if not exactly the same. - Cognee, Hindsight, Mnemosyne, etc but they're all free)
     [reply to jaixii msg=1536776688594063471]
 
+[2026-08-14T01:59:38.473000+00:00] jaixii (id=1537641822438821918)
+    I want to provide a lot of detail and a full response. Engraphis free and open-source like most others, and most others have paid options as well. Development costs a lot of time and money and I'll continue to improve Engraphis so it's free to all, hopefully the best free system available. I also pay for and develop cloud services which have costs. I've made $0 in return so far but any help is appreciated 😃  All local files are free and self hosted. You can host teams with shared memory in a private railway instance too, which I think is exciting and quite a lot of work to get finished.
+    [attachment] 1.png https://cdn.discordapp.com/attachments/1531601601519681650/1537641821465870336/1.png?ex=6a7fc80a&is=6a7e768a&hm=c4ebf1f82c50b767a66dbfda16bbd3433ff1c229e4e0b61a0fa29da4c0bf2f46&
+    [reply to k.shepherd msg=1537580475995005058]
+
+[2026-08-14T02:00:13.543000+00:00] jaixii (id=1537641969533059224)
+    [attachment] 2.png https://cdn.discordapp.com/attachments/1531601601519681650/1537641969256370186/2.png?ex=6a7fc82d&is=6a7e76ad&hm=86606a325cea41cb017306583e1c9ce43d6593852dcee35a77431bcf088ace2f&
+
+[2026-08-14T02:00:22.277000+00:00] jaixii (id=1537642006166249606)
+    [attachment] 3.png https://cdn.discordapp.com/attachments/1531601601519681650/1537642005927034932/3.png?ex=6a7fc836&is=6a7e76b6&hm=1cfa882ede3121912532aac24518539f79280c3ce18cf6be5a2928df65208e0e&
+
+[2026-08-14T02:02:10.588000+00:00] jaixii (id=1537642460455510097)
+    [attachment] 4.png https://cdn.discordapp.com/attachments/1531601601519681650/1537642459977228438/4.png?ex=6a7fc8a2&is=6a7e7722&hm=b1c12d3653f32a3f73104e0223d3e430c930ac7e3bc7502a43ad34bedc8e7e40&
+
+[2026-08-14T03:01:32.258000+00:00] jaixii (id=1537657399182102578)
+    There's quite a lot to understand about all of these things, and it's not really a simple one is better than another. My goal is to provide the best of everything by improving Engraphis daily. The most important fundamentals all in one system free. For advanced or optional features I host those in the cloud
+    [attachment] engraphis-competitive-advantages.png https://cdn.discordapp.com/attachments/1531601601519681650/1537657398829776946/engraphis-competitive-advantages.png?ex=6a7fd68c&is=6a7e850c&hm=6bff3d54bf827086b4e47da14c26cb2590b3f69e7639b8459dd3c31c0bc92199&
+
+[2026-08-14T03:04:58.893000+00:00] jaixii (id=1537658265872105563)
+    I always take feedback and make improvements or adjustments quickly. Yes there is this show all nodes version that won't lag you, or if you want higher quality visuals with 2000 relationships or less like a live physics based moving spiral galaxy, that's an option too 🙂
+    [attachment] 2026-08-13_23_00_38-Engraphis_Ledger_-_Comet.png https://cdn.discordapp.com/attachments/1531601601519681650/1537658265700143144/2026-08-13_23_00_38-Engraphis_Ledger_-_Comet.png?ex=6a7fd75a&is=6a7e85da&hm=9d29b4ef8ca3136191b97289b8d8423b68846ccb38fcb9a678a51f746fa2546e&
+

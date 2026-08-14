@@ -25,3 +25,19 @@
     If its not worth scaling up and you want the smallest stack, I'd use hermes, with a profile for your chosen providers, and a profile for private email handling via local model.
     You can just use hermes builtin gateway if you like because its got native integrations and connections to agentmail (MCP) and IMAP/SMTP. But to scale and for a company I would use the above, with privately hosted granular logging/attribution. (plus native shared inference in buzz is pretty cool. If im an idiot im sure someone will point it out or if i missed something.
 
+[2026-08-14T02:49:40.267000+00:00] blessing07570 (id=1537654412875538492)
+    Are you using Gmail or Outlook for the order-processing inbox?
+    Do you already have an ERP/CRM/database where customer and order information is stored?
+
+[2026-08-14T02:51:32.016000+00:00] blessing07570 (id=1537654881584943145)
+    Yes, I’ve worked with similar agent-based workflows.
+    
+    For this use case, I’d set up Hermes as the central email agent, with a persistent database for customer, order, supplier, and quote context. The agent would not rely only on email thread IDs, so if a supplier starts a new email thread, it can still match that conversation back to the correct order using the customer, order number, shipment details, supplier, and other identifiers.
+    
+    The workflow would be
+    Customer order → Hermes reads and creates/updates the order record → contacts shipping vendors → handles follow-up questions → collects and compares quotes → updates the order context → prepares the customer confirmation.
+    
+    For safety, I’d also add an approval step before the final customer confirmation is sent.
+    
+    The key is separating the agent’s reasoning from the persistent order/customer database, so context is maintained reliably across multiple threads and future conversations.
+

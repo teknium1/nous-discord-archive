@@ -58572,3 +58572,66 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-14T00:53:49.485000+00:00] liinx (id=1537625259182788640)
     <@387972437901312000> was wondering if might could be considered for the dev role? <:LoveLIINXIE:739113379326853170>
 
+[2026-08-14T02:24:54.883000+00:00] wesleysimplicio (id=1537648182723485797)
+    I opened a resilience fix for Hermes Bot Mode: a temporary profiles.list failure no longer clears the Bot roster—the last healthy state stays visible while recovery is clear.
+    
+    https://github.com/NousResearch/Hermes-Bot-Mode/pull/13 
+    
+     <@387972437901312000>
+    [attachment] IMG_2390.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1537648182308372581/IMG_2390.jpg?ex=6a7fcdf6&is=6a7e7c76&hm=c4a7893e224155afaa4cf58b17ae08212ac25b093f4d9c93ddc9266a088d00f2&
+
+[2026-08-14T02:27:03.658000+00:00] wesleysimplicio (id=1537648722844844085)
+    I opened a Hermes Bot Mode Cronjob fix: when the active profile is already the target agent, routines execute directly instead of recursively delegating to themselves.
+    
+    https://github.com/NousResearch/Hermes-Bot-Mode/pull/14
+    
+     <@387972437901312000>
+    [attachment] IMG_2391.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1537648722706694244/IMG_2391.jpg?ex=6a7fce77&is=6a7e7cf7&hm=a82f929b69f6c33e929501dc8dc243baca1697465b36d98ca044966c6d5f12a0&
+
+[2026-08-14T02:29:32.899000+00:00] wesleysimplicio (id=1537649348806971433)
+    I opened an Active Profile pane for Hermes Bot Mode, bringing the agent’s identity, provider, model, description, skills, toolsets, and edit action into one focused view.
+    
+    https://github.com/NousResearch/Hermes-Bot-Mode/pull/15
+    
+     <@387972437901312000>
+    [attachment] IMG_2392.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1537649348303790231/IMG_2392.jpg?ex=6a7fcf0c&is=6a7e7d8c&hm=d653516a044d51164df62d550a884e9dc4cbc3f0737b6aed0660c1c652ec469a&
+
+[2026-08-14T02:33:56.785000+00:00] wesleysimplicio (id=1537650455625211965)
+    I opened a durable messaging-protocol fix for Hermes Bot Mode: custom SOUL files preserve the handoff protocol and the Agent Inbox bootstrap stays tied to the live roster.
+    
+    https://github.com/NousResearch/Hermes-Bot-Mode/pull/16
+    
+     <@387972437901312000>
+    [attachment] IMG_2393.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1537650455172087838/IMG_2393.jpg?ex=6a7fd014&is=6a7e7e94&hm=af8ceb5e565755e719f042ecb3604aae106314457d81a4513326b03e26f7a1fc&
+
+[2026-08-14T02:36:16.481000+00:00] wesleysimplicio (id=1537651041552564307)
+    I opened Group Agents for Hermes Bot Mode: saved teams, isolated histories, explicit routing, lead-first replies, private sessions, bounded context, and async-storage safety.
+    
+    https://github.com/NousResearch/Hermes-Bot-Mode/pull/17
+    
+     <@387972437901312000>
+    [attachment] IMG_2394.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1537651041158566019/IMG_2394.jpg?ex=6a7fd0a0&is=6a7e7f20&hm=66331fa7f9685a6f51f1b9b93ff34ba57b220ce03613921270bb65c31cee1454&
+
+[2026-08-14T02:36:35.252000+00:00] wesleysimplicio (id=1537651120283984003)
+    Done bro!
+
+[2026-08-14T03:23:03.515000+00:00] tumadre (id=1537662815106498591)
+    <@387972437901312000> found an issue with the hermes-agent and the new bot plugin, when you have a plugin with multiple panes and you close one of those panes it disables the whole plugin. PR submitted (so I can close the new cron window without the plugin dying)
+    
+    https://github.com/NousResearch/hermes-agent/pull/85797
+
+[2026-08-14T06:27:46.714000+00:00] kyssta69 (id=1537709301412528179)
+    https://github.com/NousResearch/hermes-agent/pull/85870
+    
+    **Problem**: Fixed issue #85758: _find_git_root now tolerates inaccessible configured working directories and permission errors, preventing gateway prompt construction crashes. Added regression coverage; 62 targeted tests pass.
+
+[2026-08-14T06:33:04.144000+00:00] baophan0123 (id=1537710632810315857)
+    <:sadCat:1151280288698204220>
+    [reply to teknium msg=1537577364794507334]
+
+[2026-08-14T07:08:47.549000+00:00] realadolan (id=1537719622902620261)
+    <@387972437901312000> Adapted Hermes to the new GLM-5.3 API changes (from their announcement: https://z.ai/blog/glm-5.3). 
+    
+    - PR: https://github.com/NousResearch/hermes-agent/pull/85891
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537719622349099058/image.png?ex=6a80107f&is=6a7ebeff&hm=e3864134e9f217c5f33b94ea6c07c7b041620bac37160176c942f42c417c8597&
+

@@ -25,3 +25,22 @@
     Repo: https://github.com/Kesuek/hermes-bridge-adapter
     [embed] GitHub - Kesuek/hermes-bridge-adapter: Generic JSON-file-based Herm... https://github.com/Kesuek/hermes-bridge-adapter
 
+[2026-08-14T07:22:29.699000+00:00] john_kesuek (id=1537723071249522738)
+    Bridge Adapter: a new unique feature — Unified Threads: multiple messengers share a single agent session.
+    
+    How it works
+    
+    /unified create <name> — create a session; the creator becomes a member and the leader
+    /unified join <name> — join from another messenger
+    All messages are distributed to every joined client — one agent reply is multicast to each bridge
+    Technical background
+    
+    Native gateway adapters are isolated (each platform has its own session). Because every bridge in the Bridge Adapter runs on the same JSON-file contract, they can be mapped onto a shared session. No core change — the session mechanism already exists in the gateway; the adapter just maps onto it.
+    
+    Additional features
+    
+    Identity merging: the same person on two bridges is one member, not two
+    Per-thread modes: participant, reactive (mention-gated), off, silent (read-only digest), protokoll (meeting capture)
+    Challenge-response identity claims against spoofing
+    Adaptive digesting: a message burst becomes one bundled turn
+

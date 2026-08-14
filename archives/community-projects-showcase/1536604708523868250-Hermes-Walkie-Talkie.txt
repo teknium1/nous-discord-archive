@@ -45,3 +45,14 @@
 [2026-08-14T01:43:47.541000+00:00] gluedmosquito (id=1537637833941057538)
     they just added it with bots in the new hermes update
 
+[2026-08-14T02:02:32.483000+00:00] sahil_ss9 (id=1537642552289918996)
+    This builds on that, it's not the same.       Essentially this plugin allows your agent(s) to cross inject messages across sessions.
+    
+     I.e. In one chat sessions you decide to make UI/UX changes, a live message is sent through to your backend agent to go agree a contract for the FE/BE  development requirements and update it's knowledge of what additional work is required.
+    
+    Another examples is if one agent is touch 'x' file it can notify 'y' agent to hold their task until theyve finished and then notify them. Allowing you to have multiple agents on the same worktree branch/or cross branches.
+    [reply to gluedmosquito msg=1537637833941057538]
+
+[2026-08-14T02:04:15.393000+00:00] gluedmosquito (id=1537642983925616660)
+    i understand, thanks for the clarification
+
