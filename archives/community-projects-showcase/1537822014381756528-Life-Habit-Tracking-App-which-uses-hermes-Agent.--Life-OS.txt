@@ -1,0 +1,14 @@
+# Thread 'Life/Habit Tracking App which uses hermes Agent. [Life OS]' in forum #community-projects-showcase
+# thread_id=1537822014381756528 forum_id=1316137596535177246
+# Started 2026-08-14T18:50:18.218078+00:00
+
+[2026-08-14T13:55:39.580000+00:00] quatumarc (id=1537822014381756528)
+    So I was looking for a habit-tracking app and came across Monke. I was annoyed that it asked a ton of onboarding questions, only to put everything behind a paywall at the end 😤. So, I built a fully free, open-source, and self-hosted alternative. Basically I took “compare yourself from your yesterday self “ too seriously.
+    
+    https://entangledquantum.github.io/Life_OS/
+    
+    It uses a Hermes agent to define your habits and provides a clean UI to work with. I was tired of manually creating multiple cron jobs to track what I was doing—it was just too painful—so this is a much better approach. You can set up a single end-of-day cron job to review what happened, complete with built-in memory for your habit tracking, webhook support, and an upcoming mobile app (iOS and android ). Access control is kept simple using API key authentication. it’s gamified and track your progression
+    [attachment] main_Screnshot.png https://cdn.discordapp.com/attachments/1537822014381756528/1537822014734344243/main_Screnshot.png?ex=6a806fdb&is=6a7f1e5b&hm=03f99166071d1a548379a342dc4040fdc4d405b503458f6c7e16cd6ba99c648d&
+    [attachment] WhatsApp_Image_2026-08-14_at_7.25.03_PM.jpeg https://cdn.discordapp.com/attachments/1537822014381756528/1537822015665340526/WhatsApp_Image_2026-08-14_at_7.25.03_PM.jpeg?ex=6a806fdb&is=6a7f1e5b&hm=e9272ebfda86d02333103cec44da61f316ec93ddb3a24a312a29847ee15c83bf&
+    [attachment] anaytics_screenshot_life_os.jpeg https://cdn.discordapp.com/attachments/1537822014381756528/1537822016114266152/anaytics_screenshot_life_os.jpeg?ex=6a806fdb&is=6a7f1e5b&hm=c261f107fe8911e0a11ad71fd5318686c147f19ecea0f05f04ede3befb79c162&
+

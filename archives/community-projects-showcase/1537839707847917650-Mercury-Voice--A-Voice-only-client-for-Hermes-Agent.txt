@@ -1,0 +1,18 @@
+# Thread 'Mercury Voice: A Voice only client for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1537839707847917650 forum_id=1316137596535177246
+# Started 2026-08-14T18:50:17.689589+00:00
+
+[2026-08-14T15:05:58.031000+00:00] .ang3l12 (id=1537839707847917650)
+    First things first: I am not a developer, just a sysadmin cosplaying as one with a Fable trenchcoat.
+    
+    I loved the ChatGPT Voice feature, but I don't have much setup in ChatGPT as far as plugins and what not. So I started working with Claude Code and ChatGPT to develop an iOS / MacOS app that brings a lot of the ChatGPT Voice functionality to Hermes. 
+    
+    I don't have a full Apple Developer account, so I can't release this to the app store, and all testing has been done by sideloading the app via Xcode.
+    
+    That being said, it's been pretty stable and usable on my drive to / from work the past couple of days, and the people I have mentioned this to wanted the same app. So I decided to post the source to my Github, with no promises that it will work for you or wont start WW3. 
+    
+    I'd welcome any feedback, PR's, issue submission, etc, to make this a better client. I am tempted at this point to pay the $100 to release this to the app store, but really have no reason to unless more people want this, and some actual developers take a look at the code first.
+    
+    Anyways, here's the github: https://github.com/angel12/mercury-voice
+    [embed] GitHub - angel12/mercury-voice: Native SwiftUI voice-conversation c... https://github.com/angel12/mercury-voice
+

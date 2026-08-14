@@ -1,0 +1,41 @@
+# Thread 'CatalystCTL (Pterodactyl Replacement) (Early Testing)' in forum #community-projects-showcase
+# thread_id=1537880347881111582 forum_id=1316137596535177246
+# Started 2026-08-14T18:50:15.972995+00:00
+
+[2026-08-14T17:47:27.370000+00:00] karutoil (id=1537880347881111582)
+    # 🚀 Catalyst is here — the modern Pterodactyl replacement
+    
+    Tired of wrestling with a PHP-based panel that creaks under load? Say hello to **Catalyst** — an open-source game server management platform rebuilt from scratch for today's hosting, not yesterday's.
+    
+    **⚡ Built for speed**
+    - **Rust backend + containerd runtime** — the same container engine that powers Kubernetes. No PHP, no Docker daemon bottleneck.
+    - **Sub-10ms WebSocket console latency** — up to **10x faster** than Pterodactyl. Real-time console, metrics, and server controls that actually feel real-time.
+    
+    **🛠️ Everything you need, out of the box**
+    - **60+ REST API endpoints** for full automation and billing integrations
+    - **20+ granular RBAC permissions** — precise control over who can do what (no more all-or-nothing admin)
+    - **Native plugin system** — extend Catalyst without manual theme/plugin surgery
+    - **Multi-node scaling** built in from day one
+    
+    **⏱️ Painless migration**
+    - **Single-script install in under 60 seconds**
+    - **Migrate 50+ servers with zero downtime** — proven playbook from real hosting providers who've made the switch (~2–3 hours per node, players never notice)
+    
+    **🔓 Open and owned by you**
+    - Fully **open-source under GPLv3** — no lock-in, your data stays yours
+    - Designed for enterprise hosts, communities, and homelabs alike (Minecraft, Rust, ARK, and more)
+    
+    **Why switch from Pterodactyl?**
+    Pterodactyl is battle-tested, but it's a decade-old architecture — PHP backend and a Node.js WebSocket layer that struggle under high concurrent connections. Catalyst is connection-heavy and I/O-bound **by design**: a modern stack that handles **thousands of concurrent connections** without sweating.
+    
+    If you host game servers seriously, you owe it to yourself to try Catalyst.
+    
+    👉 **Try it now:** https://catalystctl.com
+    📖 **Docs:** https://catalystctl.com/docs
+    🤝 **Join the community and chat with the team below!**
+    [embed] Catalyst | Modern Pterodactyl Alternative & Game Server Panel https://catalystctl.com/
+    [embed] Documentation - Catalyst https://catalystctl.com/docs
+
+[2026-08-14T17:48:15.329000+00:00] karutoil (id=1537880549035872348)
+    CatalystCTL was built with a bunch of Ai tools especially hermes 🙂
+

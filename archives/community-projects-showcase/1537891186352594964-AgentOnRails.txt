@@ -1,0 +1,19 @@
+# Thread 'AgentOnRails' in forum #community-projects-showcase
+# thread_id=1537891186352594964 forum_id=1316137596535177246
+# Started 2026-08-14T18:50:15.518580+00:00
+
+[2026-08-14T18:30:31.463000+00:00] sirius.88 (id=1537891186352594964)
+    Hey everyone 👋 Been quietly building something called AgentOnRails.
+    
+    It’s fully open source + local-first. Basically a layer that sits between your agent and the internet and gives it financial guardrails — budgets, per-transaction limits, approvals — while also working toward identity + privacy controls, all without sending your agent’s activity through some hosted middleman.
+    
+    Hermes has basically been our partner in crime 😂 throughout the process so of course there’s a native Hermes integration in the repo.
+    
+    Still early, so I’d genuinely love for some of you to try it, break it, build on it, or tell me what’s missing. Would love feedback from people actually building/using agents. Curious what you guys think.
+    
+    🌐 https://www.agentonrails.com/
+    
+    💻 https://github.com/agentOnRails/agent-on-rails
+    [embed] AgentOnRails — Give your agent a budget, a name it can prove, and... https://www.agentonrails.com/
+    [embed] GitHub - AgentOnRails/agent-on-rails https://github.com/agentOnRails/agent-on-rails
+

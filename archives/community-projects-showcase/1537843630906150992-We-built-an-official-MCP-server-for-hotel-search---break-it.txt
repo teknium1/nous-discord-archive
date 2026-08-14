@@ -1,0 +1,37 @@
+# Thread 'We built an official MCP server for hotel search — break it!' in forum #community-projects-showcase
+# thread_id=1537843630906150992 forum_id=1316137596535177246
+# Started 2026-08-14T18:50:17.100746+00:00
+
+[2026-08-14T15:21:33.361000+00:00] kutia3665 (id=1537843630906150992)
+    Hi everyone!
+    
+    We’re building an MCP (Model Context Protocol) server for **winwin.travel **— a connector that lets AI agents (Claude, ChatGPT, your own bots) search real hotel offers using natural language instead of a traditional website or API.
+    
+    There are still very few good MCP tools for travel out there. Our goal is to give developers accurate hotel search and booking capabilities through a clean MCP interface. We’re now testing it publicly and would love to hear your feedback.
+    
+    **What’s already available:**
+    
+    **Smart hotel search **— query winwin.travel’s real hotel database through MCP. Connect from any MCP-compatible client (Claude Desktop, Cursor, Windsurf, Postman) using mcp.winwin.travel. Results include full descriptions, room amenities, photos, star ratings, taxes, and cancellation policies — not just the hotel name and price.
+    
+    **Filters** — so agents can find the right options instead of simply dumping a list of hotels.
+    
+    **Affiliate program** — commission-based payouts (4–10%) for agents generating 5+ successful bookings per month.
+    
+    **Coming soon:**
+    
+    **Full booking flow **— ready and waiting on a single authorization endpoint. Secure checkout via Stripe → automatic confirmation. Planned for launch before September.
+    
+    **Getting started:**
+    
+    **Repository: ** github.com/WinWin-travel/MCP-server
+    **Documentation:**  mcp.winwin.travel/docs
+    **Access token:**  form.winwin.travel/get_mcp_access
+    
+    **What we need from you:**
+    
+    Is the MCP useful? Is the output clear? Are LLMs using our filters correctly? Does our nested JSON structure cause context loss? How do different models (Claude, GPT-4o, local Llama) handle calls to our tools?
+    
+    Leave your thoughts in this channel or submit structured feedback here: **form.winwin.travel/mcp-feedback**
+    
+    Honestly, we need bug reports more than compliments. Dig in, try to break it, and tell us what doesn’t work.
+

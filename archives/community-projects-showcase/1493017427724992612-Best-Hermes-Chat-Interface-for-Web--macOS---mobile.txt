@@ -6460,3 +6460,15 @@
 [2026-08-14T08:19:31.808000+00:00] cryptobredda (id=1537737424614981652)
     It's not released to the stores but more than happy to share the preview APK for feedback
 
+[2026-08-14T14:49:32.266000+00:00] k.shepherd (id=1537835573249712138)
+    Yeah just lmk when you have that open so I can test it
+    [reply to cryptobredda msg=1537737424614981652]
+
+[2026-08-14T14:56:16.043000+00:00] cryptobredda (id=1537837266813059183)
+    sure, just fixing one last bug today and I will host it up
+    [reply to k.shepherd msg=1537835573249712138]
+
+[2026-08-14T18:08:51.663000+00:00] avidfuturist (id=1537885734596382820)
+    Thanks will take a look!
+    [reply to _123321_ msg=1537733537116061716]
+

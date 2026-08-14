@@ -1,0 +1,7 @@
+# Thread 'Flit - Cross-platform (Android, iOS, MacOS, Windows, Linux) Flutter UI for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1536912246964494406 forum_id=1316137596535177246
+# Started 2026-08-14T18:50:21.993452+00:00
+
+[2026-08-14T17:48:34.726000+00:00] iggyswildride (id=1537880630392528956)
+    Flit - Cross-platform (Android, iOS, MacOS, Windows, Linux) Flutter UI for Hermes Agent
+

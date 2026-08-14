@@ -1,0 +1,14 @@
+# Thread 'installation error' in forum #community-projects-showcase
+# thread_id=1537870900450435103 forum_id=1316137596535177246
+# Started 2026-08-14T18:50:16.616120+00:00
+
+[2026-08-14T17:09:54.927000+00:00] berlin23072005 (id=1537870900450435103)
+    Windows installer issue: Hermes Agent installation consistently fails at the Python dependencies stage. Prerequisites (Python 3.11, Git, Node.js, ripgrep, ffmpeg) all pass, but building hermes-agent fails with:
+    ModuleNotFoundError: No module named 'setuptools'
+    
+    The installer reports that hermes-agent@0.20.1 doesn't declare setuptools as a build dependency and suggests uv.extra-build-dependencies / --no-build-isolation.
+    
+    Is this a known Windows installer issue, and what's the recommended fix/workaround?
+    
+    help me guyss
+

@@ -58782,3 +58782,50 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-14T12:40:33.678000+00:00] rook8286 (id=1537803115258974208)
     how to activate the 1m context window for glm 5.3? cant seem to make it work on the config file
 
+[2026-08-14T13:27:23.171000+00:00] realadolan (id=1537814899126837382)
+    You probably gonna need to wire it up as a custom provider until https://github.com/NousResearch/hermes-agent/pull/85891 lands
+    [reply to rook8286 msg=1537803115258974208]
+
+[2026-08-14T13:29:07.322000+00:00] rook8286 (id=1537815335967662170)
+    i did but using "glm-5.3[1m]" doesent seem to work
+    [reply to realadolan msg=1537814899126837382]
+
+[2026-08-14T14:01:57.613000+00:00] jasheal (id=1537823599967342602)
+    maybe fly will work for that https://fly.io
+    [reply to mehrdad_mms msg=1537789561025986611]
+
+[2026-08-14T14:15:17.096000+00:00] sprmn24 (id=1537826953242087444)
+    Have a good day devs
+
+[2026-08-14T14:49:30.595000+00:00] dias4761 (id=1537835566240890880)
+    <@387972437901312000> were you able to validate those 2 PRs mentioned? compression and compression
+
+[2026-08-14T14:50:47.402000+00:00] dias4761 (id=1537835888392802456)
+    By the way, I'm trying to find a feature to optimize model caching, especially when they run in sub-agents, to see if they consume so much cache space.
+
+[2026-08-14T17:27:34.363000+00:00] nootnootog (id=1537875344047210647)
+    Not really sure where to put this. The pr i opened was mentioned for an eventual merge within a commit (by my understanding). Can you guys take a look at it again?
+    https://github.com/NousResearch/hermes-agent/pull/75253
+
+[2026-08-14T17:32:08.587000+00:00] flep (id=1537876494225772664)
+    Ugh I really want to use HUD 😞
+
+[2026-08-14T18:01:05.003000+00:00] egilewski (id=1537883777282605127)
+    If you're referring to "matches merged auxiliary policy commit" then I'm afraid that's not it. Also the sweeper bot at most would report "this isn't addressed in `main` yet, and I haven't automatically found problems in this PR". A P3 won't normally be able to land soon. If you believe it's more than a P3 you could create an issue that PR is addressing (instead of the one already addressed) and explain the importance there, maybe it will get a higher priority.
+    [reply to nootnootog msg=1537875344047210647]
+
+[2026-08-14T18:06:11.070000+00:00] cmyck (id=1537885061020524615)
+    Hi — I’m looking for clarity on the external contribution process for Hermes Agent. Between July 30 and August 6, I submitted 11 tested PRs covering Buzz gateway reliability, routing, access controls, media handling, and activity reporting. All remain open; none has received a formal maintainer review or disposition.
+    I understand review capacity is limited, but maintaining these branches against a rapidly changing main has a real cost. Are external PRs currently being reviewed? Is there a preferred way to coordinate or consolidate related contributions? If review capacity is unavailable, a candid answer would help us decide whether to maintain these changes privately instead.
+
+[2026-08-14T18:14:31.962000+00:00] epoch1969 (id=1537887161913704519)
+    I’m using Hermes Desktop on macOS with the default profile connected locally and a named Desktop profile connected to a separate remote Hermes 0.20.1 backend via OAuth. The remote WebUI works and OpenAI OAuth is connected, but sending a message from the Desktop profile fails with “No Codex credentials stored.” The Desktop sometimes also appears to use a local profile despite showing the remote profile as selected. Is this a known routing/profile bug, and what is the supported way to connect multiple Desktop profiles to separate remote backends?
+
+[2026-08-14T18:36:48.483000+00:00] egilewski (id=1537892767689216021)
+    PRs are being reviewed very rapidly. 581 PRs were merged between July 30 and August 6. And 4296 new were created.
+    
+    You don't have to maintain branches, it will be done by a maintainer. Though I guess you could help by checking up on them when `main` changes in a way that warrants a pivot or serious adjustment. But your PRs won't be auto-closed just because you didn't.
+    
+    The official suggested way for the case of having to wait for merge too long is to create a plugin, and if interface for plugins is lacking you can request for it to be extended. That will be faster and easier for you to maintain.
+    [reply to cmyck msg=1537885061020524615]
+

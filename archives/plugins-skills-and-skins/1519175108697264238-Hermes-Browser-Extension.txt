@@ -966,3 +966,7 @@
     [attachment] HBE_-_Control_That_Wakes_Ready_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1537087633728081990/HBE_-_Control_That_Wakes_Ready_Update_AD.png?ex=6a7dc3e9&is=6a7c7269&hm=fe2bc51babc9687b72f2574fb4cb52a6df3f6a693e3665d97556f31ed2028595&
     [embed] feat(controller): add durable browser lifecycle · abundantbeing/he... https://github.com/abundantbeing/hermes-browser-extension/commit/2904d0d4e44c1e17a5fe099fc3066df695c733ec
 
+[2026-08-14T15:55:32.965000+00:00] jonkomet (id=1537852185625231361)
+    Bot Mode Coming to Hermes Browser Extension soon + Hermes Web
+    [attachment] hbe_bot_mode_vid.mp4 https://cdn.discordapp.com/attachments/1519175108697264238/1537852185394683924/hbe_bot_mode_vid.mp4?ex=6a808bf4&is=6a7f3a74&hm=58813882e49164dbbd72e03a45878908b17dce1b68c49fe568387a0a8931e0dd&
+

@@ -37,3 +37,8 @@
     Now includes Subagents detail!
     [attachment] image.png https://cdn.discordapp.com/attachments/1537180531400114206/1537565615659946135/image.png?ex=6a7f8111&is=6a7e2f91&hm=f82a8a8f16c89c89ef2917531bace66c454ddd557f8acbf28ce8937504c77d0e&
 
+[2026-08-14T13:55:42.034000+00:00] tomrevo.x (id=1537822024674705478)
+    And Windows Powershell issues have been fixed!
+    
+    If someone with a Windows machine would like to test and report the results to me, much appreciated!
+
