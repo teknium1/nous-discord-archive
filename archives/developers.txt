@@ -58635,3 +58635,150 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     - PR: https://github.com/NousResearch/hermes-agent/pull/85891
     [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537719622349099058/image.png?ex=6a80107f&is=6a7ebeff&hm=e3864134e9f217c5f33b94ea6c07c7b041620bac37160176c942f42c417c8597&
 
+[2026-08-14T07:42:14.083000+00:00] godsboy7777 (id=1537728038916202578)
+    Hey <@387972437901312000>, could you take a look at this when you have a minute?
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/85895
+    Issue: https://github.com/NousResearch/hermes-agent/issues/85709
+    
+    It fixes a gateway restart bug where session-store bookkeeping could be mistaken for real user activity.
+    
+    Recover, repoint, and turn-marker writes can refresh `updated_at`, so even a session idle for 21 days could pass the 120s restart-resume window and receive a synthetic resume turn that retries unfinished work.
+    
+    The fix adds `last_activity_at` and uses that as the restart freshness clock.
+    
+    Important details:
+    
+    * Real user activity updates `last_activity_at`
+    * Store bookkeeping no longer makes stale sessions look active
+    * In-flight turns still resume through `active_turn_token`
+    * Older `sessions.json` rows keep the existing `updated_at` fallback
+    * No migration required
+    
+    Validation:
+    
+    * `test_clean_shutdown_marker.py`
+    * `test_restart_resume_pending.py`
+    * `40 passed, 0 failed`
+    * Latest CI is green
+    * Docker build/test workflow is green
+    * PR is mergeable
+    
+    It is currently the only PR on #85709.
+    
+    Would appreciate a review when you get a gap.
+
+[2026-08-14T10:16:35.498000+00:00] pixel7legion (id=1537766884106305557)
+    Hi! Tell me plesae how contact with support, had problems with subscription, need fast to solve this problem <@387972437901312000>
+
+[2026-08-14T10:20:25.939000+00:00] egilewski (id=1537767850645655613)
+    support@nousresearch.com
+    [reply to pixel7legion msg=1537766884106305557]
+
+[2026-08-14T10:21:22.442000+00:00] pixel7legion (id=1537768087636676608)
+    I write there but they don't give answear more than 48 hours, and I can't work with agent ((
+    [reply to egilewski msg=1537767850645655613]
+
+[2026-08-14T10:24:40.046000+00:00] egilewski (id=1537768916447797351)
+    Try to create a thread in <#1485307775444844625> then, and tell there how to find the email from you. Support staff monitors that channel (not necessary in the middle of the US night though).
+    [reply to pixel7legion msg=1537768087636676608]
+
+[2026-08-14T10:25:05.947000+00:00] pixel7legion (id=1537769025084465223)
+    Thanks!
+    [reply to egilewski msg=1537768916447797351]
+
+[2026-08-14T10:34:07.096000+00:00] pixel7legion (id=1537771294827745370)
+    <@411637224476770325> inan Maybe you can help? I create <#1485307775444844625>
+
+[2026-08-14T11:46:42.097000+00:00] mehrdad_mms (id=1537789561025986611)
+    Hey people, Hermes is awesome 🔥 
+    Quick question, is there a service/solution like https://railway.com/ but for Hermes agents? 
+    I tried to deploy the agent to railway but it deploys through a container and that container can't do everything that I want. I want a dedicated runtime like a VPS but I also want the ability to spin these agents up/down easily.
+
+[2026-08-14T12:01:18.888000+00:00] realadolan (id=1537793238553862185)
+    What about Hermes Cloud? (official)
+    [reply to mehrdad_mms msg=1537789561025986611]
+
+[2026-08-14T12:03:48.625000+00:00] realadolan (id=1537793866596352022)
+    I developed a system like this of my own to let non-tech family members use Hermes Agents. But you can probably just use Hermes Cloud from Nous Portal officially
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537793865845579816/image.png?ex=6a8055a4&is=6a7f0424&hm=7bab365acdb5959fa8bbaf6e51de0fa0082cc02b8720aa92309e38de15deef87&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537793866273661039/image.png?ex=6a8055a4&is=6a7f0424&hm=0d5cb270d37fa846a15e9279fcb08cb4d75e662b9340c13dbd75cadb6bd7b599&
+
+[2026-08-14T12:05:58.171000+00:00] realadolan (id=1537794409951924224)
+    This is from the official Nous portal, check it out
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537794408915800204/image.png?ex=6a805625&is=6a7f04a5&hm=a29a8450ccaa2aa20d358530b7edc7fd73210cc91b6b43dffee99ac7370c2374&
+
+[2026-08-14T12:08:00.965000+00:00] mehrdad_mms (id=1537794924987031582)
+    I don't think it can pull off what I'm trying to do. 
+    I've got a multi agent setup (it's multiple Hermes profiles orchestrated to work) and I want instances of this to be created.
+    I think this runtime only gives me the session. I can't have multiple profiles working together like I'm running now on a VPS.
+    [reply to realadolan msg=1537793866596352022]
+
+[2026-08-14T12:08:26.688000+00:00] mehrdad_mms (id=1537795032877367467)
+    (btw thanks for answering)
+
+[2026-08-14T12:08:48.633000+00:00] mehrdad_mms (id=1537795124921368727)
+    Is this open source ? 🫠
+    [reply to realadolan msg=1537793866596352022]
+
+[2026-08-14T12:08:58.573000+00:00] realadolan (id=1537795166612488233)
+    No 😄
+    [reply to mehrdad_mms msg=1537795124921368727]
+
+[2026-08-14T12:09:09.501000+00:00] realadolan (id=1537795212447981618)
+    Btw, Hermes Cloud does let you create multiple profiles.
+
+[2026-08-14T12:09:44.060000+00:00] realadolan (id=1537795357398802432)
+    It's literally a Hermes on a VPS that you can spin in a click of a button
+
+[2026-08-14T12:11:26.363000+00:00] mehrdad_mms (id=1537795786488946820)
+    Does it gives me full access to that VPS?
+    [reply to realadolan msg=1537795357398802432]
+
+[2026-08-14T12:13:07.747000+00:00] realadolan (id=1537796211724124170)
+    Full access in what sense? I don't think you'll be able to host web apps on it
+    [reply to mehrdad_mms msg=1537795786488946820]
+
+[2026-08-14T12:13:21.808000+00:00] realadolan (id=1537796270700232704)
+    You do have terminal access through the Hermes itself
+
+[2026-08-14T12:15:26.705000+00:00] mehrdad_mms (id=1537796794556358786)
+    I will check it out to see if I can fix my problem short term but overall need a cheaper solution. I'm at 5 Hermes instances now and counting... 
+    $22/mo will break the bank 😄
+
+[2026-08-14T12:15:40.161000+00:00] mehrdad_mms (id=1537796850994782208)
+    Thanks for your help mate.
+    [reply to realadolan msg=1537796211724124170]
+
+[2026-08-14T12:16:09.483000+00:00] realadolan (id=1537796973980160071)
+    Why do you need 5 Hermes instances, and not 1 instance with 5 different profiles? Any particular reason?
+
+[2026-08-14T12:18:01.182000+00:00] elise.a.atomic (id=1537797442479595601)
+    Heyy from Atomic Bot, we do this actually
+    I work on Atomic Bot. We run hermes, openclaw and codex in the cloud, you can run multiple agents at once, you can start and stop them per agent 
+    Agents stay up 24/7
+    the railway wall you hit is the usual one, a build-oriented container isnt the same thing as a runtime an agent can actually work in
+    [reply to mehrdad_mms msg=1537789561025986611]
+
+[2026-08-14T12:18:03.976000+00:00] mehrdad_mms (id=1537797454198472805)
+    I need a dedicated Hermes per client. I'm already using profiles to distribute the tools between them and orchestrate.
+    [reply to realadolan msg=1537796973980160071]
+
+[2026-08-14T12:18:16.800000+00:00] realadolan (id=1537797507986493534)
+    I see
+
+[2026-08-14T12:19:26.851000+00:00] mehrdad_mms (id=1537797801801547837)
+    Can you send some docs/links so I can check it out ?
+    [reply to elise.a.atomic msg=1537797442479595601]
+
+[2026-08-14T12:20:53.267000+00:00] realadolan (id=1537798164256653435)
+    Check your PM
+    [reply to mehrdad_mms msg=1537797801801547837]
+
+[2026-08-14T12:27:38.076000+00:00] elise.a.atomic (id=1537799862148669490)
+    Sent it to your dm!
+    [reply to mehrdad_mms msg=1537797801801547837]
+
+[2026-08-14T12:40:33.678000+00:00] rook8286 (id=1537803115258974208)
+    how to activate the 1m context window for glm 5.3? cant seem to make it work on the config file
+

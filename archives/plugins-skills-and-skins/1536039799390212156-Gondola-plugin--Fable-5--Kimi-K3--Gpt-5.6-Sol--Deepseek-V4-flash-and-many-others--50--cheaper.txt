@@ -70,3 +70,11 @@
     https://x.com/gondolamarket/status/2087635913807696173
     [embed]  https://twitter.com/gondolamarket/status/2087635913807696173
 
+[2026-08-14T08:01:09.491000+00:00] xatarrer (id=1537732801162645564)
+    Private Deepseek now available on Gondola.
+    
+    V4 Flash w\ TEE - $0.0557/$0.1141/$0.0116/1M
+
+[2026-08-14T08:02:03.395000+00:00] xatarrer (id=1537733027252281395)
+    We also have V4 Pro running on Venice servers and prompts never stored for $0.5294/$1.5147/$0.1010/1M
+

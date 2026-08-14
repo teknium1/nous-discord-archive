@@ -6449,3 +6449,14 @@
     
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
 
+[2026-08-14T08:04:04.956000+00:00] _123321_ (id=1537733537116061716)
+    oyyy 👋 noticed heavy memory usage so had the clanker post this https://github.com/nesquena/hermes-webui/issues/6999 rather than do the interclanker communication thought i'd short circuit it and ask if there's anything i can do
+    [embed] Memory exhaustion / OOM kill when focusing a tab running a long ses... https://github.com/nesquena/hermes-webui/issues/6999
+
+[2026-08-14T08:18:42.336000+00:00] cryptobredda (id=1537737217114378401)
+    Indeed, that is my experience, I can host the GitHub with the APK for android so you can test if you want
+    [reply to k.shepherd msg=1537578309548777522]
+
+[2026-08-14T08:19:31.808000+00:00] cryptobredda (id=1537737424614981652)
+    It's not released to the stores but more than happy to share the preview APK for feedback
+
