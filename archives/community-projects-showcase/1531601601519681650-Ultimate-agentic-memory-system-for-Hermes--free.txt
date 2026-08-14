@@ -375,3 +375,10 @@
     [attachment] 2026-08-11_04_04_22-Engraphis_Ledger_-_Comet.png https://cdn.discordapp.com/attachments/1531601601519681650/1536776688472694804/2026-08-11_04_04_22-Engraphis_Ledger_-_Comet.png?ex=6a7ca252&is=6a7b50d2&hm=90d60361ed6937b5aabba00c95980c8893a9390c40cda043dd273941f6fcbc1d&
     [reply to jaixii msg=1536380985183182868]
 
+[2026-08-13T21:55:52.341000+00:00] k.shepherd (id=1537580475995005058)
+    Any option to disable the shading on the nodes/dots? Just have them flat? It's a fun visual but makes more sense being flat icons (imo) so I'd be nice as an option.
+    
+    
+    And have you finally moved away from requiring us to connect Keys and or pay for self hosted features like the Scheduled Sleep, or Analytics? Or is that still a premium feature? (which for self hosting something, shouldnt cost users. Appreciate the work, but there's like 7 other memory systems that do things very similar if not exactly the same. - Cognee, Hindsight, Mnemosyne, etc but they're all free)
+    [reply to jaixii msg=1536776688594063471]
+

@@ -1,0 +1,23 @@
+# Thread 'Skill Router — Hermes Plugin for Self-Learning Skill Routing' in forum #plugins-skills-and-skins
+# thread_id=1537541349673537651 forum_id=1485392832154832906
+# Started 2026-08-14T01:50:43.409929+00:00
+
+[2026-08-13T19:20:23.899000+00:00] xlodx (id=1537541349673537651)
+    The Skill Router makes skill suggestions task-based and self-learning: it injects the relevant skills for each task, learns from actual usage (word-tool co-occurrence with lift weighting), and grows automatically. New skills in the system are recognized without any configuration.
+    
+    Features:
+    
+    Task-based skill routing (injection before the LLM call)
+    Self-learning lexicon: words associate with tools/skills via co-occurrence and lift
+    Automatic genericity detection (DF-based): noise words are cleaned up automatically
+    Live dashboard: cluster view of all skills with causal words, last injection, 5-second auto-refresh
+    Privacy-first: learned data (personal words) stays local, never in the repo
+    CI: tests + lint on GitHub Actions
+    Installation: 
+    
+    hermes plugins install xXLODXx/hermes-skill-router
+    
+    Repository: https://github.com/xXLODXx/hermes-skill-router
+    [attachment] skill-router-intro-en-full.mp3 https://cdn.discordapp.com/attachments/1537541349673537651/1537541350709399642/skill-router-intro-en-full.mp3?ex=6a7f6a78&is=6a7e18f8&hm=32c282b59ff0e0fcb4ff06dc07900a1249b2b1bd663d5770fef52ddac32535ad&
+    [embed] GitHub - xXLODXx/hermes-skill-router: Hermes plugin: task-aware, se... https://github.com/xXLODXx/hermes-skill-router
+

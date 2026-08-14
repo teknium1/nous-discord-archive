@@ -33,3 +33,7 @@
     [attachment] social-preview.png https://cdn.discordapp.com/attachments/1537180531400114206/1537180531807101048/social-preview.png?ex=6a7e1a6e&is=6a7cc8ee&hm=9b193a7bd2047ff15145af315cee91b694427b3365ccd9b9eec6d97b9e737eef&
     [embed] GitHub - tommulkins/hermes-plugin-session-analyzer: Per-session ana... https://github.com/tommulkins/hermes-plugin-session-analyzer
 
+[2026-08-13T20:56:49.455000+00:00] tomrevo.x (id=1537565616054206616)
+    Now includes Subagents detail!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1537180531400114206/1537565615659946135/image.png?ex=6a7f8111&is=6a7e2f91&hm=f82a8a8f16c89c89ef2917531bace66c454ddd557f8acbf28ce8937504c77d0e&
+

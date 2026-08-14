@@ -379,3 +379,6 @@
 [2026-07-31T08:53:42.936000+00:00] haimbender (id=1532672597551087716)
     anyone know how to remove the app store app? seems like u can't wtf?
 
+[2026-08-13T19:04:01.116000+00:00] haimbender (id=1537537227582869524)
+    new site design just dropped, lmk what u guys think 🙏🏻
+

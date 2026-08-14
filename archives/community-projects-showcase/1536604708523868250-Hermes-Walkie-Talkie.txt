@@ -33,3 +33,15 @@
     [embed] feat(plugins): add safe exact-session message delivery seam by Sahi... https://github.com/NousResearch/hermes-agent/pull/83661
     [embed]  https://twitter.com/i/status/2085817074816070014
 
+[2026-08-14T00:33:05.192000+00:00] sahil_ss9 (id=1537620040239685713)
+    Walkie-Talkie V1.1 is out.
+    
+    Your Hermes sessions can now message each other on the same machine, work in groups, broadcast updates, and send structured requests when normal chat isn’t enough. Windows support now includes native named-pipe transport too.
+    
+    There’s also an optional Dashboard/Control Room integration: install the Walkie-Talkie plugin for a richer peer workspace at /plugins/hermes-peer covering live peers, inboxes, requests, groups and health. It uses the public Hermes plugin API and doesn’t duplicate peer state.
+    
+    Keep the CLI if that’s your flow. Plug in the Dashboard when you want the full picture.
+
+[2026-08-14T01:43:47.541000+00:00] gluedmosquito (id=1537637833941057538)
+    they just added it with bots in the new hermes update
+

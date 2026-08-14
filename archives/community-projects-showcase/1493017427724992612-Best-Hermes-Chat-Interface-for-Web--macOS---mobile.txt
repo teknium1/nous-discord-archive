@@ -6433,3 +6433,8 @@
     Yeah, just wanted to know who to tag
     [reply to avidfuturist msg=1537146420740751420]
 
+[2026-08-13T21:47:15.820000+00:00] k.shepherd (id=1537578309548777522)
+    Looks clean, is the app available to download and test?
+    Been just using the Hermes WebUI Android app but some visuals / ui-ux could still use some refining.
+    [reply to cryptobredda msg=1537085202130542664]
+

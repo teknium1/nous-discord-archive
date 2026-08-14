@@ -9,3 +9,13 @@
     
     I'm still working on getting it into app stores, but for now the releases page has pre-built packages for all of the supported platforms.
 
+[2026-08-13T21:47:58.272000+00:00] k.shepherd (id=1537578487605629021)
+    Do you have a link? Would love to take a look
+
+[2026-08-13T23:02:23.400000+00:00] iggyswildride (id=1537597215709855836)
+    I could have sworn there was one. Maybe it got removed somehow
+
+[2026-08-13T23:02:59.093000+00:00] iggyswildride (id=1537597365417152613)
+    https://github.com/iggy/flit
+    [embed] GitHub - iggy/flit: app https://github.com/iggy/flit
+
