@@ -515,3 +515,7 @@
     https://x.com/beamnxw/status/2087506344911720711?s=46
     [embed]  https://twitter.com/beamnxw/status/2087506344911720711?s=46
 
+[2026-08-15T18:19:51.828000+00:00] dre108 (id=1538250891394687026)
+    ya same vault but i also designed ClawMem to be multi-vault for different collection corpus (so can be both across any agents)
+    [reply to rostelinalise msg=1529351428986900550]
+

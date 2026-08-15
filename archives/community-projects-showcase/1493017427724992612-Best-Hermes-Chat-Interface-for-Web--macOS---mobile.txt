@@ -6481,3 +6481,16 @@
     [embed] GitHub - cryptobredda/hermes-agent-clients: Focused mobile and desk... https://github.com/cryptobredda/hermes-agent-clients
     [reply to k.shepherd msg=1537835573249712138]
 
+[2026-08-15T16:35:26.841000+00:00] ipl31 (id=1538224614134648902)
+    I have been testing out HermesWebUI and like it but I keep running into a problem. My sessions in WebUI say "model X" when I look at the UI at the bottom of the session window. But the chat is actually using a different model. It seems like there is a disconnect between the model I select in the UI and the model the session is using.
+
+[2026-08-15T16:42:16.758000+00:00] avidfuturist (id=1538226333451296969)
+    We will look into it, thanks for the report!
+    [reply to ipl31 msg=1538224614134648902]
+
+[2026-08-15T16:43:30.145000+00:00] avidfuturist (id=1538226641258549378)
+    Do you have an example of the model selected vs model used? Also the model should show up in the assistant response, can you confirm you see a different model? If you start a new chat and select an alternate model from the model selector, does that resolve it?
+
+[2026-08-15T17:00:08.593000+00:00] ipl31 (id=1538230829052854404)
+    Next time I see it I will try to get screen shot or video. In my case the model shown at the end of the response was different from the model I had selected. It was a fallback model. Its possible the primary timed out and it went to fall back. But as a user I would expect the prompt input to reflect the model used, similar to when you are using the chat cli.
+

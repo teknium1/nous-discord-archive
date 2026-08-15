@@ -55,3 +55,23 @@
 [2026-08-15T09:27:41.436000+00:00] majber (id=1538116965623922728)
     <@584113584380969020>
 
+[2026-08-15T12:38:54.402000+00:00] nikolahristov (id=1538165086731112518)
+    there's a release almost every other week - https://github.com/PlayForm/Aphrodite/releases, also published on crates.io now, under `aphrodite` and `aphrodite-hermes` - https://crates.io/crates/aphrodite, https://crates.io/crates/aphrodite-hermes, https://crates.io/crates/aphrodite-headroom-core
+    [embed] Releases · PlayForm/Aphrodite https://github.com/PlayForm/Aphrodite/releases
+    [embed] crates.io: Rust Package Registry https://crates.io/crates/aphrodite
+    [embed] crates.io: Rust Package Registry https://crates.io/crates/aphrodite-hermes
+    [embed] crates.io: Rust Package Registry https://crates.io/crates/aphrodite-headroom-core
+
+[2026-08-15T12:39:05.370000+00:00] nikolahristov (id=1538165132734111764)
+    <@304475657256173570>
+
+[2026-08-15T13:46:37.754000+00:00] majber (id=1538182129664659496)
+    <@584113584380969020>
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1516871868475244695/1538182128972464138/message.txt?ex=6a81bf3d&is=6a806dbd&hm=1f67de9c11f2eb765dfe559fb49cc7b7800478b057b494f2a9c2eebdf8e1cdf4&
+
+[2026-08-15T13:58:31.552000+00:00] nikolahristov (id=1538185123550330960)
+    I'll take a look <@304475657256173570> , I've had issues with gitlinks and submodules links before, will resolve shortly
+
+[2026-08-15T13:58:43.320000+00:00] nikolahristov (id=1538185172908769351)
+    Thank you.
+

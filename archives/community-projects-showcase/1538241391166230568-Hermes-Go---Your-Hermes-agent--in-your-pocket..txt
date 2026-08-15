@@ -1,0 +1,47 @@
+# Thread 'Hermes Go , Your Hermes agent, in your pocket. 📱🔥' in forum #community-projects-showcase
+# thread_id=1538241391166230568 forum_id=1316137596535177246
+# Started 2026-08-15T18:25:10.303528+00:00
+
+[2026-08-15T17:42:06.797000+00:00] shilp26. (id=1538241391166230568)
+    I built Hermes Go — a native Android client for self-hosted Hermes Agent. Not a chat wrapper — the FULL agent in your hand. Live streaming, voice, Star Map, cron, approvals, system control.
+    
+    Zero telemetry. Your data stays on YOUR server.
+    
+    Hermes Go — Your AI agent, in your pocket
+    https://shilp26.github.io/hermes-go/
+    
+    A little more about what's inside Hermes Go 👇
+    
+    🧠 Live streaming — reasoning rows, tool timelines, markdown as they happen
+    
+    🎙️ Voice — dictate, hear replies, hands-free conversation loop
+    
+    🛡️ Full control — approvals, sudo, secrets, queue, steer, stop
+    
+    ⭐ Star Map — the learning graph, on your phone
+    
+    📋 Work — cron jobs, kanban, artifacts, host files, background processes
+    
+    🖥️ System — health, logs, ops console, config editor
+    
+    🔌 Connect — LAN, Tailscale, HTTPS, or Hermes Cloud
+    
+    🏠 Dashboard — agent status, performance, capabilities at a glance
+    
+    💬 Sessions — inbox, folders, full-text search, bulk management
+    
+    🧠 Brain — models, skills, tools, memory, MCP, plugins
+    
+    I'm just a fan. A user who fell in love with Hermes Agent and wanted it everywhere. If this helps even one person run their agent from their phone, I'm happy. 💙
+    [attachment] Chat.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538241391539257537/Chat.jpg?ex=6a81f66e&is=6a80a4ee&hm=a3ff1a0af6239e338c4df425507bc2532ed284a4486d4f30fcb180cdeb20e9e3&
+    [attachment] artifacts.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538241392005095424/artifacts.jpg?ex=6a81f66e&is=6a80a4ee&hm=6ea37464e9f4944ee6c3e1e21be3ca112e2b9bc848291f83f8bea75800b4f35f&
+    [attachment] dashboard-settings.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538241392390840440/dashboard-settings.jpg?ex=6a81f66f&is=6a80a4ef&hm=aaf9e92a085db0c72f578a27277f6336f74ba90e61f9260b5fe57b108887e4be&
+    [attachment] drawer.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538241392814325951/drawer.jpg?ex=6a81f66f&is=6a80a4ef&hm=c78d4adbe371bf1cfa0e6d2f6c6384041132a9d84ee989722d78962c8079353e&
+    [attachment] models-activity.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538241393439285308/models-activity.jpg?ex=6a81f66f&is=6a80a4ef&hm=a5e9e41ca29b021e7758866e497999a36d2f86bae60c042970290b2deef432fd&
+    [attachment] sessions.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538241393892266155/sessions.jpg?ex=6a81f66f&is=6a80a4ef&hm=be9cc3f667997c8edf50f8f69231928d84b6c6cbbae6edbf3d6cdad8a74c6403&
+    [attachment] sessions-switch.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538241394244714546/sessions-switch.jpg?ex=6a81f66f&is=6a80a4ef&hm=cc691bd211db028824186222d318b4282dee3101965706cdfdde263b0851e1ac&
+    [embed] Hermes Go — Your AI agent, in your pocket https://shilp26.github.io/hermes-go/
+
+[2026-08-15T17:44:32.018000+00:00] shilp26. (id=1538242000266985633)
+    Hermes Go , Your Hermes agent, in your pocket. 📱🔥
+

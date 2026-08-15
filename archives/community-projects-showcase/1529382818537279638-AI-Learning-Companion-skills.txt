@@ -22,3 +22,6 @@
     If you want to learn AI as a subject (if I understand correctly) … you don’t really need Wolfram unless you’re planning to use their built in stuff for neural networks.
     You can take some ideas from the skill but you don’t really need it.
 
+[2026-08-15T17:59:05.834000+00:00] jimpickens3203 (id=1538245665317064765)
+    Could you make one for math?
+

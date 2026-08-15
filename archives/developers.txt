@@ -59138,3 +59138,165 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-15T11:41:56.439000+00:00] monolith2 (id=1538150750755233793)
     I think some modules could be made 70% shorter and still retain the same functionality and have a stronger architecture.
 
+[2026-08-15T12:53:00.616000+00:00] remintoscar (id=1538168636009742446)
+    https://github.com/NousResearch/hermes-agent/pull/86990
+
+[2026-08-15T12:53:22.834000+00:00] remintoscar (id=1538168729198657607)
+    fix: parse JSON-array strings in disabled skills/toolsets config
+
+[2026-08-15T13:10:33.435000+00:00] deer420 (id=1538173051852693505)
+    I did so much bug report 😭 do I get a bug bounty ?
+    [reply to realadolan msg=1538147198707957800]
+
+[2026-08-15T13:11:01.736000+00:00] realadolan (id=1538173170555691018)
+    Lmao
+
+[2026-08-15T13:12:39.240000+00:00] deer420 (id=1538173579517235210)
+    😂
+
+[2026-08-15T13:21:50.961000+00:00] dias4761 (id=1538175893602832414)
+    Bro, there was a massive commit merge today. The Nous team turned into robots for a few days.
+    [reply to realadolan msg=1538173170555691018]
+
+[2026-08-15T13:21:54.645000+00:00] dias4761 (id=1538175909054652459)
+    Lol
+
+[2026-08-15T13:42:14.508000+00:00] smeagol1907. (id=1538181025530908752)
+    Hi team! Found a fail-open authorization bug in hermes-telegram-business. handle_callback's owner check was `if caller_user_id and str(caller_user_id) != str(conn.get("owner_user_id")): reject`. Because of the `caller_user_id and ...` short-circuit, a falsy caller_user_id skips the check entirely and gets treated as authorized, which contradicts the module's own "the owner is always in control" guarantee. Today's single call site always populates caller_user_id from Telegram's CallbackQuery.from_user.id, so it's not exploitable right now, but it's a latent fail-open pattern worth closing defensively. PR: https://github.com/NousResearch/hermes-telegram-business/pull/1
+    
+    Let me know if you'd like it done differently!
+
+[2026-08-15T13:43:48.854000+00:00] .rcfa (id=1538181421246578688)
+    What’s up with Hermes suddenly opening Google Chrome while it updates? I didn’t use to do this…
+    
+    It forces a browser open I intentionally do NOT want to open, and restores DOZENS of windows I want restored if and only if *I* open Chrome. This can overload the window server and the GPU running local LLMs.
+    
+    Hermes should not open ANY app, ever, unless told to do so.
+    
+    macOS 27b5, MBP M4Max
+
+[2026-08-15T14:01:44.579000+00:00] remintoscar (id=1538185933164257412)
+    https://github.com/NousResearch/hermes-agent/pull/87029
+
+[2026-08-15T14:58:09.651000+00:00] dias4761 (id=1538200131185156256)
+    Imma look this
+    [reply to .rcfa msg=1538181421246578688]
+
+[2026-08-15T15:33:51.397000+00:00] promptsiren (id=1538209114319233096)
+    <@733342643362463784> Thanks for reporting. There are a bunch of these going around, stay safe and don't click any links from any emails etc
+
+[2026-08-15T15:41:42.820000+00:00] andrexibiza (id=1538211091610468372)
+    I checked this carefully, and you’re right about the substantive issue. I designed my process specifically to prevent duplicate work, preserve attribution, and consolidate around existing implementations rather than overwrite them. In this case, my process did the opposite. #73986 was already the canonical implementation, my own tracker identified it as such, and #86368 should never have been opened as a competing implementation.
+    
+    Treating my campaign sequencing as a block on your existing PR was also wrong. My tracker coordinates my work. It is not a maintainer hold, and I should not have represented it as one.
+    
+    The attribution failure bothers me particularly because preserving provenance is one of the central invariants of the system I’m building. The last thing I have any interest in doing is appropriating others' work as my own. I’m building Hermes with Hermes: I’ve developed and have been using a new methodology for decomposing very large, entangled godfiles into independently reviewable changes while verifying that behavior, seams, tests, and authorship survive the transformation. The entire point is to make large-scale automated work more accountable and traceable, not less.
+    
+    Turning a known author into PR #73986 contributor violates that principle completely. Whatever happened mechanically, it happened through a process I designed and operated. That’s my responsibility. 
+    
+    The fact that essentially this same collision happened with #77285 matters too. I caught it, closed it, acknowledged that #73986 was the active repair, and thought the deduplication controls were sufficient afterward. They obviously weren’t. A process that fails the same invariant twice has a defect, and I’m treating it as one.
+    
+    I’m going to take a step back. Existing work needs to be detected before implementation begins, known consolidation targets need to be compared against live heads, and attribution needs to survive automatically rather than depend on cleanup afterward.
+    
+    Separately, my dog died in my arms on Tuesday. I’ve been operating through that and I’ve probably been more detached than usual. That’s context, not an excuse for this. I mention it only because if I’ve seemed unusually mechanical or disconnected in interactions this week, that’s why. 
+    
+    I’m not going to engage with the personal characterizations. But the technical criticism and the attribution criticism here are valid. You were right to call this out, and I’m sorry. 
+    
+    Have a good day everyone.
+    [reply to realadolan msg=1537969084946186391]
+
+[2026-08-15T16:19:12.697000+00:00] teknium (id=1538220528278437969)
+    To make updating more reliable until the compiled binaries come out
+    [reply to .rcfa msg=1538181421246578688]
+
+[2026-08-15T16:23:25.946000+00:00] dias4761 (id=1538221590481735811)
+    This could not be optimized to have a low cost, or would it not be feasible?
+    [reply to teknium msg=1538220528278437969]
+
+[2026-08-15T16:24:01.985000+00:00] dias4761 (id=1538221741640392856)
+    Also, I'm finishing up the project that you had partially solved. I tried to do the rest; check back when you have time.
+
+[2026-08-15T16:28:45.778000+00:00] teknium (id=1538222931954634922)
+    ?
+    [reply to dias4761 msg=1538221590481735811]
+
+[2026-08-15T16:39:21.224000+00:00] dias4761 (id=1538225597208068137)
+    If Hermes is opening tabs while updating, it may generate data costs and, depending on the computer, it may crash.
+    [reply to teknium msg=1538222931954634922]
+
+[2026-08-15T16:41:20.252000+00:00] teknium (id=1538226096447950909)
+    It will not generate costs..
+    [reply to dias4761 msg=1538225597208068137]
+
+[2026-08-15T16:42:07.087000+00:00] dias4761 (id=1538226292887912529)
+    Oh , i see
+    [reply to teknium msg=1538226096447950909]
+
+[2026-08-15T16:43:45.740000+00:00] dias4761 (id=1538226706668716032)
+    I started from the premise that this would generate costs, albeit small, that could harm certain computers.
+
+[2026-08-15T16:47:34.359000+00:00] dias4761 (id=1538227665566437377)
+    But I'll take a look at that first, I'm curious.
+
+[2026-08-15T16:50:39.362000+00:00] therealryan100 (id=1538228441525002381)
+    How do you close these sidebars? The UI seems really buggy... Everythings so big now and not minimalist like before, is there a setting for this or do i have to rollback
+
+[2026-08-15T16:50:53.880000+00:00] therealryan100 (id=1538228502418169877)
+    [attachment] rkp1r39.png https://cdn.discordapp.com/attachments/1491258766648283238/1538228502141337610/rkp1r39.png?ex=6a81ea6d&is=6a8098ed&hm=134647c07e5e4964ecad627909029e45a75dbca4601d09727502126a998dd7c9&
+
+[2026-08-15T17:02:09.025000+00:00] tonysimons_ (id=1538231334181412894)
+    Right click on them and close should work?
+    [reply to therealryan100 msg=1538228502418169877]
+
+[2026-08-15T17:03:40.089000+00:00] therealryan100 (id=1538231716131504148)
+    nope
+    [attachment] nxndh8s.png https://cdn.discordapp.com/attachments/1491258766648283238/1538231714940452884/nxndh8s.png?ex=6a81ed6b&is=6a809beb&hm=ae038a929a53ba4cfa6b51aded1440ae4006dbe1cc0b3b5d4412c98dd7972a77&
+    [reply to tonysimons_ msg=1538231334181412894]
+
+[2026-08-15T17:07:45.406000+00:00] therealryan100 (id=1538232745065451561)
+    and now the window stays paused when not in focus...
+
+[2026-08-15T17:09:23.877000+00:00] therealryan100 (id=1538233158082891826)
+    Is this intended behavior or a bug?
+
+[2026-08-15T17:27:10.062000+00:00] tumadre (id=1538237629986906185)
+    ctrl w
+    [reply to therealryan100 msg=1538228441525002381]
+
+[2026-08-15T17:27:23.461000+00:00] tumadre (id=1538237686186512437)
+    after you click into the element
+
+[2026-08-15T17:29:35.627000+00:00] tumadre (id=1538238240530894950)
+    I'm on it boss do you want me to email you the results or send a letter?
+
+[2026-08-15T17:30:16.526000+00:00] sahaun (id=1538238412073599027)
+    Based use of google sheets.
+
+[2026-08-15T17:43:26.979000+00:00] _ultrainstinct_ (id=1538241727473782954)
+    Hello! Is there something like remote sandboxing for hermes?
+
+[2026-08-15T17:49:42.506000+00:00] kadirfarm (id=1538243302548045954)
+    Fixed #86871  Chat Completions was missing duplicate tool call detection when JSON argument key order differed. PR here: https://github.com/NousResearch/hermes-agent/pull/87160
+
+[2026-08-15T18:02:18.191000+00:00] flep (id=1538246472120926218)
+    You did not right-clicked on the tabs, you clicked on the app top bar.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538246470816239616/image.png?ex=6a81fb29&is=6a80a9a9&hm=67d68d12de47886e97fae83f2ab81e64b5809567de1ee99261e13f417cba3ad1&
+    [reply to therealryan100 msg=1538231716131504148]
+
+[2026-08-15T18:02:47.595000+00:00] flep (id=1538246595450118244)
+    also mouse middle-click on tabs also close them, you know, like in any browser.
+
+[2026-08-15T18:03:50.577000+00:00] therealryan100 (id=1538246859615641601)
+    doesnt work
+    [reply to flep msg=1538246595450118244]
+
+[2026-08-15T18:03:55.329000+00:00] therealryan100 (id=1538246879546966047)
+    and that tab doesnt exist
+    [attachment] br6fw4k.png https://cdn.discordapp.com/attachments/1491258766648283238/1538246878821355542/br6fw4k.png?ex=6a81fb8b&is=6a80aa0b&hm=fe9d2a10412f7f68150cf15a2c43606a5f9d4aac624b71742561bc9d1b5d3f72&
+    [reply to flep msg=1538246472120926218]
+
+[2026-08-15T18:09:16.512000+00:00] flep (id=1538248226686107658)
+    The menu will be different depending where you click, that one is the default one when clicking on an empty area of the sidebar. I thought you were talking about tabs. 
+    Looks like your layout is a bit bugged, you may have dragged stuff around on wrong places, I suggest clicking on the Layout Editor icon (top-right) and selecting Default or Reset.
+    [reply to therealryan100 msg=1538246879546966047]
+

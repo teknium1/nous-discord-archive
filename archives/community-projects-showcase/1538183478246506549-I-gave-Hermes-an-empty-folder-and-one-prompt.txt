@@ -1,0 +1,21 @@
+# Thread 'I gave Hermes an empty folder and one prompt' in forum #community-projects-showcase
+# thread_id=1538183478246506549 forum_id=1316137596535177246
+# Started 2026-08-15T18:25:10.836672+00:00
+
+[2026-08-15T13:51:59.281000+00:00] belius303 (id=1538183478246506549)
+    Been testing Hermes with an OpenAI-compatible API I’m building, so I recorded a small experiment.
+    
+    I started with a completely empty folder, gave Hermes one prompt, then stopped touching the keyboard and let it work.
+    
+    It made me realize again how fast autonomous agents can burn through tokens when you actually let them run 😭
+    
+    That’s basically why I built Jovethra — large, predictable quotas so agents can keep working without you babysitting every request.
+    
+    Video attached 👇
+    
+    Would genuinely love feedback from people here who use Hermes heavily — especially what matters most to you when choosing a provider.
+    
+    jovethra.xyz
+    [attachment] jovethra.png https://cdn.discordapp.com/attachments/1538183478246506549/1538183480113107034/jovethra.png?ex=6a81c07f&is=6a806eff&hm=3311686565c2fc565280ebfa6192e6a18e1b25b37fd74cb4c58c7bf1548d3f4e&
+    [attachment] promoJove.mp4 https://cdn.discordapp.com/attachments/1538183478246506549/1538183483984187532/promoJove.mp4?ex=6a81c080&is=6a806f00&hm=0016613dd697107c78295e2ecc2544e1348365323d8a255a9924c51af67a7864&
+
