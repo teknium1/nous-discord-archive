@@ -20,3 +20,7 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1535039654108201051/1535039654334562334/image.png?ex=6a765095&is=6a74ff15&hm=313800e429c1770bca40e9d0900693ab50cea8563cb4e89e4f47819178a45d8c&
     [embed] GitHub - H-Ali13381/okay-hermes-realtime: Okay Hermes Realtime: loc... https://github.com/H-Ali13381/okay-hermes-realtime
 
+[2026-08-14T23:24:43.583000+00:00] neopabo (id=1537965224710119564)
+    Update/Work-in-progress: Now support media player voice commands for certain media, no keyboard or mouse required! Will work on expanding functionality in the coming days
+    [attachment] 20260812_212552.mp4 https://cdn.discordapp.com/attachments/1535039654108201051/1537965224009801879/20260812_212552.mp4?ex=6a80f53b&is=6a7fa3bb&hm=586a38542703beaaf3b3f8ec6765b6a32a7e126e72205f4d2e0c01f9a623a233&
+

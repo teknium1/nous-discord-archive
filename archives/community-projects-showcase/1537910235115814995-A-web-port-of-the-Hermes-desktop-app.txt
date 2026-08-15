@@ -1,0 +1,15 @@
+# Thread 'A web port of the Hermes desktop app' in forum #community-projects-showcase
+# thread_id=1537910235115814995 forum_id=1316137596535177246
+# Started 2026-08-15T01:04:35.556939+00:00
+
+[2026-08-14T19:46:13.042000+00:00] jushmehnawsync (id=1537910235115814995)
+    I created a port for the desktop app that runs in a browser. Docker, it points at any Hermes dashboard URL via HERMES_TARGET inside the .env. I will be improving the UI to make it more usable in a phone's webapp as well as multi-gateway support soon.
+    I will keep up with the official Hermes updates which keeps the renderer actually follows your Hermes backend updates.
+    Repo: https://github.com/walodayeet/Hermes-Desktop-Web-Port (unofficial)
+    If you have any problems with the webUI, tell me here or add into issues.
+    (The extra buttons on the left sidebar are just my personal plugins)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1537910235115814995/1537910235950485514/image.png?ex=6a80c205&is=6a7f7085&hm=60f37050741211dec07ea7c44e66deff38eab5f2ff6efaade7d3a6536f0aadd7&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1537910235115814995/1537910236998803558/image.png?ex=6a80c205&is=6a7f7085&hm=1fd0ca5d44f47c196875c2750c0f43264b1f5a8b165d6b34cde4c0f152a5fd26&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1537910235115814995/1537910237615489204/image.png?ex=6a80c205&is=6a7f7085&hm=435f976ebdbedd28ddc028d3b87cf139da807b461d67ca33ad02301e30e0d13e&
+    [embed] GitHub - walodayeet/Hermes-Desktop-Web-Port https://github.com/walodayeet/Hermes-Desktop-Web-Port
+

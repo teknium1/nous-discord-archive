@@ -1,0 +1,14 @@
+# Thread 'Live quota monitor, reset countdowns & 1-click auth for Antigravity, OpenCode, Grok xAI, Claude & Co' in forum #community-projects-showcase
+# thread_id=1537983336956301352 forum_id=1316137596535177246
+# Started 2026-08-15T01:04:34.711898+00:00
+
+[2026-08-15T00:36:41.879000+00:00] decruxrp (id=1537983336956301352)
+    1-line install:
+    git clone https://github.com/DECRUX9812/hermes-cpa-quota.git && cd hermes-cpa-quota && ./install.sh
+    [attachment] image.png https://cdn.discordapp.com/attachments/1537983336956301352/1537983337392767066/image.png?ex=6a810619&is=6a7fb499&hm=ec0ee171dfa50f2a43da5312b77022a426dda8f9c9761be5bb1ab61c19ac15f2&
+    [attachment] Screenshot_20260814_183606.png https://cdn.discordapp.com/attachments/1537983336956301352/1537983337807741019/Screenshot_20260814_183606.png?ex=6a81061a&is=6a7fb49a&hm=c8722e06703d7a979c469b89be35aaae93831c95b22e35b9f6cbd5be8aa7b2a5&
+    [embed] GitHub - DECRUX9812/hermes-cpa-quota: AI Subscriptions (cpa-quota) ... https://github.com/DECRUX9812/hermes-cpa-quota.git
+
+[2026-08-15T00:41:46.545000+00:00] jabberwocky1989 (id=1537984614818127953)
+    Nice! Thank you!
+

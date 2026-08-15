@@ -388,3 +388,7 @@
 [2026-08-14T16:23:00.730000+00:00] badbunny2222 (id=1537859096852693003)
     heya, dm me for a sec
 
+[2026-08-14T20:41:24.397000+00:00] badbunny2222 (id=1537924123945078826)
+    can't add you as a friend for some reason
+    [reply to badbunny2222 msg=1537859096852693003]
+

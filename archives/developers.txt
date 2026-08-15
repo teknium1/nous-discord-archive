@@ -58829,3 +58829,159 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     The official suggested way for the case of having to wait for merge too long is to create a plugin, and if interface for plugins is lacking you can request for it to be extended. That will be faster and easier for you to maintain.
     [reply to cmyck msg=1537885061020524615]
 
+[2026-08-14T18:56:43.983000+00:00] cmyck (id=1537897781979643984)
+    Thanks! 7 of my PRs are core patches. The rest could be plugins. Will look into it.
+    [reply to egilewski msg=1537892767689216021]
+
+[2026-08-14T19:16:10.419000+00:00] cmyck (id=1537902674366828624)
+    Where exactly would I request an interface extension?
+    [reply to egilewski msg=1537892767689216021]
+
+[2026-08-14T19:18:46.912000+00:00] egilewski (id=1537903330745917541)
+    This is an older thread, but seems to be still alive a bit: https://discord.com/channels/1053877538025386074/1523079833825972365
+    [reply to cmyck msg=1537902674366828624]
+
+[2026-08-14T19:19:27.267000+00:00] cmyck (id=1537903500007313438)
+    Appreciate it!
+    [reply to egilewski msg=1537903330745917541]
+
+[2026-08-14T19:21:31.968000+00:00] jw_mushroom_man (id=1537904023041089536)
+    Ty 3.8 27b
+    [attachment] IMG_2466.png https://cdn.discordapp.com/attachments/1491258766648283238/1537904022369996820/IMG_2466.png?ex=6a80bc3b&is=6a7f6abb&hm=1fe712b3b49c0cb84b094ef89e6c86a0214b142f037cf24e94982f8d66ef8cb1&
+
+[2026-08-14T19:23:49.598000+00:00] jonkomet (id=1537904600303149126)
+    https://github.com/NousResearch/hermes-agent/pull/86278
+    
+    this PR prevents the accidental tab gesture and adds a separate body recovery path for hermes desktop app
+
+[2026-08-14T19:31:57.463000+00:00] epoch1969 (id=1537906646557130752)
+    I think i'm running into the same issue as here https://github.com/NousResearch/hermes-agent/issues/85777
+    [reply to epoch1969 msg=1537887161913704519]
+
+[2026-08-14T19:37:35.508000+00:00] jonkomet (id=1537908064420761671)
+    https://github.com/NousResearch/hermes-agent/pull/70571
+    
+    i did more work on the drag new session feat for hermes desktop app
+
+[2026-08-14T20:34:21.617000+00:00] lunatrix (id=1537922350677491822)
+    hi guys, with the release of 3.8 27b today, it tends to think alot. is the workaround for this currently to have seperate model configs in your llama-swap/llama.cpp configs for each level of reasoning? the Thinking effort options in hermes i dont think actually changes the thinking
+
+[2026-08-14T20:40:05.350000+00:00] cryptodombili (id=1537923792398192640)
+    I'm forwarding the emails I received
+
+[2026-08-14T20:40:10.510000+00:00] dias4761 (id=1537923814040535110)
+    https://github.com/NousResearch/hermes-agent/pull/86267
+    
+    The compression part I mentioned earlier. However, I did it with the other approach you were looking for.  <@387972437901312000>
+
+[2026-08-14T20:40:40.608000+00:00] promptsiren (id=1537923940280700980)
+    I forwarded it internally, but deleted from here so others don't potentially think any of that is legit
+    [reply to cryptodombili msg=1537923792398192640]
+
+[2026-08-14T20:41:22.605000+00:00] cryptodombili (id=1537924116428890244)
+    Thank you, sir. I thought I’d let you know right away so that no one else falls into this trap.
+    [reply to promptsiren msg=1537923940280700980]
+
+[2026-08-14T20:41:35.961000+00:00] promptsiren (id=1537924172448010300)
+    thanks for reporting
+    [reply to cryptodombili msg=1537924116428890244]
+
+[2026-08-14T20:41:58.941000+00:00] cryptodombili (id=1537924268833374359)
+    If you need it, I can also forward the email I received
+    [reply to promptsiren msg=1537924172448010300]
+
+[2026-08-14T20:42:22.305000+00:00] dias4761 (id=1537924366829092928)
+    In this case, I analyzed the other person within that problem; they had a part, and I simply complemented what they lacked.
+    [reply to dias4761 msg=1537923814040535110]
+
+[2026-08-14T20:50:18.549000+00:00] 123mikeyd (id=1537926364341084262)
+    Awesome hat, sir. Glad to see it evolving. >..<
+    [reply to cryptodombili msg=1537924268833374359]
+
+[2026-08-14T21:05:08.468000+00:00] casualsav (id=1537930096932028568)
+    Will there be another hackathon?
+
+[2026-08-14T22:27:36.861000+00:00] teknium (id=1537950851996328058)
+    yes
+    [reply to casualsav msg=1537930096932028568]
+
+[2026-08-14T22:54:45.294000+00:00] maxfreedompollard (id=1537957682139631716)
+    <@387972437901312000>  I have a PR open on hermes-agent-self-evolution I would like to get merged, or failing that, get a CI run approved on: https://github.com/NousResearch/hermes-agent-self-evolution/pull/162
+    
+    It implements Phases 2 through 5 from PLAN.md, which were still marked planned: tool descriptions, system prompt sections, tool implementation code, and the continuous improvement loop. Phase 1 was the only one built.
+    
+    Each phase finds its own targets in whatever hermes-agent checkout it is pointed at, proposes rewrites, and scores them on a held-out split it never optimized against. Phase 2 will not accept a shorter tool description unless it still selects the right tool as often. Phase 3 scores prompt sections on behavioural scenarios. Phase 4 gates on the full test suite, where one failing test rejects the candidate. Phase 5 tracks metrics over time and proposes what to work on next.
+
+[2026-08-14T23:37:51.052000+00:00] realadolan (id=1537968527594619000)
+    <@852446123154210838> Can you stop?
+
+[2026-08-14T23:40:03.935000+00:00] realadolan (id=1537969084946186391)
+    You're doing it again.
+    
+    [#73986](https://github.com/NousResearch/hermes-agent/pull/73986) is my xAI streaming TTS rewrite. Open since July 29. Fixes [#73985](https://github.com/NousResearch/hermes-agent/issues/73985). Reviewed, live-verified, still the open repair.
+    
+    Today you commented on my PR that implementation is "blocked" until "Wave 0" of your campaign ([#80424](https://github.com/NousResearch/hermes-agent/issues/80424)). Wave 0 is not a maintainer hold. It's a heading you invented on your own meta-issue. You don't get to freeze other people's PRs with a spreadsheet you wrote.
+    
+    Eighteen minutes before that comment you opened [#86368](https://github.com/NousResearch/hermes-agent/pull/86368), the same fix, same file, same protocol. alt-glitch already labeled it a duplicate of mine. Your own table on 80424 already names 73986 as the XAI-TTS consolidation target. Then you force-pushed my pump-thread architecture into 86368 with `Co-authored-by: PR #73986 contributor`. Not my name. Not my handle.
+    
+    This is the second time. On Aug 3 you opened [#77285](https://github.com/NousResearch/hermes-agent/pull/77285), a byte-identical copy of 73986. You closed it yourself 21 minutes later and wrote that 73986 is the active fix and you should have diffed my head first. "Apologies for the noise." Then you came back and did it again, this time inventing a freeze on my PR so your copy could ship.
+    
+    I already commented on both PRs. Close 86368. Review stays on 73986.
+
+[2026-08-14T23:44:34.041000+00:00] realadolan (id=1537970217852866601)
+    This project already has a huge duplication problem, with over 21K open PRs. I suggest you stop using your clanker to duplicate and steal other people's work byte-for-byte. Your 'contributions' are a net negative to the project. I also suggest you stop this parasocial relationship with the project. This isn't healthy
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537970216871530586/image.png?ex=6a80f9e1&is=6a7fa861&hm=14bef0707c3bf221cf0d0448d70b57f7371675a3ef31f9e9027d136c57a813dc&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537970217609723944/image.png?ex=6a80f9e1&is=6a7fa861&hm=62e3afc501d87350759bb7f7d9961187761af85ddef912ba515e6d967510dbf3&
+
+[2026-08-14T23:55:48.003000+00:00] dias4761 (id=1537973044654383145)
+    I think he took the Hermes spirit too seriously.
+    [reply to realadolan msg=1537970217852866601]
+
+[2026-08-14T23:55:52.696000+00:00] dias4761 (id=1537973064338251836)
+    V:
+
+[2026-08-14T23:56:25.144000+00:00] realadolan (id=1537973200435159040)
+    I really don't understand this "blocked", and then literally copying my commit byte-to-byte and claim as his
+
+[2026-08-14T23:56:28.073000+00:00] realadolan (id=1537973212720271410)
+    Crazy
+
+[2026-08-14T23:56:30.384000+00:00] dusk616 (id=1537973222413312021)
+    lol
+    [reply to dias4761 msg=1537973044654383145]
+
+[2026-08-14T23:58:29.531000+00:00] realadolan (id=1537973722151915520)
+    Who does this... first time I see this lmao
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537973721778749550/image.png?ex=6a80fd25&is=6a7faba5&hm=851ae0a1fd4336e7b91628ea95b3c3e9e85ddab06d80a1b6af471fc3dc549452&
+
+[2026-08-14T23:58:31.337000+00:00] dias4761 (id=1537973729727094866)
+    The worst part is I don't even know what to say. I would be upset if someone literally did that. The times I've had duplicates, I either canceled them or talked to the other user to create a complementary PR and we merged them.
+    [reply to realadolan msg=1537973200435159040]
+
+[2026-08-14T23:59:24.783000+00:00] realadolan (id=1537973953895862282)
+    This is so annoying
+
+[2026-08-14T23:59:29.578000+00:00] dias4761 (id=1537973974007292006)
+    And if it wasn't duplicated, I would explain it to the moderators or in the body of the post.  Even with "duplicated" tittle
+
+[2026-08-15T00:00:25.816000+00:00] realadolan (id=1537974209886556180)
+    I posted on the PRs themselves, but since it's the second time, I really had to call him out on this.
+
+[2026-08-15T00:01:54.732000+00:00] dias4761 (id=1537974582827421756)
+    Fair enough
+
+[2026-08-15T00:12:07.254000+00:00] realadolan (id=1537977151930765439)
+    Bro literally added "contributors/emails/andrexibiza@gmail.com" file and that's the only original work on his PR 🤣 🤣 🤣 🤣  I swear, some people, man.
+
+[2026-08-15T00:28:36.225000+00:00] realadolan (id=1537981299975917669)
+    Well well well, we see a pattern here. He's just stealing other peoples work and calls it his.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537981299115958322/image.png?ex=6a810434&is=6a7fb2b4&hm=f23cbad90e14ca2446265a2ea54dec5a775eea7501545d0c9f09d540fd6dd2bd&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537981299476922418/image.png?ex=6a810434&is=6a7fb2b4&hm=9cca2b04848094c4710645cd30191084d2d9056f6308ab5ef4b7bfaaa460b99d&
+
+[2026-08-15T00:48:13.998000+00:00] realadolan (id=1537986239913918555)
+    Look at this burst. If you ever wonder why this repo has such a huge number of duplicate PRs, guys like this are the reason. Overall, a net negative for the project, IMHO.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1537986239389761566/image.png?ex=6a8108cd&is=6a7fb74d&hm=7e1a4d8d144fef9543e67d6db25206ec45f1b9008f7fe10ec7742b1d3f2709bb&
+
+[2026-08-15T00:55:17.547000+00:00] dias4761 (id=1537988016407314493)
+    Bro LMAO
+

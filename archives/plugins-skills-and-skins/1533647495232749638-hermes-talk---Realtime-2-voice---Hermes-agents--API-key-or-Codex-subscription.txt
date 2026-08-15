@@ -71,3 +71,7 @@
     Not currently, but I’m exploring other platforms and surfaces especially with Brooklyn's HUD
     [reply to finnie3695 msg=1537420475292975145]
 
+[2026-08-15T00:28:57.611000+00:00] mindcraft3r (id=1537981389675176036)
+    You should check out the Hermes browser extension plugin. Seems like that could be a great pairing with Hermes talk as well
+    [reply to smokealot420 msg=1537685758654292040]
+

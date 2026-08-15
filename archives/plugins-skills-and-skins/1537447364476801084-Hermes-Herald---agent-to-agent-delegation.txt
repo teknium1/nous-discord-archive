@@ -1,0 +1,7 @@
+# Thread 'Hermes Herald - agent to agent delegation' in forum #plugins-skills-and-skins
+# thread_id=1537447364476801084 forum_id=1485392832154832906
+# Started 2026-08-15T01:11:31.299285+00:00
+
+[2026-08-14T23:20:58.432000+00:00] bennybuoy1192 (id=1537964280358375424)
+    Hermes Herald - agent to agent delegation
+

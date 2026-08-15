@@ -317,3 +317,14 @@
 [2026-08-02T17:54:52.553000+00:00] jcrabapple (id=1533533560726618332)
     Nice update! Love the widget!
 
+[2026-08-14T23:32:50.151000+00:00] xpeta (id=1537967265524359348)
+    Hey everyone!
+    
+    Just wanted to let you know that Hermes Console has officially been submitted for Production on Google Play and is now waiting for approval!
+    
+    I just want to say a big thank you to everyone who has been testing the app, sharing feedback and supporting the project. I really appreciate all the help along the way.
+    
+    Hopefully it will be live very soon, and there’s plenty more to come!
+    
+    Thanks again for all the support!
+

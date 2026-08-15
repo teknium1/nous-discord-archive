@@ -1,0 +1,20 @@
+# Thread 'Podcast search and full transcripts inside Hermes' in forum #community-projects-showcase
+# thread_id=1537941418805436497 forum_id=1316137596535177246
+# Started 2026-08-15T01:04:35.140977+00:00
+
+[2026-08-14T21:50:07.813000+00:00] usmanxd6324 (id=1537941418805436497)
+    I wanted Hermes to compare what the same guest said across different podcast appearances without manually collecting transcripts first.
+    
+    I connected Audiogram and tested this prompt:
+    
+    “Find recent podcast episodes featuring [guest], pull the available full transcripts, and compare what they said about [topic].”
+    
+    The podcast search and transcript retrieval worked inside the Hermes workflow. The setup is one command followed by browser approval:
+    
+    https://audiogramapi.com/connect/hermes/
+    
+    What would you use this for—guest research, source gathering, knowledge-base notes, or something else?
+    
+    I’m helping Audiogram with early-user growth.
+    [embed] Connect Hermes to Audiogram · Audiogram API https://audiogramapi.com/connect/hermes/
+

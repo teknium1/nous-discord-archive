@@ -6472,3 +6472,6 @@
     Thanks will take a look!
     [reply to _123321_ msg=1537733537116061716]
 
+[2026-08-14T20:34:11.497000+00:00] hadanator (id=1537922308231139471)
+    Is there a way from the webui to disable tools? I have like 27 tools that hermes is sending with my prompts, and I don't know how to turn them off.
+
