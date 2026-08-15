@@ -1,0 +1,16 @@
+# Thread 'HAM - Hermes Agent Mobile - An Android APP' in forum #community-projects-showcase
+# thread_id=1538067050444886046 forum_id=1316137596535177246
+# Started 2026-08-15T06:33:46.649468+00:00
+
+[2026-08-15T06:09:20.730000+00:00] tumadre (id=1538067050444886046)
+    Releasing HAM — Hermes Agent Mobile 🐷📱
+    
+    An open-source Android client for Hermes Agent. Run your agent on your own machine or Hermes Cloud, control it from your phone.
+    
+    Built for Android phones, foldables, and tablets.
+    
+    Feel free to try it out and submit any PR's for bugs or features you want to see!
+    
+    https://github.com/unsupportedpastels/Hermes-Agent-Mobile-HAM
+    [attachment] HPvboZhXsAEbJGL.jpg https://cdn.discordapp.com/attachments/1538067050444886046/1538067050658799728/HPvboZhXsAEbJGL.jpg?ex=6a815410&is=6a800290&hm=8cd875f004628f34e0c748cb9202e02f337e26e3638595d8e93f1de73cba6ae8&
+

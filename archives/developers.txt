@@ -58985,3 +58985,95 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-15T00:55:17.547000+00:00] dias4761 (id=1537988016407314493)
     Bro LMAO
 
+[2026-08-15T01:08:33.402000+00:00] tumadre (id=1537991354465124454)
+    Lol. It's the swarm bro you don't get it
+
+[2026-08-15T01:12:17.265000+00:00] tumadre (id=1537992293414600915)
+    What a mess
+
+[2026-08-15T01:16:02.750000+00:00] tumadre (id=1537993239167111188)
+    Let's just hope he's spending thousands in tokens to steal everyone's work
+
+[2026-08-15T01:27:46.899000+00:00] tumadre (id=1537996192581943298)
+    Yes phishing
+
+[2026-08-15T01:28:52.395000+00:00] baophan0123 (id=1537996467292217435)
+    <:31261pray:1432769930163650744>  Ok thank br
+    [reply to tumadre msg=1537996192581943298]
+
+[2026-08-15T02:04:06.691000+00:00] dias4761 (id=1538005335292514324)
+    <@387972437901312000> this issue has been open for 1 week. It also involves the topic I showed you today about comprehension, as it still has some inconsistencies.
+
+[2026-08-15T02:04:33.853000+00:00] dias4761 (id=1538005449217933444)
+    Since this is not a trivial decision, I'm going to post it here again, as it's been open for a week already and it's a p0.
+
+[2026-08-15T02:05:35.650000+00:00] dias4761 (id=1538005708413604001)
+    https://github.com/NousResearch/hermes-agent/issues/79017
+
+[2026-08-15T02:12:46.172000+00:00] dias4761 (id=1538007514153492532)
+    I'll try to find a way to solve this.
+
+[2026-08-15T02:48:50.568000+00:00] toothless4916 (id=1538016592288292964)
+    feel super excited when MCp work fine
+
+[2026-08-15T03:07:00.167000+00:00] colorado.rob1459 (id=1538021162397991044)
+    Trying to get A2A working. I need this: https://github.com/NousResearch/hermes-agent/pull/81190 -- this fixes A2A client tool registration when using CLI. Right now it only works for me from Telegram. Would be good to get this reviewed and in shape for a merge.
+
+[2026-08-15T03:26:43.855000+00:00] terribletarragon (id=1538026127145042012)
+    <@387972437901312000> Lol. I am posting in the developer section, like I am a developer..... Is there a way to change the plugin system so that it registers HTTP routes?
+
+[2026-08-15T03:31:08.578000+00:00] terribletarragon (id=1538027237474041856)
+    I really need this. For Las Vegas type reasons.
+
+[2026-08-15T04:07:09.635000+00:00] teknium (id=1538036301603803166)
+    waiting on CI to merge
+    [reply to colorado.rob1459 msg=1538021162397991044]
+
+[2026-08-15T04:08:12.509000+00:00] endo9001 (id=1538036565316731072)
+    is that normal? 
+    i thought `--force-venv` would kill the process? 
+    whats a full command that i can run which no matter what updates?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538036564628602921/image.png?ex=6a8137ac&is=6a7fe62c&hm=f5d6df8dc972da8508ece3304309420a453b93fc3f4f78d0e0dee0be8e404544&
+
+[2026-08-15T04:42:14.537000+00:00] endo9001 (id=1538045130202685542)
+    somehow it borked the installation. 
+    running `hermes desktop` again fixed it.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538045129758216272/image.png?ex=6a813fa6&is=6a7fee26&hm=b23cb6d8ba5f713127ed2a60cc982ae2cda4fc23f5d8fb82b4ca13051b27cfba&
+
+[2026-08-15T04:44:35.697000+00:00] teknium (id=1538045722270761092)
+    I never seen --force-venv lol
+    [reply to endo9001 msg=1538036565316731072]
+
+[2026-08-15T04:44:40.287000+00:00] teknium (id=1538045741522489376)
+    there is --force which might work
+
+[2026-08-15T04:50:28.564000+00:00] endo9001 (id=1538047202302234685)
+    `hermes update --help` shows it as last entry. 
+    and it used to work foin. untiiiiil a few updates. 
+    i think it was when the installer changed (now twice?)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538047201803108352/image.png?ex=6a814194&is=6a7ff014&hm=9dbc7c19daff3e77031ccdb90ac21371808755fd5e069e0c06e23514c36ffc86&
+
+[2026-08-15T04:51:33.076000+00:00] endo9001 (id=1538047472885043210)
+    so afaict that flag was basically to force the installation even if things were running. 
+    which it now isnt doing anymore it seems.
+
+[2026-08-15T04:56:34.389000+00:00] teknium (id=1538048736683630654)
+    [attachment] 68747470733a2f2f66696c65732e636174626f782e6d6f652f3978637376632e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1538048726633807902/68747470733a2f2f66696c65732e636174626f782e6d6f652f3978637376632e706e67.png?ex=6a8142ff&is=6a7ff17f&hm=a840765eff5e7f4f0815ca535ce651e3a2343aa99e9b981ab70f5301bc50edca&
+    [reply to colorado.rob1459 msg=1538021162397991044]
+
+[2026-08-15T04:56:35.682000+00:00] teknium (id=1538048742106603550)
+    Im not really sure sire
+    [reply to terribletarragon msg=1538026127145042012]
+
+[2026-08-15T04:57:27.361000+00:00] terribletarragon (id=1538048958864166932)
+    No worries. I still love you.
+    [reply to teknium msg=1538048742106603550]
+
+[2026-08-15T06:01:12.068000+00:00] nootnootog (id=1538065000847908895)
+    Ah no i particularly meant this commit, https://github.com/NousResearch/hermes-agent/commit/e6b168855b40d3d1b27e8618a3a0cbe283c7aa7d
+    [reply to egilewski msg=1537883777282605127]
+
+[2026-08-15T06:17:03.746000+00:00] egilewski (id=1538068992474882059)
+    Oh. I think this does warrant a ping. <@690519146701783042> based on https://github.com/NousResearch/hermes-agent/pull/10852#issuecomment-5225230011 from last week it seems that you wanted to go ahead with https://github.com/NousResearch/hermes-agent/pull/75253 , however it is a P3 so may have been lost.
+    [reply to nootnootog msg=1538065000847908895]
+

@@ -21,3 +21,12 @@
 [2026-08-15T00:08:16.349000+00:00] 123mikeyd (id=1537976183445135432)
     Many people have tried to make an "overlay" It tends to just slow down the flow, but that one does look really nice. 🤔
 
+[2026-08-15T01:21:27.252000+00:00] .s0uthpaw (id=1537994600227020862)
+    Form and function though
+
+[2026-08-15T01:21:33.162000+00:00] .s0uthpaw (id=1537994625015615528)
+    Damn I like this a lot
+
+[2026-08-15T01:22:47.526000+00:00] .s0uthpaw (id=1537994936920842302)
+    Open the door for saving sigil states as very trainable image data.
+
