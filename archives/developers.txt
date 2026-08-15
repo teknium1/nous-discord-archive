@@ -59077,3 +59077,64 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Oh. I think this does warrant a ping. <@690519146701783042> based on https://github.com/NousResearch/hermes-agent/pull/10852#issuecomment-5225230011 from last week it seems that you wanted to go ahead with https://github.com/NousResearch/hermes-agent/pull/75253 , however it is a P3 so may have been lost.
     [reply to nootnootog msg=1538065000847908895]
 
+[2026-08-15T07:16:13.969000+00:00] kxee (id=1538083883189280788)
+    done now
+    [reply to egilewski msg=1538068992474882059]
+
+[2026-08-15T07:25:49.727000+00:00] nootnootog (id=1538086298093363270)
+    YAYYYY
+
+[2026-08-15T07:26:14.545000+00:00] kxee (id=1538086402187862077)
+    thanks for contributing!
+    [reply to nootnootog msg=1538086298093363270]
+
+[2026-08-15T07:26:23.477000+00:00] nootnootog (id=1538086439651115088)
+    My pleasure!
+
+[2026-08-15T11:13:41.068000+00:00] andrexibiza (id=1538143639853727894)
+    <@387972437901312000> child process inheritance campaign complete sire. Feed the bots.  ✅ https://github.com/NousResearch/hermes-agent/issues/83565
+
+[2026-08-15T11:16:10.287000+00:00] deer420 (id=1538144265723580498)
+    Root cause confirmed, and it's a genuine Hermes bug.
+    
+    When streaming has already delivered the reply (already_sent), the handler returns None at line 20183. Upstream, _final_text is then empty, so if _final_text.strip(): is false — and _post_turn_loop_completion is never reached. awaiting_response stays True forever, and is_due() returns False on every future tick.
+    
+    That's why all three loops are wedged identically. Let me verify the guard is the culprit:
+
+[2026-08-15T11:16:14.804000+00:00] deer420 (id=1538144284669251614)
+    <@387972437901312000>
+
+[2026-08-15T11:27:49.565000+00:00] realadolan (id=1538147198707957800)
+    Verified and fixed here: https://github.com/NousResearch/hermes-agent/pull/86931 Also, looks like `/goal` has the same bug. Someone already raised a PR: https://github.com/NousResearch/hermes-agent/pull/85173
+    [reply to deer420 msg=1538144265723580498]
+
+[2026-08-15T11:31:10.123000+00:00] monolith2 (id=1538148039909449818)
+    You should enforce some basic standards and formal authority over project direction, so that random people don’t announce their slop crusade initiative and start spamming your repo with PRs.
+    [reply to realadolan msg=1537970217852866601]
+
+[2026-08-15T11:33:21.452000+00:00] realadolan (id=1538148590743199754)
+    <@318828722553749515> Take a quick look at this pic lmao
+    [reply to realadolan msg=1537986239913918555]
+
+[2026-08-15T11:34:50.546000+00:00] monolith2 (id=1538148964430381056)
+    omniscence is a word i have never seen in a PR before 😅
+    [reply to realadolan msg=1538148590743199754]
+
+[2026-08-15T11:35:07.788000+00:00] realadolan (id=1538149036748701706)
+    Bro thinks he's playing Starcraft
+
+[2026-08-15T11:36:01.836000+00:00] realadolan (id=1538149263442182274)
+    Such a weird parasocial existence
+
+[2026-08-15T11:38:26.499000+00:00] monolith2 (id=1538149870202920990)
+    With this kind of inner motivation, <@852446123154210838>  could be a good programmer in a couple of years, if only he directed his energy towards learning basic principles of sw development instead of larping.
+
+[2026-08-15T11:39:15.861000+00:00] realadolan (id=1538150077242282075)
+    Gonna put omniscience on the CV
+
+[2026-08-15T11:40:38.369000+00:00] monolith2 (id=1538150423305654282)
+    I was wondering where to contribute in the project but there is so much tech debt and the risk of the fix being overwritten by a wave of ai code that I am not sure it is worth the time.
+
+[2026-08-15T11:41:56.439000+00:00] monolith2 (id=1538150750755233793)
+    I think some modules could be made 70% shorter and still retain the same functionality and have a stronger architecture.
+

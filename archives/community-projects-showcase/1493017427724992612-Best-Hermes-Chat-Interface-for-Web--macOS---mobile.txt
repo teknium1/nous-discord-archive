@@ -6475,3 +6475,9 @@
 [2026-08-14T20:34:11.497000+00:00] hadanator (id=1537922308231139471)
     Is there a way from the webui to disable tools? I have like 27 tools that hermes is sending with my prompts, and I don't know how to turn them off.
 
+[2026-08-15T09:41:19.347000+00:00] cryptobredda (id=1538120396191305759)
+    here you go mate! 
+    https://github.com/cryptobredda/hermes-agent-clients
+    [embed] GitHub - cryptobredda/hermes-agent-clients: Focused mobile and desk... https://github.com/cryptobredda/hermes-agent-clients
+    [reply to k.shepherd msg=1537835573249712138]
+

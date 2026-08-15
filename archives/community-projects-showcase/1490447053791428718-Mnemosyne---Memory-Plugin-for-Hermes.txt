@@ -2798,3 +2798,29 @@
     this should be one of the videos to point to in helping out to set things up.
     [reply to walterwego msg=1537232823113621666]
 
+[2026-08-15T10:16:22.316000+00:00] pthomy (id=1538129216682594354)
+    What are your experiences? Is it worth to use Mnemosyne over the built-in memory?
+    [reply to john_10613 msg=1537240215545061447]
+
+[2026-08-15T10:45:57.482000+00:00] john_10613 (id=1538136662268448868)
+    from my experience 
+    
+    memory (good)
+    
+    token cost increase (not good) by like 5-10%
+    [reply to pthomy msg=1538129216682594354]
+
+[2026-08-15T10:54:16.982000+00:00] pthomy (id=1538138757323030578)
+    Thanks! Do you feel the difference before and after using Mnemosyne?
+    [reply to john_10613 msg=1538136662268448868]
+
+[2026-08-15T10:59:20.897000+00:00] john_10613 (id=1538140032035065866)
+    over multiple session yes i do feel the difference the ai replies in my style and way of thinking 
+    
+     but im not a very heavy user so the benefits  are not that great, im also more nitpicky over the price if anything
+    [reply to pthomy msg=1538138757323030578]
+
+[2026-08-15T11:23:31.775000+00:00] pthomy (id=1538146117458599997)
+    Cool, thanks, bro!
+    [reply to john_10613 msg=1538140032035065866]
+

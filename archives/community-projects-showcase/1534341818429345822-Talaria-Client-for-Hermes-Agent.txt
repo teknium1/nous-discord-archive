@@ -50,3 +50,6 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1534341818429345822/1534341818777342044/image.png?ex=6a73c6ac&is=6a72752c&hm=3b4b9ced3d19d0c04d63e1b0a3fe5ea100a894f7d463267a1bcb8e574ec62b1a&
     [embed] Join the Talaria Agent Client beta https://testflight.apple.com/join/UtMgYYNA
 
+[2026-08-15T10:19:45.152000+00:00] macfreaker (id=1538130067438305293)
+    I am testing this app for now. I’ve been connected over ssh. Connecting over https does not work and gives that no connection is possible.
+

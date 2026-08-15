@@ -45,3 +45,20 @@
        Open source, MIT. Go break it and tell me what's rubbish 👉  https://github.com/Sahil-SS9/hermaguard
     [embed] GitHub - Sahil-SS9/hermaguard: Adversarial bug-hunting code review ... https://github.com/Sahil-SS9/hermaguard
 
+[2026-08-15T09:25:54.524000+00:00] sahil_ss9 (id=1538116517202366516)
+    Hermaguard v2.1 is out 🛡️ — my adversarial code-review skill just got its accountability layer. What's new:
+    
+    The review can't lie anymore:
+    - Coverage checklist — every report accounts for all 32 bug classes (MITRE CWE Top 25 + races, async gaps, partial writes). No silent skips; gaps fail the check.
+    - Verified findings — agents write a PoC, a sandbox runner executes it, and the verdict comes from real execution output, never the model just claiming a bug exists. Race conditions and async bugs must carry proof before they ship in a report.
+    - Honest scoring — benchmark corpus grew 5 → 25 bugs with deterministic class-matching. No fuzzy keyword scores.
+    - It learns — dismiss a false positive 3× and it becomes a suppression rule applied automatically on future runs.
+    
+    Plus a L0–L6 harm grader, prompt-injection sanitizer for the code the agents read, pip install . with 9 CLI tools, CI, and 130 tests.
+    
+    Works with Hermes, Claude Code, Codex, or any harness with subagents:
+    https://github.com/Sahil-SS9/hermaguard
+    
+    Feedback welcome — especially false-positive reports, they literally make it smarter.
+    [embed] GitHub - Sahil-SS9/hermaguard: Adversarial bug-hunting code review ... https://github.com/Sahil-SS9/hermaguard
+
