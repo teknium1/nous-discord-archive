@@ -71,3 +71,141 @@
     [attachment] file_00000000c4f48211954b8445f089fd20.png https://cdn.discordapp.com/attachments/1538241391166230568/1538407788299161620/file_00000000c4f48211954b8445f089fd20.png?ex=6a829166&is=6a813fe6&hm=4133f72a6e533f25dab19e1f182e17b378cb72c9fc886f08bb7b3832c9bffe0f&
     [embed] Hermes Go — Your AI agent, in your pocket https://shilp26.github.io/hermes-go
 
+[2026-08-16T07:44:18.672000+00:00] pthomy (id=1538453337211666432)
+    <@1538234382509285527>  Cool project! 🙂 So basically I can start a dev enviroment even on my phone and build along the way, right?
+
+[2026-08-16T07:59:52.425000+00:00] shilp26. (id=1538457253655482449)
+    Yes — exactly, with one important distinction: the phone is the control surface, while the actual dev environment runs on your connected machine or server.
+    From Hermes Go, you can ask Hermes to scaffold a project, edit files, run terminal commands, install dependencies, start background processes, inspect output, review Git diffs, and keep iterating — all from your phone.
+    As long as the host has the repo and toolchain, stays online, and you have the required permissions, you can build remotely over LAN, Tailscale, or Hermes Cloud. It’s not a full IDE running on the phone; it’s more like a mobile control center for your remote development environment.
+    
+    There are about 168 features in hermes go.
+    
+    Planning to add more 105 - pending 👷
+    
+    
+    Next udpate Bot Mode
+
+[2026-08-16T08:00:04.135000+00:00] shilp26. (id=1538457302770647070)
+    [attachment] Screenshot_2026-08-16-02-10-14-39_ff7d4bed90a9e079fde029caef2a2f3a.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538457302452146256/Screenshot_2026-08-16-02-10-14-39_ff7d4bed90a9e079fde029caef2a2f3a.jpg?ex=6a82bf84&is=6a816e04&hm=f8ecac7dfa5fa5677aba7718aa59ef00402df8e94202ba60762e103eebce5e63&
+
+[2026-08-16T09:29:13.218000+00:00] cspiritsong (id=1538479738450874378)
+    I got a this app may be unsafe but it doesn't tell me why. Any reasons?
+
+[2026-08-16T09:43:57.379000+00:00] shilp26. (id=1538483446891028590)
+    Thanks for flagging this. The most likely reason is that Hermes Go is currently distributed as a direct APK from GitHub/the website and isn’t on Google Play yet. Android may show a generic Play Protect warning for sideloaded apps it doesn’t recognize or hasn’t reputation-scanned. That message by itself doesn’t identify a specific malicious behavior.
+    To be transparent, Hermes Go is currently closed source, so I understand the concern. It is also a most powerful remote client: when connected, terminal commands, file operations, builds, and other agent actions run on the Hermes host you configure. Only connect it to a server you trust.
+    
+    The official release includes a published SHA-256 hash:
+    2188b21b164b9fdcd0991c634772d1083227197b31c27173d472a2b19d1da3a1
+    
+    Official release: https://github.com/shilp26/hermes-go/releases/tag/v1.0.0
+    
+    If you can share the exact warning screen and your Android version, I’ll check whether it’s just the generic sideload warning or a more specific permission/signature issue. I don’t want to dismiss it without checking the exact message.
+    
+    In coming days it will be on play store for sure.
+    [embed] Release Hermes Go v1.0.0 · shilp26/hermes-go https://github.com/shilp26/hermes-go/releases/tag/v1.0.0
+
+[2026-08-16T09:49:19.795000+00:00] cspiritsong (id=1538484799201742930)
+    Okay I installed. I think it is the generic Google warning because the Xiaomi's scanner says it's clean. I like what I am seeing.
+
+[2026-08-16T09:50:06.354000+00:00] cspiritsong (id=1538484994484469770)
+    That's because Google doesn't explain other than a "are you sure" and asks for a fingerprint verification
+
+[2026-08-16T09:52:04.134000+00:00] shilp26. (id=1538485488489336883)
+    Fair enough. Even my oneplus has app guard and it scans this app as clean..
+    
+    Glad you went through.. I would love feedbacks for the app.
+    
+    Can't wait to show off bot mode in upcoming update.
+
+[2026-08-16T10:11:40.126000+00:00] shilp26. (id=1538490420957421660)
+    Thanks! If you try Hermes Go, please share your experience — what feels useful, what feels rough, and what you’d like to see next.
+    Hermes Go gives you mobile control over a connected Hermes Agent: live streaming, voice, approvals, terminal and file work, artifacts, cron, background processes, Kanban, Star Map, sessions, system health, and more.
+    By default, actions that require permission show approval prompts, but safety still depends on the APK source, your connected host, permissions, and configuration. I’d recommend installing only from the official release and connecting only to a server you trust.
+    It’s still actively evolving, so real user feedback will directly influence what I build next.
+    Full feature map: https://shilp26.github.io/hermes-go/app-map.html
+    [embed] Hermes Go — App Map https://shilp26.github.io/hermes-go/app-map.html
+    [reply to cspiritsong msg=1538484799201742930]
+
+[2026-08-16T10:13:12.969000+00:00] cspiritsong (id=1538490810369314889)
+    I'm wondering with so much work into this, are you going to monetize in any way?
+    [reply to shilp26. msg=1538490420957421660]
+
+[2026-08-16T10:30:51.990000+00:00] rostelinalise (id=1538495252225331283)
+    you planning to ship it to iOS?
+
+[2026-08-16T10:40:21.809000+00:00] cspiritsong (id=1538497642219180073)
+    this will give Hermex a good run for money
+    [reply to rostelinalise msg=1538495252225331283]
+
+[2026-08-16T10:40:22.707000+00:00] cspiritsong (id=1538497645985792040)
+    seriously
+
+[2026-08-16T10:40:35.273000+00:00] cspiritsong (id=1538497698691289168)
+    i like that i can see what's going on in my VDS with Hermes Go
+
+[2026-08-16T10:41:29.326000+00:00] rostelinalise (id=1538497925406003211)
+    Would love to check this out, it's just that I don't have android available with me
+
+[2026-08-16T10:43:19.243000+00:00] shilp26. (id=1538498386431582208)
+    No plans as of now to monetize.. Whatever you are using right will and should always be free. 
+    
+    I feel this app still needs lot of work.
+    I tried many hermes mobile client but they always feel so incomplete in features and UX/UI.
+    
+    Hermes is insanely good and it deserves insanely good UX/UI.
+    
+    Monetize, not thinking that way, hermes needs a beautiful face, a control center. That's what i aim for.
+
+[2026-08-16T10:44:52.457000+00:00] rostelinalise (id=1538498777399296071)
+    Do you think it would be a good idea to port this using swift and to app store?
+    [reply to shilp26. msg=1538498386431582208]
+
+[2026-08-16T10:47:38.576000+00:00] shilp26. (id=1538499474152886323)
+    Everything! What agent does is transperant here.
+    
+    Try telling it or create a todo or run sub agents. You will see excatly what's going in the chat itself.
+    Try approvals, clarify  you get everything here. 
+    
+    I always wanted to see what agent is doing and hermes go shows every detail but not interfering the responses.
+    
+    
+    /commands are most converted into UI
+
+[2026-08-16T10:48:24.213000+00:00] shilp26. (id=1538499665568333946)
+    That will be a lot of work... Once android is nearly perfect (which will be soon) will work on IOS
+    [reply to rostelinalise msg=1538498777399296071]
+
+[2026-08-16T10:49:12.737000+00:00] cspiritsong (id=1538499869092745287)
+    this is what i imagine a form+function app for android to use. no login problems, no syncing issues, and powerful interface. of course there'll be things but i'll be glad to try to point out and offer anything (well Hermes will be the one doing all the thing)
+    
+    but i really like it
+
+[2026-08-16T10:49:36.667000+00:00] rostelinalise (id=1538499969462312990)
+    I was an iOS developer before, would love to chime in to the great job you are doing
+    [reply to shilp26. msg=1538499665568333946]
+
+[2026-08-16T10:50:13.660000+00:00] shilp26. (id=1538500124622323783)
+    I will contact you for sure.. Soon
+    [reply to rostelinalise msg=1538499969462312990]
+
+[2026-08-16T10:51:21.027000+00:00] rostelinalise (id=1538500407180132352)
+    and to be honest I would just love to use my remaining apple developer account for something
+
+[2026-08-16T10:51:47.664000+00:00] shilp26. (id=1538500518903550032)
+    Spread the word if you can. 🫶
+    [reply to cspiritsong msg=1538499869092745287]
+
+[2026-08-16T10:53:16.139000+00:00] rostelinalise (id=1538500889994723359)
+    Right now my flow is to use my phone and use https://github.com/AltanS/collie to connect to herdr session. Then access hermes agent and firstmate https://github.com/kunchenguid/firstmate from it
+    [embed] GitHub - AltanS/collie: PWA to manage 🐑 herdr on the go. Tailnet... https://github.com/AltanS/collie
+    [embed] GitHub - kunchenguid/firstmate: Talk to one agent. Ship with a crew. https://github.com/kunchenguid/firstmate
+
+[2026-08-16T10:55:53.500000+00:00] shilp26. (id=1538501550014599198)
+    <@338366360545394689> intresting projects... Will surely explore it.
+
+[2026-08-16T11:00:41.448000+00:00] cspiritsong (id=1538502757756047360)
+    will do
+    [reply to shilp26. msg=1538500518903550032]
+

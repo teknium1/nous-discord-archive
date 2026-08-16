@@ -59542,3 +59542,115 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I wouldn't trust them - I will wait for NOUS.
     [reply to tumadre msg=1538420951325343804]
 
+[2026-08-16T07:15:26.505000+00:00] endo9001 (id=1538446071976427631)
+    having `@hermes` saying its primary while `@default` is the actual default is kinda confusing and idk... 
+    one of them seem redundant. 🙈
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538446071653736448/image.png?ex=6a82b50e&is=6a81638e&hm=0e7dd773b34fb00d890c233cdbf906d1ac64ce4302fa6c3490a18d903059627c&
+
+[2026-08-16T07:28:35.456000+00:00] dokterdok (id=1538449381076770857)
+    Hey, I opened a PR that fixes a bug with separate remote backends in Hermes Desktop: https://github.com/NousResearch/hermes-agent/pull/83708
+    for example, I use one Hermes backend for work and another for home. The desktop app profiles were not keeping those backends properly separated, so switching profiles could show information from the wrong one.
+    I tested the fix on Windows and Mac. The GitHub checks are waiting for maintainer approval. Could someone take a look when they have a chance? Thanks!
+
+[2026-08-16T08:10:31.727000+00:00] jonkomet (id=1538459935082418186)
+    https://github.com/NousResearch/hermes-agent/pull/86278
+    
+    need this PR looked at, because when i run Hermes update it reverts back and then I can't see the default chats Tab, meaning i can't move the session window around or add tabs to it or close it 
+    This is for Hermes Desktop app and I am on windows
+
+[2026-08-16T08:41:56.422000+00:00] realadolan (id=1538467840066060298)
+    <@387972437901312000> introduced a little change to the Desktop plugins SDK, it will let us do some cool things with the Bot Mode plugin: https://github.com/NousResearch/hermes-agent/pull/87558
+
+[2026-08-16T08:42:54.075000+00:00] realadolan (id=1538468081880404049)
+    Such as different animations on thinking and streaming, and probably more things down the line
+
+[2026-08-16T09:06:46.117000+00:00] tunacookie (id=1538474088299765832)
+    https://github.com/NousResearch/hermes-agent/pull/87535
+
+[2026-08-16T09:08:21.964000+00:00] tunacookie (id=1538474490311344149)
+    Feat(desktop): 
+    Select page element for chat
+
+[2026-08-16T09:11:32.646000+00:00] .ron_ki (id=1538475290089619476)
+    Has anyone app development experience with Hermes Agents? I wonder which skills are useful. Like Design, Testing, Implementation skills. And how to design the complete workflow. Like Tester Profile, Design Profile, Orchestrator Profile. Does anyone has a proven concept regarding this? I have ideas but I wonder if it makes sense.
+
+[2026-08-16T09:15:17.249000+00:00] tunacookie (id=1538476232142753853)
+    https://github.com/magnus919/agent-skills
+    
+    https://github.com/SouthpawIN/sovth-config
+    [reply to .ron_ki msg=1538475290089619476]
+
+[2026-08-16T09:18:10.555000+00:00] .ron_ki (id=1538476959041060874)
+    Thank you. <3
+
+[2026-08-16T09:19:38.587000+00:00] dias4761 (id=1538477328273903636)
+    True, migrating your dependencies would take a long time, but it would be really cool.
+    [reply to realadolan msg=1538409944389394532]
+
+[2026-08-16T09:24:37.295000+00:00] dias4761 (id=1538478581145935902)
+    <@387972437901312000> I found some more problems regarding race conditions within OpenAI/Codex and some situations that could create zombie processes. 
+    https://github.com/NousResearch/hermes-agent/pull/87424
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/87426
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/87434
+
+[2026-08-16T09:39:40.914000+00:00] remintoscar (id=1538482371198976000)
+    https://github.com/NousResearch/hermes-agent/pull/87591  P1 bug: fix(cron): clear run_claim for one-shot jobs on dispatch failure   <@387972437901312000> please check
+
+[2026-08-16T09:44:42.203000+00:00] undifined. (id=1538483634896379954)
+    - My custom kanban runs for days, flexible with any workflow and nested boards
+    [reply to jasheal msg=1538417891009892443]
+
+[2026-08-16T09:45:46.378000+00:00] undifined. (id=1538483904065835028)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538483903768043610/image.png?ex=6a82d84a&is=6a8186ca&hm=eb7b2aa27913b3c1621f719fe39dbba91a0721106eb8094af95d2dbb40e5c1d6&
+
+[2026-08-16T09:47:22.912000+00:00] teknium (id=1538484308958773268)
+    its in
+    [reply to realadolan msg=1538467840066060298]
+
+[2026-08-16T09:49:37.174000+00:00] undifined. (id=1538484872094556231)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538484872216055829/image.png?ex=6a82d931&is=6a8187b1&hm=63d82170ca9b82ac0955e98c4b559835aa5bb213ee4b95ea48070dc092626c33&
+
+[2026-08-16T09:51:57.827000+00:00] undifined. (id=1538485462035988511)
+    " on the kanban dashboard, the set the column Codewriter model to z-ai/glm-5.2 "
+
+[2026-08-16T09:52:00.041000+00:00] sounderstanding (id=1538485471322181642)
+    How about turning the pets into a dictation shortcut toggle hold/pet to just drop a few lines, or click for convo mode, with potentially lip sync for some of them? <:catlick:1151260427645366375>
+
+[2026-08-16T10:17:27.342000+00:00] realadolan (id=1538491877287002152)
+    https://github.com/NousResearch/Hermes-Bot-Mode/pull/101 Adapted the thinking on the plugin so that the bots now show the thinking animation when they’re actually working. A much more refined experience. Clean!
+    [reply to teknium msg=1538484308958773268]
+
+[2026-08-16T11:10:50.773000+00:00] dante.sparras (id=1538505313450332272)
+    This needs to be merged, im currently affected by the issue it fixes: https://github.com/NousResearch/hermes-agent/pull/87293
+
+[2026-08-16T11:15:28.993000+00:00] ct0547 (id=1538506480389722172)
+    <@387972437901312000> found a bug with bots plugin... when you rename the default bot, its still tagged as @hermes instead of the new name. if my agent is named jarvis I want to @jarvis not @hermes or @default in bot mode
+    
+    Also the new Skills hub browsing inside the desktop the way it currently is done is cluttered and overwhelming can we default it to hidden and only show when Browse the full hub is clicked?
+    
+    I would seriously love to help you guys make the desktop UX be consumer (non tech) friendly (so I can actually get my clients using it) but all my PRs relating to this type of work have sat untouched so i'm holding back. This Capabilities page in particular is one I'd love to tackle if you'll let me.
+
+[2026-08-16T11:16:55.064000+00:00] turgut.k (id=1538506841397534830)
+    hello <@387972437901312000>, process results started by subagents also queue for main agent, causes more calls for main/expensive agents
+
+[2026-08-16T11:39:10.831000+00:00] endo9001 (id=1538512444010405899)
+    <@387972437901312000> thanks for that one. <:Prayge:1151275585000185968> 
+    ||a||i "imported" it into hermes desktop plugins. 🙌🏻
+
+[2026-08-16T11:46:28.855000+00:00] endo9001 (id=1538514281216081930)
+    added light/dark colors for the office too
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538514279995539468/image.png?ex=6a82f494&is=6a81a314&hm=a74b7178523e7f95dc192a84fbc9965e27ea7dd471d018e3cc5671dd75772ef2&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538514280675024896/image.png?ex=6a82f494&is=6a81a314&hm=8dccc436c4f75007dbaa51054b9c9ed731a20f0a5021dda6e270b918a8059333&
+
+[2026-08-16T11:48:03.310000+00:00] dias4761 (id=1538514677389332612)
+    Some maintainer will see this soon and will correct it with this pr
+    [reply to dante.sparras msg=1538505313450332272]
+
+[2026-08-16T11:55:49.380000+00:00] dias4761 (id=1538516632228339712)
+    <@690519146701783042>
+    [reply to dante.sparras msg=1538505313450332272]
+
