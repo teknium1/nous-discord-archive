@@ -567,3 +567,9 @@
     Are you mean the central hub with sync on the server? Sure, I use it on ubuntu VPS an on few devices, sync obsidian's voult with Synkthing
     [reply to lelestacia msg=1538325072484245594]
 
+[2026-08-16T14:25:10.553000+00:00] iamformless (id=1538554218112352286)
+    fire
+
+[2026-08-16T14:35:14.711000+00:00] t1ri. (id=1538556752134545439)
+    Thank you from Chile 🇨🇱 I’m going to download now to my Hermes
+

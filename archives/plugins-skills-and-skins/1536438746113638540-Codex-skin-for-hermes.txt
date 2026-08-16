@@ -18,3 +18,6 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1536438746113638540/1536438746906370199/image.png?ex=6a7b6796&is=6a7a1616&hm=6d67c6107548e99ec790588a2d8ed573eaa1909bc4dc3a3840a80bee0a396c77&
     [embed] GitHub - FPSUnleashed/hermes-codex-skin: Codex Skin: a self-contain... https://github.com/FPSUnleashed/hermes-codex-skin
 
+[2026-08-16T14:14:02.332000+00:00] zerosignal (id=1538551415390208061)
+    This failed for me on the latest release "unexpected token '<'"
+

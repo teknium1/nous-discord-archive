@@ -209,3 +209,15 @@
     will do
     [reply to shilp26. msg=1538500518903550032]
 
+[2026-08-16T15:58:30.859000+00:00] shilp26. (id=1538577707498078359)
+    🔑 Hermes Go — OAuth Providers
+    
+    Connect model providers from your phone.
+    
+    System → Setup → Environment includes Provider Logins (OAuth) alongside API keys. Search providers, start device-code or PKCE authorization, hand off external providers to CLI, and manage connection status, docs, disconnect, and model-catalog refresh.
+    
+    Your models, ready when you are. 🔑
+    
+    Hermes Go — Your AI agent, in your pocket - shilp26.github.io/hermes-go/
+    [attachment] file_00000000a288820bb47967b443644e72.png https://cdn.discordapp.com/attachments/1538241391166230568/1538577707225579621/file_00000000a288820bb47967b443644e72.png?ex=6a832fa6&is=6a81de26&hm=dcac32e737f0038a5c9b866a76c4191d8ac864596987e0b163cc254a5bcf3d08&
+

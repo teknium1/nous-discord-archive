@@ -59654,3 +59654,63 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     <@690519146701783042>
     [reply to dante.sparras msg=1538505313450332272]
 
+[2026-08-16T13:22:35.222000+00:00] .omgg (id=1538538467112255710)
+    <@889862604858728509> your bot broke just leaving your md file path on PR's
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538538466474852353/image.png?ex=6a830b1b&is=6a81b99b&hm=887456e72eb36922f08fd37afe643dee49042ad2766f6f7a392de3d27bdaa242&
+
+[2026-08-16T13:24:15.157000+00:00] taka950531 (id=1538538886270296126)
+    How are you?
+    [reply to endo9001 msg=1538514281216081930]
+
+[2026-08-16T13:25:21.682000+00:00] endo9001 (id=1538539165296361563)
+    awesome! how about you? 👀
+    [reply to taka950531 msg=1538538886270296126]
+
+[2026-08-16T13:25:43.130000+00:00] taka950531 (id=1538539255255666738)
+    Fine, thanks
+    [reply to endo9001 msg=1538539165296361563]
+
+[2026-08-16T13:25:48.223000+00:00] taka950531 (id=1538539276617388114)
+    And you?
+
+[2026-08-16T13:27:21.804000+00:00] endo9001 (id=1538539669124288536)
+    https://klipy.com/gifs/trap-trap-movie-7
+
+[2026-08-16T13:37:30.999000+00:00] johnnydalvi (id=1538542224273440778)
+    Guys, I'm having problems to dispatch agents via cli, it seems that the gets the wrong gateway when I try to interact with the session from within Hermes, it also won't allow me to add goals to it, does someone have solved this problem? Mind giving me a tap in the shoulder showing the right direction?
+
+[2026-08-16T14:09:25.493000+00:00] decruxrp (id=1538550254243414176)
+    https://github.com/NousResearch/Hermes-Bot-Mode/pull/106
+    
+    lightweight Bot Mode controls were kept, and the stale bot-session opening bug was fixed.
+    
+    Verified locally: **161/161 tests passing**. Nothing merged yet—feedback appreciated!
+
+[2026-08-16T14:36:31.898000+00:00] _ultrainstinct_ (id=1538557075880153210)
+    He could make my life easier right now with: https://github.com/NousResearch/hermes-agent/pull/86585#issuecomment-5307928895
+    I will need to get involved practically in development sooner or later anyway I guess - hermes has been a lot of fun for me lately: So do you suggest I report this as a separate feature request and try to get it developed myself? Any directions on how to get involved with hermes development would be appreciated either way!
+    [reply to tumadre msg=1538342952454197310]
+
+[2026-08-16T14:54:18.014000+00:00] tumadre (id=1538561547494887525)
+    After the big release monday i'd put in a pr for what youre looking for.
+    [reply to _ultrainstinct_ msg=1538557075880153210]
+
+[2026-08-16T14:54:42.885000+00:00] tumadre (id=1538561651811549224)
+    but i agree, msi with switches or intune support for mdm deployments etc is needed
+
+[2026-08-16T15:08:26.224000+00:00] .ivasu (id=1538565105145479268)
+    Hey everyone! I’m a software developer and I’ve been exploring a lot of the new AI agent tooling coming out recently.
+    
+    I’ve been experimenting with Hermes Agent for a while and really liked what Nous Research has been building around it. I ended up making a small breakdown + demo based on my experience with it.
+    
+    Thought I’d share it here since this is probably the best place to get feedback from people who actually use and work on Hermes. Would genuinely love to hear what you think, or if there’s anything I got wrong 🙂
+    
+    https://youtu.be/JwTvDiMBWvg?si=VVIcME4GMtR05uh3
+
+[2026-08-16T15:21:04.494000+00:00] _ultrainstinct_ (id=1538568285560508566)
+    Here we go: https://github.com/NousResearch/hermes-agent/issues/87771
+    [reply to tumadre msg=1538561547494887525]
+
+[2026-08-16T18:12:22.315000+00:00] realadolan (id=1538611393865981962)
+    <@387972437901312000> Review this when you have the time 🙂 .This will add proper support for GLM 5.3 to Hermes.: https://github.com/NousResearch/hermes-agent/pull/85891
+

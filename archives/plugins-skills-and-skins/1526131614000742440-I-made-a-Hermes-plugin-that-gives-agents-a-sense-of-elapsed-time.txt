@@ -33,3 +33,11 @@
 [2026-08-02T02:53:00.873000+00:00] panbartosz (id=1533306599890882701)
     I tend to use Hermes as a personal asistant type of deal and this feature is what I have been missing. I did not chsnge default session lifetime, but I use several profiles and, some of them are used only a few times a day and this is super useful.
 
+[2026-08-16T16:13:06.772000+00:00] .weequet (id=1538581381343477810)
+    update: When the conversation crosses into a new calendar day, the time-gap
+    note now includes the day of week
+    
+    ```
+    [time-gap: about 2 hours have passed since the previous exchange, crossing into a new calendar day (today is Monday, 2026-08-17)]
+    ```
+

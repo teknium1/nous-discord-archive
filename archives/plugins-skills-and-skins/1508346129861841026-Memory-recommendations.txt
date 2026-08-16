@@ -519,3 +519,6 @@
     ya same vault but i also designed ClawMem to be multi-vault for different collection corpus (so can be both across any agents)
     [reply to rostelinalise msg=1529351428986900550]
 
+[2026-08-16T15:40:51.040000+00:00] nullsense (id=1538573262295007302)
+    do you guys have advice for what to do if i want to run fully local with great memory? I have a 5090 now testing qwen 3.8 27B, using hindsight but it's quite slow and contentious
+

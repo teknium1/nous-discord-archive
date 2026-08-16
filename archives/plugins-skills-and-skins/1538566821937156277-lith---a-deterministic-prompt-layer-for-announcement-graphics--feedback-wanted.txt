@@ -1,0 +1,87 @@
+# Thread 'lith — a deterministic prompt layer for announcement graphics (feedback wanted)' in forum #plugins-skills-and-skins
+# thread_id=1538566821937156277 forum_id=1485392832154832906
+# Started 2026-08-16T18:31:31.441301+00:00
+
+[2026-08-16T15:15:15.539000+00:00] funsaized (id=1538566821937156277)
+    Started this because I wanted more out of image generation than the built-in `image_gen` tool path
+    gives me. By no means knocking the Hermes `image_gen` capability. It's great out of the box and the tool even leverages it sometimes... landscape/square/portrait is the
+    right call for most asks. But `grok-imagine-image-2.0` accepts thirteen
+    aspect ratios and through that path I could reach three. `2:3` and `3:2` were
+    unavailable, and my layout had been composed for the frame I asked for... Same
+    for pinning an exact model id, and knobs like `n` and resolution.
+    
+    As an engi-nerd, I like as determinism and configurability as possible. So I built the boring part underneath:
+    
+    • **Recipe in, prompt out.** A JSON brief renders byte-identically forever, and
+      your copy goes into the prompt as a literal block the model is ordered to
+      reproduce character for character. No shipped word is invented.
+    • **Seven fixed style families (and expanding)** as data, plus 15 named layouts (radial,
+      timeline, zigzag, split…) derived from section count and frame shape.
+    • **One request shape across xAI, OpenAI and MiniMax**, with the exact body
+      printable before you spend a cent.
+    • **The output gets checked.** `lith-print --strict` measures the delivered file
+      and exits nonzero when a provider substituted a ratio. Added that after two
+      sweeps ran through a bridge that silently dropped `model`, `n` and
+      `aspect_ratio` — every image arrived, every frame was wrong, nothing said so.
+    
+    It still routes back to `image_generate` whenever Hermes can honor the
+    request. Stdlib only, no vendor SDKs. Ships with a SKILL.md.
+    
+    → https://github.com/funsaized/lith
+    
+    **Feedback I'd appreciate**
+    1. Three commands — `lith-plate` → `lith-press` → `lith-print`, one per stage.
+       Right shape for manual and agentic use, or one too many?
+    2. Adding a provider is one module and four registration points
+       (CONTRIBUTING.md). I would love to beef up the system with more provider options and knobs. If you try it, tell me where the contract reads unclear.
+    3. Candidate scoring is deliberately not built; selection stays human. Right
+       boundary, or the obvious next thing? Figured the output could be plugged into OCR or systems designed for that purpose
+    
+    Demo below: one "No deploys on Fridays" brief, three providers, five
+    layouts 😛 👇
+    [embed] GitHub - funsaized/lith: 💅 A pipeline for producing style-locked... https://github.com/funsaized/lith
+
+[2026-08-16T15:22:36.436000+00:00] funsaized (id=1538568671193210980)
+    The lib comes shipped with a Hermes skill. Here's an example using it with your agent:
+    
+    
+    You pick the candidate image:
+    
+    ```
+    Use the lith skill on the five recipes in recipes/demo/friday/.
+    Per recipe: `lith-press --check` (report route + reason), then `--dry-run`,
+    then follow the route for 2 candidates into ./candidates/<recipe>/. Show me
+    them with their dimensions and any [warn] or unsupported field, then stop.
+    When I name one: lith-print --recipe <abs> --image-file <pick> --strict.
+    Don't pick for me. Don't post or upload anything anywhere.
+    ```
+    
+    Agent picks, and shows its work:
+    
+    ```
+    Same, but 4 candidates and you select. lith ranks nothing, so:
+    1. Drop any candidate whose dimensions don't match the resolved aspect_ratio
+       (both are in the --emit-json output).
+    2. Screen each survivor: lith-print --strict --output-dir ./screen/<recipe>/
+       Exit 1 = the delivered frame drifted, eliminate it. The scratch
+       --output-dir is required: every candidate resolves to the SAME published
+       path, so screening without it overwrites them onto one file.
+    3. If you have vision, the recipe is ground truth. Eliminate any image that
+       drops a section, desyncs a heading from the body under it, duplicates a
+       panel, or misspells authored copy. Quote the string that was wrong.
+    4. Still tied? Prefer legibility at thumbnail size, then lowest index. If
+       what's left is genuinely subjective, show me the finalists and ask.
+    5. Publish the winner with no --output-dir, so it lands on its real path.
+    Say which step decided each pick, and name any recipe where everything failed
+    rather than publishing the least-bad one. Don't post anything anywhere.
+    ```
+
+[2026-08-16T15:24:53.563000+00:00] funsaized (id=1538569246345396344)
+    annnd here's the output from above's chat. 
+    
+    Remember, **NO DEPLOYS ON FRIDAYS** 😎
+    [attachment] B_brutalist_no_deploys_on_fridays.jpg https://cdn.discordapp.com/attachments/1538566821937156277/1538569244587982931/B_brutalist_no_deploys_on_fridays.jpg?ex=6a8327c5&is=6a81d645&hm=70b1c36c55ab5dfdc2af03a8715a002dd8d47f578b5ec77966b1751339a4d40b&
+    [attachment] C_patent_comparative_deploy_study.png https://cdn.discordapp.com/attachments/1538566821937156277/1538569245057880164/C_patent_comparative_deploy_study.png?ex=6a8327c5&is=6a81d645&hm=915472c47bccc48932feffee37361a07da7794215e9b590fda56a22990347bbc&
+    [attachment] A_sticker_it_is_a_small_change.jpg https://cdn.discordapp.com/attachments/1538566821937156277/1538569245456080956/A_sticker_it_is_a_small_change.jpg?ex=6a8327c5&is=6a81d645&hm=6f7eb12f9e79b8ce5b4df85c11b63fe3fabdfc37c9bb94e52e29364f305dd3e6&
+    [attachment] G_log_anatomy_of_a_friday_deploy.png https://cdn.discordapp.com/attachments/1538566821937156277/1538569245821239306/G_log_anatomy_of_a_friday_deploy.png?ex=6a8327c5&is=6a81d645&hm=dfac0a333318e8fc70eaf7d2b8c85a534119cb2d7977bfdf2030b5e457666802&
+
