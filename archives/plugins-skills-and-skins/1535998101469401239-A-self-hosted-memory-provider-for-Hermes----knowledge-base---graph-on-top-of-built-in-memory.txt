@@ -31,3 +31,15 @@
 [2026-08-10T06:16:13.268000+00:00] toomij (id=1536256841426796554)
     A self-hosted memory provider for Hermes -  knowledge base + graph on top of built-in memory 🧠
 
+[2026-08-15T19:46:14.349000+00:00] toomij (id=1538272628463374427)
+    🧠 Metronix Memory weekly update
+    
+    12 PRs shipped:
+    
+    • MCP server migrated to SDK v2• 305 MCP-focused tests passing• Native Hermes memory provider published and documented• Retrieval, write-through, fresh-session recall, and fail-open behavior verified• Dependency and OSS maintenance improvements landed
+    
+    Install: hermes-memory-metronix 2026.32.3
+    
+    Durable native memory for Hermes agents is ready.
+    [attachment] exec-08589f30-437a-4d85-811a-6fb71b758595.png https://cdn.discordapp.com/attachments/1535998101469401239/1538272628211712050/exec-08589f30-437a-4d85-811a-6fb71b758595.png?ex=6a821386&is=6a80c206&hm=2305430ac9a156b944bbd921a36a9efe1b403e64097e582f325821c217f8e2c7&
+

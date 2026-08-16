@@ -1,0 +1,25 @@
+# Thread 'hermes-openai-bridge' in forum #community-projects-showcase
+# thread_id=1538296162707308555 forum_id=1316137596535177246
+# Started 2026-08-16T01:08:38.904705+00:00
+
+[2026-08-15T21:19:45.350000+00:00] blackwinter93 (id=1538296162707308555)
+    https://github.com/rahulsethi/hermes-openai-bridge
+    
+    Point any OpenAI-compatible tool — an IDE, an agent framework, a script — at your Nous Research Hermes agent, with its full MCP tools, memory, and profile, via a standard /v1/chat/completions endpoint. Unlike hermes proxy (which forwards to model providers only) or hermes --cli (which cold-starts everything per call, ~90s), this keeps a warm agent session so calls are fast — model-only latency.
+    
+    The problem
+    You want to talk to your Hermes agent — the one with your configured model, persona, memory, and especially its MCP tools (knowledge base, files, …) — from the ecosystem of tools that already speak OpenAI. But Hermes gives you no good way to do that:
+    
+    hermes serve exposes a dashboard/API with no /v1/chat/completions (it returns 405 for chat).
+    hermes proxy is OpenAI-compatible, but it forwards to model providers — it does not run your agent (no MCP tools, no memory, no profile).
+    hermes --cli -z "…" runs the full agent, but spawns everything per call (~90s) — unusable as a backend.
+    So there's no fast, standard way to talk to the full agent programmatically. hermes-openai is that missing endpoint.
+    
+    How it works
+    hermes-openai is a tiny local HTTP service. On the first request it logs into your Hermes gateway (the server behind hermes serve), opens one persistent WebSocket session, and keeps it warm. Every /v1/chat/completions request is answered by the full agent over that live session, so the MCP tools stay loaded and latency is model-only.
+    
+    OpenAI client ──/v1/chat/completions──▶ hermes-openai ──persistent WS session──▶ Hermes gateway
+       (any tool, any api key)                (this shim)        (full agent: MCP + memory + profile)
+    It streams the agent's reasoning and tool calls internally to prove the agent is working, but returns only the final assistant message — never the thinking/tool traffic.
+    [embed] GitHub - rahulsethi/hermes-openai-bridge: Point any OpenAI-compatib... https://github.com/rahulsethi/hermes-openai-bridge
+

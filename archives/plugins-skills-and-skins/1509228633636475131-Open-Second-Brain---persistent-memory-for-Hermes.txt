@@ -560,3 +560,10 @@
     It's merged
     [reply to ddhrs_43057 msg=1535689192707858503]
 
+[2026-08-15T23:14:37.978000+00:00] lelestacia (id=1538325072484245594)
+    Can this memory be self hosteed?
+
+[2026-08-16T00:28:12.495000+00:00] techmeat (id=1538343588310683648)
+    Are you mean the central hub with sync on the server? Sure, I use it on ubuntu VPS an on few devices, sync obsidian's voult with Synkthing
+    [reply to lelestacia msg=1538325072484245594]
+

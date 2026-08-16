@@ -45,3 +45,16 @@
 [2026-08-15T17:44:32.018000+00:00] shilp26. (id=1538242000266985633)
     Hermes Go , Your Hermes agent, in your pocket. 📱🔥
 
+[2026-08-15T19:54:11.215000+00:00] shilp26. (id=1538274628584083510)
+    📦 Hermes Go — Artifacts
+    
+    Everything your agent produces, in one place.
+    
+    Images, PDFs, code, HTML, SVG, audio — every deliverable gets collected automatically from every session, rendered right inside the chat. HTML previews in a live WebView. All readable offline, from your own cache.
+    
+    See what your agent made. 📱✨
+    
+    Hermes Go — Your AI agent, in your pocket - http://shilp26.github.io/hermes-go/
+    [attachment] HPwa1EWbYAAqUKt.png https://cdn.discordapp.com/attachments/1538241391166230568/1538274628521300049/HPwa1EWbYAAqUKt.png?ex=6a821563&is=6a80c3e3&hm=a8310aa6b76fe7f944a7dc32ca58139a5f24ad4e4c295725fde4a094ad36231f&
+    [embed] Hermes Go — Your AI agent, in your pocket http://shilp26.github.io/hermes-go/
+

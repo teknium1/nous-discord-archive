@@ -1,0 +1,32 @@
+# Thread 'Hermes-voice' in forum #community-projects-showcase
+# thread_id=1538296754108112927 forum_id=1316137596535177246
+# Started 2026-08-16T01:08:38.474372+00:00
+
+[2026-08-15T21:22:06.351000+00:00] blackwinter93 (id=1538296754108112927)
+    https://github.com/rahulsethi/hermes-voice
+    
+    
+    Talk to your Nous Research Hermes agent in real time — with its full MCP tools and memory — over a LiveKit server you host yourself. Public and private (local-only) lanes; bring your own phone/web client.
+    
+    The problem
+    You want to talk to your Hermes agent — hands-free, from a phone or laptop — and have it answer with its full context: the same MCP tools and memory it uses in text. Hermes ships no voice/LiveKit agent, and wiring one yourself means learning LiveKit Agents and routing the LLM through your whole agent rather than a raw model.
+    
+    There's also a privacy axis. Some conversations can happily use hosted speech services; others must never leave a trusted machine. Most voice stacks make that an afterthought — hermes-voice makes it a hard, enforced setting.
+    
+    What hermes-voice does
+    Stands up a self-hosted LiveKit server plus a ready-to-run voice worker that joins the room and runs, per turn:
+    
+       mic ─▶ LiveKit room ─▶  hermes-voice worker
+                                  STT ─▶ LLM (your Hermes agent, full MCP + memory) ─▶ TTS
+       speaker ◀─ LiveKit room ◀──────────────────────────────────────────────────────┘
+                                  (silero VAD handles turn-taking)
+    The LLM leg points at your own Hermes agent over an OpenAI-compatible endpoint (the Hermes OpenAI Bridge), so a spoken question runs through the full agent — tools, memory, profile — not a bare model.
+    
+    Two lanes, selected by one setting:
+    
+    Lane    STT    LLM    TTS    Use it for
+    public    hosted or local    your Hermes endpoint    hosted or local    everyday chat; snappy hosted speech is fine
+    private    local only    local/tailnet only    local only    sensitive conversations that must not leave a trusted node
+    In private, egress is refused in code (fail closed): if any leg points at a hosted service, the worker won't even register. See How it stays private.
+    [embed] GitHub - rahulsethi/hermes-voice: Talk to your Hermes agent in real... https://github.com/rahulsethi/hermes-voice
+

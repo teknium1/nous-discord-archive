@@ -1,0 +1,27 @@
+# Thread 'Hermes Serve Guard' in forum #community-projects-showcase
+# thread_id=1538295680206897262 forum_id=1316137596535177246
+# Started 2026-08-16T01:08:39.321458+00:00
+
+[2026-08-15T21:17:50.313000+00:00] blackwinter93 (id=1538295680206897262)
+    https://github.com/rahulsethi/hermes-serve-guard
+    
+    
+    Hermes refuses to serve on a public port without auth — and an update can quietly drop that auth, crash-looping your gateway. This installs a self-heal that re-adds it before every start, so your gateway can never silently go down after an update.
+    
+    The problem
+    Nous Research Hermes won't bind a non-loopback port for its dashboard/serve unless a dashboard auth provider is registered — i.e. a dashboard.basic_auth block (username + password_hash) in config.yaml. That's a good security default.
+    
+    But a Hermes update or config migration can silently drop that block. After that, hermes serve --host 0.0.0.0 exits 1 on every start, your supervisor (systemd / Task Scheduler) restart-loops it, and your gateway is silently down — the desktop app, phone, and API all just see "can't connect." It's baffling because systemctl cheerfully reports the unit as active (auto-restart). (The project this was distilled from saw restart #315 before catching it.)
+    
+    The log signature is unmistakable once you know it:
+    
+    Refusing to bind 0.0.0.0:8790 — no auth providers
+    
+    The fix
+    hermes-serve-guard is a tiny, idempotent hook that runs before every serve start and re-injects the auth block from a saved, protected source if it's missing. So the serve always binds, and an update can never crash-loop the gateway.
+    
+    Safe by default — it only ever inserts the missing keys; it never rewrites your config, never touches your comments or formatting, backs up before it changes anything, and writes atomically. Running it when the block is already present is a no-op.
+    Secrets stay secret — it stores and uses only the scrypt hash (chmod 600 / ACL-locked), never the plaintext password.
+    Generic — no hard-coded hostnames, paths, ports, or usernames; everything is flags/env with sensible per-OS defaults.
+    [embed] GitHub - rahulsethi/hermes-serve-guard: Self-heal Hermes dashboard ... https://github.com/rahulsethi/hermes-serve-guard
+

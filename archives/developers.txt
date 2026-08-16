@@ -59300,3 +59300,162 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Looks like your layout is a bit bugged, you may have dragged stuff around on wrong places, I suggest clicking on the Layout Editor icon (top-right) and selecting Default or Reset.
     [reply to therealryan100 msg=1538246879546966047]
 
+[2026-08-15T19:01:13.943000+00:00] dias4761 (id=1538261302139691048)
+    I followed the guidelines you mentioned in the body of the document. I resolved some more cases, but I didn't address case 4 because you mentioned you wanted to resolve it. <@387972437901312000>
+
+[2026-08-15T19:01:22.648000+00:00] dias4761 (id=1538261338650841179)
+    https://github.com/NousResearch/hermes-agent/pull/87090
+
+[2026-08-15T19:04:51.254000+00:00] dias4761 (id=1538262213607952415)
+    I documented it for you to read and validate.
+
+[2026-08-15T19:10:28.501000+00:00] dias4761 (id=1538263628124262420)
+    The tests are also there to be analyzed.
+
+[2026-08-15T20:10:42.380000+00:00] .rcfa (id=1538278785831665694)
+    It was plenty reliable before. No chromium based app ever should open Chrome as a side effect, unless tasked to do an operation in that specific browser. Chrome isn’t even my default browser, so it should NEVER be opened, unless I double click it. I use DuckDuckGo and/or Brave, if I’m not using Safari, never Chrome. I may have to zip it up, and remove the binary, if that’s the only way to stop this behavior.
+    [reply to teknium msg=1538220528278437969]
+
+[2026-08-15T20:14:20.993000+00:00] teknium (id=1538279702760919121)
+    It wasn't, sorry to burst the bubble of perfection
+    [reply to .rcfa msg=1538278785831665694]
+
+[2026-08-15T20:14:23.757000+00:00] teknium (id=1538279714354102335)
+    but it was not
+
+[2026-08-15T20:15:06.090000+00:00] teknium (id=1538279891911442452)
+    In hopefully 1 week, all hermes installs and updates will be binary packaged releases - and this will all be over
+
+[2026-08-15T20:15:12.657000+00:00] teknium (id=1538279919455440958)
+    You can cede updating until then
+
+[2026-08-15T20:22:57.354000+00:00] dias4761 (id=1538281868536062002)
+    I will create a PR to resolve this, ser
+    [reply to teknium msg=1538279919455440958]
+
+[2026-08-15T20:23:23.260000+00:00] dias4761 (id=1538281977193439244)
+    Don't worry, this will be resolved soon with your approval.
+
+[2026-08-15T20:24:34.470000+00:00] teknium (id=1538282275869827142)
+    No, don't
+
+[2026-08-15T20:24:42.284000+00:00] teknium (id=1538282308644110387)
+    We have a new updating and installing process coming already by <@100390510744584192>
+
+[2026-08-15T20:24:51.115000+00:00] teknium (id=1538282345684148334)
+    This will have to do until then
+
+[2026-08-15T20:25:10.028000+00:00] dias4761 (id=1538282425011011695)
+    Ohhhh . Okie, then
+
+[2026-08-15T20:26:00.007000+00:00] dias4761 (id=1538282634638262283)
+    When you have time, you can check that PR again regarding comprehension. I addressed it using the method you requested and dealt with the other problems as well.
+
+[2026-08-15T20:26:14.658000+00:00] dias4761 (id=1538282696088748064)
+    I apologize if I seem pushy.
+
+[2026-08-15T20:26:52.512000+00:00] dias4761 (id=1538282854859939951)
+    https://github.com/NousResearch/hermes-agent/pull/87090
+
+[2026-08-15T21:11:07.975000+00:00] mira_tenebris (id=1538293992679280862)
+    Ran into a little UI bug in Hermes-Bot-Mode
+    https://github.com/NousResearch/Hermes-Bot-Mode/issues/88
+
+[2026-08-15T21:39:00.904000+00:00] tumadre (id=1538301009451810877)
+    <@1520207967406919810>
+    [attachment] pr-56-review-findings.md https://cdn.discordapp.com/attachments/1491258766648283238/1538301008256704572/pr-56-review-findings.md?ex=6a822df4&is=6a80dc74&hm=fe823df0b44f7bfb685527a4d528c0ef68a04a5c3aa33ce5ca2638be291c32b9&
+
+[2026-08-15T21:39:32.760000+00:00] tumadre (id=1538301143065821225)
+    ill take a look
+    [reply to mira_tenebris msg=1538293992679280862]
+
+[2026-08-15T21:42:00.914000+00:00] dias4761 (id=1538301764468478122)
+    .-.
+
+[2026-08-15T21:44:08.149000+00:00] tumadre (id=1538302298130878585)
+    confirmed on my windows box too ill get a pr in for it
+    [reply to mira_tenebris msg=1538293992679280862]
+
+[2026-08-15T21:49:29.436000+00:00] decruxrp (id=1538303645706096762)
+    I will get somone working on it <:bhob:1151299900496158830>
+    [reply to tumadre msg=1538301009451810877]
+
+[2026-08-15T21:49:44.686000+00:00] tumadre (id=1538303709669236856)
+    that poor clanker is tired
+    [reply to decruxrp msg=1538303645706096762]
+
+[2026-08-15T21:50:03.159000+00:00] decruxrp (id=1538303787150610573)
+    nahh just cheap model lol
+
+[2026-08-15T21:50:10.033000+00:00] tumadre (id=1538303815982522388)
+    might just want to have your agent verify validity of the first couple
+
+[2026-08-15T21:52:06.732000+00:00] tumadre (id=1538304305453334620)
+    https://github.com/NousResearch/Hermes-Bot-Mode/pull/89 <@387972437901312000>
+    [reply to mira_tenebris msg=1538293992679280862]
+
+[2026-08-15T21:54:23.724000+00:00] tumadre (id=1538304880039567463)
+    <:simpsalute:833102524051095562>
+
+[2026-08-15T21:54:26.452000+00:00] tumadre (id=1538304891481489459)
+    Tek the best
+
+[2026-08-15T21:55:04.255000+00:00] mira_tenebris (id=1538305050039025695)
+    Thank you all 🙏
+
+[2026-08-15T21:57:54.959000+00:00] kadirfarm (id=1538305766023368884)
+    <@387972437901312000> You might want to take a look.
+    [reply to kadirfarm msg=1538243302548045954]
+
+[2026-08-15T22:17:23.663000+00:00] jimn235 (id=1538310667923099771)
+    i am curious, is not supporting the temperature parameters in the openai spec through the hermes default product, which appears to be racking up issues and PR's, disjoint from saying hermes does not support the full openai spec ?
+
+[2026-08-15T22:18:40.640000+00:00] teknium (id=1538310990788042842)
+    Most models now dont even accept a temperature, or require a specific temperature
+    [reply to jimn235 msg=1538310667923099771]
+
+[2026-08-15T22:19:56.864000+00:00] jimn235 (id=1538311310494793789)
+    i am sure that's a justification to not support the spec then
+
+[2026-08-15T22:22:21.649000+00:00] jimn235 (id=1538311917767102516)
+    it's listed as a config compatibility risk on my issues, but since there is no wiring for that part of the spec, im seeing push back that doesn't add up to me, and when you come across a temperature setting that's disabled by hermes, the PR's and issues will probably continue to stack up without a conspicuous notice about spec deviation
+
+[2026-08-15T22:23:36.372000+00:00] jimn235 (id=1538312231178080267)
+    it's not that i went linting the spec for no end goal here, I found a recent model with a signficant upside when you fix the temp, it's an ancient story as quants go
+
+[2026-08-15T22:26:53.243000+00:00] jimn235 (id=1538313056915030119)
+    this is the second time i've posted issue or PR directly rerlating to temp that's been apparently memoryholed
+
+[2026-08-15T22:28:22.508000+00:00] _ultrainstinct_ (id=1538313431319445714)
+    is there something i can subscribe to on github to follow the development of this?
+    [reply to teknium msg=1538279891911442452]
+
+[2026-08-15T22:32:07.916000+00:00] teknium (id=1538314376749260842)
+    Yes click watch
+    [reply to _ultrainstinct_ msg=1538313431319445714]
+
+[2026-08-15T22:34:58.964000+00:00] jack_0010 (id=1538315094176571393)
+    aye got 82177 merged via 86677 was working on this for a minute <:tekcheer:1453863338537779242>
+
+[2026-08-15T22:56:39.985000+00:00] _ultrainstinct_ (id=1538320551054151691)
+    Found it, must be this one: https://github.com/NousResearch/hermes-agent/pull/86585
+    [reply to teknium msg=1538314376749260842]
+
+[2026-08-15T23:07:15.956000+00:00] _ultrainstinct_ (id=1538323218509856788)
+    Huge WIP PR, massive work from ethernet8023!
+    We are planning to run Hermes as a desktop client on local workstations connected to an on-prem LLM gateway.
+    
+    Two quick questions once this lands:
+    
+    Will the desktop app easily support pointing to custom remote endpoints / base URLs (via config or UI)?
+    Can the updater channel be configured for custom/internal release mirrors?
+    Super excited to help test the Windows MSIX and macOS builds!
+
+[2026-08-16T00:25:40.895000+00:00] tumadre (id=1538342952454197310)
+    bro its time to let ethernet go
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538342951975915600/image.png?ex=6a825504&is=6a810384&hm=bfe188a3e30dac7203142088dafd66e24e764818734bae72aa1578a4962bc794&
+    [reply to teknium msg=1538314376749260842]
+
+[2026-08-16T00:26:03.241000+00:00] tumadre (id=1538343046180249761)
+    <a:heheheh:1047808982078738552>
+

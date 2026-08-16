@@ -6494,3 +6494,20 @@
 [2026-08-15T17:00:08.593000+00:00] ipl31 (id=1538230829052854404)
     Next time I see it I will try to get screen shot or video. In my case the model shown at the end of the response was different from the model I had selected. It was a fallback model. Its possible the primary timed out and it went to fall back. But as a user I would expect the prompt input to reflect the model used, similar to when you are using the chat cli.
 
+[2026-08-15T18:40:01.438000+00:00] cryptobredda (id=1538255964866748524)
+    when viewing the chat history, I am seeing these name tags for the sessions, is there a way to fix this?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1538255964271284297/image.png?ex=6a820401&is=6a80b281&hm=f4352382b30c7572acb64fc5a0ee62e25c00603a23e710b869c1bdb6b0cf315e&
+    [reply to avidfuturist msg=1538226333451296969]
+
+[2026-08-15T18:48:06.575000+00:00] shilp26. (id=1538257999678668980)
+    What about this. 
+    **Hermes Go** - A native Hermes agent
+    
+    Full app map - https://shilp26.github.io/hermes-go/app-map.html
+    
+    Screenshots - https://shilp26.github.io/hermes-go/hermes-go.html#screenshots
+    [attachment] sessions-switch.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1538257999087411280/sessions-switch.jpg?ex=6a8205e6&is=6a80b466&hm=89204632726ec17fea5eb24b29400d1d87199af7549ff095df4d7371965d99d2&
+    [attachment] artifacts.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1538257999402106890/artifacts.jpg?ex=6a8205e6&is=6a80b466&hm=866070b7d3746e312072fc6a5c3596cbfb0eedd4a1525380dd3c5474ff61bdc7&
+    [embed] Hermes Go — App Map https://shilp26.github.io/hermes-go/app-map.html
+    [embed] Hermes Go — Your AI agent, in your pocket https://shilp26.github.io/hermes-go/hermes-go.html
+

@@ -30,3 +30,6 @@
 [2026-08-15T01:22:47.526000+00:00] .s0uthpaw (id=1537994936920842302)
     Open the door for saving sigil states as very trainable image data.
 
+[2026-08-15T19:43:55.672000+00:00] archie312 (id=1538272046809751562)
+    Im really excited for the repo reveal because I've been dying for a visualization which allows me to "follow along" with my robot's work
+

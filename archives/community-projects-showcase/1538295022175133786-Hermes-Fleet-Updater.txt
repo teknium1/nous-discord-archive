@@ -1,0 +1,19 @@
+# Thread 'Hermes Fleet Updater' in forum #community-projects-showcase
+# thread_id=1538295022175133786 forum_id=1316137596535177246
+# Started 2026-08-16T01:08:41.427074+00:00
+
+[2026-08-15T21:15:13.426000+00:00] blackwinter93 (id=1538295022175133786)
+    https://github.com/rahulsethi/hermes-fleet-updater
+    
+    One safe command to update Nous Research Hermes on every machine you run it on — VPS, home server, laptop — over your own network. Backs up, stops what's holding the binary, updates, restarts, verifies, and never leaves an instance down.
+    
+    The problem
+    You run Hermes (hermes-agent) on several machines — a VPS, a home box/NAS, a laptop — usually reachable over Tailscale. Keeping them updated is painful:
+    
+    hermes update is per-machine and manual — there's no "update all my instances".
+    On Windows/macOS the update fails while a serve/gateway holds the binary (Another hermes.exe is running) — so you must stop services first, in the right order, then restart them.
+    Updates can migrate the config and drop settings (e.g. a serve's auth block) → the service crash-loops and the instance is silently down.
+    You forget a box, or leave one half-updated.
+    Result: fragmented versions, surprise outages, and dread around updating.
+    [embed] GitHub - rahulsethi/hermes-fleet-updater: One safe command to updat... https://github.com/rahulsethi/hermes-fleet-updater
+

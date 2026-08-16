@@ -1,0 +1,19 @@
+# Thread '`Retinue - Multi-Agent Team UX on Hermes - Linux / Local-First' in forum #community-projects-showcase
+# thread_id=1538271252463222804 forum_id=1316137596535177246
+# Started 2026-08-16T01:08:41.854776+00:00
+
+[2026-08-15T19:40:46.285000+00:00] markhowell_23739 (id=1538271252463222804)
+    Releasing Retinue — a Linux-first multi-agent workspace on Hermes
+    
+    An open-source team UX built on Hermes Agent. Run multiple named agents together in shared rooms on your own Linux machine or containers — local models, credentials you control.
+    
+    This is the first thing I've built where I started using it as I was building, it is actually addictive. Working on it hard right now. 
+    
+    Plugin-layer on Hermes: same agent ecosystem, multi-agent rooms instead of single-agent chat.
+    
+    Feel free to try it out and open issues or PRs — especially around Linux packaging, UI/UX, local-model support, and workspace isolation.
+    
+    https://github.com/novique-ai/retinue
+    [attachment] png.png https://cdn.discordapp.com/attachments/1538271252463222804/1538271252865884160/png.png?ex=6a82123e&is=6a80c0be&hm=b280f019e7f5f0348c8c48ec7477eee13390266501707a9769661fc6c7435028&
+    [embed] GitHub - novique-ai/retinue: Retinue — self-hosted AI teammates t... https://github.com/novique-ai/retinue
+
