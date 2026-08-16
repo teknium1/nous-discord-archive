@@ -59459,3 +59459,86 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-16T00:26:03.241000+00:00] tumadre (id=1538343046180249761)
     <a:heheheh:1047808982078738552>
 
+[2026-08-16T03:09:22.596000+00:00] tunacookie (id=1538384147654123521)
+    https://github.com/NousResearch/hermes-agent/pull/87349
+    feat(desktop): URL toolbar for in-app browser preview 
+    
+    https://github.com/NousResearch/hermes-agent/pull/87384
+    feat(desktop): viewport picker for in-app browser
+
+[2026-08-16T03:55:14.933000+00:00] nootnootog (id=1538395691792203797)
+    Where do i ask for plugin surface expansion reqs?
+
+[2026-08-16T04:10:21.940000+00:00] remintoscar (id=1538399496055164979)
+    Yesterday is a good day LOL
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538399495753310228/image.png?ex=6a8289ad&is=6a81382d&hm=4f50a1dcd61a20fe3c86e6b39fcb569ac59fd1e95afa6f05a43d69845a77ffb0&
+
+[2026-08-16T04:46:06.075000+00:00] maxfreedompollard (id=1538408489209040906)
+    Awesome contributions
+    [reply to remintoscar msg=1538399496055164979]
+
+[2026-08-16T04:48:07.237000+00:00] maxfreedompollard (id=1538408997399564350)
+    <@387972437901312000> is it time for a hermes app? I think a lot of people want to use Hermes on their home computer at work, or to manage other stuff remotely, could we have an app that links to a hermes instance with a QR code? Like whatsapp or anything else. Just a thought, I think it's time.
+
+[2026-08-16T04:50:32.367000+00:00] tumadre (id=1538409606118637598)
+    Mobile app is in the works
+    [reply to maxfreedompollard msg=1538408997399564350]
+
+[2026-08-16T04:50:53.501000+00:00] tumadre (id=1538409694761328682)
+    No ETA unfortunately 😭
+
+[2026-08-16T04:51:53.017000+00:00] realadolan (id=1538409944389394532)
+    After the OpenClaw mobile app flop, they **really** should take their time on this. I wouldn't push it
+    [reply to maxfreedompollard msg=1538408997399564350]
+
+[2026-08-16T04:52:04.488000+00:00] realadolan (id=1538409992502386749)
+    For now we have 3rd party clients which are more than good enough!
+
+[2026-08-16T05:23:27.639000+00:00] jasheal (id=1538417891009892443)
+    Hey folks not sure if it it’s the right thread for this… I’ve started to build an ADE on Hermes and would like to collect a list of projects out in the wild that are doing similar because if someone has it already I’d rather not burn the tokens 🙂 
+    
+    Here’s my top wishlist of what I need:
+    
+    - Frontier quality UX Desktop, mobile clients design to aggregate and work on multiple server instances. A central hub to get work done as opposed just a dashboard or configuration surface. Think cursor or cc built on Hermes. 
+    
+    - Design to handle long coding and build sessions with clean handoffs for new sessions and keep sessions threaded by topic akin to slack channels. 
+    
+    - Proper session transcripts with full visibility into tool calling and skills usage. Context and memory aware etc. 
+    
+    - Focused on surfaces for orchestration as a first class citizen, subagent monitor, Claude code, codex etc. 
+    
+    - MCP so agents can talk to other instances
+    
+    - Full git, file management, docs and specs manager
+    
+    And a whole bunch more. 
+    
+    Is that something that would be of interest to anyone? 
+    
+    Please share some other projects for research if you know!
+
+[2026-08-16T05:35:03.769000+00:00] maxfreedompollard (id=1538420810790993960)
+    Not a problem, and I'm glad to hear it's in the works.
+    [reply to tumadre msg=1538409694761328682]
+
+[2026-08-16T05:35:37.275000+00:00] tumadre (id=1538420951325343804)
+    In the meantime though there are third party options
+    [reply to maxfreedompollard msg=1538420810790993960]
+
+[2026-08-16T05:36:22.449000+00:00] thatzeraphim (id=1538421140798574592)
+    Requesting for review <@387972437901312000>, thanks
+    
+    https://github.com/NousResearch/hermes-agent/pull/84497
+
+[2026-08-16T05:36:32.383000+00:00] nikolahristov (id=1538421182464786482)
+    Hello Hermesians, sorry to be that guy but could someone take a look at my PR - https://github.com/NousResearch/hermes-agent/pull/28953, it's been 3 months sitting idle + development and is now safe to merge, I've been doing main merges from a week, and addressed the comments from https://github.com/NousResearch/hermes-agent/issues/41457#issuecomment-5168191569 already (splitting it to not conflict with others),
+    
+    Best,
+    Nikola.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538421181944823879/image.png?ex=6a829de0&is=6a814c60&hm=8100cfdf68e53fd6625b506699d1ae60ebc0d02578af771d91b22b3cf80abbbd&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538421182209204244/image.png?ex=6a829de0&is=6a814c60&hm=46eea45c4cc229189abe69d0ba66116d8ce0b831b8034ff8b93526f7722887bd&
+
+[2026-08-16T05:37:02.345000+00:00] maxfreedompollard (id=1538421308134654043)
+    I wouldn't trust them - I will wait for NOUS.
+    [reply to tumadre msg=1538420951325343804]
+

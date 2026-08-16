@@ -58,3 +58,16 @@
     [attachment] HPwa1EWbYAAqUKt.png https://cdn.discordapp.com/attachments/1538241391166230568/1538274628521300049/HPwa1EWbYAAqUKt.png?ex=6a821563&is=6a80c3e3&hm=a8310aa6b76fe7f944a7dc32ca58139a5f24ad4e4c295725fde4a094ad36231f&
     [embed] Hermes Go — Your AI agent, in your pocket http://shilp26.github.io/hermes-go/
 
+[2026-08-16T04:43:18.993000+00:00] shilp26. (id=1538407788416335884)
+    🔁 Hermes Go — Session Loops
+    
+    Keep your agent working on repeat.
+    
+    Start a /loop and it pins above the composer with its prompt, countdown, and status — pause, resume, or stop from the card itself, no command to remember. Loops stack with todos and subagents into one tidy activity stack, and unfinished plans stick across turns.
+    
+    Set it, watch it run, steer it anytime. 🔁
+    
+    Hermes Go — Your AI agent, in your pocket - https://shilp26.github.io/hermes-go
+    [attachment] file_00000000c4f48211954b8445f089fd20.png https://cdn.discordapp.com/attachments/1538241391166230568/1538407788299161620/file_00000000c4f48211954b8445f089fd20.png?ex=6a829166&is=6a813fe6&hm=4133f72a6e533f25dab19e1f182e17b378cb72c9fc886f08bb7b3832c9bffe0f&
+    [embed] Hermes Go — Your AI agent, in your pocket https://shilp26.github.io/hermes-go
+
