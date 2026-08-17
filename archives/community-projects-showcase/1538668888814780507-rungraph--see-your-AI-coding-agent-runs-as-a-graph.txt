@@ -63,3 +63,7 @@
     [attachment] rungraph-demo.gif https://cdn.discordapp.com/attachments/1538668888814780507/1538668889431613660/rungraph-demo.gif?ex=6a838492&is=6a823312&hm=3cc8db34aaaad117019c0e024eae1d8a10ce250ec4465422a918c3431e912b31&
     [embed] GitHub - fayzan123/rungraph: See your agent runs as a graph — zer... https://github.com/fayzan123/rungraph
 
+[2026-08-17T17:09:06.151000+00:00] fizbott (id=1538957859465859183)
+    demo video:
+    [attachment] demo_vid_rungraph.mp4 https://cdn.discordapp.com/attachments/1538668888814780507/1538957857918034051/demo_vid_rungraph.mp4?ex=6a8491b1&is=6a834031&hm=f1e2d175c56d25e731bb2d5ade16b4d09675de6590560532ae81cee1b8481b08&
+

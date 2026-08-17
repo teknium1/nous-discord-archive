@@ -586,3 +586,6 @@
     You might want to set up semantic search embeddings for richer recall (o2b search provider add ...)
     Consider configuring the daily cron for automated discipline logging
 
+[2026-08-17T17:33:05.843000+00:00] tesao (id=1538963897971900557)
+    can i use with another memory?
+

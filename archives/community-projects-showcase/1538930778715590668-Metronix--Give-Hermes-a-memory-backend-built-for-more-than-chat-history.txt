@@ -1,0 +1,89 @@
+# Thread '🧠 Metronix: Give Hermes a memory backend built for more than chat history' in forum #community-projects-showcase
+# thread_id=1538930778715590668 forum_id=1316137596535177246
+# Started 2026-08-17T18:34:57.345829+00:00
+
+[2026-08-17T15:21:29.597000+00:00] toomij (id=1538930778715590668)
+    I’m building **Metronix**: self-hosted memory infrastructure for AI agents, with hybrid retrieval, durable agent memory, freshness checks, and a temporal knowledge graph.
+    
+    Now Hermes has a native way to use it.
+    
+    The new **Hermes–Metronix memory provider** connects directly to Hermes’s `MemoryProvider` lifecycle. It works alongside Hermes’s built-in `MEMORY.md` and `USER.md`, adding durable, searchable memory across sessions.
+    
+    **What the provider already does**
+    
+    🧠 Prefetches relevant Metronix memories before each turn  
+    ✍️ Mirrors `memory(action="add")` writes into Metronix  
+    💬 Can store completed conversations as session-scoped memory  
+    📌 Retrieves facts, preferences, and pinned memories  
+    🔐 Supports personal API tokens, with email/password login fallback  
+    🎛️ Supports per-agent, workspace, shared, and session memory scopes  
+    📚 Includes a migration tool for importing an existing Hermes `llm-wiki`
+    
+    **What Metronix adds behind it**
+    
+    🔎 **Hybrid retrieval** — dense vectors, sparse search, metadata, and graph context  
+    🕸️ **Temporal knowledge graph** — relationships, freshness, and conflicting information over time  
+    👤 **Agent-scoped memory** — isolate knowledge by workspace and agent  
+    📚 **Knowledge ingestion** — ingest files and external sources with citations  
+    📴 **Local-model friendly** — bundled local embeddings and graph extraction  
+    🔌 **MCP-native** — the same backend can serve Hermes and other compatible agents  
+    🏠 **Self-hosted** — you operate the stack and control where your data lives
+    
+    **Current benchmark results**
+    
+    🏆 **LongMemEval-S:** 95.4% Recall@10  
+    🏆 **LoCoMo:** 85.3% Recall@10  
+    🏆 **MemoryAgentBench:** 84.7% accurate retrieval  
+    🏆 **EventQA:** 86.8% blended score across 65K and 131K contexts
+    
+    These are directional N=1 results under the published `benchmark-protocol v1.0`, using the same answer model and blind judge across comparisons.
+    
+    **Install Metronix and connect Hermes**
+    
+    Requirements: Docker with at least **6 GB of RAM** and around **15 GB of free disk space**.
+    
+    Install the latest tagged Metronix release and let the installer connect your existing Hermes configuration:
+    
+    ```bash
+    curl -fsSL https://mtrnix.com/install.sh | \
+      bash -s -- --connect-hermes -y
+    ```
+    
+    The installer checks Docker, creates the configuration, starts the Metronix stack, verifies its health, and connects Hermes to the Metronix MCP server.
+    
+    If it cannot safely update your Hermes configuration, it creates deployment-specific setup prompts in `metronix-hermes-setup/` for you to apply instead.
+    
+    Restart Hermes after setup, then verify the connection:
+    
+    ```text
+    metronix_status(workspace_id="MTRNIX")
+    metronix_memory_list(
+      workspace_id="MTRNIX",
+      agent_id="<AGENT_UUID>",
+      limit=5
+    )
+    ```
+    
+    **Native provider or MCP?**
+    
+    🧠 Use the **native provider** when Hermes should automatically recall and persist durable memories before and after turns.
+    
+    🔧 Use **MCP** when Hermes should explicitly search the knowledge base or call Metronix memory tools.
+    
+    ✨ Install both when you want automatic long-term memory plus agent-directed retrieval.
+    
+    The native provider is currently an **early public scaffold**, not a finished packaged release. Its provider contract, prefetch, write-through, authentication, and optional turn syncing are implemented; a dedicated setup wizard and unified knowledge-page retrieval are still on the roadmap.
+    
+    No mandatory hosted-memory subscription. No dependency on someone else’s memory cloud. Your infrastructure, your models, and your data.
+    
+    📦 Metronix: https://github.com/mtrnix/metronix-memory  
+    🔌 Hermes provider: https://github.com/mtrnix/hermes-memory-metronix  
+    ⭐ Star the projects if you want durable, self-hosted memory for Hermes  
+    💬 Feedback and testing are very welcome!
+    [attachment] Codex_Image_Aug_17_2026_06_16_52_PM.png https://cdn.discordapp.com/attachments/1538930778715590668/1538930779386675331/Codex_Image_Aug_17_2026_06_16_52_PM.png?ex=6a847879&is=6a8326f9&hm=ff959c38f0700d8b5735ed70c7b78d7dc0ac1af04fcbabbb1a9f44f759f76565&
+    [embed] GitHub - mtrnix/metronix-memory: Metronix Memory is self-hosted mem... https://github.com/mtrnix/metronix-memory
+    [embed] GitHub - mtrnix/hermes-memory-metronix: Native Metronix memory prov... https://github.com/mtrnix/hermes-memory-metronix
+
+[2026-08-17T15:21:50.137000+00:00] toomij (id=1538930864866725988)
+    🧠 Metronix: Give Hermes a memory backend built for more than chat history
+

@@ -60132,3 +60132,135 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Organization:DAIT-FRAMEWORK
     WELCOME ALL,
 
+[2026-08-17T12:54:21.315000+00:00] dokterdok (id=1538893750216954009)
+    I’ve got a PR up for switching between local and remote Hermes sources directly from the Desktop Sessions view. If anyone’s willing to give it a try or leave feedback/review, I’d really appreciate it: https://github.com/NousResearch/hermes-agent/pull/88325
+    [attachment] exec-055d52e8-1de9-4633-b0f2-7b254bbde79b.png https://cdn.discordapp.com/attachments/1491258766648283238/1538893749613105192/exec-055d52e8-1de9-4633-b0f2-7b254bbde79b.png?ex=6a8455fd&is=6a83047d&hm=cf443f686456880610cc15ca197bfc6320d9e8e9f5169d39a3a44b562b9837db&
+
+[2026-08-17T13:05:21.962000+00:00] jonkomet (id=1538896521171574814)
+    I have shipped Browser/Tab control v1 to the Hermes Browser Extension.. However it is partially dependent on this PR<:BeardedNousGirl:1506796582987632690> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/85351
+
+[2026-08-17T13:12:40.703000+00:00] kadirfarm (id=1538898361384566906)
+    Fixed #88391  Desktop Bot Mode group chat rendered messages as raw Markdown (bold, headings, lists) instead of a rendered preview. PR here: https://github.com/NousResearch/hermes-agent/pull/88430
+
+[2026-08-17T13:22:50.919000+00:00] flep (id=1538900920815976479)
+    I'm a bit confused about what the new `Cronjobs` tab is compared to the `Scheduled jobs` section?
+    My existing cron (from my remote gateway) correctly shows inside `Scheduled jobs`, while `Cronjobs` doesn't show anything.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538900920526446722/image.png?ex=6a845caa&is=6a830b2a&hm=3eef9d9a73949de352fe31c45c5c4afaa45ac82b079461a6f275e826f79382f0&
+
+[2026-08-17T14:46:44.784000+00:00] serefseref (id=1538922034376220743)
+    hey folks — would love to get this PR over the line 🚀
+    
+    https://github.com/NousResearch/hermes-agent/pull/84192
+    
+    right now, plugin OS notifications are pretty limited without actions or a way to open the relevant plugin UI, you can notify the user, but they can’t really do anything with the notification.
+    
+    this PR adds action buttons + deeplink activation, so a notification can actually take the user to the relevant screen. for us, this is the last blocker for shipping the Index plugin properly on Hermes desktop, so this would unblock a lot for us.
+    thank you!
+
+[2026-08-17T15:07:50.223000+00:00] mforce22 (id=1538927342011945112)
+    looks like github is in the toilet right now
+
+[2026-08-17T15:08:11.740000+00:00] mforce22 (id=1538927432260919457)
+    https://www.githubstatus.com/incidents/zkxwbgr0cnmx
+
+[2026-08-17T15:18:37.944000+00:00] realadolan (id=1538930058750722138)
+    It’s for the bot mode
+    [reply to flep msg=1538900920815976479]
+
+[2026-08-17T16:13:51.623000+00:00] tumadre (id=1538943957327941684)
+    It's for bots, you can safely close it though (ctrl + w)
+    [reply to flep msg=1538900920815976479]
+
+[2026-08-17T16:30:43.529000+00:00] teknium (id=1538948201569067109)
+    They are the same thing
+    [reply to flep msg=1538900920815976479]
+
+[2026-08-17T16:35:33.849000+00:00] flep (id=1538949419259400222)
+    Ok, so I'll assume it's missing some fixes as CRONJOBS isn't loading existing cron tasks from my remote gateway.
+    [reply to teknium msg=1538948201569067109]
+
+[2026-08-17T16:35:52.069000+00:00] teknium (id=1538949495679619243)
+    It only should load the profile of the bot you have open
+    [reply to flep msg=1538949419259400222]
+
+[2026-08-17T16:36:03.838000+00:00] teknium (id=1538949545042513930)
+    The tab linked to the open bot profile
+
+[2026-08-17T16:36:09.898000+00:00] erisol (id=1538949570459861083)
+    I presume there's work being done on an official mobile client? where is that being done?
+
+[2026-08-17T16:36:44.927000+00:00] flep (id=1538949717382135859)
+    Ah, I don't have any bots yet, just the default profile. Ok.
+
+[2026-08-17T16:37:40.384000+00:00] teknium (id=1538949949985788047)
+    I wish github was not down or I could move a lot faster on improving these things
+
+[2026-08-17T16:37:41.175000+00:00] teknium (id=1538949953303351316)
+    :/
+
+[2026-08-17T16:37:54.176000+00:00] flep (id=1538950007833493515)
+    Yeah, what a Monday...
+
+[2026-08-17T16:38:03.349000+00:00] dias4761 (id=1538950046307852388)
+    evrything gonna be okie
+    [reply to teknium msg=1538949949985788047]
+
+[2026-08-17T16:38:15.579000+00:00] flep (id=1538950097604313182)
+    Was looking at their status, good lord
+
+[2026-08-17T16:39:02.557000+00:00] dias4761 (id=1538950294644330507)
+    u guys usually do "updates" every 10 days ?
+    [reply to teknium msg=1538949949985788047]
+
+[2026-08-17T16:39:15.394000+00:00] teknium (id=1538950348486480033)
+    <:Shrug:1062899514249330738>
+
+[2026-08-17T16:39:18.732000+00:00] teknium (id=1538950362487201802)
+    whenever it's right
+
+[2026-08-17T16:42:35.884000+00:00] dias4761 (id=1538951189402751026)
+    I mentioned it because I see the release every “10 days” or so, so I thought it was a pattern.
+    [reply to teknium msg=1538950362487201802]
+
+[2026-08-17T17:41:08.959000+00:00] blooddragon90 (id=1538965924307009536)
+    The info I posted is 100% accurate I can assure you its straight from the team lol
+    [reply to egilewski msg=1538822893805506600]
+
+[2026-08-17T17:42:06.367000+00:00] blooddragon90 (id=1538966165093875752)
+    I wouldn’t ping it to tek if it wasn’t from oai
+
+[2026-08-17T17:42:39.431000+00:00] blooddragon90 (id=1538966303774347437)
+    They aren’t changing the policy either on 1mil and token cost etc, its part of the incentive for people and biz to use the api
+
+[2026-08-17T18:03:03.912000+00:00] tumadre (id=1538971439619641446)
+    honestly luna xhigh 900k context has been decent
+
+[2026-08-17T18:04:16.445000+00:00] kadirfarm (id=1538971743845359706)
+    <@387972437901312000> Did you have time for this today? 🙂
+    [reply to kadirfarm msg=1538898361384566906]
+
+[2026-08-17T18:06:57.668000+00:00] dias4761 (id=1538972420063625308)
+    Truth
+    [reply to tumadre msg=1538971439619641446]
+
+[2026-08-17T18:19:28.128000+00:00] flep (id=1538975567720882256)
+    I personally prefer to have my context in Hermes to 500k and compress at 50%, this way still have plenty and I can even use smaller cheap models with 256k context to compress.
+
+[2026-08-17T18:28:52.765000+00:00] blooddragon90 (id=1538977935979978812)
+    Thats actually not a bad usecase haha
+    [reply to tumadre msg=1538971439619641446]
+
+[2026-08-17T18:29:28.465000+00:00] blooddragon90 (id=1538978085716889600)
+    What would be point of context 500k and compress at 250k thats literally the default setting with more steps
+    [reply to flep msg=1538975567720882256]
+
+[2026-08-17T18:29:33.913000+00:00] tumadre (id=1538978108567199834)
+    It's been surprisingly good except for the API timeouts <:wearySlav:939219918983934083>
+    [reply to blooddragon90 msg=1538977935979978812]
+
+[2026-08-17T18:30:17.050000+00:00] blooddragon90 (id=1538978289497018388)
+    50% of 500k compress is compress at 250k lol normal compression is 272 minus 20k so 252k
+    [reply to flep msg=1538975567720882256]
+

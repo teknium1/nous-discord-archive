@@ -974,3 +974,21 @@
     One button connect to hermes browser extension shipping soon!
     [attachment] ScreenShot_Tool_-20260817120908.png https://cdn.discordapp.com/attachments/1519175108697264238/1538779405189648394/ScreenShot_Tool_-20260817120908.png?ex=6a83eb7f&is=6a8299ff&hm=90d55e1edebf62eaef9f71c6e7274668d8224faad649b4d7f36f5eb7527cd6e8&
 
+[2026-08-17T13:03:22.603000+00:00] jonkomet (id=1538896020543643658)
+    Hermes Browser Extension can now control your tab
+    
+    big update: Hermes takes the wheel on the exact tab you pick. one click connect through your local gateway, approve once, and your agent clicks, types, and scrolls on the page you handed it, nothing else on your machine touched
+    
+    what's new → one-click Connect to Hermes, approved right on your local gateway → exact tab control, your agent operates only the tab you leased → live indicator overlay so you see Hermes working in real time → inline Hermes Assist popup, bigger and easier to close → reconnect recovery that survives gateway restarts with nothing lost → 21 locales plus security hardening
+    
+    https://github.com/abundantbeing/hermes-browser-extension/commit/0222fc0840fe9b346cd45c43f83b8874060ce939
+    [attachment] HBE_-_The_Tab_You_Chose_Control_Update_AD.png https://cdn.discordapp.com/attachments/1519175108697264238/1538896018886762556/HBE_-_The_Tab_You_Chose_Control_Update_AD.png?ex=6a84581a&is=6a83069a&hm=b91e9a59d25820e68d5ab4bbed5c9e85ef70acb16dc4857bfe7953ea5fec0f28&
+    [attachment] Recording_8_17_2026_7_30_38_PM.mp4 https://cdn.discordapp.com/attachments/1519175108697264238/1538896019570298900/Recording_8_17_2026_7_30_38_PM.mp4?ex=6a84581a&is=6a83069a&hm=9a5c5726aa057daa5042a0bf43a2118f351697ee34e050e2b804da33fb376ab4&
+    [embed] feat(browser): phase 6 browser and tab control + connect to Hermes ... https://github.com/abundantbeing/hermes-browser-extension/commit/0222fc0840fe9b346cd45c43f83b8874060ce939
+
+[2026-08-17T13:05:08.623000+00:00] jonkomet (id=1538896465223491636)
+    This is available but it requires this PR https://github.com/NousResearch/hermes-agent/pull/88203
+    [attachment] HBE_-_Connect_to_Hermes_Browser_Tab_Control_Update_AD_2.png https://cdn.discordapp.com/attachments/1519175108697264238/1538896464858578964/HBE_-_Connect_to_Hermes_Browser_Tab_Control_Update_AD_2.png?ex=6a845884&is=6a830704&hm=b3ec0898002ed9f098bfa187e00dad597bbb3be1cc8fe0bb59aed9366be8bb8b&
+    [embed] feat(browser): loopback extension pairing with scoped tokens by abu... https://github.com/NousResearch/hermes-agent/pull/88203
+    [reply to jonkomet msg=1538779405059498036]
+

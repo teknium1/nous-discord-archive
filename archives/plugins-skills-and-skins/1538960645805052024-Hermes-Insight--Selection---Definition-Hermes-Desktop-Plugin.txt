@@ -1,0 +1,17 @@
+# Thread 'Hermes-Insight; Selection / Definition Hermes Desktop Plugin' in forum #plugins-skills-and-skins
+# thread_id=1538960645805052024 forum_id=1485392832154832906
+# Started 2026-08-17T18:42:28.685857+00:00
+
+[2026-08-17T17:20:10.466000+00:00] brokeskill (id=1538960645805052024)
+    I developed a Hermes Desktop Plugin that lets you select any text inside Hermes Desktop and a popup offers you two actions: *respond* quotes the selection into the chat-field as a reply similar to how you can quote specific text parts in Claude, ChatGPT. *Define* lets you stream an AI-Generated definition into a panel (Providers are Pre-imported from the gateway, you can add Custom Providers though). The definitions contain web search results (toggleable), inline-cited sources and a thumbnail. The Response is stateless by design, meaning that there is no Agent Loop, no memory, the only bottleneck is AI-Inference from your Provider (and Web Search, if enabled).
+    You can also customize the template prompt that the AI gets. Its MIT-Licensed, so feel free to fork and add suggestions (more details in the GitHub Repo)
+    https://github.com/BrokeSkill/Hermes-Insight,  if you do find any issues, you can write them in this thread, create an Issue on GitHub or DM me.
+    [attachment] j8j7z89.png https://cdn.discordapp.com/attachments/1538960645805052024/1538960645947400384/j8j7z89.png?ex=6a84944a&is=6a8342ca&hm=13edd32d96102f20842a06512606e88300ef71f8f65eac0119e72e7053f67c19&
+    [embed] GitHub - BrokeSkill/Hermes-Insight: Selection and Definition Plug-i... https://github.com/BrokeSkill/Hermes-Insight
+
+[2026-08-17T17:20:18.463000+00:00] brokeskill (id=1538960679346634763)
+    [attachment] jb1918r.png https://cdn.discordapp.com/attachments/1538960645805052024/1538960678990381056/jb1918r.png?ex=6a849452&is=6a8342d2&hm=67da523221244f4302b44daefc747c610ff9970cd9cefaa57a1bf4d738e4fb35&
+
+[2026-08-17T18:38:20.214000+00:00] phospheneoverdrive (id=1538980316033851423)
+    Nice, Hermes Webui had a similar quote selection function that was slick that I was going to see how hard it would be to implement. This may fit the bill instead!
+

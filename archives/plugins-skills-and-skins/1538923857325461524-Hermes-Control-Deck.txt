@@ -1,0 +1,47 @@
+# Thread 'Hermes Control Deck' in forum #plugins-skills-and-skins
+# thread_id=1538923857325461524 forum_id=1485392832154832906
+# Started 2026-08-17T18:42:29.280119+00:00
+
+[2026-08-17T14:53:59.409000+00:00] mgf.654 (id=1538923857325461524)
+    I finally made a clean version of Hermes Control - built for other people to actually use.
+    
+    The original version was designed around my own setup: Codex, Hermes, remote access, custom bridges, and a lot of things that only made sense on my machines.
+    
+    This version changes that.
+    
+    Hermes Control Clean is a simplified, portable control deck for managing Hermes + Codex remotely from your phone.
+    
+    From one interface you can:
+    
+    → Send prompts and start new tasks
+    → Monitor active sessions and runtime status
+    → View logs
+    → Approve / deny actions
+    → Stop running tasks instantly
+    → Switch sessions
+    → Control reasoning level
+    → Trigger Hermes remotely
+    → Manage both Codex CLI and Hermes from the same mobile dashboard
+    
+    The goal is simple:
+    
+    Start something on your computer. Walk away. Keep control from your phone.
+    
+    No Termius. No constantly opening a terminal. No sitting in front of the PC waiting for an agent to finish.
+    
+    I originally built Hermes Control because I wanted this workflow for myself.
+    
+    Now I’m cleaning up the architecture, setup and configuration so other people can run it too.
+    
+    Still experimental. Still evolving. But now it’s becoming something you can actually install and make your own.
+    
+    Hermes Control - your agents don’t need you at the desk.
+    [attachment] IMG_7053.png https://cdn.discordapp.com/attachments/1538923857325461524/1538923857862201374/IMG_7053.png?ex=6a847207&is=6a832087&hm=4471261aba50a2cf40605ee7be9d4e1613096fe3a4995cfa9e8b11babf033b4e&
+
+[2026-08-17T14:54:17.450000+00:00] mgf.654 (id=1538923932995031310)
+    https://github.com/filipj9/Hermes-Control-Deck
+    
+    
+    https://github.com/filipj9/Hermes-Control-Deck/commit/80eb366aec24f829d6b611674895d98cb857f0f1
+    [embed] GitHub - filipj9/Hermes-Control-Deck: Hermes Control is a CLI-first... https://github.com/filipj9/Hermes-Control-Deck
+
