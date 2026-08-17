@@ -1,0 +1,19 @@
+# Thread 'Belief inspection for agents - Axion + Vis suite, MIT, self-hosted' in forum #community-projects-showcase
+# thread_id=1538874637298040962 forum_id=1316137596535177246
+# Started 2026-08-17T12:38:20.908066+00:00
+
+[2026-08-17T11:38:24.440000+00:00] d0ggyw00f (id=1538874637298040962)
+    Hey! I just open-sourced a full agent observability stack and wanted to share it with builders here - it's MIT and self-hosted, works with any OpenAI-compatible endpoint including local models.
+    
+    The core is Axion: a middleware that tees the model's streamed output and extracts what the agent BELIEVED (assumptions, intentions, plans) as structured events - zero added latency, no code changes, PII redaction built in. Around it: session replay (VisReplay), deterministic behavioral diffing with a CI gate (VisCompile), and a shared agent/human workspace (VisBoard).
+    
+    Real test output: "I believe the user wants X" -> [intention] confidence 0.80, extracted mid-stream.
+    
+    Everything verified working this week with live tests, not just unit suites. Repos (MIT):
+    https://github.com/LatticeAG/axion
+    https://github.com/LatticeAG/visreplay
+    https://github.com/LatticeAG/viscompile
+    https://github.com/LatticeAG/VisBoard
+    
+    Happy to answer questions or take feedback - especially on what's missing for your setup.
+

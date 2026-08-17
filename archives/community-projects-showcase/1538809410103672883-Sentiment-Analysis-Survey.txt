@@ -1,0 +1,21 @@
+# Thread 'Sentiment Analysis Survey' in forum #community-projects-showcase
+# thread_id=1538809410103672883 forum_id=1316137596535177246
+# Started 2026-08-17T12:38:21.350323+00:00
+
+[2026-08-17T07:19:13.065000+00:00] a_determined_person (id=1538809410103672883)
+    Hi! My name is Andrew. Please complete my survey.
+    https://forms.gle/cQkEubsmKUFdEa4Y8
+    
+    You can read the background if you're interested. The overview is in the survey. The survey is calculated to take around 5 minutes. 
+    Overview
+    Sentiment analysis is the process of reading and classifying the emotional tone of texts. Sentiments are emotional tones. To ensure that the utilised sentiment analysis method is validated, it will be tested on categorised data. Your goal is to judge what the sentiment is for the following five abstracts. 
+    
+    Background
+    I am a researcher currently researching "To what extent do ChatGPT models across different model classes vary in sentiment polarity when summarising articles?". Currently, I am categorising the articles based on their sentiment and require a consensus on a sample of these articles to ensure that the sentiment analysis aligns.
+    
+    Thank you!
+    [embed] Sentiment Classification https://forms.gle/cQkEubsmKUFdEa4Y8
+
+[2026-08-17T07:19:37.489000+00:00] a_determined_person (id=1538809512545361961)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1538809410103672883/1538809512197357648/image.png?ex=6a840789&is=6a82b609&hm=e1b4eff8707e6f84719d4f2c9f5cabcab4bdd44de30b2989e59fd838ed47efe0&
+

@@ -59915,3 +59915,220 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Session drag — feat(desktop): drag to create sessions from New session and project + controls : https://github.com/NousResearch/hermes-agent/pull/70571
     Double-click fix — fix(desktop): stop tabs double-click-hiding the tab strip; body double-tap reveals it : https://github.com/NousResearch/hermes-agent/pull/86278
 
+[2026-08-17T07:17:01.472000+00:00] gabryn_21213 (id=1538808858162634823)
+    when py314?
+
+[2026-08-17T08:03:14.284000+00:00] jonkomet (id=1538820488179224607)
+    https://github.com/NousResearch/hermes-agent/pull/88203
+    
+    Adds the loopback browser-extension pairing flow so the Hermes Browser extension can obtain a scoped bearer token with one approval click — the gateway half of the extension's "Connect to Hermes" flow.
+
+[2026-08-17T08:12:47.830000+00:00] egilewski (id=1538822893805506600)
+    A lot of that information is wrong or obsolete. If it will be necessary for maintainers decision, I'll compile the latest public information on the topic of Codex sub usage and API pricing.
+    
+    However 272k with autocompaction at 90% is the current Codex default, tuned to how 5.6 works in Codex without regard for pricing, so it will be a good starting point, at least for coding tasks.
+    [reply to blooddragon90 msg=1538751573675483228]
+
+[2026-08-17T08:53:18.094000+00:00] endo9001 (id=1538833087071391784)
+    hey all. when running `hermes update --backup --yes` how long should that on average take? ```
+    PS C:\Users\User> hermes update --backup --yes
+    ⚕ Updating Hermes Agent...
+    
+      ⚠ Snapshot: skipping state.db (1.5 GB exceeds 1.0 GB limit)
+      ⚠ Skipping snapshot prune: DB file(s) skipped for size: state.db
+    ◆ Pre-update snapshot: 20260817-084237-pre-update
+    ◆ Creating pre-update backup...
+    ``` its stuck here for over 5 minutes now. 👀 <a:aniblobsweat:586029851870363660> 
+    also... whats with the state.db? do i need to do anything there?
+
+[2026-08-17T08:57:59.662000+00:00] endo9001 (id=1538834268053184512)
+    `Saved:    ~/AppData\Local\hermes/backups\pre-update-2026-08-17-154243.zip (2.8 GB, 894.2s)` 👀 <:doge_shy:1341270238611898459>
+
+[2026-08-17T08:59:48.157000+00:00] baophan0123 (id=1538834723114065960)
+    <a:Huhh_smoother:1329828352990904340>
+    [reply to endo9001 msg=1538833087071391784]
+
+[2026-08-17T09:00:54.614000+00:00] endo9001 (id=1538835001855053884)
+    haha! 15 minutes just for the snapshot. <:evil_smile:1518153149620424714> 🤣 
+    still not done updating. 
+    idk if there is anything i can do. clean up sessions or something? 😬 <a:aniblobsweat:586029851870363660> 😅
+
+[2026-08-17T09:02:16.797000+00:00] realadolan (id=1538835346555535430)
+    state.db contains all your chats
+    [reply to endo9001 msg=1538833087071391784]
+
+[2026-08-17T09:02:28.249000+00:00] realadolan (id=1538835394588708935)
+    all your sessions are there
+
+[2026-08-17T09:03:00.687000+00:00] realadolan (id=1538835530643668993)
+    system prompt hashes, per session model, usage and cost, gateway routing, compression locks, turn leases, everything
+
+[2026-08-17T09:03:03.765000+00:00] realadolan (id=1538835543553736786)
+    literally all sates
+
+[2026-08-17T09:03:07.343000+00:00] realadolan (id=1538835558560698459)
+    that's the most important file
+
+[2026-08-17T09:03:12.148000+00:00] endo9001 (id=1538835578714329149)
+    yeah i thought that. 😅 
+    i guess i got lots of sessions. 
+    but... this can only grow then. 
+    maybe you guys need to do something to make it smaller? ^^
+
+[2026-08-17T09:04:32.181000+00:00] endo9001 (id=1538835914397196318)
+    or actually... tbf... i dont mind it being that long. what i mind is it being stuck. 
+    some indication of it being alive would be good i guess. 🤔
+
+[2026-08-17T09:05:47.319000+00:00] endo9001 (id=1538836229548675114)
+    if there is anything i can do, let me know. <:Prayge:1151275585000185968> 
+    open to try things out as long as it helps. 😅
+
+[2026-08-17T09:05:49.612000+00:00] realadolan (id=1538836239166210050)
+    oh I'm not the core team.. but tek already did some magic in that regard
+
+[2026-08-17T09:05:50.646000+00:00] realadolan (id=1538836243503255562)
+    https://x.com/Teknium/status/2079933409414287565
+
+[2026-08-17T09:06:05.628000+00:00] realadolan (id=1538836306342182932)
+    check tha tout
+
+[2026-08-17T09:06:09.325000+00:00] endo9001 (id=1538836321848533082)
+    tek is a magician! <:proud:1518153461106085939>
+
+[2026-08-17T09:06:20.702000+00:00] realadolan (id=1538836369567260703)
+    "hermes sessions optimize-storage"
+
+[2026-08-17T09:06:23.420000+00:00] realadolan (id=1538836380967510026)
+    should make it smaller
+
+[2026-08-17T09:06:52.241000+00:00] realadolan (id=1538836501851414588)
+    you really like ollama, huh? do you know when their max plan comes back?
+
+[2026-08-17T09:06:53.512000+00:00] endo9001 (id=1538836507182366750)
+    nice! i'll try directly after the update is done. thanks! <:Prayge:1151275585000185968>
+
+[2026-08-17T09:08:06.508000+00:00] endo9001 (id=1538836813349920838)
+    i am one of their core mods there. <:evil_smile:1518153149620424714> 
+    eeeh yeah no ETA on that yet. 
+    maintainers arent talking much more to us than to users in discord. 
+    they are super busy it seems. 
+    only once in a while they come out like from some hibernation and batch respond to things. 🤣
+    [reply to realadolan msg=1538836501851414588]
+
+[2026-08-17T09:08:53.394000+00:00] endo9001 (id=1538837010004058172)
+    trying this now. <:proud:1518153461106085939>
+    [reply to realadolan msg=1538836369567260703]
+
+[2026-08-17T09:08:54.653000+00:00] realadolan (id=1538837015284420650)
+    yeah I saw you on their Discord. Sucks you don't have info on this 😛 been waiting for it
+
+[2026-08-17T09:09:41.041000+00:00] endo9001 (id=1538837209849790514)
+    so sorry. 😅 <:Prayge:1151275585000185968> 
+    in those regards we are basically just users. 
+    we mods wish that they kinda notify us sometimes, but... yeah lets say they are busy. 🙈 😂
+    [reply to realadolan msg=1538837015284420650]
+
+[2026-08-17T09:10:16.810000+00:00] endo9001 (id=1538837359876112405)
+    like communicate more and stuff. 
+    but they arent really discord folks i guess? 
+    more slack/twitter/linkedin? 🙈
+
+[2026-08-17T09:10:40.913000+00:00] endo9001 (id=1538837460971421706)
+    oh! 🙈 ```
+    PS C:\Users\User> hermes sessions optimize-storage
+    Search index is already on the compact layout — nothing to do.
+    ```
+    it seems i ran that already 🤣
+    [reply to realadolan msg=1538836369567260703]
+
+[2026-08-17T09:10:49.955000+00:00] realadolan (id=1538837498896056390)
+    Yeah as a company they cannot do work stuff through discord
+
+[2026-08-17T09:10:54.044000+00:00] realadolan (id=1538837516046573628)
+    Damnnnn
+    [reply to endo9001 msg=1538837460971421706]
+
+[2026-08-17T09:10:59.236000+00:00] realadolan (id=1538837537823391745)
+    You're using your Hermes A LOT then
+
+[2026-08-17T09:11:15.559000+00:00] endo9001 (id=1538837606287278130)
+    oh yeah daily and for lots of lots of hours. <a:bugcatnod:1245424684829376586>
+    [reply to realadolan msg=1538837537823391745]
+
+[2026-08-17T09:12:03.832000+00:00] realadolan (id=1538837808758657087)
+    3.2gb after optimization, that's not bad at all
+    [reply to endo9001 msg=1538837606287278130]
+
+[2026-08-17T09:12:03.866000+00:00] endo9001 (id=1538837808901394513)
+    yeah totally fine tho. i dont really blame or preassure anything. 
+    they do their thing (which seems to work somehow) and we just try to keep things cool and smooth as they come (sometimes not so easy but doable) 😅
+    [reply to realadolan msg=1538837498896056390]
+
+[2026-08-17T09:12:04.469000+00:00] realadolan (id=1538837811430432778)
+    lol
+
+[2026-08-17T09:12:25.649000+00:00] realadolan (id=1538837900266049586)
+    you're doing a good job my friend
+    [reply to endo9001 msg=1538837808901394513]
+
+[2026-08-17T09:12:46.270000+00:00] endo9001 (id=1538837986756526100)
+    appreciate that. <:proud:1518153461106085939> 
+    we do what we can.
+    [reply to realadolan msg=1538837900266049586]
+
+[2026-08-17T09:13:31.770000+00:00] endo9001 (id=1538838177597624330)
+    my last 30d with hermes btw.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1538838177249362032/image.png?ex=6a84223b&is=6a82d0bb&hm=21fbedd07dc463b32fccff22df3cf7d198590a68ff480d7f70bad2109c81077a&
+
+[2026-08-17T09:16:13.297000+00:00] realadolan (id=1538838855090708521)
+    Yeah, you're a heavy user. What models do you use?
+    [reply to endo9001 msg=1538838177597624330]
+
+[2026-08-17T09:16:48.386000+00:00] endo9001 (id=1538839002264895498)
+    its all on the image mostly glm5.2
+    but also switching between the deepseek models.
+    [reply to realadolan msg=1538838855090708521]
+
+[2026-08-17T09:17:31.838000+00:00] realadolan (id=1538839184515665930)
+    All through Ollama I suppose?
+    [reply to endo9001 msg=1538839002264895498]
+
+[2026-08-17T09:17:46.048000+00:00] endo9001 (id=1538839244116721754)
+    we get max tier for free and pooled some keys together because some of our mods still hand code (can you believe that? in 2026 <:evil_smile:1518153149620424714>)
+    so i am basically on 3 max accounts and use about 60% on all keys per week.
+
+[2026-08-17T09:18:05.953000+00:00] realadolan (id=1538839327604477972)
+    Nice, at least you guys get max accounts for free!
+
+[2026-08-17T09:18:57.857000+00:00] endo9001 (id=1538839545305628732)
+    yeah im pretty glad about that tho. <:Prayge:1151275585000185968> 
+    they also try to help in discord when there is time and something important. 
+    actually good people imbo.
+
+[2026-08-17T09:24:59.343000+00:00] endo9001 (id=1538841061487804487)
+    another small thing (sorry if this is becoming spammy) 
+    it seems after the installation it borks the windows shortcut on my taskbar. 
+    i need to `hermes desktop --build-only` for the shortcut to work again.
+
+[2026-08-17T09:27:27.777000+00:00] fro0z1 (id=1538841684065132624)
+    GM
+
+[2026-08-17T09:39:20.030000+00:00] dias4761 (id=1538844671470477313)
+    The important thing is for everyone to try to help in their own way.  and then the community evolves
+    [reply to endo9001 msg=1538839545305628732]
+
+[2026-08-17T09:42:03.219000+00:00] endo9001 (id=1538845355934752821)
+    well said!
+    [reply to dias4761 msg=1538844671470477313]
+
+[2026-08-17T10:34:51.501000+00:00] frizikk (id=1538858644672876575)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/88341 problem with new BOT feature
+
+[2026-08-17T11:10:37.896000+00:00] losia_91838 (id=1538867647305752596)
+    I have made the DAIT organization open source so that developers, researchers, and contributors can participate and help us improve the project. I will be pushing the DAIT Framework code to the organization tomorrow. For now, DAIT is focused on developing innovative solutions for the early detection of Deep Vein Thrombosis (DVT) as early and accurately as possible. Our goal is to build an open-source framework that can support research, collaboration, and the development of AI-based tools for faster and more reliable DVT detection. I welcome everyone interested in AI, medical imaging, machine learning, and healthcare technology to contribute and be part of this initiative
+    link:https://lnkd.in/dtDmXrqy
+    Phone#:+923327978394
+    Name:AbdullahMohsin
+    Organization:DAIT-FRAMEWORK
+    WELCOME ALL,
+

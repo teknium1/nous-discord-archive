@@ -257,3 +257,173 @@
 [2026-08-17T05:38:24.455000+00:00] shilp26. (id=1538784040394424411)
     That needs a plugin in hermes. Will be optional to install..  Is it in todo
 
+[2026-08-17T06:57:58.815000+00:00] noldtronics (id=1538804065511677972)
+    Can u add custom ca cert support?I have the ca cert imported in android but apps tend to ignore it...  A f-droid repo would also be great 🙂
+
+[2026-08-17T07:05:49.618000+00:00] jcrabapple (id=1538806040202838046)
+    Not like cron jobs, just conversations I start from the Hermes Go app
+    [reply to shilp26. msg=1538784040394424411]
+
+[2026-08-17T07:09:37.659000+00:00] shilp26. (id=1538806996675989544)
+    Thanks — I understand the request now. You’re probably using a private or self-signed CA for your Hermes server. Android may trust that certificate at the system level, but apps don’t always trust user-installed CAs automatically.
+    
+    Hermes Go doesn’t currently support importing a custom CA, but I’ll investigate adding an opt-in, per-server CA certificate for HTTPS/WSS connections. I would want to do that safely rather than simply disabling TLS verification.
+    
+    F-Droid is also a good suggestion. The official F-Droid repository requires publicly available open-source code and reproducible builds. Hermes Go is currently closed source, so it would not qualify for the official repository in its current form, but I’ll look into future distribution options.
+    [reply to noldtronics msg=1538804065511677972]
+
+[2026-08-17T07:32:27.717000+00:00] noldtronics (id=1538812743115866183)
+    Oh in that case, plz open source 😅
+
+[2026-08-17T07:33:17.298000+00:00] shilp26. (id=1538812951073525920)
+    haha.. 🤔  might do but not soon.
+
+[2026-08-17T10:29:58.400000+00:00] tsurg (id=1538857415317917716)
+    <@1538234382509285527> Is this open source? personally i would not install this because i do not trust random scripts.
+
+[2026-08-17T10:37:32.888000+00:00] shilp26. (id=1538859321578889226)
+    <@804036294472630373> That’s completely fair. To be transparent, the Hermes Go Android app is currently closed source. The website and documentation are open source, but the APK itself cannot currently be independently audited.
+    
+    The APK is distributed through my GitHub release and website, with a published SHA-256 hash so users can verify that the file was not changed. However, a matching hash only proves file integrity — it does not prove that the closed-source app is safe. I don’t want to pretend otherwise.
+    
+    The installation is an APK, not a random script, but Hermes Go can control a connected Hermes Agent, so users should only install it if they are comfortable with that trust model. No pressure to install it — open source and reproducible builds are absolutely reasonable requirements.
+
+[2026-08-17T10:52:38.627000+00:00] cspiritsong (id=1538863120523460678)
+    you know once you got the basics down, i think you should release a desktop build of this
+    [reply to shilp26. msg=1538859321578889226]
+
+[2026-08-17T10:52:52.283000+00:00] cspiritsong (id=1538863177801146388)
+    i can see people wanting this without paying money for panels
+
+[2026-08-17T10:54:59.877000+00:00] shilp26. (id=1538863712968900629)
+    Hermes desktop is already there.  
+    you know what, yesterday i was thinking about desktop build, I might but not soon,
+
+[2026-08-17T11:07:39.947000+00:00] cspiritsong (id=1538866900933808198)
+    That's because their desktop build is suitable to their vision
+
+[2026-08-17T11:07:51.235000+00:00] cspiritsong (id=1538866948278980618)
+    yours has a very niche spesific vision that i would back
+
+[2026-08-17T11:08:20.602000+00:00] cspiritsong (id=1538867071453241354)
+    Becaus i really don't want to rent a vds, then have to go into other apps just to see what's going on in my server
+
+[2026-08-17T11:08:34.278000+00:00] cspiritsong (id=1538867128814407792)
+    yours is good that its almost everything (maybe marry coolify into it LOL)
+
+[2026-08-17T11:12:44.374000+00:00] tsurg (id=1538868177793196102)
+    When are you open sourcing it? the thing is I am currently testing my own mobile app that I'm planning to release. Also, the developer behind hermex said he is making an android app.
+    [reply to shilp26. msg=1538859321578889226]
+
+[2026-08-17T11:13:04.460000+00:00] tsurg (id=1538868262039724142)
+    However if yours turns out better and gets traction I will contribute
+
+[2026-08-17T11:15:36.710000+00:00] cspiritsong (id=1538868900622762004)
+    i'llike to say <@1538234382509285527> 's version is quite thorough
+    [reply to tsurg msg=1538868262039724142]
+
+[2026-08-17T11:15:40.050000+00:00] cspiritsong (id=1538868914631741551)
+    and quite well thought out
+
+[2026-08-17T11:15:52.046000+00:00] cspiritsong (id=1538868964946354258)
+    i'll like to suggest / argue a few QoL  features
+
+[2026-08-17T11:16:00.382000+00:00] cspiritsong (id=1538868999910334484)
+    but i'm not a coder (just a vibecoder)
+
+[2026-08-17T11:16:14.622000+00:00] cspiritsong (id=1538869059637223525)
+    so i can't really explain how things may or may not work better in UI or UX
+
+[2026-08-17T11:16:50.739000+00:00] cspiritsong (id=1538869211122892861)
+    but if you're me where you run Hermes Agent in a VDS somewhere and you're connecting your devices to it, i think its worth installing and having a look <@804036294472630373>
+
+[2026-08-17T11:17:01.533000+00:00] cspiritsong (id=1538869256396087348)
+    i don't know, sandbox it or whatever
+
+[2026-08-17T11:51:11+00:00] shilp26. (id=1538877852483854427)
+    <@277780011249958922> you are really boosting my confidence i should say.  🫶 
+    just a vibecoder - that's matter a lot. trust me if you have aright directly and vision a vibecoder in 2026 can do wonders
+    
+    
+    <@804036294472630373> you can try it once, it might help with your own mobile app you are planning. Also i would love to test your mobile version too
+
+[2026-08-17T11:56:00.645000+00:00] cspiritsong (id=1538879067342901308)
+    BTW <@1538234382509285527> i want to know if there's a way to code soemthing like "right click" via long press in the android app.
+
+[2026-08-17T11:56:07.415000+00:00] cspiritsong (id=1538879095738339438)
+    for example in the dashboard i can see chats
+
+[2026-08-17T11:56:10.731000+00:00] cspiritsong (id=1538879109646778488)
+    i can see the star icon
+
+[2026-08-17T11:56:30.645000+00:00] cspiritsong (id=1538879193172025497)
+    but i want to longpress / right click the chats and then "archive" or "delete" or etc
+
+[2026-08-17T11:56:39.035000+00:00] cspiritsong (id=1538879228362358936)
+    i mean i think there's other ways
+
+[2026-08-17T11:56:48.170000+00:00] cspiritsong (id=1538879266677071883)
+    but having this small QoL would be good i think?
+
+[2026-08-17T12:01:17.851000+00:00] shilp26. (id=1538880397801164910)
+    go to seesions (All seesions) click the arrow in the seesions in dashboard, there you can longpress any seesion to get more options, you can also create folders for your projects. stars is syncs to hermes server/desktop
+    
+    Folder are for hermes-go, you can also turn on backup from settings, so next time you reinstall the app it will restore the hermes go settings, like folders, colors, projects, workfolder pinning etc.. 
+    
+    in dashboard to have longpress and option will make it bit sluggish, i want app to be as light weight as possible for speed.
+    
+    dashboard you can add or star.  In main sessions screen you can have all the control.  also when i chat if you need to switch session tab the tittle to open session switch.
+
+[2026-08-17T12:01:24.943000+00:00] cspiritsong (id=1538880427547295875)
+    Maybe External and On Device tab here?
+    [attachment] Screenshot_2026-08-17-20-00-28-943_com.shilp26.hermesmobile-edit.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1538880427102576733/Screenshot_2026-08-17-20-00-28-943_com.shilp26.hermesmobile-edit.jpg?ex=6a844994&is=6a82f814&hm=f17cc9bbd0b82131a6483083ac9bb959243caed0d458c41bf7b940fe0d7cb0cd&
+
+[2026-08-17T12:02:11.936000+00:00] cspiritsong (id=1538880624650354748)
+    So when we click update it knows I'm updating either the VDS or on android (Hermes go)
+
+[2026-08-17T12:03:42.375000+00:00] cspiritsong (id=1538881003978760342)
+    oh this is nice. okay makes sense from that point of view (for anything sessiosn do it at all sessions tab)
+    [reply to shilp26. msg=1538880397801164910]
+
+[2026-08-17T12:04:06.073000+00:00] shilp26. (id=1538881103375507459)
+    yes this update is hermes agent update not  hermes go
+    
+    
+    hermes go OTA update if any you will see a banner in the dashboard same place where you see connecting on the top
+    
+    also you see hermes go is 665 commits, so the hermes go app needs to catch to 665 commits till date
+
+[2026-08-17T12:05:37.319000+00:00] cspiritsong (id=1538881486088970240)
+    yeap was gonna comemnt because no matter how APK won't be able to catch up to live updates LOL
+    [reply to shilp26. msg=1538881103375507459]
+
+[2026-08-17T12:05:45.177000+00:00] shilp26. (id=1538881519047671901)
+    exactly, sessions i feel is one of the core thing in hermes agent. 
+    
+    BTW if you are using bot and any is using bot mode is hermes, i need testers.  in upcoming update, i am fixing about tons of bugs
+    [reply to cspiritsong msg=1538881003978760342]
+
+[2026-08-17T12:06:29.116000+00:00] shilp26. (id=1538881703341203496)
+    lol. i need to catch 100s of contributors, ALONE
+    [reply to cspiritsong msg=1538881486088970240]
+
+[2026-08-17T12:06:38.982000+00:00] cspiritsong (id=1538881744722337812)
+    i am using BOT
+    [reply to shilp26. msg=1538881519047671901]
+
+[2026-08-17T12:07:05.702000+00:00] cspiritsong (id=1538881856794140754)
+    if you opensource it, i think there will be plenty of testers
+    [reply to shilp26. msg=1538881703341203496]
+
+[2026-08-17T12:07:12.671000+00:00] cspiritsong (id=1538881886024237149)
+    and contributors
+
+[2026-08-17T12:07:24.725000+00:00] cspiritsong (id=1538881936582512710)
+    but also risk of copycats
+
+[2026-08-17T12:07:25.698000+00:00] cspiritsong (id=1538881940663570452)
+    LOL
+
+[2026-08-17T12:07:53.003000+00:00] shilp26. (id=1538882055188910120)
+    I will as i told not soon.   copycats, exactly the reason.
+

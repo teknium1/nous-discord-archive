@@ -93,3 +93,12 @@
 [2026-08-10T14:45:19.132000+00:00] perry_2108 (id=1536384960066359296)
     yo just as a question im kinda new here so sorry if its dub , how do i set this up ? will this be setup as a file in my hermes workspace fodler for it to read ? or will ti require some kind of tool installed to be accessed ?
 
+[2026-08-17T07:24:36.118000+00:00] alexkucera (id=1538810765086031942)
+    <@1046063978293502032> nothing to set up. It’s just a website you can browse and search for projects related to Hermes Agent.
+
+[2026-08-17T07:25:02.566000+00:00] alexkucera (id=1538810876017115227)
+    New update is online. The registry has grown to 1039 entries. 
+    
+    https://babylondreams.de/hermes-registry/
+    [embed] Hermes Community Registry https://babylondreams.de/hermes-registry/
+

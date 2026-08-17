@@ -43,3 +43,39 @@
     Durable native memory for Hermes agents is ready.
     [attachment] exec-08589f30-437a-4d85-811a-6fb71b758595.png https://cdn.discordapp.com/attachments/1535998101469401239/1538272628211712050/exec-08589f30-437a-4d85-811a-6fb71b758595.png?ex=6a821386&is=6a80c206&hm=2305430ac9a156b944bbd921a36a9efe1b403e64097e582f325821c217f8e2c7&
 
+[2026-08-17T11:28:03.331000+00:00] toomij (id=1538872032177946765)
+    🚀 **Metronix Memory Provider for Hermes - v2026.34.1 released**
+    
+    We’ve released a major compatibility update for the standalone Metronix memory provider.
+    
+    What’s new:
+    
+    - Native Hermes package discovery
+    - Ordered background writes with safe shutdown flushing
+    - Correct profile isolation through `HERMES_HOME`
+    - Updated plugin manifests and simplified setup
+    - Clear privacy documentation for conversation synchronization
+    - CI validation against the latest Hermes, including Plugin Doctor
+    
+    Install:
+    
+    ```bash
+    uv tool install "hermes-memory-metronix>=2026.34.1"
+    hermes-metronix-setup --generate-token
+    ```
+    
+    Then verify:
+    
+    ```bash
+    hermes memory status
+    hermes chat
+    ```
+    
+    Release: https://github.com/mtrnix/hermes-memory-metronix/releases/tag/v2026.34.1
+    
+    PyPI: https://pypi.org/project/hermes-memory-metronix/2026.34.1/
+    
+    Feedback and real-world testing across Hermes profiles and platforms are very welcome! 🧠
+    [attachment] exec-6d3a338a-e78f-4c83-8022-5ecdf8d366a3.png https://cdn.discordapp.com/attachments/1535998101469401239/1538872031913836544/exec-6d3a338a-e78f-4c83-8022-5ecdf8d366a3.png?ex=6a8441c3&is=6a82f043&hm=26917bb7b563e24bb4b3ee2fc78bb9901cb3fb7c5245d2f2479e50ee4a53cbbe&
+    [embed] Release v2026.34.1 · mtrnix/hermes-memory-metronix https://github.com/mtrnix/hermes-memory-metronix/releases/tag/v2026.34.1
+
