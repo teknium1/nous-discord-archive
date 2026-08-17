@@ -22,3 +22,42 @@
     https://x.com/mark_nerdspeak/status/2088988371087495353
     [embed]  https://twitter.com/mark_nerdspeak/status/2088988371087495353
 
+[2026-08-17T02:39:11.584000+00:00] snowzlm (id=1538738939584843897)
+    👍 👍 👍
+
+[2026-08-17T02:40:02.716000+00:00] snowzlm (id=1538739154047869018)
+    I'm also trying to develop a mobile app<:cat_sweat:1499066462005100634> 👍 👍
+
+[2026-08-17T02:40:31.338000+00:00] tumadre (id=1538739274097233981)
+    feel free to look at the source on github and take what you want or submit a PR
+    [reply to snowzlm msg=1538739154047869018]
+
+[2026-08-17T02:41:42.564000+00:00] tumadre (id=1538739572840726599)
+    Adding voice support tonight
+
+[2026-08-17T02:44:22.137000+00:00] snowzlm (id=1538740242138398820)
+    hhh，Should I be added as a contributor or collaborator? I think I could submit some PRs<a:partyblob:1151261550032724052>
+    [reply to tumadre msg=1538739572840726599]
+
+[2026-08-17T02:46:57.461000+00:00] tumadre (id=1538740893614481438)
+    Anyone can submit a PR, if it's accepted you become a contributor
+    [reply to snowzlm msg=1538740242138398820]
+
+[2026-08-17T02:48:11.049000+00:00] snowzlm (id=1538741202264784976)
+    <a:partyblob:1151261550032724052>
+
+[2026-08-17T04:54:59.618000+00:00] tumadre (id=1538773114916184205)
+    FYI, currently building out the voice implementation right now
+    [reply to snowzlm msg=1538741202264784976]
+
+[2026-08-17T05:14:56.810000+00:00] snowzlm (id=1538778136303378492)
+    I think I've submitted the PR already<:nousgirl:1341983870752653352> <a:partyblob:1151261550032724052> <a:partyblob:1151261550032724052>
+    [reply to tumadre msg=1538773114916184205]
+
+[2026-08-17T05:17:14.910000+00:00] tumadre (id=1538778715537014845)
+    I see it, but it doesnt include full conversational mode.
+    [reply to snowzlm msg=1538778136303378492]
+
+[2026-08-17T05:20:16.599000+00:00] snowzlm (id=1538779477595652117)
+    You haven't developed the chat yet? My PR is just adding new features, hhh
+

@@ -59817,3 +59817,101 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/87710
     feat(desktop): open in-app preview in the default browser
 
+[2026-08-17T01:57:22.190000+00:00] _ultrainstinct_ (id=1538728414423285861)
+    This is driving me nuts. Do you guys also see all 7 REASONING_EFFORTS on local models? Qwen 3.6 27B should have only ['low', 'medium', 'high']
+
+[2026-08-17T02:48:22.572000+00:00] travnewmatic (id=1538741250595758080)
+    i'm also curious about this
+    
+    i've managed to set the reasoning effort in `config.yaml` but i'm still not confident that `/reasoning XXX` is allowing for mid-session changes to `reasoning_effort`
+    
+    i dont think its necessarily bad that `/reasoning` presents many more options than qwen3.8-27b supports, but it should allow the user to provide `/reasoning xhigh`.  i think if you're capable of running a local model, you probably also have the expertise to know specifically what `reasoning_effort` presets are supported, and to not choose one that isnt. 🤷 
+    
+    in any case, in my config, i've set the default to `low` as that (in my experience so far) limits the thinking time to what i was getting before with qwen3.6 (and still getting better quality responses than qwen3.6 🙂 )
+    [reply to _ultrainstinct_ msg=1538728414423285861]
+
+[2026-08-17T02:49:51.107000+00:00] travnewmatic (id=1538741621938724895)
+    i asked this on reddit but haven't got any good responses https://www.reddit.com/r/hermesagent/comments/1vowgck/comment/p3tv8iy/?screen_view_count=2&ext-referrer=DIRECT
+
+[2026-08-17T02:55:21.505000+00:00] teknium (id=1538743007728246784)
+    you do see this or you dont..?
+    [reply to _ultrainstinct_ msg=1538728414423285861]
+
+[2026-08-17T02:55:32.970000+00:00] teknium (id=1538743055815807017)
+    should have None, low, medium, high, xhigh
+
+[2026-08-17T02:55:49.205000+00:00] teknium (id=1538743123910336623)
+    when the model doesn't support one you select it steps down to the nearest one, or up if down isn't viable
+
+[2026-08-17T02:56:07.103000+00:00] teknium (id=1538743198980120586)
+    several models support 4, or 5 modes
+
+[2026-08-17T02:56:21.907000+00:00] teknium (id=1538743261072597042)
+    and we have to support you using local qwen, and bob using codex, and george using whatever he uses
+
+[2026-08-17T02:56:48.308000+00:00] teknium (id=1538743371806547978)
+    Aint nobody got time to make a giant if/elseif table of every model existing to determine what set of reasoning efforts are available for a given model
+
+[2026-08-17T02:57:10.087000+00:00] teknium (id=1538743463154032781)
+    (well, maybe models.dev does - if they do lmk and I can get it in)
+
+[2026-08-17T02:58:29.458000+00:00] _ultrainstinct_ (id=1538743796060135475)
+    yeah maybe in the custom provider configs we can have a param to give the list of what the model supports
+
+[2026-08-17T03:03:57.475000+00:00] _ultrainstinct_ (id=1538745171863281815)
+    I did set mine to high, just for testing, but it kept jumping to medium in the desktop app anyway. There i can select one of the 7 options and it stays for the session.
+    [reply to travnewmatic msg=1538741250595758080]
+
+[2026-08-17T03:14:02.204000+00:00] chipchu (id=1538747708280414299)
+    https://github.com/NousResearch/hermes-agent/issues/21474#issuecomment-4400922846
+    kk thank you, i've found one that was merged
+
+[2026-08-17T03:25:13.181000+00:00] blooddragon90 (id=1538750522562191460)
+    Yo <@387972437901312000> the limits increase should be optin. It will blow out codex users usage elsewise
+    [attachment] IMG_3727.png https://cdn.discordapp.com/attachments/1491258766648283238/1538750521970786325/IMG_3727.png?ex=6a83d099&is=6a827f19&hm=ac7334e94f6a9aab8e01b6faf75e00ef8682381012e1f7d40773a5cbb7fd5c0e&
+    [attachment] IMG_3726.png https://cdn.discordapp.com/attachments/1491258766648283238/1538750522251677747/IMG_3726.png?ex=6a83d099&is=6a827f19&hm=d20a1a8a82084e61f88e612802c07629dd9bf53d2202ae308901d1f73fdef99e&
+
+[2026-08-17T03:25:23.925000+00:00] teknium (id=1538750567625658409)
+    It already is (somewhat)
+    [reply to blooddragon90 msg=1538750522562191460]
+
+[2026-08-17T03:25:39.142000+00:00] teknium (id=1538750631450382376)
+    Default compaction is 50% ctx window
+
+[2026-08-17T03:26:42.544000+00:00] teknium (id=1538750897377775669)
+    I can probably make a 272k version and 1M version
+
+[2026-08-17T03:29:23.786000+00:00] blooddragon90 (id=1538751573675483228)
+    It was supposed to charge only over 272k but team couldn’t vibe code figure out how to do it so it takes the whole call and 2x the cost one token over 272k. 
+    
+    If in fast mode and goes over it charges 4.5x (2.5x for fast + 2x for over 272k), a few forked subagents spin out and you just wiped out whole usage
+
+[2026-08-17T03:29:43.651000+00:00] blooddragon90 (id=1538751656995590204)
+    Its part of why team hasn’t turned it back + the codex ultra flow is still broken
+
+[2026-08-17T03:35:35.808000+00:00] blooddragon90 (id=1538753134048972850)
+    Btw did you ever figure out what you wanted to do with fast mode switch for only convo / messages and tool calls standard? 
+    
+    About 50/50 on poll wanted it. Fast is just insane expensive on tool calls I’ve just been custom patching around it. 
+    
+    Raw tps is about 40-55 tps and with fast 70-85 but at 2.5x token usage. Thats raw without latency or mcp waits or thinking time etc real tps is like 22-45 depending on peak or off peak hours and fast mode on/off. 
+    
+    Codex has lowered its usage per account by 7/8th total max tokens in last 6 weeks so anything to make plans efficient + fast exp (messages fast mode only is cheap)
+
+[2026-08-17T04:51:48.934000+00:00] funnylollypop (id=1538772315129774170)
+    How can I contribute to Hermes’ development
+
+[2026-08-17T04:56:09.519000+00:00] tumadre (id=1538773408102490143)
+    https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+    [reply to funnylollypop msg=1538772315129774170]
+
+[2026-08-17T04:56:24.258000+00:00] funnylollypop (id=1538773469922066442)
+    Tyty
+    [reply to tumadre msg=1538773408102490143]
+
+[2026-08-17T05:26:55.549000+00:00] jonkomet (id=1538781150913503264)
+    I would love these two <:catlick:1151260427645366375> 
+    
+    Session drag — feat(desktop): drag to create sessions from New session and project + controls : https://github.com/NousResearch/hermes-agent/pull/70571
+    Double-click fix — fix(desktop): stop tabs double-click-hiding the tab strip; body double-tap reveals it : https://github.com/NousResearch/hermes-agent/pull/86278
+

@@ -970,3 +970,7 @@
     Bot Mode Coming to Hermes Browser Extension soon + Hermes Web
     [attachment] hbe_bot_mode_vid.mp4 https://cdn.discordapp.com/attachments/1519175108697264238/1537852185394683924/hbe_bot_mode_vid.mp4?ex=6a808bf4&is=6a7f3a74&hm=58813882e49164dbbd72e03a45878908b17dce1b68c49fe568387a0a8931e0dd&
 
+[2026-08-17T05:19:59.305000+00:00] jonkomet (id=1538779405059498036)
+    One button connect to hermes browser extension shipping soon!
+    [attachment] ScreenShot_Tool_-20260817120908.png https://cdn.discordapp.com/attachments/1519175108697264238/1538779405189648394/ScreenShot_Tool_-20260817120908.png?ex=6a83eb7f&is=6a8299ff&hm=90d55e1edebf62eaef9f71c6e7274668d8224faad649b4d7f36f5eb7527cd6e8&
+

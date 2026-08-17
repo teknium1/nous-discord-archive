@@ -33,3 +33,7 @@
 [2026-08-15T19:43:55.672000+00:00] archie312 (id=1538272046809751562)
     Im really excited for the repo reveal because I've been dying for a visualization which allows me to "follow along" with my robot's work
 
+[2026-08-17T01:17:21.324000+00:00] zaacishere (id=1538718344461680731)
+    Mac version/agnostic version?
+    [attachment] IMG_0366.jpg https://cdn.discordapp.com/attachments/1536845324583178290/1538718344050643036/IMG_0366.jpg?ex=6a83b2a1&is=6a826121&hm=8072db056dc5fdacf85eed7ae40c28982c9b9c3b5a84bcfdcb4398467cf9fffd&
+
