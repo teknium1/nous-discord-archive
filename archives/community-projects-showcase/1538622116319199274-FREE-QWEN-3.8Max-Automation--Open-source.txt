@@ -1,0 +1,22 @@
+# Thread 'FREE QWEN 3.8Max Automation  Open source' in forum #community-projects-showcase
+# thread_id=1538622116319199274 forum_id=1316137596535177246
+# Started 2026-08-17T01:05:58.549368+00:00
+
+[2026-08-16T18:54:58.747000+00:00] rakaarwaky (id=1538622116319199274)
+    Qwen Web Automation CLI & MCP Server is a free, open-source tool that automates chat.qwen.ai directly from the terminal or connects it to AI coding agents without requiring paid API keys or hitting rate limits.
+    Key Highlights:
+     * Free & Unlimited: Direct browser automation with no API fees or usage caps.
+     * Stable Long Runs: Built-in connection sync prevents stream drops during 15+ minute tasks.
+     * Full Text Fidelity: Injects massive Markdown prompts instantly without character drops.
+     * AI Agent Ready: Connects seamlessly as an MCP server to Claude Desktop, Cursor, Gemini, and Antigravity.
+     * Cross-Platform: Single-line install script for Linux, macOS, and Windows, featuring an interactive TUI (qwc).
+    Quick Install:
+    git clone https://github.com/rakaarwaky/qwen-web-arwaky.git && cd qwen-web-arwaky && python3 scripts/install.py
+    [embed] GitHub - rakaarwaky/qwen-web-arwaky: Qwen AI Web Automation pipelin... https://github.com/rakaarwaky/qwen-web-arwaky.git
+
+[2026-08-16T18:55:35.191000+00:00] rakaarwaky (id=1538622269176414238)
+    FRE QWEN 3.8Max Automation  Open source
+
+[2026-08-16T18:55:44.589000+00:00] rakaarwaky (id=1538622308594356448)
+    FREE QWEN 3.8Max Automation  Open source
+

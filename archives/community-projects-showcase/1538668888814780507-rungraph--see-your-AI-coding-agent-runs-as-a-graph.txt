@@ -1,0 +1,65 @@
+# Thread 'rungraph: see your AI coding agent runs as a graph' in forum #community-projects-showcase
+# thread_id=1538668888814780507 forum_id=1316137596535177246
+# Started 2026-08-17T01:05:57.842989+00:00
+
+[2026-08-16T22:00:50.179000+00:00] fizbott (id=1538668888814780507)
+    Claude Code and Codex already write full transcripts of everything they do.
+    
+    rungraph turns it into an interactive graph:
+    
+    npx rungraph
+    
+    That's the whole setup.
+    
+    No hooks. No wrappers. No config.
+    
+    It works retroactively on every session you've already run, and live sessions grow on screen while the agent works.
+    
+    The graph shows what actually happened:
+    
+    * Your prompts are the backbone, with subagents collapsed into readable groups like "Bash · npm test ×12"
+    * Moments where a run changed direction: permission denials, interrupts, questions you answered, etc.
+    * Click any node to see the full inputs and outputs, real error text, timings, token counts, and every file it touched, including work done inside subagents
+    * A signal strip flags what deserves your attention: retry storms, agents that died without reporting back, errors that were never fixed, and more. It's calibrated to stay quiet unless something is worth looking at
+    
+    Ask your agent. Watch the graph answer.
+    
+    rungraph ships with an MCP server:
+    
+    npx rungraph mcp --install
+    
+    Then ask Claude Code things like:
+    
+    "Which edits failed, and did any stay broken?"
+    
+    "Did it actually make the change it said it did?"
+    
+    It answers in your terminal, then lights up the exact nodes it's talking about on the open graph.
+    
+    Send a run to a teammate.
+    
+    rungraph export packs runs into a single .run file.
+    
+    Sharing is strictly opt-in, and it protects you from yourself:
+    
+    * Every export shows exactly what's about to leave: runs, prompts, files touched, etc.
+    * It hard-blocks exports if it detects API keys or tokens
+    * You can redact secrets
+    * Or strip everything down to structure-only: no prompts, no outputs, just the shape of the run
+    
+    Your teammate can open it with:
+    
+    npx rungraph open <file>
+    
+    They get a read-only dashboard. Nothing gets installed, nothing gets copied.
+    
+    Everything stays on your machine by default.
+    
+    Local server. Zero network calls. Zero telemetry.
+    
+    MIT licensed. Zero runtime dependencies.
+    
+    https://github.com/fayzan123/rungraph
+    [attachment] rungraph-demo.gif https://cdn.discordapp.com/attachments/1538668888814780507/1538668889431613660/rungraph-demo.gif?ex=6a838492&is=6a823312&hm=3cc8db34aaaad117019c0e024eae1d8a10ce250ec4465422a918c3431e912b31&
+    [embed] GitHub - fayzan123/rungraph: See your agent runs as a graph — zer... https://github.com/fayzan123/rungraph
+

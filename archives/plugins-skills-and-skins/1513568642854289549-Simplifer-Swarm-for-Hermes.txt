@@ -38,3 +38,20 @@
 [2026-06-15T12:28:35.775000+00:00] sahil_ss9 (id=1516056832219807786)
     no but I can add some test benchmarks for it, worth mentioning this uses Nous Researcher simplfy skills and enhances it
 
+[2026-08-16T22:58:54.389000+00:00] sahil_ss9 (id=1538683502650724474)
+    Hey everyone 👋
+    
+    Just shipped simplify-swarm v2.0.0. For those who haven't seen it: it's a read-only multi-agent skill that scans your code for dead code, AI slop, naming rot and swallowed errors — then hands you a report. It never touches a single file.
+    
+    What's new in v2.0.0:
+    • Harness-agnostic — works with any agent harness, no lock-in
+    • Deterministic validator + an eval that scores F1 against 40 seeded issues
+    • Language packs for TypeScript, Python, Go and Rust
+    • Negative fixtures so false positives get caught too
+    • Security threat model + an ADR decision log
+    
+    Repo: https://github.com/Sahil-SS9/hermes-simplify-swarm
+    
+    Give it a spin and tell me what breaks 🙌
+    [embed] GitHub - Sahil-SS9/hermes-simplify-swarm: Multi-agent code simplifi... https://github.com/Sahil-SS9/hermes-simplify-swarm
+

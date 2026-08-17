@@ -59714,3 +59714,106 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-08-16T18:12:22.315000+00:00] realadolan (id=1538611393865981962)
     <@387972437901312000> Review this when you have the time 🙂 .This will add proper support for GLM 5.3 to Hermes.: https://github.com/NousResearch/hermes-agent/pull/85891
 
+[2026-08-16T18:27:51.879000+00:00] dias4761 (id=1538615292740247612)
+    I would appreciate it if someone could take a look at this. Claude's OAuth is having a problem, and Hermes only recognizes the API key.
+
+[2026-08-16T18:28:04.091000+00:00] dias4761 (id=1538615343961088111)
+    I was also able to detect more things.
+
+[2026-08-16T18:28:55.243000+00:00] dias4761 (id=1538615558508126350)
+    https://github.com/NousResearch/hermes-agent/pull/87891
+
+[2026-08-16T18:29:13.650000+00:00] dias4761 (id=1538615635712544889)
+    <@387972437901312000>  <@690519146701783042>
+
+[2026-08-16T18:30:30.969000+00:00] realadolan (id=1538615960011804803)
+    Claude's OAuth only works with extra credits
+
+[2026-08-16T18:31:36.611000+00:00] teknium (id=1538616235334438964)
+    this is a P2 issue. Please only ping me for p0 or p1 issues
+    [reply to dias4761 msg=1538615292740247612]
+
+[2026-08-16T18:33:01.495000+00:00] dias4761 (id=1538616591363735622)
+    MB ser
+
+[2026-08-16T18:33:03.869000+00:00] Translator Bot#1043 (id=1538616601321152594)
+    MB be
+    [reply to dias4761 msg=1538616591363735622]
+
+[2026-08-16T18:33:33.107000+00:00] dias4761 (id=1538616723954208851)
+    But initially, OAuth should work with the Anthropic plane, similar to when you use GPT within Hermes.
+    [reply to realadolan msg=1538615960011804803]
+
+[2026-08-16T18:34:01.932000+00:00] realadolan (id=1538616844855025725)
+    But only Extra credits would work, not the subscription quota
+    [reply to dias4761 msg=1538616723954208851]
+
+[2026-08-16T18:34:09.938000+00:00] realadolan (id=1538616878434484274)
+    It's against their ToS (can get your account banned)
+
+[2026-08-16T18:35:48.157000+00:00] dias4761 (id=1538617290394828870)
+    This is strange. Because in theory, when I use Codex in "subscription" mode, the tokens I'm spending are from my GPT "plan," unless Anthropic has a different policy.
+    [reply to realadolan msg=1538616844855025725]
+
+[2026-08-16T18:36:05.774000+00:00] realadolan (id=1538617364285890760)
+    Anthropic has a different policy
+    [reply to dias4761 msg=1538617290394828870]
+
+[2026-08-16T18:36:30.022000+00:00] realadolan (id=1538617465989238885)
+    Does this make it possible to use your subscription quota?
+    [reply to dias4761 msg=1538615558508126350]
+
+[2026-08-16T18:38:01.514000+00:00] dias4761 (id=1538617849734758400)
+    If their policy doesn't prevent it, in theory you should be able to use your subscription.
+
+[2026-08-16T18:38:37.470000+00:00] realadolan (id=1538618000545161367)
+    This is not what I'm asking my friend, have you tested the code yourself and did you see that the quota goes against your subscription and not the extra credits?
+
+[2026-08-16T18:38:38.822000+00:00] dias4761 (id=1538618006215852115)
+    https://github.com/NousResearch/hermes-agent/pull/87745
+    
+    
+    This is a p1
+    [reply to teknium msg=1538616235334438964]
+
+[2026-08-16T18:38:47.025000+00:00] teknium (id=1538618040621473792)
+    cool then we'll get to it automatically
+
+[2026-08-16T18:39:13.642000+00:00] teknium (id=1538618152261259374)
+    its sunday afternoon and the pr is 4hrs old
+
+[2026-08-16T18:39:15.859000+00:00] dias4761 (id=1538618161560289331)
+    Yes
+    [reply to realadolan msg=1538618000545161367]
+
+[2026-08-16T18:39:46.863000+00:00] dias4761 (id=1538618291600367697)
+    even when using OAuth. He requested the extra quota.
+
+[2026-08-16T18:40:02.725000+00:00] realadolan (id=1538618358130540714)
+    But now it works without extra credits? With your PR?
+    [reply to dias4761 msg=1538618291600367697]
+
+[2026-08-16T18:43:46.005000+00:00] dias4761 (id=1538619294634479766)
+    I'm validating it again.
+    [reply to realadolan msg=1538618358130540714]
+
+[2026-08-16T19:23:50.323000+00:00] dias4761 (id=1538629379075219567)
+    Anyway, the branch was tested manually and by code.
+    [reply to realadolan msg=1538618358130540714]
+
+[2026-08-16T19:24:00.595000+00:00] dias4761 (id=1538629422159233094)
+    I validated it here.
+
+[2026-08-16T19:49:15.581000+00:00] tunacookie (id=1538635776471076965)
+    https://github.com/NousResearch/hermes-agent/pull/87349
+    feat(desktop): URL toolbar for in-app browser preview
+    
+    https://github.com/NousResearch/hermes-agent/pull/87384
+    feat(desktop): viewport picker for in-app browser preview
+    
+    https://github.com/NousResearch/hermes-agent/pull/87535
+    feat(desktop): select a page element into chat
+    
+    https://github.com/NousResearch/hermes-agent/pull/87710
+    feat(desktop): open in-app preview in the default browser
+

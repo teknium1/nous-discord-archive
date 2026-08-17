@@ -1,0 +1,29 @@
+# Thread 'Anti-Venom For poisonous emails.' in forum #plugins-skills-and-skins
+# thread_id=1538703673008459917 forum_id=1485392832154832906
+# Started 2026-08-17T01:12:10.378185+00:00
+
+[2026-08-17T00:19:03.377000+00:00] stchurch (id=1538703673008459917)
+    +Agent immunity just leveled up. 🧬
+    +
+    +Anti-Venom silently patches the blind spots your LLM doesn't even know it has. No extra latency, no token burn, no "second opinion" calls. It’s a deterministic, sub-millisecond security layer that scans for Unicode steganography, invisible instruction hijacks, and rogue tool calls at the metal level. 🛡️
+    +
+    +It runs as a 3-stage pipeline (Sanitize/Scan/Intercept) before your agent even thinks about the next token. 
+    +
+    +- ⚡ Sub-ms latency.
+    +- 🚫 Tool-aware verdicts (Stop the `send_email` exploit, keep the helpful tools).
+    +- 🧩 FastAPI, LangChain, and streaming-ready.
+    +- 📊 Observable: JSONL audit logs + Prometheus built-in.
+    +
+    +It doesn’t just block; it understands the intent behind the injection. If you’re building production agents, this is the seatbelt you’ve been waiting for. 
+    +
+    +Just released v1.0.0—I’d love to hear how it handles your specific threat vectors. Drop a star, run the tests, and let me know if you find anything that slips through. 🚀
+    +
+    +   https://github.com/koutaliman-npc/hermes-antiven
+    +Repo: [     pip install git+https://github.com/yourhandle/antiven     ] 
+    
+    
+    
+    <:nousgirl:1341983870752653352> 🐍
+    [attachment] unnamed_1.png https://cdn.discordapp.com/attachments/1538703673008459917/1538703673268510790/unnamed_1.png?ex=6a83a4f7&is=6a825377&hm=39cd9586774399ffa7964a0d1dac13cc787dac531800072272705867faa25d84&
+    [embed] GitHub - koutaliman-npc/hermes-antiven: Zero-latency epistemic immu... https://github.com/koutaliman-npc/hermes-antiven
+

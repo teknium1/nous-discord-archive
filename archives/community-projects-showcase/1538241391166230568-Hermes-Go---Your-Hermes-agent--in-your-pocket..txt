@@ -221,3 +221,18 @@
     Hermes Go — Your AI agent, in your pocket - shilp26.github.io/hermes-go/
     [attachment] file_00000000a288820bb47967b443644e72.png https://cdn.discordapp.com/attachments/1538241391166230568/1538577707225579621/file_00000000a288820bb47967b443644e72.png?ex=6a832fa6&is=6a81de26&hm=dcac32e737f0038a5c9b866a76c4191d8ac864596987e0b163cc254a5bcf3d08&
 
+[2026-08-16T20:35:58.413000+00:00] jcrabapple (id=1538647532400279585)
+    Is there a setting where I can enable it to run in the background and notify when it's completed a task?
+
+[2026-08-16T22:15:34.427000+00:00] cspiritsong (id=1538672597619712230)
+    There is no auto update for Hermes Go yet right?
+
+[2026-08-16T23:41:08.520000+00:00] jcrabapple (id=1538694131566645338)
+    I think it says somewhere in the settings that it will auto update
+
+[2026-08-16T23:41:16.631000+00:00] jcrabapple (id=1538694165586641059)
+    But I added it to Obtainium anyway
+
+[2026-08-17T00:34:19.647000+00:00] cspiritsong (id=1538707516123517038)
+    that means the new version isn't up, as i think 1.10 is the one.
+

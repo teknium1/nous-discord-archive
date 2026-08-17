@@ -1,0 +1,20 @@
+# Thread 'Serial persistent subagents for Hermes on a single local LLM' in forum #community-projects-showcase
+# thread_id=1538657611417919628 forum_id=1316137596535177246
+# Started 2026-08-17T01:05:58.192849+00:00
+
+[2026-08-16T21:16:01.438000+00:00] bandiuband (id=1538657611417919628)
+    I wanted to share an experiment that came from a real problem while running Hermes locally on 2×3090s.
+    I had a coding project with 63 tasks. One long Hermes session repeatedly got stuck around tasks 19–22: context compaction removed an important part of the progress state, so the agent eventually returned to task 19 and repeated the work.
+    Running concurrent subagents wasn't practical on my local hardware, so we tried a different model:
+    Multiple persistent Hermes sessions, but only ONE session uses the LLM at a time.
+    Orchestrator → Worker A → Orchestrator → Worker A → Orchestrator → Worker B
+    The orchestrator delegates and ends its turn. A worker gets the inference slot and works in its own persistent Hermes session. When it finishes — or hits a timeout — control returns to the orchestrator with the worker result/session.
+    The orchestrator can then accept it, correct it, start another worker, or resume the same worker with its previous context intact.
+    Importantly, timeout isn't necessarily failure — it can be a scheduling boundary. I actually saw this happen: a difficult worker timed out while making useful progress, the orchestrator resumed the same session, and it successfully finished.
+    This setup got the original run past the 19–22 compaction loop and autonomously onto task 23.
+    The interesting idea to me is:
+    Local multi-agent systems don't necessarily need parallel inference.
+    Persistent independent agent contexts can share one local model through serial scheduling.
+    Working prototype (core works; some secondary features are experimental): https://github.com/BandiuBand/hermes-session-orchestrator-kit⁠�
+    I'd love feedback, especially whether this execution model could make sense natively in Hermes.
+
