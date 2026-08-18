@@ -66,3 +66,9 @@
     [embed]  https://twitter.com/mark_nerdspeak/status/2089403658433683822
     [reply to snowzlm msg=1538779477595652117]
 
+[2026-08-18T00:48:23.931000+00:00] tumadre (id=1539073445172875404)
+    Major update for Hermes Agent Mobile (HAM) Android App! Grab the APK direct today, no more ADB builds required! Test it out, submit some PR's and help build it HOW YOU WANT IT! Coming to Play Store SOON!
+    
+    https://hermes-agent-mobile.com
+    [attachment] HP9yLP0XkAEtATK.png https://cdn.discordapp.com/attachments/1538067050444886046/1539073444879015936/HP9yLP0XkAEtATK.png?ex=6a84fd57&is=6a83abd7&hm=51157119501ee82112d60ada0dd5a7a226d6ca6b631c6c2c655ed43e6d0d00e3&
+

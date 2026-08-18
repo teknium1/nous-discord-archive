@@ -75,3 +75,6 @@
     You should check out the Hermes browser extension plugin. Seems like that could be a great pairing with Hermes talk as well
     [reply to smokealot420 msg=1537685758654292040]
 
+[2026-08-17T19:23:39.058000+00:00] glazaroff (id=1538991719691984976)
+    It works with MS Teams?
+

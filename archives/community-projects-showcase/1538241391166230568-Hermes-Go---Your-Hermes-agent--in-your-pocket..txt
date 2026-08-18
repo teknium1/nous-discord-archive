@@ -441,3 +441,32 @@
 [2026-08-17T17:33:15.632000+00:00] lordmerc (id=1538963939029815386)
     this looks really goood! cant wait for the iOS release!
 
+[2026-08-17T21:20:44.552000+00:00] shilp26. (id=1539021186749562930)
+    🤖 Hermes Go v1.0.11 — Bots Mode
+    
+    Type @ in any chat. Pick a teammate. Keep talking. Their reply comes back here.
+    
+    Multiple agents · Bot Chats · Asking → Waiting → Replied
+    
+    Hermes Go — Your AI agent, in your pocket - shilp26.github.io/hermes-go/
+    [attachment] file_0000000073bc820890054a4af4552f4d.png https://cdn.discordapp.com/attachments/1538241391166230568/1539021186435129466/file_0000000073bc820890054a4af4552f4d.png?ex=6a84ccac&is=6a837b2c&hm=d684b9d04f04370d7a3b8019b03c0a4b859998dace86caff77c58cec8cc96f85&
+
+[2026-08-17T21:28:11.426000+00:00] lordmerc (id=1539023061074837594)
+    ahh how dare you use a iOS interface but no iOS app! <a:laugh:1221291080629227591>
+    [reply to shilp26. msg=1539021186749562930]
+
+[2026-08-17T21:43:25.297000+00:00] shilp26. (id=1539026894127628331)
+    I love IOS UI rather then Material Design. <:4Shrug:1151260419265142815>
+
+[2026-08-17T21:45:08.478000+00:00] shilp26. (id=1539027326900379652)
+    Three screens. One delegation flow:
+    
+    • Task plan stays visible while Lightgraph bot works
+    • Assignment receipt changes from Waiting → Replied, with the answer returned here
+    • The request appears inside Lightgraph’s own Bot Chat
+    
+    Delegate from any chat. Follow the work.
+    [attachment] Screenshot_2026-08-18-02-22-45-04_ff7d4bed90a9e079fde029caef2a2f3a.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1539027325977624687/Screenshot_2026-08-18-02-22-45-04_ff7d4bed90a9e079fde029caef2a2f3a.jpg?ex=6a84d264&is=6a8380e4&hm=d2a830b51e9f7adef67b2c9d4ec979c5a1aa07fa349762d9d7942e1bcb4ebc5c&
+    [attachment] Screenshot_2026-08-18-02-23-14-06_ff7d4bed90a9e079fde029caef2a2f3a.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1539027326354853970/Screenshot_2026-08-18-02-23-14-06_ff7d4bed90a9e079fde029caef2a2f3a.jpg?ex=6a84d264&is=6a8380e4&hm=7802736559adab9ddd16a9901d84178f91a447ec5e22d198270375667be737f8&
+    [attachment] Screenshot_2026-08-18-02-23-24-60_ff7d4bed90a9e079fde029caef2a2f3a.jpg https://cdn.discordapp.com/attachments/1538241391166230568/1539027326744920074/Screenshot_2026-08-18-02-23-24-60_ff7d4bed90a9e079fde029caef2a2f3a.jpg?ex=6a84d264&is=6a8380e4&hm=299b0e67750b8c0518a4938cb9dcf8a01f6b1a6a39563ed656e216adb94a63ab&
+

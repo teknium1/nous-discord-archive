@@ -1,0 +1,13 @@
+# Thread 'HQE Repo auditing skill for agents' in forum #plugins-skills-and-skins
+# thread_id=1539019640443904181 forum_id=1485392832154832906
+# Started 2026-08-18T01:11:26.266224+00:00
+
+[2026-08-17T21:14:35.884000+00:00] ancientalies (id=1539019640443904181)
+    This agent skill transforms an AI coding agent from a “looks-good-to-me” reviewer into a protocol-driven senior code auditor. Based on HQE Protocol v5.0.0, it requires the agent to support its findings with concrete repository evidence instead of speculating or inventing vulnerabilities.
+    
+    After installation in an AI coding environment, you can run commands such as `/HQE audit`, `/HQE security`, `/HQE pr-review`, `/HQE remediate`, and `/HQE verify`, and many more. The skill inventories the repository, identifies its ecosystem and testing tools, evaluates architecture, security, reliability, performance, and test coverage, validates its findings, assigns severity and confidence levels, and produces structured audit artifacts.
+    
+    Learn more:  
+    https://github.com/spearchucker667/Skill-HQE
+    [embed] GitHub - spearchucker667/Skill-HQE: HQE (/HQE) is a portable, produ... https://github.com/spearchucker667/Skill-HQE
+

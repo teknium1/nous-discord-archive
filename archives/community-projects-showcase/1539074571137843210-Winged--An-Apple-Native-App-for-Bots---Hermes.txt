@@ -1,0 +1,13 @@
+# Thread 'Winged: An Apple Native App for Bots & Hermes' in forum #community-projects-showcase
+# thread_id=1539074571137843210 forum_id=1316137596535177246
+# Started 2026-08-18T01:04:20.393827+00:00
+
+[2026-08-18T00:52:52.382000+00:00] willsigmon (id=1539074571137843210)
+    hey yall - im semi-newer to Hermes, but I was inspired by Grok Bots and also now Hermes Bots to build a front-end app for macOS, iOS & iPadOS. 
+    
+    Anyone wanna try it and help me test it / fix bugs, etc.?
+    [attachment] Google_Chrome_2026-08-17_20.39.21.png https://cdn.discordapp.com/attachments/1539074571137843210/1539074571490300004/Google_Chrome_2026-08-17_20.39.21.png?ex=6a84fe64&is=6a83ace4&hm=5eb133743a5b0f7b9a584c7a27d6d47e0a2c5c7f511fe683c857921e614f7728&
+
+[2026-08-18T00:53:27.321000+00:00] willsigmon (id=1539074717682503770)
+    Winged: An Apple Native App for Bots & Hermes
+

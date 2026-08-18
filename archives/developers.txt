@@ -60264,3 +60264,85 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     50% of 500k compress is compress at 250k lol normal compression is 272 minus 20k so 252k
     [reply to flep msg=1538975567720882256]
 
+[2026-08-17T18:37:23.877000+00:00] oninsuka (id=1538980079739347096)
+    Cursor released codebase wow
+
+[2026-08-17T18:37:51.256000+00:00] oninsuka (id=1538980194575061063)
+    Oh i love this
+    [reply to dokterdok msg=1538893750216954009]
+
+[2026-08-17T18:38:52.057000+00:00] flep (id=1538980449593069689)
+    Not sure what you mean "more steps". I was just sharing what I prefer. I leave the compress at .5 default and have set context to 500k instead of leaving undefined which defaults to model/provider defaults.
+    [reply to blooddragon90 msg=1538978085716889600]
+
+[2026-08-17T18:55:16.473000+00:00] kadirfarm (id=1538984578532901037)
+    Update on 88391  my fix for the Bot Mode group chat Markdown rendering issue got merged into main! 🎉
+    
+    PR #88430 was reviewed by <@387972437901312000> , who folded it into #88553 to route the renderer through @hermes/plugin-sdk (for compatibility with the plugin's import system)  my authorship was preserved in git history. Really appreciate the review and the fast turnaround!
+    
+    https://github.com/NousResearch/hermes-agent/pull/88553
+
+[2026-08-17T18:56:41.571000+00:00] asshole1678 (id=1538984935459913828)
+    Anyone ever get scared about how much more the AI knows about your life than you do?
+
+[2026-08-17T19:00:27.934000+00:00] asmodayhimself (id=1538985884895158423)
+    nah
+
+[2026-08-17T19:01:48.355000+00:00] lpha3ch0 (id=1538986222205149204)
+    For those that use frontier models as orchestrators delegating to local LLM's, this PR reduced my subagent prompt from 18,390 to 4,639 tokens. This will definitely preserve context and VRAM. https://github.com/NousResearch/hermes-agent/pull/88576
+
+[2026-08-17T19:09:26.325000+00:00] tumadre (id=1538988143070416926)
+    neat, are you able to make it into a plugin?
+    [reply to lpha3ch0 msg=1538986222205149204]
+
+[2026-08-17T19:09:58.731000+00:00] lpha3ch0 (id=1538988278991294475)
+    No, it's not suitable for a plugin. It falls in the core.
+
+[2026-08-17T20:04:45.674000+00:00] ninja_the_real_one_xd (id=1539002065429467187)
+    i heard there is a special code you can use and ai will tell you your future 😉
+    [reply to asshole1678 msg=1538984935459913828]
+
+[2026-08-17T20:05:15.343000+00:00] ninja_the_real_one_xd (id=1539002189870014604)
+    you need your name your birthday and stuff like that for it ^^
+
+[2026-08-17T20:29:11.302000+00:00] fame0x (id=1539008212718723083)
+    Stripe buys openrouter for 7b. Either we're doomed or stripe follows the playbook of other buyouts. Hopefully they don't destroy the platform or else someone else will rebuild it within a week lol
+
+[2026-08-17T20:59:01.716000+00:00] joe.young.security (id=1539015722259189822)
+    Shouldn't the parent stayed blocked until all children are done?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1539015721265405962/image.png?ex=6a84c795&is=6a837615&hm=faad60c498b1e0ae884140db9e1cc45eba0510fd87920eb7a3ee715a52338800&
+
+[2026-08-17T20:59:21.691000+00:00] joe.young.security (id=1539015806040543363)
+    Seems backwards
+
+[2026-08-17T21:17:24.948000+00:00] wesleysimplicio (id=1539020349549584446)
+    Congratulations for all - Bot Mode in Hermes Agent
+
+[2026-08-17T21:17:40.976000+00:00] wesleysimplicio (id=1539020416775880865)
+    <@387972437901312000> lets go
+    [attachment] IMG_2489.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1539020416239149156/IMG_2489.jpg?ex=6a84cbf4&is=6a837a74&hm=7aa5d6ad25cf0cc96c742d203e32ab4bcee8b609544b20d03c7625bf20d763fa&
+
+[2026-08-17T21:18:32.153000+00:00] wesleysimplicio (id=1539020631427915807)
+    OpenAI/OpenClaw has been left behind; now the battle is with the giant xAI.
+
+[2026-08-17T21:19:44.066000+00:00] wesleysimplicio (id=1539020933053026327)
+    <@387972437901312000> I’ve already enlisted in Hermes’s army to take on the Grok bot.
+
+[2026-08-17T21:25:56.106000+00:00] tonywhelan (id=1539022493501882489)
+    [attachment] IMG_2672.png https://cdn.discordapp.com/attachments/1491258766648283238/1539022493262680146/IMG_2672.png?ex=6a84cde4&is=6a837c64&hm=5d9ba6a9b8f4630246b2c693baa19f44f1e62ecac378b85a2738ed653f944a61&
+    [reply to wesleysimplicio msg=1539020631427915807]
+
+[2026-08-18T00:37:52.142000+00:00] willsigmon (id=1539070795257487443)
+    hey yall - im semi-newer to Hermes, but I was inspired by Grok Bots and also now Hermes Bots to build a front-end app for macOS, iOS & iPadOS. 
+    
+    Also new to this sub, but does anyone wanna try it and help me test it / fix bugs, etc.? 
+    
+    Lmk if this is the wrong avenue.
+
+[2026-08-18T00:39:28.676000+00:00] willsigmon (id=1539071200150560819)
+    [attachment] CleanShot_2026-08-17_at_20.39.11.png https://cdn.discordapp.com/attachments/1491258766648283238/1539071199840051270/CleanShot_2026-08-17_at_20.39.11.png?ex=6a84fb40&is=6a83a9c0&hm=d74c85ac8f124a445ba4e716f29458b637b0f8b43890b453cdff14542e044314&
+
+[2026-08-18T00:51:09.482000+00:00] flep (id=1539074139543834654)
+    I recommend to make a post on <#1316137596535177246> following the examples there.
+    [reply to willsigmon msg=1539070795257487443]
+

@@ -12,3 +12,8 @@
     No third-party API costs, no data leaves your infrastructure. Uses crawl4ai's /md endpoint for clean LLM-ready markdown.
     [embed] GitHub - mblauser/hermes-plugin-crawl4ai: Self-hosted web extractio... https://github.com/mblauser/hermes-plugin-crawl4ai
 
+[2026-08-17T20:48:46.914000+00:00] crazymiggi (id=1539013143592837180)
+    Thanks for the plugin. Maybe add an instruction how to self-host https://github.com/unclecode/crawl4ai 
+    I added crawl4ai as docker container to my raspi 5 and hermes accesses its features over local network. works great!
+    [embed] GitHub - unclecode/crawl4ai: 🚀🤖 Crawl4AI: Open-source LLM Fri... https://github.com/unclecode/crawl4ai
+

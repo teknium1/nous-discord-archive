@@ -1,0 +1,7 @@
+# Thread 'Would you trust your Hermes agent to chose an organization to donate to?' in forum #community-projects-showcase
+# thread_id=1539034345233326180 forum_id=1316137596535177246
+# Started 2026-08-18T01:04:21.094911+00:00
+
+[2026-08-17T22:13:01.779000+00:00] randoalex (id=1539034345233326180)
+    Any members here donate to humanitarian causes? I am a career aid worker, I built a platform that allows people in need create campaigns and AI agents evaluate them through MCP and donate to them directly. Will your agents enable you evaluate needs all the way across the globe and maybe do it better than UN and NGOs? I think it can. zooid.fund MCP https://fcefnmdlggldmfusydix.supabase.co/functions/v1/mcp  tell me if you have any questions.
+
