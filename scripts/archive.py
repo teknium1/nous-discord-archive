@@ -150,12 +150,12 @@ def archive_text_channel(session: requests.Session, channel_id: str, name: str, 
         log("  no new messages")
         return
 
-    out_path = ARCHIVE_DIR / f"{safe_filename(name)}.txt"
+    out_path = ARCHIVE_DIR / f"{safe_filename(name)}-{datetime.now(timezone.utc):%Y-%m}.txt"
     is_new = not out_path.exists()
     with out_path.open("a", encoding="utf-8") as f:
         if is_new:
             f.write(f"# Archive of #{name} (channel id {channel_id})\n")
-            f.write(f"# Started {datetime.now(timezone.utc).isoformat()}\n\n")
+            f.write(f"# Shard started {datetime.now(timezone.utc).isoformat()}\n\n")
         for msg in messages:
             f.write(format_message(msg))
 
@@ -240,13 +240,13 @@ def archive_forum_channel(session: requests.Session, channel_id: str, name: str,
         if not messages:
             continue
 
-        out_path = forum_dir / f"{tid}-{safe_filename(tname)}.txt"
+        out_path = forum_dir / f"{tid}-{safe_filename(tname)}-{datetime.now(timezone.utc):%Y-%m}.txt"
         is_new = not out_path.exists()
         with out_path.open("a", encoding="utf-8") as f:
             if is_new:
                 f.write(f"# Thread '{tname}' in forum #{name}\n")
                 f.write(f"# thread_id={tid} forum_id={channel_id}\n")
-                f.write(f"# Started {datetime.now(timezone.utc).isoformat()}\n\n")
+                f.write(f"# Shard started {datetime.now(timezone.utc).isoformat()}\n\n")
             for msg in messages:
                 f.write(format_message(msg))
 
