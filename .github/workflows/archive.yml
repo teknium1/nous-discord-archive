@@ -43,3 +43,21 @@ jobs:
           fi
           git commit -m "archive: $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
+
+      - name: Gzip shards older than the current month
+        run: |
+          # Compress completed monthly shards so the repo stays lean.
+          # The current month's shard stays plain-text (still being appended).
+          CURRENT=$(date -u +%Y-%m)
+          shopt -s nullglob
+          for f in archives/*-20[0-9][0-9]-[0-9][0-9].txt archives/*/*-20[0-9][0-9]-[0-9][0-9].txt; do
+            base="${f%.txt}"
+            month=$(echo "$base" | grep -oE '20[0-9][0-9]-[0-9][0-9]$')
+            if [ "$month" != "$CURRENT" ] && [ "$f" -nt "$f.gz" ]; then
+              gzip -9 -k "$f" && git rm --cached -q "$f"
+              echo "gzipped: $f"
+            fi
+          done
+          if ! git diff --cached --quiet; then
+            git add archives/
+          fi
